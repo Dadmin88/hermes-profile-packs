@@ -2,6 +2,16 @@
 
 All notable changes to Hermes Profile Packs will be documented here.
 
+## 0.3.0 - 2026-08-22
+
+### Added
+
+- Added **Hermes Academy**, a new `academy-*` profile pack for academic, technical, vocational, and professional teaching.
+- Added an initial 15-profile faculty led by `academy-dean`, with 60 purpose-built teaching skills.
+- Added professors for mathematics, writing and rhetoric, natural sciences, computer science, engineering, history, social sciences, economics, business, research methods, and health sciences.
+- Added instructors for languages, skilled trades, and arts/design.
+- Added the Academy teaching contract, installer, validator, tests, documentation, root routing, and CI coverage.
+
 ## 0.2.0 - 2026-08-22
 
 ### Added

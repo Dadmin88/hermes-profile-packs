@@ -12,12 +12,14 @@ PACKS = {
     "hermes-agency": ROOT / "hermes-agency" / "install.py",
     "council": ROOT / "hermes-council" / "install.py",
     "hermes-council": ROOT / "hermes-council" / "install.py",
+    "academy": ROOT / "hermes-academy" / "install.py",
+    "hermes-academy": ROOT / "hermes-academy" / "install.py",
 }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Install profiles from Hermes Profile Packs.")
-    parser.add_argument("pack", nargs="?", help="agency or council")
+    parser.add_argument("pack", nargs="?", help="agency, council, or academy")
     parser.add_argument("args", nargs=argparse.REMAINDER, help="arguments forwarded to the pack installer")
     parser.add_argument("--list-packs", action="store_true")
     ns = parser.parse_args()
@@ -25,6 +27,7 @@ def main() -> int:
     if ns.list_packs:
         print("agency   agency-*   Professional multidisciplinary work")
         print("council  council-*  Personal support and life stewardship")
+        print("academy  academy-*  Academic, technical, vocational, and professional teaching")
         return 0
     if not ns.pack:
         parser.error("choose a pack or use --list-packs")

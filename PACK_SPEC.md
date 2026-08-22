@@ -6,6 +6,7 @@ A pack owns a stable prefix. Every profile directory and `distribution.yaml` nam
 
 - Hermes Agency: `agency-*`
 - Hermes Council: `council-*`
+- Hermes Academy: `academy-*`
 
 Names use lowercase kebab-case and are treated as public API once released.
 
@@ -46,6 +47,8 @@ The manifest is designed for discovery and routing; `SOUL.md` remains the behavi
 Profiles should own a bounded domain. When a request materially belongs elsewhere, complete the part owned by the current profile and hand off the rest with sufficient context.
 
 Council profiles have an additional privacy rule: only the minimum personal context needed for the task should cross profile boundaries.
+
+Academy profiles have an additional teaching rule: adapt instruction to the learner's goal and level, teach reasoning and transferable skill rather than merely dumping answers, distinguish education from professional execution or advice, and verify current standards or facts when material.
 
 ## Versioning
 
