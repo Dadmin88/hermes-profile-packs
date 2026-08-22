@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Validate repository
         run: python validate.py
+      - name: Root installer unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Agency unit tests
         run: python -m unittest discover -s hermes-agency/tests -p 'test_*.py'
       - name: Council unit tests

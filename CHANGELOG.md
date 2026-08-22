@@ -2,6 +2,15 @@
 
 All notable changes to Hermes Profile Packs will be documented here.
 
+## Unreleased
+
+### Added
+
+- Added an interactive root installer wizard that recommends a small profile set from plain-language goals, supports pack/category browsing and direct search, previews the exact install plan, and still offers an explicit install-everything path.
+- Added a deterministic agent/script interface with JSON catalog and recommendation output, exact profile/category selection, pack filtering, dry-run planning, and non-interactive `--yes` installation.
+- Added profile-selection payload estimates so sparse installs show how much of the catalog they avoid installing.
+- Added root installer tests and CI coverage while preserving the existing pack-first installer commands.
+
 ## 0.4.0 - 2026-08-22
 
 ### Added
