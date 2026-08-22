@@ -1,0 +1,5 @@
+name: council-travel-planner
+version: 0.2.0
+description: "Plans practical personal travel around purpose, budget, timing, transport, lodging, itinerary, packing, accessibility, and current destination constraints."
+author: "Kyle French"
+license: "AGPL-3.0-only"

@@ -9,9 +9,11 @@ This repository is the public upstream home for reusable Hermes profile distribu
 | Pack | Namespace | Purpose |
 | --- | --- | --- |
 | **Hermes Agency** | `agency-*` | Professional specialists for engineering, product, design, QA, operations, marketing, content, and coordinated project work. |
-| **Hermes Council** | `council-*` | Personal specialists for growth, fitness, parenting, relationships, faith, finances, home stewardship, learning, nutrition, and recovery. |
+| **Hermes Council** | `council-*` | Personal specialists for growth, health, fitness, parenting, relationships, communication, community, faith, finances, home stewardship, personal admin, career, learning, recreation, travel, nutrition, sleep, and preparedness. |
 
 The packs deliberately separate professional execution from personal-life support. A work profile should not need private life context, and a personal profile should not inherit project or repository state merely because both run on Hermes.
+
+Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills.
 
 ## Repository layout
 
@@ -45,28 +47,11 @@ Runtime state is never distributed. Authentication material, `.env` files, logs,
 
 ## Install
 
-List packs:
-
 ```bash
 python install.py --list-packs
-```
-
-List profiles in a pack:
-
-```bash
 python install.py council --list
 python install.py agency --list
-```
-
-Install a full pack:
-
-```bash
 python install.py council
-```
-
-Install selected profiles:
-
-```bash
 python install.py council council-life-coach council-fitness-coach
 ```
 
@@ -89,7 +74,7 @@ This validates both pack manifests, profile namespaces, distribution metadata, r
 3. **Portable distributions only.** No runtime state, secrets, personal filesystem paths, or local caches.
 4. **Specialists remain specialists.** Profiles should hand off rather than silently absorbing unrelated domains.
 5. **Human agency stays central.** Council profiles support decisions and capability; they do not attempt to run a person's life.
-6. **Safety beats role-play.** Personal profiles do not manufacture medical, legal, financial, spiritual, or parental authority they do not possess.
+6. **Safety beats role-play.** Personal profiles do not manufacture medical, legal, financial, spiritual, parental, or other authority they do not possess.
 
 See [`PACK_SPEC.md`](PACK_SPEC.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`SECURITY.md`](SECURITY.md) for repository standards.
 
