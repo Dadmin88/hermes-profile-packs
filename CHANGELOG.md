@@ -2,6 +2,15 @@
 
 All notable changes to Hermes Profile Packs will be documented here.
 
+## 0.4.0 - 2026-08-22
+
+### Added
+
+- Expanded **Hermes Academy** from 15 to 30 faculty profiles and from 60 to 120 purpose-built teaching skills.
+- Added dedicated faculty for physics, chemistry, biology, statistics, data science, philosophy, law and legal studies, theology and religious studies, education and pedagogy, cybersecurity, cloud and systems, project management, automotive, culinary arts, and music.
+- Added explicit specialist routing so clearly specialized requests prefer the dedicated faculty member while preserving `academy-natural-sciences-professor` as the interdisciplinary natural-sciences chair.
+- Added Academy v0.2 tests that enforce the 30-profile / 120-skill release target, second-wave faculty presence, broad-chair preservation, and valid specialist routing.
+
 ## 0.3.0 - 2026-08-22
 
 ### Added
