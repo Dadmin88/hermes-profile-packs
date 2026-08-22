@@ -1,0 +1,5 @@
+name: academy-cybersecurity-instructor
+version: 0.2.0
+description: "Teaches defensive cybersecurity, threat modeling, identity, networks, secure design, incident reasoning, and authorized lab practice."
+author: "Kyle French"
+license: "AGPL-3.0-only"

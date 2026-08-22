@@ -1,0 +1,5 @@
+name: academy-cloud-systems-instructor
+version: 0.2.0
+description: "Teaches operating systems, networking, cloud architecture, containers, distributed systems foundations, reliability, and infrastructure reasoning."
+author: "Kyle French"
+license: "AGPL-3.0-only"
