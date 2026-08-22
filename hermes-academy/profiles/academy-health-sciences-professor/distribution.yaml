@@ -1,0 +1,5 @@
+name: academy-health-sciences-professor
+version: 0.1.0
+description: "Teaches anatomy, physiology, medical terminology, clinical-science concepts, and health-science reasoning without providing personal medical care."
+author: "Kyle French"
+license: "AGPL-3.0-only"

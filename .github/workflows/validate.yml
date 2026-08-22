@@ -22,3 +22,5 @@ jobs:
         run: python -m unittest discover -s hermes-agency/tests -p 'test_*.py'
       - name: Council unit tests
         run: python -m unittest discover -s hermes-council/tests -p 'test_*.py'
+      - name: Academy unit tests
+        run: python -m unittest discover -s hermes-academy/tests -p 'test_*.py'

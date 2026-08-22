@@ -6,6 +6,7 @@ A pack owns a stable prefix. Every profile directory and `distribution.yaml` nam
 
 - Hermes Agency: `agency-*`
 - Hermes Council: `council-*`
+- Hermes Academy: `academy-*`
 
 Names use lowercase kebab-case and are treated as public API once released.
 
@@ -21,31 +22,19 @@ A skill file begins with YAML frontmatter containing a matching `name` and usefu
 
 ## Portable versus runtime state
 
-Profile packs contain source artifacts only. Never commit:
-
-- tokens, passwords, cookies, API keys, OAuth credentials, or private keys
-- `.env` or authentication files
-- logs, caches, databases, process IDs, sockets, or session history
-- absolute user-home paths or machine-specific mount paths
-- generated Hermes runtime state
+Profile packs contain source artifacts only. Never commit tokens, passwords, credentials, `.env`, auth files, logs, caches, databases, process state, user-home paths, machine-specific mounts, or generated Hermes runtime state.
 
 ## Metadata and jobs
 
-Pack manifests are the authoritative roster. A roster entry includes:
-
-- stable profile `name`
-- human-readable `display_name`
-- category
-- concise `role`
-- `jobs`, which map to the profile's owned reusable skills
-
-The manifest is designed for discovery and routing; `SOUL.md` remains the behavioral contract.
+Pack manifests are the authoritative roster. A roster entry includes stable `name`, human-readable `display_name`, category, concise `role`, and `jobs` matching the profile's owned reusable skills. The manifest supports discovery and routing; `SOUL.md` remains the behavioral contract.
 
 ## Separation of concerns
 
-Profiles should own a bounded domain. When a request materially belongs elsewhere, complete the part owned by the current profile and hand off the rest with sufficient context.
+Profiles own bounded domains. When a request materially belongs elsewhere, complete the owned part and hand off the rest with sufficient context.
 
-Council profiles have an additional privacy rule: only the minimum personal context needed for the task should cross profile boundaries.
+Council profiles additionally share only minimum-necessary personal context across boundaries.
+
+Academy profiles additionally teach rather than impersonate credentials or assessment authority. They should adapt to learner level and goal, distinguish instruction from professional advice, and verify current standards or facts when material.
 
 ## Versioning
 
