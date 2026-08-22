@@ -15,6 +15,46 @@ class AcademyPackTests(unittest.TestCase):
         self.assertEqual(sum(self.manifest["categories"].values()), len(profiles))
         self.assertTrue(all(p["name"].startswith("academy-") for p in profiles))
 
+    def test_v02_faculty_and_skill_targets(self):
+        profiles = self.manifest["profiles"]
+        self.assertEqual(self.manifest["version"], "0.2.0")
+        self.assertEqual(len(profiles), 30)
+        self.assertEqual(sum(len(profile["jobs"]) for profile in profiles), 120)
+
+        expected_second_wave = {
+            "academy-physics-professor",
+            "academy-chemistry-professor",
+            "academy-biology-professor",
+            "academy-statistics-professor",
+            "academy-data-science-professor",
+            "academy-philosophy-professor",
+            "academy-law-professor",
+            "academy-theology-religious-studies-professor",
+            "academy-education-professor",
+            "academy-cybersecurity-instructor",
+            "academy-cloud-systems-instructor",
+            "academy-project-management-instructor",
+            "academy-automotive-instructor",
+            "academy-culinary-arts-instructor",
+            "academy-music-instructor",
+        }
+        names = {profile["name"] for profile in profiles}
+        self.assertTrue(expected_second_wave.issubset(names))
+
+    def test_broad_science_chair_is_preserved_with_specialist_preference(self):
+        names = {profile["name"] for profile in self.manifest["profiles"]}
+        self.assertIn("academy-natural-sciences-professor", names)
+        self.assertIn("academy-natural-sciences-professor", self.manifest["routing"]["broad_chairs"])
+        specialist_preferences = self.manifest["routing"]["specialist_preferences"]
+        self.assertEqual(specialist_preferences["physics"], "academy-physics-professor")
+        self.assertEqual(specialist_preferences["chemistry"], "academy-chemistry-professor")
+        self.assertEqual(specialist_preferences["biology"], "academy-biology-professor")
+
+    def test_every_specialist_preference_targets_installed_faculty(self):
+        names = {profile["name"] for profile in self.manifest["profiles"]}
+        for topic, profile_name in self.manifest["routing"]["specialist_preferences"].items():
+            self.assertIn(profile_name, names, topic)
+
     def test_every_job_has_skill(self):
         for profile in self.manifest["profiles"]:
             root = ROOT / "profiles" / profile["name"] / "skills"
