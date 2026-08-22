@@ -1,22 +1,10 @@
 {
   "schema_version": 1,
   "name": "hermes-profile-packs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Curated, production-ready profile packs for Hermes Agent.",
   "packs": [
-    {
-      "name": "hermes-agency",
-      "path": "hermes-agency",
-      "namespace": "agency-*",
-      "manifest": "hermes-agency/agency.json",
-      "purpose": "Professional multidisciplinary work."
-    },
-    {
-      "name": "hermes-council",
-      "path": "hermes-council",
-      "namespace": "council-*",
-      "manifest": "hermes-council/council.json",
-      "purpose": "Personal life support, coaching, stewardship, and growth."
-    }
+    {"name":"hermes-agency","path":"hermes-agency","namespace":"agency-*","manifest":"hermes-agency/agency.json","purpose":"Professional multidisciplinary work."},
+    {"name":"hermes-council","path":"hermes-council","namespace":"council-*","manifest":"hermes-council/council.json","purpose":"Personal life support, coaching, stewardship, and growth."}
   ]
 }

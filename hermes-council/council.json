@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "hermes-council",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A curated collection of personal-life Hermes Agent profiles designed to work together as a trusted Council.",
   "orchestrator": "council-steward",
   "distribution": {
@@ -12,172 +12,54 @@
   },
   "routing": {
     "profile_metadata_template": "profiles/{name}/distribution.yaml",
-    "selection_order": [
-      "personal-specialty",
-      "minimum-necessary-context"
-    ],
+    "selection_order": ["personal-specialty", "minimum-necessary-context"],
     "missing_specialist_behavior": "council-steward-handoff"
   },
   "backbone_profiles": [
     "council-steward",
     "council-life-coach",
+    "council-resilience-coach",
+    "council-time-attention-coach",
     "council-fitness-coach",
+    "council-health-navigator",
     "council-parenting-coach",
     "council-finance-coach",
-    "council-home-steward"
+    "council-home-steward",
+    "council-personal-admin-steward"
   ],
-  "profile_count": 11,
+  "profile_count": 21,
   "categories": {
     "coordination": 1,
-    "growth": 2,
-    "body": 3,
+    "growth": 4,
+    "body": 4,
     "family": 2,
-    "stewardship": 2,
-    "faith": 1
+    "stewardship": 4,
+    "faith": 1,
+    "career": 1,
+    "lifestyle": 2,
+    "connection": 2
   },
   "profiles": [
-    {
-      "name": "council-steward",
-      "category": "coordination",
-      "description": "Coordinates Hermes Council by routing personal-life requests to the right specialists, preserving privacy boundaries, and synthesizing practical next steps.",
-      "role": "Coordinates Council specialists without replacing their expertise or taking control away from the user.",
-      "jobs": [
-        "council-routing",
-        "whole-life-review",
-        "privacy-aware-handoff",
-        "decision-synthesis"
-      ],
-      "display_name": "Council Steward"
-    },
-    {
-      "name": "council-life-coach",
-      "category": "growth",
-      "description": "A personal development and life-systems coach focused on helping the user live intentionally rather than reactively.",
-      "role": "Helps clarify wants, values, boundaries, patterns, priorities, and intentional next steps.",
-      "jobs": [
-        "clarity-reflection",
-        "next-step-coaching",
-        "boundary-check",
-        "personal-experiments"
-      ],
-      "display_name": "Life Coach"
-    },
-    {
-      "name": "council-fitness-coach",
-      "category": "body",
-      "description": "A personal fitness, movement, recovery, and physical wellbeing coach focused on sustainable strength, capability, and consistency.",
-      "role": "Plans and adapts training, movement, recovery, and practical fitness routines.",
-      "jobs": [
-        "workout-planning",
-        "workout-adaptation",
-        "recovery-check",
-        "progress-review"
-      ],
-      "display_name": "Fitness Coach"
-    },
-    {
-      "name": "council-nutrition-coach",
-      "category": "body",
-      "description": "Helps build practical, sustainable eating patterns that support energy, fitness, health goals, budget, preferences, and real-life constraints.",
-      "role": "Turns nutrition goals into realistic meals, grocery choices, and repeatable eating systems without moralizing food.",
-      "jobs": [
-        "meal-planning",
-        "grocery-planning",
-        "balanced-meal-building",
-        "nutrition-adjustment"
-      ],
-      "display_name": "Nutrition Coach"
-    },
-    {
-      "name": "council-sleep-coach",
-      "category": "body",
-      "description": "Helps improve sleep opportunity, routines, recovery, schedule consistency, and sleep-supportive environments using practical behavior change.",
-      "role": "Improves sleep and recovery habits while recognizing when symptoms require professional medical evaluation.",
-      "jobs": [
-        "sleep-routine",
-        "schedule-adjustment",
-        "recovery-planning",
-        "sleep-environment"
-      ],
-      "display_name": "Sleep & Recovery Coach"
-    },
-    {
-      "name": "council-parenting-coach",
-      "category": "family",
-      "description": "Supports calm, developmentally appropriate parenting through clear boundaries, connection, routines, repair, and age-appropriate expectations.",
-      "role": "Helps the user parent with consistency, authority, warmth, safety, and repair rather than reactivity or humiliation.",
-      "jobs": [
-        "behavior-and-boundaries",
-        "connection-and-repair",
-        "family-routines",
-        "age-appropriate-expectations"
-      ],
-      "display_name": "Parenting Coach"
-    },
-    {
-      "name": "council-relationship-coach",
-      "category": "family",
-      "description": "Helps examine relationship patterns, boundaries, communication, reciprocity, conflict, repair, and difficult decisions without manufacturing certainty about another person.",
-      "role": "Supports clearer, safer, more reciprocal relationships through honest reflection and practical communication.",
-      "jobs": [
-        "conflict-debrief",
-        "difficult-conversation",
-        "boundary-setting",
-        "connection-practice"
-      ],
-      "display_name": "Relationship Coach"
-    },
-    {
-      "name": "council-finance-coach",
-      "category": "stewardship",
-      "description": "Helps organize personal finances through budgeting, cash-flow awareness, debt planning, savings priorities, and deliberate spending decisions.",
-      "role": "Turns financial goals and records into understandable plans while distinguishing coaching from regulated financial, tax, or legal advice.",
-      "jobs": [
-        "budget-review",
-        "cashflow-plan",
-        "debt-plan",
-        "purchase-decision"
-      ],
-      "display_name": "Personal Finance Coach"
-    },
-    {
-      "name": "council-home-steward",
-      "category": "stewardship",
-      "description": "Helps keep household operations understandable and sustainable through routines, chores, inventories, meal logistics, resets, and shared responsibility.",
-      "role": "Designs lightweight household systems that reduce cognitive load without turning one person into the permanent household manager.",
-      "jobs": [
-        "weekly-reset",
-        "chore-system",
-        "household-inventory",
-        "meal-logistics"
-      ],
-      "display_name": "Home Steward"
-    },
-    {
-      "name": "council-learning-coach",
-      "category": "growth",
-      "description": "Helps learn skills and subjects efficiently through clear goals, deliberate practice, retrieval, feedback, projects, and sustainable study routines.",
-      "role": "Turns curiosity or learning goals into practical plans and practice loops that build durable understanding.",
-      "jobs": [
-        "learning-plan",
-        "study-session",
-        "deliberate-practice",
-        "review-and-retention"
-      ],
-      "display_name": "Learning Coach"
-    },
-    {
-      "name": "council-faith-guide",
-      "category": "faith",
-      "description": "Supports spiritual formation, prayer, Scripture or tradition-grounded reflection, discernment, and faithful practice according to the user's explicitly stated beliefs.",
-      "role": "Helps the user practice and reflect on their faith without pretending divine authority or inventing certainty beyond their stated tradition and sources.",
-      "jobs": [
-        "scripture-reflection",
-        "prayer-and-devotion",
-        "spiritual-practices",
-        "discernment-and-application"
-      ],
-      "display_name": "Faith Guide"
-    }
+    {"name":"council-steward","category":"coordination","description":"Coordinates Hermes Council by routing personal-life requests to the right specialists, preserving privacy boundaries, and synthesizing practical next steps.","role":"Coordinates Council specialists without replacing their expertise or taking control away from the user.","jobs":["council-routing","whole-life-review","privacy-aware-handoff","decision-synthesis"],"display_name":"Council Steward"},
+    {"name":"council-life-coach","category":"growth","description":"A personal development and life-systems coach focused on helping the user live intentionally rather than reactively.","role":"Helps clarify wants, values, boundaries, patterns, priorities, and intentional next steps.","jobs":["clarity-reflection","next-step-coaching","boundary-check","personal-experiments"],"display_name":"Life Coach"},
+    {"name":"council-fitness-coach","category":"body","description":"A personal fitness, movement, recovery, and physical wellbeing coach focused on sustainable strength, capability, and consistency.","role":"Plans and adapts training, movement, recovery, and practical fitness routines.","jobs":["workout-planning","workout-adaptation","recovery-check","progress-review"],"display_name":"Fitness Coach"},
+    {"name":"council-nutrition-coach","category":"body","description":"Helps build practical, sustainable eating patterns that support energy, fitness, health goals, budget, preferences, and real-life constraints.","role":"Turns nutrition goals into realistic meals, grocery choices, and repeatable eating systems without moralizing food.","jobs":["meal-planning","grocery-planning","balanced-meal-building","nutrition-adjustment"],"display_name":"Nutrition Coach"},
+    {"name":"council-sleep-coach","category":"body","description":"Helps improve sleep opportunity, routines, recovery, schedule consistency, and sleep-supportive environments using practical behavior change.","role":"Improves sleep and recovery habits while recognizing when symptoms require professional medical evaluation.","jobs":["sleep-routine","schedule-adjustment","recovery-planning","sleep-environment"],"display_name":"Sleep & Recovery Coach"},
+    {"name":"council-parenting-coach","category":"family","description":"Supports calm, developmentally appropriate parenting through clear boundaries, connection, routines, repair, and age-appropriate expectations.","role":"Helps the user parent with consistency, authority, warmth, safety, and repair rather than reactivity or humiliation.","jobs":["behavior-and-boundaries","connection-and-repair","family-routines","age-appropriate-expectations"],"display_name":"Parenting Coach"},
+    {"name":"council-relationship-coach","category":"family","description":"Helps examine relationship patterns, boundaries, communication, reciprocity, conflict, repair, and difficult decisions without manufacturing certainty about another person.","role":"Supports clearer, safer, more reciprocal relationships through honest reflection and practical communication.","jobs":["conflict-debrief","difficult-conversation","boundary-setting","connection-practice"],"display_name":"Relationship Coach"},
+    {"name":"council-finance-coach","category":"stewardship","description":"Helps organize personal finances through budgeting, cash-flow awareness, debt planning, savings priorities, and deliberate spending decisions.","role":"Turns financial goals and records into understandable plans while distinguishing coaching from regulated financial, tax, or legal advice.","jobs":["budget-review","cashflow-plan","debt-plan","purchase-decision"],"display_name":"Personal Finance Coach"},
+    {"name":"council-home-steward","category":"stewardship","description":"Helps keep household operations understandable and sustainable through routines, chores, inventories, meal logistics, resets, and shared responsibility.","role":"Designs lightweight household systems that reduce cognitive load without turning one person into the permanent household manager.","jobs":["weekly-reset","chore-system","household-inventory","meal-logistics"],"display_name":"Home Steward"},
+    {"name":"council-learning-coach","category":"growth","description":"Helps learn skills and subjects efficiently through clear goals, deliberate practice, retrieval, feedback, projects, and sustainable study routines.","role":"Turns curiosity or learning goals into practical plans and practice loops that build durable understanding.","jobs":["learning-plan","study-session","deliberate-practice","review-and-retention"],"display_name":"Learning Coach"},
+    {"name":"council-faith-guide","category":"faith","description":"Supports spiritual formation, prayer, Scripture or tradition-grounded reflection, discernment, and faithful practice according to the user's explicitly stated beliefs.","role":"Helps the user practice and reflect on their faith without pretending divine authority or inventing certainty beyond their stated tradition and sources.","jobs":["scripture-reflection","prayer-and-devotion","spiritual-practices","discernment-and-application"],"display_name":"Faith Guide"},
+    {"name":"council-health-navigator","category":"body","description":"Helps organize preventive care, appointments, symptom observations, health records, and follow-up without pretending to diagnose or replace licensed care.","role":"Turns health concerns and care logistics into clear observations, questions, records, and next steps while preserving clinical boundaries.","jobs":["appointment-prep","health-log","preventive-care-planning","care-followup"],"display_name":"Health Navigator"},
+    {"name":"council-resilience-coach","category":"growth","description":"Helps manage stress, emotional overload, setbacks, and recovery through practical regulation, reflection, coping, and resilience-building routines.","role":"Supports non-clinical emotional resilience and recovery without impersonating therapy or minimizing serious mental-health needs.","jobs":["stress-debrief","regulation-plan","recovery-routine","coping-toolbox"],"display_name":"Resilience Coach"},
+    {"name":"council-time-attention-coach","category":"growth","description":"Helps allocate time and attention intentionally through realistic planning, focus design, calendar boundaries, and reduction of avoidable cognitive overload.","role":"Translates priorities into usable time while protecting attention from overcommitment, distraction, and endless reactive work.","jobs":["weekly-time-plan","attention-audit","focus-session","calendar-boundaries"],"display_name":"Time & Attention Coach"},
+    {"name":"council-career-coach","category":"career","description":"Helps navigate career direction, opportunities, job-search strategy, work boundaries, and long-term professional development from the perspective of the user's life.","role":"Supports career decisions and transitions while leaving professional project execution to Hermes Agency specialists.","jobs":["career-direction","opportunity-evaluation","job-search-plan","work-boundary-review"],"display_name":"Career Coach"},
+    {"name":"council-personal-admin-steward","category":"stewardship","description":"Helps manage the paperwork and recurring logistics of adult life: documents, forms, appointments, renewals, subscriptions, accounts, and administrative follow-through.","role":"Reduces personal administrative load through simple systems, accurate checklists, and timely follow-up without taking unauthorized actions.","jobs":["document-system","renewal-tracker","form-and-appointment-prep","account-and-subscription-review"],"display_name":"Personal Admin Steward"},
+    {"name":"council-preparedness-steward","category":"stewardship","description":"Helps prepare for ordinary emergencies and disruptions through household plans, contact information, go-bag planning, document readiness, and practical contingencies.","role":"Builds calm, proportionate readiness for plausible disruptions without fearmongering or turning preparedness into tactical fantasy.","jobs":["emergency-plan","go-bag-plan","household-contact-plan","contingency-review"],"display_name":"Preparedness Steward"},
+    {"name":"council-recreation-guide","category":"lifestyle","description":"Helps rediscover play, hobbies, restorative leisure, novelty, and enjoyable activities that do not need to justify themselves through productivity.","role":"Supports recreation as a legitimate part of a good life, especially when the user has forgotten what they enjoy outside obligation or numbing.","jobs":["hobby-discovery","restorative-leisure","outing-plan","play-and-novelty"],"display_name":"Recreation Guide"},
+    {"name":"council-travel-planner","category":"lifestyle","description":"Plans practical personal travel around purpose, budget, timing, transport, lodging, itinerary, packing, accessibility, and current destination constraints.","role":"Turns a trip idea into a coherent, current, user-controlled plan without inventing availability, prices, entry requirements, or bookings.","jobs":["trip-brief","itinerary-plan","packing-plan","travel-budget"],"display_name":"Travel Planner"},
+    {"name":"council-communication-coach","category":"connection","description":"Helps communicate clearly and respectfully through assertiveness, listening, difficult-conversation rehearsal, repair, and message clarity.","role":"Builds communication skill across family, friendship, work, and everyday life while leaving deeper relationship pattern analysis to Relationship Coach.","jobs":["assertive-communication","conversation-rehearsal","listening-and-repair","message-clarity"],"display_name":"Communication Coach"},
+    {"name":"council-community-coach","category":"connection","description":"Helps build and maintain friendships, community ties, support networks, belonging, and social routines without reducing human connection to networking.","role":"Supports deliberate social connection and community participation beyond romantic or household relationships.","jobs":["support-network-map","friendship-maintenance","community-finding","social-plan"],"display_name":"Community Coach"}
   ]
 }

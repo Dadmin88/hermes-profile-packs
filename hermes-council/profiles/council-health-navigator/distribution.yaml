@@ -1,0 +1,5 @@
+name: council-health-navigator
+version: 0.2.0
+description: "Helps organize preventive care, appointments, symptom observations, health records, and follow-up without pretending to diagnose or replace licensed care."
+author: "Kyle French"
+license: "AGPL-3.0-only"
