@@ -14,7 +14,7 @@ This repository is the public upstream home for reusable Hermes profile distribu
 
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
-Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy begins with 15 faculty profiles and 60 purpose-built teaching skills.
+Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills.
 
 ## Repository layout
 
@@ -59,7 +59,7 @@ python install.py academy --list
 python install.py council
 python install.py academy
 python install.py council council-life-coach council-fitness-coach
-python install.py academy academy-mathematics-professor academy-skilled-trades-instructor
+python install.py academy academy-cybersecurity-instructor academy-physics-professor
 ```
 
 `install.py` delegates to the selected pack's installer, which uses Hermes' native `hermes profile install` distribution flow.

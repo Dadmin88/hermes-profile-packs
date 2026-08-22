@@ -14,7 +14,7 @@ PATTERNS = [
     ("personal home path", re.compile(r"/(?:home|media)/(?:kyle|dadmin)(?:/|$)", re.IGNORECASE)),
     ("private key", re.compile(r"BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY")),
     ("GitHub token", re.compile(r"(?:ghp_|github_pat_)[A-Za-z0-9_]{20,}")),
-    ("OpenAI-style secret", re.compile(r"sk-[A-Za-z0-9_-]{20,}")),
+    ("OpenAI-style secret", re.compile(r"(?<![A-Za-z0-9_])sk-[A-Za-z0-9_-]{20,}")),
 ]
 
 

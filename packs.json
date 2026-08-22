@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "hermes-profile-packs",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Curated, production-ready profile packs for Hermes Agent.",
   "packs": [
     {"name":"hermes-agency","path":"hermes-agency","namespace":"agency-*","manifest":"hermes-agency/agency.json","purpose":"Professional multidisciplinary work."},
