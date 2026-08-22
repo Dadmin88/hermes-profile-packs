@@ -30,8 +30,9 @@ hermes-profile-packs/
 │   ├── academy.json
 │   └── profiles/
 ├── docs/
+├── tests/                  # Root installer/selector tests
 ├── packs.json
-├── install.py
+├── install.py              # Human wizard + agent-friendly selector
 └── validate.py
 ```
 
@@ -51,18 +52,39 @@ Runtime state is never distributed. Authentication material, `.env` files, logs,
 
 ## Install
 
+For most people, just launch the selector:
+
+```bash
+python install.py
+```
+
+The wizard can recommend a small set from a plain-language goal, let you browse packs/categories, search exact profiles, or explicitly install everything. It shows the exact plan before changing Hermes and is designed to avoid installing profiles you do not need.
+
+The existing pack-first commands are still supported:
+
 ```bash
 python install.py --list-packs
 python install.py council --list
 python install.py agency --list
 python install.py academy --list
-python install.py council
-python install.py academy
 python install.py council council-life-coach council-fitness-coach
 python install.py academy academy-cybersecurity-instructor academy-physics-professor
 ```
 
-`install.py` delegates to the selected pack's installer, which uses Hermes' native `hermes profile install` distribution flow.
+For agents and scripts, the same selector exposes a deterministic JSON interface:
+
+```bash
+python install.py --agent-help --json
+python install.py --catalog --json
+python install.py --recommend "build a web app" --json
+python install.py --profiles agency-backend-engineer agency-frontend-engineer --dry-run --json
+python install.py --profiles agency-backend-engineer agency-frontend-engineer --yes --json
+python install.py --all --yes --json
+```
+
+`--catalog` and `--recommend` are read-only. Non-interactive installation requires `--yes`, and `--dry-run` resolves the exact plan first. Installation still delegates to each pack's native `hermes profile install` flow.
+
+See [`docs/INSTALLER.md`](docs/INSTALLER.md) for the full wizard and agent contract.
 
 ## Validate
 
@@ -70,9 +92,10 @@ Run the full repository validation suite before publishing changes:
 
 ```bash
 python validate.py
+python -m unittest discover -s tests -p 'test_*.py'
 ```
 
-This validates all registered pack manifests, profile namespaces, distribution metadata, required profile files, skill frontmatter, portability, and common secret/path leaks. Pack-specific validators and tests enforce additional contracts.
+This validates all registered pack manifests, profile namespaces, distribution metadata, required profile files, skill frontmatter, portability, common secret/path leaks, and the root installer/selector behavior. Pack-specific validators and tests enforce additional contracts.
 
 ## Design principles
 
