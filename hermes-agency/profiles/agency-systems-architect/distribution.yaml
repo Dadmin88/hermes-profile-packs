@@ -1,0 +1,5 @@
+name: agency-systems-architect
+version: 0.1.0
+description: "Designs large-scale system topology, distributed boundaries, infrastructure interaction, protocols, reliability domains, and cross-service architecture."
+author: "Kyle French"
+license: "AGPL-3.0-only"

@@ -1,0 +1,5 @@
+name: agency-security-engineer
+version: 0.1.0
+description: "Designs and implements security controls across applications and infrastructure, including auth, authorization, secrets, trust boundaries, and secure defaults."
+author: "Kyle French"
+license: "AGPL-3.0-only"

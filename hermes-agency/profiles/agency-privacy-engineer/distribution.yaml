@@ -1,0 +1,5 @@
+name: agency-privacy-engineer
+version: 0.1.0
+description: "Implements privacy-by-design controls for data inventory, minimization, consent, purpose limitation, retention, deletion, access, and privacy risk in product and system architecture."
+author: "Kyle French"
+license: "AGPL-3.0-only"

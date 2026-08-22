@@ -1,0 +1,5 @@
+name: agency-release-manager
+version: 0.1.0
+description: "Coordinates release readiness, versioning, change control, rollout, rollback, release evidence, and post-release follow-up."
+author: "Kyle French"
+license: "AGPL-3.0-only"

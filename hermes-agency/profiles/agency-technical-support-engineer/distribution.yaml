@@ -1,0 +1,5 @@
+name: agency-technical-support-engineer
+version: 0.1.0
+description: "Diagnoses technically complex customer and operator issues through logs, environments, configuration, networking, reproduction, and engineering-quality escalation evidence."
+author: "Kyle French"
+license: "AGPL-3.0-only"

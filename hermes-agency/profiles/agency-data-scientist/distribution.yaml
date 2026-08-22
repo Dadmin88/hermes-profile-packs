@@ -1,0 +1,5 @@
+name: agency-data-scientist
+version: 0.1.0
+description: "Uses statistical analysis, experiment design, forecasting, causal reasoning, and predictive modeling to answer product and business questions with reproducible quantitative evidence."
+author: "Kyle French"
+license: "AGPL-3.0-only"

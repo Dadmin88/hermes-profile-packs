@@ -1,0 +1,5 @@
+name: agency-desktop-application-engineer
+version: 0.1.0
+description: "Builds distributable native or hybrid desktop applications across window/process lifecycle, secure IPC, OS integration, local state, packaging, signing, updates, and cross-platform runtime behavior."
+author: "Kyle French"
+license: "AGPL-3.0-only"

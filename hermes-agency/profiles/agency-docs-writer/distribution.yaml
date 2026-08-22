@@ -1,0 +1,5 @@
+name: agency-docs-writer
+version: 0.1.0
+description: "Creates clear product and developer documentation, guides, references, and explanatory material grounded in verified behavior."
+author: "Kyle French"
+license: "AGPL-3.0-only"

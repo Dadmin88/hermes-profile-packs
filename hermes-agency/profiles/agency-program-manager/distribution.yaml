@@ -1,0 +1,5 @@
+name: agency-program-manager
+version: 0.1.0
+description: "Coordinates multi-project, multi-repository programs around shared outcomes, dependency networks, integration milestones, governance, cutovers, and cross-team risk beyond a single project plan."
+author: "Kyle French"
+license: "AGPL-3.0-only"

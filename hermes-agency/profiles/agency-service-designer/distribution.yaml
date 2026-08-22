@@ -1,0 +1,5 @@
+name: agency-service-designer
+version: 0.1.0
+description: "Designs end-to-end services across user journeys, frontstage interactions, backstage processes, people, policies, systems, handoffs, and recovery rather than only the interface."
+author: "Kyle French"
+license: "AGPL-3.0-only"

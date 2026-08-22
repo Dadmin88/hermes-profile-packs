@@ -1,0 +1,5 @@
+name: agency-site-reliability-engineer
+version: 0.1.0
+description: "Owns measurable production reliability through service objectives, error budgets, incident engineering, resilience validation, and toil reduction without replacing infrastructure or delivery ownership."
+author: "Kyle French"
+license: "AGPL-3.0-only"

@@ -1,0 +1,5 @@
+name: agency-backend-engineer
+version: 0.1.0
+description: "Builds server-side application logic, APIs, services, domain models, persistence integration, background jobs, and backend tests."
+author: "Kyle French"
+license: "AGPL-3.0-only"

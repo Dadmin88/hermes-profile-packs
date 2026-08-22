@@ -1,0 +1,5 @@
+name: agency-frontend-engineer
+version: 0.1.0
+description: "Builds user-facing interfaces, client state, interaction behavior, accessibility, frontend integration, and automated frontend tests."
+author: "Kyle French"
+license: "AGPL-3.0-only"

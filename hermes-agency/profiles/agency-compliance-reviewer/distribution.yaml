@@ -1,0 +1,5 @@
+name: agency-compliance-reviewer
+version: 0.1.0
+description: "Reviews product, engineering, content, and operational work against applicable policies, licenses, standards, and compliance requirements."
+author: "Kyle French"
+license: "AGPL-3.0-only"

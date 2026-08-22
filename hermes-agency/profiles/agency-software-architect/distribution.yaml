@@ -1,0 +1,5 @@
+name: agency-software-architect
+version: 0.1.0
+description: "Designs durable software boundaries, interfaces, dependency direction, data flows, protocols, and migration strategies for cross-system changes."
+author: "Kyle French"
+license: "AGPL-3.0-only"

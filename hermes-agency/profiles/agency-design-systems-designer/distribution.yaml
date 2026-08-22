@@ -1,0 +1,5 @@
+name: agency-design-systems-designer
+version: 0.1.0
+description: "Builds reusable design systems, tokens, components, patterns, documentation, and governance for consistent product interfaces."
+author: "Kyle French"
+license: "AGPL-3.0-only"

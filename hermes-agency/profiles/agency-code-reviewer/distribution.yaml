@@ -1,0 +1,5 @@
+name: agency-code-reviewer
+version: 0.1.0
+description: "Performs independent implementation review for correctness, regressions, maintainability, tests, API compatibility, and risky edge cases."
+author: "Kyle French"
+license: "AGPL-3.0-only"

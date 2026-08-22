@@ -1,0 +1,5 @@
+name: agency-design-reviewer
+version: 0.1.0
+description: "Performs independent design review for usability, consistency, completeness, accessibility, and alignment with product and brand requirements."
+author: "Kyle French"
+license: "AGPL-3.0-only"

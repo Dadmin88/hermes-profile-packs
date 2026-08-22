@@ -1,0 +1,5 @@
+name: agency-project-manager
+version: 0.1.0
+description: "Plans and coordinates projects through scope, milestones, dependencies, owners, risks, communication, and delivery tracking."
+author: "Kyle French"
+license: "AGPL-3.0-only"

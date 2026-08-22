@@ -1,0 +1,5 @@
+name: agency-mobile-engineer
+version: 0.1.0
+description: "Builds iOS and Android application behavior across lifecycle, navigation, native/device APIs, permissions, offline state, background work, deep links, push, signing, stores, and mobile-specific performance."
+author: "Kyle French"
+license: "AGPL-3.0-only"

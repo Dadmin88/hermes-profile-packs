@@ -1,0 +1,5 @@
+name: agency-distributed-systems-engineer
+version: 0.1.0
+description: "Implements and proves distributed runtime behavior including protocols, ordering, retries, replication, consistency, membership, and fault handling within an approved systems architecture."
+author: "Kyle French"
+license: "AGPL-3.0-only"

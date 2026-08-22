@@ -1,0 +1,5 @@
+name: agency-database-engineer
+version: 0.1.0
+description: "Designs and operates application databases, schemas, indexes, queries, migrations, and data-integrity controls."
+author: "Kyle French"
+license: "AGPL-3.0-only"

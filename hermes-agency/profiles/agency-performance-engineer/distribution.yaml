@@ -1,0 +1,5 @@
+name: agency-performance-engineer
+version: 0.1.0
+description: "Profiles, diagnoses, and improves latency, throughput, memory, CPU/GPU use, rendering, load behavior, and scalability."
+author: "Kyle French"
+license: "AGPL-3.0-only"

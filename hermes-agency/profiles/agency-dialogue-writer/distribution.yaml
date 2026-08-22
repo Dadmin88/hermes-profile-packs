@@ -1,0 +1,5 @@
+name: agency-dialogue-writer
+version: 0.1.0
+description: "Writes natural, character-consistent dialogue and conversational interactions for games, agents, narratives, and interactive experiences."
+author: "Kyle French"
+license: "AGPL-3.0-only"

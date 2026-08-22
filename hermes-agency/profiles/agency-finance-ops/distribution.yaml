@@ -1,0 +1,5 @@
+name: agency-finance-ops
+version: 0.1.0
+description: "Supports budgeting, cost tracking, financial operations, unit economics, forecasting, and financial decision support."
+author: "Kyle French"
+license: "AGPL-3.0-only"

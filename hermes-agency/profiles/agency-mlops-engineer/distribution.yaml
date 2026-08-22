@@ -1,0 +1,5 @@
+name: agency-mlops-engineer
+version: 0.1.0
+description: "Owns reproducible ML training and serving operations including model artifacts, experiment tracking, evaluation pipelines, inference infrastructure, model rollout, observability, and GPU/runtime efficiency."
+author: "Kyle French"
+license: "AGPL-3.0-only"

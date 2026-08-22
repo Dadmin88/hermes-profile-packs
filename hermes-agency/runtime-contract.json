@@ -1,0 +1,10 @@
+{
+  "schema_version": 2,
+  "agency_name": "hermes-agency",
+  "catalog_schema_version": 2,
+  "content_digest_schema": "hermes-agency-profile-content.v1",
+  "agency_manifest": "agency.json",
+  "profile_root": "profiles",
+  "profile_path_template": "profiles/{name}",
+  "capability_path_template": "profiles/{name}/skills"
+}

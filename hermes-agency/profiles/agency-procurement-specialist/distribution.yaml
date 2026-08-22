@@ -1,0 +1,5 @@
+name: agency-procurement-specialist
+version: 0.1.0
+description: "Evaluates vendors, services, tooling, licensing, cost, contracts, and purchasing tradeoffs for operational decisions."
+author: "Kyle French"
+license: "AGPL-3.0-only"

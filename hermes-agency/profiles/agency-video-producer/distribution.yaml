@@ -1,0 +1,5 @@
+name: agency-video-producer
+version: 0.1.0
+description: "Turns raw screen captures, camera footage, audio, graphics, and scripts into finished product demos, tutorials, launch videos, and social cuts through editing, pacing, captions, sound, and export QA."
+author: "Kyle French"
+license: "AGPL-3.0-only"

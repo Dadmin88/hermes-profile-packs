@@ -1,0 +1,5 @@
+name: agency-business-continuity-manager
+version: 0.1.0
+description: "Coordinates business continuity planning across critical services, people, facilities, suppliers, communications, manual workarounds, recovery priorities, exercises, and continuity governance."
+author: "Kyle French"
+license: "AGPL-3.0-only"

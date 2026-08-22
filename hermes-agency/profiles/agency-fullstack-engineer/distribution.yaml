@@ -1,0 +1,5 @@
+name: agency-fullstack-engineer
+version: 0.1.0
+description: "Implements bounded features that span frontend and backend when a single owner can efficiently deliver the vertical slice."
+author: "Kyle French"
+license: "AGPL-3.0-only"

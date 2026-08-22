@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "pack": "hermes-council",
+  "profile_namespace": "council-",
+  "runtime_state_is_distribution_content": false,
+  "cross_profile_context_policy": "minimum-necessary",
+  "orchestrator": "council-steward"
+}

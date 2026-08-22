@@ -1,0 +1,5 @@
+name: agency-devops-engineer
+version: 0.1.0
+description: "Builds CI/CD, deployment automation, release pipelines, operational tooling, and repeatable delivery workflows."
+author: "Kyle French"
+license: "AGPL-3.0-only"

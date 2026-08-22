@@ -1,0 +1,5 @@
+name: agency-release-notes-writer
+version: 0.1.0
+description: "Produces concise, accurate release notes and changelogs from verified shipped behavior and user impact."
+author: "Kyle French"
+license: "AGPL-3.0-only"

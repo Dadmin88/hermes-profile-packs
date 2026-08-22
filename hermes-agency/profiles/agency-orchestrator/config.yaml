@@ -1,0 +1,5 @@
+toolsets:
+  - kanban
+  - clarify
+  - memory
+  - session_search

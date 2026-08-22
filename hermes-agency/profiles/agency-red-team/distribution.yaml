@@ -1,0 +1,5 @@
+name: agency-red-team
+version: 0.1.0
+description: "Adversarially tests systems, workflows, agents, and assumptions to uncover exploitable, unsafe, or failure-prone behavior."
+author: "Kyle French"
+license: "AGPL-3.0-only"

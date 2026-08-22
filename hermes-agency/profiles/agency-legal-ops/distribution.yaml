@@ -1,0 +1,5 @@
+name: agency-legal-ops
+version: 0.1.0
+description: "Organizes legal workflows, contract operations, licensing checks, policy coordination, and issues that require qualified legal review."
+author: "Kyle French"
+license: "AGPL-3.0-only"

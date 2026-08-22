@@ -1,0 +1,5 @@
+name: agency-data-engineer
+version: 0.1.0
+description: "Builds reliable data ingestion, transformation, pipelines, schemas, quality checks, and analytical data stores."
+author: "Kyle French"
+license: "AGPL-3.0-only"

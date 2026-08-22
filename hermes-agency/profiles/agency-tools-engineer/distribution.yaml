@@ -1,0 +1,5 @@
+name: agency-tools-engineer
+version: 0.1.0
+description: "Builds internal developer tools, CLIs, generators, debugging utilities, editors, and productivity tooling."
+author: "Kyle French"
+license: "AGPL-3.0-only"

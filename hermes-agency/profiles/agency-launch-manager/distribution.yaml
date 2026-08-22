@@ -1,0 +1,5 @@
+name: agency-launch-manager
+version: 0.1.0
+description: "Coordinates cross-functional product launches, readiness, dependencies, timing, communication, and launch-day execution."
+author: "Kyle French"
+license: "AGPL-3.0-only"

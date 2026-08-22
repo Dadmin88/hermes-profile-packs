@@ -1,0 +1,5 @@
+name: agency-security-reviewer
+version: 0.1.0
+description: "Performs independent security review of designs and implementations for vulnerabilities, trust-boundary errors, unsafe defaults, and missing controls."
+author: "Kyle French"
+license: "AGPL-3.0-only"

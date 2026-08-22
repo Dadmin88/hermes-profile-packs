@@ -1,0 +1,5 @@
+name: agency-orchestrator
+version: 0.1.0
+description: "Coordinates multi-specialist work by decomposing goals, routing assignments, managing dependencies, and synthesizing validated results."
+author: "Kyle French"
+license: "AGPL-3.0-only"

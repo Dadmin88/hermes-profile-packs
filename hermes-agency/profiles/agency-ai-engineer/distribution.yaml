@@ -1,0 +1,5 @@
+name: agency-ai-engineer
+version: 0.1.0
+description: "Designs, implements, and evaluates AI and agent features, including model integration, prompting, retrieval, tool use, structured outputs, and reliability controls."
+author: "Kyle French"
+license: "AGPL-3.0-only"

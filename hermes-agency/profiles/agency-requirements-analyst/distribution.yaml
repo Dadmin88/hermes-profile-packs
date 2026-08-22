@@ -1,0 +1,5 @@
+name: agency-requirements-analyst
+version: 0.1.0
+description: "Elicits, structures, disambiguates, and traces functional and non-functional requirements into testable acceptance criteria."
+author: "Kyle French"
+license: "AGPL-3.0-only"

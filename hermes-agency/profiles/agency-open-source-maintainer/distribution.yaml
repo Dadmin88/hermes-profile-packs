@@ -1,0 +1,5 @@
+name: agency-open-source-maintainer
+version: 0.1.0
+description: "Owns public repository stewardship across contribution intake, issue/PR triage, contributor onboarding, governance, release communication, dependency stewardship, and sustainable maintainer workflow."
+author: "Kyle French"
+license: "AGPL-3.0-only"

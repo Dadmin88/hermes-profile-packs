@@ -1,0 +1,5 @@
+name: agency-technical-writer
+version: 0.1.0
+description: "Writes accurate developer and technical documentation such as READMEs, tutorials, API docs, architecture explanations, runbooks, migrations, and release guidance."
+author: "Kyle French"
+license: "AGPL-3.0-only"

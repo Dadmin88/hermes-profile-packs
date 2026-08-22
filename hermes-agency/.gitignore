@@ -1,0 +1,39 @@
+# Credentials and local Hermes state
+.env
+.env.*
+!.env.EXAMPLE
+auth.json
+auth.lock
+
+# Runtime/user data
+memories/
+sessions/
+logs/
+plans/
+workspace/
+home/
+state.db*
+hermes_state.db
+response_store.db*
+gateway.pid
+gateway_state.json
+processes.json
+active_profile
+.update_check
+
+# Caches/generated artifacts
+__pycache__/
+*.py[cod]
+.cache/
+cache/
+*_cache/
+browser_screenshots/
+checkpoints/
+sandboxes/
+backups/
+.worktrees/
+
+# Editor/OS noise
+.DS_Store
+.idea/
+.vscode/
