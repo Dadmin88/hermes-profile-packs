@@ -1,48 +1,64 @@
 # Team Recipes
 
-Team recipes are validated, portable compositions of existing Hermes Profile Packs profiles. They answer a practical question: **which small set should I install for this kind of outcome?**
+Team Recipes are validated, portable compositions of existing Hermes Profile Packs profiles. They answer: **which small set should I install for this kind of outcome?**
 
-A recipe does not create a new agent type, scheduler, room, board, memory store, or runtime. It resolves stable profile identities and delegates installation to the existing Profile Packs installer.
+A recipe does not create a new agent type, scheduler, room, board, memory store, or runtime. It resolves stable profile identities and delegates installation to the existing Profile Packs/Hermes distribution path.
 
-## Browse and recommend
+## Recommended entry point
+
+The root installer now understands recipes directly:
 
 ```bash
-python recipes.py --list
-python recipes.py --list --json
-python recipes.py --recommend "build and ship a web app"
-python recipes.py --recommend "learn cybersecurity" --json
+python install.py --list-recipes
+python install.py --recommend "build and ship a web app"
+python install.py --recipe software-delivery --tier minimal --dry-run
+python install.py --recipe software-delivery --tier recommended --yes
 ```
+
+The interactive wizard (`python install.py`) can also recommend a recipe, browse recipes, choose a tier, and show the exact final install plan.
+
+## Confidence-aware promotion
+
+The installer promotes a Team Recipe only when the match is both strong and unambiguous. A top-scoring recipe that is weak or nearly tied with another recipe is not presented as canonical.
+
+This matters because recipes represent opinionated team formations. Ambiguity should fall back to individual profile discovery rather than forcing the user's goal into the wrong template.
+
+`--recommend --json` exposes:
+
+- `recipe_match`: one clear promoted recipe or `null`;
+- `recipe_recommendations`: ranked recipe candidates;
+- `recommendations`: individual profile candidates.
 
 ## Tiers
 
 Every recipe has three nested tiers:
 
-- **minimal**: the smallest coherent set that can perform the core workflow;
-- **recommended**: the default balance of expertise, review, and coordination;
+- **minimal**: smallest coherent set that can perform the core workflow;
+- **recommended**: default balance of expertise, review, and coordination;
 - **expanded**: additional distinct specialties for larger or higher-risk work.
 
-Bigger is not automatically better. Use the smallest tier that adds real expertise or independent verification.
+Bigger is not automatically better. Use the smallest tier that adds real expertise, independent verification, or useful parallelism.
 
 ## Inspect before installing
 
 ```bash
-python recipes.py software-delivery --tier minimal
-python recipes.py software-delivery --tier recommended --dry-run
-python recipes.py security-review --tier recommended --dry-run --json
+python install.py --recipe software-delivery --tier minimal --dry-run
+python install.py --recipe security-review --tier recommended --dry-run --json
 ```
 
-Without `--yes`, recipe selection is read-only. The plan shows exact profile names, source-payload estimates, workflow guidance, success criteria, and optional runtime ideas.
+Without `--yes`, the selection is read-only. The plan shows exact profile names, source-payload estimates, workflow guidance, success criteria, and optional runtime ideas.
 
-## Install
+## Focused recipe client
+
+`recipes.py` remains available:
 
 ```bash
-python recipes.py software-delivery --tier recommended --yes
-python recipes.py api-backend --tier minimal --yes
-python recipes.py personal-reset --tier minimal --yes
-python recipes.py cybersecurity-learning --tier recommended --yes
+python recipes.py --list
+python recipes.py --recommend "learn cybersecurity" --json
+python recipes.py personal-reset --tier minimal --dry-run
 ```
 
-Installation reuses the root installer and each pack's normal `hermes profile install` path. Recipe tooling does not maintain a second profile catalog.
+It uses the same shared recipe engine as `install.py`; it does not maintain independent scoring or a second profile roster.
 
 ## Initial catalog
 

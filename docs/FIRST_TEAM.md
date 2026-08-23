@@ -10,25 +10,29 @@ Examples:
 - "Help me reset my routines and priorities."
 - "Teach me defensive cybersecurity."
 
-Ask the recipe selector:
+Ask the main installer:
 
 ```bash
-python recipes.py --recommend "build and ship a web feature"
+python install.py --recommend "build and ship a web feature"
 ```
 
-Then inspect the recommended recipe before installing:
+If one Team Recipe is a strong, unambiguous match, the installer promotes it. If the goal is broad or several recipes are plausible, it keeps the recommendation at the individual-profile level instead of forcing a formation.
+
+Inspect the recipe before installing:
 
 ```bash
-python recipes.py software-delivery --tier minimal --dry-run
+python install.py --recipe software-delivery --tier minimal --dry-run
 ```
 
 ## 2. Install the smallest coherent tier
 
 ```bash
-python recipes.py software-delivery --tier minimal --yes
+python install.py --recipe software-delivery --tier minimal --yes
 ```
 
 Do not upgrade to `recommended` or `expanded` because the names look useful. Add roles when the work actually crosses into their specialty, when independent review is justified, or when a clean parallel seam exists.
+
+You can also run `python install.py` and use the interactive recipe-aware wizard.
 
 ## 3. Prove one real workflow
 
