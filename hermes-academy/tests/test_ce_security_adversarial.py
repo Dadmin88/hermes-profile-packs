@@ -336,7 +336,8 @@ class TestRecursiveTraining(unittest.TestCase):
         self.assertIn("Do not silently start another class", LEARNER_SKILL)
 
     def test_no_second_orchestration_loop(self):
-        self.assertIn("Do not create a second orchestration loop around `/goal` or `/subgoal`", LEARNER_SKILL)
+        self.assertIn("`goal_manage` is only a bridge into Hermes' existing `/goal` and `/subgoal` state", LEARNER_SKILL)
+        self.assertIn("Do not create a second orchestration loop around it", LEARNER_SKILL)
 
     def test_subgoal_only_for_new_required_deficiency(self):
         self.assertIn("new required deficiency", LEARNER_SKILL)

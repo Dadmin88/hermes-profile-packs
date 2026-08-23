@@ -10,9 +10,9 @@ Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skill
 
 ## Continuing Education
 
-Academy can also teach another installed Hermes profile through the Continuing Education flow. A learner can receive an ordinary request such as `Go learn API security`, route through `academy-dean` when needed, use native Hermes goal/Bot/learning primitives underneath, and persist a reusable capability in its own normal skill store.
+Academy can also teach another installed Hermes profile through the Continuing Education flow. A learner can receive an ordinary request such as `Go learn API security`, route through `academy-dean` when needed, use the Bot Chat `goal_manage` bridge into Hermes' native goal state plus `message_agent`/`/learn` underneath, and persist a reusable capability in its own normal skill store.
 
-The implementation is merged and validated through the Phase 10–13 quality gate, but the controlled persistent-capability preflight is still in progress. Treat this as **pre-release/experimental**, not yet production-validated. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) for current behavior and status.
+The implementation is merged and validated through the Phase 10–13 quality gate, but the controlled persistent-capability preflight is still in progress. Treat this as **pre-release/experimental**, not yet production-validated. The current preflight uses the generic `goal_manage` bridge merged in downstream Hermes PR #24; final stock-install readiness requires that capability in the normal Hermes release. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) for current behavior and status.
 
 Continuing Education is minimum-sufficient competency transfer, not a fixed classroom simulation. Instructors teach and assess; the learner owns `/learn` and all learner-local persistence. Canonical one-to-one transport is Bot Chat + `message_agent`, and there is no Fleet dependency.
 

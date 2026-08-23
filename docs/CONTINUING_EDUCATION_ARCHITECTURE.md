@@ -12,6 +12,21 @@ or any equivalent distributed-runtime system to exist, to be reachable, or
 to be installed. If any such system is present, Continuing Education must
 not depend on it.
 
+### Current pre-release Hermes compatibility
+
+The Phase 14 preflight proved one generic Hermes Bot Mode seam was missing: an
+agent could use `message_agent`, but could not programmatically establish the
+same native standing goal that a human reaches through `/goal`. The generic
+Bot-Chat-only `goal_manage` bridge is now merged in the maintained downstream
+Hermes Agent (`Dadmin88/hermes-agent-downstream` PR #24, merge `9b8de86a80`).
+It wraps the existing `GoalManager`/`GoalContract`; it does not add Academy
+state or a second goal loop.
+
+Until that generic bridge is present in the normal Hermes release used by a
+Profile Packs install, Continuing Education remains pre-release and must not be
+advertised as stock-install production ready. The hard invariant below remains
+the release requirement: no special Academy runtime may be required.
+
 ## Actors (exhaustive)
 
 Only these concepts exist. No other agent type, role, or persistence

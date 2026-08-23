@@ -63,7 +63,8 @@ class ContinuingEducationRegressionMatrix(unittest.TestCase):
 
     def test_07_new_deficiency_becomes_native_subgoal(self):
         self.assertIn("new required deficiency", self.learner)
-        self.assertIn("native `/subgoal`", self.learner)
+        self.assertIn('goal_manage(action="add_subgoal"', self.learner)
+        self.assertIn("native `/goal` and `/subgoal` state", self.learner)
         self.assertIn("Do not create subgoals for routine corrections", self.learner)
 
     def test_08_transfer_pass_is_required_after_instruction(self):
@@ -99,8 +100,9 @@ class ContinuingEducationRegressionMatrix(unittest.TestCase):
         self.assertIn("update the active objective/criteria", self.learner)
 
     def test_14_goal_restart_state_is_not_reimplemented_in_profile_packs(self):
-        self.assertIn("actual native slash-command handlers", self.learner)
-        self.assertIn("never imitate their loop, persistence, approval, or completion logic", self.learner)
+        self.assertIn("Bot-Chat-only `goal_manage` bridge", self.learner)
+        self.assertIn("wraps Hermes' existing `GoalManager`", self.learner)
+        self.assertIn("never imitate its loop, persistence, approval, or completion logic", self.learner)
         self.assertNotIn("goal_state.json", self.learner)
 
     def test_15_bot_chat_resume_is_delegated_to_native_transport(self):

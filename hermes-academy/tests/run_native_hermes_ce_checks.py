@@ -38,6 +38,7 @@ NATIVE_TESTS = (
     "tests/gateway/test_goal_resume_restart.py::TestCliResumeRestartsWork",
     "tests/cli/test_cli_goal_interrupt.py",
     "tests/tools/test_bot_mode_dm.py",
+    "tests/tools/test_bot_mode_goal.py",
     "tests/agent/test_learn_prompt.py",
     "tests/tools/test_skill_manager_tool.py",
     "tests/tools/test_write_approval.py",
@@ -210,7 +211,7 @@ def main() -> int:
 
         result = {
             "hermes_source": str(source),
-            "native_pytest_cases": 144,
+            "native_pytest_cases": 159,
             "native_async_gateway_cases": 2,
             "profile_install": "PASS",
             "canonical_skill_sha256": canonical_hash,
