@@ -20,12 +20,16 @@ Hermes Council currently contains 21 focused profiles and 84 purpose-built perso
 
 You rarely need all 160 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
 
+The main installer understands them directly:
+
 ```bash
-python recipes.py --list
-python recipes.py --recommend "build and ship a web app"
-python recipes.py software-delivery --tier minimal --dry-run
-python recipes.py software-delivery --tier recommended --yes
+python install.py --list-recipes
+python install.py --recommend "build and ship a web app"
+python install.py --recipe software-delivery --tier minimal --dry-run
+python install.py --recipe software-delivery --tier recommended --yes
 ```
+
+Recommendation is confidence-aware. A recipe is promoted only when one formation is a strong, unambiguous fit; otherwise the installer falls back to individual profile matches instead of forcing a template.
 
 Recipes are portable selection guidance only. They do not create memory, cron jobs, Bot groups, Kanban state, credentials, or other runtime state. Installation still uses the normal Profile Packs/Hermes distribution path.
 
@@ -35,40 +39,23 @@ See [`docs/TEAM_RECIPES.md`](docs/TEAM_RECIPES.md) and [`docs/FIRST_TEAM.md`](do
 
 ```text
 hermes-profile-packs/
-├── hermes-agency/          # Professional profile pack
-│   ├── agency.json
-│   └── profiles/
-├── hermes-council/         # Personal-life profile pack
-│   ├── council.json
-│   └── profiles/
-├── hermes-academy/         # Education profile pack
-│   ├── academy.json
-│   └── profiles/
-├── docs/                   # Architecture, installer, recipes, onboarding, operating guidance
-├── examples/               # Sanitized worked team examples
-├── tests/                  # Root installer/recipe tests
+├── hermes-agency/
+├── hermes-council/
+├── hermes-academy/
+├── docs/
+├── examples/
+├── tests/
 ├── packs.json
-├── recipes.json            # Validated team composition registry
-├── install.py              # Human wizard + agent-friendly profile selector
-├── recipes.py              # Deterministic team recipe selector/installer
+├── recipes.json
+├── recipe_catalog.py       # Shared recipe loading/scoring/confidence engine
+├── install.py              # Canonical human + agent profile/recipe selector
+├── recipes.py              # Focused recipe-only convenience client
 └── validate.py
-```
-
-Each distributable profile follows the Hermes profile-distribution shape:
-
-```text
-profiles/<namespace-name>/
-├── distribution.yaml
-├── SOUL.md
-├── .no-bundled-skills      # when the profile is intentionally isolated
-└── skills/
-    └── <skill-name>/
-        └── SKILL.md
 ```
 
 Runtime state is never distributed. Authentication material, `.env` files, logs, caches, databases, local paths, session history, and machine-specific configuration do not belong in this repository.
 
-## Install individual profiles
+## Install
 
 For most people, launch the selector:
 
@@ -76,63 +63,65 @@ For most people, launch the selector:
 python install.py
 ```
 
-The wizard can recommend a small set from a plain-language goal, let you browse packs/categories, search exact profiles, or explicitly install everything. It shows the exact plan before changing Hermes and is designed to avoid installing profiles you do not need.
+The wizard can recommend a validated Team Recipe when a goal maps cleanly to one, browse recipes directly, browse packs/categories, search exact profiles, or explicitly install everything. A recipe is never silently chosen: the user chooses its tier and sees the exact profile plan before final confirmation.
 
-The existing pack-first commands are still supported:
-
-```bash
-python install.py --list-packs
-python install.py council --list
-python install.py agency --list
-python install.py academy --list
-python install.py council council-life-coach council-fitness-coach
-python install.py academy academy-cybersecurity-instructor academy-physics-professor
-```
-
-For agents and scripts, the same selector exposes a deterministic JSON interface:
+For agents and scripts:
 
 ```bash
 python install.py --agent-help --json
 python install.py --catalog --json
+python install.py --list-recipes --json
 python install.py --recommend "build a web app" --json
+python install.py --recipe software-delivery --tier minimal --dry-run --json
+python install.py --recipe software-delivery --tier recommended --yes --json
 python install.py --profiles agency-backend-engineer agency-frontend-engineer --dry-run --json
-python install.py --profiles agency-backend-engineer agency-frontend-engineer --yes --json
 python install.py --all --yes --json
 ```
 
-`--catalog` and `--recommend` are read-only. Non-interactive installation requires `--yes`, and `--dry-run` resolves the exact plan first. Installation still delegates to each pack's native `hermes profile install` flow.
+`--catalog`, `--list-recipes`, and `--recommend` are read-only. Existing `--recommend --json` consumers keep the individual-profile `recommendations` array; recipe results are additive through `recipe_match` and `recipe_recommendations`.
 
-See [`docs/INSTALLER.md`](docs/INSTALLER.md) for the full wizard and agent contract.
+Legacy pack-first commands remain supported.
+
+See [`docs/INSTALLER.md`](docs/INSTALLER.md) for the full contract.
+
+## Focused recipe client
+
+`recipes.py` remains supported when a recipe-only surface is convenient:
+
+```bash
+python recipes.py --list
+python recipes.py --recommend "learn cybersecurity"
+python recipes.py cybersecurity-learning --tier recommended --dry-run
+```
+
+Both entry points use the same shared recipe engine.
 
 ## Operate the team
 
-Once profiles are installed, use [`docs/OPERATING_PLAYBOOK.md`](docs/OPERATING_PLAYBOOK.md) for solo/pair/team selection, durable handoffs, the "chat deliberates; durable systems commit" rule, and optional routine guidance.
-
-Use [`docs/INSTALLATION_VERIFICATION.md`](docs/INSTALLATION_VERIFICATION.md) to verify a real install and [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) when adoption goes sideways.
+Use [`docs/OPERATING_PLAYBOOK.md`](docs/OPERATING_PLAYBOOK.md), [`docs/INSTALLATION_VERIFICATION.md`](docs/INSTALLATION_VERIFICATION.md), and [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md).
 
 ## Validate
-
-Run the full repository validation suite before publishing changes:
 
 ```bash
 python validate.py
 python -m unittest discover -s tests -p 'test_*.py'
 ```
 
-This validates all registered pack manifests, profile namespaces, distribution metadata, required profile files, skill frontmatter, portability, common secret/path leaks, team recipe references/tier invariants, and root selector behavior. Pack-specific validators and tests enforce additional contracts.
+This validates pack manifests, namespaces, distribution metadata, skills, portability, secret/path hygiene, team recipe references/tier invariants, and root selector behavior.
 
 ## Design principles
 
 1. **Coherent teams, not prompt dumps.** Profiles have explicit ownership and clean handoffs.
 2. **Namespace isolation.** `agency-*` is professional, `council-*` is personal, and `academy-*` is educational.
 3. **Portable distributions only.** No runtime state, secrets, personal filesystem paths, or local caches.
-4. **Specialists remain specialists.** Profiles should hand off rather than silently absorbing unrelated domains.
-5. **Smallest useful team.** Recipes and orchestrators should add profiles only for distinct expertise, independent review, or useful parallelism.
-6. **Human agency stays central.** Council profiles support decisions and capability; they do not attempt to run a person's life.
-7. **Safety beats role-play.** Profiles do not manufacture medical, legal, financial, spiritual, parental, credentialing, or other authority they do not possess.
-8. **Academy teaches for transfer.** Explanations, examples, practice, feedback, and mastery checks should make the learner progressively more capable rather than merely dependent on answers.
+4. **Specialists remain specialists.** Profiles hand off rather than silently absorbing unrelated domains.
+5. **Smallest useful team.** Add profiles only for distinct expertise, independent review, or useful parallelism.
+6. **Conservative recommendation.** A recipe is promoted only when the deterministic match is strong and unambiguous.
+7. **Human agency stays central.** Council supports decisions and capability; it does not run a person's life.
+8. **Safety beats role-play.** Profiles do not manufacture authority they do not possess.
+9. **Academy teaches for transfer.** Teaching should make the learner progressively more capable.
 
-See [`PACK_SPEC.md`](PACK_SPEC.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`SECURITY.md`](SECURITY.md) for repository standards.
+See [`PACK_SPEC.md`](PACK_SPEC.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`SECURITY.md`](SECURITY.md).
 
 ## License
 

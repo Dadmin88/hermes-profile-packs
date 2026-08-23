@@ -9,10 +9,14 @@ No undocumented Hermes flags are required by this guide.
 The selected pack installer must finish without an error. If recipe installation is used, inspect the exact plan first:
 
 ```bash
-python recipes.py software-delivery --tier minimal --dry-run
+python install.py --recipe software-delivery --tier minimal --dry-run
 ```
 
-Then install that exact tier with `--yes`.
+Then install that exact tier with `--yes`:
+
+```bash
+python install.py --recipe software-delivery --tier minimal --yes
+```
 
 ## 2. Presence
 

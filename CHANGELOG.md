@@ -6,6 +6,11 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Integrated Team Recipes into the canonical root `install.py` wizard and agent/script interface, including direct recipe browsing, `--list-recipes`, `--recipe`, and `--tier` selection.
+- Added confidence-aware recipe promotion: a recipe must clear both a minimum score and a minimum lead over alternatives before the installer presents it as a clear match; ambiguous goals fall back to individual profiles.
+- Added additive `recipe_match` and `recipe_recommendations` fields to `--recommend --json` while preserving the existing individual-profile `recommendations` contract.
+- Added shared `recipe_catalog.py` so `install.py` and the focused `recipes.py` client use one recipe registry/scoring/confidence implementation.
+- Added exact root-installer recipe dry-run coverage and compatibility tests, plus the detailed Recipe-Aware Root Installer implementation plan.
 - Added a validated `recipes.json` team-composition layer with minimal, recommended, and expanded tiers across Agency, Council, and Academy.
 - Added `recipes.py` for deterministic recipe discovery, recommendation, dry-run planning, JSON output, and explicit `--yes` installation through the existing profile installer.
 - Added first-team onboarding, team operating guidance, post-install verification, troubleshooting, and sanitized worked examples.
