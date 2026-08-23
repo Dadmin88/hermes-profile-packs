@@ -12,7 +12,7 @@ Hermes Academy Continuing Education is a competency-transfer system, not a schoo
 
 - The current Hermes profile is the **Learner**. Keep its identity and normal profile state.
 - Every training event has one learner, one bounded objective, and one instructor. If no instructor is named, consult `academy-dean` and use the most specific available faculty member it recommends.
-- Use normal Hermes primitives only: native `/goal`, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path.
+- Use normal Hermes primitives only: native `/goal` and `/subgoal`, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path. Invoke the actual native slash-command handlers; never imitate their loop, persistence, approval, or completion logic inside this skill.
 - Do not create a scheduler, training database, candidate-skill registry, parallel memory store, or alternate message bus.
 - Do not depend on Fleet, Keryx, Nodescale, Templar, RunAuthority, or Run Capsules.
 - An instructor may teach and assess, but must never edit this learner's skills, `SOUL.md`, configuration, permissions, memory, or unrelated state.
@@ -31,16 +31,22 @@ If the user named an instructor, use it when it is appropriate for the objective
 
 ### 2. Establish the learner goal
 
-Use native `/goal` for the learner-authoritative completion contract. The goal should include:
+Internally invoke the actual native `/goal` handler for the learner-authoritative completion contract. The user should not have to know or type slash-command syntax. Derive the contract from:
 
+- this learner's profile/role;
 - the target competency;
-- what evidence will demonstrate it;
+- the selected instructor;
+- what domain-appropriate evidence will demonstrate the competency;
 - relevant safety or scope constraints;
 - the requirement for meaningfully different transfer evidence when instruction is needed;
 - the requirement to run `/learn` only if the event produced a reusable capability delta;
-- a stop condition for mastered, blocked, or unavailable-instructor outcomes.
+- a stop condition for mastered, blocked, cancelled, budget-exhausted, or unavailable-instructor outcomes.
 
-Do not create a second orchestration loop around `/goal`.
+If the instructor discovers a **new required deficiency** that is necessary to the active objective, attach it through native `/subgoal`. Do not create subgoals for routine corrections, optional enrichment, or adjacent topics.
+
+Use Hermes' normal bounded goal budget. If the budget is exhausted before the evidence contract is satisfied, pause and report: `Training paused because the learning objective has not yet been demonstrated.` Never convert budget exhaustion into success.
+
+Do not create a second orchestration loop around `/goal` or `/subgoal`.
 
 ### 3. Baseline before teaching
 
@@ -63,6 +69,10 @@ Use native `message_agent` in canonical Bot Chat to contact the selected instruc
 Do not send full memory, unrelated conversations, secrets, credentials, or broad profile state.
 
 After `message_agent` starts an outstanding instructor reply, allow native `/goal` peer-wait behavior to park the goal. Do not send duplicate requests, poll conversationally, burn turns, or declare success while waiting.
+
+Keep user-visible status concise. At the start, one compact line is enough, for example: `Learning: Backend Engineer → API security with Cybersecurity Instructor.` After that, surface only meaningful changes such as a corrected gap, changed objective, blocker, approval request, or completion. Do not narrate every Bot message.
+
+The user remains in control of the active goal. Normal Hermes messages may interrupt or change it. Requests such as `Stop the class`, `Focus more on OAuth`, or `Also teach token rotation` must be handled through native goal/preemption behavior rather than ignored until the original flow finishes. Stop when asked; when focus changes, update the active objective/criteria instead of silently starting a recursive second class.
 
 ### 5. Learn only the demonstrated gaps
 
@@ -95,9 +105,19 @@ Stop as soon as the completion contract is satisfied.
 
 If the session produced reusable knowledge, procedure, heuristics, or decision criteria that should improve future work, invoke native `/learn` from the learner.
 
-Let the normal Hermes learning path use `skill_manage` to create or extend the learner-local skill. Respect normal approval and safety behavior.
+Let the normal Hermes learning path use `skill_manage` to create or extend the learner-local skill. If `skills.write_approval` is enabled, stop at the normal Hermes approval boundary and surface that approval request. Never bypass, auto-approve, or weaken it because Academy initiated the learning.
 
-After `/learn`, verify that the expected skill was created or extended in this learner's normal skill store. Do not ask the instructor to write it. Do not modify Academy or Agency source distributions.
+After `/learn`, use normal skill inspection to verify the result. Confirm:
+
+- skill name;
+- whether a matching skill was **extended** or a new skill was **created**;
+- purpose;
+- learner-profile location;
+- the reusable behavior, procedure, or decision criteria that were captured.
+
+Both outcomes are valid. Prefer extension when native `/learn` identifies an existing relevant skill; otherwise allow normal `/learn` to create one. Do not preselect or force the outcome in Academy logic.
+
+Do not ask the instructor to write it. The instructor must never write the skill. Do not modify Academy or Agency source distributions.
 
 If there is no reusable delta, skip `/learn`.
 
