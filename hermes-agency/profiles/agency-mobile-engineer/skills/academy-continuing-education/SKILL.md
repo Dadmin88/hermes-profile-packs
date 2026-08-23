@@ -72,6 +72,8 @@ After `message_agent` starts an outstanding instructor reply, allow native `/goa
 
 Keep user-visible status concise. At the start, one compact line is enough, for example: `Learning: Backend Engineer → API security with Cybersecurity Instructor.` After that, surface only meaningful changes such as a corrected gap, changed objective, blocker, approval request, or completion. Do not narrate every Bot message.
 
+Never expose internal Hermes terms (`/goal`, `/learn`, `message_agent`, `skill_manage`, `subgoal`, `peer-wait`) in ordinary user-facing messages. Users interact through natural language only; the mechanism is invisible.
+
 The user remains in control of the active goal. Normal Hermes messages may interrupt or change it. Requests such as `Stop the class`, `Focus more on OAuth`, or `Also teach token rotation` must be handled through native goal/preemption behavior rather than ignored until the original flow finishes. Stop when asked; when focus changes, update the active objective/criteria instead of silently starting a recursive second class.
 
 ### 5. Learn only the demonstrated gaps
@@ -133,6 +135,66 @@ Tell the user:
 - any unresolved blocker or recommended follow-up.
 
 Do not narrate internal classroom ceremony.
+
+## User-facing messages
+
+All ordinary messages to the user must be natural language. Never include internal Hermes terms (`/goal`, `/learn`, `message_agent`, `skill_manage`, `subgoal`, `peer-wait`) in user-facing text.
+
+### Start
+
+One compact line naming the instructor and topic:
+
+`Starting a class with {Instructor} on {Topic}.`
+
+### Progress
+
+Surface only meaningful changes — a corrected gap, changed objective, or new blocker. Do not narrate routine instructor-learner exchanges.
+
+`Working on {specific gap or change}.`
+
+### Paused / blocked
+
+When the goal budget is exhausted before mastery:
+
+`Class paused — we haven't demonstrated {competency} yet. Say "resume" to continue or "cancel" to stop.`
+
+When an external blocker prevents progress:
+
+`Class paused: {reason}. We can continue once {unblock condition}.`
+
+### Approval required
+
+When `skills.write_approval` gates skill persistence:
+
+`The class produced a reusable skill. Approve to save it, or decline to skip.`
+
+### Cancelled
+
+`Class cancelled. {Brief summary of what was covered before stopping.}`
+
+### Completion
+
+The completion message must name the instructor, the topic, the assessment result, and the skill created or extended:
+
+`Class complete with {Instructor} on {Topic}. {Assessment result — e.g. "Transfer demonstrated on a novel problem."} Skill "{skill name}" was {created/extended} — {one-line purpose}.`
+
+When no reusable delta was produced:
+
+`Class complete with {Instructor} on {Topic}. {Assessment result.} No new skill needed — the capability was already present or not reusable.`
+
+### Interruption handling
+
+When the user says "Stop the class" or equivalent:
+
+`Class stopped. {Brief summary of progress so far.}`
+
+When the user changes focus mid-class:
+
+`Shifting focus to {new topic}. Updating the class objective.`
+
+When the user adds a topic:
+
+`Adding {topic} to the class. We'll cover it after {current objective}.`
 
 ## Efficiency evidence
 
