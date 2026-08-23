@@ -1,11 +1,6 @@
 # Hermes Academy Continuing Education — Architecture Contract
 
-Status: Phase 0 (frozen). This document is the normative, short architecture
-contract for Hermes Academy Continuing Education. It freezes the actors,
-hard invariants, and naming decisions so later phases (1–16 of the master
-plan) cannot quietly balloon into a new framework. Later phases implement
-against this contract; they do not amend it except through an explicit,
-documented change to this file.
+Status: normative architecture contract; implementation is merged through Phase 13 and Phase 14 controlled preflight is pending final acceptance. This document freezes the actors, hard invariants, transport decision, and naming decisions so later work cannot quietly balloon into a new framework. Changes to these decisions require an explicit, documented edit here.
 
 ## Scope independence
 
@@ -85,14 +80,21 @@ the constraints for every later phase.
     reusable capability delta worth persisting. Phase-specific QA scripts may
     use fixed turn sequences to prove mechanics, but those sequences are test
     scaffolding and must not become the production teaching protocol.
+12. **Learner skill preservation.** Before native `/learn`, record the learner's
+    existing skill names. The persistence request may extend one relevant skill
+    or create one new skill, but it must preserve unrelated learner skills.
+    After `/learn`, verify every unrelated pre-existing skill still exists. Any
+    unexplained loss, relocation, or overwrite fails the Continuing Education
+    event closed; do not report successful learning until recovery is complete.
 
-## Transport decision (deferred)
+## Transport decision (selected)
 
-The classroom transport must be a **native Bot Mode** conversation
-mechanism. The specific choice — canonical Bot Chat + `message_agent`
-(Preferred A) versus a native Bot Mode group classroom (Alternative B) —
-is selected by the later Phase 2 experiments. This contract only requires
-that the mechanism be native Hermes Bot Mode; no new message bus is built.
+The canonical one-to-one classroom transport is **canonical Bot Chat + native
+`message_agent`**. Phase 2 proved sender validation/attribution, asynchronous
+delivery, recipient wake-up, canonical history persistence/ordering, and a
+multi-turn instructional exchange. Native Bot groups were also validated as a
+useful optional group/classroom surface, but they are not the default CE
+transport. No new message bus is built.
 
 ## Naming decisions (frozen)
 

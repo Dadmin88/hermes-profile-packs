@@ -6,6 +6,8 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Added the merged Hermes Academy Continuing Education foundation through the Phase 10–13 quality gate: canonical learner/instructor shared skills, Dean routing, native Bot Chat + `message_agent` teaching transport, native `/goal`/`/subgoal`/`/learn` contracts, minimum-sufficient competency transfer, and deterministic/native-runtime regression coverage. Controlled Phase 14/15 capability validation is still pending before production-readiness claims.
+- Added `docs/CONTINUING_EDUCATION.md` as the current behavior/status guide and updated the normative architecture contract with the selected transport and learner-skill preservation invariant.
 - Integrated Team Recipes into the canonical root `install.py` wizard and agent/script interface, including direct recipe browsing, `--list-recipes`, `--recipe`, and `--tier` selection.
 - Added confidence-aware recipe promotion: a recipe must clear both a minimum score and a minimum lead over alternatives before the installer presents it as a clear match; ambiguous goals fall back to individual profiles.
 - Added additive `recipe_match` and `recipe_recommendations` fields to `--recommend --json` while preserving the existing individual-profile `recommendations` contract.

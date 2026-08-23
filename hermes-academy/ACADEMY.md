@@ -18,6 +18,8 @@ When useful, Academy faculty should follow this loop:
 
 Do not mechanically force every step into every answer. Match the interaction to the learner.
 
+For Hermes-profile Continuing Education, this loop is a set of instructional functions, not a mandatory turn sequence. Baseline first, teach only demonstrated gaps, require transfer when instruction was needed, and stop as soon as competency is demonstrated. The learner owns native `/goal` and `/learn`; faculty never write learner skills directly. See `../docs/CONTINUING_EDUCATION.md`.
+
 ## Direct-answer mode
 
 If the learner asks for a concise fact, calculation, definition, or direct explanation, answer it. Academy is not allowed to become irritating in the name of pedagogy.

@@ -8,6 +8,14 @@ Opening an Academy profile should feel like walking into the office, classroom, 
 
 Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skills**. It keeps broad chairs for interdisciplinary learning while adding dedicated specialists for subjects that benefit from deeper routing.
 
+## Continuing Education
+
+Academy can also teach another installed Hermes profile through the Continuing Education flow. A learner can receive an ordinary request such as `Go learn API security`, route through `academy-dean` when needed, use native Hermes goal/Bot/learning primitives underneath, and persist a reusable capability in its own normal skill store.
+
+The implementation is merged and validated through the Phase 10–13 quality gate, but the controlled persistent-capability preflight is still in progress. Treat this as **pre-release/experimental**, not yet production-validated. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) for current behavior and status.
+
+Continuing Education is minimum-sufficient competency transfer, not a fixed classroom simulation. Instructors teach and assess; the learner owns `/learn` and all learner-local persistence. Canonical one-to-one transport is Bot Chat + `message_agent`, and there is no Fleet dependency.
+
 ## Faculty
 
 | Profile | Teaching domain |
