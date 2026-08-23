@@ -131,6 +131,21 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
     ],
 }
 
+# Single words in this set are useful evidence only in context. They are too
+# ambiguous to justify a confident specialist route by themselves. Two or
+# more hits in the same topic, or one distinctive/multi-word keyword, may
+# still produce a specialist match.
+AMBIGUOUS_SINGLE_KEYWORDS = {
+    "dynamics", "momentum", "energy", "waves", "force",
+    "bonding", "reaction", "compound", "element", "solution", "acid", "base",
+    "cell", "regression", "distribution", "inference", "modeling",
+    "ethics", "moral", "logic", "aesthetics", "contract", "regulation",
+    "faith", "church", "temple", "sacred", "teaching", "instruction",
+    "assessment", "classroom", "security", "infrastructure", "container",
+    "engine", "transmission", "diagnostic", "torque", "scale", "composition",
+    "instrument",
+}
+
 
 def _load_manifest(path: Optional[Path] = None) -> dict:
     target = path or MANIFEST
@@ -167,14 +182,22 @@ def _topic_from_objective(objective: str) -> Optional[str]:
             # (e.g. "base" matching inside "database")
             pattern = r'\b' + re.escape(kw) + r'\b'
             if re.search(pattern, objective_lower):
-                # Multi-word keywords get higher weight (more specific)
                 word_count = len(kw.split())
-                score += word_count
+                if word_count > 1:
+                    # Phrases are strong evidence and outrank single words.
+                    score += word_count + 1
+                elif kw in AMBIGUOUS_SINGLE_KEYWORDS:
+                    # One ambiguous word is context, not a confident route.
+                    score += 1
+                else:
+                    # Distinctive domain terms may route confidently alone.
+                    score += 2
         if score > best_score:
             best_score = score
             best = topic_key
 
-    return best if best_score > 0 else None
+    # A lone ambiguous single-word hit scores 1 and is deliberately rejected.
+    return best if best_score >= 2 else None
 
 
 def _is_interdisciplinary(objective: str) -> bool:
@@ -310,7 +333,10 @@ def route_learner(
             best_score = score
             best = profile["name"]
 
-    if best and best_score > 0:
+    # A single shared word is too weak for a safe approximate route. Requiring
+    # at least two role-description hits prevents cases such as "base jumping"
+    # or "fashion modeling" from being sent to an unrelated faculty member.
+    if best and best_score >= 2:
         return RoutingResult(
             faculty=best,
             approximate=True,

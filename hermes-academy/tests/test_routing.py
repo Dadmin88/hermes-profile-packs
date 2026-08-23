@@ -174,6 +174,48 @@ class DatabasePerformanceRoutingTest(unittest.TestCase):
         self.assertIn("specialist", result.reason.lower())
 
 
+class AmbiguousKeywordRoutingTest(unittest.TestCase):
+    """Ambiguous single words must not create confident specialist false positives."""
+
+    def test_single_ambiguous_words_do_not_confidently_misroute(self):
+        cases = (
+            ("I want to learn about base jumping", "academy-chemistry-professor"),
+            ("Teach me compound interest", "academy-chemistry-professor"),
+            ("Help me with energy drinks marketing", "academy-physics-professor"),
+            ("Teach me cell phone repair", "academy-biology-professor"),
+            ("I want to understand fashion modeling", "academy-data-science-professor"),
+        )
+        for objective, wrong_specialist in cases:
+            with self.subTest(objective=objective):
+                result = route_learner("agency-generalist", objective)
+                self.assertFalse(
+                    result.faculty == wrong_specialist and not result.approximate,
+                    f"ambiguous objective routed confidently to {wrong_specialist}: {result}",
+                )
+
+    def test_two_related_ambiguous_physics_terms_are_sufficient_context(self):
+        result = route_learner(
+            "agency-generalist",
+            "Teach me how force and energy relate in mechanical systems",
+        )
+        self.assertEqual(result.faculty, "academy-physics-professor")
+        self.assertFalse(result.approximate)
+
+    def test_distinctive_single_domain_terms_still_route_directly(self):
+        cases = (
+            ("Teach me thermodynamics", "academy-physics-professor"),
+            ("Teach me stoichiometry", "academy-chemistry-professor"),
+            ("Teach me genetics", "academy-biology-professor"),
+            ("Teach me probability", "academy-statistics-professor"),
+            ("Teach me cybersecurity", "academy-cybersecurity-instructor"),
+        )
+        for objective, expected in cases:
+            with self.subTest(objective=objective):
+                result = route_learner("agency-generalist", objective)
+                self.assertEqual(result.faculty, expected)
+                self.assertFalse(result.approximate)
+
+
 class RoutingDeterminismTest(unittest.TestCase):
     """Routing decisions are deterministic — same input always produces same output."""
 
