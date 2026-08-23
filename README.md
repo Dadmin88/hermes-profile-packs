@@ -14,7 +14,22 @@ This repository is the public upstream home for reusable Hermes profile distribu
 
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
-Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills.
+Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills. Hermes Agency contains 109 professional specialists.
+
+## Start small with Team Recipes
+
+You rarely need all 160 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
+
+```bash
+python recipes.py --list
+python recipes.py --recommend "build and ship a web app"
+python recipes.py software-delivery --tier minimal --dry-run
+python recipes.py software-delivery --tier recommended --yes
+```
+
+Recipes are portable selection guidance only. They do not create memory, cron jobs, Bot groups, Kanban state, credentials, or other runtime state. Installation still uses the normal Profile Packs/Hermes distribution path.
+
+See [`docs/TEAM_RECIPES.md`](docs/TEAM_RECIPES.md) and [`docs/FIRST_TEAM.md`](docs/FIRST_TEAM.md).
 
 ## Repository layout
 
@@ -29,10 +44,13 @@ hermes-profile-packs/
 ├── hermes-academy/         # Education profile pack
 │   ├── academy.json
 │   └── profiles/
-├── docs/
-├── tests/                  # Root installer/selector tests
+├── docs/                   # Architecture, installer, recipes, onboarding, operating guidance
+├── examples/               # Sanitized worked team examples
+├── tests/                  # Root installer/recipe tests
 ├── packs.json
-├── install.py              # Human wizard + agent-friendly selector
+├── recipes.json            # Validated team composition registry
+├── install.py              # Human wizard + agent-friendly profile selector
+├── recipes.py              # Deterministic team recipe selector/installer
 └── validate.py
 ```
 
@@ -50,9 +68,9 @@ profiles/<namespace-name>/
 
 Runtime state is never distributed. Authentication material, `.env` files, logs, caches, databases, local paths, session history, and machine-specific configuration do not belong in this repository.
 
-## Install
+## Install individual profiles
 
-For most people, just launch the selector:
+For most people, launch the selector:
 
 ```bash
 python install.py
@@ -86,6 +104,12 @@ python install.py --all --yes --json
 
 See [`docs/INSTALLER.md`](docs/INSTALLER.md) for the full wizard and agent contract.
 
+## Operate the team
+
+Once profiles are installed, use [`docs/OPERATING_PLAYBOOK.md`](docs/OPERATING_PLAYBOOK.md) for solo/pair/team selection, durable handoffs, the "chat deliberates; durable systems commit" rule, and optional routine guidance.
+
+Use [`docs/INSTALLATION_VERIFICATION.md`](docs/INSTALLATION_VERIFICATION.md) to verify a real install and [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) when adoption goes sideways.
+
 ## Validate
 
 Run the full repository validation suite before publishing changes:
@@ -95,7 +119,7 @@ python validate.py
 python -m unittest discover -s tests -p 'test_*.py'
 ```
 
-This validates all registered pack manifests, profile namespaces, distribution metadata, required profile files, skill frontmatter, portability, common secret/path leaks, and the root installer/selector behavior. Pack-specific validators and tests enforce additional contracts.
+This validates all registered pack manifests, profile namespaces, distribution metadata, required profile files, skill frontmatter, portability, common secret/path leaks, team recipe references/tier invariants, and root selector behavior. Pack-specific validators and tests enforce additional contracts.
 
 ## Design principles
 
@@ -103,9 +127,10 @@ This validates all registered pack manifests, profile namespaces, distribution m
 2. **Namespace isolation.** `agency-*` is professional, `council-*` is personal, and `academy-*` is educational.
 3. **Portable distributions only.** No runtime state, secrets, personal filesystem paths, or local caches.
 4. **Specialists remain specialists.** Profiles should hand off rather than silently absorbing unrelated domains.
-5. **Human agency stays central.** Council profiles support decisions and capability; they do not attempt to run a person's life.
-6. **Safety beats role-play.** Profiles do not manufacture medical, legal, financial, spiritual, parental, credentialing, or other authority they do not possess.
-7. **Academy teaches for transfer.** Explanations, examples, practice, feedback, and mastery checks should make the learner progressively more capable rather than merely dependent on answers.
+5. **Smallest useful team.** Recipes and orchestrators should add profiles only for distinct expertise, independent review, or useful parallelism.
+6. **Human agency stays central.** Council profiles support decisions and capability; they do not attempt to run a person's life.
+7. **Safety beats role-play.** Profiles do not manufacture medical, legal, financial, spiritual, parental, credentialing, or other authority they do not possess.
+8. **Academy teaches for transfer.** Explanations, examples, practice, feedback, and mastery checks should make the learner progressively more capable rather than merely dependent on answers.
 
 See [`PACK_SPEC.md`](PACK_SPEC.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`SECURITY.md`](SECURITY.md) for repository standards.
 

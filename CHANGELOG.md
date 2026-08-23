@@ -6,6 +6,12 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Added a validated `recipes.json` team-composition layer with minimal, recommended, and expanded tiers across Agency, Council, and Academy.
+- Added `recipes.py` for deterministic recipe discovery, recommendation, dry-run planning, JSON output, and explicit `--yes` installation through the existing profile installer.
+- Added first-team onboarding, team operating guidance, post-install verification, troubleshooting, and sanitized worked examples.
+- Added `coordination-pattern-selection` to Agency Orchestrator and strengthened its SOUL to prefer the smallest capable team instead of delegation-by-default.
+- Added recipe schema validation and root recipe tests for tier monotonicity, profile resolution, recommendation behavior, and JSON dry-run plans.
+- Added the detailed Team Operating Layer implementation/acceptance plan and documented the source/runtime boundary for recipes and optional routines.
 - Added an interactive root installer wizard that recommends a small profile set from plain-language goals, supports pack/category browsing and direct search, previews the exact install plan, and still offers an explicit install-everything path.
 - Added a deterministic agent/script interface with JSON catalog and recommendation output, exact profile/category selection, pack filtering, dry-run planning, and non-interactive `--yes` installation.
 - Added profile-selection payload estimates so sparse installs show how much of the catalog they avoid installing.

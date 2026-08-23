@@ -42,6 +42,34 @@ Pack manifests are the authoritative roster. A roster entry includes:
 
 The manifest is designed for discovery and routing; `SOUL.md` remains the behavioral contract.
 
+## Team recipes
+
+`recipes.json` is the authoritative registry for portable team compositions.
+
+A recipe is not a new runtime primitive. It references existing released profile identities and describes a useful formation for a common outcome.
+
+Every recipe must contain:
+
+- stable lowercase kebab-case `id`;
+- `display_name`;
+- one owning `pack` (`agency`, `council`, or `academy`);
+- `description` and `when_to_use`;
+- non-empty search `keywords`;
+- `minimal`, `recommended`, and `expanded` tiers;
+- a non-empty `workflow`;
+- non-empty observable `success_criteria`;
+- optional runtime routine suggestions.
+
+Tier rules:
+
+- every profile reference must exist in the owning pack;
+- no cross-pack profile references are allowed inside a single recipe;
+- `minimal` must be a subset of `recommended`;
+- `recommended` must be a subset of `expanded`;
+- larger tiers should add distinct expertise, independent review, or useful parallelism rather than status or duplication.
+
+Recipe installation must reuse the normal Profile Packs/Hermes distribution path. Recipes may suggest runtime routines, but must never create cron jobs, memory, sessions, groups, Kanban state, credentials, or other live state during installation.
+
 ## Separation of concerns
 
 Profiles should own a bounded domain. When a request materially belongs elsewhere, complete the part owned by the current profile and hand off the rest with sufficient context.
@@ -55,5 +83,5 @@ Academy profiles have an additional teaching rule: adapt instruction to the lear
 Profile and pack versions use semantic versioning.
 
 - Patch: wording, examples, or compatible skill improvements.
-- Minor: new profiles, skills, or backward-compatible metadata.
-- Major: renamed/removed profiles, incompatible distribution behavior, or semantic contract changes.
+- Minor: new profiles, skills, recipes, or backward-compatible metadata.
+- Major: renamed/removed profiles or recipes, incompatible distribution behavior, or semantic contract changes.
