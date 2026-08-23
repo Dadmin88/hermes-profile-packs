@@ -27,7 +27,7 @@ Convert the user's request into one observable competency.
 
 Good objectives describe what the learner should be able to **do**, not a topic to "cover". Keep the scope narrow enough to assess in one bounded session.
 
-If the user named an instructor, use it when it is appropriate for the objective. Otherwise ask `academy-dean` for routing. Do not invent a faculty profile that is not installed.
+If the user named an instructor, treat that choice as binding when it is appropriate for the objective. Do not silently substitute or message a different instructor if the named instructor is unavailable; stop blocked, report the named instructor as unavailable, and let the user choose whether to retry or select an alternative. Only when the user did **not** name an instructor should you ask `academy-dean` for routing. Do not invent a faculty profile that is not installed.
 
 ### 2. Establish the learner goal
 

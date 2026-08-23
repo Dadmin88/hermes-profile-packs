@@ -74,6 +74,12 @@ class ContinuingEducationSkillTests(unittest.TestCase):
         self.assertIn("burn turns", self.text)
         self.assertIn("declare success while waiting", self.text)
 
+    def test_named_instructor_is_binding_and_fails_closed(self):
+        self.assertIn("treat that choice as binding", self.text)
+        self.assertIn("Do not silently substitute or message a different instructor", self.text)
+        self.assertIn("let the user choose whether to retry or select an alternative", self.text)
+        self.assertIn("Only when the user did **not** name an instructor", self.text)
+
     def test_authority_and_source_isolation_are_explicit(self):
         self.assertIn("must never edit this learner's skills", self.text)
         self.assertIn("Learning must remain local to this learner", self.text)
