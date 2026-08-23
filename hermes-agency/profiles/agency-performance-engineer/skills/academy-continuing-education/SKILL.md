@@ -1,6 +1,6 @@
 ---
 name: academy-continuing-education
-description: Use when an Agency profile needs targeted Academy training.
+description: MUST load first for Academy learning or go-learn requests.
 ---
 # Academy Continuing Education
 

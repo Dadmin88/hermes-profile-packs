@@ -36,6 +36,10 @@ class ContinuingEducationSkillTests(unittest.TestCase):
         description = _frontmatter_value(self.text, "description")
         self.assertLessEqual(len(description), 60)
         self.assertTrue(description.endswith("."))
+        self.assertEqual(
+            description,
+            "MUST load first for Academy learning or go-learn requests.",
+        )
 
     def test_native_hermes_primitives_are_the_only_learning_path(self):
         for marker in ("`/goal`", "`message_agent`", "`/learn`", "`skill_manage`"):
