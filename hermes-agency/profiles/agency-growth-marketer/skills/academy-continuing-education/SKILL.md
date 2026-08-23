@@ -12,7 +12,7 @@ Hermes Academy Continuing Education is a competency-transfer system, not a schoo
 
 - The current Hermes profile is the **Learner**. Keep its identity and normal profile state.
 - Every training event has one learner, one bounded objective, and one instructor. If no instructor is named, consult `academy-dean` and use the most specific available faculty member it recommends.
-- Use normal Hermes primitives only: native `/goal` and `/subgoal`, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path. Invoke the actual native slash-command handlers; never imitate their loop, persistence, approval, or completion logic inside this skill.
+- Use normal Hermes primitives only: native `/goal` and `/subgoal` state through the Bot-Chat-only `goal_manage` bridge, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path. `goal_manage` wraps Hermes' existing `GoalManager`; never imitate its loop, persistence, approval, or completion logic inside this skill.
 - Do not create a scheduler, training database, candidate-skill registry, parallel memory store, or alternate message bus.
 - Do not depend on Fleet, Keryx, Nodescale, Templar, RunAuthority, or Run Capsules.
 - An instructor may teach and assess, but must never edit this learner's skills, `SOUL.md`, configuration, permissions, memory, or unrelated state.
@@ -31,7 +31,11 @@ If the user named an instructor, use it when it is appropriate for the objective
 
 ### 2. Establish the learner goal
 
-Internally invoke the actual native `/goal` handler for the learner-authoritative completion contract. The user should not have to know or type slash-command syntax. Derive the contract from:
+This flow must run in the learner's Bot-Mode-managed canonical `Bot Chat`, where native `goal_manage` and `message_agent` are available. If `goal_manage` is unavailable, stop and report that Continuing Education requires the learner's canonical Bot Chat on a compatible Hermes build. **Do not imitate `/goal`, create a replacement loop, or continue as a one-shot lesson.**
+
+Use `goal_manage(action="status")` to inspect the current session goal. If there is no active or paused goal, call `goal_manage(action="set", ...)` exactly once to create the learner-authoritative native goal. The user should not have to know or type slash-command syntax.
+
+Build the native goal text and `GoalContract` fields from:
 
 - this learner's profile/role;
 - the target competency;
@@ -42,11 +46,15 @@ Internally invoke the actual native `/goal` handler for the learner-authoritativ
 - the requirement to run `/learn` only if the event produced a reusable capability delta;
 - a stop condition for mastered, blocked, cancelled, budget-exhausted, or unavailable-instructor outcomes.
 
-If the instructor discovers a **new required deficiency** that is necessary to the active objective, attach it through native `/subgoal`. Do not create subgoals for routine corrections, optional enrichment, or adjacent topics.
+Put the observable target in `goal`; put the required proof in `verification`; put safety/efficiency requirements in `constraints`; put learner/instructor authority limits in `boundaries`; and put honest terminal conditions in `stop_when`. Use Hermes' normal bounded goal budget.
 
-Use Hermes' normal bounded goal budget. If the budget is exhausted before the evidence contract is satisfied, pause and report: `Training paused because the learning objective has not yet been demonstrated.` Never convert budget exhaustion into success.
+If a standing goal already exists, `goal_manage` will not replace it. Never work around that protection. Continue only when the existing goal already governs this requested education; otherwise tell the user that the standing goal must be changed or cleared before a new CE objective can begin.
 
-Do not create a second orchestration loop around `/goal` or `/subgoal`.
+If the instructor later discovers a **new required deficiency** that is necessary to the active objective, attach it with `goal_manage(action="add_subgoal", criterion="...")`. Do not create subgoals for routine corrections, optional enrichment, or adjacent topics.
+
+If the native goal budget is exhausted before the evidence contract is satisfied, pause and report: `Training paused because the learning objective has not yet been demonstrated.` Never convert budget exhaustion into success.
+
+`goal_manage` is only a bridge into Hermes' existing `/goal` and `/subgoal` state. Do not create a second orchestration loop around it.
 
 ### 3. Baseline before teaching
 

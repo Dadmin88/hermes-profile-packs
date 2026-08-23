@@ -16,10 +16,12 @@ class NativeGoalContractTests(unittest.TestCase):
         cls.instructor = INSTRUCTOR_SKILL.read_text(encoding="utf-8")
 
     def test_real_native_goal_and_subgoal_handlers_are_required(self):
-        self.assertIn("actual native `/goal` handler", self.learner)
-        self.assertIn("native `/subgoal`", self.learner)
-        self.assertIn("never imitate their loop, persistence, approval, or completion logic", self.learner)
-        self.assertIn("Do not create a second orchestration loop around `/goal` or `/subgoal`", self.learner)
+        self.assertIn('goal_manage(action="set"', self.learner)
+        self.assertIn('goal_manage(action="add_subgoal"', self.learner)
+        self.assertIn("native `/goal` and `/subgoal` state", self.learner)
+        self.assertIn("wraps Hermes' existing `GoalManager`", self.learner)
+        self.assertIn("never imitate its loop, persistence, approval, or completion logic", self.learner)
+        self.assertIn("Do not create a second orchestration loop around it", self.learner)
 
     def test_completion_contract_inputs_are_explicit(self):
         for marker in (

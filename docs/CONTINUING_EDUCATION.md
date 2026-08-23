@@ -10,7 +10,7 @@ The current merged flow uses normal Hermes primitives:
 
 1. A learner receives a natural-language request such as `Go learn API security.`
 2. If the user did not name a teacher, `academy-dean` routes to the most specific installed faculty member.
-3. The learner uses the native `/goal` system for the completion contract.
+3. In canonical Bot Chat, the learner uses `goal_manage(action="set", ...)` to establish the current session's real native `/goal`/`GoalContract` state. `goal_manage` is only a thin bridge to Hermes' existing GoalManager; it is not an Academy scheduler or replacement loop.
 4. One-to-one teaching uses canonical Bot Chat + native `message_agent`.
 5. The instructor baselines the requested competency, teaches only demonstrated gaps, and requires meaningfully different transfer evidence when instruction was needed.
 6. Native goal peer-wait parks while an instructor reply is outstanding instead of burning turns or sending duplicate requests.
@@ -19,6 +19,12 @@ The current merged flow uses normal Hermes primitives:
 9. The learner verifies the resulting skill and confirms unrelated pre-existing skills were preserved.
 
 Native Bot groups are a validated optional group-learning surface, but they are not the default Continuing Education transport.
+
+## Current Hermes compatibility
+
+The Phase 14 v3 preflight proved that native goal **peer-wait** already worked once a goal existed, but natural-language Bot learning still lacked a safe way for the agent itself to establish that standing goal. The generic Bot-Chat-only `goal_manage` bridge now fills that seam by calling the existing Hermes `GoalManager` directly.
+
+The bridge is merged in the maintained downstream Hermes Agent as PR #24 / merge `9b8de86a80`. It exposes only `set`, `status`, and `add_subgoal`; it cannot replace, pause, resume, clear, or target another session's goal. Until equivalent support is present in the normal Hermes release used by Profile Packs, Continuing Education remains pre-release and must not be described as stock-install production ready.
 
 ## User experience
 
@@ -57,7 +63,8 @@ Continuing education complete: transfer assessment passed; updated auth-boundary
 Before the controlled real-world preflight, the merged implementation has already passed:
 
 - canonical `message_agent` transport validation and real multi-turn teaching evidence;
-- native goal peer-wait verification with `NO CORE CHANGE` as the Phase 3 seam decision;
+- Phase 3 native goal peer-wait verification showing no additional wait scheduler/core loop was needed once a standing goal exists;
+- Phase 14 v3 proof that natural-language Bot learning did need a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
 - learner-only native skill-placement proof;
 - shared-skill packaging and byte-identity validation;
 - Dean routing tests, including ambiguous-keyword false-positive regressions;

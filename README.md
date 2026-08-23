@@ -18,9 +18,9 @@ Hermes Council currently contains 21 focused profiles and 84 purpose-built perso
 
 ### Academy Continuing Education
 
-Hermes Academy also includes an in-progress Continuing Education flow for profile-to-profile competency transfer. The merged implementation uses natural-language requests, Dean routing when needed, native `/goal`, canonical Bot Chat + `message_agent`, Academy instruction/transfer assessment, and native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
+Hermes Academy also includes an in-progress Continuing Education flow for profile-to-profile competency transfer. The merged implementation uses natural-language requests, Dean routing when needed, canonical Bot Chat, the generic `goal_manage` bridge into Hermes' native `/goal` state, `message_agent`, Academy instruction/transfer assessment, and native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
 
-Implementation and deterministic/native-runtime validation are complete through the Phase 10–13 quality gate. Controlled real-world capability preflight is still in progress, so Continuing Education should not yet be described as production-validated. See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md) and the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
+Implementation and deterministic/native-runtime validation are complete through the Phase 10–13 quality gate. Controlled real-world capability preflight is still in progress, so Continuing Education should not yet be described as production-validated. The current preflight requires a Hermes build containing the generic Bot Chat `goal_manage` bridge (merged in `Dadmin88/hermes-agent-downstream` PR #24); stock-install readiness remains a release gate until equivalent support is present in the normal Hermes release. See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md) and the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
 
 ## Start small with Team Recipes
 
