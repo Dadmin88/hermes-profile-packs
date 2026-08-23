@@ -400,7 +400,7 @@ class TestRoutingSecurity(unittest.TestCase):
         """Routing should never return a profile not in the manifest."""
         manifest = json.loads((ACADEMY_ROOT / "academy.json").read_text(encoding="utf-8"))
         installed = {p["name"] for p in manifest["profiles"]}
-        
+
         test_objectives = [
             "Teach me physics",
             "Learn cybersecurity",
