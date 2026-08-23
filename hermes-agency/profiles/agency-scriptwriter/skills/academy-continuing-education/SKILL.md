@@ -134,6 +134,21 @@ Tell the user:
 
 Do not narrate internal classroom ceremony.
 
+### User-facing status language
+
+Keep routine status understandable to someone who has never heard of Hermes slash commands or Bot internals. Do not expose `/goal`, `/subgoal`, `message_agent`, `/learn`, or `skill_manage` in normal progress messages unless the user asks for implementation details.
+
+Use compact language such as:
+
+- Start: `Learning: API security with Cybersecurity Instructor. I'll report back after I can demonstrate it.`
+- Meaningful progress: `The instructor found a gap in my authorization-boundary reasoning. I'm working one more case.`
+- Approval boundary: `I learned something reusable, but Hermes is waiting for your approval before saving the skill change.`
+- Completion:
+  `Continuing education complete. Instructor: Cybersecurity Instructor. Objective: API authentication and authorization. Assessment: passed on a different design case. Hermes learning: extended auth-boundary-review.`
+- No durable change: `Competency already demonstrated. No instruction or skill update was needed.`
+
+Do not send routine status for every exchange. Silence is better than token-burning narration when nothing meaningful changed.
+
 ## Efficiency evidence
 
 When the information is already available, keep a compact record of:
