@@ -73,6 +73,18 @@ the constraints for every later phase.
     parallel store is permitted only if upstream Hermes provably cannot
     represent something actually required — and that exception must be
     documented here first.
+11. **Minimum sufficient instruction.** Continuing Education is a
+    competency-transfer system, not a school simulation. Baseline before
+    teaching; teach only demonstrated gaps; combine instructional functions
+    into as few turns as practical; skip instruction when competency is
+    already demonstrated; correct only what failed; require meaningfully
+    different transfer evidence when instruction was needed; and stop as soon
+    as the completion contract is satisfied. Do not impose fixed lesson
+    lengths, modules, ceremonial quizzes, acknowledgement turns, or other
+    classroom roleplay. Invoke `/learn` only when the event produced a
+    reusable capability delta worth persisting. Phase-specific QA scripts may
+    use fixed turn sequences to prove mechanics, but those sequences are test
+    scaffolding and must not become the production teaching protocol.
 
 ## Transport decision (deferred)
 
