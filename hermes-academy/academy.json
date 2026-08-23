@@ -32,6 +32,25 @@
   "backbone_profiles": ["academy-dean","academy-mathematics-professor","academy-writing-rhetoric-professor","academy-natural-sciences-professor","academy-computer-science-professor","academy-research-methods-professor","academy-language-instructor","academy-skilled-trades-instructor"],
   "profile_count": 30,
   "categories": {"coordination":1,"quantitative":3,"communication":1,"science":4,"technology":4,"humanities":4,"social-sciences":2,"professional":3,"languages":1,"research":1,"vocational":3,"health-sciences":1,"creative":2},
+  "shared_skills": [
+    {
+      "name": "academy-continuing-education",
+      "canonical_source": "shared-skills/academy-continuing-education/SKILL.md",
+      "description": "Learner-facing continuing-education skill for Hermes Academy.",
+      "targets": {
+        "mode": "agency-ce-participants",
+        "exceptions": []
+      }
+    },
+    {
+      "name": "teach-profile",
+      "canonical_source": "shared-skills/teach-profile/SKILL.md",
+      "description": "Instructor-facing skill for teaching via Hermes profiles.",
+      "targets": {
+        "mode": "academy-faculty-except-dean"
+      }
+    }
+  ],
   "profiles": [
     {"name":"academy-dean","display_name":"Academy Dean","category":"coordination","role":"Routes learners to the right faculty, establishes the learning brief, plans cross-disciplinary study, and synthesizes instruction without pretending to be every professor.","jobs":["faculty-routing","learner-brief","curriculum-path","faculty-synthesis"]},
     {"name":"academy-mathematics-professor","display_name":"Mathematics Professor","category":"quantitative","role":"Teaches mathematical concepts and problem solving from foundational arithmetic through advanced undergraduate-level quantitative reasoning.","jobs":["math-concept-lesson","worked-problem","guided-practice","math-mastery-check"]},
