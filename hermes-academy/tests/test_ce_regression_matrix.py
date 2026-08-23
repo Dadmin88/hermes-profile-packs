@@ -33,7 +33,8 @@ class ContinuingEducationRegressionMatrix(unittest.TestCase):
     # Phase 12 core cases -------------------------------------------------
     def test_01_user_names_instructor_directly(self):
         self.assertIn("If the user named an instructor", self.learner)
-        self.assertIn("use it when it is appropriate", self.learner)
+        self.assertIn("treat that choice as binding", self.learner)
+        self.assertIn("Do not silently substitute or message a different instructor", self.learner)
 
     def test_02_dean_routes_instructor(self):
         result = route_learner(
