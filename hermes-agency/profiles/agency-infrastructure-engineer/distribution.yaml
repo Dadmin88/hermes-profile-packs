@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Owns runtime infrastructure, environments, containers, networking, observability, reliability, and infrastructure-as-code."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

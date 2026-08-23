@@ -14,18 +14,25 @@ not depend on it.
 
 ### Current pre-release Hermes compatibility
 
-The Phase 14 preflight proved one generic Hermes Bot Mode seam was missing: an
-agent could use `message_agent`, but could not programmatically establish the
-same native standing goal that a human reaches through `/goal`. The generic
-Bot-Chat-only `goal_manage` bridge is now merged in the maintained downstream
-Hermes Agent (`Dadmin88/hermes-agent-downstream` PR #24, merge `9b8de86a80`).
-It wraps the existing `GoalManager`/`GoalContract`; it does not add Academy
-state or a second goal loop.
+The Phase 14 preflight proved two generic Hermes seams were needed. First, an
+agent could use `message_agent` but could not programmatically establish the
+same native standing goal that a human reaches through `/goal`; the generic
+Bot-Chat-only `goal_manage` bridge now wraps the existing
+`GoalManager`/`GoalContract` without adding Academy state or a second goal
+loop. Second, skill-index routing was not deterministic enough for a
+profile-defining workflow; generic profile distributions now support
+`preload_skills`, which activates installed, non-disabled skills from that
+profile before the first model turn without granting extra tools or authority.
 
-Until that generic bridge is present in the normal Hermes release used by a
-Profile Packs install, Continuing Education remains pre-release and must not be
-advertised as stock-install production ready. The hard invariant below remains
-the release requirement: no special Academy runtime may be required.
+Both capabilities are merged in the maintained downstream Hermes Agent:
+`goal_manage` in `Dadmin88/hermes-agent-downstream` PR #24 / merge
+`9b8de86a80`, and distribution `preload_skills` in PR #26 / merge
+`4c38d408f7`. Every Agency distribution declares
+`academy-continuing-education` as a preload. Until equivalent support is
+present in the normal Hermes release used by a Profile Packs install,
+Continuing Education remains pre-release and must not be advertised as
+stock-install production ready. The hard invariant below remains the release
+requirement: no special Academy runtime may be required.
 
 ## Actors (exhaustive)
 

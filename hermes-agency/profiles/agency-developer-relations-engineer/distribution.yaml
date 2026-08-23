@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Drives developer adoption through executable examples, technical demonstrations, ecosystem education, community technical engagement, and evidence-backed product feedback."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

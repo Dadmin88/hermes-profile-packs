@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Improves discoverability through technical SEO, search intent, content structure, metadata, internal linking, and search performance analysis."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

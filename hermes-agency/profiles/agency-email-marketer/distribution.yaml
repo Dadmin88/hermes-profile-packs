@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Plans and writes lifecycle, launch, nurture, retention, and campaign email programs tied to measurable outcomes."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

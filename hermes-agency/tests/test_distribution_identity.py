@@ -32,6 +32,22 @@ def _manifest_identity(path: Path) -> dict[str, str]:
     return result
 
 
+def _manifest_list(path: Path, key: str) -> list[str]:
+    values: list[str] = []
+    active = False
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        if raw_line == f"{key}:":
+            active = True
+            continue
+        if active and raw_line and not raw_line[0].isspace():
+            break
+        if active:
+            stripped = raw_line.strip()
+            if stripped.startswith("- "):
+                values.append(_yaml_scalar(stripped[2:]))
+    return values
+
+
 class DistributionIdentityTests(unittest.TestCase):
     def test_every_profile_distribution_matches_agency_release_identity(self):
         agency_version = AGENCY["version"]
@@ -43,6 +59,20 @@ class DistributionIdentityTests(unittest.TestCase):
                 manifest = _manifest_identity(manifest_path)
                 self.assertEqual(manifest.get("name"), name)
                 self.assertEqual(manifest.get("version"), agency_version)
+
+    def test_every_agency_distribution_preloads_continuing_education(self):
+        profile_root = ROOT / AGENCY["distribution"]["profile_root"]
+        for profile in AGENCY["profiles"]:
+            name = profile["name"]
+            manifest_path = profile_root / name / "distribution.yaml"
+            with self.subTest(profile=name):
+                self.assertEqual(
+                    _manifest_list(manifest_path, "preload_skills"),
+                    ["academy-continuing-education"],
+                )
+                self.assertTrue(
+                    (profile_root / name / "skills" / "academy-continuing-education" / "SKILL.md").is_file()
+                )
 
     def test_routing_contract_uses_stable_profile_identity(self):
         distribution = AGENCY["distribution"]
