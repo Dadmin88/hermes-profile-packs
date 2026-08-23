@@ -103,7 +103,9 @@ Stop as soon as the completion contract is satisfied.
 
 ### 7. Persist only a real capability delta
 
-If the session produced reusable knowledge, procedure, heuristics, or decision criteria that should improve future work, invoke native `/learn` from the learner.
+If the session produced reusable knowledge, procedure, heuristics, or decision criteria that should improve future work, prepare for native `/learn` from the learner.
+
+Before `/learn`, record the learner's current skill names. The persistence request must explicitly preserve every unrelated existing skill: `/learn` may extend one relevant skill or create one new skill, but it must not delete, consolidate, rename, relocate, or overwrite unrelated learner skills.
 
 Let the normal Hermes learning path use `skill_manage` to create or extend the learner-local skill. If `skills.write_approval` is enabled, stop at the normal Hermes approval boundary and surface that approval request. Never bypass, auto-approve, or weaken it because Academy initiated the learning.
 
@@ -113,9 +115,12 @@ After `/learn`, use normal skill inspection to verify the result. Confirm:
 - whether a matching skill was **extended** or a new skill was **created**;
 - purpose;
 - learner-profile location;
-- the reusable behavior, procedure, or decision criteria that were captured.
+- the reusable behavior, procedure, or decision criteria that were captured;
+- every unrelated skill recorded before `/learn` still exists afterward.
 
 Both outcomes are valid. Prefer extension when native `/learn` identifies an existing relevant skill; otherwise allow normal `/learn` to create one. Do not preselect or force the outcome in Academy logic.
+
+If any unrelated pre-existing learner skill disappeared or moved unexpectedly, the Continuing Education event **fails closed**. Do not report successful learning. Surface the unexpected skill loss, preserve evidence, and require recovery before continuing.
 
 Do not ask the instructor to write it. The instructor must never write the skill. Do not modify Academy or Agency source distributions.
 

@@ -16,6 +16,12 @@ The packs deliberately separate durable context domains. Agency executes profess
 
 Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills. Hermes Agency contains 109 professional specialists.
 
+### Academy Continuing Education
+
+Hermes Academy also includes an in-progress Continuing Education flow for profile-to-profile competency transfer. The merged implementation uses natural-language requests, Dean routing when needed, native `/goal`, canonical Bot Chat + `message_agent`, Academy instruction/transfer assessment, and native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
+
+Implementation and deterministic/native-runtime validation are complete through the Phase 10–13 quality gate. Controlled real-world capability preflight is still in progress, so Continuing Education should not yet be described as production-validated. See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md) and the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
+
 ## Start small with Team Recipes
 
 You rarely need all 160 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
