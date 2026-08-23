@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Connects narrative intent to interactive systems through quests, narrative state, player choice, consequences, systemic storytelling, progression, pacing, and implementation-ready narrative logic."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

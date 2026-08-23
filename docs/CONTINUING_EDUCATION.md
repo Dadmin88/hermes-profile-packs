@@ -6,7 +6,7 @@ Hermes Academy Continuing Education lets an installed Hermes profile learn a bou
 
 ## What is implemented
 
-The current merged flow uses normal Hermes primitives:
+The current merged flow uses normal Hermes primitives. Every Agency distribution declares `academy-continuing-education` in its `preload_skills`, so the full learner contract is active before the profile's first model turn instead of depending on probabilistic skill routing.
 
 1. A learner receives a natural-language request such as `Go learn API security.`
 2. If the user did not name a teacher, `academy-dean` routes to the most specific installed faculty member.
@@ -22,9 +22,9 @@ Native Bot groups are a validated optional group-learning surface, but they are 
 
 ## Current Hermes compatibility
 
-The Phase 14 v3 preflight proved that native goal **peer-wait** already worked once a goal existed, but natural-language Bot learning still lacked a safe way for the agent itself to establish that standing goal. The generic Bot-Chat-only `goal_manage` bridge now fills that seam by calling the existing Hermes `GoalManager` directly.
+The Phase 14 v3 preflight proved two generic seams. First, native goal **peer-wait** already worked once a goal existed, but a Bot lacked a safe way to establish that standing goal itself; the Bot-Chat-only `goal_manage` bridge now calls Hermes' existing `GoalManager` directly. Second, skill-index routing was not deterministic enough for a profile-defining workflow; downstream Hermes profile distributions now support `preload_skills`, and every Agency distribution preloads the CE learner contract before the first turn.
 
-The bridge is merged in the maintained downstream Hermes Agent as PR #24 / merge `9b8de86a80`. It exposes only `set`, `status`, and `add_subgoal`; it cannot replace, pause, resume, clear, or target another session's goal. Until equivalent support is present in the normal Hermes release used by Profile Packs, Continuing Education remains pre-release and must not be described as stock-install production ready.
+Both generic seams are merged in the maintained downstream Hermes Agent: `goal_manage` in PR #24 / merge `9b8de86a80`, and profile-distribution `preload_skills` in PR #26 / merge `4c38d408f7`. `goal_manage` exposes only `set`, `status`, and `add_subgoal`; it cannot replace, pause, resume, clear, or target another session's goal. `preload_skills` activates only installed, non-disabled skills from the current profile and grants no additional tools or permissions. Until equivalent support is present in the normal Hermes release used by Profile Packs, Continuing Education remains pre-release and must not be described as stock-install production ready.
 
 ## User experience
 
@@ -64,7 +64,8 @@ Before the controlled real-world preflight, the merged implementation has alread
 
 - canonical `message_agent` transport validation and real multi-turn teaching evidence;
 - Phase 3 native goal peer-wait verification showing no additional wait scheduler/core loop was needed once a standing goal exists;
-- Phase 14 v3 proof that natural-language Bot learning did need a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
+- Phase 14 v3 proof that natural-language Bot learning needed a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
+- live proof that probabilistic skill routing could bypass the CE contract, followed by generic profile-distribution `preload_skills` support and Agency-wide deterministic CE preloading;
 - learner-only native skill-placement proof;
 - shared-skill packaging and byte-identity validation;
 - Dean routing tests, including ambiguous-keyword false-positive regressions;

@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Operates defensive security detection and response through telemetry, detections, triage, incident containment, investigation, exposure management, and security-operations automation."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

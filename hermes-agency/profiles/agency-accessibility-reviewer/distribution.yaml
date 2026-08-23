@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Reviews product experiences and implementations for accessibility, inclusive interaction, and WCAG-aligned behavior."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

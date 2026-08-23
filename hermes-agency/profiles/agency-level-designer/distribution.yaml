@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Designs playable spaces, encounter flow, navigation, pacing, objectives, spatial storytelling, and level progression."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

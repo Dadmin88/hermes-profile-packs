@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Owns safe source-control integration: repository state, branches, commits, rebases, merges, pull requests, conflicts, and history hygiene."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Implements and debugs Godot projects, GDScript/C#, scenes, resources, gameplay systems, UI, tooling, and engine integrations."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education
