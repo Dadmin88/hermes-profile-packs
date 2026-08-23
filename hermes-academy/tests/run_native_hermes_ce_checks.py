@@ -212,7 +212,7 @@ def main() -> int:
 
         result = {
             "hermes_source": str(source),
-            "native_pytest_cases": 162,
+            "native_pytest_cases": 165,
             "native_async_gateway_cases": 2,
             "profile_install": "PASS",
             "canonical_skill_sha256": canonical_hash,

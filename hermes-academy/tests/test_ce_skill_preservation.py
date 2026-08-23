@@ -36,9 +36,11 @@ class LearnerSkillPreservationTests(unittest.TestCase):
         self.assertNotIn("## Transport decision (deferred)", ARCH)
 
     def test_user_guide_is_truthful_about_preflight(self):
-        self.assertIn("controlled real-world preflight is still in progress", GUIDE)
+        self.assertIn("Phase 14 controlled real-world preflight PASSED", GUIDE)
+        self.assertIn("Phase 15 production-profile validation is pending", GUIDE)
         self.assertIn("Do not describe Continuing Education as production-validated", GUIDE)
-        self.assertIn("earlier Phase 14 attempt is not accepted", GUIDE)
+        self.assertIn("untrained control **9/10**", GUIDE)
+        self.assertIn("trained learner **10/10**", GUIDE)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # Hermes Academy Continuing Education — Architecture Contract
 
-Status: normative architecture contract; implementation is merged through Phase 13 and Phase 14 controlled preflight is pending final acceptance. This document freezes the actors, hard invariants, transport decision, and naming decisions so later work cannot quietly balloon into a new framework. Changes to these decisions require an explicit, documented edit here.
+Status: normative architecture contract; implementation is merged through Phase 13 and the Phase 14 controlled disposable-profile preflight has passed. Phase 15 production-profile validation and Phase 16 release/whole-change review remain pending. This document freezes the actors, hard invariants, transport decision, and naming decisions so later work cannot quietly balloon into a new framework. Changes to these decisions require an explicit, documented edit here.
 
 ## Scope independence
 
@@ -14,7 +14,7 @@ not depend on it.
 
 ### Current pre-release Hermes compatibility
 
-The Phase 14 preflight proved two generic Hermes seams were needed. First, an
+The Phase 14 preflight proved three generic Hermes seams were needed. First, an
 agent could use `message_agent` but could not programmatically establish the
 same native standing goal that a human reaches through `/goal`; the generic
 Bot-Chat-only `goal_manage` bridge now wraps the existing
@@ -23,16 +23,20 @@ loop. Second, skill-index routing was not deterministic enough for a
 profile-defining workflow; generic profile distributions now support
 `preload_skills`, which activates installed, non-disabled skills from that
 profile before the first model turn without granting extra tools or authority.
+Third, a failed goal-judge reason was persisted but not included in the next
+continuation turn, so an agent could repeat the same insufficient completion
+claim. Native continuation now includes the previous bounded `continue`
+reason while keeping `wait` and `done` feedback out of later turns.
 
-Both capabilities are merged in the maintained downstream Hermes Agent:
+All three capabilities are merged in the maintained downstream Hermes Agent:
 `goal_manage` in `Dadmin88/hermes-agent-downstream` PR #24 / merge
-`9b8de86a80`, and distribution `preload_skills` in PR #26 / merge
-`4c38d408f7`. Every Agency distribution declares
-`academy-continuing-education` as a preload. Until equivalent support is
-present in the normal Hermes release used by a Profile Packs install,
-Continuing Education remains pre-release and must not be advertised as
-stock-install production ready. The hard invariant below remains the release
-requirement: no special Academy runtime may be required.
+`9b8de86a80`, distribution `preload_skills` in PR #26 / merge `4c38d408f7`,
+and bounded goal-judge feedback propagation in PR #27 / merge `406ea5c64e`.
+Every Agency distribution declares `academy-continuing-education` as a preload.
+Until equivalent support is present in the normal Hermes release used by a
+Profile Packs install, Continuing Education remains pre-release and must not be
+advertised as stock-install production ready. The hard invariant below remains
+the release requirement: no special Academy runtime may be required.
 
 ## Actors (exhaustive)
 

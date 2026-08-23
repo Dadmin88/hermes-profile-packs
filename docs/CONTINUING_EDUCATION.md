@@ -1,6 +1,6 @@
 # Hermes Academy Continuing Education
 
-Status: **implemented through the Phase 10–13 quality gate; controlled real-world preflight is still in progress.** Do not describe Continuing Education as production-validated until the Phase 14/15 capability tests pass.
+Status: **Phase 14 controlled real-world preflight PASSED; Phase 15 production-profile validation is pending.** Do not describe Continuing Education as production-validated until the Phase 15 persistent-profile test and Phase 16 release/whole-change review pass.
 
 Hermes Academy Continuing Education lets an installed Hermes profile learn a bounded reusable capability from Academy faculty without introducing a second agent runtime, scheduler, memory system, or skill database.
 
@@ -22,9 +22,9 @@ Native Bot groups are a validated optional group-learning surface, but they are 
 
 ## Current Hermes compatibility
 
-The Phase 14 v3 preflight proved two generic seams. First, native goal **peer-wait** already worked once a goal existed, but a Bot lacked a safe way to establish that standing goal itself; the Bot-Chat-only `goal_manage` bridge now calls Hermes' existing `GoalManager` directly. Second, skill-index routing was not deterministic enough for a profile-defining workflow; downstream Hermes profile distributions now support `preload_skills`, and every Agency distribution preloads the CE learner contract before the first turn.
+The Phase 14 preflight proved three generic Hermes seams. First, native goal **peer-wait** already worked once a goal existed, but a Bot lacked a safe way to establish that standing goal itself; the Bot-Chat-only `goal_manage` bridge now calls Hermes' existing `GoalManager` directly. Second, skill-index routing was not deterministic enough for a profile-defining workflow; downstream Hermes profile distributions now support `preload_skills`, and every Agency distribution preloads the CE learner contract before the first turn. Third, a failed goal-judge reason was persisted but not fed back into the next continuation, allowing repeated incomplete completion claims; native goal continuation now includes the previous bounded `continue` reason so the agent can correct the specific proof gap.
 
-Both generic seams are merged in the maintained downstream Hermes Agent: `goal_manage` in PR #24 / merge `9b8de86a80`, and profile-distribution `preload_skills` in PR #26 / merge `4c38d408f7`. `goal_manage` exposes only `set`, `status`, and `add_subgoal`; it cannot replace, pause, resume, clear, or target another session's goal. `preload_skills` activates only installed, non-disabled skills from the current profile and grants no additional tools or permissions. Until equivalent support is present in the normal Hermes release used by Profile Packs, Continuing Education remains pre-release and must not be described as stock-install production ready.
+All three generic seams are merged in the maintained downstream Hermes Agent: `goal_manage` in PR #24 / merge `9b8de86a80`, profile-distribution `preload_skills` in PR #26 / merge `4c38d408f7`, and bounded goal-judge feedback propagation in PR #27 / merge `406ea5c64e`. `goal_manage` exposes only `set`, `status`, and `add_subgoal`; it cannot replace, pause, resume, clear, or target another session's goal. `preload_skills` activates only installed, non-disabled skills from the current profile and grants no additional tools or permissions. Judge feedback is bounded and only replayed for `continue`, never `wait`/`done`. Until equivalent support is present in the normal Hermes release used by Profile Packs, Continuing Education remains pre-release and must not be described as stock-install production ready.
 
 ## User experience
 
@@ -60,20 +60,21 @@ Continuing education complete: transfer assessment passed; updated auth-boundary
 
 ## Current validation evidence
 
-Before the controlled real-world preflight, the merged implementation has already passed:
+The merged implementation has passed:
 
 - canonical `message_agent` transport validation and real multi-turn teaching evidence;
 - Phase 3 native goal peer-wait verification showing no additional wait scheduler/core loop was needed once a standing goal exists;
-- Phase 14 v3 proof that natural-language Bot learning needed a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
+- Phase 14 proof that natural-language Bot learning needed a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
 - live proof that probabilistic skill routing could bypass the CE contract, followed by generic profile-distribution `preload_skills` support and Agency-wide deterministic CE preloading;
-- learner-only native skill-placement proof;
+- Phase 14 proof that failed native goal-judge reasons must reach the next continuation turn, followed by bounded generic feedback propagation in downstream Hermes PR #27;
+- learner-only native skill-placement proof and source-pack/instructor isolation;
 - shared-skill packaging and byte-identity validation;
 - Dean routing tests, including ambiguous-keyword false-positive regressions;
 - security/trust review with permanent adversarial tests;
-- native Hermes goal/subgoal, Bot Chat, `/learn`, skill-manager, write-approval, restart/resume, and canonical-session tests against a disposable Hermes home;
+- **165** selected native Hermes goal/subgoal, Bot Chat, profile-preload, `/learn`, skill-manager, write-approval, restart/resume, and canonical-session tests plus **2** direct async gateway goal-resume checks against a disposable Hermes home;
 - repository, Agency, Council, and Academy validation with no Fleet dependency.
 
-The Phase 14 controlled preflight must still prove persistent capability improvement in a fresh learner session. An earlier Phase 14 attempt is not accepted because it used an outdated learner distribution that did not contain the CE learner skill and bypassed the complete merged flow.
+The accepted Phase 14 disposable-profile preflight used the natural request `Go learn API security from the Academy Cybersecurity Instructor.` It exercised deterministic CE preload, native `goal_manage`, `message_agent`, peer-wait, instructor assessment, transfer, native learner-local persistence, and fresh-session learned-skill reuse. Exactly one learner skill was added (`api-security-review`), all pre-existing learner skills were preserved, and the instructor/source-pack hashes were unchanged. A sealed held-out A/B check on the same model/runtime scored an untrained control **9/10** and the trained learner **10/10**; the trained fresh session naturally loaded `api-security-review`. Phase 15 must still validate the actual persistent learner before production-readiness claims.
 
 ## Source locations
 
