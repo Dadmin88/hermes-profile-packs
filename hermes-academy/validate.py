@@ -223,9 +223,7 @@ def main() -> int:
         shared_skill_names = {s["name"] for s in manifest.get("shared_skills", [])}
         non_shared = skills - shared_skill_names
         if own_skills != non_shared:
-            # Only flag if the profile's own jobs don't match its non-shared skills
-            # This allows shared skills to coexist with profile-owned skills
-            pass
+            errors.append(f"{name}: jobs do not match non-shared skills")
 
     # Validate shared skills
     validate_shared_skills(manifest, errors)
