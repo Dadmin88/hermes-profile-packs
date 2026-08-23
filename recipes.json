@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "tiers": ["minimal", "recommended", "expanded"],
+  "recipes": [
+    {
+      "id": "software-delivery",
+      "display_name": "Software Delivery Team",
+      "pack": "agency",
+      "description": "A compact cross-functional team for planning, building, reviewing, testing, and shipping production software.",
+      "when_to_use": "Use when the outcome is a real software feature or product slice that needs implementation plus independent quality and source-control closure.",
+      "keywords": ["software", "web", "app", "feature", "build", "ship", "release", "product"],
+      "tiers": {
+        "minimal": ["agency-product-manager", "agency-software-architect", "agency-fullstack-engineer", "agency-code-reviewer", "agency-qa-tester", "agency-git-steward"],
+        "recommended": ["agency-product-manager", "agency-software-architect", "agency-technical-lead", "agency-fullstack-engineer", "agency-code-reviewer", "agency-qa-tester", "agency-security-reviewer", "agency-git-steward", "agency-release-manager"],
+        "expanded": ["agency-product-manager", "agency-product-designer", "agency-software-architect", "agency-technical-lead", "agency-fullstack-engineer", "agency-devops-engineer", "agency-site-reliability-engineer", "agency-code-reviewer", "agency-qa-tester", "agency-security-reviewer", "agency-git-steward", "agency-release-manager"]
+      },
+      "workflow": ["Product Manager freezes outcome and acceptance criteria.", "Architect and Technical Lead establish boundaries only when architecture work is material.", "One implementation owner builds the feature; avoid parallel authorship without clean seams.", "Code Review and QA independently verify the result.", "Security review is added when risk justifies it.", "Git Steward and Release Manager close integration and release evidence."],
+      "success_criteria": ["Every deliverable has one owner.", "Implementation and independent review are distinct when risk warrants it.", "Tests or equivalent evidence demonstrate the requested behavior.", "Source-control and release state are explicit."],
+      "optional_routines": ["Chief of Staff or Project Manager board review for long-running work", "Release readiness review before production rollout"]
+    },
+    {
+      "id": "api-backend",
+      "display_name": "API & Backend Team",
+      "pack": "agency",
+      "description": "A backend-focused team for APIs, services, persistence, authentication, performance, and integration quality.",
+      "when_to_use": "Use for server-side application work where backend engineering is the primary implementation domain.",
+      "keywords": ["api", "backend", "service", "database", "auth", "integration", "server"],
+      "tiers": {
+        "minimal": ["agency-backend-engineer", "agency-database-engineer", "agency-code-reviewer", "agency-qa-tester"],
+        "recommended": ["agency-technical-lead", "agency-backend-engineer", "agency-database-engineer", "agency-security-engineer", "agency-performance-engineer", "agency-code-reviewer", "agency-qa-tester"],
+        "expanded": ["agency-technical-lead", "agency-backend-engineer", "agency-database-engineer", "agency-security-engineer", "agency-performance-engineer", "agency-integration-engineer", "agency-devops-engineer", "agency-code-reviewer", "agency-qa-tester", "agency-git-steward"]
+      },
+      "workflow": ["Backend Engineer owns service behavior and API implementation.", "Database Engineer owns material persistence design.", "Security and Performance specialists join only when those concerns are material.", "Code Reviewer and QA independently verify implementation and behavior.", "Integration/DevOps specialists handle external seams and deployment concerns when needed."],
+      "success_criteria": ["API behavior and failure semantics are explicit.", "Persistence and security boundaries are reviewed where material.", "Automated or reproducible behavioral evidence exists."],
+      "optional_routines": ["Dependency and security advisory review for maintained services"]
+    },
+    {
+      "id": "security-review",
+      "display_name": "Security Review Team",
+      "pack": "agency",
+      "description": "An independent security review formation for threat modeling, implementation review, privacy/compliance checks, and authorized adversarial testing.",
+      "when_to_use": "Use when the primary outcome is security confidence rather than feature implementation.",
+      "keywords": ["security", "threat", "audit", "review", "red team", "privacy", "compliance"],
+      "tiers": {
+        "minimal": ["agency-security-reviewer", "agency-security-engineer", "agency-code-reviewer", "agency-red-team"],
+        "recommended": ["agency-security-reviewer", "agency-security-engineer", "agency-privacy-engineer", "agency-compliance-reviewer", "agency-code-reviewer", "agency-qa-tester", "agency-red-team"],
+        "expanded": ["agency-security-reviewer", "agency-security-engineer", "agency-security-operations-engineer", "agency-privacy-engineer", "agency-compliance-reviewer", "agency-site-reliability-engineer", "agency-code-reviewer", "agency-qa-tester", "agency-red-team"]
+      },
+      "workflow": ["Security Reviewer defines review scope and evidence requirements.", "Security Engineer models threats and inspects design/implementation.", "Code Reviewer and QA provide independent correctness evidence.", "Privacy/Compliance specialists join when those domains are in scope.", "Red Team performs only authorized adversarial testing against the agreed scope."],
+      "success_criteria": ["Scope and authorization are explicit.", "Findings include evidence, severity rationale, and remediation ownership.", "Independent verification follows material fixes."],
+      "optional_routines": ["Security Operations advisory review for maintained systems"]
+    },
+    {
+      "id": "open-source-maintenance",
+      "display_name": "Open Source Maintenance Team",
+      "pack": "agency",
+      "description": "A small team for issue triage, implementation, review, release hygiene, documentation, and community-facing maintenance.",
+      "when_to_use": "Use for maintaining a public repository or upstream-facing software project.",
+      "keywords": ["open source", "repository", "github", "maintain", "issue", "pull request", "release", "upstream"],
+      "tiers": {
+        "minimal": ["agency-open-source-maintainer", "agency-code-reviewer", "agency-qa-tester", "agency-git-steward"],
+        "recommended": ["agency-open-source-maintainer", "agency-code-reviewer", "agency-qa-tester", "agency-security-reviewer", "agency-git-steward", "agency-release-manager", "agency-technical-writer"],
+        "expanded": ["agency-open-source-maintainer", "agency-code-reviewer", "agency-qa-tester", "agency-security-reviewer", "agency-git-steward", "agency-release-manager", "agency-technical-writer", "agency-developer-relations-engineer", "agency-community-manager"]
+      },
+      "workflow": ["Open Source Maintainer owns intake, scope, compatibility, and contributor context.", "Implementation is routed to the appropriate engineering owner when needed.", "Code Review and QA gate behavioral changes.", "Git Steward preserves clean history and PR state.", "Release, documentation, DevRel, and community roles join only when the work reaches those surfaces."],
+      "success_criteria": ["Issue/PR state and ownership are explicit.", "Compatibility and regression evidence exist.", "Release and public communication are updated when required."],
+      "optional_routines": ["Weekly upstream/dependency review", "Periodic stale issue and release readiness review"]
+    },
+    {
+      "id": "product-launch",
+      "display_name": "Product Launch Team",
+      "pack": "agency",
+      "description": "A launch formation for product intent, positioning, copy, channels, brand, analytics, public relations, and customer follow-through.",
+      "when_to_use": "Use when a product or major feature is ready to be introduced publicly and measured after launch.",
+      "keywords": ["launch", "marketing", "announce", "campaign", "release", "social", "brand", "growth"],
+      "tiers": {
+        "minimal": ["agency-product-manager", "agency-launch-manager", "agency-marketing-strategist", "agency-copywriter", "agency-social-media-manager", "agency-analytics-specialist"],
+        "recommended": ["agency-product-manager", "agency-launch-manager", "agency-marketing-strategist", "agency-product-marketing-manager", "agency-brand-designer", "agency-copywriter", "agency-social-media-manager", "agency-public-relations", "agency-analytics-specialist", "agency-customer-success"],
+        "expanded": ["agency-product-manager", "agency-launch-manager", "agency-marketing-strategist", "agency-product-marketing-manager", "agency-brand-designer", "agency-copywriter", "agency-social-media-manager", "agency-public-relations", "agency-email-marketer", "agency-growth-marketer", "agency-video-producer", "agency-analytics-specialist", "agency-customer-success"]
+      },
+      "workflow": ["Product Manager freezes what is launching and for whom.", "Launch Manager owns sequencing, readiness, and dependencies.", "Marketing/Product Marketing own positioning and channel strategy.", "Creative/content specialists produce channel-specific assets.", "Analytics defines measurable launch signals.", "Customer Success captures post-launch user friction."],
+      "success_criteria": ["Audience, message, channels, owner, and launch date are explicit.", "Claims are verified before publication.", "Success metrics and post-launch feedback loops are defined."],
+      "optional_routines": ["Launch readiness review", "Post-launch metrics and customer-friction review"]
+    },
+    {
+      "id": "game-development",
+      "display_name": "Game Development Team",
+      "pack": "agency",
+      "description": "A game-production formation spanning design, Godot implementation, levels, art integration, narrative/audio, QA, and release.",
+      "when_to_use": "Use for game features or vertical slices where design and implementation need several distinct creative/technical specialties.",
+      "keywords": ["game", "godot", "level", "world", "art", "narrative", "audio", "gameplay"],
+      "tiers": {
+        "minimal": ["agency-game-designer", "agency-godot-engineer", "agency-level-designer", "agency-technical-artist", "agency-qa-tester"],
+        "recommended": ["agency-game-designer", "agency-product-manager", "agency-godot-engineer", "agency-level-designer", "agency-worldbuilder", "agency-environment-artist", "agency-technical-artist", "agency-narrative-designer", "agency-audio-designer", "agency-qa-tester"],
+        "expanded": ["agency-game-designer", "agency-product-manager", "agency-godot-engineer", "agency-tools-engineer", "agency-level-designer", "agency-worldbuilder", "agency-environment-artist", "agency-asset-artist", "agency-technical-artist", "agency-ui-ux-designer", "agency-narrative-designer", "agency-audio-designer", "agency-qa-tester", "agency-release-manager"]
+      },
+      "workflow": ["Game Designer owns mechanics and player-facing intent.", "Godot Engineer owns engine implementation.", "Level/World/Art specialties receive independently bounded content packages.", "Narrative and Audio join only where the feature needs them.", "QA validates the playable result rather than reviewing documents alone."],
+      "success_criteria": ["The playable outcome and acceptance criteria are explicit.", "Creative ownership is separated from engine ownership where useful.", "The feature is tested in a real playable flow."],
+      "optional_routines": ["Milestone playtest review", "Release readiness review"]
+    },
+    {
+      "id": "research-analysis",
+      "display_name": "Research & Analysis Team",
+      "pack": "agency",
+      "description": "A research formation for evidence gathering, market/competitive analysis, quantitative interpretation, and decision-ready synthesis.",
+      "when_to_use": "Use when a decision depends on several kinds of external evidence or independent analytical lenses.",
+      "keywords": ["research", "market", "competitor", "analysis", "evidence", "data", "decision"],
+      "tiers": {
+        "minimal": ["agency-research-analyst", "agency-market-researcher", "agency-competitive-analyst"],
+        "recommended": ["agency-research-analyst", "agency-market-researcher", "agency-competitive-analyst", "agency-business-analyst", "agency-data-scientist"],
+        "expanded": ["agency-research-analyst", "agency-market-researcher", "agency-competitive-analyst", "agency-business-analyst", "agency-data-scientist", "agency-product-strategist", "agency-technical-writer"]
+      },
+      "workflow": ["Research Analyst frames evidence questions and source quality.", "Market/Competitive specialists collect domain-specific evidence independently.", "Business/Data specialists join when interpretation requires those lenses.", "Synthesis preserves disagreement, dates, confidence, and missing evidence."],
+      "success_criteria": ["Material claims are traceable to current evidence.", "Conflicting evidence and uncertainty remain visible.", "The final synthesis is decision-ready rather than a source dump."],
+      "optional_routines": ["Periodic market or competitor scan when the operator explicitly configures it"]
+    },
+    {
+      "id": "personal-reset",
+      "display_name": "Personal Reset Council",
+      "pack": "council",
+      "description": "A privacy-aware Council formation for regaining clarity, stabilizing routines, reducing overload, and choosing realistic next steps.",
+      "when_to_use": "Use when several parts of personal life feel tangled and the user wants a small, practical reset rather than a giant life overhaul.",
+      "keywords": ["reset", "overwhelmed", "life", "routine", "stress", "focus", "organize", "clarity"],
+      "tiers": {
+        "minimal": ["council-steward", "council-life-coach", "council-resilience-coach", "council-time-attention-coach"],
+        "recommended": ["council-steward", "council-life-coach", "council-resilience-coach", "council-time-attention-coach", "council-sleep-coach", "council-fitness-coach", "council-home-steward", "council-personal-admin-steward"],
+        "expanded": ["council-steward", "council-life-coach", "council-resilience-coach", "council-time-attention-coach", "council-sleep-coach", "council-fitness-coach", "council-home-steward", "council-personal-admin-steward", "council-finance-coach", "council-recreation-guide", "council-community-coach"]
+      },
+      "workflow": ["Council Steward identifies the smallest domains that actually matter.", "Each specialist receives only the personal context needed for its part.", "Life Coach helps choose priorities and boundaries.", "Resilience and Time/Attention profiles turn those priorities into sustainable near-term actions.", "Additional specialists join only for concrete needs discovered during the reset."],
+      "success_criteria": ["The user has a small number of realistic next actions.", "No specialist receives unrelated personal context by default.", "The plan leaves decisions and agency with the user."],
+      "optional_routines": ["Weekly personal review if the user explicitly wants one"]
+    },
+    {
+      "id": "family-support",
+      "display_name": "Family Support Council",
+      "pack": "council",
+      "description": "A bounded Council formation for parenting, communication, household relationships, and practical family routines.",
+      "when_to_use": "Use when a family issue spans parenting decisions, communication, and household systems.",
+      "keywords": ["family", "parenting", "kids", "children", "communication", "relationship", "household"],
+      "tiers": {
+        "minimal": ["council-steward", "council-parenting-coach", "council-communication-coach", "council-relationship-coach"],
+        "recommended": ["council-steward", "council-parenting-coach", "council-communication-coach", "council-relationship-coach", "council-home-steward", "council-resilience-coach", "council-time-attention-coach"],
+        "expanded": ["council-steward", "council-parenting-coach", "council-communication-coach", "council-relationship-coach", "council-home-steward", "council-resilience-coach", "council-time-attention-coach", "council-personal-admin-steward", "council-community-coach"]
+      },
+      "workflow": ["Steward scopes the actual family outcome and privacy boundary.", "Parenting Coach owns child-development and boundary questions.", "Communication Coach handles message/conversation practice.", "Relationship Coach handles adult relationship patterns only when relevant.", "Home/Time specialists join for routines and logistics rather than relational judgment."],
+      "success_criteria": ["Parenting, relationship, communication, and logistics ownership stay distinct.", "Advice is age-appropriate and non-humiliating.", "The user retains authority over family decisions."],
+      "optional_routines": ["Weekly household reset when the user chooses to configure one"]
+    },
+    {
+      "id": "fitness-recovery",
+      "display_name": "Fitness & Recovery Council",
+      "pack": "council",
+      "description": "A practical Council formation for training, nutrition, sleep, recovery, and health-care organization without crossing clinical boundaries.",
+      "when_to_use": "Use when the user wants a sustainable fitness system rather than a workout plan in isolation.",
+      "keywords": ["fitness", "workout", "training", "nutrition", "sleep", "recovery", "health"],
+      "tiers": {
+        "minimal": ["council-fitness-coach", "council-nutrition-coach", "council-sleep-coach", "council-health-navigator"],
+        "recommended": ["council-life-coach", "council-time-attention-coach", "council-fitness-coach", "council-nutrition-coach", "council-sleep-coach", "council-health-navigator"],
+        "expanded": ["council-life-coach", "council-resilience-coach", "council-time-attention-coach", "council-fitness-coach", "council-nutrition-coach", "council-sleep-coach", "council-health-navigator"]
+      },
+      "workflow": ["Fitness Coach owns training and adaptation.", "Nutrition Coach supports realistic fueling/eating patterns.", "Sleep Coach owns sleep-supportive routine and recovery habits.", "Health Navigator organizes symptoms, appointments, records, and professional follow-up without diagnosing.", "Life/Time/Resilience profiles join only when adherence or life constraints are the actual blocker."],
+      "success_criteria": ["Training, eating, sleep, and medical-navigation boundaries remain clear.", "The plan fits actual schedule and recovery constraints.", "Clinical concerns are escalated rather than diagnosed by the Council."],
+      "optional_routines": ["Periodic training/recovery review if explicitly configured by the user"]
+    },
+    {
+      "id": "technical-study",
+      "display_name": "Technical Study Faculty",
+      "pack": "academy",
+      "description": "A prerequisite-aware faculty set for learning computer science, systems, quantitative foundations, research methods, and adjacent technical subjects.",
+      "when_to_use": "Use for broad technical upskilling where the learner may need more than one academic foundation.",
+      "keywords": ["learn", "technical", "computer science", "systems", "engineering", "study", "programming", "cloud"],
+      "tiers": {
+        "minimal": ["academy-dean", "academy-computer-science-professor", "academy-research-methods-professor"],
+        "recommended": ["academy-dean", "academy-mathematics-professor", "academy-computer-science-professor", "academy-cloud-systems-instructor", "academy-cybersecurity-instructor", "academy-research-methods-professor"],
+        "expanded": ["academy-dean", "academy-mathematics-professor", "academy-statistics-professor", "academy-data-science-professor", "academy-computer-science-professor", "academy-engineering-professor", "academy-cloud-systems-instructor", "academy-cybersecurity-instructor", "academy-research-methods-professor"]
+      },
+      "workflow": ["Dean establishes the learning objective and routes to the narrowest faculty needed.", "Faculty teach concepts and reasoning rather than doing production work for the learner.", "Practice and feedback precede claims of mastery.", "Research Methods joins when source evaluation or study design is part of the objective.", "Additional faculty join only when prerequisites or cross-disciplinary transfer require them."],
+      "success_criteria": ["The learner can apply the material to a meaningfully different example.", "Faculty boundaries remain educational rather than production-execution roles.", "Current standards or software behavior are verified when material."],
+      "optional_routines": ["Study-plan review when the learner explicitly wants a recurring cadence"]
+    },
+    {
+      "id": "cybersecurity-learning",
+      "display_name": "Cybersecurity Learning Faculty",
+      "pack": "academy",
+      "description": "A focused Academy formation for defensive security, secure systems, computer-science foundations, and evidence-aware practice.",
+      "when_to_use": "Use when the learner wants to build durable defensive cybersecurity understanding and practical reasoning.",
+      "keywords": ["learn", "cybersecurity", "security", "threat modeling", "defensive", "auth", "networks"],
+      "tiers": {
+        "minimal": ["academy-dean", "academy-cybersecurity-instructor"],
+        "recommended": ["academy-dean", "academy-computer-science-professor", "academy-cybersecurity-instructor", "academy-cloud-systems-instructor"],
+        "expanded": ["academy-dean", "academy-mathematics-professor", "academy-computer-science-professor", "academy-cybersecurity-instructor", "academy-cloud-systems-instructor", "academy-research-methods-professor"]
+      },
+      "workflow": ["Dean scopes the learner goal and current level.", "Cybersecurity Instructor owns defensive security teaching and transfer assessment.", "Computer Science and Cloud/Systems faculty fill prerequisite gaps when needed.", "Research Methods supports evidence evaluation for security claims and standards.", "Authorized practice remains bounded and safety-aware."],
+      "success_criteria": ["The learner demonstrates the target concept on a novel defensive scenario.", "Instruction distinguishes secure-design reasoning from unauthorized offensive activity.", "The learner can explain relevant assumptions and uncertainty."],
+      "optional_routines": ["Periodic study review only when explicitly requested by the learner"]
+    }
+  ]
+}
