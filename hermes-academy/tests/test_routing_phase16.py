@@ -1,4 +1,4 @@
-"""Phase 16 release regressions for deterministic Academy Dean routing."""
+"""Phase 16 release regressions for Academy Dean routing policy."""
 from __future__ import annotations
 
 import json
@@ -69,6 +69,25 @@ class Phase16RoutingRegressionTests(unittest.TestCase):
         self.assertEqual(result.faculty, "academy-physics-professor")
         self.assertFalse(result.approximate)
 
+    def test_missing_specialist_uses_installed_category_fallback(self):
+        result = route_learner(
+            "agency-security-engineer",
+            "Learn cybersecurity threat modeling",
+            installed_profiles={"academy-computer-science-professor"},
+        )
+        self.assertEqual(result.faculty, "academy-computer-science-professor")
+        self.assertTrue(result.approximate)
+        self.assertIn("not installed", result.reason)
+
+    def test_missing_specialist_and_fallback_fail_closed(self):
+        result = route_learner(
+            "agency-security-engineer",
+            "Learn cybersecurity threat modeling",
+            installed_profiles={"academy-history-professor"},
+        )
+        self.assertIsNone(result.faculty)
+        self.assertFalse(result.approximate)
+
     def test_role_fallback_requires_unambiguous_exact_word_overlap(self):
         manifest = {
             "routing": {"specialist_preferences": {}, "broad_chairs": []},
@@ -96,6 +115,35 @@ class Phase16RoutingRegressionTests(unittest.TestCase):
 
         self.assertIsNone(result.faculty)
         self.assertIn("equally close", result.reason)
+
+    def test_role_fallback_ignores_uninstalled_profiles(self):
+        manifest = {
+            "routing": {"specialist_preferences": {}, "broad_chairs": []},
+            "profiles": [
+                {
+                    "name": "academy-alpha",
+                    "category": "professional",
+                    "role": "Teaches release planning and delivery sequencing.",
+                },
+                {
+                    "name": "academy-beta",
+                    "category": "professional",
+                    "role": "Teaches unrelated creative fundamentals.",
+                },
+            ],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "academy.json"
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            result = route_learner(
+                "agency-generalist",
+                "Improve release planning and delivery sequencing",
+                manifest_path=path,
+                installed_profiles={"academy-beta"},
+            )
+
+        self.assertIsNone(result.faculty)
+        self.assertIn("No installed Academy faculty", result.reason)
 
 
 if __name__ == "__main__":
