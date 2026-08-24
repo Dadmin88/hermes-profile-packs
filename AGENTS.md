@@ -2,7 +2,7 @@
 
 ## Repository purpose
 
-This repository contains public, portable Hermes Agent profile packs. Treat profile names, pack manifests, installer behavior, and distribution layout as user-facing API.
+This repository contains public, portable Hermes Agent profile packs. Treat profile names, pack manifests, installer behavior, distribution layout, shared-skill sources, and Academy routing policy as user-facing API.
 
 ## Required invariants
 
@@ -14,6 +14,34 @@ This repository contains public, portable Hermes Agent profile packs. Treat prof
 - `distribution.yaml` names must match their directory names.
 - Manifest `jobs` must match the profile-specific skill directories for Council profiles.
 - Preserve unrelated work.
+
+## Continuing Education invariants
+
+Hermes Academy Continuing Education is independent of Hermes Fleet. Do not add Fleet, Keryx, Nodescale, Templar, RunAuthority, Run Capsule, scheduler, message-bus, or parallel persistence dependencies to make the education flow work.
+
+The canonical shared skills are:
+
+- `hermes-academy/shared-skills/academy-continuing-education/SKILL.md`
+- `hermes-academy/shared-skills/teach-profile/SKILL.md`
+
+Edit those canonical sources rather than hand-editing materialized copies. Validators enforce byte identity across participating learner/faculty distributions.
+
+Academy routing policy has two synchronized forms:
+
+- `hermes-academy/academy.json` owns specialist preferences and category fallbacks;
+- `academy-dean`'s preloaded `faculty-routing` skill owns the installed runtime contract.
+
+`hermes-academy/routing.py` is a repository reference implementation and test oracle only. Never make an installed Dean depend on that pack-root file being present after profile installation.
+
+Continuing Education routing must fail closed:
+
+- prefer the most specific installed specialist;
+- use a broad fallback only within the specialist's own category;
+- cross-category CE objectives must be narrowed instead of being assigned to an unrelated broad chair;
+- uninstalled or unverified faculty must not be reported as installed;
+- ambiguous role-description ties must not be broken by roster or iteration order.
+
+Public status language must distinguish the validated maintained-downstream integration from stock NousResearch Hermes compatibility. Do not claim unqualified stock-Hermes production readiness until equivalent generic native seams are present in the normal Hermes release used by Profile Packs.
 
 ## Editing profiles
 
@@ -36,3 +64,5 @@ python -m unittest discover -s hermes-academy/tests -p 'test_*.py'
 ```
 
 Do not weaken a validator merely to make a failing artifact pass. Determine whether the finding is a real portability/security problem or an overly broad rule, then fix the correct layer.
+
+For Continuing Education changes, the final release candidate must also keep the public guide, architecture contract, Phase 16 release review, Academy teaching contract, Academy README, root README, and changelog truthful about the same compatibility boundary.
