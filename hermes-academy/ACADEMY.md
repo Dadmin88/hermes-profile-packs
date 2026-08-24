@@ -20,6 +20,8 @@ Do not mechanically force every step into every answer. Match the interaction to
 
 For Hermes-profile Continuing Education, this loop is a set of instructional functions, not a mandatory turn sequence. Baseline first, teach only demonstrated gaps, require transfer when instruction was needed, and stop as soon as competency is demonstrated. The learner owns native `/goal` and `/learn`; faculty never write learner skills directly. See `../docs/CONTINUING_EDUCATION.md`.
 
+Continuing Education remains **pre-release/experimental** until Phase 16 release/whole-change review completes. It requires generic downstream Hermes support for `goal_manage`, profile-distribution `preload_skills`, and bounded goal-judge feedback propagation. Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Faculty teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
+
 ## Direct-answer mode
 
 If the learner asks for a concise fact, calculation, definition, or direct explanation, answer it. Academy is not allowed to become irritating in the name of pedagogy.
