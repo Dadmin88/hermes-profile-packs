@@ -78,18 +78,36 @@ Continuing Education relies on generic Hermes capabilities that were implemented
 
 The downstream fork was subsequently reconciled with `NousResearch/hermes-agent@91e867631e9d2eb9fbd69edd4459475d38070979` while preserving those contracts. The reconciliation reported 533 Bot Mode tests, 127 targeted Desktop/session/profile tests, 200 focused Hermes/Academy Python tests, TypeScript typechecks, metadata validation, and diff checks passing locally.
 
-The downstream reconciliation's GitHub Actions were not used as positive release evidence because those runs failed before the substantive test jobs at environment/scope/OSV setup. Phase 16 does not relabel infrastructure-red workflows as green application tests.
+### Post-review runtime hardening
+
+A direct follow-up audit of the generic Hermes seams found two additional edge-case defects and corrected both in downstream PR #33, merged as `72cd9895d62f8e651d44a74d038a038c7209ce4c`:
+
+1. **Legacy-managed Bot upgrade compatibility.** `goal_manage` was checking the rendered Bot protocol section instead of the managed-install state. Older Bot Mode installs may already contain the protocol text in `SOUL.md`, causing current prompt generation to suppress a duplicate section even though the profile is still managed. The bridge now uses the same `is_bot_mode_managed(...)` boundary as `message_agent`, with a regression for this upgrade case.
+2. **Automatic preload execution boundary.** Profile-distribution `preload_skills` reused the native skill renderer, whose optional inline-shell preprocessing may execute `!\`...\`` commands when `skills.inline_shell` is enabled. Automatic profile activation is now explicitly non-executing while explicit user/CLI skill rendering retains its existing opt-in behavior. Focused regressions cover both sides of the boundary.
+
+Downstream PR #33's GitHub workflows did **not** provide positive test evidence: Docker, Nix, and general CI all failed in shared pre-test scope/affected-area or OSV setup, so substantive Python jobs were skipped. The exact four-file source diff was reviewed directly and the known fail-open/authority-boundary defects were integrated rather than left active. The CI-preflight limitation remains documented on that PR and is not represented here as a green application run.
+
+The earlier downstream reconciliation's GitHub Actions were likewise not used as positive release evidence because those runs failed before the substantive test jobs at environment/scope/OSV setup. Phase 16 does not relabel infrastructure-red workflows as green application tests.
 
 ## Stock upstream compatibility boundary
 
 At the upstream reference used for the downstream reconciliation, equivalent `goal_manage` and profile-distribution `preload_skills` support are not present in stock NousResearch Hermes.
+
+Focused upstream PRs now represent all four generic seams required by the validated flow:
+
+- NousResearch/hermes-agent #93519 — Bot Chat native session `goal_manage`; additionally hardened for legacy-managed upgrades during this review;
+- #93520 — profile-distribution `preload_skills`; additionally hardened so automatic preloads cannot execute inline shell during prompt construction;
+- #93521 — bounded failed goal-judge reason on the next native continuation;
+- #93614 — duplicate in-flight `message_agent` suppression, submitted from a branch cut directly from then-current Nous `main`.
+
+Those upstream PRs are independent generic Hermes changes, not an Academy runtime. Fork-triggered upstream workflows may require Nous maintainer approval before substantive CI jobs run, so an `action_required` workflow with zero jobs is an approval gate rather than positive or negative test evidence.
 
 Therefore:
 
 - Profile Packs may describe Continuing Education as production-validated **with the maintained downstream Hermes integration**;
 - Profile Packs must not describe it as stock-Hermes production ready yet;
 - the user-facing flow must fail clearly when required native capabilities are unavailable rather than simulating them in Academy;
-- upstreaming or otherwise landing equivalent generic Hermes seams is the remaining stock-release compatibility milestone.
+- landing equivalent generic Hermes seams upstream is the remaining stock-release compatibility milestone.
 
 ## Exact Profile Packs validation
 
