@@ -143,7 +143,8 @@ def validate_routing(manifest: dict, errors: list[str]) -> None:
         return
     dean_text = dean_skill.read_text(encoding="utf-8")
     for category, name in category_fallbacks.items():
-        marker = f"{category} → `{name}`"
+        readable_category = category.replace("-", " ")
+        marker = f"{readable_category} → `{name}`"
         if marker not in dean_text:
             errors.append(
                 f"academy-dean/faculty-routing missing manifest fallback marker: {marker}"
