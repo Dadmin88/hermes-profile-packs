@@ -35,9 +35,9 @@ class LearnerSkillPreservationTests(unittest.TestCase):
         self.assertIn("canonical Bot Chat + native", ARCH)
         self.assertNotIn("## Transport decision (deferred)", ARCH)
 
-    def test_user_guide_is_truthful_about_preflight(self):
-        self.assertIn("Phase 14 controlled real-world preflight PASSED", GUIDE)
-        self.assertIn("Phase 15 production-profile validation is pending", GUIDE)
+    def test_user_guide_is_truthful_about_production_verification(self):
+        self.assertIn("Phase 15 independent production verification PASSED", GUIDE)
+        self.assertIn("Phase 16 release/whole-change review is pending", GUIDE)
         self.assertIn("Do not describe Continuing Education as production-validated", GUIDE)
         self.assertIn("untrained control **9/10**", GUIDE)
         self.assertIn("trained learner **10/10**", GUIDE)
