@@ -8,6 +8,14 @@ import unittest
 from pathlib import Path
 
 ACADEMY_ROOT = Path(__file__).resolve().parents[1]
+DEAN_ROUTING_SKILL = (
+    ACADEMY_ROOT
+    / "profiles"
+    / "academy-dean"
+    / "skills"
+    / "faculty-routing"
+    / "SKILL.md"
+)
 sys.path.insert(0, str(ACADEMY_ROOT))
 
 from routing import route_learner  # noqa: E402
@@ -144,6 +152,41 @@ class Phase16RoutingRegressionTests(unittest.TestCase):
 
         self.assertIsNone(result.faculty)
         self.assertIn("No installed Academy faculty", result.reason)
+
+
+class InstalledDeanContractTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.skill = DEAN_ROUTING_SKILL.read_text(encoding="utf-8")
+
+    def test_installed_skill_does_not_depend_on_pack_root_routing_file(self):
+        self.assertIn(
+            "It is **not** a runtime dependency of the installed Dean profile",
+            self.skill,
+        )
+        self.assertIn(
+            "must not be assumed to exist after profile installation",
+            self.skill,
+        )
+
+    def test_cross_category_contract_fails_closed(self):
+        self.assertIn("**Cross-category objectives fail closed.**", self.skill)
+        self.assertIn(
+            "never route an unrelated cross-domain request to Natural Sciences",
+            self.skill,
+        )
+
+    def test_missing_faculty_contract_uses_only_safe_installed_fallback(self):
+        self.assertIn("**Missing specialist fallback.**", self.skill)
+        self.assertIn("safe category fallback", self.skill)
+        self.assertIn("report no safe installed match", self.skill)
+
+    def test_dean_reply_contract_is_machine_legible_without_new_runtime(self):
+        self.assertIn("FACULTY: academy-cybersecurity-instructor", self.skill)
+        self.assertIn("MATCH: exact", self.skill)
+        self.assertIn("FACULTY: NONE", self.skill)
+        self.assertIn("MATCH: blocked", self.skill)
+        self.assertIn("does not add a routing daemon", self.skill)
 
 
 if __name__ == "__main__":
