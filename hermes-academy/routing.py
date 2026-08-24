@@ -45,22 +45,6 @@ class LearnerContext:
     relevant_skills: tuple[str, ...]
 
 
-# Manifest category -> broad fallback profile.
-CATEGORY_BROAD_FALLBACK: dict[str, str] = {
-    "quantitative": "academy-mathematics-professor",
-    "communication": "academy-writing-rhetoric-professor",
-    "science": "academy-natural-sciences-professor",
-    "technology": "academy-computer-science-professor",
-    "humanities": "academy-history-professor",
-    "social-sciences": "academy-social-sciences-professor",
-    "professional": "academy-business-professor",
-    "languages": "academy-language-instructor",
-    "research": "academy-research-methods-professor",
-    "vocational": "academy-skilled-trades-instructor",
-    "health-sciences": "academy-health-sciences-professor",
-    "creative": "academy-arts-design-instructor",
-}
-
 # Common natural-language terms that indicate each specialist-preference key.
 TOPIC_KEYWORDS: dict[str, list[str]] = {
     "physics": [
@@ -222,7 +206,9 @@ def route_learner(
     manifest = _load_manifest(manifest_path)
     catalog = _profile_names(manifest)
     profiles = _profile_by_name(manifest)
-    prefs = manifest.get("routing", {}).get("specialist_preferences", {})
+    routing = manifest.get("routing", {})
+    prefs = routing.get("specialist_preferences", {})
+    category_fallbacks = routing.get("category_fallbacks", {})
 
     if installed_profiles is None:
         installed = set(catalog)
@@ -244,7 +230,7 @@ def route_learner(
         }
         if len(categories) == 1:
             category = next(iter(categories))
-            fallback = CATEGORY_BROAD_FALLBACK.get(category)
+            fallback = category_fallbacks.get(category)
             if fallback and fallback in installed:
                 return RoutingResult(
                     faculty=fallback,
@@ -279,7 +265,7 @@ def route_learner(
         profile = profiles.get(specialist)
         if profile:
             category = profile.get("category", "")
-            fallback = CATEGORY_BROAD_FALLBACK.get(category)
+            fallback = category_fallbacks.get(category)
             if fallback and fallback in installed:
                 return RoutingResult(
                     faculty=fallback,
