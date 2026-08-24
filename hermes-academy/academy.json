@@ -10,6 +10,20 @@
     "selection_order": ["teaching-specialty","learner-level","learning-goal"],
     "missing_specialist_behavior": "academy-dean-best-fit-handoff",
     "broad_chairs": ["academy-natural-sciences-professor"],
+    "category_fallbacks": {
+      "quantitative": "academy-mathematics-professor",
+      "communication": "academy-writing-rhetoric-professor",
+      "science": "academy-natural-sciences-professor",
+      "technology": "academy-computer-science-professor",
+      "humanities": "academy-history-professor",
+      "social-sciences": "academy-social-sciences-professor",
+      "professional": "academy-business-professor",
+      "languages": "academy-language-instructor",
+      "research": "academy-research-methods-professor",
+      "vocational": "academy-skilled-trades-instructor",
+      "health-sciences": "academy-health-sciences-professor",
+      "creative": "academy-arts-design-instructor"
+    },
     "specialist_preferences": {
       "physics": "academy-physics-professor",
       "chemistry": "academy-chemistry-professor",

@@ -9,6 +9,7 @@ REPO = ROOT.parent
 LEARNER = (ROOT / "shared-skills" / "academy-continuing-education" / "SKILL.md").read_text(encoding="utf-8")
 ARCH = (REPO / "docs" / "CONTINUING_EDUCATION_ARCHITECTURE.md").read_text(encoding="utf-8")
 GUIDE = (REPO / "docs" / "CONTINUING_EDUCATION.md").read_text(encoding="utf-8")
+RELEASE_REVIEW = (REPO / "docs" / "CONTINUING_EDUCATION_RELEASE_REVIEW.md").read_text(encoding="utf-8")
 
 
 class LearnerSkillPreservationTests(unittest.TestCase):
@@ -35,12 +36,19 @@ class LearnerSkillPreservationTests(unittest.TestCase):
         self.assertIn("canonical Bot Chat + native", ARCH)
         self.assertNotIn("## Transport decision (deferred)", ARCH)
 
-    def test_user_guide_is_truthful_about_production_verification(self):
-        self.assertIn("Phase 15 independent production verification PASSED", GUIDE)
-        self.assertIn("Phase 16 release/whole-change review is pending", GUIDE)
-        self.assertIn("Do not describe Continuing Education as production-validated", GUIDE)
+    def test_user_guide_is_truthful_about_phase15_and_phase16(self):
+        self.assertIn("Phase 15 independent production verification then confirmed", GUIDE)
+        self.assertIn("Phase 16 whole-change/release review PASSED", GUIDE)
+        self.assertIn("production-validated on the maintained downstream Hermes integration", GUIDE)
+        self.assertIn("Stock-install readiness remains pending", GUIDE)
         self.assertIn("untrained control **9/10**", GUIDE)
         self.assertIn("trained learner **10/10**", GUIDE)
+
+    def test_release_review_preserves_stock_install_gate(self):
+        self.assertIn("IMPLEMENTATION/WHOLE-CHANGE REVIEW PASSED", RELEASE_REVIEW)
+        self.assertIn("STOCK-INSTALL RELEASE COMPATIBILITY remains OPEN", RELEASE_REVIEW)
+        self.assertIn("Works on a stock install", ARCH)
+        self.assertIn("stock-install release compatibility gate remains **OPEN**", ARCH)
 
 
 if __name__ == "__main__":

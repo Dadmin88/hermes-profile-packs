@@ -13,7 +13,10 @@ REPO_ROOT = ROOT.parent
 AGENCY_PROFILES_DIR = REPO_ROOT / "hermes-agency" / "profiles"
 NAME_RE = re.compile(r"^academy-[a-z0-9]+(?:-[a-z0-9]+)*$")
 SKILL_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-FORBIDDEN = [re.compile(r"/(?:home|media)/(?:kyle|dadmin)(?:/|$)", re.I), re.compile(r"BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY")]
+FORBIDDEN = [
+    re.compile(r"/(?:home|media)/(?:kyle|dadmin)(?:/|$)", re.I),
+    re.compile(r"BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY"),
+]
 VALID_TARGET_MODES = {"agency-ce-participants", "academy-faculty-except-dean"}
 
 
@@ -62,6 +65,97 @@ def _resolve_shared_skill_targets(
     return sorted(names - exceptions)
 
 
+def validate_routing(manifest: dict, errors: list[str]) -> None:
+    """Validate manifest-owned Academy routing policy and installed Dean parity."""
+    routing = manifest.get("routing")
+    if not isinstance(routing, dict):
+        errors.append("manifest is missing routing object")
+        return
+
+    profiles = {
+        profile.get("name"): profile
+        for profile in manifest.get("profiles", [])
+        if isinstance(profile, dict) and isinstance(profile.get("name"), str)
+    }
+    profile_names = set(profiles)
+
+    broad_chairs = routing.get("broad_chairs")
+    if not isinstance(broad_chairs, list):
+        errors.append("routing.broad_chairs must be a list")
+        broad_chairs = []
+    for name in broad_chairs:
+        if name not in profile_names:
+            errors.append(f"routing broad chair is not an Academy profile: {name!r}")
+
+    category_fallbacks = routing.get("category_fallbacks")
+    if not isinstance(category_fallbacks, dict):
+        errors.append("routing.category_fallbacks must be an object")
+        category_fallbacks = {}
+
+    declared_categories = set(manifest.get("categories", {}))
+    expected_fallback_categories = declared_categories - {"coordination"}
+    actual_fallback_categories = set(category_fallbacks)
+    if actual_fallback_categories != expected_fallback_categories:
+        errors.append(
+            "routing.category_fallbacks category mismatch: "
+            f"missing={sorted(expected_fallback_categories-actual_fallback_categories)} "
+            f"extra={sorted(actual_fallback_categories-expected_fallback_categories)}"
+        )
+
+    for category, name in category_fallbacks.items():
+        profile = profiles.get(name)
+        if profile is None:
+            errors.append(
+                f"routing category fallback {category!r} references missing profile {name!r}"
+            )
+            continue
+        if profile.get("category") != category:
+            errors.append(
+                f"routing category fallback {category!r} points to {name!r} "
+                f"in category {profile.get('category')!r}"
+            )
+
+    preferences = routing.get("specialist_preferences")
+    if not isinstance(preferences, dict):
+        errors.append("routing.specialist_preferences must be an object")
+        preferences = {}
+    for topic, name in preferences.items():
+        if not isinstance(topic, str) or not topic:
+            errors.append(f"routing specialist preference has invalid topic: {topic!r}")
+        if name not in profile_names:
+            errors.append(
+                f"routing specialist preference {topic!r} references missing profile {name!r}"
+            )
+
+    # The runtime Dean distribution must carry the human-readable fallback
+    # policy because pack-root routing.py is deliberately not a runtime
+    # dependency after profile installation.
+    dean_skill = (
+        ROOT
+        / "profiles"
+        / "academy-dean"
+        / "skills"
+        / "faculty-routing"
+        / "SKILL.md"
+    )
+    if not dean_skill.is_file():
+        errors.append("academy-dean: missing faculty-routing skill")
+        return
+    dean_text = dean_skill.read_text(encoding="utf-8")
+    for category, name in category_fallbacks.items():
+        readable_category = category.replace("-", " ")
+        marker = f"{readable_category} → `{name}`"
+        if marker not in dean_text:
+            errors.append(
+                f"academy-dean/faculty-routing missing manifest fallback marker: {marker}"
+            )
+    if "not** a runtime dependency of the installed Dean profile" not in dean_text:
+        errors.append(
+            "academy-dean/faculty-routing must state that pack-root routing.py "
+            "is not an installed runtime dependency"
+        )
+
+
 def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
     """Validate shared_skills manifest entries and byte identity.
 
@@ -77,7 +171,6 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
 
     academy_profile_names = {p["name"] for p in manifest.get("profiles", [])}
     seen_names: set[str] = set()
-    materialized_count = 0
 
     for index, skill in enumerate(shared_skills):
         label = f"shared_skill #{index + 1}"
@@ -91,7 +184,6 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
         description = skill.get("description")
         targets = skill.get("targets")
 
-        # Name validation
         if not isinstance(name, str) or not SKILL_RE.fullmatch(name):
             errors.append(f"{label} has invalid name: {name!r}")
             continue
@@ -99,27 +191,25 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
             errors.append(f"{label} duplicate shared skill name: {name}")
         seen_names.add(name)
 
-        # Canonical source validation
         if not isinstance(canonical_source, str) or not canonical_source:
             errors.append(f"{label} ({name}) missing canonical_source")
             continue
         canonical_path = ROOT / canonical_source
         if not canonical_path.is_file():
-            errors.append(f"{label} ({name}) canonical source not found: {canonical_source}")
+            errors.append(
+                f"{label} ({name}) canonical source not found: {canonical_source}"
+            )
             continue
 
-        # Frontmatter name must match manifest name
         fm = parse_skill(canonical_path)
         if fm.get("name") != name:
             errors.append(
                 f"{label} ({name}) frontmatter name mismatch: {fm.get('name')!r}"
             )
 
-        # Description validation
         if not isinstance(description, str) or not description.strip():
             errors.append(f"{label} ({name}) missing description")
 
-        # Targets validation
         if not isinstance(targets, dict):
             errors.append(f"{label} ({name}) missing or invalid targets")
             continue
@@ -134,7 +224,6 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
             errors.append(f"{label} ({name}) exceptions must be a list")
             exceptions = []
 
-        # Validate exception names are real profiles
         for exc in exceptions:
             if not isinstance(exc, str):
                 errors.append(f"{label} ({name}) non-string exception: {exc!r}")
@@ -150,7 +239,6 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
                         f"{label} ({name}) exception {exc!r} is not an academy profile"
                     )
 
-        # Byte identity check: canonical source must match materialized copies
         canonical_bytes = canonical_path.read_bytes()
         target_names = _resolve_shared_skill_targets(skill, academy_profile_names)
 
@@ -173,7 +261,6 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
                 )
                 continue
 
-            materialized_count += 1
             if materialized.read_bytes() != canonical_bytes:
                 errors.append(
                     f"{name} byte mismatch in {profile_name} "
@@ -184,62 +271,97 @@ def validate_shared_skills(manifest: dict, errors: list[str]) -> int:
 
 
 def main() -> int:
-    errors = []
+    errors: list[str] = []
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     entries = manifest.get("profiles", [])
     names = [p.get("name") for p in entries]
-    if manifest.get("profile_count") != len(entries): errors.append("profile_count mismatch")
-    if sum(manifest.get("categories", {}).values()) != len(entries): errors.append("category counts mismatch")
-    duplicates = [n for n, c in Counter(names).items() if c > 1]
-    if duplicates: errors.append(f"duplicate profiles: {duplicates}")
-    if manifest.get("orchestrator") not in names: errors.append("orchestrator not in roster")
+
+    if manifest.get("profile_count") != len(entries):
+        errors.append("profile_count mismatch")
+    if sum(manifest.get("categories", {}).values()) != len(entries):
+        errors.append("category counts mismatch")
+    duplicates = [name for name, count in Counter(names).items() if count > 1]
+    if duplicates:
+        errors.append(f"duplicate profiles: {duplicates}")
+    if manifest.get("orchestrator") not in names:
+        errors.append("orchestrator not in roster")
+
     actual = {p.name for p in (ROOT / "profiles").iterdir() if p.is_dir()}
-    if set(names) != actual: errors.append(f"profile directory mismatch: missing={sorted(set(names)-actual)} extra={sorted(actual-set(names))}")
+    if set(names) != actual:
+        errors.append(
+            "profile directory mismatch: "
+            f"missing={sorted(set(names)-actual)} extra={sorted(actual-set(names))}"
+        )
+
+    validate_routing(manifest, errors)
 
     for item in entries:
         name = item["name"]
-        if not NAME_RE.fullmatch(name): errors.append(f"invalid profile name: {name}")
+        if not NAME_RE.fullmatch(name):
+            errors.append(f"invalid profile name: {name}")
         root = ROOT / "profiles" / name
-        if not (root / ".no-bundled-skills").is_file(): errors.append(f"{name}: missing .no-bundled-skills")
+        if not (root / ".no-bundled-skills").is_file():
+            errors.append(f"{name}: missing .no-bundled-skills")
         dist = root / "distribution.yaml"
         soul = root / "SOUL.md"
-        if not dist.is_file(): errors.append(f"{name}: missing distribution.yaml"); continue
-        if not soul.is_file(): errors.append(f"{name}: missing SOUL.md")
+        if not dist.is_file():
+            errors.append(f"{name}: missing distribution.yaml")
+            continue
+        if not soul.is_file():
+            errors.append(f"{name}: missing SOUL.md")
         meta = parse_distribution(dist)
-        if meta.get("name") != name: errors.append(f"{name}: distribution name mismatch")
+        if meta.get("name") != name:
+            errors.append(f"{name}: distribution name mismatch")
         for field in ("version", "description", "author", "license"):
-            if not meta.get(field): errors.append(f"{name}: distribution missing {field}")
+            if not meta.get(field):
+                errors.append(f"{name}: distribution missing {field}")
+
         skills = set()
         for skill in sorted((root / "skills").glob("*/SKILL.md")):
             skill_name = skill.parent.name
             skills.add(skill_name)
-            if not SKILL_RE.fullmatch(skill_name): errors.append(f"{name}: invalid skill {skill_name}")
+            if not SKILL_RE.fullmatch(skill_name):
+                errors.append(f"{name}: invalid skill {skill_name}")
             fm = parse_skill(skill)
-            if fm.get("name") != skill_name: errors.append(f"{name}/{skill_name}: frontmatter name mismatch")
-            if not fm.get("description"): errors.append(f"{name}/{skill_name}: missing description")
-        # Note: shared skills are excluded from the jobs-vs-skills check
-        # because they are a separate distribution mechanism.
+            if fm.get("name") != skill_name:
+                errors.append(f"{name}/{skill_name}: frontmatter name mismatch")
+            if not fm.get("description"):
+                errors.append(f"{name}/{skill_name}: missing description")
+
         own_skills = set(item.get("jobs", []))
         shared_skill_names = {s["name"] for s in manifest.get("shared_skills", [])}
         non_shared = skills - shared_skill_names
         if own_skills != non_shared:
             errors.append(f"{name}: jobs do not match non-shared skills")
 
-    # Validate shared skills
     validate_shared_skills(manifest, errors)
 
     for path in ROOT.rglob("*"):
-        if not path.is_file() or "__pycache__" in path.parts or path.suffix == ".pyc": continue
-        if path.suffix.lower() not in {".md", ".yaml", ".yml", ".json", ".py", ".txt"} and path.name != ".no-bundled-skills": continue
+        if not path.is_file() or "__pycache__" in path.parts or path.suffix == ".pyc":
+            continue
+        if (
+            path.suffix.lower()
+            not in {".md", ".yaml", ".yml", ".json", ".py", ".txt"}
+            and path.name != ".no-bundled-skills"
+        ):
+            continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for pattern in FORBIDDEN:
-            if pattern.search(text): errors.append(f"forbidden portable-content pattern in {path.relative_to(ROOT)}")
+            if pattern.search(text):
+                errors.append(
+                    f"forbidden portable-content pattern in {path.relative_to(ROOT)}"
+                )
 
     if errors:
-        for error in errors: print(f"ERROR: {error}", file=sys.stderr)
+        for error in errors:
+            print(f"ERROR: {error}", file=sys.stderr)
         return 1
+
     shared_count = len(manifest.get("shared_skills", []))
-    print(f"Hermes Academy validation passed: {len(entries)} profiles, {sum(len(p['jobs']) for p in entries)} skills, {shared_count} shared skills")
+    print(
+        f"Hermes Academy validation passed: {len(entries)} profiles, "
+        f"{sum(len(p['jobs']) for p in entries)} skills, {shared_count} shared skills"
+    )
     return 0
 
 

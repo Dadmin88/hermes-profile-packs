@@ -1,17 +1,24 @@
-"""Deterministic Academy Dean routing for profile learners.
+"""Deterministic Academy Dean routing policy for profile learners.
 
-Routes a profile learner (name, role, objective) to the most specific
-installed Academy faculty member using the academy.json manifest as
-authority.  Never invents a profile that does not exist in the catalog.
+This module is the repository-level reference implementation used by tests and
+maintainers. The installed Dean follows the same policy from its preloaded
+``faculty-routing`` skill; runtime profile-to-profile teaching does not depend
+on this pack-root Python file being present.
 
 Public API:
-    route_learner(learner_profile, objective, manifest_path=None)
+    route_learner(
+        learner_profile,
+        objective,
+        manifest_path=None,
+        installed_profiles=None,
+    )
     minimize_learner_context(learner_profile, role, objective, skills=None)
 """
 from __future__ import annotations
 
 import json
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -22,6 +29,7 @@ MANIFEST = Path(__file__).resolve().parent / "academy.json"
 @dataclass(frozen=True)
 class RoutingResult:
     """Outcome of a routing decision."""
+
     faculty: Optional[str]
     approximate: bool
     reason: str
@@ -30,35 +38,14 @@ class RoutingResult:
 @dataclass(frozen=True)
 class LearnerContext:
     """Minimized context passed to a faculty member about the learner."""
+
     learner_profile: str
     role: str
     objective: str
     relevant_skills: tuple[str, ...]
 
 
-# ---------------------------------------------------------------------------
-# Category mapping: manifest category → broad fallback profile
-# ---------------------------------------------------------------------------
-CATEGORY_BROAD_FALLBACK: dict[str, str] = {
-    "quantitative": "academy-mathematics-professor",
-    "communication": "academy-writing-rhetoric-professor",
-    "science": "academy-natural-sciences-professor",
-    "technology": "academy-computer-science-professor",
-    "humanities": "academy-history-professor",
-    "social-sciences": "academy-social-sciences-professor",
-    "professional": "academy-business-professor",
-    "languages": "academy-language-instructor",
-    "research": "academy-research-methods-professor",
-    "vocational": "academy-skilled-trades-instructor",
-    "health-sciences": "academy-health-sciences-professor",
-    "creative": "academy-arts-design-instructor",
-}
-
-# ---------------------------------------------------------------------------
-# Keyword expansion: maps common related terms to specialist_preferences keys.
-# Each entry lists words/phrases that, when found in the objective, indicate
-# the corresponding topic.  The topic key itself is always implied.
-# ---------------------------------------------------------------------------
+# Common natural-language terms that indicate each specialist-preference key.
 TOPIC_KEYWORDS: dict[str, list[str]] = {
     "physics": [
         "physics", "mechanics", "thermodynamics", "kinematics", "dynamics",
@@ -131,10 +118,9 @@ TOPIC_KEYWORDS: dict[str, list[str]] = {
     ],
 }
 
-# Single words in this set are useful evidence only in context. They are too
-# ambiguous to justify a confident specialist route by themselves. Two or
-# more hits in the same topic, or one distinctive/multi-word keyword, may
-# still produce a specialist match.
+# A single hit on one of these words is context, not enough evidence for a
+# confident specialist route. Two related ambiguous hits, or one distinctive
+# term/phrase, can still be sufficient.
 AMBIGUOUS_SINGLE_KEYWORDS = {
     "dynamics", "momentum", "energy", "waves", "force",
     "bonding", "reaction", "compound", "element", "solution", "acid", "base",
@@ -144,6 +130,18 @@ AMBIGUOUS_SINGLE_KEYWORDS = {
     "assessment", "classroom", "security", "infrastructure", "container",
     "engine", "transmission", "diagnostic", "torque", "scale", "composition",
     "instrument",
+}
+
+STOP_WORDS = {
+    "a", "an", "the", "and", "or", "but", "in", "on", "at", "to", "for",
+    "of", "with", "by", "from", "is", "are", "was", "were", "be", "been",
+    "being", "have", "has", "had", "do", "does", "did", "will", "would",
+    "could", "should", "may", "might", "shall", "can", "need", "me",
+    "i", "my", "your", "our", "their", "its", "it", "this", "that",
+    "these", "those", "some", "any", "no", "not", "so", "very", "too",
+    "just", "about", "how", "what", "which", "who", "when", "where",
+    "why", "if", "then", "than", "also", "more", "most", "other",
+    "into", "over", "after", "before", "between", "under", "again",
 }
 
 
@@ -160,128 +158,100 @@ def _profile_by_name(manifest: dict) -> dict[str, dict]:
     return {p["name"]: p for p in manifest["profiles"]}
 
 
-def _topic_from_objective(objective: str) -> Optional[str]:
-    """Extract a specialist_preferences key from the objective text.
-
-    Uses keyword expansion (TOPIC_KEYWORDS) to map natural-language terms
-    in the objective to the corresponding specialist_preferences key.
-    Returns the most specific match (topic with the most keyword hits).
-    """
+def _topic_scores(objective: str, manifest: dict) -> dict[str, int]:
+    """Score manifest-declared specialist topics against an objective."""
     objective_lower = objective.lower()
-    manifest = _load_manifest()
     prefs = manifest.get("routing", {}).get("specialist_preferences", {})
-
-    best: Optional[str] = None
-    best_score = 0
+    scores: dict[str, int] = {}
 
     for topic_key in prefs:
         keywords = TOPIC_KEYWORDS.get(topic_key, [topic_key.replace("-", " ")])
         score = 0
-        for kw in keywords:
-            # Use word-boundary matching to avoid substring false positives
-            # (e.g. "base" matching inside "database")
-            pattern = r'\b' + re.escape(kw) + r'\b'
-            if re.search(pattern, objective_lower):
-                word_count = len(kw.split())
-                if word_count > 1:
-                    # Phrases are strong evidence and outrank single words.
-                    score += word_count + 1
-                elif kw in AMBIGUOUS_SINGLE_KEYWORDS:
-                    # One ambiguous word is context, not a confident route.
-                    score += 1
-                else:
-                    # Distinctive domain terms may route confidently alone.
-                    score += 2
-        if score > best_score:
-            best_score = score
-            best = topic_key
-
-    # A lone ambiguous single-word hit scores 1 and is deliberately rejected.
-    return best if best_score >= 2 else None
-
-
-def _is_interdisciplinary(objective: str) -> bool:
-    """Check if an objective spans multiple academic domains.
-
-    Returns True if keywords from 2+ different specialist_preferences
-    topics appear in the objective, indicating a genuinely cross-domain request.
-
-    Uses a stricter threshold: requires at least 2 distinct domains with
-    keyword hits, and excludes generic single-word keywords that appear
-    across many domains (like "modeling", "analysis", "design").
-    """
-    objective_lower = objective.lower()
-    manifest = _load_manifest()
-    prefs = manifest.get("routing", {}).get("specialist_preferences", {})
-
-    # Generic words that appear across many domains and shouldn't trigger
-    # interdisciplinary detection on their own
-    GENERIC_WORDS = {
-        "modeling", "analysis", "design", "system", "systems", "theory",
-        "practice", "method", "methods", "research", "evaluation",
-        "management", "engineering", "science", "learning", "education",
-        "security", "data", "model", "models",
-    }
-
-    domains_hit: set[str] = set()
-    for topic_key in prefs:
-        keywords = TOPIC_KEYWORDS.get(topic_key, [topic_key.replace("-", " ")])
-        for kw in keywords:
-            # Skip generic single-word keywords for interdisciplinary detection
-            if len(kw.split()) == 1 and kw in GENERIC_WORDS:
+        for keyword in keywords:
+            pattern = r"\b" + re.escape(keyword) + r"\b"
+            if not re.search(pattern, objective_lower):
                 continue
-            pattern = r'\b' + re.escape(kw) + r'\b'
-            if re.search(pattern, objective_lower):
-                domains_hit.add(topic_key)
-                break  # One hit per domain is enough
+            word_count = len(keyword.split())
+            if word_count > 1:
+                score += word_count + 1
+            elif keyword in AMBIGUOUS_SINGLE_KEYWORDS:
+                score += 1
+            else:
+                score += 2
+        if score:
+            scores[topic_key] = score
 
-    return len(domains_hit) >= 2
+    return scores
+
+
+def _word_tokens(text: str) -> set[str]:
+    """Return normalized word tokens for safe role-description matching."""
+    return set(re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)?", text.lower()))
 
 
 def route_learner(
     learner_profile: str,
     objective: str,
     manifest_path: Optional[Path] = None,
+    installed_profiles: Optional[Iterable[str]] = None,
 ) -> RoutingResult:
-    """Route a profile learner to the best Academy faculty member.
+    """Route a profile learner to the safest, most specific Academy faculty.
 
-    Parameters
-    ----------
-    learner_profile : str
-        Name of the requesting profile (e.g. "agency-backend-engineer").
-    objective : str
-        One-line learning objective.
-    manifest_path : Path, optional
-        Override manifest location (defaults to academy.json).
-
-    Returns
-    -------
-    RoutingResult
-        faculty: profile name or None if no safe match exists.
-        approximate: True when the match is a broad fallback, not a specialist.
-        reason: human-readable explanation of the routing decision.
+    ``installed_profiles`` may be supplied by callers that know the current Bot
+    roster. When omitted, the manifest roster is treated as available, which is
+    useful for repository validation and policy tests.
     """
+    del learner_profile  # Identity is part of the contract, not a routing weight.
+
     manifest = _load_manifest(manifest_path)
-    installed = _profile_names(manifest)
-    prefs = manifest.get("routing", {}).get("specialist_preferences", {})
-    broad_chairs = set(manifest.get("routing", {}).get("broad_chairs", []))
+    catalog = _profile_names(manifest)
+    profiles = _profile_by_name(manifest)
+    routing = manifest.get("routing", {})
+    prefs = routing.get("specialist_preferences", {})
+    category_fallbacks = routing.get("category_fallbacks", {})
 
-    # 1. Try specialist_preferences (most specific)
-    topic = _topic_from_objective(objective)
-    if topic and topic in prefs:
-        # Check if the request is genuinely interdisciplinary (spans multiple domains)
-        if _is_interdisciplinary(objective):
-            for chair in broad_chairs:
-                if chair in installed:
-                    return RoutingResult(
-                        faculty=chair,
-                        approximate=True,
-                        reason=(
-                            f"Request spans multiple disciplines; "
-                            f"routing to broad chair '{chair}'."
-                        ),
-                    )
+    if installed_profiles is None:
+        installed = set(catalog)
+    else:
+        installed = {str(name) for name in installed_profiles if str(name) in catalog}
 
+    # 1. Prefer a clear specialist match.
+    scores = _topic_scores(objective, manifest)
+    strong_topics = [topic for topic in prefs if scores.get(topic, 0) >= 2]
+
+    # 2. If several specialties are clearly present, only use a broad fallback
+    # when all of them belong to one Academy category. Cross-category requests
+    # are too broad for the one-objective/one-instructor CE contract.
+    if len(strong_topics) > 1:
+        categories = {
+            profiles[prefs[topic]].get("category", "")
+            for topic in strong_topics
+            if prefs[topic] in profiles
+        }
+        if len(categories) == 1:
+            category = next(iter(categories))
+            fallback = category_fallbacks.get(category)
+            if fallback and fallback in installed:
+                return RoutingResult(
+                    faculty=fallback,
+                    approximate=True,
+                    reason=(
+                        f"Objective spans multiple '{category}' specialties; "
+                        f"routing to broad faculty '{fallback}'."
+                    ),
+                )
+        return RoutingResult(
+            faculty=None,
+            approximate=False,
+            reason=(
+                "Objective spans multiple Academy domains without one safe "
+                "installed broad faculty match; narrow the competency or choose "
+                "an instructor."
+            ),
+        )
+
+    if len(strong_topics) == 1:
+        topic = strong_topics[0]
         specialist = prefs[topic]
         if specialist in installed:
             return RoutingResult(
@@ -289,68 +259,68 @@ def route_learner(
                 approximate=False,
                 reason=f"Direct specialist match for '{topic}'.",
             )
-        # Specialist preference exists but profile not installed —
-        # fall back to the category's broad representative.
-        for profile in manifest["profiles"]:
-            if profile["name"] == specialist:
-                cat = profile.get("category", "")
-                fallback = CATEGORY_BROAD_FALLBACK.get(cat)
-                if fallback and fallback in installed:
-                    return RoutingResult(
-                        faculty=fallback,
-                        approximate=True,
-                        reason=(
-                            f"Specialist '{specialist}' not installed; "
-                            f"falling back to category broad faculty "
-                            f"'{fallback}'."
-                        ),
-                    )
 
-    # 2. Role-description scan for requests without a clear topic match
-    objective_lower = objective.lower()
-    # Filter out common stop words so weak matches don't dominate
-    STOP_WORDS = {
-        "a", "an", "the", "and", "or", "but", "in", "on", "at", "to", "for",
-        "of", "with", "by", "from", "is", "are", "was", "were", "be", "been",
-        "being", "have", "has", "had", "do", "does", "did", "will", "would",
-        "could", "should", "may", "might", "shall", "can", "need", "me",
-        "i", "my", "your", "our", "their", "its", "it", "this", "that",
-        "these", "those", "some", "any", "no", "not", "so", "very", "too",
-        "just", "about", "how", "what", "which", "who", "when", "where",
-        "why", "if", "then", "than", "also", "more", "most", "other",
-        "into", "over", "after", "before", "between", "under", "again",
-    }
-    objective_words = [
-        w for w in objective_lower.split()
-        if w.isalpha() and w not in STOP_WORDS
-    ]
-    best: Optional[str] = None
+        # The topic is clear but its specialist is unavailable. Fall back only
+        # to the installed broad representative for that specialist's category.
+        profile = profiles.get(specialist)
+        if profile:
+            category = profile.get("category", "")
+            fallback = category_fallbacks.get(category)
+            if fallback and fallback in installed:
+                return RoutingResult(
+                    faculty=fallback,
+                    approximate=True,
+                    reason=(
+                        f"Specialist '{specialist}' is not installed; falling back "
+                        f"to category broad faculty '{fallback}'."
+                    ),
+                )
+
+    # 3. Role-description scan for objectives without a clear specialist match.
+    # Only installed profiles participate, and exact normalized word overlap is
+    # used instead of substring matching.
+    objective_words = _word_tokens(objective) - STOP_WORDS
     best_score = 0
+    best_profiles: list[str] = []
     for profile in manifest["profiles"]:
-        role_desc = profile.get("role", "").lower()
-        score = sum(1 for word in objective_words if word in role_desc)
+        if profile["name"] not in installed:
+            continue
+        role_words = _word_tokens(profile.get("role", ""))
+        score = len(objective_words & role_words)
         if score > best_score:
             best_score = score
-            best = profile["name"]
+            best_profiles = [profile["name"]]
+        elif score == best_score and score > 0:
+            best_profiles.append(profile["name"])
 
-    # A single shared word is too weak for a safe approximate route. Requiring
-    # at least two role-description hits prevents cases such as "base jumping"
-    # or "fashion modeling" from being sent to an unrelated faculty member.
-    if best and best_score >= 2:
+    # One shared word is too weak for a safe approximate route. A tie at the
+    # accepted threshold also fails closed rather than depending on manifest
+    # order or Python iteration details.
+    if best_score >= 2 and len(best_profiles) == 1:
+        best = best_profiles[0]
         return RoutingResult(
             faculty=best,
             approximate=True,
             reason=(
-                f"No specialist matched; "
-                f"closest role-description match is '{best}'."
+                f"No specialist matched; closest installed role-description "
+                f"match is '{best}'."
             ),
         )
 
-    # 3. No match at all
+    if best_score >= 2 and len(best_profiles) > 1:
+        return RoutingResult(
+            faculty=None,
+            approximate=False,
+            reason=(
+                "No specialist matched and multiple installed faculty are equally "
+                "close; narrow the competency or choose an instructor."
+            ),
+        )
+
     return RoutingResult(
         faculty=None,
         approximate=False,
-        reason="No Academy faculty member matches this objective.",
+        reason="No installed Academy faculty member safely matches this objective.",
     )
 
 
@@ -360,12 +330,7 @@ def minimize_learner_context(
     objective: str,
     skills: Optional[list[str]] = None,
 ) -> LearnerContext:
-    """Build a minimized learner context for the receiving faculty.
-
-    Only includes what affects instruction: profile name, role, objective,
-    and optionally relevant skill names.  Never includes full profile state,
-    memory, secrets, or conversations.
-    """
+    """Build the bounded learner context needed for a faculty handoff."""
     return LearnerContext(
         learner_profile=learner_profile,
         role=role,

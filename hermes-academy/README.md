@@ -6,19 +6,23 @@ Hermes Academy is the education profile pack for Hermes Agent: a faculty of prof
 
 Opening an Academy profile should feel like walking into the office, classroom, lab, studio, or training room of the instructor you need.
 
-Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skills**. It keeps broad chairs for interdisciplinary learning while adding dedicated specialists for subjects that benefit from deeper routing.
+Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skills**. It keeps broad faculty roles for interdisciplinary learning while adding dedicated specialists for subjects that benefit from deeper routing.
 
 ## Continuing Education
 
 Academy can also teach another installed Hermes profile through the Continuing Education flow. A learner can receive an ordinary request such as `Go learn API security`, route through an actual `academy-dean` Bot exchange when the user did not name a teacher, use the Bot Chat `goal_manage` bridge into Hermes' native goal state plus `message_agent`/`/learn` underneath, and persist a reusable capability in its own normal skill store. Academy faculty preload `teach-profile`, the Dean preloads `faculty-routing`, and instruction may be persisted only after the selected instructor explicitly returns `MASTERED` for the learner's specific transfer.
 
-The implementation is merged and validated through the Phase 10–13 quality gate, and the Phase 14 controlled disposable-profile preflight has passed. Treat this as **pre-release/experimental**, not yet production-validated, until Phase 15 validates the actual persistent learner and Phase 16 completes release/whole-change review. The current flow uses generic downstream Hermes support for `goal_manage`, profile-distribution `preload_skills`, and bounded goal-judge feedback propagation, merged in PRs #24, #26, and #27. Agency profiles declare `academy-continuing-education` as a preload so the learner contract is active before the first model turn. Final stock-install readiness requires equivalent support in the normal Hermes release. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) for current behavior and status.
+The implementation has passed the Phase 15 independent production-profile verification and the Phase 16 whole-change/release review on the maintained `Dadmin88/hermes-agent-downstream` integration. Treat it as **production-validated on that maintained downstream path**.
+
+Stock NousResearch Hermes compatibility is still a separate pending gate because the normal upstream release does not yet provide equivalent generic support for all native seams used by the validated flow. Do not describe Continuing Education as unqualified stock-Hermes production ready until those generic capabilities land upstream. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) and [`../docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md`](../docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md).
 
 ## User journey and limitations
 
-A learner receives an ordinary request such as `Go learn API security with Academy.` If the user did not name a teacher, the learner sends one native `message_agent` request to `@academy-dean`, waits for the Dean reply, and uses the installed faculty profile explicitly named by that reply. In canonical Bot Chat, the learner uses `goal_manage(action="set", ...)` to establish the session's real native `/goal`/`GoalContract` state, then attempts a baseline before instruction. One-to-one teaching uses canonical Bot Chat + native `message_agent`. Assessment returns `MASTERED`, `NEEDS_CORRECTION`, or `BLOCKED`. If instruction occurred, persistence is forbidden until the selected instructor explicitly returns `MASTERED` for the learner's specific transfer. Only after that gate may the learner invoke native `/learn` for a reusable capability delta. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) for current behavior, status, troubleshooting, and limitations.
+A learner receives an ordinary request such as `Go learn API security with Academy.` If the user did not name a teacher, the learner sends one native `message_agent` request to `@academy-dean`, waits for the Dean reply, and uses the installed faculty profile explicitly named by that reply. In canonical Bot Chat, the learner uses `goal_manage(action="set", ...)` to establish the session's real native `/goal`/`GoalContract` state, then attempts a baseline before instruction. One-to-one teaching uses canonical Bot Chat + native `message_agent`. Assessment returns `MASTERED`, `NEEDS_CORRECTION`, or `BLOCKED`. If instruction occurred, persistence is forbidden until the selected instructor explicitly returns `MASTERED` for the learner's specific transfer. Only after that gate may the learner invoke native `/learn` for a reusable capability delta.
 
-Continuing Education remains **pre-release/experimental** until Phase 16 release/whole-change review completes. The current flow requires generic downstream Hermes support for `goal_manage`, profile-distribution `preload_skills`, and bounded goal-judge feedback propagation. Stock-install readiness requires equivalent support in the normal Hermes release used by Profile Packs. Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Instructors teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
+Dean routing is deliberately fail-closed. The most specific installed specialist wins when one is clearly appropriate. If several strong topics share one Academy category, the Dean may use that category's installed broad fallback and label it approximate. If one Continuing Education objective strongly crosses Academy categories, the Dean asks the learner to narrow the competency instead of assigning an unrelated broad faculty member. The pack-root `routing.py` is a maintainer/test reference implementation, not a runtime dependency of the installed Dean profile.
+
+Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Instructors teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
 
 ## Faculty
 
@@ -55,11 +59,13 @@ Continuing Education remains **pre-release/experimental** until Phase 16 release
 | `academy-arts-design-instructor` | Art/design fundamentals, critique, practice, portfolio learning |
 | `academy-music-instructor` | Music theory, rhythm, ear training, composition, performance |
 
-## Broad chairs and specialists
+## Broad faculty and specialists
 
 Broad profiles remain useful. `academy-natural-sciences-professor` is intentionally preserved for interdisciplinary science, scientific reasoning, and learning that spans multiple natural-science disciplines.
 
 When the topic is clearly specialized, the Dean should prefer the dedicated faculty member. A physics request routes to `academy-physics-professor`, chemistry to `academy-chemistry-professor`, and biology to `academy-biology-professor`. The same specific-over-broad rule applies across the v0.2 specialist faculty.
+
+The manifest also defines a safe broad fallback for every non-coordination category. These are category fallbacks only, never universal “pick something” targets. Cross-category Continuing Education requests fail closed until narrowed.
 
 ## Teaching philosophy
 
