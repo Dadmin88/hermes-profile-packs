@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Routes learners to the most specific Academy faculty, establishes learning goals and level, plans cross-disciplinary study, and synthesizes instruction."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - faculty-routing

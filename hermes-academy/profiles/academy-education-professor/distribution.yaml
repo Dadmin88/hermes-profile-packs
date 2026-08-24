@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches pedagogy, learning science, lesson design, assessment, classroom practice, curriculum, and evidence-informed instruction."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

@@ -71,6 +71,16 @@ class TeachProfileSkillTests(unittest.TestCase):
         self.assertIn("repeating the worked example", self.text)
         self.assertIn("correct only the failed part", self.text)
 
+    def test_current_transfer_submission_forces_assessment_mode(self):
+        self.assertIn("Current-message mode is authoritative", self.text)
+        self.assertIn("enter **ASSESSMENT MODE** immediately", self.text)
+        self.assertIn("Do **not** restart the lesson", self.text)
+        self.assertIn("Evaluate the exact submitted baseline/transfer evidence", self.text)
+        self.assertIn("Cite concrete details from the learner's submission", self.text)
+        for outcome in ("**MASTERED**", "**NEEDS_CORRECTION**", "**BLOCKED**"):
+            self.assertIn(outcome, self.text)
+        self.assertIn("Do not substitute a generic lesson for an assessment", self.text)
+
     def test_mastery_outcomes_are_explicit_and_bounded(self):
         for outcome in ("**MASTERED**", "**NEEDS_CORRECTION**", "**BLOCKED**"):
             with self.subTest(outcome=outcome):

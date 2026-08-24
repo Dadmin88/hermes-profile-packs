@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches theology, biblical and scriptural studies, religious history, doctrine, comparative religion, hermeneutics, and scholarly analysis of faith traditions."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

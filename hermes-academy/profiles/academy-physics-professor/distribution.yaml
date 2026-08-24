@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches mechanics, energy, waves, fields, thermodynamics, relativity, quantum foundations, and quantitative physical reasoning."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile
