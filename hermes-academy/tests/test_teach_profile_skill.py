@@ -71,6 +71,14 @@ class TeachProfileSkillTests(unittest.TestCase):
         self.assertIn("repeating the worked example", self.text)
         self.assertIn("correct only the failed part", self.text)
 
+    def test_baseline_submission_forces_diagnostic_mode(self):
+        self.assertIn("enter **BASELINE DIAGNOSTIC MODE** immediately", self.text)
+        self.assertIn("Do **not** deliver a broad subject lecture", self.text)
+        self.assertIn("Start from the submitted baseline", self.text)
+        self.assertIn("Teach only those demonstrated gaps", self.text)
+        self.assertIn("give exactly one meaningfully different problem", self.text)
+        self.assertIn("do not include its answer key", self.text)
+
     def test_current_transfer_submission_forces_assessment_mode(self):
         self.assertIn("Current-message mode is authoritative", self.text)
         self.assertIn("enter **ASSESSMENT MODE** immediately", self.text)
