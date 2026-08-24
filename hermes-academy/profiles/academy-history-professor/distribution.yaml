@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Teaches historical context, chronology, causation, primary-source analysis, historiography, and evidence-based interpretation."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

@@ -112,6 +112,22 @@ the constraints for every later phase.
     After `/learn`, verify every unrelated pre-existing skill still exists. Any
     unexplained loss, relocation, or overwrite fails the Continuing Education
     event closed; do not report successful learning until recovery is complete.
+13. **Dean routing must be evidenced.** When the user did not name an
+    instructor, the learner must actually ask `academy-dean` through native Bot
+    messaging and wait for its reply before selecting or contacting faculty.
+    Topic inference is not a substitute for Dean routing, and a learner must
+    never claim a Dean recommendation that was not received in the session.
+14. **Assessment gates persistence.** When instruction occurred, durable
+    learning is forbidden until the selected instructor explicitly returns
+    `MASTERED` for the learner's specific transfer submission. A generic lesson,
+    repeated overview, learner self-assessment, missing or ambiguous evaluation,
+    unavailable instructor, transport failure, or native goal stop condition is
+    not mastery. `NEEDS_CORRECTION` requires the minimum correction and a new
+    instructor judgment; `BLOCKED` stops without persistence.
+15. **Academy role skills are deterministic.** Academy faculty distributions
+    preload `teach-profile`, and `academy-dean` preloads `faculty-routing`, so
+    teaching/assessment and faculty routing do not depend on probabilistic skill
+    selection.
 
 ## Transport decision (selected)
 

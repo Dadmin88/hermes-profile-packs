@@ -11,7 +11,7 @@ Hermes Academy Continuing Education is a competency-transfer system, not a schoo
 ## Non-negotiable rules
 
 - The current Hermes profile is the **Learner**. Keep its identity and normal profile state.
-- Every training event has one learner, one bounded objective, and one instructor. If no instructor is named, consult `academy-dean` and use the most specific available faculty member it recommends.
+- Every training event has one learner, one bounded objective, and one instructor. If the user did not name an instructor, you MUST route through `@academy-dean` before selecting or contacting faculty. Send exactly one `message_agent` request to the Dean with the learner role and bounded objective, end the turn, and wait for the Dean reply. Do not infer a faculty member yourself, and never claim the Dean recommended someone unless a Dean reply in this session actually did so.
 - Use normal Hermes primitives only: native `/goal` and `/subgoal` state through the Bot-Chat-only `goal_manage` bridge, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path. `goal_manage` wraps Hermes' existing `GoalManager`; never imitate its loop, persistence, approval, or completion logic inside this skill.
 - Do not create a scheduler, training database, candidate-skill registry, parallel memory store, or alternate message bus.
 - Do not depend on Fleet, Keryx, Nodescale, Templar, RunAuthority, or Run Capsules.
@@ -27,7 +27,9 @@ Convert the user's request into one observable competency.
 
 Good objectives describe what the learner should be able to **do**, not a topic to "cover". Keep the scope narrow enough to assess in one bounded session.
 
-If the user named an instructor, treat that choice as binding when it is appropriate for the objective. Do not silently substitute or message a different instructor if the named instructor is unavailable; stop blocked, report the named instructor as unavailable, and let the user choose whether to retry or select an alternative. Only when the user did **not** name an instructor should you ask `academy-dean` for routing. Do not invent a faculty profile that is not installed.
+If the user named an instructor, treat that choice as binding when it is appropriate for the objective. Do not silently substitute or message a different instructor if the named instructor is unavailable; stop blocked, report the named instructor as unavailable, and let the user choose whether to retry or select an alternative.
+
+If the user did **not** name an instructor, routing is a required native Bot exchange, not an inference step. Before establishing the learner goal or contacting faculty, send exactly one `message_agent` request to `@academy-dean` containing this learner's profile/role and the bounded competency objective. End that turn and wait for the Dean's reply. Use the installed faculty profile explicitly named by that reply. Do not guess from the topic, do not fabricate a Dean recommendation, and do not contact a faculty member before the Dean has answered. If the Dean is unavailable or does not return an installed faculty profile, stop blocked and report the routing failure. Do not invent a faculty profile that is not installed.
 
 ### 2. Establish the learner goal
 
@@ -111,7 +113,11 @@ Stop as soon as the completion contract is satisfied.
 
 ### 7. Persist only a real capability delta
 
-If the session produced reusable knowledge, procedure, heuristics, or decision criteria that should improve future work, prepare for native `/learn` from the learner.
+Persistence is gated by assessment, not by the learner's own confidence. If instruction occurred, the selected instructor must explicitly return **MASTERED** for the learner's specific transfer submission before any durable learning write may begin. A generic lesson, repeated subject overview, missing or ambiguous assessment, learner self-assessment, unavailable instructor, transport failure, or a native goal stop condition is **not** mastery. In any of those cases, do not run `/learn`, do not call `skill_manage` to persist the lesson, and do not report successful Continuing Education. Continue only the minimum assessment/correction needed, or stop blocked when the instructor cannot provide a specific judgment.
+
+If the instructor explicitly returns **NEEDS_CORRECTION**, correct only the identified gap and obtain a new instructor judgment on the corrected transfer before persistence. If the instructor returns **BLOCKED**, stop without persistence and surface the blocker. If the baseline required no instruction, do not persist a capability delta merely because the learner already knew the material.
+
+Only after that assessment gate has passed may persistence be considered. If the session produced reusable knowledge, procedure, heuristics, or decision criteria that should improve future work, prepare for native `/learn` from the learner.
 
 Before `/learn`, record the learner's current skill names. The persistence request must explicitly preserve every unrelated existing skill: `/learn` may extend one relevant skill or create one new skill, but it must not delete, consolidate, rename, relocate, or overwrite unrelated learner skills.
 

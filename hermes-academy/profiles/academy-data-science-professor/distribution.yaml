@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches data analysis, data preparation, visualization, predictive modeling, evaluation, and reproducible data-science reasoning."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

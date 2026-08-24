@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches project planning, scope, estimation, dependencies, risk, stakeholders, delivery methods, and evidence-based project control."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

@@ -3,3 +3,5 @@ version: 0.2.0
 description: "Teaches chemical structure, bonding, reactions, stoichiometry, thermodynamics, equilibrium, kinetics, and molecular reasoning."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

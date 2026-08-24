@@ -78,7 +78,21 @@ class ContinuingEducationSkillTests(unittest.TestCase):
         self.assertIn("treat that choice as binding", self.text)
         self.assertIn("Do not silently substitute or message a different instructor", self.text)
         self.assertIn("let the user choose whether to retry or select an alternative", self.text)
-        self.assertIn("Only when the user did **not** name an instructor", self.text)
+
+    def test_unnamed_instructor_requires_real_dean_routing(self):
+        self.assertIn("MUST route through `@academy-dean`", self.text)
+        self.assertIn("send exactly one `message_agent` request to `@academy-dean`", self.text)
+        self.assertIn("Do not guess from the topic", self.text)
+        self.assertIn("do not fabricate a Dean recommendation", self.text)
+        self.assertIn("do not contact a faculty member before the Dean has answered", self.text)
+
+    def test_persistence_requires_explicit_instructor_mastery(self):
+        self.assertIn("selected instructor must explicitly return **MASTERED**", self.text)
+        self.assertIn("learner self-assessment", self.text)
+        self.assertIn("unavailable instructor", self.text)
+        self.assertIn("do not call `skill_manage` to persist the lesson", self.text)
+        self.assertIn("If the instructor explicitly returns **NEEDS_CORRECTION**", self.text)
+        self.assertIn("If the instructor returns **BLOCKED**", self.text)
 
     def test_authority_and_source_isolation_are_explicit(self):
         self.assertIn("must never edit this learner's skills", self.text)

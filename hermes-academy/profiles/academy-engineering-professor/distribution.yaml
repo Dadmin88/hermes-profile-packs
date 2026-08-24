@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Teaches engineering analysis, design thinking, modeling, tradeoffs, and foundational principles across major engineering disciplines."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

@@ -3,3 +3,5 @@ version: 0.1.0
 description: "Teaches microeconomics, macroeconomics, incentives, markets, models, policy analysis, and applied economic reasoning."
 author: "Kyle French"
 license: "AGPL-3.0-only"
+preload_skills:
+  - teach-profile

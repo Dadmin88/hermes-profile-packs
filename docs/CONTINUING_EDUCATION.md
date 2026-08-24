@@ -9,12 +9,12 @@ Hermes Academy Continuing Education lets an installed Hermes profile learn a bou
 The current merged flow uses normal Hermes primitives. Every Agency distribution declares `academy-continuing-education` in its `preload_skills`, so the full learner contract is active before the profile's first model turn instead of depending on probabilistic skill routing.
 
 1. A learner receives a natural-language request such as `Go learn API security.`
-2. If the user did not name a teacher, `academy-dean` routes to the most specific installed faculty member.
+2. If the user did not name a teacher, the learner sends one native `message_agent` request to `@academy-dean`, waits for the Dean reply, and uses the installed faculty profile explicitly named by that reply. The learner may not infer or fabricate the routing result.
 3. In canonical Bot Chat, the learner uses `goal_manage(action="set", ...)` to establish the current session's real native `/goal`/`GoalContract` state. `goal_manage` is only a thin bridge to Hermes' existing GoalManager; it is not an Academy scheduler or replacement loop.
 4. One-to-one teaching uses canonical Bot Chat + native `message_agent`.
-5. The instructor baselines the requested competency, teaches only demonstrated gaps, and requires meaningfully different transfer evidence when instruction was needed.
+5. Every Academy faculty distribution preloads `teach-profile`. The instructor treats the newest learner message as authoritative, diagnoses the submitted baseline before teaching, and switches into explicit assessment mode for a submitted transfer instead of replaying a generic lesson. Assessment returns `MASTERED`, `NEEDS_CORRECTION`, or `BLOCKED`.
 6. Native goal peer-wait parks while an instructor reply is outstanding instead of burning turns or sending duplicate requests.
-7. The learner invokes native `/learn` only when the session produced a reusable capability delta.
+7. If instruction occurred, persistence is forbidden until the selected instructor explicitly returns `MASTERED` for the learner's specific transfer. Generic instruction, learner self-assessment, an unavailable instructor, or a native goal stop condition is not mastery. Only after that gate may the learner invoke native `/learn` for a reusable capability delta.
 8. Hermes' normal `skill_manage` path extends a relevant learner skill or creates a new learner-local skill.
 9. The learner verifies the resulting skill and confirms unrelated pre-existing skills were preserved.
 
