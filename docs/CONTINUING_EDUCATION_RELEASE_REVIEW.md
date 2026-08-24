@@ -93,14 +93,14 @@ Therefore:
 
 ## Exact Profile Packs validation
 
-The Phase 16 correction branch passed the exact pull-request-head validation gate after the routing and installed-Dean corrections:
+The Phase 16 correction branch passed the exact pull-request-head validation gate after the routing, installed-Dean, documentation, and status-regression corrections:
 
 - repository validation: **PASS**;
 - Academy manifest: **30 profiles, 120 owned teaching skills, 2 shared skills**;
 - root installer/unit tests: **16/16 PASS**;
 - Agency tests: **19/19 PASS**;
 - Council tests: **3/3 PASS**;
-- Academy tests: **199 PASS, 1 expected opt-in runtime skip**.
+- Academy tests: **200 PASS, 1 expected opt-in runtime skip**.
 
 The Academy validator additionally proves:
 
@@ -112,7 +112,7 @@ The Academy validator additionally proves:
 - shared learner/instructor skills retain canonical byte identity across materialized profile copies;
 - portable-source hygiene remains enforced.
 
-The final merge candidate must retain the same green repository/pack test gate after documentation changes and before merge.
+The final merge candidate must retain the same green repository/pack test gate before merge.
 
 ## Preserved invariants
 
