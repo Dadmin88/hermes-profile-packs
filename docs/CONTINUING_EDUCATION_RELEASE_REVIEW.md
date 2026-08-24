@@ -98,7 +98,9 @@ Focused upstream PRs now represent all four generic seams required by the valida
 - NousResearch/hermes-agent #93519 — Bot Chat native session `goal_manage`; additionally hardened for legacy-managed upgrades during this review;
 - #93520 — profile-distribution `preload_skills`; additionally hardened so automatic preloads cannot execute inline shell during prompt construction;
 - #93521 — bounded failed goal-judge reason on the next native continuation;
-- #93614 — duplicate in-flight `message_agent` suppression, submitted from a branch cut directly from then-current Nous `main`.
+- #93539 — duplicate in-flight `message_agent` suppression on the cleanup-owning Bot Mode DM runner.
+
+A later submission, #93614, was verified byte-for-byte equivalent to #93539 at the changed-file/diff level and closed as a duplicate so maintainers have one canonical review lane for the message-deduplication change.
 
 Those upstream PRs are independent generic Hermes changes, not an Academy runtime. Fork-triggered upstream workflows may require Nous maintainer approval before substantive CI jobs run, so an `action_required` workflow with zero jobs is an approval gate rather than positive or negative test evidence.
 
