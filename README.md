@@ -18,9 +18,13 @@ Hermes Council currently contains 21 focused profiles and 84 purpose-built perso
 
 ### Academy Continuing Education
 
-Hermes Academy also includes an in-progress Continuing Education flow for profile-to-profile competency transfer. The merged implementation uses natural-language requests, Dean routing when needed, canonical Bot Chat, the generic `goal_manage` bridge into Hermes' native `/goal` state, `message_agent`, Academy instruction/transfer assessment, and native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
+Hermes Academy includes a Continuing Education flow for profile-to-profile competency transfer. A learner can receive a natural-language request such as `Go learn API security`, route through the real Academy Dean when the user did not name a teacher, establish native Hermes goal state, study with the selected faculty member through canonical Bot messaging, prove transfer, and persist a reusable capability through native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
 
-Implementation and deterministic/native-runtime validation are complete through the Phase 15 independent production verification, and the Phase 16 release/whole-change review is pending. The merged implementation uses natural-language requests, Dean routing when needed, canonical Bot Chat, the generic `goal_manage` bridge into Hermes' native `/goal` state, `message_agent`, Academy instruction/transfer assessment, and native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency. See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md) for current behavior, status, troubleshooting, and limitations, and the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
+The implementation passed Phase 15 independent production-profile verification and the Phase 16 whole-change/release review on the maintained `Dadmin88/hermes-agent-downstream` integration. It is **production-validated on that maintained downstream path**. Stock NousResearch Hermes compatibility remains pending until the normal Hermes release provides equivalent generic support for the native seams required by the validated flow, so do not read this as an unqualified stock-Hermes readiness claim.
+
+Phase 16 also hardened Dean routing: category fallbacks are manifest-owned, cross-category CE objectives fail closed instead of falling into an unrelated broad chair, unavailable specialists may use only a safe installed fallback from their own category, and the installed Dean's preloaded routing contract no longer depends on a pack-root Python helper that is absent after normal profile installation.
+
+See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md), the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md), and the [`Phase 16 release review`](docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md).
 
 ## Start small with Team Recipes
 
@@ -50,7 +54,8 @@ hermes-profile-packs/
 ├── hermes-academy/
 ├── docs/
 │   ├── CONTINUING_EDUCATION.md
-│   └── CONTINUING_EDUCATION_ARCHITECTURE.md
+│   ├── CONTINUING_EDUCATION_ARCHITECTURE.md
+│   └── CONTINUING_EDUCATION_RELEASE_REVIEW.md
 ├── examples/
 ├── tests/
 ├── packs.json
@@ -71,7 +76,7 @@ For most people, launch the selector:
 python install.py
 ```
 
-The wizard can recommend a validated Team Recipe when a goal maps cleanly to one, browse recipes directly, browse packs/categories, search exact profiles, or explicitly install everything. A recipe is never silently chosen: the user chooses its tier and sees the exact profile plan before final confirmation.
+The wizard can recommend a validated Team Recipe when a goal maps cleanly to one, browse recipes directly, browse packs/categories, search exact profiles, preview the exact install plan, and still offer an explicit install-everything path.
 
 For agents and scripts:
 
