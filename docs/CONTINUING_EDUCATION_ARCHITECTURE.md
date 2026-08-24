@@ -1,12 +1,12 @@
 # Hermes Academy Continuing Education — Architecture Contract
 
-Status: normative architecture contract; implementation is merged and independently validated through Phase 15, and the Phase 16 whole-change/release review has passed for the maintained downstream Hermes integration. Stock NousResearch Hermes compatibility remains a separate pending milestone until the normal Hermes release provides equivalent generic native seams. This document freezes the actors, hard invariants, transport decision, and naming decisions so later work cannot quietly balloon into a new framework. Changes to these decisions require an explicit, documented edit here.
+Status: normative architecture contract; implementation is merged and independently validated through Phase 15, and the Phase 16 implementation/whole-change review has passed for the maintained downstream Hermes integration. The stock-install release compatibility gate remains pending until the normal NousResearch Hermes release provides equivalent generic native seams. This document freezes the actors, hard invariants, transport decision, and naming decisions so later work cannot quietly balloon into a new framework. Changes to these decisions require an explicit, documented edit here.
 
 ## Scope independence
 
 Hermes Academy Continuing Education is independent of Hermes Fleet.
 
-It runs without Fleet, Keryx, Nodescale, Templar, RunAuthority, Run Capsules, or any equivalent distributed-runtime system. Those systems must not be required to exist, to be reachable, or to be installed. If any such system is present, Continuing Education must not depend on it.
+It must run on a normal Hermes Agent installation with Profile Packs. It must not require Fleet, Keryx, Nodescale, Templar, RunAuthority, Run Capsules, or any equivalent distributed-runtime system to exist, to be reachable, or to be installed. If any such system is present, Continuing Education must not depend on it.
 
 ### Current Hermes compatibility
 
@@ -14,7 +14,7 @@ The controlled preflight proved three generic Hermes seams were needed. First, a
 
 All three capabilities are merged in the maintained downstream Hermes Agent: `goal_manage` in `Dadmin88/hermes-agent-downstream` PR #24 / merge `9b8de86a80`, distribution `preload_skills` in PR #26 / merge `4c38d408f7`, and bounded goal-judge feedback propagation in PR #27 / merge `406ea5c64e`. The downstream Bot Mode path also includes duplicate in-flight `message_agent` suppression. Every Agency distribution declares `academy-continuing-education` as a preload.
 
-Phase 16 validates Continuing Education as production-ready on that maintained downstream integration path. Equivalent `goal_manage` and `preload_skills` support are not yet present in the stock NousResearch Hermes reference used by the latest downstream reconciliation, so Profile Packs must not claim unqualified stock-Hermes readiness until equivalent generic support lands in the normal Hermes release used by Profile Packs. This compatibility gap is external to the Academy architecture and must not be “solved” by adding an Academy-specific runtime.
+The maintained downstream integration satisfies the functional CE contract and has passed production-profile verification. Equivalent `goal_manage` and `preload_skills` support are not yet present in the stock NousResearch Hermes reference used by the latest downstream reconciliation, so the architecture's stock-install release invariant is not yet satisfied by the normal upstream release. Profile Packs must not claim unqualified stock-Hermes readiness until equivalent generic support lands upstream. This compatibility gap must not be “solved” by adding an Academy-specific runtime.
 
 ## Actors (exhaustive)
 
@@ -33,7 +33,7 @@ There is **no new Agent type**. The five actors above are the full set.
 These are non-negotiable. They are the acceptance criteria for Phase 0 and the constraints for every later phase.
 
 1. **Zero Fleet dependency.** No import, runtime call, configuration reference, or behavioral coupling into any of: **Fleet, Keryx, Nodescale, Templar, RunAuthority, Run Capsules**. This prohibition is absolute and applies to skills, scripts, SOUL behavior, and any later implementation code.
-2. **Native Hermes compatibility.** Continuing Education must remain expressible through normal Hermes Agent primitives and profile distributions. The maintained downstream currently provides required generic seams that are not yet in stock upstream; upstream compatibility work must land those generic seams rather than introducing an Academy-specific daemon, scheduler, persistence system, or alternate execution path.
+2. **Works on a stock install.** Must function on a normal Hermes Agent installation with Profile Packs; no special Academy runtime, daemon, service, or node is required. Until the normal Hermes release contains the required generic native seams, this remains an explicit open release-compatibility gate rather than an invariant to weaken.
 3. **Natural-language UX.** Normal conversational language is the primary interface. The user must not need CLI commands, profile IDs, skill names, or syntax. `Dean` may resolve an instructor so the user never names one.
 4. **Teachers never mutate learner internals.** An Instructor never directly edits the learner's skills, `SOUL.md`, or configuration. Teaching is content delivered through conversation.
 5. **Durable learning is native.** Persistent improvement happens only through Hermes `/learn`; skill creation/update happens only through Hermes `skill_manage`. No custom persistence layer is built.
@@ -74,11 +74,11 @@ The learner skill `academy-continuing-education` is conceptually Academy's but i
 - It does not weaken, bypass, or relocate the invariants in the repository `AGENTS.md` or `hermes-agency/AGENTS.md`.
 - The `agency-*`, `council-*`, and `academy-*` namespace boundaries and the "no live node registries / peer discovery / scheduling / remote-execution services" rules remain in force.
 
-## Phase 16 release disposition
+## Phase 16 disposition
 
-The Phase 16 whole-change/release review is recorded in `docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md` and is **PASS** for the maintained downstream Hermes integration. That review found and corrected category-unsafe broad-chair routing and the false implication that an installed Dean could depend on pack-root `routing.py`, then re-ran the full Profile Packs gate with validator-enforced routing parity.
+The Phase 16 implementation/whole-change review is recorded in `docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md` and is **PASS** for the maintained downstream Hermes integration. That review found and corrected category-unsafe broad-chair routing and the false implication that an installed Dean could depend on pack-root `routing.py`, then re-ran the full Profile Packs gate with validator-enforced routing parity.
 
-Stock NousResearch Hermes compatibility remains pending equivalent generic native support. That pending compatibility milestone does not reopen this architecture or authorize a parallel Academy runtime.
+The stock-install release compatibility gate remains **OPEN** until equivalent generic native support is present in the normal NousResearch Hermes release. That open gate does not authorize a parallel Academy runtime and must not be erased by documentation wording.
 
 ## Phase 0 acceptance (this document satisfies)
 
