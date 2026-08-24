@@ -1,21 +1,23 @@
 # Hermes Academy Continuing Education — Phase 16 Release Review
 
-Status: **PASSED for the maintained downstream Hermes integration.**
+Status: **IMPLEMENTATION/WHOLE-CHANGE REVIEW PASSED for the maintained downstream Hermes integration. STOCK-INSTALL RELEASE COMPATIBILITY remains OPEN.**
 
-This document closes the Profile Packs Phase 16 whole-change/release review for Hermes Academy Continuing Education. It records what was reviewed, what the review found, what was corrected, what was revalidated, and the compatibility boundary that still prevents an unqualified stock-Hermes readiness claim.
+This document records the Profile Packs Phase 16 whole-change/release review for Hermes Academy Continuing Education. It records what was reviewed, what the review found, what was corrected, what was revalidated, and the compatibility boundary that still prevents an unqualified stock-Hermes release claim.
 
 ## Release decision
 
 The Continuing Education implementation is **production-validated on the maintained `Dadmin88/hermes-agent-downstream` integration path**.
 
-The implementation is **not yet stock-upstream-Hermes ready**. The normal NousResearch Hermes release used by a Profile Packs installation must provide equivalent generic support for the native seams Continuing Education requires before the project can claim stock-install compatibility.
+The implementation is **not yet stock-upstream-Hermes ready**. The normal NousResearch Hermes release used by a Profile Packs installation must provide equivalent generic support for the native seams Continuing Education requires before the architecture's stock-install release invariant is satisfied.
 
 This distinction is deliberate:
 
-- Phase 16 implementation/release review: **PASS**.
+- Phase 16 implementation/whole-change review: **PASS**.
 - Maintained downstream Hermes integration: **PASS**.
-- Stock NousResearch Hermes compatibility: **PENDING UPSTREAM EQUIVALENT SUPPORT**.
+- Stock-install release compatibility: **OPEN / BLOCKED ON UPSTREAM EQUIVALENT SUPPORT**.
 - Hermes Fleet dependency: **NONE**.
+
+Passing the Profile Packs review does not waive the stock-install architecture invariant. It means the Academy/Profile Packs implementation is release-reviewed and ready to integrate with a compatible Hermes build while upstream compatibility remains an explicit external gate.
 
 ## Scope reviewed
 
@@ -87,7 +89,7 @@ Therefore:
 - Profile Packs may describe Continuing Education as production-validated **with the maintained downstream Hermes integration**;
 - Profile Packs must not describe it as stock-Hermes production ready yet;
 - the user-facing flow must fail clearly when required native capabilities are unavailable rather than simulating them in Academy;
-- upstreaming or otherwise landing equivalent generic Hermes seams is a separate compatibility milestone, not a reason to keep the Profile Packs Phase 16 implementation review open.
+- upstreaming or otherwise landing equivalent generic Hermes seams is the remaining stock-release compatibility milestone.
 
 ## Exact Profile Packs validation
 
@@ -114,9 +116,10 @@ The final merge candidate must retain the same green repository/pack test gate a
 
 ## Preserved invariants
 
-Phase 16 did not change the architecture contract:
+Phase 16 did not waive the architecture contract:
 
 - Hermes Academy Continuing Education remains independent of Hermes Fleet.
+- A stock Hermes Agent installation with Profile Packs remains the canonical release target.
 - No new Agent type exists.
 - No Academy training database, scheduler, message bus, or candidate-skill registry exists.
 - Instructors do not directly mutate learner state.
@@ -128,6 +131,6 @@ Phase 16 did not change the architecture contract:
 
 ## Phase 16 disposition
 
-**PASS.** The Profile Packs Continuing Education implementation, routing policy, distribution contracts, validation rules, and public documentation are release-review complete for the maintained downstream Hermes integration.
+**IMPLEMENTATION PASS.** The Profile Packs Continuing Education implementation, routing policy, distribution contracts, validation rules, and public documentation are whole-change-review complete for the maintained downstream Hermes integration.
 
-The next compatibility milestone is to obtain equivalent generic support in the normal upstream Hermes release so the qualifier can eventually be removed.
+**STOCK RELEASE GATE OPEN.** The remaining compatibility milestone is to obtain equivalent generic support in the normal upstream Hermes release. Until then, the maintained downstream qualifier stays mandatory and the architecture's stock-install invariant remains visibly unsatisfied by stock upstream.
