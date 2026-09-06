@@ -79,6 +79,21 @@ class RecipeTests(unittest.TestCase):
         self.assertEqual(confident[0].id, "software-delivery")
         self.assertTrue(profile_ranked)
 
+    def test_recipe_confidence_is_independent_of_display_limit(self):
+        loaded = install.load_recipe_catalog(ROOT)
+        _, profiles = install.load_catalog(ROOT)
+        query = (
+            "Triage and contain a live malware incident across production hosts, "
+            "preserve incident evidence, build detections, and operationalize IOCs "
+            "before handing an isolated captured sample off for deeper internals reconstruction."
+        )
+        displayed, confident, profile_ranked = install.recommend_goal(
+            profiles, loaded, query, limit=1, pack_filter={"agency"}
+        )
+        self.assertEqual(len(displayed), 1)
+        self.assertIsNone(confident)
+        self.assertEqual(profile_ranked[0][0].name, "agency-security-operations-engineer")
+
     def test_root_installer_json_recommendation_is_recipe_aware_and_read_only(self):
         output = io.StringIO()
         with redirect_stdout(output):

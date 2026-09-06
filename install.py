@@ -137,7 +137,14 @@ def recommend_recipes(recipes,query,*,limit=5,pack_filter=None):
     except recipe_catalog.RecipeError as exc: raise CLIError(str(exc)) from exc
 
 def recommend_goal(profiles,recipes,query,*,limit=6,pack_filter=None):
-    rr=recommend_recipes(recipes.values(),query,limit=min(5,max(1,limit)),pack_filter=pack_filter); return rr,recipe_catalog.confident_recipe_match(rr),recommend_profiles(profiles,query,limit=limit,pack_filter=pack_filter)
+    display_recipe_limit=min(5,max(1,limit))
+    ranked_recipes=recommend_recipes(recipes.values(),query,limit=max(2,display_recipe_limit),pack_filter=pack_filter)
+    displayed_recipes=ranked_recipes[:display_recipe_limit]
+    profile_matches=recommend_profiles(profiles,query,limit=limit,pack_filter=pack_filter)
+    confident_recipe=recipe_catalog.confident_recipe_match(ranked_recipes)
+    if confident_recipe and profile_matches and profile_matches[0][1]>=confident_recipe[1]:
+        confident_recipe=None
+    return displayed_recipes,confident_recipe,profile_matches
 
 def format_bytes(value:int)->str:
     amount=float(value); unit="B"

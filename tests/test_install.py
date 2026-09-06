@@ -219,6 +219,12 @@ class InstallerTests(unittest.TestCase):
                 )
                 self.assertEqual(result.returncode, 0, result.stderr)
                 payload = json.loads(result.stdout)
+                actual_recipe = (
+                    payload["recipe_match"]["recipe"]
+                    if payload["recipe_match"] is not None
+                    else None
+                )
+                self.assertEqual(actual_recipe, case.get("expected_recipe_match"))
                 self.assertEqual(
                     payload["recommendations"][0]["name"],
                     case["expected_profile"],
