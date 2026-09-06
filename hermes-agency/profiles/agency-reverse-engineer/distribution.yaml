@@ -1,0 +1,7 @@
+name: agency-reverse-engineer
+version: 0.1.0
+description: "Reconstructs the behavior, interfaces, data formats, and implementation structure of authorized software artifacts, producing evidence-backed specifications, analysis reports, and reproducible validation artifacts."
+author: "Kyle French"
+license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -174,6 +175,60 @@ class InstallerTests(unittest.TestCase):
                 ranked[0][0].name,
                 {"agency-backend-engineer", "agency-frontend-engineer"},
             )
+
+    def test_reverse_engineer_routing_cases_recommend_expected_owner_via_cli(self):
+        routing = json.loads(
+            (ROOT / "hermes-agency" / "evals" / "routing.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        cases = {
+            case["id"]: case
+            for case in routing["cases"]
+            if case["id"].startswith("reverse-engineer-")
+        }
+        expected_ids = {
+            "reverse-engineer-ownership",
+            "reverse-engineer-red-team-boundary",
+            "reverse-engineer-security-review-boundary",
+            "reverse-engineer-integration-boundary",
+            "reverse-engineer-mobile-boundary",
+            "reverse-engineer-security-operations-boundary",
+        }
+        self.assertEqual(set(cases), expected_ids)
+
+        for case_id in sorted(expected_ids):
+            case = cases[case_id]
+            with self.subTest(case=case_id):
+                result = subprocess.run(
+                    [
+                        sys.executable,
+                        str(ROOT / "install.py"),
+                        "--pack",
+                        "agency",
+                        "--recommend",
+                        case["task"],
+                        "--limit",
+                        "1",
+                        "--json",
+                    ],
+                    cwd=ROOT,
+                    text=True,
+                    capture_output=True,
+                    check=False,
+                )
+                self.assertEqual(result.returncode, 0, result.stderr)
+                payload = json.loads(result.stdout)
+                actual_recipe = (
+                    payload["recipe_match"]["recipe"]
+                    if payload["recipe_match"] is not None
+                    else None
+                )
+                self.assertEqual(actual_recipe, case.get("expected_recipe_match"))
+                self.assertEqual(
+                    payload["recommendations"][0]["name"],
+                    case["expected_profile"],
+                )
 
     def test_category_selection_is_exact_and_sparse(self):
         with tempfile.TemporaryDirectory() as tmp:

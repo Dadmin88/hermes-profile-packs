@@ -1,6 +1,6 @@
 # Your First Useful Team
 
-The fastest way to understand Profile Packs is not to install all 161 profiles. Start with one real outcome, choose the smallest useful recipe, prove the profiles work, then expand only when another specialty earns its seat.
+The fastest way to understand Profile Packs is not to install all 162 profiles. Start with one real outcome, choose the smallest useful recipe, prove the profiles work, then expand only when another specialty earns its seat.
 
 ## 1. Pick an outcome
 
