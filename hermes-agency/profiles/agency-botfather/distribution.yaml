@@ -1,0 +1,7 @@
+name: agency-botfather
+version: 0.1.0
+description: "Authors portable Hermes Profile Packs distributions from approved role specifications, including focused SOULs, procedural skills, roster metadata, routing evaluations, provenance, and validation evidence."
+author: "Kyle French"
+license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

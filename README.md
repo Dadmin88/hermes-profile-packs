@@ -14,7 +14,7 @@ This repository is the public upstream home for reusable Hermes profile distribu
 
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
-Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills. Hermes Agency contains 109 professional specialists.
+Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills. Hermes Agency contains 110 professional specialists.
 
 ### Academy Continuing Education
 
@@ -28,7 +28,7 @@ See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md), the normativ
 
 ## Start small with Team Recipes
 
-You rarely need all 160 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
+You rarely need all 161 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
 
 The main installer understands them directly:
 
