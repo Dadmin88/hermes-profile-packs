@@ -1,6 +1,6 @@
 # Hermes Agency
 
-Hermes Agency is a curated collection of **109 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
+Hermes Agency is a curated collection of **110 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
 
 The profiles form a multidisciplinary agency covering engineering, product, design, quality assurance, research, marketing, content, leadership, and operations. Each profile combines a focused professional role with bundled task skills, routing metadata, working standards, collaboration expectations, and clear handoff behavior.
 
@@ -8,7 +8,7 @@ Profiles can be used independently or coordinated through Hermes Kanban for mult
 
 ## Features
 
-- **109 specialized profiles** spanning technical, creative, product, business, and operational work.
+- **110 specialized profiles** spanning technical, creative, product, business, and operational work.
 - **Bundled professional skills** that are installed with each profile and loaded by Hermes when relevant.
 - **Hermes-native profile distributions** that install with standard Hermes profile tooling.
 - **Routing-ready descriptions** so profiles can be selected by capability and responsibility.
@@ -102,14 +102,14 @@ Hermes Agency currently includes:
 | Area | Profiles |
 |---|---:|
 | Leadership & Coordination | 10 |
-| Engineering | 26 |
+| Engineering | 27 |
 | Quality & Review | 9 |
 | Design & Creative | 18 |
 | Product & Research | 14 |
 | Marketing & Growth | 12 |
 | Content & Editorial | 10 |
 | Operations & Support | 10 |
-| **Total** | **109** |
+| **Total** | **110** |
 
 ### Leadership & Coordination
 
@@ -133,6 +133,7 @@ Hermes Agency currently includes:
 | `agency-ai-engineer` | AI Engineer |
 | `agency-automation-engineer` | Automation Engineer |
 | `agency-backend-engineer` | Backend Engineer |
+| `agency-botfather` | BotFather |
 | `agency-data-engineer` | Data Engineer |
 | `agency-database-engineer` | Database Engineer |
 | `agency-desktop-application-engineer` | Desktop Application Engineer |
