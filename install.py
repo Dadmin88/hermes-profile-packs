@@ -74,6 +74,15 @@ def directory_size(path:Path)->int:
         except OSError: continue
     return total
 
+def derived_capabilities(source:Path)->tuple[str,...]:
+    skills=source/"skills"
+    if not skills.is_dir(): return ()
+    return tuple(sorted(
+        skill.parent.name
+        for skill in skills.glob("*/SKILL.md")
+        if skill.parent.name != "academy-continuing-education"
+    ))
+
 def load_catalog(root:Path=ROOT)->tuple[dict[str,PackInfo],list[Profile]]:
     pack_file=root/"packs.json"
     if not pack_file.is_file(): raise CLIError(f"missing pack registry: {pack_file}")
@@ -85,7 +94,8 @@ def load_catalog(root:Path=ROOT)->tuple[dict[str,PackInfo],list[Profile]]:
         packs[key]=PackInfo(key,record["name"],pack_dir,record["namespace"],manifest_path,record.get("purpose",manifest.get("description","")),str(manifest.get("version","")),orchestrator,backbone,tuple(sorted({str(i.get("category","other")) for i in rows})),tuple(str(i["name"]) for i in rows))
         for item in rows:
             name=str(item["name"]); source=pack_dir/"profiles"/name; desc=str(item.get("description") or _yaml_scalar(source/"distribution.yaml","description"))
-            profiles.append(Profile(key,record["name"],name,str(item.get("display_name") or name),str(item.get("category") or "other"),desc,str(item.get("role") or ""),tuple(str(j) for j in item.get("jobs",[])),name==orchestrator,name in backbone,directory_size(source)))
+            jobs=tuple(sorted({*(str(j) for j in item.get("jobs",[])),*derived_capabilities(source)}))
+            profiles.append(Profile(key,record["name"],name,str(item.get("display_name") or name),str(item.get("category") or "other"),desc,str(item.get("role") or ""),jobs,name==orchestrator,name in backbone,directory_size(source)))
     return packs,profiles
 
 def load_recipe_catalog(root:Path=ROOT):

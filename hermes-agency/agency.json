@@ -36,11 +36,11 @@
     "agency-software-architect",
     "agency-technical-lead"
   ],
-  "profile_count": 110,
+  "profile_count": 111,
   "categories": {
     "content": 10,
     "design": 18,
-    "engineering": 27,
+    "engineering": 28,
     "leadership": 10,
     "marketing": 12,
     "product": 14,
@@ -134,6 +134,7 @@
     {"name":"agency-requirements-analyst","display_name":"Requirements Analyst","category":"product"},
     {"name":"agency-research-analyst","display_name":"Research Analyst","category":"product"},
     {"name":"agency-revenue-operations-manager","display_name":"Revenue Operations Manager","category":"marketing"},
+    {"name":"agency-reverse-engineer","display_name":"Reverse Engineer","category":"engineering"},
     {"name":"agency-scriptwriter","display_name":"Scriptwriter","category":"content"},
     {"name":"agency-scrum-master","display_name":"Scrum Master","category":"leadership"},
     {"name":"agency-security-engineer","display_name":"Security Engineer","category":"engineering"},
