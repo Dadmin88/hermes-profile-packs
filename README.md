@@ -14,7 +14,9 @@ This repository is the public upstream home for reusable Hermes profile distribu
 
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
-Hermes Council currently contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy v0.2 contains 30 faculty profiles and 120 purpose-built teaching skills. Hermes Agency contains 110 professional specialists.
+<!-- profile-counts:start -->
+Hermes Agency contains 110 professional specialists. Hermes Council contains 21 focused profiles and 84 purpose-built personal-life skills. Hermes Academy contains 30 faculty profiles and 120 purpose-built teaching skills.
+<!-- profile-counts:end -->
 
 ### Academy Continuing Education
 
@@ -58,6 +60,8 @@ hermes-profile-packs/
 │   └── CONTINUING_EDUCATION_RELEASE_REVIEW.md
 ├── examples/
 ├── tests/
+├── scripts/
+│   └── update_readme_counts.py # Regenerates README profile and skill counts
 ├── packs.json
 ├── recipes.json
 ├── recipe_catalog.py       # Shared recipe loading/scoring/confidence engine
@@ -117,10 +121,13 @@ Use [`docs/OPERATING_PLAYBOOK.md`](docs/OPERATING_PLAYBOOK.md), [`docs/INSTALLAT
 
 ```bash
 python validate.py
+python scripts/update_readme_counts.py --check
 python -m unittest discover -s tests -p 'test_*.py'
 ```
 
-This validates pack manifests, namespaces, distribution metadata, skills, portability, secret/path hygiene, team recipe references/tier invariants, and root selector behavior.
+`validate.py` also checks that the generated README profile and skill counts match the pack manifests. After adding or removing a profile or skill, run `python scripts/update_readme_counts.py` to refresh the README. GitHub README files cannot run inline JavaScript, so the committed Markdown is generated and CI-enforced instead.
+
+The validation suite checks pack manifests, namespaces, distribution metadata, skills, portability, secret/path hygiene, team recipe references/tier invariants, generated documentation counts, and root selector behavior.
 
 ## Design principles
 
