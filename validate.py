@@ -124,6 +124,13 @@ def main() -> int:
 
     errors.extend(validate_recipes(profile_to_pack, pack_keys))
 
+    readme_count_check = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "update_readme_counts.py"), "--check"],
+        cwd=ROOT,
+    )
+    if readme_count_check.returncode:
+        errors.append("README profile counts are stale or could not be verified")
+
     for path in ROOT.rglob("*"):
         if not path.is_file() or ".git" in path.parts or "__pycache__" in path.parts or path.suffix == ".pyc":
             continue
