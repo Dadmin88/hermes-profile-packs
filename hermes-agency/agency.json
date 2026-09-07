@@ -36,11 +36,11 @@
     "agency-software-architect",
     "agency-technical-lead"
   ],
-  "profile_count": 111,
+  "profile_count": 112,
   "categories": {
     "content": 10,
     "design": 18,
-    "engineering": 28,
+    "engineering": 29,
     "leadership": 10,
     "marketing": 12,
     "product": 14,
@@ -92,6 +92,7 @@
     {"name":"agency-godot-engineer","display_name":"Godot Engineer","category":"engineering"},
     {"name":"agency-graphic-designer","display_name":"Graphic Designer","category":"design"},
     {"name":"agency-growth-marketer","display_name":"Growth Marketer","category":"marketing"},
+    {"name":"agency-hermes-config-manager","display_name":"Hermes Configuration Manager","category":"engineering"},
     {"name":"agency-infrastructure-engineer","display_name":"Infrastructure Engineer","category":"engineering"},
     {"name":"agency-integration-engineer","display_name":"Integration Engineer","category":"engineering"},
     {"name":"agency-knowledge-manager","display_name":"Knowledge Manager","category":"support"},
