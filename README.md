@@ -20,13 +20,11 @@ Hermes Agency contains 111 professional specialists. Hermes Council contains 21 
 
 ### Academy Continuing Education
 
-Hermes Academy includes a Continuing Education flow for profile-to-profile competency transfer. A learner can receive a natural-language request such as `Go learn API security`, route through the real Academy Dean when the user did not name a teacher, establish native Hermes goal state, study with the selected faculty member through canonical Bot messaging, prove transfer, and persist a reusable capability through native `/learn` into the learner's normal skill store. It adds no custom training runtime or Fleet dependency.
+Hermes Academy Continuing Education lets a profile learn a reusable capability from an installed instructor. A request such as `Go learn API security` routes through the Academy Dean, creates a learning goal, supports study and demonstrated transfer through Bot Chat, and saves the capability to the learner's skill store through `/learn`. It requires no separate training or distributed runtime.
 
-The implementation passed Phase 15 independent production-profile verification and the Phase 16 whole-change/release review on the maintained `Dadmin88/hermes-agent-downstream` integration. It is **production-validated on that maintained downstream path**. Stock NousResearch Hermes compatibility remains pending until the normal Hermes release provides equivalent generic support for the native seams required by the validated flow, so do not read this as an unqualified stock-Hermes readiness claim.
+The flow requires a Hermes build that supports `goal_manage`, profile-distribution `preload_skills`, bounded goal-judge feedback, and the associated Bot Chat behavior. Confirm those capabilities in your Hermes release before using Continuing Education; compatibility with the standard Hermes release is not yet guaranteed.
 
-Phase 16 also hardened Dean routing: category fallbacks are manifest-owned, cross-category CE objectives fail closed instead of falling into an unrelated broad chair, unavailable specialists may use only a safe installed fallback from their own category, and the installed Dean's preloaded routing contract no longer depends on a pack-root Python helper that is absent after normal profile installation.
-
-See [`docs/CONTINUING_EDUCATION.md`](docs/CONTINUING_EDUCATION.md), the normative [`docs/CONTINUING_EDUCATION_ARCHITECTURE.md`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md), and the [`Phase 16 release review`](docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md).
+See the [`Continuing Education guide`](docs/CONTINUING_EDUCATION.md) and [`architecture contract`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
 
 ## Start small with Team Recipes
 
@@ -56,8 +54,7 @@ hermes-profile-packs/
 ├── hermes-academy/
 ├── docs/
 │   ├── CONTINUING_EDUCATION.md
-│   ├── CONTINUING_EDUCATION_ARCHITECTURE.md
-│   └── CONTINUING_EDUCATION_RELEASE_REVIEW.md
+│   └── CONTINUING_EDUCATION_ARCHITECTURE.md
 ├── examples/
 ├── tests/
 ├── scripts/

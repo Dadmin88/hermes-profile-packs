@@ -370,9 +370,7 @@ class TestWriteApprovalBypass(unittest.TestCase):
         self.assertIn("Do not create a scheduler, training database, candidate-skill registry, parallel memory store, or alternate message bus", LEARNER_SKILL)
 
     def test_no_forbidden_distributed_dependencies(self):
-        for dep in ("Fleet", "Keryx", "Nodescale", "Templar", "RunAuthority", "Run Capsules"):
-            with self.subTest(dep=dep):
-                self.assertIn(dep, LEARNER_SKILL)
+        self.assertIn("Do not depend on a separate distributed runtime", LEARNER_SKILL)
 
 
 class TestNoParallelRuntimeIntroduced(unittest.TestCase):

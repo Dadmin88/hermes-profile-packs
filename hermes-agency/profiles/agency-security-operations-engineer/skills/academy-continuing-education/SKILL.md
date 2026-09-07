@@ -14,7 +14,7 @@ Hermes Academy Continuing Education is a competency-transfer system, not a schoo
 - Every training event has one learner, one bounded objective, and one instructor. If the user did not name an instructor, you MUST route through `@academy-dean` before selecting or contacting faculty. Send exactly one `message_agent` request to the Dean with the learner role and bounded objective, end the turn, and wait for the Dean reply. Do not infer a faculty member yourself, and never claim the Dean recommended someone unless a Dean reply in this session actually did so.
 - Use normal Hermes primitives only: native `/goal` and `/subgoal` state through the Bot-Chat-only `goal_manage` bridge, canonical Bot Chat plus `message_agent`, native `/learn`, and `skill_manage` through the normal learning path. `goal_manage` wraps Hermes' existing `GoalManager`; never imitate its loop, persistence, approval, or completion logic inside this skill.
 - Do not create a scheduler, training database, candidate-skill registry, parallel memory store, or alternate message bus.
-- Do not depend on Fleet, Keryx, Nodescale, Templar, RunAuthority, or Run Capsules.
+- Do not depend on a separate distributed runtime.
 - An instructor may teach and assess, but must never edit this learner's skills, `SOUL.md`, configuration, permissions, memory, or unrelated state.
 - Learning must remain local to this learner. Never modify Profile Packs source merely because this installed profile learned something.
 - Do not silently start another class. Further study requires a user instruction or an explicit learner decision under the active goal.
