@@ -17,7 +17,7 @@ This repository contains public, portable Hermes Agent profile packs. Treat prof
 
 ## Continuing Education invariants
 
-Hermes Academy Continuing Education is independent of Hermes Fleet. Do not add Fleet, Keryx, Nodescale, Templar, RunAuthority, Run Capsule, scheduler, message-bus, or parallel persistence dependencies to make the education flow work.
+Hermes Academy Continuing Education must not depend on a separate distributed runtime, scheduler, message bus, node-management service, or parallel persistence layer. Keep the education flow within the standard Hermes capabilities documented by this repository.
 
 The canonical shared skills are:
 
@@ -41,7 +41,7 @@ Continuing Education routing must fail closed:
 - uninstalled or unverified faculty must not be reported as installed;
 - ambiguous role-description ties must not be broken by roster or iteration order.
 
-Public status language must distinguish the validated maintained-downstream integration from stock NousResearch Hermes compatibility. Do not claim unqualified stock-Hermes production readiness until equivalent generic native seams are present in the normal Hermes release used by Profile Packs.
+Public status language must state the Hermes capabilities required by Continuing Education and distinguish implemented pack behavior from compatibility with a given Hermes release. Do not claim unqualified production readiness until the normal Hermes release used with Profile Packs provides those capabilities.
 
 ## Editing profiles
 
@@ -65,4 +65,4 @@ python -m unittest discover -s hermes-academy/tests -p 'test_*.py'
 
 Do not weaken a validator merely to make a failing artifact pass. Determine whether the finding is a real portability/security problem or an overly broad rule, then fix the correct layer.
 
-For Continuing Education changes, the final release candidate must also keep the public guide, architecture contract, Phase 16 release review, Academy teaching contract, Academy README, root README, and changelog truthful about the same compatibility boundary.
+For Continuing Education changes, keep the public guide, architecture contract, Academy teaching contract, Academy README, root README, and changelog truthful about the same compatibility boundary.

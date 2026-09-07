@@ -99,15 +99,7 @@ class ContinuingEducationSkillTests(unittest.TestCase):
         self.assertIn("Learning must remain local to this learner", self.text)
         self.assertIn("Never modify Profile Packs source", self.text)
         self.assertIn("Do not ask the instructor to write it", self.text)
-        for forbidden_system in (
-            "Fleet",
-            "Keryx",
-            "Nodescale",
-            "Templar",
-            "RunAuthority",
-            "Run Capsules",
-        ):
-            self.assertIn(forbidden_system, self.text)
+        self.assertIn("Do not depend on a separate distributed runtime", self.text)
 
     def test_every_agency_profile_materializes_the_canonical_bytes(self):
         names = [profile["name"] for profile in AGENCY_MANIFEST["profiles"]]

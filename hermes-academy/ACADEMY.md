@@ -20,9 +20,9 @@ Do not mechanically force every step into every answer. Match the interaction to
 
 For Hermes-profile Continuing Education, this loop is a set of instructional functions, not a mandatory turn sequence. Baseline first, teach only demonstrated gaps, require transfer when instruction was needed, and stop as soon as competency is demonstrated. The learner owns native `/goal` and `/learn`; faculty never write learner skills directly. See `../docs/CONTINUING_EDUCATION.md`.
 
-The Phase 16 whole-change review has passed for the maintained downstream Hermes integration, where Continuing Education is production-validated. Stock NousResearch Hermes compatibility remains pending equivalent generic support for `goal_manage`, profile-distribution `preload_skills`, bounded goal-judge feedback propagation, and the surrounding Bot Mode behavior required by the validated flow. Do not describe Continuing Education as stock-Hermes production ready until that compatibility gate passes.
+Continuing Education requires a Hermes build with `goal_manage`, profile-distribution `preload_skills`, bounded goal-judge feedback, and the associated Bot Chat behavior. Confirm those capabilities before use; compatibility with the standard Hermes release is not yet guaranteed.
 
-Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Faculty teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
+Continuing Education requires no separate training or distributed runtime. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Faculty teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
 
 ## Direct-answer mode
 

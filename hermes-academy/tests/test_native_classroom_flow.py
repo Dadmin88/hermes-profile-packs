@@ -147,16 +147,7 @@ class NoParallelRuntimeTests(unittest.TestCase):
                 self.assertIn(marker, self.learner)
 
     def test_forbidden_distributed_dependencies_remain_forbidden(self):
-        for marker in (
-            "Fleet",
-            "Keryx",
-            "Nodescale",
-            "Templar",
-            "RunAuthority",
-            "Run Capsules",
-        ):
-            with self.subTest(marker=marker):
-                self.assertIn(marker, self.learner)
+        self.assertIn("Do not depend on a separate distributed runtime", self.learner)
 
 
 if __name__ == "__main__":

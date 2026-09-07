@@ -12,9 +12,7 @@ Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skill
 
 Academy can also teach another installed Hermes profile through the Continuing Education flow. A learner can receive an ordinary request such as `Go learn API security`, route through an actual `academy-dean` Bot exchange when the user did not name a teacher, use the Bot Chat `goal_manage` bridge into Hermes' native goal state plus `message_agent`/`/learn` underneath, and persist a reusable capability in its own normal skill store. Academy faculty preload `teach-profile`, the Dean preloads `faculty-routing`, and instruction may be persisted only after the selected instructor explicitly returns `MASTERED` for the learner's specific transfer.
 
-The implementation has passed the Phase 15 independent production-profile verification and the Phase 16 whole-change/release review on the maintained `Dadmin88/hermes-agent-downstream` integration. Treat it as **production-validated on that maintained downstream path**.
-
-Stock NousResearch Hermes compatibility is still a separate pending gate because the normal upstream release does not yet provide equivalent generic support for all native seams used by the validated flow. Do not describe Continuing Education as unqualified stock-Hermes production ready until those generic capabilities land upstream. See [`../docs/CONTINUING_EDUCATION.md`](../docs/CONTINUING_EDUCATION.md) and [`../docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md`](../docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md).
+Continuing Education requires a Hermes build with `goal_manage`, profile-distribution `preload_skills`, bounded goal-judge feedback, and the associated Bot Chat behavior. Confirm those capabilities in your Hermes release before use; compatibility with the standard Hermes release is not yet guaranteed. See the [`Continuing Education guide`](../docs/CONTINUING_EDUCATION.md).
 
 ## User journey and limitations
 
@@ -22,7 +20,7 @@ A learner receives an ordinary request such as `Go learn API security with Acade
 
 Dean routing is deliberately fail-closed. The most specific installed specialist wins when one is clearly appropriate. If several strong topics share one Academy category, the Dean may use that category's installed broad fallback and label it approximate. If one Continuing Education objective strongly crosses Academy categories, the Dean asks the learner to narrow the competency instead of assigning an unrelated broad faculty member. The pack-root `routing.py` is a maintainer/test reference implementation, not a runtime dependency of the installed Dean profile.
 
-Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Instructors teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
+Continuing Education requires no separate training or distributed runtime. Do not expose CLI, slash commands, or Bot internals as normal user UX. There is no implemented optional Desktop UI for this flow. Instructors teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
 
 ## Faculty
 

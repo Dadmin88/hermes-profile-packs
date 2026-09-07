@@ -140,7 +140,7 @@ class ContinuingEducationRegressionMatrix(unittest.TestCase):
         for path in python_files:
             with self.subTest(path=path.name):
                 self.assertIsNone(forbidden_import.search(path.read_text(encoding="utf-8")))
-        self.assertIn("Do not depend on Fleet, Keryx, Nodescale", self.learner)
+        self.assertIn("Do not depend on a separate distributed runtime", self.learner)
 
     # Distribution/source integrity --------------------------------------
     def test_21_agency_materialized_copies_match_canonical_source(self):

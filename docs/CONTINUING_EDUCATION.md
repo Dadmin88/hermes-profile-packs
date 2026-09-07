@@ -1,10 +1,8 @@
 # Hermes Academy Continuing Education
 
-Status: **Phase 16 whole-change/release review PASSED for the maintained downstream Hermes integration.** Continuing Education is production-validated on that integration path. Stock NousResearch Hermes compatibility remains pending until the normal Hermes release provides equivalent generic support for the required native seams.
+Status: Continuing Education requires a compatible Hermes build. Compatibility with the standard Hermes release is not yet guaranteed; verify the required capabilities below before use.
 
 Hermes Academy Continuing Education lets an installed Hermes profile learn a bounded reusable capability from Academy faculty using normal Hermes primitives. It introduces no second agent runtime, scheduler, memory system, skill database, or distributed-runtime dependency.
-
-See [`CONTINUING_EDUCATION_RELEASE_REVIEW.md`](CONTINUING_EDUCATION_RELEASE_REVIEW.md) for the Phase 16 release decision, findings, corrections, and compatibility boundary.
 
 ## Actors
 
@@ -63,7 +61,7 @@ The canonical one-to-one transport is **canonical Bot Chat + native `message_age
 - `preload_skills` activates only installed, non-disabled skills from the current profile and grants no additional tools or permissions.
 - Judge feedback from native goal continuation is bounded and only replayed for `continue`, never for `wait` or `done`.
 
-The generic Hermes seams required by the controlled preflight are merged in the maintained downstream Hermes Agent: `goal_manage` in PR #24, profile-distribution `preload_skills` in PR #26, and bounded goal-judge feedback propagation in PR #27. The downstream Bot Mode path also includes duplicate in-flight `message_agent` suppression. These are generic Hermes capabilities, not Academy-specific persistence or orchestration.
+The flow requires these generic Hermes capabilities: `goal_manage`, profile-distribution `preload_skills`, bounded goal-judge feedback propagation, duplicate in-flight `message_agent` suppression, and the associated Bot Chat behavior. These are generic Hermes capabilities, not Academy-specific persistence or orchestration.
 
 ## Progress, cancellation, and write approval
 
@@ -105,47 +103,23 @@ Stop without persistence and surface the blocker. If the objective cannot be saf
 **Write-approval prompt**
 If `skills.write_approval` is enabled, stop at the normal Hermes approval boundary and surface that approval request. Do not bypass approval because Academy initiated the learning.
 
-## Validation evidence
-
-The implementation has passed:
-
-- canonical `message_agent` transport validation and real multi-turn teaching evidence;
-- native goal peer-wait verification showing no Academy wait scheduler/core loop was required once a standing goal exists;
-- the controlled proof that natural-language Bot learning required a generic agent-to-GoalManager bridge, now provided by downstream Hermes `goal_manage`;
-- live proof that probabilistic skill routing could bypass the CE contract, followed by generic profile-distribution `preload_skills` support and Agency-wide deterministic CE preloading;
-- proof that failed native goal-judge reasons must reach the next continuation turn, followed by bounded generic feedback propagation;
-- learner-only native skill-placement proof and source-pack/instructor isolation;
-- shared-skill packaging and byte-identity validation;
-- Dean routing tests, including ambiguous-keyword, cross-category, missing-faculty, installed-profile, manifest-override, and tie regressions;
-- security/trust review with permanent adversarial tests;
-- selected native Hermes goal/subgoal, Bot Chat, profile-preload, `/learn`, skill-manager, write-approval, restart/resume, and canonical-session tests plus direct async gateway goal-resume checks against a disposable Hermes home;
-- repository, Agency, Council, and Academy validation with no Fleet dependency.
-
-The accepted controlled disposable-profile preflight used the natural request `Go learn API security from the Academy Cybersecurity Instructor.` It exercised deterministic CE preload, native `goal_manage`, `message_agent`, peer-wait, instructor assessment, transfer, native learner-local persistence, and fresh-session learned-skill reuse. Exactly one learner skill was added (`api-security-review`), all pre-existing learner skills were preserved, and the instructor/source-pack hashes were unchanged. A sealed held-out A/B check on the same model/runtime scored an untrained control **9/10** and the trained learner **10/10**; the trained fresh session naturally loaded `api-security-review`.
-
-Phase 15 independent production verification then confirmed all 10 verification criteria: exact 90-skill union with only `auth-integration` changed, CE contract byte-identical to source, real Dean route, clean instructor baseline diagnostic/`NEEDS_CORRECTION`/`MASTERED` sequence, native goal DONE at 4/30, fresh session naturally skill-viewed `auth-integration` scoring 8/8, all Academy-owned instructor skills byte-identical to Profile Packs source, Profile Packs source tree unchanged, downstream Hermes PR #29 verified with 89/89 focused tests, and no distributed-runtime dependency. No secret leakage, no overbroad content, and no duplicate skills were found.
-
-Phase 16 whole-change review found and corrected two release-level routing defects: unsafe universal broad-chair fallback and an installed-Dean documentation dependency on pack-root `routing.py`. The corrected release candidate adds manifest-owned category fallbacks, installed-profile-aware routing, fail-closed cross-category behavior, a self-contained installed Dean routing contract, and validator-enforced manifest/Dean parity. Its Profile Packs gate passed repository validation, **16/16** root tests, **19/19** Agency tests, **3/3** Council tests, and **199** Academy tests with one expected opt-in runtime skip.
-
 ## Compatibility and limitations
 
-- Continuing Education is **production-validated on the maintained downstream Hermes integration**.
-- Stock-install readiness remains pending until the normal NousResearch Hermes release provides equivalent generic support for the native CE seams. Do not remove this qualifier merely because the Profile Packs implementation review passed.
-- Continuing Education is **independent of Hermes Fleet** and requires no Fleet/Keryx/Nodescale/Templar/RunAuthority/Run Capsules.
+- Confirm that your Hermes build provides the generic capabilities listed under “Transport and native behavior.” Compatibility with the standard Hermes release is not yet guaranteed.
+- Continuing Education requires no separate training or distributed runtime.
 - Do not expose CLI, slash commands, or Bot internals as normal user UX.
 - Do not describe unimplemented optional Desktop UI.
 - Instructors teach within their subject and safety boundaries; they do not award grades, credentials, licenses, certifications, or professional authority.
 
 ## Maintainer notes
 
-This document describes the released Profile Packs behavior through Phase 16. Preserve the normative architecture contract in `CONTINUING_EDUCATION_ARCHITECTURE.md` and the exact release disposition in `CONTINUING_EDUCATION_RELEASE_REVIEW.md`.
+Preserve the normative architecture contract in `CONTINUING_EDUCATION_ARCHITECTURE.md` when changing this guide.
 
 The runtime Dean contract lives in `../hermes-academy/profiles/academy-dean/skills/faculty-routing/SKILL.md`. The repository helper `../hermes-academy/routing.py` is a reference implementation/test oracle only.
 
 ## Links
 
 - Architecture contract: [`CONTINUING_EDUCATION_ARCHITECTURE.md`](CONTINUING_EDUCATION_ARCHITECTURE.md)
-- Phase 16 release review: [`CONTINUING_EDUCATION_RELEASE_REVIEW.md`](CONTINUING_EDUCATION_RELEASE_REVIEW.md)
 - Academy overview: [`../hermes-academy/README.md`](../hermes-academy/README.md)
 - Teaching contract: [`../hermes-academy/ACADEMY.md`](../hermes-academy/ACADEMY.md)
 - Operating playbook: [`OPERATING_PLAYBOOK.md`](OPERATING_PLAYBOOK.md)
@@ -160,7 +134,6 @@ The runtime Dean contract lives in `../hermes-academy/profiles/academy-dean/skil
 - Installed Dean routing contract: `hermes-academy/profiles/academy-dean/skills/faculty-routing/SKILL.md`
 - Repository routing reference/tests: `hermes-academy/routing.py`
 - Architecture contract: `docs/CONTINUING_EDUCATION_ARCHITECTURE.md`
-- Phase 16 release review: `docs/CONTINUING_EDUCATION_RELEASE_REVIEW.md`
 - Academy manifest: `hermes-academy/academy.json`
 
 The Academy installer materializes the canonical shared skills into their participating profile distributions; validators enforce byte identity so contributors edit the canonical source rather than divergent copies.

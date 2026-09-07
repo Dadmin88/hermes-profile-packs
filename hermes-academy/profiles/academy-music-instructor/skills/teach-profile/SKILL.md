@@ -52,7 +52,7 @@ A baseline-assessment request should likewise diagnose the submitted baseline be
 - Never ask for secrets, credentials, full memory, or unrelated conversations.
 - Receive only the learner identity/role, one bounded objective, concise baseline evidence, and relevant skill names/descriptions when they materially affect instruction.
 - Do not create a training database, scheduler, candidate-skill registry, alternate message bus, or other persistence layer.
-- Do not depend on Fleet, Keryx, Nodescale, Templar, RunAuthority, or Run Capsules.
+- Do not depend on a separate distributed runtime.
 - Do not silently route the learner into another class. You may recommend follow-up study, but the learner or user must explicitly choose it.
 
 ## Minimum-sufficient teaching loop

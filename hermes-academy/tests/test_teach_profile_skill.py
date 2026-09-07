@@ -39,15 +39,7 @@ class TeachProfileSkillTests(unittest.TestCase):
         self.assertIn("Never edit the learner's skills", self.text)
         self.assertIn("Never ask for secrets, credentials, full memory", self.text)
         self.assertIn("The learner owns the `/learn` decision", self.text)
-        for forbidden_system in (
-            "Fleet",
-            "Keryx",
-            "Nodescale",
-            "Templar",
-            "RunAuthority",
-            "Run Capsules",
-        ):
-            self.assertIn(forbidden_system, self.text)
+        self.assertIn("Do not depend on a separate distributed runtime", self.text)
 
     def test_minimum_sufficient_instruction_is_explicit(self):
         required = (

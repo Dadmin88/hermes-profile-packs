@@ -31,7 +31,7 @@ This repository may define:
 
 Do not add live node registries, peer discovery, membership, scheduling, placement engines, capacity management, transport protocols, remote-execution services, task daemons, runtime databases, dashboards, deployment services, or custom orchestration runtimes here.
 
-In the wider Hermes ecosystem, Fleet may place and route profiles, Nodescale may provide node identity and membership, and Keryx may provide authenticated transport. Those systems consume Agency identities and packages; their implementations remain in their own repositories.
+External systems may consume Agency identities and packages through the static, portable contracts defined here. Their runtime implementations and operational state remain outside this repository.
 
 ## Sources of truth
 
@@ -120,7 +120,7 @@ Before adding third-party skill content:
 
 Popularity and marketplace ranking are not substitutes for review.
 
-## Fleet interoperability
+## External interoperability
 
 Agency profile names are stable professional identities across eligible Hermes nodes.
 

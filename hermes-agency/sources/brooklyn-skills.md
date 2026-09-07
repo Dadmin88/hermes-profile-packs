@@ -33,17 +33,17 @@ Each vendored/adapted import includes a local `SOURCE.md` with revision, license
 ## Reviewed but not imported
 
 - `perf`: useful but substantially covered by Agency Performance Engineer's deeper profiling, bottleneck, measurement, and regression procedures.
-- `runtime-debug`: useful logs-first guidance, but Agency Infrastructure Engineer already has broader runtime-layer and Fleet-relocation diagnosis.
+- `runtime-debug`: useful logs-first guidance, but Agency Infrastructure Engineer already has broader runtime-layer and relocation diagnosis.
 - `work`: worktree/task-environment orchestration is not a professional Agency capability and should remain outside profile semantics.
 - `ticket-ship`: tracker-to-ship workflow crosses into orchestration/project lifecycle rather than one specialist's professional capability.
-- `cpr`: composition wrapper around other skills; Agency/Fleet orchestration should compose capabilities instead of storing unnecessary wrapper skills.
+- `cpr`: composition wrapper around other skills; orchestration should compose capabilities instead of storing unnecessary wrapper skills.
 - `ui-only`: useful as an interactive workflow preference, but inappropriate as a default for autonomous distributed work because it intentionally delays normal validation/handoff steps.
 - `free-disk-space`: narrowly macOS-specific; a future Infrastructure skill should be generalized around disk-pressure diagnosis and safe cleanup if needed.
-- `notarize-mac`: useful specialist release procedure, but deferred until macOS signing/notarization is a recurring Agency/Fleet need.
+- `notarize-mac`: useful specialist release procedure, but deferred until macOS signing/notarization is a recurring Agency need.
 - `clean`: good diff-polish principles but overlaps current code-review/Git Steward procedures.
 - `audit-only`: good read-only behavior, but better represented by task authority and operating guardrails than a role-specific professional skill.
 - `no-tropes`: objective is useful, but its bundled reference explicitly attributes a separate third-party source whose redistribution provenance was not independently reviewed here; Agency should author its own prose-quality procedure if needed rather than vendoring that reference.
 
 ## Security and portability decision
 
-Approved imports are plain instruction documents and are adapted to avoid hard dependencies on one forge CLI, worktree layout, local hostname, provider, machine path, or live marketplace checkout. Fleet remains responsible for node placement and distributed execution; these skills define professional procedure only.
+Approved imports are plain instruction documents and are adapted to avoid hard dependencies on one forge CLI, worktree layout, local hostname, provider, machine path, or live marketplace checkout. External orchestration remains responsible for placement and distributed execution; these skills define professional procedure only.

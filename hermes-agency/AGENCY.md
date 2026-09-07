@@ -23,25 +23,23 @@ Examples:
 
 When several specialties are required, divide the work into bounded assignments and keep ownership explicit.
 
-## Distributed execution
+## Portable execution
 
-Agency profile names are stable professional identities that can be used across multiple Hermes nodes.
+Agency profile names are stable professional identities that can be used across multiple Hermes installations.
 
-`agency.json` provides the machine-readable roster and profile distribution layout. A distributed orchestrator such as Hermes Fleet can use those identities to select work for a profile while maintaining its own live knowledge of which nodes currently have that profile installed and ready.
+`agency.json` provides the machine-readable roster and profile distribution layout. An external orchestrator can use those identities to select work while maintaining its own live knowledge of which installations have a profile available.
 
 A typical distributed routing flow is:
 
 1. Select the Agency profile that owns the required outcome.
-2. Look up nodes currently advertising that profile identity.
-3. Filter those nodes using live health, capacity, policy, and availability.
-4. Route the assignment to a selected node using the system's authenticated transport.
-5. If no eligible node currently has the profile, install the Agency profile distribution on a suitable node, wait until the profile is reported ready, and then route the work.
+2. Look up installations currently advertising that profile identity.
+3. Filter them using live health, capacity, policy, and availability.
+4. Route the assignment using the orchestration system's authenticated transport.
+5. If no eligible installation currently has the profile, install its distribution on a suitable target, wait until it is reported ready, and then route the work.
 
-This allows a Fleet to place profiles where they are needed instead of requiring every Hermes node to carry the entire Agency roster.
+This allows an orchestrator to place profiles where they are needed instead of requiring every Hermes installation to carry the entire Agency roster.
 
-Node presence and placement are dynamic runtime state. They should be maintained by the distributed orchestration layer rather than encoded in the Agency profile pack. The same profile distribution should remain portable across eligible Hermes nodes.
-
-In the Hermes Fleet architecture, Nodescale can provide trusted node identity and membership, Fleet can maintain live profile availability and placement state, and Keryx can provide authenticated transport to the selected node.
+Presence and placement are dynamic runtime state. They should be maintained by the orchestration layer rather than encoded in the Agency profile pack. The same profile distribution should remain portable across eligible Hermes installations.
 
 ## Task packets
 
