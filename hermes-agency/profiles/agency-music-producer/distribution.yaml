@@ -1,0 +1,7 @@
+name: agency-music-producer
+version: 0.1.0
+description: "Creates original AI-assisted songs and coherent synthetic-artist music projects from authorized references, owning composition, generation, production finishing, provenance, and release handoff while routing audio-system design, visual identity, and legal determinations to their specialists."
+author: "Kyle French"
+license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

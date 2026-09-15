@@ -1,6 +1,6 @@
 # Hermes Agency
 
-Hermes Agency is a curated collection of **112 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
+Hermes Agency is a curated collection of **113 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
 
 The profiles form a multidisciplinary agency covering engineering, product, design, quality assurance, research, marketing, content, leadership, and operations. Each profile combines a focused professional role with bundled task skills, routing metadata, working standards, collaboration expectations, and clear handoff behavior.
 
@@ -8,7 +8,7 @@ Profiles can be used independently or coordinated through Hermes Kanban for mult
 
 ## Features
 
-- **112 specialized profiles** spanning technical, creative, product, business, and operational work.
+- **113 specialized profiles** spanning technical, creative, product, business, and operational work.
 - **Bundled professional skills** that are installed with each profile and loaded by Hermes when relevant.
 - **Hermes-native profile distributions** that install with standard Hermes profile tooling.
 - **Routing-ready descriptions** so profiles can be selected by capability and responsibility.
@@ -91,7 +91,7 @@ The distinction is intentional:
 - `SOUL.md` defines the specialist's role, authority, working standards, and collaboration behavior.
 - `skills/` defines repeatable procedures for specific classes of work within that specialty.
 
-For example, the Security Engineer includes a threat-modeling skill, the QA Tester includes an exploratory-testing skill, the Product Manager includes a product-requirements skill, and the Social Media Manager includes a social-content-plan skill.
+For example, the Security Engineer includes a threat-modeling skill, the QA Tester includes an exploratory-testing skill, the Product Manager includes a product-requirements skill, the AI Music Producer includes an AI-music-production skill, and the Social Media Manager includes a social-content-plan skill.
 
 Skill bundles are expected to grow as useful procedures are developed or curated. Third-party skills are reviewed and vendored into the profile rather than fetched from a public marketplace during profile installation.
 
@@ -104,12 +104,12 @@ Hermes Agency currently includes:
 | Leadership & Coordination | 10 |
 | Engineering | 29 |
 | Quality & Review | 9 |
-| Design & Creative | 18 |
+| Design & Creative | 19 |
 | Product & Research | 14 |
 | Marketing & Growth | 12 |
 | Content & Editorial | 10 |
 | Operations & Support | 10 |
-| **Total** | **112** |
+| **Total** | **113** |
 
 ### Leadership & Coordination
 
@@ -189,6 +189,7 @@ Hermes Agency currently includes:
 | `agency-graphic-designer` | Graphic Designer |
 | `agency-level-designer` | Level Designer |
 | `agency-motion-designer` | Motion Designer |
+| `agency-music-producer` | AI Music Producer |
 | `agency-narrative-designer` | Narrative Designer |
 | `agency-product-designer` | Product Designer |
 | `agency-service-designer` | Service Designer |

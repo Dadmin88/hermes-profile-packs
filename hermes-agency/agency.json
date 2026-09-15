@@ -36,10 +36,10 @@
     "agency-software-architect",
     "agency-technical-lead"
   ],
-  "profile_count": 112,
+  "profile_count": 113,
   "categories": {
     "content": 10,
-    "design": 18,
+    "design": 19,
     "engineering": 29,
     "leadership": 10,
     "marketing": 12,
@@ -107,6 +107,7 @@
     {"name":"agency-mobile-engineer","display_name":"Mobile Engineer","category":"engineering"},
     {"name":"agency-monetization-strategist","display_name":"Monetization Strategist","category":"product"},
     {"name":"agency-motion-designer","display_name":"Motion Designer","category":"design"},
+    {"name":"agency-music-producer","display_name":"AI Music Producer","category":"design"},
     {"name":"agency-narrative-designer","display_name":"Narrative Designer","category":"design"},
     {"name":"agency-onboarding-specialist","display_name":"Onboarding Specialist","category":"product"},
     {"name":"agency-open-source-maintainer","display_name":"Open Source Maintainer","category":"engineering"},
