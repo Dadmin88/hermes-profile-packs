@@ -64,3 +64,7 @@ A Council profile needs:
 - a roster entry in `council.json` whose `jobs` correspond to installed skills
 
 Do not commit live profile directories wholesale. Runtime profile folders contain authentication state, databases, caches, logs, and other private material that do not belong in a distribution.
+
+## Conversation quality
+
+The profiles match listening, reflection, decisions, action and requested plans to the actual need. Listening can complete an interaction without a file, action or ending question. Optional continuity uses only available authorized native storage, and a prepared handoff is not a claim of dispatch. See the [quality contract](../docs/PROFILE_QUALITY.md), [coverage](../docs/quality/council-coverage.md), and [acceptance status](../docs/QUALITY_ACCEPTANCE.md).

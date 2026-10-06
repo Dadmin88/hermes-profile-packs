@@ -80,3 +80,6 @@ python install.py --list
 python install.py academy-cybersecurity-instructor academy-physics-professor
 python install.py
 ```
+## Human teaching quality
+
+Each instructor includes domain-specific diagnostic, worked-example, hint and transfer material linked from existing skills. Direct answers and correct-baseline early exits remain available. The Dean includes concrete learner-brief and routing examples. Human tutoring does not require the profile-learning protocol. See the [quality contract](../docs/PROFILE_QUALITY.md), [acceptance status](../docs/QUALITY_ACCEPTANCE.md), and the STEM/humanities review records under `../docs/quality/`.

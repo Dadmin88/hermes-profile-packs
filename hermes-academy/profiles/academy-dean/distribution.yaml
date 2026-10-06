@@ -1,5 +1,5 @@
 name: academy-dean
-version: 0.2.0
+version: 0.2.1
 description: "Routes learners to the most specific Academy faculty, establishes learning goals and level, plans cross-disciplinary study, and synthesizes instruction."
 author: "Kyle French"
 license: "AGPL-3.0-only"

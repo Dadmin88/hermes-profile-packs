@@ -4,6 +4,13 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ## Unreleased
 
+### Profile quality
+
+- Clarified Council interaction modes so listening and direct answers can complete a conversation without mandatory files, actions or ending questions. Corrected assumed user biography, stale collaborator references and malformed SOUL Markdown.
+- Made Council handoffs and optional continuity conditional on available, authorized native capabilities and minimum necessary personal context.
+- Added domain-specific Academy human teaching kits, with diagnostics, differentiated misconceptions, worked reasoning, graduated hints and changed transfer tasks linked from existing skills. Preserved the separate Continuing Education contract.
+- Added profile/skill review coverage, synthetic behavioral cases, a source-to-catalog mapping and explicit acceptance records. Live verification status is documented separately from source content changes.
+
 ### Added
 
 - Added `agency-hermes-config-manager`, a conversational control-point specialist for safely inventorying, selecting, previewing, applying, verifying, and rolling back Hermes configuration across individual profiles or approved groups. It supports model/provider assignment and secure Hermes credential setup while requiring exact target approval, supported CLI interfaces, secret-safe handling, per-profile readback, active-profile protection, and explicit runtime-operator handoffs. Its procedures are original to this repository and grounded in verified Hermes CLI behavior.
