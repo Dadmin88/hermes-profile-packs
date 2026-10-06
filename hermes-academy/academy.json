@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "hermes-academy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A curated faculty of Hermes Agent professors and instructors for academic, technical, vocational, and professional learning.",
   "orchestrator": "academy-dean",
   "distribution": {"format":"hermes-profile-distribution","profile_identity_field":"name","profile_root":"profiles","profile_path_template":"profiles/{name}"},

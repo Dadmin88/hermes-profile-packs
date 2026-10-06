@@ -114,6 +114,12 @@ Both entry points use the same shared recipe engine.
 
 Use [`docs/OPERATING_PLAYBOOK.md`](docs/OPERATING_PLAYBOOK.md), [`docs/INSTALLATION_VERIFICATION.md`](docs/INSTALLATION_VERIFICATION.md), and [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md).
 
+## Profile quality
+
+Council supports listening, reflection, decisions, action and requested plans without requiring a file or task for every conversation. Academy human teaching includes domain-specific diagnostics, misconceptions, hints and transfer practice; direct answers remain available.
+
+See [`docs/PROFILE_QUALITY.md`](docs/PROFILE_QUALITY.md), the source-to-catalog [`mapping`](docs/CATALOG_MAPPING.md), and the [`acceptance record`](docs/QUALITY_ACCEPTANCE.md) for verified behavior and compatibility limits.
+
 ## Validate
 
 ```bash

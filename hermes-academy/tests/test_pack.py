@@ -20,7 +20,7 @@ class AcademyPackTests(unittest.TestCase):
 
     def test_v02_faculty_and_skill_targets(self):
         profiles = self.manifest["profiles"]
-        self.assertEqual(self.manifest["version"], "0.2.0")
+        self.assertEqual(self.manifest["version"], "0.2.1")
         self.assertEqual(len(profiles), 30)
         self.assertEqual(sum(len(profile["jobs"]) for profile in profiles), 120)
 
