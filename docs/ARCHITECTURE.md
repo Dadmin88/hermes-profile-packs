@@ -25,7 +25,7 @@ The Council roster began with:
 - stewardship: Personal Finance Coach, Home Steward
 - faith: Faith Guide
 
-Council has since expanded into additional health, resilience, time, career, administration, preparedness, recreation, travel, communication, and community specialties.
+Council has since expanded into additional health, resilience, time, career, administration, preparedness, recreation, travel, communication, community, and vehicle-stewardship specialties.
 
 ## Council routing model
 
