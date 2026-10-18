@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "hermes-council",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A curated collection of personal-life Hermes Agent profiles designed to work together as a trusted Council.",
   "orchestrator": "council-steward",
   "distribution": {
@@ -27,13 +27,13 @@
     "council-home-steward",
     "council-personal-admin-steward"
   ],
-  "profile_count": 21,
+  "profile_count": 22,
   "categories": {
     "coordination": 1,
     "growth": 4,
     "body": 4,
     "family": 2,
-    "stewardship": 4,
+    "stewardship": 5,
     "faith": 1,
     "career": 1,
     "lifestyle": 2,
@@ -57,6 +57,7 @@
     {"name":"council-career-coach","category":"career","description":"Helps navigate career direction, opportunities, job-search strategy, work boundaries, and long-term professional development from the perspective of the user's life.","role":"Supports career decisions and transitions while leaving professional project execution to Hermes Agency specialists.","jobs":["career-direction","opportunity-evaluation","job-search-plan","work-boundary-review"],"display_name":"Career Coach"},
     {"name":"council-personal-admin-steward","category":"stewardship","description":"Helps manage the paperwork and recurring logistics of adult life: documents, forms, appointments, renewals, subscriptions, accounts, and administrative follow-through.","role":"Reduces personal administrative load through simple systems, accurate checklists, and timely follow-up without taking unauthorized actions.","jobs":["document-system","renewal-tracker","form-and-appointment-prep","account-and-subscription-review"],"display_name":"Personal Admin Steward"},
     {"name":"council-preparedness-steward","category":"stewardship","description":"Helps prepare for ordinary emergencies and disruptions through household plans, contact information, go-bag planning, document readiness, and practical contingencies.","role":"Builds calm, proportionate readiness for plausible disruptions without fearmongering or turning preparedness into tactical fantasy.","jobs":["emergency-plan","go-bag-plan","household-contact-plan","contingency-review"],"display_name":"Preparedness Steward"},
+    {"name":"council-vehicle-steward","category":"stewardship","description":"Organizes vehicle maintenance, service evidence, repair and recall questions, and ownership obligations without diagnosing faults or taking unapproved action.","role":"Helps owners maintain trustworthy vehicle records, verify manufacturer-linked upkeep, and prepare informed service and ownership decisions.","jobs":["vehicle-records","maintenance-planning","repair-and-service-review","vehicle-ownership-planning"],"display_name":"Vehicle Steward"},
     {"name":"council-recreation-guide","category":"lifestyle","description":"Helps rediscover play, hobbies, restorative leisure, novelty, and enjoyable activities that do not need to justify themselves through productivity.","role":"Supports recreation as a legitimate part of a good life, especially when the user has forgotten what they enjoy outside obligation or numbing.","jobs":["hobby-discovery","restorative-leisure","outing-plan","play-and-novelty"],"display_name":"Recreation Guide"},
     {"name":"council-travel-planner","category":"lifestyle","description":"Plans practical personal travel around purpose, budget, timing, transport, lodging, itinerary, packing, accessibility, and current destination constraints.","role":"Turns a trip idea into a coherent, current, user-controlled plan without inventing availability, prices, entry requirements, or bookings.","jobs":["trip-brief","itinerary-plan","packing-plan","travel-budget"],"display_name":"Travel Planner"},
     {"name":"council-communication-coach","category":"connection","description":"Helps communicate clearly and respectfully through assertiveness, listening, difficult-conversation rehearsal, repair, and message clarity.","role":"Builds communication skill across family, friendship, work, and everyday life while leaving deeper relationship pattern analysis to Relationship Coach.","jobs":["assertive-communication","conversation-rehearsal","listening-and-repair","message-clarity"],"display_name":"Communication Coach"},

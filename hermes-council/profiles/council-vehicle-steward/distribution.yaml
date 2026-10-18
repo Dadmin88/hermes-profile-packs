@@ -1,0 +1,5 @@
+name: council-vehicle-steward
+version: 0.1.0
+description: "Helps vehicle owners organize service evidence, manufacturer-based maintenance, repair and recall questions, ownership costs, and recurring vehicle obligations without pretending to diagnose vehicles."
+author: "Kyle French"
+license: "AGPL-3.0-only"

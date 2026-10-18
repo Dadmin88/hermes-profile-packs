@@ -22,6 +22,7 @@ Hermes Council is the personal-life counterpart to Hermes Agency: a roster of fo
 | `council-home-steward` | Household systems, chores, inventories, resets, and meal logistics. |
 | `council-personal-admin-steward` | Documents, forms, renewals, appointments, accounts, and subscriptions. |
 | `council-preparedness-steward` | Household emergency plans, go-bags, contacts, and contingencies. |
+| `council-vehicle-steward` | Vehicle service history, manual-based upkeep, repair questions, recalls, ownership costs, and renewals. |
 | `council-learning-coach` | Learning plans, deliberate practice, study, and retention. |
 | `council-career-coach` | Career direction, opportunities, job-search strategy, and work boundaries. |
 | `council-recreation-guide` | Hobbies, restorative leisure, play, outings, and novelty. |
@@ -40,7 +41,7 @@ The pack intentionally uses `.no-bundled-skills` for Council profiles. Personal 
 
 Council profiles are advisory and supportive. They do not gain authority over accounts, money, bookings, medical treatment, legal rights, family members, or other consequential actions simply because they can produce a plan.
 
-Health and resilience profiles preserve clinical boundaries. Finance preserves regulated-advice boundaries. Travel and preparedness profiles verify current information when it matters. Communication and relationship profiles do not coach coercion or manufacture certainty about other people's motives.
+Health and resilience profiles preserve clinical boundaries. Finance preserves regulated-advice boundaries. Travel, preparedness, and vehicle profiles verify current information when it matters. Vehicle Steward does not diagnose faults, certify safety, or assume that estimated or booked service is completed. Communication and relationship profiles do not coach coercion or manufacture certainty about other people's motives.
 
 ## Install
 
