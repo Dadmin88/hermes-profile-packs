@@ -143,3 +143,6 @@ See [`PACK_SPEC.md`](PACK_SPEC.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`
 ## License
 
 AGPL-3.0-only. See [`LICENSE`](LICENSE).
+## Standalone smartwatch distribution
+
+[Hermes Wear](hermes-wear/README.md) provides a portable wrist assistant profile through native Hermes installation, separately from the three team catalogs.

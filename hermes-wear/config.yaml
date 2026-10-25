@@ -1,0 +1,12 @@
+tools:
+  tool_search:
+    enabled: "off"
+platform_toolsets:
+  api_server: [memory, session_search]
+  cli: [memory, session_search]
+agent:
+  max_turns: 12
+  disabled_toolsets: [terminal, file, browser, code_execution, delegation, cronjob, skills, computer_use, image_gen, tts]
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
