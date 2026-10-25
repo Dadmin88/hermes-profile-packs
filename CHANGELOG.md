@@ -6,6 +6,8 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Added Hermes Wear device-awareness protocol, three on-demand device interpretation skills, and synthetic contract fixtures. Live watch/device tool integration remains separate and is not claimed complete.
+
 - Expanded standalone `hermes-wear` to v1.1.0 with ten wrist-specific skills, voice transcript repair, quick capture, time/reminder safeguards, integration-backed confirmation, background run/reconnect recovery, private memory rules, watch safety, and explicit skills/read-only web toolsets while preserving the restricted execution boundary.
 - Added `council-vehicle-steward` with four original, evidence-first skills for vehicle records, manual-linked maintenance, repair/recall questions, and ownership planning, preserving source uncertainty, privacy, and user approval for consequential actions.
 - Added `agency-hermes-config-manager`, a conversational control-point specialist for safely inventorying, selecting, previewing, applying, verifying, and rolling back Hermes configuration across individual profiles or approved groups. It supports model/provider assignment and secure Hermes credential setup while requiring exact target approval, supported CLI interfaces, secret-safe handling, per-profile readback, active-profile protection, and explicit runtime-operator handoffs. Its procedures are original to this repository and grounded in verified Hermes CLI behavior.

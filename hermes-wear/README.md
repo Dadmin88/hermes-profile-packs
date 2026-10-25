@@ -26,6 +26,10 @@ Review changes before updating an existing installed profile. Hermes generally *
 | `wear-memory-privacy` | Keep memory minimal, private and isolated |
 | `watch-context-safety` | Public speech, limited attention and urgent situations |
 
+## Device awareness (integration planned)
+
+Additional specialized skills: `watch-capability-discovery`, `watch-device-context`, and `watch-tool-results`. The [versioned device-awareness contract](DEVICE_AWARENESS.md) defines how Hermes will discover watch/phone capabilities, request location/battery/network readings and interpret actual tool responses. It includes synthetic JSON examples and permission/freshness rules. **No watch-location permission, live bridge or extra Hermes device tools are installed by this source change.**
+
 The distributed toolsets are memory, session search, skills and read-oriented web lookup (only when supported/configured). The older profile shipped skills but **disabled its skills toolset**. Version 1.1.0 allows native skills lookup, while keeping terminal, file, browser, code execution, delegation, cron, computer-use, image generation and server-side TTS disabled. The skills toolset may expose native skill management; enforce normal Hermes write approvals and an OS-level restricted runtime identity.
 
 **Capability ≠ instruction.** Watch notifications, timers, GPS, calls, texting, sensors, microphone/STT, audio playback, persistent backend runs, and structured approvals require separate integrations. This profile does not pretend they exist. Consequential actions additionally require actual backend permission enforcement.

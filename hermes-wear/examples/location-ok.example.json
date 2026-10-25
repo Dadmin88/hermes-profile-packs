@@ -1,0 +1,15 @@
+{
+  "schema": "hermes-wear.tool-result.v1",
+  "synthetic": true,
+  "request_id": "synthetic-location-001",
+  "tool": "watch.location.current",
+  "status": "ok",
+  "source": "watch_gps",
+  "observed_at": "2026-01-01T00:00:00Z",
+  "data": {
+    "latitude": 40,
+    "longitude": -100,
+    "accuracy_m": 30,
+    "precision": "coarse"
+  }
+}

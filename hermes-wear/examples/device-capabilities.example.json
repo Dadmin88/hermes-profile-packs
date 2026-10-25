@@ -1,0 +1,35 @@
+{
+  "schema": "hermes-wear.capabilities.v1",
+  "synthetic": true,
+  "issued_at": "2026-01-01T00:00:00Z",
+  "device": {
+    "kind": "watch",
+    "platform": "Wear OS",
+    "source": "watch",
+    "app_version": "synthetic"
+  },
+  "capabilities": [
+    {
+      "id": "watch.battery.status",
+      "supported": true,
+      "permission": "not_required",
+      "available": true,
+      "source": "watch"
+    },
+    {
+      "id": "watch.connection.status",
+      "supported": true,
+      "permission": "not_required",
+      "available": true,
+      "source": "watch"
+    },
+    {
+      "id": "watch.location.current",
+      "supported": true,
+      "permission": "prompt",
+      "available": false,
+      "source": "watch",
+      "reason": "permission_required"
+    }
+  ]
+}

@@ -10,5 +10,6 @@ description: Route spoken smartwatch requests into a quick answer, capture, remi
 3. For voice uncertainty, invoke the voice-transcript-repair procedure. Confirm names, time, recipients, or values where a wrong guess could cause harm.
 4. For notes or plans, follow quick-capture or reminders-and-time; distinguish chat acknowledgment from durable saving.
 5. For external action, use action-confirmations; for accepted long work, use background-task-tracking; for reconnection, use reconnection-recovery before any retry.
-6. Apply watch-context-safety and wear-memory-privacy throughout.
-7. Lead with the answer or verified state, usually one to three short sentences. Expand when the user wants depth. Never fabricate capabilities.
+6. For device-state questions such as location, watch battery and phone connection, first inspect real registered capabilities with `watch-capability-discovery`, then use `watch-device-context` and `watch-tool-results` if supported.
+7. Apply watch-context-safety and wear-memory-privacy throughout.
+8. Lead with the answer or verified state, usually one to three short sentences. Expand when the user wants depth. Never fabricate capabilities.

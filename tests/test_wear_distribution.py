@@ -8,11 +8,14 @@ SKILLS = {
     "quick-capture", "reminders-and-time", "action-confirmations",
     "background-task-tracking", "reconnection-recovery",
     "wear-memory-privacy", "watch-context-safety",
+    "watch-capability-discovery", "watch-device-context", "watch-tool-results",
 }
 
 class WearDistributionTests(unittest.TestCase):
     def test_distribution_contains_only_portable_source(self):
-        allowed = {"SOUL.md", "config.yaml", "distribution.yaml", "README.md", ".no-bundled-skills"}
+        allowed = {"SOUL.md", "config.yaml", "distribution.yaml", "README.md", ".no-bundled-skills", "DEVICE_AWARENESS.md",
+                   "examples/device-capabilities.example.json", "examples/location-ok.example.json",
+                   "examples/location-permission-required.example.json"}
         allowed.update(f"skills/{name}/SKILL.md" for name in SKILLS)
         actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob("*") if p.is_file()}
         self.assertEqual(allowed, actual)
@@ -51,6 +54,22 @@ class WearDistributionTests(unittest.TestCase):
                 self.assertEqual(name, frontmatter["name"])
                 self.assertTrue(frontmatter["description"])
                 self.assertGreater(len(body), 250)
+
+    def test_device_context_fixtures(self):
+        import json
+        examples = ROOT / "examples"
+        caps = json.loads((examples / "device-capabilities.example.json").read_text())
+        ok = json.loads((examples / "location-ok.example.json").read_text())
+        denied = json.loads((examples / "location-permission-required.example.json").read_text())
+        self.assertTrue(all(x["synthetic"] for x in (caps, ok, denied)))
+        self.assertEqual("hermes-wear.capabilities.v1", caps["schema"])
+        self.assertEqual("hermes-wear.tool-result.v1", ok["schema"])
+        self.assertEqual("watch.location.current", ok["tool"])
+        self.assertEqual("ok", ok["status"])
+        self.assertIn("accuracy_m", ok["data"])
+        self.assertEqual("permission_required", denied["status"])
+        self.assertNotIn("latitude", denied.get("data", {}))
+        self.assertIn("Never persist", (ROOT / "DEVICE_AWARENESS.md").read_text())
 
     def test_risk_sensitive_contracts(self):
         soul = (ROOT / "SOUL.md").read_text()
