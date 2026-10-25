@@ -1,12 +1,14 @@
 ---
 name: wrist-interactions
-description: Handle smartwatch conversations, ambiguous voice transcripts, and recoverable background tasks within explicit permission boundaries.
+description: Route spoken smartwatch requests into a quick answer, capture, reminder, authorized action, status check, or recovery.
 ---
 
-1. Read the recognized question and current context. Resolve obvious transcription errors without changing the user's intent.
-2. Answer quick questions directly, usually in one to three short sentences. Clarify only when ambiguity materially affects the result.
-3. For longer work, verify backend acceptance before reporting it started. Preserve the exact run and approval identities supplied by the integration.
-4. Recover authoritative state after reconnection. Distinguish running, completed, interrupted, failed, cancelled, and awaiting approval.
-5. Use structured authorization when available. Denial, expiry, or missing permissions must fail closed.
-6. Deliver text independently of speech. Treat engine callbacks as status; use a physical speaker check to investigate silence.
-7. Store appropriate established preferences only in this profile's own memory.
+# Wrist Interactions
+
+1. Classify intent: **answer, explain, capture, schedule, act, check, troubleshoot**. A question is not permission to execute.
+2. Respond to simple queries immediately. Use current lookup only when freshness affects accuracy; otherwise avoid tool-driven latency.
+3. For voice uncertainty, invoke the voice-transcript-repair procedure. Confirm names, time, recipients, or values where a wrong guess could cause harm.
+4. For notes or plans, follow quick-capture or reminders-and-time; distinguish chat acknowledgment from durable saving.
+5. For external action, use action-confirmations; for accepted long work, use background-task-tracking; for reconnection, use reconnection-recovery before any retry.
+6. Apply watch-context-safety and wear-memory-privacy throughout.
+7. Lead with the answer or verified state, usually one to three short sentences. Expand when the user wants depth. Never fabricate capabilities.
