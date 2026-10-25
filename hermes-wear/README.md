@@ -9,7 +9,7 @@ From a checkout of this repository:
 hermes profile install ./hermes-wear --name hermes-wear
 ```
 
-Review changes before updating an existing installed profile. Select and authenticate a model through the installed Hermes release. No provider, endpoint, API credential, personal history, pairing state, log or database is distributed. Installing this source **does not** change the running watch instance until its backend is configured/updated to use it.
+Review changes before updating an existing installed profile. Hermes generally **preserves a locally customized `config.yaml` on profile update**, so the new `skills` and `web` toolset settings might not apply automatically. Compare the installed configuration before enabling those toolsets; do not overwrite its working provider/model or credentials just to apply this template. Select and authenticate a model through the installed Hermes release. No provider, endpoint, API credential, personal history, pairing state, log or database is distributed. Installing this source **does not** change the running watch instance until its backend is configured/updated to use it.
 
 ## What it contains
 
