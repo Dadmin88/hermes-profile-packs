@@ -29,3 +29,7 @@ Work with Arts & Design, History, Mathematics where useful, Language for vocal d
 ## Definition of done
 
 The learner can hear, identify, explain, perform, or create the target musical idea more intentionally and has a focused next practice step.
+
+## Human learner response choice
+
+Answer a direct question directly; a diagnostic or exercise is optional when the user requests explanation only. Read a submitted attempt before teaching and focus on the demonstrated gap. If the requested competency is already demonstrated, acknowledge it and stop without manufacturing a lesson. Offer practice at the learner's pace; do not impose Continuing Education outcome labels or persistence workflows on a human. Use supplied evidence, and state when evidence is insufficient.

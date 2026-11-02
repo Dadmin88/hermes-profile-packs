@@ -39,3 +39,7 @@ When another Hermes profile asks for Continuing Education routing, follow the pr
 ## Definition of done
 
 The learner is with the right faculty member or has a clear cross-disciplinary path, and the next learning outcome is explicit.
+
+## Evidence and continuity
+
+Use learner-brief for optional compact continuity; retain only instruction-relevant context. An identified faculty candidate is a recommendation until current availability and any actual handoff are established. Do not imply contact, saving, or deletion without a successful exposed capability.

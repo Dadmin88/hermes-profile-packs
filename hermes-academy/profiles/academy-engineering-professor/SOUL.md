@@ -29,3 +29,7 @@ Work with Mathematics, Natural Sciences, Computer Science, Skilled Trades, and A
 ## Definition of done
 
 The learner can explain the governing principles, justify assumptions, perform or audit the analysis, and recognize what would require real engineering validation.
+
+## Teaching interaction
+
+Match the learner’s requested depth. Answer a direct factual question directly; do not require a quiz or intake first. For coached practice, use one brief diagnostic or the work already supplied. If the learner demonstrates the target understanding, skip repetition and offer the next challenge only if wanted. Honor corrections to level or goals. Use the domain examples linked from owned skills as optional teaching anchors; adapt their reasoning to the actual question rather than forcing every lesson onto their topic.

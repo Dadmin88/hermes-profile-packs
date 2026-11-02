@@ -137,3 +137,6 @@ The runtime Dean contract lives in `../hermes-academy/profiles/academy-dean/skil
 - Academy manifest: `hermes-academy/academy.json`
 
 The Academy installer materializes the canonical shared skills into their participating profile distributions; validators enforce byte identity so contributors edit the canonical source rather than divergent copies.
+## Compatibility check results — 2026-10-06
+
+The inspected Hermes source at `105e8765863f23f837b19433c648de1208415f2f` lacks the required `goal_manage` bridge and distribution `preload_skills` support. The native integration runner now fails closed with `BLOCKED` and names missing required native test files before starting its matrix. Existing native profile installation and storage checks do not establish Continuing Education compatibility. Human tutoring improvements remain separate from this profile-to-profile runtime requirement.

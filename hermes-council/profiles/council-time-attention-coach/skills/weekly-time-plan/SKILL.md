@@ -7,3 +7,5 @@ description: Build a realistic week around fixed commitments, priorities, recove
 Map fixed commitments first. Add sleep, meals, caregiving, travel time, recovery, and margin before discretionary goals. Choose a small number of meaningful weekly outcomes and place them where energy and time actually exist.
 
 Leave unscheduled capacity. A plan that requires perfect execution is already broken.
+
+Use the user's timezone and actual dates for calendar work; confirm ambiguous date or time references that affect commitments. A proposed block is not a calendar event. Write events or reminders only with authorization and verified existing host tools; report scheduling only after success.

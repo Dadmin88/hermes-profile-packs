@@ -2,214 +2,214 @@
   "commit": "f76aabc3abbe03fb9c297f6d2789aed210fdd39c",
   "profile_source_files": {
     "hermes-academy/profiles/academy-arts-design-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-arts-design-instructor/SOUL.md": "403a4d044efa41e82207e1a744319ac2f7780615f1a1160d4a61c99faa3146ed",
-    "hermes-academy/profiles/academy-arts-design-instructor/skills/art-design-foundations/SKILL.md": "1bbb20fad48207d92cd89945434ed067eb38db7dcac05a983e042a429b9d9ac3",
-    "hermes-academy/profiles/academy-arts-design-instructor/skills/creative-practice/SKILL.md": "04f8ace2b0679736b73b1439bb832c708d9d80f3edf6e5e916ff374cfd7490cd",
-    "hermes-academy/profiles/academy-arts-design-instructor/skills/critique-workshop/SKILL.md": "7edcefd7ae06d9ba55b2ab1641c761db164867aa4587a7af391eaef3d10d55a1",
-    "hermes-academy/profiles/academy-arts-design-instructor/skills/portfolio-learning-review/SKILL.md": "3fa1dab6358238d9c74d53baea9175b777fc80e493f3874d28c43d0fc599ad4f",
+    "hermes-academy/profiles/academy-arts-design-instructor/SOUL.md": "05c772f38bf60826c40f198ec79b283f8e383c03f2662d328e81dc55a594fb55",
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/art-design-foundations/SKILL.md": "a1aad9e9702941583af188d98605914f82e14bd6a6fa0086cfef15c6cb14e0de",
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/creative-practice/SKILL.md": "466c761318471838d3befb79cb82d8d2e064759a341a5c2bcac5d739fb94a1c0",
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/critique-workshop/SKILL.md": "9d3f6115291f2ff5bce2d5dc7f98fc0cf13724959fd7e4c32bb48c1a0d1634a8",
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/portfolio-learning-review/SKILL.md": "528735c716449b02e3a4c30cee8911bc72ecbdc4e431c7f1555a68a4d4c02848",
     "hermes-academy/profiles/academy-arts-design-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-automotive-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-automotive-instructor/SOUL.md": "6fa00607c7ee61fccf207404b3d8e5f851afc065008193f9e1af2dc55e4bb250",
-    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-safety-review/SKILL.md": "83e36a8be3891ba93b90c7934dc989baa78753d60b1f6e96981b6163d6cf8743",
-    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-systems-lesson/SKILL.md": "51880d29f6191d34f5f0224dcf44a36b617f6a74978f2f30e793185105980c20",
-    "hermes-academy/profiles/academy-automotive-instructor/skills/diagnostic-reasoning/SKILL.md": "c72af5b32b9ffd685e734572a9e138c9cc4152e5ab917f2564d43918034e45d7",
-    "hermes-academy/profiles/academy-automotive-instructor/skills/maintenance-procedure-lesson/SKILL.md": "09856d8f91067210c51ff184bd8a929c851d0af13f4dfee36713d3ef6d344b00",
+    "hermes-academy/profiles/academy-automotive-instructor/SOUL.md": "012a7652131b0a8c921c130b45c6025131a442ddc49b4ebd97ff29ef0c68b8db",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-safety-review/SKILL.md": "a941b8870b17e856d9f69bde191ec893d1bdf5f1fb49e01cb2b58e63b6fa656c",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-systems-lesson/SKILL.md": "e1a4a0c0ab87c76e6ffd9dec01bf63b5454e57ef72256ec8385cc179830a8739",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/diagnostic-reasoning/SKILL.md": "f00874b5b21cfd791475566eeb835ba98a32412f19d7c1cb768b40ab046c2268",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/maintenance-procedure-lesson/SKILL.md": "9b56189e803943661fd5af321492abbdf558318ba4150a99e20f595e9c32bd65",
     "hermes-academy/profiles/academy-automotive-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-biology-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-biology-professor/SOUL.md": "d3c222303af2cc1787ae422038b87f2ec2d4430d236edd253dd8d3a4b675c9c5",
-    "hermes-academy/profiles/academy-biology-professor/skills/biological-systems-analysis/SKILL.md": "a900319a4159609e3ab08fc824d0d2ab603fd0be8a098911f5f47f6281f32a44",
-    "hermes-academy/profiles/academy-biology-professor/skills/biology-concept-lesson/SKILL.md": "cbf482b5b4af51182eae46ce38ac33423be038af88e1167d561d426cfc4e5a1d",
-    "hermes-academy/profiles/academy-biology-professor/skills/biology-mastery-check/SKILL.md": "7f7e9dedc04e1dfbe4df2975eefd6f5e2551a7b772125381b419d29128e41180",
-    "hermes-academy/profiles/academy-biology-professor/skills/genetics-and-evolution-practice/SKILL.md": "89c436f308b6ecc2758de400979f007d501e76bfc2119c2d9f2ddfa4b2f663fa",
+    "hermes-academy/profiles/academy-biology-professor/SOUL.md": "b4e6ceabac521d25013f199000904895e56e88bca8e0329caa556f8fce3f3f4b",
+    "hermes-academy/profiles/academy-biology-professor/skills/biological-systems-analysis/SKILL.md": "c8089dfc1fafd1a3c0e152048ac07812a331c045d57852aeffdf0029473b2081",
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-concept-lesson/SKILL.md": "fe3e1fec2de82bd4c4f5d6224cb43bd69a512df2fd00e0075006eeb184d014fb",
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-mastery-check/SKILL.md": "77bebd166987340e0207e19b166b99453989855ab63176caa3ff319434251412",
+    "hermes-academy/profiles/academy-biology-professor/skills/genetics-and-evolution-practice/SKILL.md": "2555d21bcc76d2ff34d59cb1392eeb9d0810ae9750e853f3e24348ad2dd063a3",
     "hermes-academy/profiles/academy-biology-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-business-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-business-professor/SOUL.md": "74f8e5d0b4c934bd425b4f79eff0be76c2ef0cdfc533b21f770801e0491c9608",
-    "hermes-academy/profiles/academy-business-professor/skills/business-concept-lesson/SKILL.md": "0d7be511d62a5fb6c72bbe13d0cad042b6f2790622798baec4b0758de21dc078",
-    "hermes-academy/profiles/academy-business-professor/skills/business-mastery-check/SKILL.md": "52338d96707aead8283dd31565a7247c1209c31595c6435fe92ebf51a60b865b",
-    "hermes-academy/profiles/academy-business-professor/skills/business-numeracy/SKILL.md": "b9c876b0857c41cd61df68a32637a0f07b6f7110a89163ba5fab9cdc5fe4277a",
-    "hermes-academy/profiles/academy-business-professor/skills/case-study-analysis/SKILL.md": "f63b21a0df7c53d06be6b1411a63c4e16f1eb1fdbda87a31e626e4959ab21722",
+    "hermes-academy/profiles/academy-business-professor/SOUL.md": "95c90adc7ad2f4e2b310e8d363b7c06b7af574200cfb8c4b19d107cdd536f5e9",
+    "hermes-academy/profiles/academy-business-professor/skills/business-concept-lesson/SKILL.md": "e49096b4aa1acbe6f10ebada5caf80408c9b3a782e814794d3ad55649d4927fd",
+    "hermes-academy/profiles/academy-business-professor/skills/business-mastery-check/SKILL.md": "e93d4b61adf727bdfea1008f9437f104193f5832ac6738ec60ac44d34bbdf6e6",
+    "hermes-academy/profiles/academy-business-professor/skills/business-numeracy/SKILL.md": "f0d5a8eec20b58aab877104f7e5985a905e99b20dd7a7bf32e54f9488b348fcc",
+    "hermes-academy/profiles/academy-business-professor/skills/case-study-analysis/SKILL.md": "8b1fd9741d62ffa662168b6171dbb059500a3a085ac47456c650fbf1e363c21c",
     "hermes-academy/profiles/academy-business-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-chemistry-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-chemistry-professor/SOUL.md": "4ba2839e16b1b0d72afb43f6860b788f47127a1a8a1ff7b5ddbf5c3500265994",
-    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-concept-lesson/SKILL.md": "2239c7732710a9cf4f45043bab2b7e1618911528a82e006f73a1f051b12f7e9a",
-    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-mastery-check/SKILL.md": "8f2b3ea53fff41b6fafad1b371116d829c903fed3b517bbcb85d28e1aad0cfa8",
-    "hermes-academy/profiles/academy-chemistry-professor/skills/equation-and-stoichiometry-practice/SKILL.md": "952950aa66bdee2ee486d51c0cf1f5ef20bfd8b603966934916042c61430fb47",
-    "hermes-academy/profiles/academy-chemistry-professor/skills/molecular-structure-reasoning/SKILL.md": "feb64fb8d6fb3bb2f9b73943589fb366469ef6b3d7b1303d11bc9b04f049900f",
+    "hermes-academy/profiles/academy-chemistry-professor/SOUL.md": "b0f6139e99550d4253ecd3c8fbb7704306a98a6033fa757f0075c63e8477b768",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-concept-lesson/SKILL.md": "f0508e232bec2cc358b3bf3f93a831bd23d7d6c07f9b4c6a98bac49073c84a6a",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-mastery-check/SKILL.md": "cf34f718917f818e6fc89c9567aefa70b9f4960782d9ded223eb23e76db4a2e4",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/equation-and-stoichiometry-practice/SKILL.md": "58f222480e127000f3bb6508ea7369ec4e2a31406f9330dc4b79ef1ea20a20f1",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/molecular-structure-reasoning/SKILL.md": "41b7dabdcbc298341c5079202913b44ade8bd4a98a4013bfb019f9091134daf8",
     "hermes-academy/profiles/academy-chemistry-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-cloud-systems-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-cloud-systems-instructor/SOUL.md": "8e476f508dd0ab2d8489c57779dc353c20d476b3f1270a4ed4c2e1204c41d1a2",
-    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/architecture-reading/SKILL.md": "b37b7c80f1862279e050673d66e1470aa7c2bb3724dd1387f6cd619ade0ca05f",
-    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-concept-lesson/SKILL.md": "81be0e70ab4b23e45ebbc5627312e043f397281b8f347b7503b16ce485be1102",
-    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-systems-mastery-check/SKILL.md": "29e294583d7901e4a56b96f33576e5ab83d19b10acf9da0ed5f922044c10dace",
-    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/reliability-practice/SKILL.md": "898fcd77b2fa649e3c04a09a96c6fc6c527d54bd4fb27fde807daba070f4389f",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/SOUL.md": "3c180a8f74d84f7c021ae566883816d4cab3fb0030e8e65d151793ea42cccdce",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/architecture-reading/SKILL.md": "a0346d64549e3b14ea594e5c3067949c75fff1b643d39618adf7c626d1bdba77",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-concept-lesson/SKILL.md": "d761a1cb6a81ddd82772c1c1ec9c717dd2b1e499c34664124e6c1d7c3500cbdc",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-systems-mastery-check/SKILL.md": "6ad7777e27d5c2625313cb2274c7083550774a4032b147e7920eb4f4efb8c1ef",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/reliability-practice/SKILL.md": "993c094af8452c1431284b490c6c36349da07f7a3f6f6671e8610dd1d038536d",
     "hermes-academy/profiles/academy-cloud-systems-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-computer-science-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-computer-science-professor/SOUL.md": "3f86c3d0ca2067785606d61aeb11279e1d8d9707293d52bbc5a78e4e8938ac64",
-    "hermes-academy/profiles/academy-computer-science-professor/skills/algorithm-tracing/SKILL.md": "3d3c6a3c5cc39b454e75b54d0488a01aede6086485b3c4248e5f735dda3d7d8a",
-    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-concept-lesson/SKILL.md": "595db522cc638857b671871d42eca8012440b0eeb5b3370060f01718051e4fa9",
-    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-mastery-check/SKILL.md": "afddd1fe9d70b29beaf74873d8fde2be68eddfa98a847d9212e3d22275abacab",
-    "hermes-academy/profiles/academy-computer-science-professor/skills/programming-practice/SKILL.md": "20ff2c0e46a791dc9afe192607f742c8b43730d8cec9d6bfc00eaaae711b58fd",
+    "hermes-academy/profiles/academy-computer-science-professor/SOUL.md": "0da468d443bfef32af19a49fa6239ad75c10b112c01b5c166dbc5c7743d42543",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/algorithm-tracing/SKILL.md": "35231c986eeae2bdc469d82c753827575de1083f53bb8176e054805a9065f970",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-concept-lesson/SKILL.md": "365ac0a83772b21e5077cc3e62aef8ec7061964fc6a1f2f8a0ec114d66513a22",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-mastery-check/SKILL.md": "4a34ba8954788dceeb7107534429e6396fc7afae6f0e2ce0d58327d9b5c78517",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/programming-practice/SKILL.md": "03b18d1fce0272d1f4660148f6d7f7b65cf58bf949af25416449154ffaf7fe6c",
     "hermes-academy/profiles/academy-computer-science-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-culinary-arts-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-culinary-arts-instructor/SOUL.md": "1a131b5819ac05b341880e4a3471d8697b1d64e7ab3429ea3fb8d0ac60d5f35f",
-    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-practice-review/SKILL.md": "29d12bd4eac53b6db5ee7b1ce22e1df1d642fdadb096f9f56738249f626ae234",
-    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-technique-lesson/SKILL.md": "2436594fdef7311c7dc832b5884223d4136174ac568575682c7a9b1a37ade0d5",
-    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/food-safety-foundations/SKILL.md": "e3c38ba990ebcaf36177d0d6ae7e77dff34a00f003b3be585a63df59d1f33a7e",
-    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/recipe-reasoning/SKILL.md": "8577a52daeeff0787a95e5ea16a6e68dab4e53a7890e3b0847c403045bf92334",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/SOUL.md": "6858b26443c8f090fe60187cefa342669bc2ed11be83978f37befbc45312ceba",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-practice-review/SKILL.md": "906897130b7e28579d38fc42f43509c58aeb823ec9915cbf7fbe51c6815997f3",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-technique-lesson/SKILL.md": "3d7e8bb7d96ecc4e442de1406dceda144ecfd2a4df6100e0b4f393677e47e9e4",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/food-safety-foundations/SKILL.md": "82cd418cbc657478d925fe7814685df2877b48991db88a3500b407ba60260d9f",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/recipe-reasoning/SKILL.md": "0ae62b73032b116e0feb585e381f3719a0f9498666cc74f6678175f4b64b4e07",
     "hermes-academy/profiles/academy-culinary-arts-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-cybersecurity-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-cybersecurity-instructor/SOUL.md": "2e204a2eeb1c3495bdecb7697be8cc2700e0bd8e0a3d56a61a8b0b5da622345b",
-    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/cybersecurity-mastery-check/SKILL.md": "75c8c3f5db6253ee9055ee1763e7752dec4012e3358fc4878434272ed778118c",
-    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/defensive-lab-reasoning/SKILL.md": "18b11af301a9e1ff32a94f7afe11b542566d06d298e513b6f2d2befa197625b0",
-    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/security-concept-lesson/SKILL.md": "842b527e028702b67bba38d097356ce289a1a294627f732238f0009f8a55956c",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/SOUL.md": "a68a89431109b1fff58e74414b4b68e763eda1e97000fb3e01849fd8d7eaaee1",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/cybersecurity-mastery-check/SKILL.md": "9ea7aef708f1dd2eee8e825fa7c5c143cc78b4188da310a9fe90c36ecfd2873f",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/defensive-lab-reasoning/SKILL.md": "9b98e3444e1f1501084006a1509fd885fa90f7b2934b96b36b0eb7696fdd70e8",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/security-concept-lesson/SKILL.md": "b943562dd96dad1d890b2c2bc0d5712e5432af5cbd0e4952acba36fe7d2af6d2",
     "hermes-academy/profiles/academy-cybersecurity-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/threat-modeling-practice/SKILL.md": "8f9967f03e3ea6b7b9753239a2840deb60f50cec3362bb3672e87e24539988c9",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/threat-modeling-practice/SKILL.md": "67856fe135bd05884a07dbd66766f14e16f4f7751d7777057bf41ec268845aa1",
     "hermes-academy/profiles/academy-data-science-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-data-science-professor/SOUL.md": "f318cb638fae470d70245149974f60b6764410f73b28b89008a232b7c69064f6",
-    "hermes-academy/profiles/academy-data-science-professor/skills/data-analysis-workflow/SKILL.md": "ca6c69b0885a2314ef3a95017c30ebb6a8e01be512a2ef303bb8539e525c7c6f",
-    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-concept-lesson/SKILL.md": "cb8c3f69e83b5afcbc23e71322920028fe8f196fdecda6ccfbbf853b603e089a",
-    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-mastery-check/SKILL.md": "e2a9fefbf013e9a8a36c92c618910508c68e723f55b6dc0cf6444981c2fc5337",
-    "hermes-academy/profiles/academy-data-science-professor/skills/model-evaluation-lesson/SKILL.md": "229eba1ced4798d90aa02ee0f0a0be773c228154b5c528ce6b0a2f660a75f27d",
+    "hermes-academy/profiles/academy-data-science-professor/SOUL.md": "122d947154853d86d052a0ba917fca9d46bb4c5132988890a7f523cf90b7b369",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-analysis-workflow/SKILL.md": "b18a1218b28474b7e187d2afd5dd99cfd0de9307325d15a196f3ed8802f434fc",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-concept-lesson/SKILL.md": "3381ad59bd70d67cd2d49499af53d476e21d165eb1adfc0835bc58966af21292",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-mastery-check/SKILL.md": "1fcfe1b115b75296415d6ca9f2de5d4f78b864bf2b992873a42e85558fc28c07",
+    "hermes-academy/profiles/academy-data-science-professor/skills/model-evaluation-lesson/SKILL.md": "6b25c7f598fa4e3f2aaa79a55843141dc1f0cca72d566572044a24f1c4e9ba83",
     "hermes-academy/profiles/academy-data-science-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-dean/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-dean/SOUL.md": "a282cadabd7f91b358b3a1983b06aab094e1674639d634f68f0a62b6e41f6d10",
-    "hermes-academy/profiles/academy-dean/skills/curriculum-path/SKILL.md": "008dc082e62725d05585c99192741e0e56773e4bd232c780d46ff1c5c585e86f",
+    "hermes-academy/profiles/academy-dean/SOUL.md": "f99b3c97040c7043e570365a1a8cd879cb5730d15b161f534bb2e77ce887fb70",
+    "hermes-academy/profiles/academy-dean/skills/curriculum-path/SKILL.md": "2a5cee3973547a91fd265b080c96d7460c35e67a8087eb8aa57cac712b85f4ab",
     "hermes-academy/profiles/academy-dean/skills/faculty-routing/SKILL.md": "f4b7d72c6dfe5ec184ae125febed9784e1ee16efc2fa116343b277bb9e499084",
-    "hermes-academy/profiles/academy-dean/skills/faculty-synthesis/SKILL.md": "3c375be3c4cf9317e1ca3fabbdacd10cf1aa901a92b1151b51fd27c39b58931a",
-    "hermes-academy/profiles/academy-dean/skills/learner-brief/SKILL.md": "6136c20f7eed21e81e4b7279c52e9b1722e929e647aad3af3b7a46cb27ab91bf",
+    "hermes-academy/profiles/academy-dean/skills/faculty-synthesis/SKILL.md": "72b050d3c5bb3b4d7d0f7e8833cd210ef5a41c98b8dccabfa74fc4f86f4c9f93",
+    "hermes-academy/profiles/academy-dean/skills/learner-brief/SKILL.md": "52fd975d5e2acc94bed5b73f034a77f8a385790fcb4c5864a91e2a84c7439065",
     "hermes-academy/profiles/academy-economics-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-economics-professor/SOUL.md": "63adc07e1034c4d6bbf7bb238046b94abce0317590a58e28ea16a93012e546b4",
-    "hermes-academy/profiles/academy-economics-professor/skills/applied-economics-case/SKILL.md": "4ef3b885b192166edd5b569dae3169defd30e8cb1d463eb233a7576af26c7562",
-    "hermes-academy/profiles/academy-economics-professor/skills/economics-concept-lesson/SKILL.md": "18c46d119d67e77970949b20a2e6dec1fb8372b029747266f29412c50c45f659",
-    "hermes-academy/profiles/academy-economics-professor/skills/economics-mastery-check/SKILL.md": "c1ec57f94959d7d258cd18ff335ec956c7ae8f09365acc66dc286843ad487e6b",
-    "hermes-academy/profiles/academy-economics-professor/skills/model-and-graph-analysis/SKILL.md": "c2eafae9355cc346757cb5b1a2e82a6cc493473ed430d4d1aeb7a8b95009dbe6",
+    "hermes-academy/profiles/academy-economics-professor/SOUL.md": "8a6d6f6ba7213929ae95bdec6334f4f1f7e04ba4e262ee94628c38a62fbb5814",
+    "hermes-academy/profiles/academy-economics-professor/skills/applied-economics-case/SKILL.md": "7dfded8ead945103c8ae14401222f73a3e360e5fba0e47178926a61f73f2455e",
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-concept-lesson/SKILL.md": "d22e531c4a204ef78a9ca9c30c45f50bba7d030ec480576c8172e24cd39216b2",
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-mastery-check/SKILL.md": "17dfd23615fa0be8885ced67d09cfdac3f088e576835061379b4158890d95e5e",
+    "hermes-academy/profiles/academy-economics-professor/skills/model-and-graph-analysis/SKILL.md": "8abc46c577db85cc7b2420ac7697f84ee74f4408dac0c344ba52e0d0c3e796c6",
     "hermes-academy/profiles/academy-economics-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-education-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-education-professor/SOUL.md": "594849e1d7006d3c0984c2d0ae7a2d1370e40bc68b50c47d5abedff4b797733c",
-    "hermes-academy/profiles/academy-education-professor/skills/assessment-design/SKILL.md": "3fd6947cb948b8d0d11a9a490c37f635f9b9421b7051171156ea13747461242d",
-    "hermes-academy/profiles/academy-education-professor/skills/learning-science-lesson/SKILL.md": "e2667b2d8823d14859f18b26045f4dd9e428eae64c74902c088893ccebf2b02c",
-    "hermes-academy/profiles/academy-education-professor/skills/lesson-design/SKILL.md": "312a2bff0584f36b6868451be5387d0181479a38fe5fa8985763b7e0a78edfdd",
+    "hermes-academy/profiles/academy-education-professor/SOUL.md": "b7f106756cbccfc45f753f651d11d190a59771e9d17fe1a34b64f7c6c51f772b",
+    "hermes-academy/profiles/academy-education-professor/skills/assessment-design/SKILL.md": "014a782106ce1d971f0729795562f9348c668a5f75fa39b64679eeefadf2de2f",
+    "hermes-academy/profiles/academy-education-professor/skills/learning-science-lesson/SKILL.md": "eb44fd04778008b9ad717c17c8ebc69b1e86b5802afd736fd8c718410d83e0aa",
+    "hermes-academy/profiles/academy-education-professor/skills/lesson-design/SKILL.md": "838c6238c695dd13f24e3f5f39bf3f1ea58677ab05605a1ec6545fb30230ebdf",
     "hermes-academy/profiles/academy-education-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-education-professor/skills/teaching-practice-review/SKILL.md": "be9c49e6bce11694c58b02504e76998ae27f7634e35665052a4ac1f13fbad9fe",
+    "hermes-academy/profiles/academy-education-professor/skills/teaching-practice-review/SKILL.md": "813a5c0478a4fdf7e325237a76da9fa4f00f8ca28d1c92e6869a855ad148e57b",
     "hermes-academy/profiles/academy-engineering-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-engineering-professor/SOUL.md": "426dc8abc9354c252c0e8c2547e9c43d41a410dd88fa943b9bffc13c7ba7318b",
-    "hermes-academy/profiles/academy-engineering-professor/skills/design-problem/SKILL.md": "8d381679949d4ab701577b17f878515082e68a65ecff80ae448adc77a85bd311",
-    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-analysis/SKILL.md": "1a76b53463dbbbd1e19c202288771231e8c03f1aa94142939aba941b26127e54",
-    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-concept-lesson/SKILL.md": "7fba1c920d48d4b48b1341494d5e39aa20f1bf0953618a33414680abe3b499bd",
-    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-mastery-check/SKILL.md": "f766199787dffec88aaec28d180e04aa94fb4cc43dbbf9cca2ea5c1cc1105ca1",
+    "hermes-academy/profiles/academy-engineering-professor/SOUL.md": "b9eb005343342d359f0707bfcc82ba8d96ef48779e81fe35cc489429d465dc2f",
+    "hermes-academy/profiles/academy-engineering-professor/skills/design-problem/SKILL.md": "15ec23d6adf934fe81dc976472cda762729ecd93084c804dc3a32557a4d16fb1",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-analysis/SKILL.md": "228f28c97067a03766f0f876f6e15b563d8ad1e9becb3227245e9839a6a93662",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-concept-lesson/SKILL.md": "40fb7e49b178b8989b00a1225115ef4a088e494d2f349b489a67926bb77f44c7",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-mastery-check/SKILL.md": "363c9c402c4213542dc6e3268a713d1ae78cc41f7378c93b54d63b8cc1a853bb",
     "hermes-academy/profiles/academy-engineering-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-health-sciences-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-health-sciences-professor/SOUL.md": "41d842312b6ef812356c84cc1c660a392324505962f5dc371de21316efa1cffb",
-    "hermes-academy/profiles/academy-health-sciences-professor/skills/anatomy-physiology-lesson/SKILL.md": "949a53974ba4078801dc768fee8fcd8f81363505b68ee54f6abfab65e99c8c2c",
-    "hermes-academy/profiles/academy-health-sciences-professor/skills/clinical-reasoning-education/SKILL.md": "d45aada93d674711e839c04d256c0ca2850ad32bea6680ea2452239b0e6eca72",
-    "hermes-academy/profiles/academy-health-sciences-professor/skills/health-science-mastery-check/SKILL.md": "719445d8e6fe8141a4834682b2dcb3db4f4a11378553b9a9199a7d829bfe2acf",
-    "hermes-academy/profiles/academy-health-sciences-professor/skills/medical-terminology/SKILL.md": "09365586997bae0990f84781db0f8712edb53e3426925eb22611a9ae057e295a",
+    "hermes-academy/profiles/academy-health-sciences-professor/SOUL.md": "33af2b514fe3c8385b7c40a2d92ebf2a545a87dda0b65e25865164af387810ac",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/anatomy-physiology-lesson/SKILL.md": "4c539265b67e98fcc126c5d2a0375e25532a4a1a8e04bd4ab3e82500ef84bcf1",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/clinical-reasoning-education/SKILL.md": "fc40495c664db683de63c3618a6687af7f010c463cec2ad1701c899b913ac582",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/health-science-mastery-check/SKILL.md": "97b446ec29fe53596830455e6a369545fd7350fc75300f86ffbfbafac9a9aa90",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/medical-terminology/SKILL.md": "d3403efa5c5b306e4b914e2be6ad2ec02209497cf2df7ae492bf7f8eed56d78b",
     "hermes-academy/profiles/academy-health-sciences-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-history-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-history-professor/SOUL.md": "5b60acbf1cf2b1608a9bad897dda1eda182ecaa8477594fb80c8b32b008a85d7",
-    "hermes-academy/profiles/academy-history-professor/skills/historical-context-lesson/SKILL.md": "c1b5aae81953e19d0cbf2cd930f2f60b2af609c995257114c4edab5efec01832",
-    "hermes-academy/profiles/academy-history-professor/skills/historiography-comparison/SKILL.md": "3f229dc099c01ae6e22370d3fa9bfc27875579c27d135b3a02c7f7b2967c9d50",
-    "hermes-academy/profiles/academy-history-professor/skills/history-mastery-check/SKILL.md": "5b5b2b63bef4f96b1765522a4ceecc121786cd525477ed6f5f71a55ff8f0d634",
-    "hermes-academy/profiles/academy-history-professor/skills/primary-source-analysis/SKILL.md": "b02b1c6369f1a9803db71d137af90bb28ad2a2acdc75661ec6001a1ffd4e11f6",
+    "hermes-academy/profiles/academy-history-professor/SOUL.md": "0dd6ecc97b606e3524b45459197b7479cfd5ea3a001a6b1d847c3f0ced2b8197",
+    "hermes-academy/profiles/academy-history-professor/skills/historical-context-lesson/SKILL.md": "d4b0c82df1b753a17a75aadce6bf0043b4d5ae9c014be8a839a36c6be364e67a",
+    "hermes-academy/profiles/academy-history-professor/skills/historiography-comparison/SKILL.md": "7ed31a2a20e90e6cbfc084bdcc0958c3041645da4ee8236a972662c259a5bbda",
+    "hermes-academy/profiles/academy-history-professor/skills/history-mastery-check/SKILL.md": "fcc24f29fedbdf24bb586fd1d4dfe541edb01fed5457c0b7b6a18238db6b96ac",
+    "hermes-academy/profiles/academy-history-professor/skills/primary-source-analysis/SKILL.md": "7e3e65748a6040b3bd6257882c718fe9a4db43ac57409712b5ecd7897b0b395a",
     "hermes-academy/profiles/academy-history-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-language-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-language-instructor/SOUL.md": "ad0fc0fa1a78472a35159e5c879dde8bfa64350f4f0788ce0f57e33051ca2ec2",
-    "hermes-academy/profiles/academy-language-instructor/skills/conversation-practice/SKILL.md": "aaee4a2bd2c5c066528db70bab5ab6bb5eaf90aa9f0d73f7505a2743facaa573",
-    "hermes-academy/profiles/academy-language-instructor/skills/grammar-and-usage/SKILL.md": "7f5949b50ef51e396a287de7fafe403769294e7274591e44c713ab224dd60c51",
-    "hermes-academy/profiles/academy-language-instructor/skills/language-feedback/SKILL.md": "30d273c58365a4544ae35c021f4a6b3bb9518aaf4fade0edd143064a82c1398c",
-    "hermes-academy/profiles/academy-language-instructor/skills/language-lesson/SKILL.md": "c221739d0fe7c081b0497890470644e95b2e0851561d4bcb29b91c7e1d43c967",
+    "hermes-academy/profiles/academy-language-instructor/SOUL.md": "bd0a099b1ec6694a797330d73cd005a69329a4e65b3e47d4b759ed638ff5960d",
+    "hermes-academy/profiles/academy-language-instructor/skills/conversation-practice/SKILL.md": "f1728f558aa0c7417bc939dbc165f869a8c6da30765acf12e595450bcf2ac3a1",
+    "hermes-academy/profiles/academy-language-instructor/skills/grammar-and-usage/SKILL.md": "f904f5fc638e526b5e6411f14638ef140aed32ddc74b8268b9b441df661d9301",
+    "hermes-academy/profiles/academy-language-instructor/skills/language-feedback/SKILL.md": "cabc9f01409a09d1a74d00b0477f1020124a2518b2604d80a33eabb5a56641a6",
+    "hermes-academy/profiles/academy-language-instructor/skills/language-lesson/SKILL.md": "c53aa46318e036530c19efcccdcb4862a1a9f909aebe4821a8bc7ecc01410800",
     "hermes-academy/profiles/academy-language-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-law-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-law-professor/SOUL.md": "e2d322c6ea39623b17d1e6c45e8875e8c1dde8fb44ec0182ddb9e31017870062",
-    "hermes-academy/profiles/academy-law-professor/skills/case-reading/SKILL.md": "8e7d3459353476a3aedf723763b8cc1b9de9d6ba9b34023aa26af5a8ff1a7cf7",
-    "hermes-academy/profiles/academy-law-professor/skills/law-mastery-check/SKILL.md": "4bf3e7dd92366d1ff322616b8c741d0b28b36adaa34bc7ecae5741f8fb626536",
-    "hermes-academy/profiles/academy-law-professor/skills/legal-concept-lesson/SKILL.md": "2bd68f6efc22b5c2df019d3aed6447c81027b37420dd01c894790477a9550254",
-    "hermes-academy/profiles/academy-law-professor/skills/legal-reasoning-practice/SKILL.md": "34dd6732a1939e482c8dcd0aaea2b05d37201aab451b91b4ed1bdf2adf60d5f9",
+    "hermes-academy/profiles/academy-law-professor/SOUL.md": "be9a24ef225035548b34e3c8970cfbd3a85b471476ac1d424e38f4dc9838f773",
+    "hermes-academy/profiles/academy-law-professor/skills/case-reading/SKILL.md": "88e480d2e9460f7d7ff4bef6794f04a881348e14a55396d5875db66d576e9184",
+    "hermes-academy/profiles/academy-law-professor/skills/law-mastery-check/SKILL.md": "a3c1e5aa71ad08640b51062bd474fe89fd715cdf9d98df7c59ebb5988db8e863",
+    "hermes-academy/profiles/academy-law-professor/skills/legal-concept-lesson/SKILL.md": "97a9891d3475e6f0386a08e2430b9a43015a4a26ef88713d18d81053224568ff",
+    "hermes-academy/profiles/academy-law-professor/skills/legal-reasoning-practice/SKILL.md": "f0b7fc83e18b88f6f065ffa052e1a98540d47f4cd8a2cb0149a003f45029bb9d",
     "hermes-academy/profiles/academy-law-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-mathematics-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-mathematics-professor/SOUL.md": "4364e94cfb082a4be20f6c49db40f6b2a7b7472877ba38f7882cd1370d3036ee",
-    "hermes-academy/profiles/academy-mathematics-professor/skills/guided-practice/SKILL.md": "38350ef3bc6f36dcdf4ebd20d0bc3c1f61969b74afe32e23d2c241aa244fc14f",
-    "hermes-academy/profiles/academy-mathematics-professor/skills/math-concept-lesson/SKILL.md": "fc729fd18b255eb416634708778174eaed266e0521c0737522f21f6cee8452ac",
-    "hermes-academy/profiles/academy-mathematics-professor/skills/math-mastery-check/SKILL.md": "055dda101d8990a106dd7632643aea5632382fd12f21bb0399d90054fddcdabe",
+    "hermes-academy/profiles/academy-mathematics-professor/SOUL.md": "f1f6524bdb4ea288b2fa8e5f034a752fa69e5705317ce8b924ea1e8fde76683e",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/guided-practice/SKILL.md": "a74f92c4dfade62612283610608307372e38cf7dd4420e4b2439353a5c016dc7",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-concept-lesson/SKILL.md": "449a6772e71203c4387264c548ff06d7b823789263a82d5447340b656acba7d7",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-mastery-check/SKILL.md": "70e4a0f2d4683b9c2b5cb823861a65172be02c3bcbe09d5f9af90bd6353d985f",
     "hermes-academy/profiles/academy-mathematics-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-mathematics-professor/skills/worked-problem/SKILL.md": "2e221fa32e998635e1311dc54612e7395a1d1bdfcd97065fa51c5a01a76dd2f1",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/worked-problem/SKILL.md": "5f095b5909f35e25f9c75829c230380b8a002886f9e570c6ff3332c07d3a3879",
     "hermes-academy/profiles/academy-music-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-music-instructor/SOUL.md": "f24eb2fed3eed22a94a68286798b87e89397202e48fcfc5b5c2afb03c10d2559",
-    "hermes-academy/profiles/academy-music-instructor/skills/composition-practice/SKILL.md": "e2d3ba7aadbec09f9cc7d9abb09124f854a3e8e988b70090adb8246c22f35f68",
-    "hermes-academy/profiles/academy-music-instructor/skills/ear-and-rhythm-practice/SKILL.md": "db46e06063f6c597d437c64063b09f7475917e843eca7e75e54ec1ed1f7e067d",
-    "hermes-academy/profiles/academy-music-instructor/skills/music-theory-lesson/SKILL.md": "7e50598b59a67d84746c3f6fe9a7c0d46ccfd31191d724c813a4949c931f92c3",
-    "hermes-academy/profiles/academy-music-instructor/skills/performance-feedback/SKILL.md": "76be5c98b6b309890c5d6cad88e476db75bd013df3c938ac7227dc36b53b1acb",
+    "hermes-academy/profiles/academy-music-instructor/SOUL.md": "631dc47906589de6cb0272291cf48272a73ba43d95e96cde7570447784b8d652",
+    "hermes-academy/profiles/academy-music-instructor/skills/composition-practice/SKILL.md": "cd3d8805fe076a2ddfe907b2f4210cb848de01762c608317503e593430d359d7",
+    "hermes-academy/profiles/academy-music-instructor/skills/ear-and-rhythm-practice/SKILL.md": "1909d9706840f9749d46849a9e43388a8ea47906504122115fda83bdcdd9ae9f",
+    "hermes-academy/profiles/academy-music-instructor/skills/music-theory-lesson/SKILL.md": "7132c94fd50ac95b7e6fa1014a0e8c506dbb80233448590730bb8ee16501f3b9",
+    "hermes-academy/profiles/academy-music-instructor/skills/performance-feedback/SKILL.md": "29fbe275992593cff40e6977e66a3577afcfa0a7f0f216c56b6569e8cd2b8333",
     "hermes-academy/profiles/academy-music-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-natural-sciences-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-natural-sciences-professor/SOUL.md": "519e0ef3b438825ed713c2399f8699b080d37f0ee79af23de5dcd7404816faf0",
-    "hermes-academy/profiles/academy-natural-sciences-professor/skills/quantitative-science-practice/SKILL.md": "8748d102ade9586768480e0bef4c832a2631e83a9a45cb628de7e86727e472c4",
-    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-concept-lesson/SKILL.md": "cd126ac6213d401f3071f80617a999d08ae9e10efee97d7c22cf930ca71bc57c",
-    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-mastery-check/SKILL.md": "c7e364492919aa903f01549a221d727e3d30a3e2d4c458625486af16b83161bf",
-    "hermes-academy/profiles/academy-natural-sciences-professor/skills/scientific-reasoning/SKILL.md": "5e1f87cda7e81e61d5ab3f3985ed54ed02ea9e307c9be4c3d225e4c5c7ff77e0",
+    "hermes-academy/profiles/academy-natural-sciences-professor/SOUL.md": "8b1db9226cf1038d50b5f0133ed6c2fbf99bcfa666092c2fdc3cb808945d8d87",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/quantitative-science-practice/SKILL.md": "dd3e41bd4f66bcebff99e1f9af3cf87f9e50dc8b33def8b9787cb17a8608c75e",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-concept-lesson/SKILL.md": "ed83ca58884037de0390acc98cad53b20b2c630fc78e2a8ac9ae54d247cac86d",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-mastery-check/SKILL.md": "8595b59e3cdb9639f77ee2924f7e30a2d00900f42c21b4815f4dddff8d85bf05",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/scientific-reasoning/SKILL.md": "8892bda3036884c2d2d7055d6155652e02d5163df624eed382aa0b26efd4f25e",
     "hermes-academy/profiles/academy-natural-sciences-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-philosophy-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-philosophy-professor/SOUL.md": "99d31690a1e3ba03c65cb15286166d29f95031a871010490ab6fb24fd03af94e",
-    "hermes-academy/profiles/academy-philosophy-professor/skills/argument-reconstruction/SKILL.md": "3e2a461d8f45bf08d79bbab9f7b6d8e25ea61393f95fc1649dfe50284be921b6",
-    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-concept-lesson/SKILL.md": "4387d266a39335a35e3fd9628e2147dc27da1aafdcb26f90894fb7dd17970d15",
-    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-mastery-check/SKILL.md": "9e4fe022c02dad55e43561b631abfff15a681badf38a77e6880ae3cf3bf454e7",
+    "hermes-academy/profiles/academy-philosophy-professor/SOUL.md": "5fd1f9e60dc19c4aa6df0627aa243cedbed8187376ee1bcf7a3fe6e2af9acb7b",
+    "hermes-academy/profiles/academy-philosophy-professor/skills/argument-reconstruction/SKILL.md": "7efc3700416088c13381d4297f1e302943c26ee0ab0c71657e2f0b83f4734ae1",
+    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-concept-lesson/SKILL.md": "93e952e838824121b3d0d03c757758d5aaa693a05d576612d3f982eab5295488",
+    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-mastery-check/SKILL.md": "41d0c9da1eff01bee165dec3a46aeb74bd2728103d9f67868256d4ebd665aaef",
     "hermes-academy/profiles/academy-philosophy-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-philosophy-professor/skills/thought-experiment-analysis/SKILL.md": "08fe92051946f4d92a34dd3d12dd170eddc8c32abfab6a50781d815cbbef4c57",
+    "hermes-academy/profiles/academy-philosophy-professor/skills/thought-experiment-analysis/SKILL.md": "fc96af9bc7a8e0288ca5760cd8eb7e3bd0e0dd347b2f27fa7ee453255d016212",
     "hermes-academy/profiles/academy-physics-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-physics-professor/SOUL.md": "8379c81e2f4d08eeba8fae7c3a6c7b6fc7d8aee3c9cdd40b9d70408fc367c506",
-    "hermes-academy/profiles/academy-physics-professor/skills/model-and-diagram-reasoning/SKILL.md": "9b94a035c55d0dae61f2264be9541a44a34a65d2d82096287d6905795a07f251",
-    "hermes-academy/profiles/academy-physics-professor/skills/physics-concept-lesson/SKILL.md": "c3d1bce9a96a13453bccf39922c437f596628f1c07ca5fe71691aa3d7de77aad",
-    "hermes-academy/profiles/academy-physics-professor/skills/physics-mastery-check/SKILL.md": "10c24c849016e767436bf1698ac0d61c4fbab822557c92e53185d2ee84017777",
-    "hermes-academy/profiles/academy-physics-professor/skills/physics-problem-solving/SKILL.md": "a0ed610db6806f681b2c8496956a81a9d1e2a478897ea06df902e4704bc0fd22",
+    "hermes-academy/profiles/academy-physics-professor/SOUL.md": "fef7c7be0914dc1de8768b5286eb6189337fcab6b9da656d530bae5873cde65f",
+    "hermes-academy/profiles/academy-physics-professor/skills/model-and-diagram-reasoning/SKILL.md": "7a82517c03a663509aed0583a82911f5173eb0e411d3cf8c0b83249bdf00a46f",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-concept-lesson/SKILL.md": "ed06a54143d2f93cd405c2410a66e02d1b3af69b398d446906ff47b20efa9d00",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-mastery-check/SKILL.md": "3c9a56f117234fa38ed8c833857bde24ec9042cfe6cc4dd4205e4704c34f6e8c",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-problem-solving/SKILL.md": "642ec898b6577e06da9bdf05fedcc6595d1778dcc337f80587a238cfc7ec0545",
     "hermes-academy/profiles/academy-physics-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-project-management-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-project-management-instructor/SOUL.md": "cddd9982d3e59f0b8c81d37974c199b81779f34df6150989616a7f16825774f0",
-    "hermes-academy/profiles/academy-project-management-instructor/skills/planning-and-estimation-practice/SKILL.md": "e64e55c9f2b3bb4ec6aacf2c0b8cd4c804fa4636adb3205f9d142b738f727cd2",
-    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-lesson/SKILL.md": "c84a1efdcd5d37aff908557f320425e33f5341b426ad163ae754225bcd4ad8cd",
-    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-mastery-check/SKILL.md": "d8e32cdcf101a13144bdddcc639cbc6dcc76251007a8dbe12e23b9efe05e28bb",
-    "hermes-academy/profiles/academy-project-management-instructor/skills/risk-and-dependency-analysis/SKILL.md": "c902da17cab2627988145251a17da011b0ead7c2c09cbc40dcb73aad575d8ea2",
+    "hermes-academy/profiles/academy-project-management-instructor/SOUL.md": "a7de383154d906cb639bab12b8af00c5d6df418c575af4ebbd8c7483f242cd75",
+    "hermes-academy/profiles/academy-project-management-instructor/skills/planning-and-estimation-practice/SKILL.md": "73ab851f4a316b2884c699a573b07be29b1a83f4d78d55527cbbf900b896e4d1",
+    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-lesson/SKILL.md": "127dc240890dfa072e2fe12101dc2e577b9f0c227d0f38449e94cf1554881d1d",
+    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-mastery-check/SKILL.md": "35a30397a417161f4f41bb1b8ef2e4ac115661935d4b79c20fd3c633cbf3b494",
+    "hermes-academy/profiles/academy-project-management-instructor/skills/risk-and-dependency-analysis/SKILL.md": "c96fd6b1cdd0d248ae50e6e6dd1ba3a9c1dda24230d6948c66510ab60117fb11",
     "hermes-academy/profiles/academy-project-management-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-research-methods-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-research-methods-professor/SOUL.md": "d5811ce77c79c465875fc2224e1b85db897a85181184aa1533b069b5be0389f0",
-    "hermes-academy/profiles/academy-research-methods-professor/skills/research-critique/SKILL.md": "45afdafee2f1e66a30ded4228f362c4d1e3ca2fc98e037b72df4259ac36ae2ac",
-    "hermes-academy/profiles/academy-research-methods-professor/skills/research-question-design/SKILL.md": "2df3c7bf789b47e167cee05413172b3fc797c8341885b1304ce0b8c86bad56e5",
-    "hermes-academy/profiles/academy-research-methods-professor/skills/source-and-evidence-evaluation/SKILL.md": "b5227b17c2f35c8fc54bfd7903d7ec30af797ce71f46bc62a23488783992c76a",
-    "hermes-academy/profiles/academy-research-methods-professor/skills/study-design/SKILL.md": "9c10df6ec5f0e1db47900b12b13fdefd24f94c9b57d6229ea13b85c8821b8ea4",
+    "hermes-academy/profiles/academy-research-methods-professor/SOUL.md": "f9f219e154cedde6719c5086fdd6934b82af3830bf0dd5bbd150fb0238e968e0",
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-critique/SKILL.md": "cd6413b976658eced7524af13c9852a9ce15bbf8b56b0aa5e9d96411cc4beb5a",
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-question-design/SKILL.md": "6a5f6f050f853b1b2516ddacd03783e88d84e88498e5dc0c1d1a41d3661b8f17",
+    "hermes-academy/profiles/academy-research-methods-professor/skills/source-and-evidence-evaluation/SKILL.md": "5c120998fedc3784474de42e937ea20d0ea16d644a8c61427ffbe4167c34f6f4",
+    "hermes-academy/profiles/academy-research-methods-professor/skills/study-design/SKILL.md": "0dab6aa587a10b7fb3e460468d1a7ce4733e8076fc2ebecc2431bcc8fda2bcb2",
     "hermes-academy/profiles/academy-research-methods-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-skilled-trades-instructor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-skilled-trades-instructor/SOUL.md": "e63e093872503563b2d329624a755ef892ce0cd090953996f5b2941f135f21da",
-    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/measurement-and-layout/SKILL.md": "0b58abadc047685b925fa76c2185db73bcdaa1c69baf27506c4179f1c3460374",
-    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/shop-safety-foundations/SKILL.md": "6f51f71c5c246eba0e034a7f2543dc2b2c76e19208611948cc1656027a566f75",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/SOUL.md": "6cfbe95ecc25ea187fedf5bbe2ae22f221c5d1f8c69a9ca8513e39301dd2b046",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/measurement-and-layout/SKILL.md": "8c7c42ca3c5b13a4bc0f4a35e1400ef4b286599f5ffdcc4f65ec9a03d6a79403",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/shop-safety-foundations/SKILL.md": "48e94aa77568dabbe3d50905aac1cbc61d8ea739f885659b9e29dd4daeb895a6",
     "hermes-academy/profiles/academy-skilled-trades-instructor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/tools-and-materials/SKILL.md": "21dc9b0403887d6b6d6f41dd003356feae016982f43029ea3dceab9c00244335",
-    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/trade-procedure-lesson/SKILL.md": "1101cd7e359ac4747367132733674e02ebb8f7f3c4973fe5f236f820a8f0af8b",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/tools-and-materials/SKILL.md": "27ab4c34722b78ac51732a46fd86736825c6ebd31be2a49fe17e3b985fd3bb9e",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/trade-procedure-lesson/SKILL.md": "47f436366e033ab818df3b741d807b31875248802b5b4af4720063ba7704db29",
     "hermes-academy/profiles/academy-social-sciences-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-social-sciences-professor/SOUL.md": "42606fe9b5a4a51af77969abe21e43d5cc9e127088eacc969ea1071f4ffc49b5",
-    "hermes-academy/profiles/academy-social-sciences-professor/skills/evidence-and-methods/SKILL.md": "d61648cac7f40fd0a5ca4126b4679997a6919b441f5e3738f710635507f02f72",
-    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-concept-lesson/SKILL.md": "d4c72ed82fbf21ebd856c2811d4ae17062dc3deed3f7cd84cb8126d8ccac16ca",
-    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-mastery-check/SKILL.md": "6e7e24ef792520bd82c57b8a5dbed25be66e73a3b6d0963d54ef72dd3dd6b289",
+    "hermes-academy/profiles/academy-social-sciences-professor/SOUL.md": "2588955c54b0bbf2144789924151c753a42350aa0056778673e84a5fb699c9c2",
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/evidence-and-methods/SKILL.md": "42bed77fc7b3ea823f26e972263a275855683b72c217eb60f8c32f39d93c3d40",
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-concept-lesson/SKILL.md": "1319726f8d8565bf7496d0f3c165300fc22d3307768c3cc031d90b6b0f284bf1",
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-mastery-check/SKILL.md": "f98b7169719c1de06c971ba07f57917a55aa07222c1db8d704d2099472e647a0",
     "hermes-academy/profiles/academy-social-sciences-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-social-sciences-professor/skills/theory-comparison/SKILL.md": "78d369adc1a13161f62e71438f0380415aea52e8540191179ffaa506aa9c4c73",
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/theory-comparison/SKILL.md": "b448dcfefb9244c28fcc872ca38c585dc974b3bfbd64b914f2bfa82d5752383d",
     "hermes-academy/profiles/academy-statistics-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-statistics-professor/SOUL.md": "451d6b5eb5cb5e687e4213e9a544c5aff3ebcf60238d74ad162454c044791e02",
-    "hermes-academy/profiles/academy-statistics-professor/skills/inference-and-uncertainty/SKILL.md": "f66902fd9fc27644bffe98425058aece50d35be18390c0fd1dd3d8c203b4fea9",
-    "hermes-academy/profiles/academy-statistics-professor/skills/statistical-problem-solving/SKILL.md": "d0445129cbe21504324245ca8edf25cea88207abdd60ddb135ed98531413c240",
-    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-concept-lesson/SKILL.md": "b7d744a7d3f3c1878c45b089a2c5e44448239c4a157045fa177265550127cac5",
-    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-mastery-check/SKILL.md": "34cd25cd9476b187095917bc05f7fa268ea4ae169cf65bdb1d0800da5ba57ab8",
+    "hermes-academy/profiles/academy-statistics-professor/SOUL.md": "0c172feda1b760ad53be17ed7f6c846bbf35a35ea909fe8832a8aa9b8c94a2df",
+    "hermes-academy/profiles/academy-statistics-professor/skills/inference-and-uncertainty/SKILL.md": "ddb94c56e638152e27b7108dd63b48a80462b830e3828b42828783c36a5e2e1d",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistical-problem-solving/SKILL.md": "a0ea421d196c948e0f3d29f239ad8293d5818cebb680b01d22d5e77216a8effc",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-concept-lesson/SKILL.md": "3da80880896d3a12558ce5326e12f63e292d51b1516eac9aea1aef6bb8fc28ec",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-mastery-check/SKILL.md": "78f48d19f62a1e7389c7e65b6181cd88a91fbe937211603a34311b9c3e9f76dd",
     "hermes-academy/profiles/academy-statistics-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
     "hermes-academy/profiles/academy-theology-religious-studies-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-theology-religious-studies-professor/SOUL.md": "641209a61977a5038c2a7a33fdfd499448948248b6d04c19568e9e9c37516d68",
-    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/doctrine-comparison/SKILL.md": "48a8de504dd0534975740640a3cf2c121cbb0ed650ca96528ba5c8c3fc777db2",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/SOUL.md": "bf388b66c72d8b9a6b405c103af449988634baefbe7ef00ae396897fe4d19e0a",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/doctrine-comparison/SKILL.md": "efc7d1c17bacb455eaf6ec587cc7c0236216a089d3e531d7204013efffb80207",
     "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/text-and-tradition-analysis/SKILL.md": "298ac2660b41681f5b0b4737d53bcacc5df908bb1d7f1240a03c8ca2f7559975",
-    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-concept-lesson/SKILL.md": "0ca7fd9e0717eccc3cc0a4ff8c6a354df2da2c47e365eb23b802a6bc2c9e99d1",
-    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-mastery-check/SKILL.md": "f3d88ce50089e5ca4d89efd14d9c2a9411e91ff60e23ca76bdc9916fc82a9033",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/text-and-tradition-analysis/SKILL.md": "51aa056f9d7a95e6b0a6792d065f6bfbb6806a79443178c61b3217f4dc4c3f47",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-concept-lesson/SKILL.md": "532c31353d18648807ae97173bf200b2a3336ed4c7b03f2a829ec5a8d82540be",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-mastery-check/SKILL.md": "3ca791a1a3ae2f0fc510c18d911448a97eaa7035c5321646f0d3bdac7fc342ac",
     "hermes-academy/profiles/academy-writing-rhetoric-professor/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-academy/profiles/academy-writing-rhetoric-professor/SOUL.md": "b832c47aaa15cb13cb9a2aeb9ca29c3b3e291c371fc51d3a876af92bc5e835df",
-    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/argument-analysis/SKILL.md": "773b1a5b2e9c17eaaf42e6f2545ada518db2afdb335ce2d6885a934f25f12ea8",
-    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/revision-workshop/SKILL.md": "8887708f457fc4a8d5ffb11ec0d102fa4f7894cecc6f429d356c59921ce73bfa",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/SOUL.md": "1d6ca51a63e79f7236327204144feb562fe87d2162e44c809c60d57071217e06",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/argument-analysis/SKILL.md": "10c4de7427297a67d43a6fb0839549987afdf60f48553abed61d231380ed1315",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/revision-workshop/SKILL.md": "0bdb9545674966d57c954be7c36e2257bee445dcf3292ff0b40ee562c5261c8b",
     "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/teach-profile/SKILL.md": "4301fee68fb3f1874d5bd9e608ec2abb5f39ff32756052a91ae3eb07183a27f5",
-    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-feedback/SKILL.md": "47927ba388b8cecca50803b1ca56110b68bae30b9a7fd8bed5663585ffac7d6a",
-    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-lesson/SKILL.md": "e66258ae7b6c9fb88aa2921cba3ec31f83123e7dc36d0bbfe01c3391ddaf2a03",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-feedback/SKILL.md": "0a6f0211feebed6cfda7763ccb6787254b29660499b2ea7d095a98813be34a44",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-lesson/SKILL.md": "e954dd71a2c88a91b47674ca3d07b0bf6f88d1d78670e4004660bffefc4680d3",
     "hermes-agency/profiles/agency-accessibility-reviewer/SOUL.md": "420cef2384a88d7c730617e775b4380f496f42cf781cbf6a5a265a7a2f876083",
     "hermes-agency/profiles/agency-accessibility-reviewer/skills/academy-continuing-education/SKILL.md": "580080ca4c373cbe8705dec491d9792008828a6ac352bb17d660928d7f1a8e72",
     "hermes-agency/profiles/agency-accessibility-reviewer/skills/accessibility-audit/SKILL.md": "8ed625b6ba89ffc5aa99c9370fdc3debac46bb156629a296adacfc21659ff257",
@@ -1318,127 +1318,127 @@
     "hermes-agency/profiles/agency-worldbuilder/skills/world-bible/SKILL.md": "e57fe286860998642bcae8d7557e1a8cbcded6cae28befca7bd35a2930a43c20",
     "hermes-agency/profiles/agency-worldbuilder/skills/worldbuilding/SKILL.md": "e1a170e6e07ebaac7782d030b86f0bc54e585e7bb3c599cacafc3c740bcb2c63",
     "hermes-council/profiles/council-career-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-career-coach/SOUL.md": "4181f5af17ca259a7b2b38f069f7d59501817e0f2e572144f9104aa94a26e571",
+    "hermes-council/profiles/council-career-coach/SOUL.md": "a0c1aa11ae04cdf65f447a2f2e8ef3693d4b8ade35c658871e26be21b8d53a3b",
     "hermes-council/profiles/council-career-coach/skills/career-direction/SKILL.md": "ead873abc612ff573b788354ac74969324805a077dd291475e8b17372e224fc6",
     "hermes-council/profiles/council-career-coach/skills/job-search-plan/SKILL.md": "c8a67feacfd52885a54405124d3b8f48c3e20eaf5c1686525176cdd232747b0d",
     "hermes-council/profiles/council-career-coach/skills/opportunity-evaluation/SKILL.md": "40725c938c71bb22c543bd0115031b724b00eaf663b03f9f2caab2fec4a343d5",
     "hermes-council/profiles/council-career-coach/skills/work-boundary-review/SKILL.md": "f675c7b78fd520f0e2e7cbdb49d5a7646e333c55a1df456122c14a8ec2a87668",
     "hermes-council/profiles/council-communication-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-communication-coach/SOUL.md": "5a6ccdd2d342592d771a463723277bffe599392afde44290596911cae5c7da36",
+    "hermes-council/profiles/council-communication-coach/SOUL.md": "13de7106513a39fa0d76c0a8bbf32a33b1c3d832e3b66b56dbe579ea366e9c4c",
     "hermes-council/profiles/council-communication-coach/skills/assertive-communication/SKILL.md": "79281acb2d9fb2e06246167f8bd1b0d263dc9221997371429a2ae9c117bbd982",
     "hermes-council/profiles/council-communication-coach/skills/conversation-rehearsal/SKILL.md": "ab096fea892d9acced9c2c3c420aec5f9357319aafd1cd9ee85f29808675c8c3",
     "hermes-council/profiles/council-communication-coach/skills/listening-and-repair/SKILL.md": "51e7bcfeefb0ba52704ce5d965c21afa6e1bf606af553f2386b8bb5cec59b6ba",
     "hermes-council/profiles/council-communication-coach/skills/message-clarity/SKILL.md": "99c0d5906f81d849c84d79731acded54491356be0f56f53f104636bc7e4bd344",
     "hermes-council/profiles/council-community-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-community-coach/SOUL.md": "09aa0a4ba34a1019ecd2caf59ba16c8e85d039cd679258cd76d8cd3663f18ab2",
+    "hermes-council/profiles/council-community-coach/SOUL.md": "c18ab671ff8405412e6f61f16238a718b059105cf4d90d043bb382559eab807d",
     "hermes-council/profiles/council-community-coach/skills/community-finding/SKILL.md": "ed450fe453334192aa8f341eaf878e591cdcd8edfb1a4cc757ee2ddf3d4a6b19",
     "hermes-council/profiles/council-community-coach/skills/friendship-maintenance/SKILL.md": "107832e86a9ce6148036cf69b2f40170c065ae1c5a372b04a6a1072b2d6be82f",
     "hermes-council/profiles/council-community-coach/skills/social-plan/SKILL.md": "0d1ac7640b4617e155d2edeca59297a8ed76d51ce2e02b3db0c1f6de48400534",
     "hermes-council/profiles/council-community-coach/skills/support-network-map/SKILL.md": "2ee716f2c3814561e15d7e9ef1151e0d81eb856c123537bcf7fd3ed322fb0f9c",
     "hermes-council/profiles/council-faith-guide/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-faith-guide/SOUL.md": "6b752396edc3a76032612c5fe908a64e1f7c7dbb03245b9e2c2232a84c6236c2",
-    "hermes-council/profiles/council-faith-guide/skills/discernment-and-application/SKILL.md": "12a7bdf1220886d74a6f38cfbeb2d02ed00a17133ccf5ae9a8e7d539a53d6ea7",
-    "hermes-council/profiles/council-faith-guide/skills/prayer-and-devotion/SKILL.md": "99e4639a530a8868db32383421373d9e975dcaeee8c08b97bc46843b4c443e82",
-    "hermes-council/profiles/council-faith-guide/skills/scripture-reflection/SKILL.md": "d34ed145629b74e2a0cafed08711de29b10ad5f7f5c1521c8a625f2249c11a6a",
-    "hermes-council/profiles/council-faith-guide/skills/spiritual-practices/SKILL.md": "7b176c25081f1b86751a15e9aca65265b00dc65eb387b912691eef322e86c2a7",
+    "hermes-council/profiles/council-faith-guide/SOUL.md": "31106f3d228c0f5b47da3d4cc4cfcb91049cce3cde4e4065f2bfcefed5e04e6b",
+    "hermes-council/profiles/council-faith-guide/skills/discernment-and-application/SKILL.md": "06dc7f062e7eff3a7b69f9528167881359efdf3a16ee7d37d5dd554252478616",
+    "hermes-council/profiles/council-faith-guide/skills/prayer-and-devotion/SKILL.md": "e3b4dfbc599968b222d57ffbdfb7faa2279eea8d95df7048287c5b0a475da758",
+    "hermes-council/profiles/council-faith-guide/skills/scripture-reflection/SKILL.md": "277f568c80f9151184f789b6f1e55023cb6802f1ba708f25539fc924c4e1204b",
+    "hermes-council/profiles/council-faith-guide/skills/spiritual-practices/SKILL.md": "4cede22284765a42d55eb83bb4121ea0db1f4def497e83a4f8e8e038c82ac996",
     "hermes-council/profiles/council-finance-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-finance-coach/SOUL.md": "e02e5ae58384ee30d5c3027a6d92b91587d888a84d028e95cd7ec7ce778fe46b",
-    "hermes-council/profiles/council-finance-coach/skills/budget-review/SKILL.md": "4c25ffe168edf03221617954953cea62e29c586db5e5ec17f61ef3c973e08755",
-    "hermes-council/profiles/council-finance-coach/skills/cashflow-plan/SKILL.md": "3ebaf02a0745ecc9858acee06c8f4b48d8658a4df122259f6068d60eaf1f083f",
-    "hermes-council/profiles/council-finance-coach/skills/debt-plan/SKILL.md": "4eeed23b7b2b74ce30083a0e48953ab6250dcb00c8e5fc159c64a5c42b8ff153",
-    "hermes-council/profiles/council-finance-coach/skills/purchase-decision/SKILL.md": "e498feb1219eee9efe8988d3ed0882675a090175f2f0ccbfdfcb3c658d2e8a2f",
+    "hermes-council/profiles/council-finance-coach/SOUL.md": "39082111b82cf594a598d66cd6fd33c41c9d2c92307fd2ac1049579f1ffb55b8",
+    "hermes-council/profiles/council-finance-coach/skills/budget-review/SKILL.md": "f4497086ae7fb990b1e3b58968717acf8a485f30e23a5b90a0da85cd20c66e2f",
+    "hermes-council/profiles/council-finance-coach/skills/cashflow-plan/SKILL.md": "f4b1ba9aa6099b4be772d5e13989b1d0cf7fd39abbacc3ce5734c2f238d7345c",
+    "hermes-council/profiles/council-finance-coach/skills/debt-plan/SKILL.md": "f43be1f831f43a008980ca8ee6cc1bc15027e7bc22ad3df841a6e4152d559dd4",
+    "hermes-council/profiles/council-finance-coach/skills/purchase-decision/SKILL.md": "8bd18313fa6c1b60baa757aa5722f3b119d987219e994fe9a472390bebe2e229",
     "hermes-council/profiles/council-fitness-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-fitness-coach/SOUL.md": "d1eb44580a6947060dca46190435acf79b74f5b16cf83ec60fdb37834dec53f3",
-    "hermes-council/profiles/council-fitness-coach/skills/progress-review/SKILL.md": "3a764c6657f11863e990ad6402faff045ae357e682556da754d1bc0a78ca2dc6",
-    "hermes-council/profiles/council-fitness-coach/skills/recovery-check/SKILL.md": "d7d74233e98fb4084e0bcb06e4b928fb9d2dcbe6647e613374202b967e49b8e4",
-    "hermes-council/profiles/council-fitness-coach/skills/workout-adaptation/SKILL.md": "878c8436156f1b06068665160ee9d758f8be553c1dba7f119de2e618f3651168",
-    "hermes-council/profiles/council-fitness-coach/skills/workout-planning/SKILL.md": "4fdc2b0d677396964ebad0cdb3d2633fbf915315d3709edc2a85cc995b9455c8",
+    "hermes-council/profiles/council-fitness-coach/SOUL.md": "c3a28612dbcbc62285829d5e2eac5c8d844957c71890437e0cbd14689288637d",
+    "hermes-council/profiles/council-fitness-coach/skills/progress-review/SKILL.md": "085b1ce33a18bbfec71297d20d9ed590816f32a5344271fb35fe5ff5c30f0ca9",
+    "hermes-council/profiles/council-fitness-coach/skills/recovery-check/SKILL.md": "6838b7ee7f5c18debe64907c0ae202d15140665080192901103c83c660920a1a",
+    "hermes-council/profiles/council-fitness-coach/skills/workout-adaptation/SKILL.md": "d32c690b8aa815561a19305bca24b38f850f3f56ef7b62419e9d938c60f50cee",
+    "hermes-council/profiles/council-fitness-coach/skills/workout-planning/SKILL.md": "5a75eb7adc3edd14a30bf0137dcd99bea72f606f630a4177930f88b1d6c52d4b",
     "hermes-council/profiles/council-health-navigator/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-health-navigator/SOUL.md": "50eba93dc6c02ab922af2e6d0f70568a7b2aeb874c1afdb299a36c90648e664b",
+    "hermes-council/profiles/council-health-navigator/SOUL.md": "b137c5a9a03dae5fc44a6ec12d167eb768081af23767ea2060adcd0454caba03",
     "hermes-council/profiles/council-health-navigator/skills/appointment-prep/SKILL.md": "4fabf4bdcc883bacea91ecee3a58a7c09439e102484d5083d59ccc53a351be4d",
     "hermes-council/profiles/council-health-navigator/skills/care-followup/SKILL.md": "0a735a31d3510a0c4de302211a47d7575af01af007a85fb503a60a2737c61423",
     "hermes-council/profiles/council-health-navigator/skills/health-log/SKILL.md": "fc34601d1cc3d99ad36dda2aa4979ce8114aefdee91da5d05e1435f611730ec4",
     "hermes-council/profiles/council-health-navigator/skills/preventive-care-planning/SKILL.md": "7e772de0ede791276906eacec81a980e9ccf3b044a5fbcbf8e36efd7e52660ff",
     "hermes-council/profiles/council-home-steward/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-home-steward/SOUL.md": "b73c61ecea8640c3c3e9663781e6fdaf43743aae02212e3adc38f837e9924ae0",
-    "hermes-council/profiles/council-home-steward/skills/chore-system/SKILL.md": "07dab5a01a8afd5d17d5f572d7f3c86043874a2b18c8a697739918fae19d3eca",
-    "hermes-council/profiles/council-home-steward/skills/household-inventory/SKILL.md": "84e0180727b25efc6f9b647ebe38b3f8a7ea6d425b7dffbccd066776f526e8c7",
-    "hermes-council/profiles/council-home-steward/skills/meal-logistics/SKILL.md": "d29d0aeec55732aadc2c42d1cee8f4c9ec3d1ef3cfdf91b9118e3e53e9453c7e",
-    "hermes-council/profiles/council-home-steward/skills/weekly-reset/SKILL.md": "f549fa8275396a01b30216d67ecce9f0f003e4c32acfb87f339931fba3b076ca",
+    "hermes-council/profiles/council-home-steward/SOUL.md": "f0e3df45241bdce6c5f9f9ae0c02013d4a788b0c9dc7d6c71eee20d5b46afa95",
+    "hermes-council/profiles/council-home-steward/skills/chore-system/SKILL.md": "903720d3d9e06f91dd7ef5a5cdd07403ccb11322abfc938ab29bf1156db154fb",
+    "hermes-council/profiles/council-home-steward/skills/household-inventory/SKILL.md": "6da4750230f910a00c58231753ef6d2ad590da7740b5aac6773e3790658050e7",
+    "hermes-council/profiles/council-home-steward/skills/meal-logistics/SKILL.md": "3a558d618e4e4b45cb01bf08ed0e1527542a8298e2bb371ca8c6fa72b7262ac0",
+    "hermes-council/profiles/council-home-steward/skills/weekly-reset/SKILL.md": "d56d6318d8317de2cbdc280b8aa7609c2e947b7a4d7f8bfe1dd4bf54585be74a",
     "hermes-council/profiles/council-learning-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-learning-coach/SOUL.md": "b2a459fbf92a91f0b1132cdfb048a2cd0f8b01825a89dde73a60535ba2131da5",
-    "hermes-council/profiles/council-learning-coach/skills/deliberate-practice/SKILL.md": "5699a9f94203697be92c03aeff29717ccdea8463c7638ff65fa900680a4c8772",
-    "hermes-council/profiles/council-learning-coach/skills/learning-plan/SKILL.md": "08dd4968459cd649ea1bb1fdd20a9aa8ee08b1ddeb3c03d8cd7e15276ebe297c",
-    "hermes-council/profiles/council-learning-coach/skills/review-and-retention/SKILL.md": "18c9902e36da4b791a6cd26e49ddb50cf39d0a9c83e4c7d80cb737ddf283d726",
-    "hermes-council/profiles/council-learning-coach/skills/study-session/SKILL.md": "3f212fab031f2646f2c71e31bcda81a7e119ecdab34c17491809730d36b2ff9d",
+    "hermes-council/profiles/council-learning-coach/SOUL.md": "049f3370088f22eeeec3ab31d9b793004821fd846261c5383dc0dbc7172e4b32",
+    "hermes-council/profiles/council-learning-coach/skills/deliberate-practice/SKILL.md": "61b298204f8b3e63870e3c537d5c92a9f4ecdc2ff078c5fb41c6cc6afdce7da3",
+    "hermes-council/profiles/council-learning-coach/skills/learning-plan/SKILL.md": "8466e53c2d6a965d1e431f90ac20ef1c467ec52d6662929911c84acaf3b7acd9",
+    "hermes-council/profiles/council-learning-coach/skills/review-and-retention/SKILL.md": "787cb19f211521f05f11f612a892bde793ca67430499a1bb2a97d4b72bed29c2",
+    "hermes-council/profiles/council-learning-coach/skills/study-session/SKILL.md": "79b6850b06230439d4b37aa91269ae5ec20387939cca7bcf8b0dab11f51012e8",
     "hermes-council/profiles/council-life-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-life-coach/SOUL.md": "ac4c8c0f37c2d3841ecde13efc280c0d865c90a69d8b519b7fd974205c1ec380",
-    "hermes-council/profiles/council-life-coach/skills/boundary-check/SKILL.md": "dc9c29b332b6c531bcf71b2a24d271a90b1ab7d172e916ece80effae08cedd76",
-    "hermes-council/profiles/council-life-coach/skills/clarity-reflection/SKILL.md": "8234b215662ced45613e7af1ac9a8c82488bd221cb4daaf8702a8e5262f0e1b4",
-    "hermes-council/profiles/council-life-coach/skills/next-step-coaching/SKILL.md": "e2f79eb29826fee0df3a624ab7413dd540c0545f52b6860a01cec1c647b08305",
-    "hermes-council/profiles/council-life-coach/skills/personal-experiments/SKILL.md": "a5bb46d030d121a569d5114ebf132ff45dfc5e1d0f095b769413c5330a137b08",
+    "hermes-council/profiles/council-life-coach/SOUL.md": "48b7523fcdb76b3449d1963775f7e83041eb24fe4b3d95cfaba62b389ae11030",
+    "hermes-council/profiles/council-life-coach/skills/boundary-check/SKILL.md": "78f19ac4d8e88053b441c95bac08174b5a684005df018fc9f8cf98499da2c77a",
+    "hermes-council/profiles/council-life-coach/skills/clarity-reflection/SKILL.md": "a0e21d7ec0db2baeb9c9fdb3ad1b2cf340ce9f0747609416aac6733d679c1cb9",
+    "hermes-council/profiles/council-life-coach/skills/next-step-coaching/SKILL.md": "519836d80b8657849b41981a02885b2fd503f8780ea1f654afaa30a980bd6523",
+    "hermes-council/profiles/council-life-coach/skills/personal-experiments/SKILL.md": "392b9706c953bb0c417a93c81e491804bc4c5ee9f6e62ecbdb1224d193792cee",
     "hermes-council/profiles/council-nutrition-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-nutrition-coach/SOUL.md": "6d44a9978fceeff7651424782e80da0b909ce9f3bc7e99bc9eaee55615f3e76c",
-    "hermes-council/profiles/council-nutrition-coach/skills/balanced-meal-building/SKILL.md": "90bf54cdbf7f7bd322ca22c2099e09c0c07c7c9d78813bbc00dca57c1f1f5eef",
-    "hermes-council/profiles/council-nutrition-coach/skills/grocery-planning/SKILL.md": "2f6fcb568b1cc78f4bcbae487c7dfc821e29b62e0dd81d6ce75b5ba0763107fa",
-    "hermes-council/profiles/council-nutrition-coach/skills/meal-planning/SKILL.md": "1ab0dbfdeab2db68ae71cd7723612ad2e4d0ee6e4e9d454b72cc1a1f892281d8",
-    "hermes-council/profiles/council-nutrition-coach/skills/nutrition-adjustment/SKILL.md": "4a145a7dd5c1b23277045da965b3836d7a805842b2d5b22a47d23c2fcc4a7655",
+    "hermes-council/profiles/council-nutrition-coach/SOUL.md": "a36934862ba15dcb9865d50ab27696fd07e92da6cb6e3f37fb3cd0c898df7e88",
+    "hermes-council/profiles/council-nutrition-coach/skills/balanced-meal-building/SKILL.md": "a5a7154a87f29ddb7eb2f8255d91b6a1ed05983e54273c0fdfc36f0b3b757a45",
+    "hermes-council/profiles/council-nutrition-coach/skills/grocery-planning/SKILL.md": "ad5035d16d9a816a0ff0a4bef4c0ea41494d5cdc880c5bc11f691dfb5c733b47",
+    "hermes-council/profiles/council-nutrition-coach/skills/meal-planning/SKILL.md": "26c356e0a24c1a6a2d5daadc0c72c2c56b3a2ee0636534462ed0cc3075b4ce02",
+    "hermes-council/profiles/council-nutrition-coach/skills/nutrition-adjustment/SKILL.md": "a72b4c6666dd3c784209ce8c09bc75f9bc36a7351480ef49a1f0c2f33df420d3",
     "hermes-council/profiles/council-parenting-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-parenting-coach/SOUL.md": "e157175e65fdb2a462e1e4ad6830fa3d5ad67b3f27875545e78466433a94ee88",
-    "hermes-council/profiles/council-parenting-coach/skills/age-appropriate-expectations/SKILL.md": "f72b2fda2fd6fe1176074014b00d9b5c58ddbfc5dc93ffd0e106c91038fd63dd",
-    "hermes-council/profiles/council-parenting-coach/skills/behavior-and-boundaries/SKILL.md": "298c3f3bee75f94fbb289ab7e695fba430689a15519d08120853879dea8a7423",
-    "hermes-council/profiles/council-parenting-coach/skills/connection-and-repair/SKILL.md": "646d3e04f0dc511cfbf0b533b20a900d7ae276ab9e1e815f63bcba9001558fa5",
-    "hermes-council/profiles/council-parenting-coach/skills/family-routines/SKILL.md": "4a23bc62a97c862f23ddab20af9e92bf2f9a965fe74191165a69b956abe27230",
+    "hermes-council/profiles/council-parenting-coach/SOUL.md": "34d039c246a9a953d85ba416bd40a15c57ee20e942ce136399c1245902be57fb",
+    "hermes-council/profiles/council-parenting-coach/skills/age-appropriate-expectations/SKILL.md": "d837f6e2fdcf7f2fba23281498a4c05ce891f8519f59c2b5469262ff15ce70e0",
+    "hermes-council/profiles/council-parenting-coach/skills/behavior-and-boundaries/SKILL.md": "3ef7d7885703672e75a623e3f545e3ca09cab3bcdf364b32a04ebb77e9d32a0a",
+    "hermes-council/profiles/council-parenting-coach/skills/connection-and-repair/SKILL.md": "c2220b520962f912858b0042425555e619399990cd8c474f2f62d4517c6c75fc",
+    "hermes-council/profiles/council-parenting-coach/skills/family-routines/SKILL.md": "80d761e5cd8f517403212954262b1f42a53324009c895e67193358e4c27eff9f",
     "hermes-council/profiles/council-personal-admin-steward/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-personal-admin-steward/SOUL.md": "f022c9088ca82effe43f3f2466e3d394169dd0562549a7e43f62f1cdc6ffee67",
+    "hermes-council/profiles/council-personal-admin-steward/SOUL.md": "8a4c652a689c26ec2985528ea2615da2ffdb31ba131a5c4aaf22f8a610820a62",
     "hermes-council/profiles/council-personal-admin-steward/skills/account-and-subscription-review/SKILL.md": "1a1ce3de12ff4df23a7e679e8f4807f6a9a708b836a395c2b238120ceae442cc",
     "hermes-council/profiles/council-personal-admin-steward/skills/document-system/SKILL.md": "4f61b5d7489dcd74da7b7acab3b9f8d01e9dc4a69ea1422df4de24f8b9cbd7af",
     "hermes-council/profiles/council-personal-admin-steward/skills/form-and-appointment-prep/SKILL.md": "cf35e526cec7aff8839f4a1923829d073263eb914525417954cc0cd57d3cd017",
     "hermes-council/profiles/council-personal-admin-steward/skills/renewal-tracker/SKILL.md": "17460978272eecc016d501800f9729c30fcce7a3460616497ceffec7a9c8caf0",
     "hermes-council/profiles/council-preparedness-steward/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-preparedness-steward/SOUL.md": "4785142689392e0381937e2d5bbea47b4aa782e49e2e72a0fc5e0e57ba3d5f4c",
+    "hermes-council/profiles/council-preparedness-steward/SOUL.md": "1b36a13f83db0f1b9fe62f5a39d95ecdd30d2395c49e72dfe446ae1e826bf4d5",
     "hermes-council/profiles/council-preparedness-steward/skills/contingency-review/SKILL.md": "1ee70cc0b5fb0a191c8e2843432fe75b29634decb9ae005d86c2408f0a7e9411",
     "hermes-council/profiles/council-preparedness-steward/skills/emergency-plan/SKILL.md": "a46c13388266dd48fd42446281305e148febb430147759c04aab70ca12ba2f13",
     "hermes-council/profiles/council-preparedness-steward/skills/go-bag-plan/SKILL.md": "f9bdf3c362ae5c78cc036959b8ed47abffb2bd9fbb95c32dd971404d29bcd5c0",
     "hermes-council/profiles/council-preparedness-steward/skills/household-contact-plan/SKILL.md": "26ebee38c2f5ccbae2c92157ea7395eb1c29440b07e8d15859abf30bf7992d4e",
     "hermes-council/profiles/council-recreation-guide/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-recreation-guide/SOUL.md": "a694645c7789987290f4e2193041cfe92a13d8c1cc3ace5d0a15ed702dbfbcf2",
+    "hermes-council/profiles/council-recreation-guide/SOUL.md": "affa6d632c80d2b2c308b47242d2f69b076af6cc48eed3a093cfb27946d54304",
     "hermes-council/profiles/council-recreation-guide/skills/hobby-discovery/SKILL.md": "c23a3a8c7109404430e7ce2d85f975eafe9116494556ac3b047171241aba62cf",
     "hermes-council/profiles/council-recreation-guide/skills/outing-plan/SKILL.md": "b3d33c7929878ceb8dc812d2d6213bac5919efac36efe15350902d03744f5a4c",
     "hermes-council/profiles/council-recreation-guide/skills/play-and-novelty/SKILL.md": "4ce47a972d147bbab76996cd28bfcae919d42eb9d239b9240622082e34e93b88",
     "hermes-council/profiles/council-recreation-guide/skills/restorative-leisure/SKILL.md": "b88233d57f37c62dfd675319e2a26b86a1ab7697cf73b4b5433811f8205eb883",
     "hermes-council/profiles/council-relationship-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-relationship-coach/SOUL.md": "ee68db14afb931e4542cf2297f26f4f63f91721353c1a3e42f71991856cc4a40",
-    "hermes-council/profiles/council-relationship-coach/skills/boundary-setting/SKILL.md": "295eddb889b8836d1c85d601c6b38f992c0759a86bc43f6a291216293616d141",
-    "hermes-council/profiles/council-relationship-coach/skills/conflict-debrief/SKILL.md": "c26292a88f9831a44ce690f4986f65c63d80804e137c8fa919241fa5a9f54ef2",
-    "hermes-council/profiles/council-relationship-coach/skills/connection-practice/SKILL.md": "3391dd6722ca1d753bf0fb7ae68e9f49781c14b349de5266cdba058af1f42a50",
-    "hermes-council/profiles/council-relationship-coach/skills/difficult-conversation/SKILL.md": "446bb2f84914c00d98206920ac862a476a6d17e0b32e4d40ee00edb8cabbe966",
+    "hermes-council/profiles/council-relationship-coach/SOUL.md": "94b2a4a0ef517a6d743c2857ab1b25de805323d14ba293f11f6b9711adc85843",
+    "hermes-council/profiles/council-relationship-coach/skills/boundary-setting/SKILL.md": "dc7cc1fb00f1295a747c25f4fdcd21e0c573863445bd6c86862160073e3ef6d9",
+    "hermes-council/profiles/council-relationship-coach/skills/conflict-debrief/SKILL.md": "ea1960b70f41bd3088426ecd816109acdbdd5d088db78250df221c294dbdf02c",
+    "hermes-council/profiles/council-relationship-coach/skills/connection-practice/SKILL.md": "ff5ca62fa90d6dd3ed765d5a74c345a2ad5cba1015af7de341b7434815e72362",
+    "hermes-council/profiles/council-relationship-coach/skills/difficult-conversation/SKILL.md": "b1ca6a9c56aa0c57e2e0a65cdb4b9d12c0c14a058672653acd1603a18b22f401",
     "hermes-council/profiles/council-resilience-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-resilience-coach/SOUL.md": "4457477e70001c13e586454cbb4e89cfa5214c80038626503eda0d73a4e34d53",
+    "hermes-council/profiles/council-resilience-coach/SOUL.md": "9d902d595c2776198ca2f61c79f7432e4d23d1ccf7e229fcb6b3be83724e7377",
     "hermes-council/profiles/council-resilience-coach/skills/coping-toolbox/SKILL.md": "b847f9136e7576c99465f57b67fa81a41dda4285125064117a5c628b5cd821fe",
     "hermes-council/profiles/council-resilience-coach/skills/recovery-routine/SKILL.md": "4c8c0ee70c846eaa87b909b0698ca639e83a2f56f39fba0bb7bc729003158d34",
-    "hermes-council/profiles/council-resilience-coach/skills/regulation-plan/SKILL.md": "9b103eaa439102319201e50e12c5e48e16cd81d741425e979f3b083465ef3594",
+    "hermes-council/profiles/council-resilience-coach/skills/regulation-plan/SKILL.md": "11d506fc5fd55efdcd2260c8ee0c2dcba0d5cbfe2261720f35890dc64c66d3d9",
     "hermes-council/profiles/council-resilience-coach/skills/stress-debrief/SKILL.md": "29d6240572fd5e78ba9006260f07e65d548cac08addaa9af3ca5032236b1b0ec",
     "hermes-council/profiles/council-sleep-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-sleep-coach/SOUL.md": "90742b1003b6551d5c5748067478611071ee4d1679881c2f810cf6f620807009",
-    "hermes-council/profiles/council-sleep-coach/skills/recovery-planning/SKILL.md": "decda657514540ff613bdde44f358417fc904dd431c2da6a527aa739598a9d00",
-    "hermes-council/profiles/council-sleep-coach/skills/schedule-adjustment/SKILL.md": "436eb778fdd2ae6995e8d411931a02834386e8ee1c7651c26e5a94207a97d67a",
-    "hermes-council/profiles/council-sleep-coach/skills/sleep-environment/SKILL.md": "66c2d4678d1499f9b2f34b7babe1cb7c14b4b103180967ec0dbadc78e49ddd18",
-    "hermes-council/profiles/council-sleep-coach/skills/sleep-routine/SKILL.md": "cb34329da69883ec706abba3c2d8b416775b8a152209fb4ef84a4322f70929c7",
+    "hermes-council/profiles/council-sleep-coach/SOUL.md": "ff2684867fd136582103ebd2b69218b29e551367184da6221e4f3baadd18517a",
+    "hermes-council/profiles/council-sleep-coach/skills/recovery-planning/SKILL.md": "34a281986208b30af045865724ce3c60aed6c3346c104cd3bef3c8a062653b17",
+    "hermes-council/profiles/council-sleep-coach/skills/schedule-adjustment/SKILL.md": "a3690c37c000bd447c8639f74a2b512665f970d9ac1467ecae7597a058ed6a2d",
+    "hermes-council/profiles/council-sleep-coach/skills/sleep-environment/SKILL.md": "4a5ebc77b1a9e0f4df222be4f3624107a0a640d28044c3db8d44ca9f3fdc1133",
+    "hermes-council/profiles/council-sleep-coach/skills/sleep-routine/SKILL.md": "eeeced289f3b8d355349695fb175e3a4bfe120310c2a33d051f0fbb0347ded16",
     "hermes-council/profiles/council-steward/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-steward/SOUL.md": "9b249a9241ba349e4ebc91174a2377beec012b267ae22d5ee61ce1c7a39df992",
-    "hermes-council/profiles/council-steward/skills/council-routing/SKILL.md": "29fe618d8a6e8c741f6620c6567868a76f29efd4c5dbfefbfd32e6655a2f4431",
-    "hermes-council/profiles/council-steward/skills/decision-synthesis/SKILL.md": "a7aebfa6477e0dbfe75615310b37e25227c2945157732ebf37e88042313b93dd",
-    "hermes-council/profiles/council-steward/skills/privacy-aware-handoff/SKILL.md": "12b1126be53986c259d06a75c736cc9212d816edd27465bdb22d5d7b1faf6ce7",
-    "hermes-council/profiles/council-steward/skills/whole-life-review/SKILL.md": "02f1f31e2ccb431535c6f799eff7ef8af733d634a978dc9d489f9cf354325689",
+    "hermes-council/profiles/council-steward/SOUL.md": "6bbdbd83062346b55ec87745bbd28ab6f9ff2b480b71358038adad8345763f84",
+    "hermes-council/profiles/council-steward/skills/council-routing/SKILL.md": "b790f3abf7e73f8947723173752d6604db11bf85dbffd226e0f4a13870f251a6",
+    "hermes-council/profiles/council-steward/skills/decision-synthesis/SKILL.md": "e04eeabd3f79d601fd41b0705cb7d5a76c5ba906e1038e5c68c5a167b7efcb16",
+    "hermes-council/profiles/council-steward/skills/privacy-aware-handoff/SKILL.md": "9673c80a0518e4fdabc0c0123c4f2383466bcf70815e4b2fe466550f8bb45e7f",
+    "hermes-council/profiles/council-steward/skills/whole-life-review/SKILL.md": "c4dd4bcfafc568adfd6c53e63a5194a219e1019306e31831de8326778622592c",
     "hermes-council/profiles/council-time-attention-coach/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-time-attention-coach/SOUL.md": "ec12057616685023376f7f2bd1dd70258e1f3f362a4ea71acd5098964b656dd8",
+    "hermes-council/profiles/council-time-attention-coach/SOUL.md": "f728a7fae1d8e9e197949bc7f8751cca09f6d29a39847a63e0cb551442969965",
     "hermes-council/profiles/council-time-attention-coach/skills/attention-audit/SKILL.md": "af93c3f101067fe980aceb73576ce478106046ac22fbc1562a17545403783225",
-    "hermes-council/profiles/council-time-attention-coach/skills/calendar-boundaries/SKILL.md": "3a49050a86c6138deea30cbafb7088bb4523d030f026fe49059647d6a17deac5",
+    "hermes-council/profiles/council-time-attention-coach/skills/calendar-boundaries/SKILL.md": "aedff8531afde418114a99442e5f2883e020772a2089e3bca6b100d1748d89a7",
     "hermes-council/profiles/council-time-attention-coach/skills/focus-session/SKILL.md": "fa7ca5715a8edc76fd7af1ffe6c83d23ed5d52d9c5cbd1c35e9afa410bd8e624",
-    "hermes-council/profiles/council-time-attention-coach/skills/weekly-time-plan/SKILL.md": "637197ae5b1641eadcde60aac03a916bc2f69fb08a1d17cd7a0aa86042af06a3",
+    "hermes-council/profiles/council-time-attention-coach/skills/weekly-time-plan/SKILL.md": "1efa2be97fe359fd5cee83fbe54a6655cd52f573f67ae634ff1235dc1d2403e0",
     "hermes-council/profiles/council-travel-planner/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "hermes-council/profiles/council-travel-planner/SOUL.md": "321ff03989bc688fe75b6f4850bb7bc550f5d3b8875470030da8c3a0da2c3cb8",
+    "hermes-council/profiles/council-travel-planner/SOUL.md": "949addc7f3257a531f08c88ec273a4af61433ab896df5a210e8fbc08e84ea6fd",
     "hermes-council/profiles/council-travel-planner/skills/itinerary-plan/SKILL.md": "5430024a7c600cfc2207cbdd10b4dbd1b341f331fb870748d5a2c54d959e3388",
     "hermes-council/profiles/council-travel-planner/skills/packing-plan/SKILL.md": "3d1e34f0fe2077f55d933221fd901f29c58b4d7406b8bc555356454c7189b417",
     "hermes-council/profiles/council-travel-planner/skills/travel-budget/SKILL.md": "d1dc282f428c4b71dd45a2e18e15e499d09534076d483f38646c0da3f94d2a95",
@@ -1469,6 +1469,1252 @@
     "hermes-wear/skills/watch-device-context/SKILL.md": "4fe4236ffe896c59b439909d57e93c0ea712ef15698175e22c2a68fe5771d866",
     "hermes-wear/skills/watch-tool-results/SKILL.md": "66caba75da069f2d928cfbc443269356791bf647aa212a0988c99aed2299f8ce",
     "hermes-wear/skills/wear-memory-privacy/SKILL.md": "ec874c1b4ffd6a70a53c398b885a7473f591aeacb608938d27f4ce884c0e2c5e",
-    "hermes-wear/skills/wrist-interactions/SKILL.md": "08a39a7b6dd19aa11ab78cb89f306054ab4e4841a3437cd993983e8df0b76555"
+    "hermes-wear/skills/wrist-interactions/SKILL.md": "08a39a7b6dd19aa11ab78cb89f306054ab4e4841a3437cd993983e8df0b76555",
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/art-design-foundations/teaching-kit.md": "56cdfe5411bcaa88b07ed1d21ead17cb88cd6c7457fb48c654e5f5fe586852c5",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-safety-review/references/teaching-example.md": "e2d2bd2dfdf2d5eafcb8eb95771a29aa1e445a4d5150325ab90b146207469aa1",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-systems-lesson/references/teaching-example.md": "5b4da3f3c7e8c58abe43fb2d71df5bf6cf5fe1381125900dcff78ff4be359a13",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/diagnostic-reasoning/references/teaching-example.md": "56cdb61d976fec9f91b7fe43de46ea22cceac36783603a54f1b4682605d0d299",
+    "hermes-academy/profiles/academy-automotive-instructor/skills/maintenance-procedure-lesson/references/teaching-example.md": "8e9313f115bd2fffb49c8447fc6bc209d6e0c14e5bb585bd2638a8ce5ebe6988",
+    "hermes-academy/profiles/academy-biology-professor/skills/biological-systems-analysis/references/teaching-example.md": "58f8d96466492676af1bdb23a59a84c31544c8c27dbe98d982efa272f8c63f9f",
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-concept-lesson/references/teaching-example.md": "8419bd469ce5e1bc9f60a351a3506ac954f36b4042a7b2d7a379900f7fdf2f1f",
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-mastery-check/references/teaching-example.md": "5438ec0bb3df4022029b872758f389280bdd42de329c66da7376454df536c031",
+    "hermes-academy/profiles/academy-biology-professor/skills/genetics-and-evolution-practice/references/teaching-example.md": "cd3a1ad43902d7be5ad7311a84a0a24a8d677dd28cc4b616adf3b54daff6833c",
+    "hermes-academy/profiles/academy-business-professor/skills/business-concept-lesson/teaching-kit.md": "dbbb20ec91ff1660c7fe1c7c3afe3a9e502d92b1032e1d90308612d4b01d23b5",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-concept-lesson/references/teaching-example.md": "030c88025459de99ea930592ad98e26ac122b6126df41a9d684b915f051006c1",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-mastery-check/references/teaching-example.md": "88f572c2f12d717cda4887d82fd038b27bdf7989d797f8c81f463db0593f3ef5",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/equation-and-stoichiometry-practice/references/teaching-example.md": "9c52cbf8ef049d213d7ed5d91ff7ae4703cb92e587fcc4012342082e8b2c5b9c",
+    "hermes-academy/profiles/academy-chemistry-professor/skills/molecular-structure-reasoning/references/teaching-example.md": "b4cd5d06f503b8a761a4ab9999ca2a4f0b6edf0e6a581bdbfa4a7b617b1a4d3d",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/architecture-reading/references/teaching-example.md": "f95b3c957118111a64c0bf387f6f40e65d47c18e5942dcbd779c32864dbb5697",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-concept-lesson/references/teaching-example.md": "b1553b7affade6b12866344b8e2f9d6ec2b80147b522fc6504b453de6c6b9b43",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-systems-mastery-check/references/teaching-example.md": "acaf7ff9d19a39db020f245eb8509c72c00bd880e9f462deeb9242122ede9b42",
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/reliability-practice/references/teaching-example.md": "0ff9c7675a231e70900541462483a34192182592230cfdb2287d08c27eea5e30",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/algorithm-tracing/references/teaching-example.md": "94cb248e2ed3f4b65a91601a06e23d8e5b258da80ec54aed417ac72e6294a1c7",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-concept-lesson/references/teaching-example.md": "6b600e8ccd8db43448453b1d3afa614e253a37dfcd3546c258feb3195c6ac2bd",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-mastery-check/references/teaching-example.md": "f334309e2c0cb39ff48ed4d55cea24cd3f81842b1194cbb9093fd19d638c4b0d",
+    "hermes-academy/profiles/academy-computer-science-professor/skills/programming-practice/references/teaching-example.md": "6e62f33c42124a60ecc604d50ec4d78d814174f4f5b70998b908c4db2ea5ce6e",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-practice-review/references/teaching-example.md": "712cd25ee4690c1563bbe959c2c32eae5df42b787d076d8a65d3242efd11620f",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-technique-lesson/references/teaching-example.md": "dab209d241af8bfb16da80c7f372e0485b6df2ff28d3d2e405ef1e5762d12098",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/food-safety-foundations/references/teaching-example.md": "d9cbbace53233b0f0b7320974eb3330900131c3b6cf3c8f4cbced4524f33efc7",
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/recipe-reasoning/references/teaching-example.md": "dc149b2308955fd25e5abe9394f8bdbfec2fe8cc45f1d859f5f931c782feef58",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/cybersecurity-mastery-check/references/teaching-example.md": "ed5582fd81d2811e83430a10f4f67beb75cb67d6e8604f22dc2505b9386535e4",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/defensive-lab-reasoning/references/teaching-example.md": "daef7f408cd45e34b612931f4a5e0ce36e58f9551ff7192ea3d8807f667a134c",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/security-concept-lesson/references/teaching-example.md": "e900835985b19ff5621be4fa87b504825964859c136abcec5971be6b2d7565c5",
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/threat-modeling-practice/references/teaching-example.md": "0b3e8f3b45b87076d6243335d3c9053ac8bc61dfdda63e0acdd509fc8f1250cc",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-analysis-workflow/references/teaching-example.md": "51fbfff260db69a2362e1a84d4fa970967bc9a36baeb1d0188dc6a97997794a3",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-concept-lesson/references/teaching-example.md": "310a9678e7df1dbb9c4a8e043365da28c2b6fcd3dbe1a1d504aae9135f9f3b61",
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-mastery-check/references/teaching-example.md": "271feb933dbe47a52a5b05f771a501a61648b20c803fa4b3be238245d53a9547",
+    "hermes-academy/profiles/academy-data-science-professor/skills/model-evaluation-lesson/references/teaching-example.md": "788cb861136d74c93fbf4199a7772c4c739390455a589091d26934ab6b20bbd2",
+    "hermes-academy/profiles/academy-dean/skills/learner-brief/routing-examples.md": "c36f737e36f732a3b4f2200dbd748758bb1396541a0d63e0fd523963746a751d",
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-concept-lesson/teaching-kit.md": "ef4ac59224e6db542335eede1c92afec8af58dcab121d4c1cf03658df5155924",
+    "hermes-academy/profiles/academy-education-professor/skills/assessment-design/teaching-kit.md": "36499eb86154e670d7c0d1556b980e06e65a2a47bf30699354eb0fd42e3fefe0",
+    "hermes-academy/profiles/academy-engineering-professor/skills/design-problem/references/teaching-example.md": "5239e8f64c7c5635cceae5416135e9b8018444f447c4001ab5712713fe4a991d",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-analysis/references/teaching-example.md": "ac524aec78d3d2bca8226662aed17142e56f21366afcacf5569ddfc6e90cb9b8",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-concept-lesson/references/teaching-example.md": "68191e3d1dc0ce56107a4f1a1a05ff2b8a72c783524576896a7e8402c8d67e9f",
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-mastery-check/references/teaching-example.md": "222b768852f228b970e03c686caaf4f19083521c125fd8f07d4a3511f9fa03f9",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/anatomy-physiology-lesson/references/teaching-example.md": "b468135fb098b3c5e084f35bb6f24c886934604fd1d9fda40f72eb3d45b7d06c",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/clinical-reasoning-education/references/teaching-example.md": "d4300c316bf33b137d250fdec67cdb9f3de4b16dd34b85dc7790a6bd033ea8f2",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/health-science-mastery-check/references/teaching-example.md": "7508b8ac5c3ef8c2233d12ffa0423ec6b82576583c0a3adf7e43c7afdbb658d6",
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/medical-terminology/references/teaching-example.md": "6659ab71eefc0c97b32aed94951ba5e9b71b8e8d0cf4c4de8380da7c675ab4c8",
+    "hermes-academy/profiles/academy-history-professor/skills/historical-context-lesson/teaching-kit.md": "13aa52631fa2c3ba1427779ab3af29e52f41b3089c0cb6013f7bd1825ef8bd78",
+    "hermes-academy/profiles/academy-language-instructor/skills/language-lesson/teaching-kit.md": "a52714da822d88247d1abd8c3e22f7ad78c737a39e39aca8d40a08f61f19be16",
+    "hermes-academy/profiles/academy-law-professor/skills/case-reading/teaching-kit.md": "b63b1c2c88090462d3301ab0af04b8cf7848f4f4fdfc5a7d4764a83dec6566aa",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/guided-practice/references/teaching-example.md": "03d94ec50d2556a7faeb1ff19319bccccaba487477bf56d9c66c43630004b2de",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-concept-lesson/references/teaching-example.md": "2035b605025c3803169c22aff7bff1659d9c6ca1756f3ee056913e385c2b91fa",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-mastery-check/references/teaching-example.md": "6b213db7509898940937b95bc0eb9ecd1c5bf2f3de32789e986945f21239d812",
+    "hermes-academy/profiles/academy-mathematics-professor/skills/worked-problem/references/teaching-example.md": "b4d48c4f95ac447a81983d15c67f5c2e04a2462181fe7932849361080c772a2a",
+    "hermes-academy/profiles/academy-music-instructor/skills/composition-practice/teaching-kit.md": "7f9bf6eecd931b5a052e9e75570ebf844d0cde3aa15c8320b353efe1ccf366b8",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/quantitative-science-practice/references/teaching-example.md": "b0c7d9aab45c9b985032ad333964ac6e0ae45d45e9b5f49173e4af56daa5f7c8",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-concept-lesson/references/teaching-example.md": "db265494cc8fc7b4d19b721ac397046a0ae742cdab9acdfb84223fd59e41214a",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-mastery-check/references/teaching-example.md": "4e46304edc5be174d32cecfb4c17726712d3216168abbb4147b86efc5d20ecb3",
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/scientific-reasoning/references/teaching-example.md": "132c8ef0ba8e650fceb35d710506e6fcd495003691475ac37425be6bba985565",
+    "hermes-academy/profiles/academy-philosophy-professor/skills/argument-reconstruction/teaching-kit.md": "c356286cda3c59f3cbe61b15de7fc150aa50fcd7bb6dcdc5eb1c7cad1ea8e4b0",
+    "hermes-academy/profiles/academy-physics-professor/skills/model-and-diagram-reasoning/references/teaching-example.md": "cc002b719d2bc9ed4627733fdacd4ce3dfb4f30b5fecca0a93cb9e3a6b5a8934",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-concept-lesson/references/teaching-example.md": "8943b00abd6b97bff38a23e6a90cc5e73bac575b8aa99e27c770f14eb04a3ae5",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-mastery-check/references/teaching-example.md": "debcfaf3f7d87e8b07ca8c6fbb5c14a5e51657a407e6354fdb5fad84dff49d72",
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-problem-solving/references/teaching-example.md": "2fdacc2c08a0eb5051e2c2ca8240eed50812f65f7e852fb254f5b5c8fc680bcb",
+    "hermes-academy/profiles/academy-project-management-instructor/skills/planning-and-estimation-practice/teaching-kit.md": "01745fda4cb202237dd26ed0a271d2856e45342f0b197e1b37399241758d6065",
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-question-design/teaching-kit.md": "1a6f5e2e4a84559568309748994c138caca72e0073e8e9d49f1444db1459439d",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/measurement-and-layout/references/teaching-example.md": "0c3f0572c88ad6b14d913b40444458cb268eb280b7e0d1e73070c0c4e51a35bd",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/shop-safety-foundations/references/teaching-example.md": "59a7f59b669bfc155f12f35a0013b1c61e6a60ec41872343fbc47026a8888992",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/tools-and-materials/references/teaching-example.md": "c0044b53336d72401cb8d714266444678312765c80d70d0389f6d80c80087b74",
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/trade-procedure-lesson/references/teaching-example.md": "780a5f989fa7bc78409611d670ea70e8e7a665159ee60d8f4f2476882d6c3d87",
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-concept-lesson/teaching-kit.md": "d8e14cd215c9922eea52da3f006834de57bcd07559cd5c16695de3d9b297f3f2",
+    "hermes-academy/profiles/academy-statistics-professor/skills/inference-and-uncertainty/references/teaching-example.md": "ac38a54a98c99fc937bd4d0469a79237c55cd9880f68d1e18fdc7356a4f9029a",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistical-problem-solving/references/teaching-example.md": "2157cd202fbaf347eb9b709033bfb8d1afa8075ef90c480241869697f924fa58",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-concept-lesson/references/teaching-example.md": "945a24327e04839dccaaebfbdc01b04e30263dc52c5cc1cdc0f5ca50cce2058d",
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-mastery-check/references/teaching-example.md": "3b6b1508584406f454a4b2c68047c0859867c10d20fe7f2aabc5a5e2b8607cb9",
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/doctrine-comparison/teaching-kit.md": "8904f1d20543776a01543a392912763b1f11dd528ea4c4e7787bc2699ecf65a4",
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-lesson/teaching-kit.md": "7a57de34a203cf436fdc21997f6e3204042f0db6d55657aa15c1156ef1c9c28b"
+  },
+  "approved_behavior_revision": "d0c284c0e9ea62824a65d7e2524d01c95db714af",
+  "approved_behavior_changes": {
+    "hermes-academy/profiles/academy-arts-design-instructor/SOUL.md": {
+      "prior_sha256": "403a4d044efa41e82207e1a744319ac2f7780615f1a1160d4a61c99faa3146ed",
+      "approved_sha256": "05c772f38bf60826c40f198ec79b283f8e383c03f2662d328e81dc55a594fb55"
+    },
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/art-design-foundations/SKILL.md": {
+      "prior_sha256": "1bbb20fad48207d92cd89945434ed067eb38db7dcac05a983e042a429b9d9ac3",
+      "approved_sha256": "a1aad9e9702941583af188d98605914f82e14bd6a6fa0086cfef15c6cb14e0de"
+    },
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/art-design-foundations/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "56cdfe5411bcaa88b07ed1d21ead17cb88cd6c7457fb48c654e5f5fe586852c5"
+    },
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/creative-practice/SKILL.md": {
+      "prior_sha256": "04f8ace2b0679736b73b1439bb832c708d9d80f3edf6e5e916ff374cfd7490cd",
+      "approved_sha256": "466c761318471838d3befb79cb82d8d2e064759a341a5c2bcac5d739fb94a1c0"
+    },
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/critique-workshop/SKILL.md": {
+      "prior_sha256": "7edcefd7ae06d9ba55b2ab1641c761db164867aa4587a7af391eaef3d10d55a1",
+      "approved_sha256": "9d3f6115291f2ff5bce2d5dc7f98fc0cf13724959fd7e4c32bb48c1a0d1634a8"
+    },
+    "hermes-academy/profiles/academy-arts-design-instructor/skills/portfolio-learning-review/SKILL.md": {
+      "prior_sha256": "3fa1dab6358238d9c74d53baea9175b777fc80e493f3874d28c43d0fc599ad4f",
+      "approved_sha256": "528735c716449b02e3a4c30cee8911bc72ecbdc4e431c7f1555a68a4d4c02848"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/SOUL.md": {
+      "prior_sha256": "6fa00607c7ee61fccf207404b3d8e5f851afc065008193f9e1af2dc55e4bb250",
+      "approved_sha256": "012a7652131b0a8c921c130b45c6025131a442ddc49b4ebd97ff29ef0c68b8db"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-safety-review/SKILL.md": {
+      "prior_sha256": "83e36a8be3891ba93b90c7934dc989baa78753d60b1f6e96981b6163d6cf8743",
+      "approved_sha256": "a941b8870b17e856d9f69bde191ec893d1bdf5f1fb49e01cb2b58e63b6fa656c"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-safety-review/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "e2d2bd2dfdf2d5eafcb8eb95771a29aa1e445a4d5150325ab90b146207469aa1"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-systems-lesson/SKILL.md": {
+      "prior_sha256": "51880d29f6191d34f5f0224dcf44a36b617f6a74978f2f30e793185105980c20",
+      "approved_sha256": "e1a4a0c0ab87c76e6ffd9dec01bf63b5454e57ef72256ec8385cc179830a8739"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/automotive-systems-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "5b4da3f3c7e8c58abe43fb2d71df5bf6cf5fe1381125900dcff78ff4be359a13"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/diagnostic-reasoning/SKILL.md": {
+      "prior_sha256": "c72af5b32b9ffd685e734572a9e138c9cc4152e5ab917f2564d43918034e45d7",
+      "approved_sha256": "f00874b5b21cfd791475566eeb835ba98a32412f19d7c1cb768b40ab046c2268"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/diagnostic-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "56cdb61d976fec9f91b7fe43de46ea22cceac36783603a54f1b4682605d0d299"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/maintenance-procedure-lesson/SKILL.md": {
+      "prior_sha256": "09856d8f91067210c51ff184bd8a929c851d0af13f4dfee36713d3ef6d344b00",
+      "approved_sha256": "9b56189e803943661fd5af321492abbdf558318ba4150a99e20f595e9c32bd65"
+    },
+    "hermes-academy/profiles/academy-automotive-instructor/skills/maintenance-procedure-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "8e9313f115bd2fffb49c8447fc6bc209d6e0c14e5bb585bd2638a8ce5ebe6988"
+    },
+    "hermes-academy/profiles/academy-biology-professor/SOUL.md": {
+      "prior_sha256": "d3c222303af2cc1787ae422038b87f2ec2d4430d236edd253dd8d3a4b675c9c5",
+      "approved_sha256": "b4e6ceabac521d25013f199000904895e56e88bca8e0329caa556f8fce3f3f4b"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biological-systems-analysis/SKILL.md": {
+      "prior_sha256": "a900319a4159609e3ab08fc824d0d2ab603fd0be8a098911f5f47f6281f32a44",
+      "approved_sha256": "c8089dfc1fafd1a3c0e152048ac07812a331c045d57852aeffdf0029473b2081"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biological-systems-analysis/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "58f8d96466492676af1bdb23a59a84c31544c8c27dbe98d982efa272f8c63f9f"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-concept-lesson/SKILL.md": {
+      "prior_sha256": "cbf482b5b4af51182eae46ce38ac33423be038af88e1167d561d426cfc4e5a1d",
+      "approved_sha256": "fe3e1fec2de82bd4c4f5d6224cb43bd69a512df2fd00e0075006eeb184d014fb"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "8419bd469ce5e1bc9f60a351a3506ac954f36b4042a7b2d7a379900f7fdf2f1f"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-mastery-check/SKILL.md": {
+      "prior_sha256": "7f7e9dedc04e1dfbe4df2975eefd6f5e2551a7b772125381b419d29128e41180",
+      "approved_sha256": "77bebd166987340e0207e19b166b99453989855ab63176caa3ff319434251412"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/biology-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "5438ec0bb3df4022029b872758f389280bdd42de329c66da7376454df536c031"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/genetics-and-evolution-practice/SKILL.md": {
+      "prior_sha256": "89c436f308b6ecc2758de400979f007d501e76bfc2119c2d9f2ddfa4b2f663fa",
+      "approved_sha256": "2555d21bcc76d2ff34d59cb1392eeb9d0810ae9750e853f3e24348ad2dd063a3"
+    },
+    "hermes-academy/profiles/academy-biology-professor/skills/genetics-and-evolution-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "cd3a1ad43902d7be5ad7311a84a0a24a8d677dd28cc4b616adf3b54daff6833c"
+    },
+    "hermes-academy/profiles/academy-business-professor/SOUL.md": {
+      "prior_sha256": "74f8e5d0b4c934bd425b4f79eff0be76c2ef0cdfc533b21f770801e0491c9608",
+      "approved_sha256": "95c90adc7ad2f4e2b310e8d363b7c06b7af574200cfb8c4b19d107cdd536f5e9"
+    },
+    "hermes-academy/profiles/academy-business-professor/skills/business-concept-lesson/SKILL.md": {
+      "prior_sha256": "0d7be511d62a5fb6c72bbe13d0cad042b6f2790622798baec4b0758de21dc078",
+      "approved_sha256": "e49096b4aa1acbe6f10ebada5caf80408c9b3a782e814794d3ad55649d4927fd"
+    },
+    "hermes-academy/profiles/academy-business-professor/skills/business-concept-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "dbbb20ec91ff1660c7fe1c7c3afe3a9e502d92b1032e1d90308612d4b01d23b5"
+    },
+    "hermes-academy/profiles/academy-business-professor/skills/business-mastery-check/SKILL.md": {
+      "prior_sha256": "52338d96707aead8283dd31565a7247c1209c31595c6435fe92ebf51a60b865b",
+      "approved_sha256": "e93d4b61adf727bdfea1008f9437f104193f5832ac6738ec60ac44d34bbdf6e6"
+    },
+    "hermes-academy/profiles/academy-business-professor/skills/business-numeracy/SKILL.md": {
+      "prior_sha256": "b9c876b0857c41cd61df68a32637a0f07b6f7110a89163ba5fab9cdc5fe4277a",
+      "approved_sha256": "f0d5a8eec20b58aab877104f7e5985a905e99b20dd7a7bf32e54f9488b348fcc"
+    },
+    "hermes-academy/profiles/academy-business-professor/skills/case-study-analysis/SKILL.md": {
+      "prior_sha256": "f63b21a0df7c53d06be6b1411a63c4e16f1eb1fdbda87a31e626e4959ab21722",
+      "approved_sha256": "8b1fd9741d62ffa662168b6171dbb059500a3a085ac47456c650fbf1e363c21c"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/SOUL.md": {
+      "prior_sha256": "4ba2839e16b1b0d72afb43f6860b788f47127a1a8a1ff7b5ddbf5c3500265994",
+      "approved_sha256": "b0f6139e99550d4253ecd3c8fbb7704306a98a6033fa757f0075c63e8477b768"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-concept-lesson/SKILL.md": {
+      "prior_sha256": "2239c7732710a9cf4f45043bab2b7e1618911528a82e006f73a1f051b12f7e9a",
+      "approved_sha256": "f0508e232bec2cc358b3bf3f93a831bd23d7d6c07f9b4c6a98bac49073c84a6a"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "030c88025459de99ea930592ad98e26ac122b6126df41a9d684b915f051006c1"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-mastery-check/SKILL.md": {
+      "prior_sha256": "8f2b3ea53fff41b6fafad1b371116d829c903fed3b517bbcb85d28e1aad0cfa8",
+      "approved_sha256": "cf34f718917f818e6fc89c9567aefa70b9f4960782d9ded223eb23e76db4a2e4"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/chemistry-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "88f572c2f12d717cda4887d82fd038b27bdf7989d797f8c81f463db0593f3ef5"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/equation-and-stoichiometry-practice/SKILL.md": {
+      "prior_sha256": "952950aa66bdee2ee486d51c0cf1f5ef20bfd8b603966934916042c61430fb47",
+      "approved_sha256": "58f222480e127000f3bb6508ea7369ec4e2a31406f9330dc4b79ef1ea20a20f1"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/equation-and-stoichiometry-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "9c52cbf8ef049d213d7ed5d91ff7ae4703cb92e587fcc4012342082e8b2c5b9c"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/molecular-structure-reasoning/SKILL.md": {
+      "prior_sha256": "feb64fb8d6fb3bb2f9b73943589fb366469ef6b3d7b1303d11bc9b04f049900f",
+      "approved_sha256": "41b7dabdcbc298341c5079202913b44ade8bd4a98a4013bfb019f9091134daf8"
+    },
+    "hermes-academy/profiles/academy-chemistry-professor/skills/molecular-structure-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b4cd5d06f503b8a761a4ab9999ca2a4f0b6edf0e6a581bdbfa4a7b617b1a4d3d"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/SOUL.md": {
+      "prior_sha256": "8e476f508dd0ab2d8489c57779dc353c20d476b3f1270a4ed4c2e1204c41d1a2",
+      "approved_sha256": "3c180a8f74d84f7c021ae566883816d4cab3fb0030e8e65d151793ea42cccdce"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/architecture-reading/SKILL.md": {
+      "prior_sha256": "b37b7c80f1862279e050673d66e1470aa7c2bb3724dd1387f6cd619ade0ca05f",
+      "approved_sha256": "a0346d64549e3b14ea594e5c3067949c75fff1b643d39618adf7c626d1bdba77"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/architecture-reading/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "f95b3c957118111a64c0bf387f6f40e65d47c18e5942dcbd779c32864dbb5697"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-concept-lesson/SKILL.md": {
+      "prior_sha256": "81be0e70ab4b23e45ebbc5627312e043f397281b8f347b7503b16ce485be1102",
+      "approved_sha256": "d761a1cb6a81ddd82772c1c1ec9c717dd2b1e499c34664124e6c1d7c3500cbdc"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b1553b7affade6b12866344b8e2f9d6ec2b80147b522fc6504b453de6c6b9b43"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-systems-mastery-check/SKILL.md": {
+      "prior_sha256": "29e294583d7901e4a56b96f33576e5ab83d19b10acf9da0ed5f922044c10dace",
+      "approved_sha256": "6ad7777e27d5c2625313cb2274c7083550774a4032b147e7920eb4f4efb8c1ef"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/cloud-systems-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "acaf7ff9d19a39db020f245eb8509c72c00bd880e9f462deeb9242122ede9b42"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/reliability-practice/SKILL.md": {
+      "prior_sha256": "898fcd77b2fa649e3c04a09a96c6fc6c527d54bd4fb27fde807daba070f4389f",
+      "approved_sha256": "993c094af8452c1431284b490c6c36349da07f7a3f6f6671e8610dd1d038536d"
+    },
+    "hermes-academy/profiles/academy-cloud-systems-instructor/skills/reliability-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "0ff9c7675a231e70900541462483a34192182592230cfdb2287d08c27eea5e30"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/SOUL.md": {
+      "prior_sha256": "3f86c3d0ca2067785606d61aeb11279e1d8d9707293d52bbc5a78e4e8938ac64",
+      "approved_sha256": "0da468d443bfef32af19a49fa6239ad75c10b112c01b5c166dbc5c7743d42543"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/algorithm-tracing/SKILL.md": {
+      "prior_sha256": "3d3c6a3c5cc39b454e75b54d0488a01aede6086485b3c4248e5f735dda3d7d8a",
+      "approved_sha256": "35231c986eeae2bdc469d82c753827575de1083f53bb8176e054805a9065f970"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/algorithm-tracing/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "94cb248e2ed3f4b65a91601a06e23d8e5b258da80ec54aed417ac72e6294a1c7"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-concept-lesson/SKILL.md": {
+      "prior_sha256": "595db522cc638857b671871d42eca8012440b0eeb5b3370060f01718051e4fa9",
+      "approved_sha256": "365ac0a83772b21e5077cc3e62aef8ec7061964fc6a1f2f8a0ec114d66513a22"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "6b600e8ccd8db43448453b1d3afa614e253a37dfcd3546c258feb3195c6ac2bd"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-mastery-check/SKILL.md": {
+      "prior_sha256": "afddd1fe9d70b29beaf74873d8fde2be68eddfa98a847d9212e3d22275abacab",
+      "approved_sha256": "4a34ba8954788dceeb7107534429e6396fc7afae6f0e2ce0d58327d9b5c78517"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/cs-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "f334309e2c0cb39ff48ed4d55cea24cd3f81842b1194cbb9093fd19d638c4b0d"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/programming-practice/SKILL.md": {
+      "prior_sha256": "20ff2c0e46a791dc9afe192607f742c8b43730d8cec9d6bfc00eaaae711b58fd",
+      "approved_sha256": "03b18d1fce0272d1f4660148f6d7f7b65cf58bf949af25416449154ffaf7fe6c"
+    },
+    "hermes-academy/profiles/academy-computer-science-professor/skills/programming-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "6e62f33c42124a60ecc604d50ec4d78d814174f4f5b70998b908c4db2ea5ce6e"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/SOUL.md": {
+      "prior_sha256": "1a131b5819ac05b341880e4a3471d8697b1d64e7ab3429ea3fb8d0ac60d5f35f",
+      "approved_sha256": "6858b26443c8f090fe60187cefa342669bc2ed11be83978f37befbc45312ceba"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-practice-review/SKILL.md": {
+      "prior_sha256": "29d12bd4eac53b6db5ee7b1ce22e1df1d642fdadb096f9f56738249f626ae234",
+      "approved_sha256": "906897130b7e28579d38fc42f43509c58aeb823ec9915cbf7fbe51c6815997f3"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-practice-review/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "712cd25ee4690c1563bbe959c2c32eae5df42b787d076d8a65d3242efd11620f"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-technique-lesson/SKILL.md": {
+      "prior_sha256": "2436594fdef7311c7dc832b5884223d4136174ac568575682c7a9b1a37ade0d5",
+      "approved_sha256": "3d7e8bb7d96ecc4e442de1406dceda144ecfd2a4df6100e0b4f393677e47e9e4"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/culinary-technique-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "dab209d241af8bfb16da80c7f372e0485b6df2ff28d3d2e405ef1e5762d12098"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/food-safety-foundations/SKILL.md": {
+      "prior_sha256": "e3c38ba990ebcaf36177d0d6ae7e77dff34a00f003b3be585a63df59d1f33a7e",
+      "approved_sha256": "82cd418cbc657478d925fe7814685df2877b48991db88a3500b407ba60260d9f"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/food-safety-foundations/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "d9cbbace53233b0f0b7320974eb3330900131c3b6cf3c8f4cbced4524f33efc7"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/recipe-reasoning/SKILL.md": {
+      "prior_sha256": "8577a52daeeff0787a95e5ea16a6e68dab4e53a7890e3b0847c403045bf92334",
+      "approved_sha256": "0ae62b73032b116e0feb585e381f3719a0f9498666cc74f6678175f4b64b4e07"
+    },
+    "hermes-academy/profiles/academy-culinary-arts-instructor/skills/recipe-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "dc149b2308955fd25e5abe9394f8bdbfec2fe8cc45f1d859f5f931c782feef58"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/SOUL.md": {
+      "prior_sha256": "2e204a2eeb1c3495bdecb7697be8cc2700e0bd8e0a3d56a61a8b0b5da622345b",
+      "approved_sha256": "a68a89431109b1fff58e74414b4b68e763eda1e97000fb3e01849fd8d7eaaee1"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/cybersecurity-mastery-check/SKILL.md": {
+      "prior_sha256": "75c8c3f5db6253ee9055ee1763e7752dec4012e3358fc4878434272ed778118c",
+      "approved_sha256": "9ea7aef708f1dd2eee8e825fa7c5c143cc78b4188da310a9fe90c36ecfd2873f"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/cybersecurity-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "ed5582fd81d2811e83430a10f4f67beb75cb67d6e8604f22dc2505b9386535e4"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/defensive-lab-reasoning/SKILL.md": {
+      "prior_sha256": "18b11af301a9e1ff32a94f7afe11b542566d06d298e513b6f2d2befa197625b0",
+      "approved_sha256": "9b98e3444e1f1501084006a1509fd885fa90f7b2934b96b36b0eb7696fdd70e8"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/defensive-lab-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "daef7f408cd45e34b612931f4a5e0ce36e58f9551ff7192ea3d8807f667a134c"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/security-concept-lesson/SKILL.md": {
+      "prior_sha256": "842b527e028702b67bba38d097356ce289a1a294627f732238f0009f8a55956c",
+      "approved_sha256": "b943562dd96dad1d890b2c2bc0d5712e5432af5cbd0e4952acba36fe7d2af6d2"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/security-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "e900835985b19ff5621be4fa87b504825964859c136abcec5971be6b2d7565c5"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/threat-modeling-practice/SKILL.md": {
+      "prior_sha256": "8f9967f03e3ea6b7b9753239a2840deb60f50cec3362bb3672e87e24539988c9",
+      "approved_sha256": "67856fe135bd05884a07dbd66766f14e16f4f7751d7777057bf41ec268845aa1"
+    },
+    "hermes-academy/profiles/academy-cybersecurity-instructor/skills/threat-modeling-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "0b3e8f3b45b87076d6243335d3c9053ac8bc61dfdda63e0acdd509fc8f1250cc"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/SOUL.md": {
+      "prior_sha256": "f318cb638fae470d70245149974f60b6764410f73b28b89008a232b7c69064f6",
+      "approved_sha256": "122d947154853d86d052a0ba917fca9d46bb4c5132988890a7f523cf90b7b369"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-analysis-workflow/SKILL.md": {
+      "prior_sha256": "ca6c69b0885a2314ef3a95017c30ebb6a8e01be512a2ef303bb8539e525c7c6f",
+      "approved_sha256": "b18a1218b28474b7e187d2afd5dd99cfd0de9307325d15a196f3ed8802f434fc"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-analysis-workflow/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "51fbfff260db69a2362e1a84d4fa970967bc9a36baeb1d0188dc6a97997794a3"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-concept-lesson/SKILL.md": {
+      "prior_sha256": "cb8c3f69e83b5afcbc23e71322920028fe8f196fdecda6ccfbbf853b603e089a",
+      "approved_sha256": "3381ad59bd70d67cd2d49499af53d476e21d165eb1adfc0835bc58966af21292"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "310a9678e7df1dbb9c4a8e043365da28c2b6fcd3dbe1a1d504aae9135f9f3b61"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-mastery-check/SKILL.md": {
+      "prior_sha256": "e2a9fefbf013e9a8a36c92c618910508c68e723f55b6dc0cf6444981c2fc5337",
+      "approved_sha256": "1fcfe1b115b75296415d6ca9f2de5d4f78b864bf2b992873a42e85558fc28c07"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/data-science-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "271feb933dbe47a52a5b05f771a501a61648b20c803fa4b3be238245d53a9547"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/model-evaluation-lesson/SKILL.md": {
+      "prior_sha256": "229eba1ced4798d90aa02ee0f0a0be773c228154b5c528ce6b0a2f660a75f27d",
+      "approved_sha256": "6b25c7f598fa4e3f2aaa79a55843141dc1f0cca72d566572044a24f1c4e9ba83"
+    },
+    "hermes-academy/profiles/academy-data-science-professor/skills/model-evaluation-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "788cb861136d74c93fbf4199a7772c4c739390455a589091d26934ab6b20bbd2"
+    },
+    "hermes-academy/profiles/academy-dean/SOUL.md": {
+      "prior_sha256": "a282cadabd7f91b358b3a1983b06aab094e1674639d634f68f0a62b6e41f6d10",
+      "approved_sha256": "f99b3c97040c7043e570365a1a8cd879cb5730d15b161f534bb2e77ce887fb70"
+    },
+    "hermes-academy/profiles/academy-dean/skills/curriculum-path/SKILL.md": {
+      "prior_sha256": "008dc082e62725d05585c99192741e0e56773e4bd232c780d46ff1c5c585e86f",
+      "approved_sha256": "2a5cee3973547a91fd265b080c96d7460c35e67a8087eb8aa57cac712b85f4ab"
+    },
+    "hermes-academy/profiles/academy-dean/skills/faculty-synthesis/SKILL.md": {
+      "prior_sha256": "3c375be3c4cf9317e1ca3fabbdacd10cf1aa901a92b1151b51fd27c39b58931a",
+      "approved_sha256": "72b050d3c5bb3b4d7d0f7e8833cd210ef5a41c98b8dccabfa74fc4f86f4c9f93"
+    },
+    "hermes-academy/profiles/academy-dean/skills/learner-brief/SKILL.md": {
+      "prior_sha256": "6136c20f7eed21e81e4b7279c52e9b1722e929e647aad3af3b7a46cb27ab91bf",
+      "approved_sha256": "52fd975d5e2acc94bed5b73f034a77f8a385790fcb4c5864a91e2a84c7439065"
+    },
+    "hermes-academy/profiles/academy-dean/skills/learner-brief/routing-examples.md": {
+      "prior_sha256": null,
+      "approved_sha256": "c36f737e36f732a3b4f2200dbd748758bb1396541a0d63e0fd523963746a751d"
+    },
+    "hermes-academy/profiles/academy-economics-professor/SOUL.md": {
+      "prior_sha256": "63adc07e1034c4d6bbf7bb238046b94abce0317590a58e28ea16a93012e546b4",
+      "approved_sha256": "8a6d6f6ba7213929ae95bdec6334f4f1f7e04ba4e262ee94628c38a62fbb5814"
+    },
+    "hermes-academy/profiles/academy-economics-professor/skills/applied-economics-case/SKILL.md": {
+      "prior_sha256": "4ef3b885b192166edd5b569dae3169defd30e8cb1d463eb233a7576af26c7562",
+      "approved_sha256": "7dfded8ead945103c8ae14401222f73a3e360e5fba0e47178926a61f73f2455e"
+    },
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-concept-lesson/SKILL.md": {
+      "prior_sha256": "18c46d119d67e77970949b20a2e6dec1fb8372b029747266f29412c50c45f659",
+      "approved_sha256": "d22e531c4a204ef78a9ca9c30c45f50bba7d030ec480576c8172e24cd39216b2"
+    },
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-concept-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "ef4ac59224e6db542335eede1c92afec8af58dcab121d4c1cf03658df5155924"
+    },
+    "hermes-academy/profiles/academy-economics-professor/skills/economics-mastery-check/SKILL.md": {
+      "prior_sha256": "c1ec57f94959d7d258cd18ff335ec956c7ae8f09365acc66dc286843ad487e6b",
+      "approved_sha256": "17dfd23615fa0be8885ced67d09cfdac3f088e576835061379b4158890d95e5e"
+    },
+    "hermes-academy/profiles/academy-economics-professor/skills/model-and-graph-analysis/SKILL.md": {
+      "prior_sha256": "c2eafae9355cc346757cb5b1a2e82a6cc493473ed430d4d1aeb7a8b95009dbe6",
+      "approved_sha256": "8abc46c577db85cc7b2420ac7697f84ee74f4408dac0c344ba52e0d0c3e796c6"
+    },
+    "hermes-academy/profiles/academy-education-professor/SOUL.md": {
+      "prior_sha256": "594849e1d7006d3c0984c2d0ae7a2d1370e40bc68b50c47d5abedff4b797733c",
+      "approved_sha256": "b7f106756cbccfc45f753f651d11d190a59771e9d17fe1a34b64f7c6c51f772b"
+    },
+    "hermes-academy/profiles/academy-education-professor/skills/assessment-design/SKILL.md": {
+      "prior_sha256": "3fd6947cb948b8d0d11a9a490c37f635f9b9421b7051171156ea13747461242d",
+      "approved_sha256": "014a782106ce1d971f0729795562f9348c668a5f75fa39b64679eeefadf2de2f"
+    },
+    "hermes-academy/profiles/academy-education-professor/skills/assessment-design/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "36499eb86154e670d7c0d1556b980e06e65a2a47bf30699354eb0fd42e3fefe0"
+    },
+    "hermes-academy/profiles/academy-education-professor/skills/learning-science-lesson/SKILL.md": {
+      "prior_sha256": "e2667b2d8823d14859f18b26045f4dd9e428eae64c74902c088893ccebf2b02c",
+      "approved_sha256": "eb44fd04778008b9ad717c17c8ebc69b1e86b5802afd736fd8c718410d83e0aa"
+    },
+    "hermes-academy/profiles/academy-education-professor/skills/lesson-design/SKILL.md": {
+      "prior_sha256": "312a2bff0584f36b6868451be5387d0181479a38fe5fa8985763b7e0a78edfdd",
+      "approved_sha256": "838c6238c695dd13f24e3f5f39bf3f1ea58677ab05605a1ec6545fb30230ebdf"
+    },
+    "hermes-academy/profiles/academy-education-professor/skills/teaching-practice-review/SKILL.md": {
+      "prior_sha256": "be9c49e6bce11694c58b02504e76998ae27f7634e35665052a4ac1f13fbad9fe",
+      "approved_sha256": "813a5c0478a4fdf7e325237a76da9fa4f00f8ca28d1c92e6869a855ad148e57b"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/SOUL.md": {
+      "prior_sha256": "426dc8abc9354c252c0e8c2547e9c43d41a410dd88fa943b9bffc13c7ba7318b",
+      "approved_sha256": "b9eb005343342d359f0707bfcc82ba8d96ef48779e81fe35cc489429d465dc2f"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/design-problem/SKILL.md": {
+      "prior_sha256": "8d381679949d4ab701577b17f878515082e68a65ecff80ae448adc77a85bd311",
+      "approved_sha256": "15ec23d6adf934fe81dc976472cda762729ecd93084c804dc3a32557a4d16fb1"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/design-problem/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "5239e8f64c7c5635cceae5416135e9b8018444f447c4001ab5712713fe4a991d"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-analysis/SKILL.md": {
+      "prior_sha256": "1a76b53463dbbbd1e19c202288771231e8c03f1aa94142939aba941b26127e54",
+      "approved_sha256": "228f28c97067a03766f0f876f6e15b563d8ad1e9becb3227245e9839a6a93662"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-analysis/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "ac524aec78d3d2bca8226662aed17142e56f21366afcacf5569ddfc6e90cb9b8"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-concept-lesson/SKILL.md": {
+      "prior_sha256": "7fba1c920d48d4b48b1341494d5e39aa20f1bf0953618a33414680abe3b499bd",
+      "approved_sha256": "40fb7e49b178b8989b00a1225115ef4a088e494d2f349b489a67926bb77f44c7"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "68191e3d1dc0ce56107a4f1a1a05ff2b8a72c783524576896a7e8402c8d67e9f"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-mastery-check/SKILL.md": {
+      "prior_sha256": "f766199787dffec88aaec28d180e04aa94fb4cc43dbbf9cca2ea5c1cc1105ca1",
+      "approved_sha256": "363c9c402c4213542dc6e3268a713d1ae78cc41f7378c93b54d63b8cc1a853bb"
+    },
+    "hermes-academy/profiles/academy-engineering-professor/skills/engineering-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "222b768852f228b970e03c686caaf4f19083521c125fd8f07d4a3511f9fa03f9"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/SOUL.md": {
+      "prior_sha256": "41d842312b6ef812356c84cc1c660a392324505962f5dc371de21316efa1cffb",
+      "approved_sha256": "33af2b514fe3c8385b7c40a2d92ebf2a545a87dda0b65e25865164af387810ac"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/anatomy-physiology-lesson/SKILL.md": {
+      "prior_sha256": "949a53974ba4078801dc768fee8fcd8f81363505b68ee54f6abfab65e99c8c2c",
+      "approved_sha256": "4c539265b67e98fcc126c5d2a0375e25532a4a1a8e04bd4ab3e82500ef84bcf1"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/anatomy-physiology-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b468135fb098b3c5e084f35bb6f24c886934604fd1d9fda40f72eb3d45b7d06c"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/clinical-reasoning-education/SKILL.md": {
+      "prior_sha256": "d45aada93d674711e839c04d256c0ca2850ad32bea6680ea2452239b0e6eca72",
+      "approved_sha256": "fc40495c664db683de63c3618a6687af7f010c463cec2ad1701c899b913ac582"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/clinical-reasoning-education/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "d4300c316bf33b137d250fdec67cdb9f3de4b16dd34b85dc7790a6bd033ea8f2"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/health-science-mastery-check/SKILL.md": {
+      "prior_sha256": "719445d8e6fe8141a4834682b2dcb3db4f4a11378553b9a9199a7d829bfe2acf",
+      "approved_sha256": "97b446ec29fe53596830455e6a369545fd7350fc75300f86ffbfbafac9a9aa90"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/health-science-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "7508b8ac5c3ef8c2233d12ffa0423ec6b82576583c0a3adf7e43c7afdbb658d6"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/medical-terminology/SKILL.md": {
+      "prior_sha256": "09365586997bae0990f84781db0f8712edb53e3426925eb22611a9ae057e295a",
+      "approved_sha256": "d3403efa5c5b306e4b914e2be6ad2ec02209497cf2df7ae492bf7f8eed56d78b"
+    },
+    "hermes-academy/profiles/academy-health-sciences-professor/skills/medical-terminology/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "6659ab71eefc0c97b32aed94951ba5e9b71b8e8d0cf4c4de8380da7c675ab4c8"
+    },
+    "hermes-academy/profiles/academy-history-professor/SOUL.md": {
+      "prior_sha256": "5b60acbf1cf2b1608a9bad897dda1eda182ecaa8477594fb80c8b32b008a85d7",
+      "approved_sha256": "0dd6ecc97b606e3524b45459197b7479cfd5ea3a001a6b1d847c3f0ced2b8197"
+    },
+    "hermes-academy/profiles/academy-history-professor/skills/historical-context-lesson/SKILL.md": {
+      "prior_sha256": "c1b5aae81953e19d0cbf2cd930f2f60b2af609c995257114c4edab5efec01832",
+      "approved_sha256": "d4b0c82df1b753a17a75aadce6bf0043b4d5ae9c014be8a839a36c6be364e67a"
+    },
+    "hermes-academy/profiles/academy-history-professor/skills/historical-context-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "13aa52631fa2c3ba1427779ab3af29e52f41b3089c0cb6013f7bd1825ef8bd78"
+    },
+    "hermes-academy/profiles/academy-history-professor/skills/historiography-comparison/SKILL.md": {
+      "prior_sha256": "3f229dc099c01ae6e22370d3fa9bfc27875579c27d135b3a02c7f7b2967c9d50",
+      "approved_sha256": "7ed31a2a20e90e6cbfc084bdcc0958c3041645da4ee8236a972662c259a5bbda"
+    },
+    "hermes-academy/profiles/academy-history-professor/skills/history-mastery-check/SKILL.md": {
+      "prior_sha256": "5b5b2b63bef4f96b1765522a4ceecc121786cd525477ed6f5f71a55ff8f0d634",
+      "approved_sha256": "fcc24f29fedbdf24bb586fd1d4dfe541edb01fed5457c0b7b6a18238db6b96ac"
+    },
+    "hermes-academy/profiles/academy-history-professor/skills/primary-source-analysis/SKILL.md": {
+      "prior_sha256": "b02b1c6369f1a9803db71d137af90bb28ad2a2acdc75661ec6001a1ffd4e11f6",
+      "approved_sha256": "7e3e65748a6040b3bd6257882c718fe9a4db43ac57409712b5ecd7897b0b395a"
+    },
+    "hermes-academy/profiles/academy-language-instructor/SOUL.md": {
+      "prior_sha256": "ad0fc0fa1a78472a35159e5c879dde8bfa64350f4f0788ce0f57e33051ca2ec2",
+      "approved_sha256": "bd0a099b1ec6694a797330d73cd005a69329a4e65b3e47d4b759ed638ff5960d"
+    },
+    "hermes-academy/profiles/academy-language-instructor/skills/conversation-practice/SKILL.md": {
+      "prior_sha256": "aaee4a2bd2c5c066528db70bab5ab6bb5eaf90aa9f0d73f7505a2743facaa573",
+      "approved_sha256": "f1728f558aa0c7417bc939dbc165f869a8c6da30765acf12e595450bcf2ac3a1"
+    },
+    "hermes-academy/profiles/academy-language-instructor/skills/grammar-and-usage/SKILL.md": {
+      "prior_sha256": "7f5949b50ef51e396a287de7fafe403769294e7274591e44c713ab224dd60c51",
+      "approved_sha256": "f904f5fc638e526b5e6411f14638ef140aed32ddc74b8268b9b441df661d9301"
+    },
+    "hermes-academy/profiles/academy-language-instructor/skills/language-feedback/SKILL.md": {
+      "prior_sha256": "30d273c58365a4544ae35c021f4a6b3bb9518aaf4fade0edd143064a82c1398c",
+      "approved_sha256": "cabc9f01409a09d1a74d00b0477f1020124a2518b2604d80a33eabb5a56641a6"
+    },
+    "hermes-academy/profiles/academy-language-instructor/skills/language-lesson/SKILL.md": {
+      "prior_sha256": "c221739d0fe7c081b0497890470644e95b2e0851561d4bcb29b91c7e1d43c967",
+      "approved_sha256": "c53aa46318e036530c19efcccdcb4862a1a9f909aebe4821a8bc7ecc01410800"
+    },
+    "hermes-academy/profiles/academy-language-instructor/skills/language-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "a52714da822d88247d1abd8c3e22f7ad78c737a39e39aca8d40a08f61f19be16"
+    },
+    "hermes-academy/profiles/academy-law-professor/SOUL.md": {
+      "prior_sha256": "e2d322c6ea39623b17d1e6c45e8875e8c1dde8fb44ec0182ddb9e31017870062",
+      "approved_sha256": "be9a24ef225035548b34e3c8970cfbd3a85b471476ac1d424e38f4dc9838f773"
+    },
+    "hermes-academy/profiles/academy-law-professor/skills/case-reading/SKILL.md": {
+      "prior_sha256": "8e7d3459353476a3aedf723763b8cc1b9de9d6ba9b34023aa26af5a8ff1a7cf7",
+      "approved_sha256": "88e480d2e9460f7d7ff4bef6794f04a881348e14a55396d5875db66d576e9184"
+    },
+    "hermes-academy/profiles/academy-law-professor/skills/case-reading/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b63b1c2c88090462d3301ab0af04b8cf7848f4f4fdfc5a7d4764a83dec6566aa"
+    },
+    "hermes-academy/profiles/academy-law-professor/skills/law-mastery-check/SKILL.md": {
+      "prior_sha256": "4bf3e7dd92366d1ff322616b8c741d0b28b36adaa34bc7ecae5741f8fb626536",
+      "approved_sha256": "a3c1e5aa71ad08640b51062bd474fe89fd715cdf9d98df7c59ebb5988db8e863"
+    },
+    "hermes-academy/profiles/academy-law-professor/skills/legal-concept-lesson/SKILL.md": {
+      "prior_sha256": "2bd68f6efc22b5c2df019d3aed6447c81027b37420dd01c894790477a9550254",
+      "approved_sha256": "97a9891d3475e6f0386a08e2430b9a43015a4a26ef88713d18d81053224568ff"
+    },
+    "hermes-academy/profiles/academy-law-professor/skills/legal-reasoning-practice/SKILL.md": {
+      "prior_sha256": "34dd6732a1939e482c8dcd0aaea2b05d37201aab451b91b4ed1bdf2adf60d5f9",
+      "approved_sha256": "f0b7fc83e18b88f6f065ffa052e1a98540d47f4cd8a2cb0149a003f45029bb9d"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/SOUL.md": {
+      "prior_sha256": "4364e94cfb082a4be20f6c49db40f6b2a7b7472877ba38f7882cd1370d3036ee",
+      "approved_sha256": "f1f6524bdb4ea288b2fa8e5f034a752fa69e5705317ce8b924ea1e8fde76683e"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/guided-practice/SKILL.md": {
+      "prior_sha256": "38350ef3bc6f36dcdf4ebd20d0bc3c1f61969b74afe32e23d2c241aa244fc14f",
+      "approved_sha256": "a74f92c4dfade62612283610608307372e38cf7dd4420e4b2439353a5c016dc7"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/guided-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "03d94ec50d2556a7faeb1ff19319bccccaba487477bf56d9c66c43630004b2de"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-concept-lesson/SKILL.md": {
+      "prior_sha256": "fc729fd18b255eb416634708778174eaed266e0521c0737522f21f6cee8452ac",
+      "approved_sha256": "449a6772e71203c4387264c548ff06d7b823789263a82d5447340b656acba7d7"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "2035b605025c3803169c22aff7bff1659d9c6ca1756f3ee056913e385c2b91fa"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-mastery-check/SKILL.md": {
+      "prior_sha256": "055dda101d8990a106dd7632643aea5632382fd12f21bb0399d90054fddcdabe",
+      "approved_sha256": "70e4a0f2d4683b9c2b5cb823861a65172be02c3bcbe09d5f9af90bd6353d985f"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/math-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "6b213db7509898940937b95bc0eb9ecd1c5bf2f3de32789e986945f21239d812"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/worked-problem/SKILL.md": {
+      "prior_sha256": "2e221fa32e998635e1311dc54612e7395a1d1bdfcd97065fa51c5a01a76dd2f1",
+      "approved_sha256": "5f095b5909f35e25f9c75829c230380b8a002886f9e570c6ff3332c07d3a3879"
+    },
+    "hermes-academy/profiles/academy-mathematics-professor/skills/worked-problem/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b4d48c4f95ac447a81983d15c67f5c2e04a2462181fe7932849361080c772a2a"
+    },
+    "hermes-academy/profiles/academy-music-instructor/SOUL.md": {
+      "prior_sha256": "f24eb2fed3eed22a94a68286798b87e89397202e48fcfc5b5c2afb03c10d2559",
+      "approved_sha256": "631dc47906589de6cb0272291cf48272a73ba43d95e96cde7570447784b8d652"
+    },
+    "hermes-academy/profiles/academy-music-instructor/skills/composition-practice/SKILL.md": {
+      "prior_sha256": "e2d3ba7aadbec09f9cc7d9abb09124f854a3e8e988b70090adb8246c22f35f68",
+      "approved_sha256": "cd3d8805fe076a2ddfe907b2f4210cb848de01762c608317503e593430d359d7"
+    },
+    "hermes-academy/profiles/academy-music-instructor/skills/composition-practice/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "7f9bf6eecd931b5a052e9e75570ebf844d0cde3aa15c8320b353efe1ccf366b8"
+    },
+    "hermes-academy/profiles/academy-music-instructor/skills/ear-and-rhythm-practice/SKILL.md": {
+      "prior_sha256": "db46e06063f6c597d437c64063b09f7475917e843eca7e75e54ec1ed1f7e067d",
+      "approved_sha256": "1909d9706840f9749d46849a9e43388a8ea47906504122115fda83bdcdd9ae9f"
+    },
+    "hermes-academy/profiles/academy-music-instructor/skills/music-theory-lesson/SKILL.md": {
+      "prior_sha256": "7e50598b59a67d84746c3f6fe9a7c0d46ccfd31191d724c813a4949c931f92c3",
+      "approved_sha256": "7132c94fd50ac95b7e6fa1014a0e8c506dbb80233448590730bb8ee16501f3b9"
+    },
+    "hermes-academy/profiles/academy-music-instructor/skills/performance-feedback/SKILL.md": {
+      "prior_sha256": "76be5c98b6b309890c5d6cad88e476db75bd013df3c938ac7227dc36b53b1acb",
+      "approved_sha256": "29fbe275992593cff40e6977e66a3577afcfa0a7f0f216c56b6569e8cd2b8333"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/SOUL.md": {
+      "prior_sha256": "519e0ef3b438825ed713c2399f8699b080d37f0ee79af23de5dcd7404816faf0",
+      "approved_sha256": "8b1db9226cf1038d50b5f0133ed6c2fbf99bcfa666092c2fdc3cb808945d8d87"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/quantitative-science-practice/SKILL.md": {
+      "prior_sha256": "8748d102ade9586768480e0bef4c832a2631e83a9a45cb628de7e86727e472c4",
+      "approved_sha256": "dd3e41bd4f66bcebff99e1f9af3cf87f9e50dc8b33def8b9787cb17a8608c75e"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/quantitative-science-practice/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "b0c7d9aab45c9b985032ad333964ac6e0ae45d45e9b5f49173e4af56daa5f7c8"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-concept-lesson/SKILL.md": {
+      "prior_sha256": "cd126ac6213d401f3071f80617a999d08ae9e10efee97d7c22cf930ca71bc57c",
+      "approved_sha256": "ed83ca58884037de0390acc98cad53b20b2c630fc78e2a8ac9ae54d247cac86d"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "db265494cc8fc7b4d19b721ac397046a0ae742cdab9acdfb84223fd59e41214a"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-mastery-check/SKILL.md": {
+      "prior_sha256": "c7e364492919aa903f01549a221d727e3d30a3e2d4c458625486af16b83161bf",
+      "approved_sha256": "8595b59e3cdb9639f77ee2924f7e30a2d00900f42c21b4815f4dddff8d85bf05"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/science-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "4e46304edc5be174d32cecfb4c17726712d3216168abbb4147b86efc5d20ecb3"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/scientific-reasoning/SKILL.md": {
+      "prior_sha256": "5e1f87cda7e81e61d5ab3f3985ed54ed02ea9e307c9be4c3d225e4c5c7ff77e0",
+      "approved_sha256": "8892bda3036884c2d2d7055d6155652e02d5163df624eed382aa0b26efd4f25e"
+    },
+    "hermes-academy/profiles/academy-natural-sciences-professor/skills/scientific-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "132c8ef0ba8e650fceb35d710506e6fcd495003691475ac37425be6bba985565"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/SOUL.md": {
+      "prior_sha256": "99d31690a1e3ba03c65cb15286166d29f95031a871010490ab6fb24fd03af94e",
+      "approved_sha256": "5fd1f9e60dc19c4aa6df0627aa243cedbed8187376ee1bcf7a3fe6e2af9acb7b"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/skills/argument-reconstruction/SKILL.md": {
+      "prior_sha256": "3e2a461d8f45bf08d79bbab9f7b6d8e25ea61393f95fc1649dfe50284be921b6",
+      "approved_sha256": "7efc3700416088c13381d4297f1e302943c26ee0ab0c71657e2f0b83f4734ae1"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/skills/argument-reconstruction/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "c356286cda3c59f3cbe61b15de7fc150aa50fcd7bb6dcdc5eb1c7cad1ea8e4b0"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-concept-lesson/SKILL.md": {
+      "prior_sha256": "4387d266a39335a35e3fd9628e2147dc27da1aafdcb26f90894fb7dd17970d15",
+      "approved_sha256": "93e952e838824121b3d0d03c757758d5aaa693a05d576612d3f982eab5295488"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/skills/philosophy-mastery-check/SKILL.md": {
+      "prior_sha256": "9e4fe022c02dad55e43561b631abfff15a681badf38a77e6880ae3cf3bf454e7",
+      "approved_sha256": "41d0c9da1eff01bee165dec3a46aeb74bd2728103d9f67868256d4ebd665aaef"
+    },
+    "hermes-academy/profiles/academy-philosophy-professor/skills/thought-experiment-analysis/SKILL.md": {
+      "prior_sha256": "08fe92051946f4d92a34dd3d12dd170eddc8c32abfab6a50781d815cbbef4c57",
+      "approved_sha256": "fc96af9bc7a8e0288ca5760cd8eb7e3bd0e0dd347b2f27fa7ee453255d016212"
+    },
+    "hermes-academy/profiles/academy-physics-professor/SOUL.md": {
+      "prior_sha256": "8379c81e2f4d08eeba8fae7c3a6c7b6fc7d8aee3c9cdd40b9d70408fc367c506",
+      "approved_sha256": "fef7c7be0914dc1de8768b5286eb6189337fcab6b9da656d530bae5873cde65f"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/model-and-diagram-reasoning/SKILL.md": {
+      "prior_sha256": "9b94a035c55d0dae61f2264be9541a44a34a65d2d82096287d6905795a07f251",
+      "approved_sha256": "7a82517c03a663509aed0583a82911f5173eb0e411d3cf8c0b83249bdf00a46f"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/model-and-diagram-reasoning/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "cc002b719d2bc9ed4627733fdacd4ce3dfb4f30b5fecca0a93cb9e3a6b5a8934"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-concept-lesson/SKILL.md": {
+      "prior_sha256": "c3d1bce9a96a13453bccf39922c437f596628f1c07ca5fe71691aa3d7de77aad",
+      "approved_sha256": "ed06a54143d2f93cd405c2410a66e02d1b3af69b398d446906ff47b20efa9d00"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "8943b00abd6b97bff38a23e6a90cc5e73bac575b8aa99e27c770f14eb04a3ae5"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-mastery-check/SKILL.md": {
+      "prior_sha256": "10c24c849016e767436bf1698ac0d61c4fbab822557c92e53185d2ee84017777",
+      "approved_sha256": "3c9a56f117234fa38ed8c833857bde24ec9042cfe6cc4dd4205e4704c34f6e8c"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "debcfaf3f7d87e8b07ca8c6fbb5c14a5e51657a407e6354fdb5fad84dff49d72"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-problem-solving/SKILL.md": {
+      "prior_sha256": "a0ed610db6806f681b2c8496956a81a9d1e2a478897ea06df902e4704bc0fd22",
+      "approved_sha256": "642ec898b6577e06da9bdf05fedcc6595d1778dcc337f80587a238cfc7ec0545"
+    },
+    "hermes-academy/profiles/academy-physics-professor/skills/physics-problem-solving/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "2fdacc2c08a0eb5051e2c2ca8240eed50812f65f7e852fb254f5b5c8fc680bcb"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/SOUL.md": {
+      "prior_sha256": "cddd9982d3e59f0b8c81d37974c199b81779f34df6150989616a7f16825774f0",
+      "approved_sha256": "a7de383154d906cb639bab12b8af00c5d6df418c575af4ebbd8c7483f242cd75"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/skills/planning-and-estimation-practice/SKILL.md": {
+      "prior_sha256": "e64e55c9f2b3bb4ec6aacf2c0b8cd4c804fa4636adb3205f9d142b738f727cd2",
+      "approved_sha256": "73ab851f4a316b2884c699a573b07be29b1a83f4d78d55527cbbf900b896e4d1"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/skills/planning-and-estimation-practice/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "01745fda4cb202237dd26ed0a271d2856e45342f0b197e1b37399241758d6065"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-lesson/SKILL.md": {
+      "prior_sha256": "c84a1efdcd5d37aff908557f320425e33f5341b426ad163ae754225bcd4ad8cd",
+      "approved_sha256": "127dc240890dfa072e2fe12101dc2e577b9f0c227d0f38449e94cf1554881d1d"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/skills/project-management-mastery-check/SKILL.md": {
+      "prior_sha256": "d8e32cdcf101a13144bdddcc639cbc6dcc76251007a8dbe12e23b9efe05e28bb",
+      "approved_sha256": "35a30397a417161f4f41bb1b8ef2e4ac115661935d4b79c20fd3c633cbf3b494"
+    },
+    "hermes-academy/profiles/academy-project-management-instructor/skills/risk-and-dependency-analysis/SKILL.md": {
+      "prior_sha256": "c902da17cab2627988145251a17da011b0ead7c2c09cbc40dcb73aad575d8ea2",
+      "approved_sha256": "c96fd6b1cdd0d248ae50e6e6dd1ba3a9c1dda24230d6948c66510ab60117fb11"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/SOUL.md": {
+      "prior_sha256": "d5811ce77c79c465875fc2224e1b85db897a85181184aa1533b069b5be0389f0",
+      "approved_sha256": "f9f219e154cedde6719c5086fdd6934b82af3830bf0dd5bbd150fb0238e968e0"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-critique/SKILL.md": {
+      "prior_sha256": "45afdafee2f1e66a30ded4228f362c4d1e3ca2fc98e037b72df4259ac36ae2ac",
+      "approved_sha256": "cd6413b976658eced7524af13c9852a9ce15bbf8b56b0aa5e9d96411cc4beb5a"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-question-design/SKILL.md": {
+      "prior_sha256": "2df3c7bf789b47e167cee05413172b3fc797c8341885b1304ce0b8c86bad56e5",
+      "approved_sha256": "6a5f6f050f853b1b2516ddacd03783e88d84e88498e5dc0c1d1a41d3661b8f17"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/skills/research-question-design/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "1a6f5e2e4a84559568309748994c138caca72e0073e8e9d49f1444db1459439d"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/skills/source-and-evidence-evaluation/SKILL.md": {
+      "prior_sha256": "b5227b17c2f35c8fc54bfd7903d7ec30af797ce71f46bc62a23488783992c76a",
+      "approved_sha256": "5c120998fedc3784474de42e937ea20d0ea16d644a8c61427ffbe4167c34f6f4"
+    },
+    "hermes-academy/profiles/academy-research-methods-professor/skills/study-design/SKILL.md": {
+      "prior_sha256": "9c10df6ec5f0e1db47900b12b13fdefd24f94c9b57d6229ea13b85c8821b8ea4",
+      "approved_sha256": "0dab6aa587a10b7fb3e460468d1a7ce4733e8076fc2ebecc2431bcc8fda2bcb2"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/SOUL.md": {
+      "prior_sha256": "e63e093872503563b2d329624a755ef892ce0cd090953996f5b2941f135f21da",
+      "approved_sha256": "6cfbe95ecc25ea187fedf5bbe2ae22f221c5d1f8c69a9ca8513e39301dd2b046"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/measurement-and-layout/SKILL.md": {
+      "prior_sha256": "0b58abadc047685b925fa76c2185db73bcdaa1c69baf27506c4179f1c3460374",
+      "approved_sha256": "8c7c42ca3c5b13a4bc0f4a35e1400ef4b286599f5ffdcc4f65ec9a03d6a79403"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/measurement-and-layout/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "0c3f0572c88ad6b14d913b40444458cb268eb280b7e0d1e73070c0c4e51a35bd"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/shop-safety-foundations/SKILL.md": {
+      "prior_sha256": "6f51f71c5c246eba0e034a7f2543dc2b2c76e19208611948cc1656027a566f75",
+      "approved_sha256": "48e94aa77568dabbe3d50905aac1cbc61d8ea739f885659b9e29dd4daeb895a6"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/shop-safety-foundations/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "59a7f59b669bfc155f12f35a0013b1c61e6a60ec41872343fbc47026a8888992"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/tools-and-materials/SKILL.md": {
+      "prior_sha256": "21dc9b0403887d6b6d6f41dd003356feae016982f43029ea3dceab9c00244335",
+      "approved_sha256": "27ab4c34722b78ac51732a46fd86736825c6ebd31be2a49fe17e3b985fd3bb9e"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/tools-and-materials/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "c0044b53336d72401cb8d714266444678312765c80d70d0389f6d80c80087b74"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/trade-procedure-lesson/SKILL.md": {
+      "prior_sha256": "1101cd7e359ac4747367132733674e02ebb8f7f3c4973fe5f236f820a8f0af8b",
+      "approved_sha256": "47f436366e033ab818df3b741d807b31875248802b5b4af4720063ba7704db29"
+    },
+    "hermes-academy/profiles/academy-skilled-trades-instructor/skills/trade-procedure-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "780a5f989fa7bc78409611d670ea70e8e7a665159ee60d8f4f2476882d6c3d87"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/SOUL.md": {
+      "prior_sha256": "42606fe9b5a4a51af77969abe21e43d5cc9e127088eacc969ea1071f4ffc49b5",
+      "approved_sha256": "2588955c54b0bbf2144789924151c753a42350aa0056778673e84a5fb699c9c2"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/evidence-and-methods/SKILL.md": {
+      "prior_sha256": "d61648cac7f40fd0a5ca4126b4679997a6919b441f5e3738f710635507f02f72",
+      "approved_sha256": "42bed77fc7b3ea823f26e972263a275855683b72c217eb60f8c32f39d93c3d40"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-concept-lesson/SKILL.md": {
+      "prior_sha256": "d4c72ed82fbf21ebd856c2811d4ae17062dc3deed3f7cd84cb8126d8ccac16ca",
+      "approved_sha256": "1319726f8d8565bf7496d0f3c165300fc22d3307768c3cc031d90b6b0f284bf1"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-concept-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "d8e14cd215c9922eea52da3f006834de57bcd07559cd5c16695de3d9b297f3f2"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/social-science-mastery-check/SKILL.md": {
+      "prior_sha256": "6e7e24ef792520bd82c57b8a5dbed25be66e73a3b6d0963d54ef72dd3dd6b289",
+      "approved_sha256": "f98b7169719c1de06c971ba07f57917a55aa07222c1db8d704d2099472e647a0"
+    },
+    "hermes-academy/profiles/academy-social-sciences-professor/skills/theory-comparison/SKILL.md": {
+      "prior_sha256": "78d369adc1a13161f62e71438f0380415aea52e8540191179ffaa506aa9c4c73",
+      "approved_sha256": "b448dcfefb9244c28fcc872ca38c585dc974b3bfbd64b914f2bfa82d5752383d"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/SOUL.md": {
+      "prior_sha256": "451d6b5eb5cb5e687e4213e9a544c5aff3ebcf60238d74ad162454c044791e02",
+      "approved_sha256": "0c172feda1b760ad53be17ed7f6c846bbf35a35ea909fe8832a8aa9b8c94a2df"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/inference-and-uncertainty/SKILL.md": {
+      "prior_sha256": "f66902fd9fc27644bffe98425058aece50d35be18390c0fd1dd3d8c203b4fea9",
+      "approved_sha256": "ddb94c56e638152e27b7108dd63b48a80462b830e3828b42828783c36a5e2e1d"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/inference-and-uncertainty/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "ac38a54a98c99fc937bd4d0469a79237c55cd9880f68d1e18fdc7356a4f9029a"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistical-problem-solving/SKILL.md": {
+      "prior_sha256": "d0445129cbe21504324245ca8edf25cea88207abdd60ddb135ed98531413c240",
+      "approved_sha256": "a0ea421d196c948e0f3d29f239ad8293d5818cebb680b01d22d5e77216a8effc"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistical-problem-solving/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "2157cd202fbaf347eb9b709033bfb8d1afa8075ef90c480241869697f924fa58"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-concept-lesson/SKILL.md": {
+      "prior_sha256": "b7d744a7d3f3c1878c45b089a2c5e44448239c4a157045fa177265550127cac5",
+      "approved_sha256": "3da80880896d3a12558ce5326e12f63e292d51b1516eac9aea1aef6bb8fc28ec"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-concept-lesson/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "945a24327e04839dccaaebfbdc01b04e30263dc52c5cc1cdc0f5ca50cce2058d"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-mastery-check/SKILL.md": {
+      "prior_sha256": "34cd25cd9476b187095917bc05f7fa268ea4ae169cf65bdb1d0800da5ba57ab8",
+      "approved_sha256": "78f48d19f62a1e7389c7e65b6181cd88a91fbe937211603a34311b9c3e9f76dd"
+    },
+    "hermes-academy/profiles/academy-statistics-professor/skills/statistics-mastery-check/references/teaching-example.md": {
+      "prior_sha256": null,
+      "approved_sha256": "3b6b1508584406f454a4b2c68047c0859867c10d20fe7f2aabc5a5e2b8607cb9"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/SOUL.md": {
+      "prior_sha256": "641209a61977a5038c2a7a33fdfd499448948248b6d04c19568e9e9c37516d68",
+      "approved_sha256": "bf388b66c72d8b9a6b405c103af449988634baefbe7ef00ae396897fe4d19e0a"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/doctrine-comparison/SKILL.md": {
+      "prior_sha256": "48a8de504dd0534975740640a3cf2c121cbb0ed650ca96528ba5c8c3fc777db2",
+      "approved_sha256": "efc7d1c17bacb455eaf6ec587cc7c0236216a089d3e531d7204013efffb80207"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/doctrine-comparison/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "8904f1d20543776a01543a392912763b1f11dd528ea4c4e7787bc2699ecf65a4"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/text-and-tradition-analysis/SKILL.md": {
+      "prior_sha256": "298ac2660b41681f5b0b4737d53bcacc5df908bb1d7f1240a03c8ca2f7559975",
+      "approved_sha256": "51aa056f9d7a95e6b0a6792d065f6bfbb6806a79443178c61b3217f4dc4c3f47"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-concept-lesson/SKILL.md": {
+      "prior_sha256": "0ca7fd9e0717eccc3cc0a4ff8c6a354df2da2c47e365eb23b802a6bc2c9e99d1",
+      "approved_sha256": "532c31353d18648807ae97173bf200b2a3336ed4c7b03f2a829ec5a8d82540be"
+    },
+    "hermes-academy/profiles/academy-theology-religious-studies-professor/skills/theology-mastery-check/SKILL.md": {
+      "prior_sha256": "f3d88ce50089e5ca4d89efd14d9c2a9411e91ff60e23ca76bdc9916fc82a9033",
+      "approved_sha256": "3ca791a1a3ae2f0fc510c18d911448a97eaa7035c5321646f0d3bdac7fc342ac"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/SOUL.md": {
+      "prior_sha256": "b832c47aaa15cb13cb9a2aeb9ca29c3b3e291c371fc51d3a876af92bc5e835df",
+      "approved_sha256": "1d6ca51a63e79f7236327204144feb562fe87d2162e44c809c60d57071217e06"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/argument-analysis/SKILL.md": {
+      "prior_sha256": "773b1a5b2e9c17eaaf42e6f2545ada518db2afdb335ce2d6885a934f25f12ea8",
+      "approved_sha256": "10c4de7427297a67d43a6fb0839549987afdf60f48553abed61d231380ed1315"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/revision-workshop/SKILL.md": {
+      "prior_sha256": "8887708f457fc4a8d5ffb11ec0d102fa4f7894cecc6f429d356c59921ce73bfa",
+      "approved_sha256": "0bdb9545674966d57c954be7c36e2257bee445dcf3292ff0b40ee562c5261c8b"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-feedback/SKILL.md": {
+      "prior_sha256": "47927ba388b8cecca50803b1ca56110b68bae30b9a7fd8bed5663585ffac7d6a",
+      "approved_sha256": "0a6f0211feebed6cfda7763ccb6787254b29660499b2ea7d095a98813be34a44"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-lesson/SKILL.md": {
+      "prior_sha256": "e66258ae7b6c9fb88aa2921cba3ec31f83123e7dc36d0bbfe01c3391ddaf2a03",
+      "approved_sha256": "e954dd71a2c88a91b47674ca3d07b0bf6f88d1d78670e4004660bffefc4680d3"
+    },
+    "hermes-academy/profiles/academy-writing-rhetoric-professor/skills/writing-lesson/teaching-kit.md": {
+      "prior_sha256": null,
+      "approved_sha256": "7a57de34a203cf436fdc21997f6e3204042f0db6d55657aa15c1156ef1c9c28b"
+    },
+    "hermes-council/profiles/council-career-coach/SOUL.md": {
+      "prior_sha256": "4181f5af17ca259a7b2b38f069f7d59501817e0f2e572144f9104aa94a26e571",
+      "approved_sha256": "a0c1aa11ae04cdf65f447a2f2e8ef3693d4b8ade35c658871e26be21b8d53a3b"
+    },
+    "hermes-council/profiles/council-communication-coach/SOUL.md": {
+      "prior_sha256": "5a6ccdd2d342592d771a463723277bffe599392afde44290596911cae5c7da36",
+      "approved_sha256": "13de7106513a39fa0d76c0a8bbf32a33b1c3d832e3b66b56dbe579ea366e9c4c"
+    },
+    "hermes-council/profiles/council-community-coach/SOUL.md": {
+      "prior_sha256": "09aa0a4ba34a1019ecd2caf59ba16c8e85d039cd679258cd76d8cd3663f18ab2",
+      "approved_sha256": "c18ab671ff8405412e6f61f16238a718b059105cf4d90d043bb382559eab807d"
+    },
+    "hermes-council/profiles/council-faith-guide/SOUL.md": {
+      "prior_sha256": "6b752396edc3a76032612c5fe908a64e1f7c7dbb03245b9e2c2232a84c6236c2",
+      "approved_sha256": "31106f3d228c0f5b47da3d4cc4cfcb91049cce3cde4e4065f2bfcefed5e04e6b"
+    },
+    "hermes-council/profiles/council-faith-guide/skills/discernment-and-application/SKILL.md": {
+      "prior_sha256": "12a7bdf1220886d74a6f38cfbeb2d02ed00a17133ccf5ae9a8e7d539a53d6ea7",
+      "approved_sha256": "06dc7f062e7eff3a7b69f9528167881359efdf3a16ee7d37d5dd554252478616"
+    },
+    "hermes-council/profiles/council-faith-guide/skills/prayer-and-devotion/SKILL.md": {
+      "prior_sha256": "99e4639a530a8868db32383421373d9e975dcaeee8c08b97bc46843b4c443e82",
+      "approved_sha256": "e3b4dfbc599968b222d57ffbdfb7faa2279eea8d95df7048287c5b0a475da758"
+    },
+    "hermes-council/profiles/council-faith-guide/skills/scripture-reflection/SKILL.md": {
+      "prior_sha256": "d34ed145629b74e2a0cafed08711de29b10ad5f7f5c1521c8a625f2249c11a6a",
+      "approved_sha256": "277f568c80f9151184f789b6f1e55023cb6802f1ba708f25539fc924c4e1204b"
+    },
+    "hermes-council/profiles/council-faith-guide/skills/spiritual-practices/SKILL.md": {
+      "prior_sha256": "7b176c25081f1b86751a15e9aca65265b00dc65eb387b912691eef322e86c2a7",
+      "approved_sha256": "4cede22284765a42d55eb83bb4121ea0db1f4def497e83a4f8e8e038c82ac996"
+    },
+    "hermes-council/profiles/council-finance-coach/SOUL.md": {
+      "prior_sha256": "e02e5ae58384ee30d5c3027a6d92b91587d888a84d028e95cd7ec7ce778fe46b",
+      "approved_sha256": "39082111b82cf594a598d66cd6fd33c41c9d2c92307fd2ac1049579f1ffb55b8"
+    },
+    "hermes-council/profiles/council-finance-coach/skills/budget-review/SKILL.md": {
+      "prior_sha256": "4c25ffe168edf03221617954953cea62e29c586db5e5ec17f61ef3c973e08755",
+      "approved_sha256": "f4497086ae7fb990b1e3b58968717acf8a485f30e23a5b90a0da85cd20c66e2f"
+    },
+    "hermes-council/profiles/council-finance-coach/skills/cashflow-plan/SKILL.md": {
+      "prior_sha256": "3ebaf02a0745ecc9858acee06c8f4b48d8658a4df122259f6068d60eaf1f083f",
+      "approved_sha256": "f4b1ba9aa6099b4be772d5e13989b1d0cf7fd39abbacc3ce5734c2f238d7345c"
+    },
+    "hermes-council/profiles/council-finance-coach/skills/debt-plan/SKILL.md": {
+      "prior_sha256": "4eeed23b7b2b74ce30083a0e48953ab6250dcb00c8e5fc159c64a5c42b8ff153",
+      "approved_sha256": "f43be1f831f43a008980ca8ee6cc1bc15027e7bc22ad3df841a6e4152d559dd4"
+    },
+    "hermes-council/profiles/council-finance-coach/skills/purchase-decision/SKILL.md": {
+      "prior_sha256": "e498feb1219eee9efe8988d3ed0882675a090175f2f0ccbfdfcb3c658d2e8a2f",
+      "approved_sha256": "8bd18313fa6c1b60baa757aa5722f3b119d987219e994fe9a472390bebe2e229"
+    },
+    "hermes-council/profiles/council-fitness-coach/SOUL.md": {
+      "prior_sha256": "d1eb44580a6947060dca46190435acf79b74f5b16cf83ec60fdb37834dec53f3",
+      "approved_sha256": "c3a28612dbcbc62285829d5e2eac5c8d844957c71890437e0cbd14689288637d"
+    },
+    "hermes-council/profiles/council-fitness-coach/skills/progress-review/SKILL.md": {
+      "prior_sha256": "3a764c6657f11863e990ad6402faff045ae357e682556da754d1bc0a78ca2dc6",
+      "approved_sha256": "085b1ce33a18bbfec71297d20d9ed590816f32a5344271fb35fe5ff5c30f0ca9"
+    },
+    "hermes-council/profiles/council-fitness-coach/skills/recovery-check/SKILL.md": {
+      "prior_sha256": "d7d74233e98fb4084e0bcb06e4b928fb9d2dcbe6647e613374202b967e49b8e4",
+      "approved_sha256": "6838b7ee7f5c18debe64907c0ae202d15140665080192901103c83c660920a1a"
+    },
+    "hermes-council/profiles/council-fitness-coach/skills/workout-adaptation/SKILL.md": {
+      "prior_sha256": "878c8436156f1b06068665160ee9d758f8be553c1dba7f119de2e618f3651168",
+      "approved_sha256": "d32c690b8aa815561a19305bca24b38f850f3f56ef7b62419e9d938c60f50cee"
+    },
+    "hermes-council/profiles/council-fitness-coach/skills/workout-planning/SKILL.md": {
+      "prior_sha256": "4fdc2b0d677396964ebad0cdb3d2633fbf915315d3709edc2a85cc995b9455c8",
+      "approved_sha256": "5a75eb7adc3edd14a30bf0137dcd99bea72f606f630a4177930f88b1d6c52d4b"
+    },
+    "hermes-council/profiles/council-health-navigator/SOUL.md": {
+      "prior_sha256": "50eba93dc6c02ab922af2e6d0f70568a7b2aeb874c1afdb299a36c90648e664b",
+      "approved_sha256": "b137c5a9a03dae5fc44a6ec12d167eb768081af23767ea2060adcd0454caba03"
+    },
+    "hermes-council/profiles/council-home-steward/SOUL.md": {
+      "prior_sha256": "b73c61ecea8640c3c3e9663781e6fdaf43743aae02212e3adc38f837e9924ae0",
+      "approved_sha256": "f0e3df45241bdce6c5f9f9ae0c02013d4a788b0c9dc7d6c71eee20d5b46afa95"
+    },
+    "hermes-council/profiles/council-home-steward/skills/chore-system/SKILL.md": {
+      "prior_sha256": "07dab5a01a8afd5d17d5f572d7f3c86043874a2b18c8a697739918fae19d3eca",
+      "approved_sha256": "903720d3d9e06f91dd7ef5a5cdd07403ccb11322abfc938ab29bf1156db154fb"
+    },
+    "hermes-council/profiles/council-home-steward/skills/household-inventory/SKILL.md": {
+      "prior_sha256": "84e0180727b25efc6f9b647ebe38b3f8a7ea6d425b7dffbccd066776f526e8c7",
+      "approved_sha256": "6da4750230f910a00c58231753ef6d2ad590da7740b5aac6773e3790658050e7"
+    },
+    "hermes-council/profiles/council-home-steward/skills/meal-logistics/SKILL.md": {
+      "prior_sha256": "d29d0aeec55732aadc2c42d1cee8f4c9ec3d1ef3cfdf91b9118e3e53e9453c7e",
+      "approved_sha256": "3a558d618e4e4b45cb01bf08ed0e1527542a8298e2bb371ca8c6fa72b7262ac0"
+    },
+    "hermes-council/profiles/council-home-steward/skills/weekly-reset/SKILL.md": {
+      "prior_sha256": "f549fa8275396a01b30216d67ecce9f0f003e4c32acfb87f339931fba3b076ca",
+      "approved_sha256": "d56d6318d8317de2cbdc280b8aa7609c2e947b7a4d7f8bfe1dd4bf54585be74a"
+    },
+    "hermes-council/profiles/council-learning-coach/SOUL.md": {
+      "prior_sha256": "b2a459fbf92a91f0b1132cdfb048a2cd0f8b01825a89dde73a60535ba2131da5",
+      "approved_sha256": "049f3370088f22eeeec3ab31d9b793004821fd846261c5383dc0dbc7172e4b32"
+    },
+    "hermes-council/profiles/council-learning-coach/skills/deliberate-practice/SKILL.md": {
+      "prior_sha256": "5699a9f94203697be92c03aeff29717ccdea8463c7638ff65fa900680a4c8772",
+      "approved_sha256": "61b298204f8b3e63870e3c537d5c92a9f4ecdc2ff078c5fb41c6cc6afdce7da3"
+    },
+    "hermes-council/profiles/council-learning-coach/skills/learning-plan/SKILL.md": {
+      "prior_sha256": "08dd4968459cd649ea1bb1fdd20a9aa8ee08b1ddeb3c03d8cd7e15276ebe297c",
+      "approved_sha256": "8466e53c2d6a965d1e431f90ac20ef1c467ec52d6662929911c84acaf3b7acd9"
+    },
+    "hermes-council/profiles/council-learning-coach/skills/review-and-retention/SKILL.md": {
+      "prior_sha256": "18c9902e36da4b791a6cd26e49ddb50cf39d0a9c83e4c7d80cb737ddf283d726",
+      "approved_sha256": "787cb19f211521f05f11f612a892bde793ca67430499a1bb2a97d4b72bed29c2"
+    },
+    "hermes-council/profiles/council-learning-coach/skills/study-session/SKILL.md": {
+      "prior_sha256": "3f212fab031f2646f2c71e31bcda81a7e119ecdab34c17491809730d36b2ff9d",
+      "approved_sha256": "79b6850b06230439d4b37aa91269ae5ec20387939cca7bcf8b0dab11f51012e8"
+    },
+    "hermes-council/profiles/council-life-coach/SOUL.md": {
+      "prior_sha256": "ac4c8c0f37c2d3841ecde13efc280c0d865c90a69d8b519b7fd974205c1ec380",
+      "approved_sha256": "48b7523fcdb76b3449d1963775f7e83041eb24fe4b3d95cfaba62b389ae11030"
+    },
+    "hermes-council/profiles/council-life-coach/skills/boundary-check/SKILL.md": {
+      "prior_sha256": "dc9c29b332b6c531bcf71b2a24d271a90b1ab7d172e916ece80effae08cedd76",
+      "approved_sha256": "78f19ac4d8e88053b441c95bac08174b5a684005df018fc9f8cf98499da2c77a"
+    },
+    "hermes-council/profiles/council-life-coach/skills/clarity-reflection/SKILL.md": {
+      "prior_sha256": "8234b215662ced45613e7af1ac9a8c82488bd221cb4daaf8702a8e5262f0e1b4",
+      "approved_sha256": "a0e21d7ec0db2baeb9c9fdb3ad1b2cf340ce9f0747609416aac6733d679c1cb9"
+    },
+    "hermes-council/profiles/council-life-coach/skills/next-step-coaching/SKILL.md": {
+      "prior_sha256": "e2f79eb29826fee0df3a624ab7413dd540c0545f52b6860a01cec1c647b08305",
+      "approved_sha256": "519836d80b8657849b41981a02885b2fd503f8780ea1f654afaa30a980bd6523"
+    },
+    "hermes-council/profiles/council-life-coach/skills/personal-experiments/SKILL.md": {
+      "prior_sha256": "a5bb46d030d121a569d5114ebf132ff45dfc5e1d0f095b769413c5330a137b08",
+      "approved_sha256": "392b9706c953bb0c417a93c81e491804bc4c5ee9f6e62ecbdb1224d193792cee"
+    },
+    "hermes-council/profiles/council-nutrition-coach/SOUL.md": {
+      "prior_sha256": "6d44a9978fceeff7651424782e80da0b909ce9f3bc7e99bc9eaee55615f3e76c",
+      "approved_sha256": "a36934862ba15dcb9865d50ab27696fd07e92da6cb6e3f37fb3cd0c898df7e88"
+    },
+    "hermes-council/profiles/council-nutrition-coach/skills/balanced-meal-building/SKILL.md": {
+      "prior_sha256": "90bf54cdbf7f7bd322ca22c2099e09c0c07c7c9d78813bbc00dca57c1f1f5eef",
+      "approved_sha256": "a5a7154a87f29ddb7eb2f8255d91b6a1ed05983e54273c0fdfc36f0b3b757a45"
+    },
+    "hermes-council/profiles/council-nutrition-coach/skills/grocery-planning/SKILL.md": {
+      "prior_sha256": "2f6fcb568b1cc78f4bcbae487c7dfc821e29b62e0dd81d6ce75b5ba0763107fa",
+      "approved_sha256": "ad5035d16d9a816a0ff0a4bef4c0ea41494d5cdc880c5bc11f691dfb5c733b47"
+    },
+    "hermes-council/profiles/council-nutrition-coach/skills/meal-planning/SKILL.md": {
+      "prior_sha256": "1ab0dbfdeab2db68ae71cd7723612ad2e4d0ee6e4e9d454b72cc1a1f892281d8",
+      "approved_sha256": "26c356e0a24c1a6a2d5daadc0c72c2c56b3a2ee0636534462ed0cc3075b4ce02"
+    },
+    "hermes-council/profiles/council-nutrition-coach/skills/nutrition-adjustment/SKILL.md": {
+      "prior_sha256": "4a145a7dd5c1b23277045da965b3836d7a805842b2d5b22a47d23c2fcc4a7655",
+      "approved_sha256": "a72b4c6666dd3c784209ce8c09bc75f9bc36a7351480ef49a1f0c2f33df420d3"
+    },
+    "hermes-council/profiles/council-parenting-coach/SOUL.md": {
+      "prior_sha256": "e157175e65fdb2a462e1e4ad6830fa3d5ad67b3f27875545e78466433a94ee88",
+      "approved_sha256": "34d039c246a9a953d85ba416bd40a15c57ee20e942ce136399c1245902be57fb"
+    },
+    "hermes-council/profiles/council-parenting-coach/skills/age-appropriate-expectations/SKILL.md": {
+      "prior_sha256": "f72b2fda2fd6fe1176074014b00d9b5c58ddbfc5dc93ffd0e106c91038fd63dd",
+      "approved_sha256": "d837f6e2fdcf7f2fba23281498a4c05ce891f8519f59c2b5469262ff15ce70e0"
+    },
+    "hermes-council/profiles/council-parenting-coach/skills/behavior-and-boundaries/SKILL.md": {
+      "prior_sha256": "298c3f3bee75f94fbb289ab7e695fba430689a15519d08120853879dea8a7423",
+      "approved_sha256": "3ef7d7885703672e75a623e3f545e3ca09cab3bcdf364b32a04ebb77e9d32a0a"
+    },
+    "hermes-council/profiles/council-parenting-coach/skills/connection-and-repair/SKILL.md": {
+      "prior_sha256": "646d3e04f0dc511cfbf0b533b20a900d7ae276ab9e1e815f63bcba9001558fa5",
+      "approved_sha256": "c2220b520962f912858b0042425555e619399990cd8c474f2f62d4517c6c75fc"
+    },
+    "hermes-council/profiles/council-parenting-coach/skills/family-routines/SKILL.md": {
+      "prior_sha256": "4a23bc62a97c862f23ddab20af9e92bf2f9a965fe74191165a69b956abe27230",
+      "approved_sha256": "80d761e5cd8f517403212954262b1f42a53324009c895e67193358e4c27eff9f"
+    },
+    "hermes-council/profiles/council-personal-admin-steward/SOUL.md": {
+      "prior_sha256": "f022c9088ca82effe43f3f2466e3d394169dd0562549a7e43f62f1cdc6ffee67",
+      "approved_sha256": "8a4c652a689c26ec2985528ea2615da2ffdb31ba131a5c4aaf22f8a610820a62"
+    },
+    "hermes-council/profiles/council-preparedness-steward/SOUL.md": {
+      "prior_sha256": "4785142689392e0381937e2d5bbea47b4aa782e49e2e72a0fc5e0e57ba3d5f4c",
+      "approved_sha256": "1b36a13f83db0f1b9fe62f5a39d95ecdd30d2395c49e72dfe446ae1e826bf4d5"
+    },
+    "hermes-council/profiles/council-recreation-guide/SOUL.md": {
+      "prior_sha256": "a694645c7789987290f4e2193041cfe92a13d8c1cc3ace5d0a15ed702dbfbcf2",
+      "approved_sha256": "affa6d632c80d2b2c308b47242d2f69b076af6cc48eed3a093cfb27946d54304"
+    },
+    "hermes-council/profiles/council-relationship-coach/SOUL.md": {
+      "prior_sha256": "ee68db14afb931e4542cf2297f26f4f63f91721353c1a3e42f71991856cc4a40",
+      "approved_sha256": "94b2a4a0ef517a6d743c2857ab1b25de805323d14ba293f11f6b9711adc85843"
+    },
+    "hermes-council/profiles/council-relationship-coach/skills/boundary-setting/SKILL.md": {
+      "prior_sha256": "295eddb889b8836d1c85d601c6b38f992c0759a86bc43f6a291216293616d141",
+      "approved_sha256": "dc7cc1fb00f1295a747c25f4fdcd21e0c573863445bd6c86862160073e3ef6d9"
+    },
+    "hermes-council/profiles/council-relationship-coach/skills/conflict-debrief/SKILL.md": {
+      "prior_sha256": "c26292a88f9831a44ce690f4986f65c63d80804e137c8fa919241fa5a9f54ef2",
+      "approved_sha256": "ea1960b70f41bd3088426ecd816109acdbdd5d088db78250df221c294dbdf02c"
+    },
+    "hermes-council/profiles/council-relationship-coach/skills/connection-practice/SKILL.md": {
+      "prior_sha256": "3391dd6722ca1d753bf0fb7ae68e9f49781c14b349de5266cdba058af1f42a50",
+      "approved_sha256": "ff5ca62fa90d6dd3ed765d5a74c345a2ad5cba1015af7de341b7434815e72362"
+    },
+    "hermes-council/profiles/council-relationship-coach/skills/difficult-conversation/SKILL.md": {
+      "prior_sha256": "446bb2f84914c00d98206920ac862a476a6d17e0b32e4d40ee00edb8cabbe966",
+      "approved_sha256": "b1ca6a9c56aa0c57e2e0a65cdb4b9d12c0c14a058672653acd1603a18b22f401"
+    },
+    "hermes-council/profiles/council-resilience-coach/SOUL.md": {
+      "prior_sha256": "4457477e70001c13e586454cbb4e89cfa5214c80038626503eda0d73a4e34d53",
+      "approved_sha256": "9d902d595c2776198ca2f61c79f7432e4d23d1ccf7e229fcb6b3be83724e7377"
+    },
+    "hermes-council/profiles/council-resilience-coach/skills/regulation-plan/SKILL.md": {
+      "prior_sha256": "9b103eaa439102319201e50e12c5e48e16cd81d741425e979f3b083465ef3594",
+      "approved_sha256": "11d506fc5fd55efdcd2260c8ee0c2dcba0d5cbfe2261720f35890dc64c66d3d9"
+    },
+    "hermes-council/profiles/council-sleep-coach/SOUL.md": {
+      "prior_sha256": "90742b1003b6551d5c5748067478611071ee4d1679881c2f810cf6f620807009",
+      "approved_sha256": "ff2684867fd136582103ebd2b69218b29e551367184da6221e4f3baadd18517a"
+    },
+    "hermes-council/profiles/council-sleep-coach/skills/recovery-planning/SKILL.md": {
+      "prior_sha256": "decda657514540ff613bdde44f358417fc904dd431c2da6a527aa739598a9d00",
+      "approved_sha256": "34a281986208b30af045865724ce3c60aed6c3346c104cd3bef3c8a062653b17"
+    },
+    "hermes-council/profiles/council-sleep-coach/skills/schedule-adjustment/SKILL.md": {
+      "prior_sha256": "436eb778fdd2ae6995e8d411931a02834386e8ee1c7651c26e5a94207a97d67a",
+      "approved_sha256": "a3690c37c000bd447c8639f74a2b512665f970d9ac1467ecae7597a058ed6a2d"
+    },
+    "hermes-council/profiles/council-sleep-coach/skills/sleep-environment/SKILL.md": {
+      "prior_sha256": "66c2d4678d1499f9b2f34b7babe1cb7c14b4b103180967ec0dbadc78e49ddd18",
+      "approved_sha256": "4a5ebc77b1a9e0f4df222be4f3624107a0a640d28044c3db8d44ca9f3fdc1133"
+    },
+    "hermes-council/profiles/council-sleep-coach/skills/sleep-routine/SKILL.md": {
+      "prior_sha256": "cb34329da69883ec706abba3c2d8b416775b8a152209fb4ef84a4322f70929c7",
+      "approved_sha256": "eeeced289f3b8d355349695fb175e3a4bfe120310c2a33d051f0fbb0347ded16"
+    },
+    "hermes-council/profiles/council-steward/SOUL.md": {
+      "prior_sha256": "9b249a9241ba349e4ebc91174a2377beec012b267ae22d5ee61ce1c7a39df992",
+      "approved_sha256": "6bbdbd83062346b55ec87745bbd28ab6f9ff2b480b71358038adad8345763f84"
+    },
+    "hermes-council/profiles/council-steward/skills/council-routing/SKILL.md": {
+      "prior_sha256": "29fe618d8a6e8c741f6620c6567868a76f29efd4c5dbfefbfd32e6655a2f4431",
+      "approved_sha256": "b790f3abf7e73f8947723173752d6604db11bf85dbffd226e0f4a13870f251a6"
+    },
+    "hermes-council/profiles/council-steward/skills/decision-synthesis/SKILL.md": {
+      "prior_sha256": "a7aebfa6477e0dbfe75615310b37e25227c2945157732ebf37e88042313b93dd",
+      "approved_sha256": "e04eeabd3f79d601fd41b0705cb7d5a76c5ba906e1038e5c68c5a167b7efcb16"
+    },
+    "hermes-council/profiles/council-steward/skills/privacy-aware-handoff/SKILL.md": {
+      "prior_sha256": "12b1126be53986c259d06a75c736cc9212d816edd27465bdb22d5d7b1faf6ce7",
+      "approved_sha256": "9673c80a0518e4fdabc0c0123c4f2383466bcf70815e4b2fe466550f8bb45e7f"
+    },
+    "hermes-council/profiles/council-steward/skills/whole-life-review/SKILL.md": {
+      "prior_sha256": "02f1f31e2ccb431535c6f799eff7ef8af733d634a978dc9d489f9cf354325689",
+      "approved_sha256": "c4dd4bcfafc568adfd6c53e63a5194a219e1019306e31831de8326778622592c"
+    },
+    "hermes-council/profiles/council-time-attention-coach/SOUL.md": {
+      "prior_sha256": "ec12057616685023376f7f2bd1dd70258e1f3f362a4ea71acd5098964b656dd8",
+      "approved_sha256": "f728a7fae1d8e9e197949bc7f8751cca09f6d29a39847a63e0cb551442969965"
+    },
+    "hermes-council/profiles/council-time-attention-coach/skills/calendar-boundaries/SKILL.md": {
+      "prior_sha256": "3a49050a86c6138deea30cbafb7088bb4523d030f026fe49059647d6a17deac5",
+      "approved_sha256": "aedff8531afde418114a99442e5f2883e020772a2089e3bca6b100d1748d89a7"
+    },
+    "hermes-council/profiles/council-time-attention-coach/skills/weekly-time-plan/SKILL.md": {
+      "prior_sha256": "637197ae5b1641eadcde60aac03a916bc2f69fb08a1d17cd7a0aa86042af06a3",
+      "approved_sha256": "1efa2be97fe359fd5cee83fbe54a6655cd52f573f67ae634ff1235dc1d2403e0"
+    },
+    "hermes-council/profiles/council-travel-planner/SOUL.md": {
+      "prior_sha256": "321ff03989bc688fe75b6f4850bb7bc550f5d3b8875470030da8c3a0da2c3cb8",
+      "approved_sha256": "949addc7f3257a531f08c88ec273a4af61433ab896df5a210e8fbc08e84ea6fd"
+    }
   }
 }
