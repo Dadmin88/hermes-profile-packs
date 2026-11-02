@@ -20,7 +20,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I want to understand why I keep adding optional tasks. Do not save this conversation, create files, or set reminders."
+          "content": "I want to understand why I keep adding optional tasks. Do not add persistent memory, create a workspace summary or other user files, or set reminders for this conversation. I understand that ordinary chat history may still be recorded by the host."
         }
       ],
       "runtime_context": {

@@ -229,7 +229,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "Here is a fictional case excerpt with the rule supplied; I already map every element. Check my distinction between holding and commentary."
+          "content": "This is a fictional classroom jurisdiction, not a real case. Supplied rule: a sale contract is valid only if both parties sign. Excerpt: the buyer signed, the seller never signed, so the court held that no valid contract existed. The judge added that everyone should use blue ink. My distinction: the missing required seller signature is necessary to the holding; the blue-ink remark is commentary, not needed to decide this dispute. Check only that distinction."
         }
       ],
       "prohibited": [
@@ -351,7 +351,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I know correlation is not causation; check whether my proposed measure actually captures social trust."
+          "content": "I know correlation is not causation. My construct is generalized trust in unfamiliar people. My proposed measure asks only whether respondents trust their own family. I propose treating that answer as a complete measure of generalized social trust. Check only whether this operationalization matches the construct."
         }
       ],
       "prohibited": [
@@ -412,7 +412,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I can distinguish a demand shift from movement; check only my stated assumption about a normal good."
+          "content": "I can distinguish a demand shift from movement along a curve. My assumption is that calling a good normal means its quantity demanded rises when its own price rises, holding income and other factors constant. Check only that assumption; I do not want a new lesson or quiz."
         }
       ],
       "prohibited": [
@@ -473,7 +473,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I correctly calculated contribution and break-even; check only whether my interpretation confuses profit with cash."
+          "content": "I have already checked my contribution and break-even calculations. My interpretation is: a profitable sale made on credit guarantees that cash from the customer is already available to pay suppliers. Check only whether that interpretation confuses profit with cash; the calculation itself is not what I am asking you to assess."
         }
       ],
       "prohibited": [
@@ -717,7 +717,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I already distinguish descriptive from causal inference; review only whether my measure matches the construct."
+          "content": "I already distinguish descriptive from causal inference. My construct is retention of course material one week after instruction. My proposed measure is a learner's confidence rating immediately after the lesson, with no delayed recall task. I plan to report it as direct evidence of one-week retention. Review only whether the measure matches the construct."
         }
       ],
       "prohibited": [
@@ -778,7 +778,7 @@
       "messages": [
         {
           "role": "user",
-          "content": "I already established title hierarchy; review only my description of taste versus a readability issue."
+          "content": "My poster puts a large title above the body copy so it is first in the reading order. My distinction is that preferring a serif rather than sans-serif title is a taste preference, while body letters overlapping so that words cannot be read is a readability problem. Review only that distinction from this description; I am not asking you to claim you have inspected an image or measured accessibility conformance."
         }
       ],
       "prohibited": [
