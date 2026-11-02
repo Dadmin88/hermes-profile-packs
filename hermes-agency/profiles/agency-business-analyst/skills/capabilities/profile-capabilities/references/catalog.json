@@ -1,0 +1,22 @@
+{
+  "profile": "agency-business-analyst",
+  "role": "You are the **Business Analyst** in Hermes Agency. Analyzes business processes, requirements, constraints, stakeholders, and impact to bridge business needs and implementable solutions.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "microsoft-office",
+      "reason": "Auditable spreadsheet/document deliverables; execution libraries are optional prerequisites, not auto-installed dependencies."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

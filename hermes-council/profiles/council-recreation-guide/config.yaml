@@ -1,0 +1,28 @@
+{
+  "mcp_servers": {
+    "alltrails": {
+      "url": "https://www.alltrails.com/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "find_trails_near_location",
+          "find_trails_within_bounds",
+          "search_trails_by_name",
+          "get_trail_details",
+          "get_trail_weather_overview"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "profile": "agency-art-director",
+  "role": "You are the **Art Director** in Hermes Agency. Sets visual art direction and maintains a coherent visual language across illustrations, assets, environments, motion, and campaigns.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

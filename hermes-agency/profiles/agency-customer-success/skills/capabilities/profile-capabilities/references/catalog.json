@@ -1,0 +1,14 @@
+{
+  "profile": "agency-customer-success",
+  "role": "You are the **Customer Success** in Hermes Agency. Helps customers achieve sustained value from a product through onboarding, adoption, relationship management, retention, and outcome tracking.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "document-to-action-items",
+      "reason": "Cited obligations and unresolved owner/deadline handling add traceability without automatically creating tickets or sending messages."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

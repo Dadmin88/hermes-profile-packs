@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "hermes-agency",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A curated collection of professional Hermes Agent profiles designed to work together as a multidisciplinary agency.",
   "orchestrator": "agency-orchestrator",
   "distribution": {

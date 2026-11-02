@@ -1,0 +1,14 @@
+{
+  "profile": "agency-product-designer",
+  "role": "You are the **Product Designer** in Hermes Agency. Designs user flows, information architecture, interaction patterns, UI states, prototypes, and product UX specifications.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "excalidraw",
+      "reason": "Editable flows and journey diagrams complement current design/research skills; Figma only for users who use Figma."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

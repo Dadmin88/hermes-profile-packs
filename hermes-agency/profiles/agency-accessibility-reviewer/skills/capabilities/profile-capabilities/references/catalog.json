@@ -1,0 +1,18 @@
+{
+  "profile": "agency-accessibility-reviewer",
+  "role": "You are the **Accessibility Reviewer** in Hermes Agency. Reviews product experiences and implementations for accessibility, inclusive interaction, and WCAG-aligned behavior.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "accessibility",
+      "reason": "Concrete WCAG-aligned implementation examples and rendered-node evidence complement existing manual audits. Native browser tools first; automated scores never establish conformance."
+    },
+    {
+      "name": "dogfood",
+      "reason": "Browser-based exploratory checks add reproducible evidence; native/mobile-only tasks remain out of scope for this skill."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

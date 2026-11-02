@@ -1,0 +1,22 @@
+{
+  "profile": "agency-ui-ux-designer",
+  "role": "You are the **UI/UX Designer** in Hermes Agency. Designs interface layouts, interaction behavior, user flows, visual hierarchy, prototypes, and usability improvements for digital products.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "accessibility",
+      "reason": "Concrete WCAG-aligned implementation examples and rendered-node evidence complement existing manual audits. Native browser tools first; automated scores never establish conformance."
+    },
+    {
+      "name": "design-md",
+      "reason": "Portable machine-readable design tokens and reference/export contracts complement existing visual design; Node linter remains optional setup."
+    },
+    {
+      "name": "excalidraw",
+      "reason": "Editable flows and journey diagrams complement current design/research skills; Figma only for users who use Figma."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

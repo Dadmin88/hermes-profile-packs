@@ -1,0 +1,14 @@
+{
+  "profile": "agency-knowledge-manager",
+  "role": "You are the **Knowledge Manager** in Hermes Agency. Organizes durable organizational knowledge, information architecture, source-of-truth practices, and retrieval-friendly documentation.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "rss-feeds",
+      "reason": "Read-only structured release/news discovery adds deduplicated source coverage without creating a scheduler or new persistence system."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

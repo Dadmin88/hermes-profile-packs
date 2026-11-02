@@ -1,0 +1,14 @@
+{
+  "profile": "academy-project-management-instructor",
+  "role": "Teaches project planning, estimation, risk, dependencies, sequencing, delivery methods, and project-management reasoning without claiming certification authority.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

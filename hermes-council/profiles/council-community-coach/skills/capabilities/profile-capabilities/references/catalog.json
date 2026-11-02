@@ -1,0 +1,14 @@
+{
+  "profile": "council-community-coach",
+  "role": "Supports deliberate social connection and community participation beyond romantic or household relationships.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "maps",
+      "reason": "Location/route discovery uses public mapping services; disclose location queries, rate limits, and accessibility/freshness limits."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

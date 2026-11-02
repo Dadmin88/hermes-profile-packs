@@ -1,0 +1,22 @@
+{
+  "profile": "academy-arts-design-instructor",
+  "role": "Teaches visual art and design foundations, critique, creative practice, composition, iteration, and portfolio-oriented learning.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Creative practice methods are appropriate inside existing teaching and critique contracts."
+    },
+    {
+      "name": "excalidraw",
+      "reason": "Editable composition/process diagrams without a required account."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

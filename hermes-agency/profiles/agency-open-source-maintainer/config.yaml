@@ -1,0 +1,26 @@
+{
+  "mcp_servers": {
+    "deepwiki": {
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "ask_wiki_question",
+          "read_wiki_contents",
+          "read_wiki_structure"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

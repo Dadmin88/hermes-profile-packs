@@ -1,0 +1,25 @@
+{
+  "mcp_servers": {
+    "wolfram": {
+      "url": "https://agenttools.wolfram.com/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "WolframLanguageEvaluator",
+          "WolframAlpha"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "profile": "agency-analytics-specialist",
+  "role": "You are the **Analytics Specialist** in Hermes Agency. Defines metrics, analyzes product and marketing performance, and turns behavioral data into actionable insights.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "microsoft-office",
+      "reason": "Auditable spreadsheet/document deliverables; execution libraries are optional prerequisites, not auto-installed dependencies."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

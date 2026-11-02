@@ -1,0 +1,12 @@
+{
+  "name": "agency-code-reviewer-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "gh-ref",
+      "ref": "bb0001012c5b213ce5a09b5905d859635c440c17"
+    }
+  ]
+}

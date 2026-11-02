@@ -1,0 +1,18 @@
+{
+  "profile": "agency-brand-designer",
+  "role": "You are the **Brand Designer** in Hermes Agency. Creates and maintains visual identity systems including logos, typography, color, imagery, and brand application rules.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    },
+    {
+      "name": "design-md",
+      "reason": "Portable machine-readable design tokens and reference/export contracts complement existing visual design; Node linter remains optional setup."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

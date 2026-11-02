@@ -1,0 +1,14 @@
+{
+  "profile": "council-nutrition-coach",
+  "role": "Turns nutrition goals into realistic meals, grocery choices, and repeatable eating systems without moralizing food.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Current source verification supports coaching/stewardship without substituting for clinical, legal, financial or repair professionals."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

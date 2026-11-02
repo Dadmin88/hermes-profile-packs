@@ -1,0 +1,14 @@
+{
+  "profile": "agency-motion-designer",
+  "role": "You are the **Motion Designer** in Hermes Agency. Designs purposeful motion, animation, transitions, and temporal behavior for interfaces, brands, and visual storytelling.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

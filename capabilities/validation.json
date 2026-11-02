@@ -1,0 +1,104 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_OPTIONAL_LIMITATIONS",
+  "hermes_source_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+  "repository_base": "f76aabc3abbe03fb9c297f6d2789aed210fdd39c",
+  "source": "Fresh canonical GitHub clone; no operational checkout content imported.",
+  "gates": [
+    {
+      "name": "capability-matrix",
+      "returncode": 0,
+      "result": {
+        "status": "PASS",
+        "profiles": 166,
+        "by_pack": {
+          "agency": 113,
+          "academy": 30,
+          "council": 22,
+          "wear": 1
+        },
+        "supplemental_skill_assignments": 241,
+        "plugin_opt_ins": 37,
+        "mcp_opt_ins": 71
+      }
+    },
+    {
+      "name": "repository-validator",
+      "returncode": 0
+    },
+    {
+      "name": "root-tests",
+      "returncode": 0,
+      "test_cases": 33,
+      "skipped": 0
+    },
+    {
+      "name": "agency-tests",
+      "returncode": 0,
+      "test_cases": 32,
+      "skipped": 0
+    },
+    {
+      "name": "council-tests",
+      "returncode": 0,
+      "test_cases": 6,
+      "skipped": 0
+    },
+    {
+      "name": "academy-tests",
+      "returncode": 0,
+      "test_cases": 199,
+      "skipped": 1
+    },
+    {
+      "name": "native-lifecycle",
+      "returncode": 0,
+      "result": {
+        "status": "PASS",
+        "installed_profiles": 166,
+        "discovered_expected_skills": 1384,
+        "native_plugin_packs_parsed": 30,
+        "update_preservation_cases": 4,
+        "existing_install_refusals": 4,
+        "network": "blocked during all install/discovery/update operations",
+        "limitations": "No account authentication, plugin activation, MCP tool calls, or model-based behavioral certification."
+      }
+    },
+    {
+      "name": "office-core",
+      "returncode": 0,
+      "passed": 66,
+      "deselected": 1,
+      "scope": "Basic Word/PowerPoint/Excel offline create/read/edit/roundtrip suites. Optional recalculation engine excluded after a separately recorded real failure, not certified."
+    },
+    {
+      "name": "native-mcp-disable-policy",
+      "returncode": 0,
+      "passed": 4
+    }
+  ],
+  "integration_review": {
+    "plugin_upstream_unit_tests": 448,
+    "plugin_wrapper_doctor_passes": 7,
+    "anonymous_initialize_tools_list_successes": 8,
+    "scope": "Parent verified exact public source file hashes and retained review evidence. Some reviewed wrappers were deliberately not promoted. Protocol discovery is not authenticated tool execution."
+  },
+  "limitations": [
+    {
+      "component": "LibreOffice optional recalculation",
+      "status": "UNAVAILABLE_ON_TEST_HOST",
+      "evidence": "Full vendored Office run: 66 passed, 1 failed. The optional xlsx recalculation test found soffice but conversion returned Unspecified Application Error. Multiple isolated synthetic-workbook probes reproduced the failure. Input files preserved; no fabricated cached values. Core Office operations pass separately.",
+      "activation": "Not installed or enabled by profile provisioning; require a working user-authorized engine to claim formula recalculation/rendering."
+    },
+    {
+      "component": "Existing Academy CE native release matrix",
+      "status": "BLOCKED_BY_UPSTREAM_TEST_LAYOUT_COMPATIBILITY",
+      "evidence": "Explicit opt-in runner exited 4 before collecting tests because pinned upstream Hermes no longer has tests/cli/test_cli_goal_interrupt.py; other old matrix test paths are also absent. No checks were deleted or replaced to claim a pass. Generic Academy suite passes with its existing one opt-in skip.",
+      "activation": "CE compatibility boundary unchanged. Maintainers own a separate native CE matrix compatibility update; this capability release does not certify CE on every Hermes release."
+    },
+    {
+      "component": "Account/remote/application integrations",
+      "status": "NOT_ACTIVATED",
+      "evidence": "No OAuth credentials, private source scans, booking/payment, downstream plugin execution, or model-based role certification was performed. Disabled seeds and native policy contracts were verified."
+    }
+  ]
+}

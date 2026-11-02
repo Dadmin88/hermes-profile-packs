@@ -1,0 +1,161 @@
+{
+  "profile": "agency-data-engineer",
+  "role": "You are the **Data Engineer** in Hermes Agency. Builds reliable data ingestion, transformation, pipelines, schemas, quality checks, and analytical data stores.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "excalidraw",
+      "reason": "Editable diagrams clarify system boundaries and data flow; protocol records are useful only when explicitly referenced."
+    },
+    {
+      "name": "systematic-debugging",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "test-driven-development",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    }
+  ],
+  "plugins": [
+    {
+      "name": "pep-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "20c7a0e1f56d6fea9761077f6994ab7b3d174b99",
+      "subdir": "pep-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/pep-ref",
+      "source_files": {
+        "README.md": "d235f002c82870cce201fcfd1caa841c7757a1a121bb5fccbc97403b622df16a",
+        "__init__.py": "c44cc082a4d308836f5b61bd8505708a7c76e689da35e98c0c6c57c6876529f1",
+        "plugin.yaml": "36290fc2096cb6507f3a99e18e57382f1513a37e17bef169469f1b39a535bd5e"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "PEP index and requested PEP page are fetched; client IP and plugin User-Agent leave the machine. Autocomplete and section matching run locally; the typed search prefix and section name are not sent.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Optional Python standards references; public PEP numbers, not project code, are transmitted.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-data-engineer",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/pep-ref",
+        "--ref",
+        "20c7a0e1f56d6fea9761077f6994ab7b3d174b99",
+        "--no-enable",
+        "--no-deps"
+      ]
+    },
+    {
+      "name": "rfc-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624",
+      "subdir": "rfc-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/rfc-ref",
+      "source_files": {
+        "README.md": "311cfbe7ad4256bf89f9a4b846fe80daeba8c8598a96c3a5697b9cef5f06d962",
+        "__init__.py": "86317da7546077bbc2909812b6ea03ee67f4bde7cc6dc9eb262d28848af663da",
+        "plugin.yaml": "5652573db17bbf85bfc64c008cb71b9e3841f93b6b9f0825712d8190683a7f84"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "The RFC number, client IP and plugin User-Agent leave the machine. Metadata/abstract only, not RFC full text; section references are not implemented.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Editable diagrams clarify system boundaries and data flow; protocol records are useful only when explicitly referenced.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-data-engineer",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/rfc-ref",
+        "--ref",
+        "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [
+    {
+      "name": "context7",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/context7/manifest.yaml",
+      "manifest_sha256": "b40a67ea1679ff5d932cfec2568c453baae4343183acaf2b80ffa4685b26888f",
+      "source": "https://context7.com/docs/resources/all-clients",
+      "config": {
+        "url": "https://mcp.context7.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "resolve-library-id",
+            "query-docs"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for catalog /mcp endpoint, confirmed anonymous discovery",
+        "Anonymous rate limits; optional higher limits use a user-owned API key; /mcp/oauth is a distinct optional OAuth URL, not silently substituted."
+      ],
+      "privacy": "Library identifiers, versions, natural-language queries and any pasted code sent as tool arguments go to Context7/Upstash; avoid private code and secrets.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    }
+  ],
+  "seed_shadows": []
+}

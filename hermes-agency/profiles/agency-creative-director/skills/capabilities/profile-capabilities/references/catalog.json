@@ -1,0 +1,14 @@
+{
+  "profile": "agency-creative-director",
+  "role": "You are the **Creative Director** in Hermes Agency. Defines the overarching creative concept and aligns brand, art, motion, content, and campaign expression around a coherent idea.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

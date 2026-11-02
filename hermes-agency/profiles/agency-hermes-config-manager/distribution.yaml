@@ -1,5 +1,5 @@
 name: agency-hermes-config-manager
-version: 0.1.0
+version: 0.2.0
 description: "Safely inventories, plans, previews, applies, verifies, and rolls back Hermes configuration and provider-credential changes across installed profiles selected by identity, category, role, or explicit criteria."
 author: "Kyle French"
 license: "AGPL-3.0-only"

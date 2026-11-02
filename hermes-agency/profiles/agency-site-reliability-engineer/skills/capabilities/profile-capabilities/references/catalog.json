@@ -1,0 +1,191 @@
+{
+  "profile": "agency-site-reliability-engineer",
+  "role": "You are the **Site Reliability Engineer** in Hermes Agency. Owns measurable production reliability through service objectives, error budgets, incident engineering, resilience validation, and toil reduction without replacing infrastructure or delivery ownership.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "docker-management",
+      "reason": "Container and cloud workflows are useful when that stack is actually in use; never imply cleanup, deployment, or build authorization."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "aws-knowledge",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/aws-knowledge/manifest.yaml",
+      "manifest_sha256": "ced8013639a85db3b4d6173885ee50fd6480f2cf51bf324fb18d7850c0979a5f",
+      "source": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server/",
+      "config": {
+        "url": "https://knowledge-mcp.global.api.aws",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "aws___read_documentation",
+            "aws___search_documentation",
+            "aws___list_regions",
+            "aws___get_regional_availability"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; HTTPS/network; service rate limits"
+      ],
+      "privacy": "Queries, region selections and documentation URLs go to AWS; no AWS account API credentials required. Not a live AWS account management connector.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Exclude aws___retrieve_skill; vendor-authored workflow/skill retrieval is not the Hermes skills layer. Search tool descriptions still mention agent_skills; do not follow that as an auto-install instruction."
+      ],
+      "required_tool_exclusions": [
+        "aws___retrieve_skill"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Container and cloud workflows are useful when that stack is actually in use; never imply cleanup, deployment, or build authorization."
+    },
+    {
+      "name": "grafana",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/grafana/manifest.yaml",
+      "manifest_sha256": "8658ac97af107d76994330f298d0ae2d87b35caa9c16837100aa0de6f6a7710c",
+      "source": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/",
+      "config": {
+        "url": "https://mcp.grafana.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Hosted Grafana Cloud stack and suitable RBAC/Assistant MCP role",
+        "OAuth; choose Read access only initially (clear both Query and Write to prohibit raw SQL and writes)",
+        "Each connecting MCP user counts as an active Grafana Assistant user for billing; explicit cost consent"
+      ],
+      "privacy": "Cloud dashboards, raw queries/logs/metrics can reveal infrastructure, customer data and credentials to the model. This is hosted Grafana Cloud, not self-hosted OSS.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Catalog excludes ask_assistant and agento11y_*; maintain exclusion even if switching from initially empty include to selected exact names. Connecting itself may incur active-user billing, before any tool use."
+      ],
+      "required_tool_exclusions": [
+        "ask_assistant",
+        "agento11y_*"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Only connect to the user-selected telemetry system with scoped authorization; preserve self-hosted alternatives and billing disclosure."
+    },
+    {
+      "name": "microsoft-learn",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/microsoft-learn/manifest.yaml",
+      "manifest_sha256": "846a5847a35e8347fb263aba930056b0fff5b08c1367efc26956a7b119e20a9c",
+      "source": "https://learn.microsoft.com/en-us/training/support/mcp-get-started",
+      "config": {
+        "url": "https://learn.microsoft.com/api/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "microsoft_docs_search",
+            "microsoft_code_sample_search",
+            "microsoft_docs_fetch"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; HTTPS/network"
+      ],
+      "privacy": "Queries and docs URLs go to Microsoft; no tenant/account administration access is implied.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Container and cloud workflows are useful when that stack is actually in use; never imply cleanup, deployment, or build authorization."
+    },
+    {
+      "name": "sentry",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/sentry/manifest.yaml",
+      "manifest_sha256": "f8c20053a1472cfd3d5e98e0ffeae9ef43ca5b258ce555bc016624f13a8b3cf6",
+      "source": "https://docs.sentry.io/product/sentry-mcp/",
+      "config": {
+        "url": "https://mcp.sentry.dev/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Sentry account/org access and OAuth approval; provider quotas/features"
+      ],
+      "privacy": "Issue data, stack traces, request context and possible PII/secrets flow from Sentry into Hermes/model provider. Account scope must be minimized and data redacted.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Only connect to the user-selected telemetry system with scoped authorization; preserve self-hosted alternatives and billing disclosure."
+    }
+  ],
+  "seed_shadows": []
+}

@@ -145,6 +145,13 @@ def _profile_capabilities(profile_dir: Path) -> list[str]:
     for skill_dir in sorted(path for path in skills_dir.iterdir() if path.is_dir()):
         if skill_dir.is_symlink():
             raise ValueError(f"{skill_dir}: capability directories may not be symlinks")
+        if skill_dir.name in {"capabilities", "software-development", "research", "productivity", "creative", "autonomous-ai-agents", "web"}:
+            # Supplemental catalog entries are published separately: the stable
+            # role-owned capabilities/path contract must not change.
+            for child in skill_dir.iterdir():
+                if not child.is_dir() or child.is_symlink() or not (child / "SKILL.md").is_file():
+                    raise ValueError(f"{child}: invalid supplemental capability root")
+            continue
         if not (skill_dir / "SKILL.md").is_file():
             raise ValueError(f"{skill_dir}: capability is missing SKILL.md")
         capabilities.append(skill_dir.name)
@@ -207,6 +214,10 @@ def build_catalog() -> dict:
                 "distribution_path": relative_path,
                 "content_digest": profile_content_digest(profile_dir, name, version),
                 "capabilities": _profile_capabilities(profile_dir),
+                "supplemental_capabilities": sorted(
+                    str(path.parent.relative_to(profile_dir))
+                    for path in (profile_dir / "skills").glob("*/*/SKILL.md")
+                ),
             }
         )
 

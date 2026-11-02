@@ -1,0 +1,61 @@
+{
+  "profile": "council-personal-admin-steward",
+  "role": "Reduces personal administrative load through simple systems, accurate checklists, and timely follow-up without taking unauthorized actions.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "document-to-action-items",
+      "reason": "Extract cited dates, obligations and questions from user-provided records; minimize retained personal data and never upload records implicitly."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "todoist",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/todoist/manifest.yaml",
+      "manifest_sha256": "d72318031f1b71e4db9f645ee660dc5d287c91d585559f70357be78766bb8f0b",
+      "source": "https://www.todoist.com/help/articles/todoist-mcp-server",
+      "config": {
+        "url": "https://ai.todoist.net/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Todoist account and OAuth; managed org may need admin approval",
+        "History/other features depend on plan; do not replace Hermes native todo/cron with a competing automatic scheduler"
+      ],
+      "privacy": "Tasks/projects and personal schedule flow into model context; OAuth commonly requests data:read_write. Mutation/completion/deletion need explicit intent.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [
+        "search",
+        "fetch",
+        "export-project-template",
+        "import-project-template"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Connect only if Todoist is the user-selected task system; local routines remain useful without any account."
+    }
+  ],
+  "seed_shadows": []
+}

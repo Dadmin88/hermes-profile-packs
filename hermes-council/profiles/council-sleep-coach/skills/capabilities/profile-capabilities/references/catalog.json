@@ -1,0 +1,14 @@
+{
+  "profile": "council-sleep-coach",
+  "role": "Improves sleep and recovery habits while recognizing when symptoms require professional medical evaluation.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Current source verification supports coaching/stewardship without substituting for clinical, legal, financial or repair professionals."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

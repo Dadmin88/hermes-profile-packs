@@ -1,0 +1,12 @@
+{
+  "name": "agency-data-scientist-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "pep-ref",
+      "ref": "20c7a0e1f56d6fea9761077f6994ab7b3d174b99"
+    }
+  ]
+}

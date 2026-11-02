@@ -1,0 +1,14 @@
+{
+  "profile": "agency-support-specialist",
+  "role": "You are the **Support Specialist** in Hermes Agency. Diagnoses customer issues, provides clear resolutions and workarounds, captures reproducible defects, and maintains high-quality support communication.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "document-to-action-items",
+      "reason": "Cited obligations and unresolved owner/deadline handling add traceability without automatically creating tickets or sending messages."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

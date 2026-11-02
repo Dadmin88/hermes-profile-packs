@@ -1,0 +1,1188 @@
+{
+  "method": "Bounded source-qualified Hermes Skills Hub searches across professional, educational, personal and wearable domains; rankings are discovery, not endorsement. Final choices combine role overlap, native functionality, complete-tree review, license and dependency cost.",
+  "queries": [
+    {
+      "query": "Godot",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "godot-2d-animation",
+          "identifier": "skills-sh/thedivergentai/game-dev-agentic-skills/godot-2d-animation",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from thedivergentai/game-dev-agentic-skills"
+        },
+        {
+          "name": "godot-2d-movement",
+          "identifier": "skills-sh/gamedev-skills/awesome-gamedev-agent-skills/godot-2d-movement",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from gamedev-skills/awesome-gamedev-agent-skills"
+        },
+        {
+          "name": "godot-2d-physics",
+          "identifier": "skills-sh/thedivergentai/game-dev-agentic-skills/godot-2d-physics",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from thedivergentai/game-dev-agentic-skills"
+        },
+        {
+          "name": "godot-3d-essentials",
+          "identifier": "skills-sh/gamedev-skills/awesome-gamedev-agent-skills/godot-3d-essentials",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from gamedev-skills/awesome-gamedev-agent-skills"
+        },
+        {
+          "name": "godot-3d-world-building",
+          "identifier": "skills-sh/thedivergentai/game-dev-agentic-skills/godot-3d-world-building",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from thedivergentai/game-dev-agentic-skills"
+        },
+        {
+          "name": "godot-animation",
+          "identifier": "skills-sh/gamedev-skills/awesome-gamedev-agent-skills/godot-animation",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from gamedev-skills/awesome-gamedev-agent-skills"
+        }
+      ]
+    },
+    {
+      "query": "video editing",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Video Editing",
+          "identifier": "video-edit",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Edit videos with AI background removal, color grading, upscaling, stabilization, and enhancement tools."
+        },
+        {
+          "name": "Video Editing Agent (VEA)",
+          "identifier": "vea",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Video Editing Agent (VEA) for automated video processing, highlight generation, and editing. Use when asked to index videos, create highlight reels, generate..."
+        },
+        {
+          "name": "Video Editing Tool Free",
+          "identifier": "video-editing-tool-free",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u89c6\u9891\u526a\u8f91\u53d8\u73b0\u8def\u5f84\u6307\u5357,\u542b\u8d5b\u9053\u9009\u62e9\u3001MVP\u642d\u5efa\u3001\u6d41\u91cf\u83b7\u53d6\u3001\u8f6c\u5316\u4ea4\u4ed8\u7684\u57fa\u7840\u6267\u884c\u6846\u67b6"
+        },
+        {
+          "name": "Auto Video Editing",
+          "identifier": "auto-video-editing",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Automated video editing skill for talk/vlog/standup videos. Use when: cutting video, splitting video into sentences, merging video clips, extracting audio, t..."
+        },
+        {
+          "name": "MiniMax H3 Video Editing Prompt",
+          "identifier": "h3-video-editing-prompt",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Write or revise MiniMax H3 Ref2VA prompts for editing a source video from reference images or audio, especially masked or false-colour person replacement, face replacement, costume or object replacement, cross-shot identity persistence, overlay cleanup, and lip-sync preservation. Use when a request"
+        },
+        {
+          "name": "VectCut: The first \"To-Agent\" video editing platform. Build automated video workflows with our stable cloud APIs in Coze, Dify, or OpenClaw.",
+          "identifier": "vectcut",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "VectCut \u5168\u80fd\u526a\u8f91\u805a\u5408\u6280\u80fd\u3002\u7528\u4e8e\u526a\u53e3\u64ad\u3001\u6df7\u526a\u3001\u7535\u5546\u5e7f\u544a\u7b49\u573a\u666f\uff0c\u7edf\u4e00\u7f16\u6392\u6d41\u5149\u526a\u8f91\u80fd\u529b\uff08\u5b57\u5e55\u3001\u97f3\u9891\u3001\u7279\u6548\u3001\u753b\u4e2d\u753b\u3001\u62a0\u50cf\u3001AI\u8865\u955c\u3001AI\u914d\u97f3\u3001\u9884\u8bbe\u3001\u5e73\u53f0\u89c6\u9891\u6293\u53d6\u3001\u6e32\u67d3\u5bfc\u51fa\uff09\uff0c\u4e5f\u652f\u6301\u628a\u65e2\u6709\u89c6\u9891\u5236\u4f5c\u6d41\u7a0b\u6574\u7406\u4e3a\u98de\u4e66\u591a\u7ef4\u8868\u683c\u81ea\u52a8\u5316\u5de5\u4f5c\u6d41\u3002\u5f53\u7528\u6237\u63d0\u51fa\u201c\u505a\u6210\u7247/\u81ea\u52a8\u526a\u8f91/\u53e3\u64ad\u5305\u88c5/\u5e7f\u544a\u526a\u8f91/\u6293\u5e73\u53f0\u89c6\u9891\u540e\u518d\u526a\u201d\uff0c\u6216\u60f3\u628a\u89c6\u9891\u5236\u4f5c..."
+        }
+      ]
+    },
+    {
+      "query": "audio production",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "AI Content Brief, Script & Outline Generator \u2014 Research Assistant for Video & Image generation",
+          "identifier": "ima-knowledge-ai",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI content brief, script, and outline generator for video, image, and audio production. Works as an AI research assistant that provides expert guidance on wo..."
+        },
+        {
+          "name": "Audio Generation",
+          "identifier": "audio-generation-cellcog",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI audio generation and text-to-speech powered by CellCog. Voiceover, narration, voice cloning, avatar voices, sound effects, music, podcasts, dialogue. Three voice providers (OpenAI, ElevenLabs, MiniMax). Professional audio production from text prompts."
+        },
+        {
+          "name": "podcast-producer",
+          "identifier": "ah-podcast-producer",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "You are an AI-powered Podcast Producer specializing in end-to-end podcast creation including scripting, audio production, show notes, and. Use when: podcast..."
+        }
+      ]
+    },
+    {
+      "query": "accessibility",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "design-md",
+          "identifier": "official/creative/design-md",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Author/validate/export Google's DESIGN.md token spec files."
+        },
+        {
+          "name": "accessibility",
+          "identifier": "skills-sh/addyosmani/web-quality-skills/accessibility",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from addyosmani/web-quality-skills"
+        },
+        {
+          "name": "accessibility",
+          "identifier": "skills-sh/affaan-m/ecc/accessibility",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from affaan-m/ecc"
+        },
+        {
+          "name": "accessibility",
+          "identifier": "skills-sh/microsoft/vscode/accessibility",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from microsoft/vscode"
+        },
+        {
+          "name": "Accessibility",
+          "identifier": "oliver-accessibility",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Enhances web accessibility by ensuring semantic HTML, ARIA roles, keyboard navigation, focus management, and screen reader support per WCAG guidelines."
+        },
+        {
+          "name": "accessibility-a11y",
+          "identifier": "skills-sh/mindrally/skills/accessibility-a11y",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from mindrally/skills"
+        }
+      ]
+    },
+    {
+      "query": "security best practices",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "security-best-practices",
+          "identifier": "openai/skills/skills/.curated/security-best-practices",
+          "source": "github",
+          "trust_level": "trusted",
+          "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks."
+        },
+        {
+          "name": "Security Best Practices",
+          "identifier": "security-best-practices",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Security reviews and secure-by-default guidance"
+        },
+        {
+          "name": "API Security Best Practices",
+          "identifier": "api-security",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Guide to implement secure API practices including authentication, authorization, input validation, rate limiting, and protection against common API vulnerabi..."
+        },
+        {
+          "name": "Cisco ASA Hardening",
+          "identifier": "toolweb-cisco-asa-hardening",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Generates hardened Cisco ASA firewall configurations based on security best practices and specified hardening options."
+        },
+        {
+          "name": "Cloudflare Developer Skill",
+          "identifier": "cloudflare-developer-skill",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Expertise in Cloudflare Workers, Pages, D1, R2, KV storage, AI integration, security best practices, deployment, and performance optimization."
+        },
+        {
+          "name": "Devcontainer Validator",
+          "identifier": "devcontainer-validator",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Validate devcontainer.json files for syntax, structure, features, ports, lifecycle scripts, customizations, and security best practices in VS Code Dev Contai..."
+        }
+      ]
+    },
+    {
+      "query": "data science",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Data Science CV Repro Reviewer",
+          "identifier": "data-science-cv-repro-lab",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Review computer-vision experiment reproducibility evidence, dataset readiness, metric gates, and launch risk. Use when a user asks for a cautious CV experime..."
+        },
+        {
+          "name": "Competitive Data Science",
+          "identifier": "datacompetition-blueprint",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Use when working on data science competitions (Kaggle, CCF BDCI, DCIC, etc.) to build from baseline to topline solutions, covering data processing, feature engineering, model building, training techniques, and model fusion strategies"
+        },
+        {
+          "name": "Alibabacloud Pai Dsw Manage",
+          "identifier": "alibabacloud-pai-dsw-manage",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Manage the full lifecycle of Alibaba Cloud PAI DSW (Data Science Workshop) instances \u2014 create, update, query, list, start, stop, and look up ECS specs. Trigg..."
+        },
+        {
+          "name": "Interview Analysis",
+          "identifier": "interview-analysis",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Deep interview analysis using dynamic expert routing. Automatically selects top domain thinkers based on role type to distinguish genuine capability from performance, identifying Battle Scars over Methodology Recitation. Applicable to any professional position including product management, engineering, design, operations, sales, and data science."
+        },
+        {
+          "name": "finding-data-scientists-on-twitter",
+          "identifier": "finding-data-scientists-on-twitter",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Finds data scientists and ML engineers to recruit using apidojo's Twitter scrapers on Apify. Triggers when the user asks to: find data scientists on Twitter for recruiting, discover machine learning engineers or AI researchers to hire from X, find data analysts or ML practitioners by specialization on Twitter, identify NLP computer vision or LLM engineers via social signals, find data science professionals open to work on Twitter, build a data science talent pipeline from social, or find researchers posting about job opportunities. Returns handle, name, ML specialty (from bio/tweets), stack (Python/R/TensorFlow), follower count, and open-to-work signals. Ideal for ML engineering hiring managers, AI research labs, and data-driven startups."
+        },
+        {
+          "name": "time-sereis-analysis",
+          "identifier": "time-series-analysis",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive time series data science skill covering feature engineering, model training, and competition-winning strategies for forecasting and prediction problems."
+        }
+      ]
+    },
+    {
+      "query": "scientific research",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Pilot Scientific Research Team Setup",
+          "identifier": "pilot-scientific-research-team-setup",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Deploy a scientific research team with 4 agents. Use this skill when: 1. User wants to set up a collaborative research pipeline with literature review, hypot..."
+        },
+        {
+          "name": "Scientify -  AI-powered collaborator for your scientific research works.",
+          "identifier": "install-scientify",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Use this when the user wants to install or set up the Scientify research plugin. Adds research-pipeline, literature-survey, idea-generation, arxiv tools, and..."
+        },
+        {
+          "name": "rStation: Autonomous Scientific Research Community",
+          "identifier": "rstation",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Join rStation for autonomous research and multi-agent collaboration on open problems in mathematics and science. Investigate problems, read shared papers, discuss findings and submit research for AI peer review."
+        },
+        {
+          "name": "denario",
+          "identifier": "synthetic-sciences/openscience/backend/cli/skills/coding/denario",
+          "source": "github",
+          "trust_level": "community",
+          "description": "Multiagent AI system for scientific research assistance that automates research workflows from data analysis to publication. This skill should be used when generating research ideas from datasets, developing research methodologies, executing computational experiments, performing literature searches, or generating publication-ready papers in LaTeX format. Supports end-to-end research pipelines with customizable agent orchestration."
+        },
+        {
+          "name": "Capital Equipment",
+          "identifier": "capneteq-cesco345",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Search, book, and manage scientific research equipment at 200+ institutions with real-time availability, service requests, and collaborator discovery."
+        },
+        {
+          "name": "Capital Equipment Network (CapNetEq)",
+          "identifier": "capital-equipment",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Search, book, and manage scientific research equipment across 500+ facilities, track usage, submit service requests, and find collaborators securely."
+        }
+      ]
+    },
+    {
+      "query": "legal research",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "01mind",
+          "identifier": "01mind-skill-package",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Discover and use 01Mind's real, live pay-per-call API storefront for AI agents -- data feeds, legal research, compliance packs, on-demand tool generation, and a paid hiring venue."
+        },
+        {
+          "name": "Deposition Bot",
+          "identifier": "depo-bot",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Produces structured trial preparation reports from deposition transcripts. Generates a strategic memo, witness analysis, legal research summary, and a Word d..."
+        },
+        {
+          "name": "Foreign Law Research",
+          "identifier": "foreign-law-research",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u5916\u56fd\u6cd5\u8c03\u7814\u65b9\u6cd5\u8bba\uff1a\u5c06\u6a21\u7cca\u7684\u6cd5\u5f8b\u95ee\u9898\u901a\u8fc7\u7cfb\u7edf\u5316\u8d44\u6e90\u68c0\u7d22\u8f6c\u5316\u4e3a\u9ad8\u8d28\u91cf\u8c03\u7814\u62a5\u544a\u3002 \u89e6\u53d1\u8bcd\uff1a/foreign-law-research\u3001\u5916\u56fd\u6cd5\u8c03\u7814\u3001\u5916\u56fd\u6cd5\u68c0\u7d22\u3001\u8c03\u7814\u5916\u56fd\u6cd5\u3001\u5883\u5916\u6cd5\u5f8b\u8c03\u67e5 \u9002\u7528\u4e8e\uff1a\u8de8\u5883\u6295\u8d44\u3001\u77ff\u4e1a\u5e76\u8d2d\u3001\u56fd\u9645\u5316\u4e1a\u52a1\u7b49\u9700\u8981\u8c03\u7814\u4e1c\u9053\u56fd\u6cd5\u5f8b\u573a\u666f\u3002"
+        },
+        {
+          "name": "Legal Documents",
+          "identifier": "legal-documents-cellcog",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI legal documents and contract drafting powered by CellCog. Contracts, NDAs, terms of service, privacy policies, freelance agreements, employment contracts, compliance reviews, legal research. Precision legal drafting from natural language prompts. Not legal advice."
+        },
+        {
+          "name": "LegalDoc AI",
+          "identifier": "legaldoc-ai",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Automate extraction, analysis, summarization, legal research, and deadline tracking of contracts and legal documents for law firms and professionals."
+        },
+        {
+          "name": "remember-legal-research",
+          "identifier": "remember-legal-research",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Case and research memory for legal work \u2014 holdings, citations, and reasoning chains that survive across sessions. Use when an agent assists with legal research and must not lose the thread of a case. Requires a BlueColumn API key (bc_live_*)."
+        }
+      ]
+    },
+    {
+      "query": "teaching",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Teaching Diagram Maker",
+          "identifier": "teaching-diagram-maker",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Create and visually verify editable teaching diagrams"
+        },
+        {
+          "name": "Teaching Physical Skills",
+          "identifier": "teaching-physical-skills",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Methods for teaching physical/embodied skills to others. Use when someone needs to teach a child or adult a hands-on physical skill like riding a bike, swimm..."
+        },
+        {
+          "name": "Teaching Plan Generator",
+          "identifier": "teaching-plan-generator",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u751f\u6210 40 \u5206\u949f\u4e09\u6bb5\u5f0f\u8bfe\u5802\u6559\u6848\uff08MD + DOCX\uff09\uff0c\u9002\u914d\u804c\u4e1a\u9662\u6821\u4e24\u79cd\u5b66\u60c5\uff08\u7edf\u4e00\u578b/\u5206\u5c42\u578b\uff09\u3002 \u5f53\u7528\u6237\u63d0\u5230\u6559\u6848\u3001\u6559\u5b66\u8bbe\u8ba1\u3001\u5206\u5c42\u6559\u5b66\u3001\u8bfe\u5802\u6559\u5b66\u8bbe\u8ba1\u3001\u5907\u8bfe\u3001\u5206\u5c42\u6559\u6848\u3001\u6559\u5b66\u6d41\u7a0b\u8bbe\u8ba1\u65f6\u4f7f\u7528\uff0c \u4e5f\u9002\u7528\u4e8e\u7528\u6237\u63d0\u4f9b\u8bfe\u7a0b\u5185\u5bb9\u6587\u6863\u3001\u5df2\u6709\u6559\u6848\u6216\u4f01\u4e1a\u5c97\u4f4d\u624b\u518c\u4f5c\u4e3a\u53c2\u8003\u6750\u6599\u9700\u8981\u751f\u6210\u6559\u6848\u7684\u573a\u666f\u3002"
+        },
+        {
+          "name": "Teaching Presentation",
+          "identifier": "teaching-presentation",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u4e3a\u6559\u5e08\u4ece\u6559\u6848\u751f\u6210\u5b8c\u6574\u7684\u8bfe\u5802\u6559\u5b66\u6f14\u793a\u6587\u7a3f\uff08\u542b.pptx\u6587\u4ef6\uff09\u3002\u652f\u6301\u6559\u6848\u6587\u4ef6\uff08.docx/.pdf\uff09\u3001\u7f51\u9875\u5185\u5bb9\u6216\u4e3b\u9898\u5173\u952e\u8bcd\u8f93\u5165\uff0c\u81ea\u52a8\u5b8c\u6210\u5185\u5bb9\u7c7b\u578b\u5224\u5b9a\uff08A/B/C/D\uff09\u3001\u7ed3\u6784\u5316JSON\u5927\u7eb2\u751f\u6210\u3001role\u6620\u5c04\u3001\u4e92\u52a8\u8bbe\u8ba1\u89c4\u5212\u3001\u5e76\u6700\u7ec8\u8f93\u51fa\u53ef\u76f4\u63a5\u5728\u8bfe\u5802\u4e0a\u4f7f\u7528\u7684.pptx\u8bfe\u4ef6\u3002\u751f\u6210\u7684\u8bfe\u4ef6\u4e0d\u662f\u77e5\u8bc6\u7f57\u5217\uff0c\u800c\u662f\u5f15\u5bfc\u6559\u5e08\u4e00\u6b65\u6b65\u63a8\u8fdb\u8bfe\u5802\u7684..."
+        },
+        {
+          "name": "teaching-app-builder",
+          "identifier": "teaching-app-builder",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u628a\u4e00\u6bb5\u6559\u5b66\u6587\u672c/\u77e5\u8bc6\u70b9/\u8bb2\u4e49/\u6982\u5ff5\u505a\u6210\u5355\u6587\u4ef6 HTML \u4ea4\u4e92\u6559\u5b66\u5c55\u793a app\u3002\u5f53\u7528\u6237\u60f3\u628a\u5185\u5bb9\u505a\u6210\u7f51\u9875\u6f14\u793a\u3001\u4ea4\u4e92\u8bfe\u4ef6\u3001\u53ef\u89c6\u5316\u8bb2\u89e3\u3001\u6559\u5b66 demo\u3001HTML \u5c55\u793a\u9875\uff0c\u6216\u60f3\u7528 Chart.js/ECharts \u56fe\u8868\u3001Mermaid \u6d41\u7a0b\u56fe\u3001KaTeX/MathJax \u516c\u5f0f\u3001SVG \u793a\u610f\u56fe\u3001\u4ea4\u4e92\u52a8\u753b\u628a\u67d0\u4e2a\u77e5\u8bc6\u70b9\u8bb2\u6e05\u695a\u65f6\u4f7f..."
+        },
+        {
+          "name": "teaching-knowledge-visualizer",
+          "identifier": "teaching-knowledge-visualizer",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u5e2e\u52a9\u6559\u5e08\u5c06\u77e5\u8bc6\u70b9\u3001\u7ae0\u8282\u5185\u5bb9\u3001\u6559\u6750\u6587\u672c\u8f6c\u5316\u4e3a\u53ef\u89c6\u5316\u6559\u5b66\u6750\u6599\uff0c\u5e76\u751f\u6210\u53ef\u8bfe\u5802\u6295\u5f71\u7684\u4ea4\u4e92\u5f0f HTML \u9875\u9762\u3002\u5f53\u6559\u5e08\u9700\u8981\"\u77e5\u8bc6\u53ef\u89c6\u5316\"\u3001\"\u68b3\u7406\u77e5\u8bc6\u7ed3\u6784\"\u3001 \"\u753b\u6982\u5ff5\u56fe/\u601d\u7ef4\u5bfc\u56fe/\u6d41\u7a0b\u56fe/\u65f6\u95f4\u8f74/\u5bf9\u6bd4\u8868/\u51fd\u6570\u56fe\u50cf/\u793a\u610f\u56fe\"\u3001\"\u590d\u4e60\u63d0\u7eb2\u53ef\u89c6\u5316\"\u3001\"\u677f\u4e66\u8bbe\u8ba1\"\u3001\"\u77e5\u8bc6\u6846\u67b6\u56fe\"\u3001\"\u7ae0\u8282\u603b\u7ed3\u56fe\"\u65f6\u4f7f\u7528\u3002\u652f\u6301\u6982\u5ff5\u5173\u7cfb\u56fe\u3001\u601d\u7ef4\u5bfc\u56fe\u3001\u6d41\u7a0b\u56fe\u3001\u65f6\u95f4\u8f74\u3001\u5bf9\u6bd4\u77e9\u9635\u3001\u5c42\u7ea7\u5206\u7c7b\u56fe\u3001 \u5faa\u73af\u8fc7\u7a0b\u56fe\u3001\u56e0\u679c\u9c7c\u9aa8\u56fe\u3001\u77e5\u8bc6\u5730\u56fe\u7b49\u4e5d\u79cd\u53ef\u89c6\u5316\u5f62\u5f0f\uff1b\u77e5\u8bc6\u70b9\u542b\u6570\u5b66\u51fd\u6570\u56fe\u50cf\u6216\u5730\u7406/\u7269\u7406\u793a\u610f\u56fe\u65f6\u81ea\u52a8\u62c6\u5206\u8f93\u51fa\"\u56fe\u6587\u8bb2\u89e3\u4e3b\u9875\uff0b\u4ea4\u4e92\u56fe\u50cf\u9875\"\u4e24\u4e2a HTML\uff08\u62d6\u62fd\u5e73\u79fb\u3001\u6eda\u8f6e\u7f29\u653e\u3001\u6ed1\u5757\u5b9e\u65f6\u8c03\u53c2\u3001\u591a\u5b50\u56fe\u6807\u7b7e\u5207\u6362\uff09\uff1b\u77e5\u8bc6\u7ed3\u6784\u603b\u89c8\u4ee5\u5355\u753b\u5e03\u5b8c\u6574\u540c\u5c4f\u5448\u73b0\u5168\u90e8\u77e5\u8bc6\u70b9\uff08\u521d\u59cb\u65e0\u91cd"
+        }
+      ]
+    },
+    {
+      "query": "language learning",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Language Learning 1.0.0",
+          "identifier": "language-learning-1-0-0",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI language tutor for learning ANY language through conversation, vocab drills, grammar lessons, flashcards, and immersive practice. Use when the user wants..."
+        },
+        {
+          "name": "Language Learning Mastery",
+          "identifier": "afrexai-language-mastery",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Adaptive language learning system with placement tests, structured weekly curricula, vocabulary spaced repetition, grammar lessons, pronunciation coaching, c..."
+        },
+        {
+          "name": "Language Learning Tutor",
+          "identifier": "language-learning",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI language tutor for learning ANY language through conversation, vocab drills, grammar lessons, flashcards, and immersive practice. Use when the user wants to: learn a new language, practice vocabulary, study grammar, do flashcard drills, translate phrases, practice conversation, prepare for travel, learn slang/idioms, or improve pronunciation. Supports ALL languages including Spanish, French, German, Japanese, Chinese (Mandarin/Cantonese), Korean, Arabic, Hindi, Bengali/Bangla, Portuguese, Russian, Italian, Turkish, Vietnamese, Thai, Swahili, Hebrew, Polish, Dutch, Greek, and 100+ more."
+        },
+        {
+          "name": "Bilingual Learning",
+          "identifier": "bilingual-learning",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u53cc\u8bed\u5b66\u4e60 Skill - CN \u2192 EN\u3002\u5f53\u7528\u6237\u4f7f\u7528\u6b64 skill \u65f6\uff0cagent \u4f1a\u5728\u6700\u7ec8\u8f93\u51fa\u524d\u5f3a\u5236\u8fdb\u884c\u53cc\u8bed\u5b66\u4e60\u5904\u7406\uff0c\u5305\u62ec\u96be\u5ea6\u8c03\u6574\u3001\u8003\u8bd5\u68c0\u6d4b\u548c\u53cc\u8bed\u8f93\u51fa\u3002"
+        },
+        {
+          "name": "Dutch Translator",
+          "identifier": "dutch-translator",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Translates Dutch news text into English with interlinear formatting for language learning and detailed analysis."
+        },
+        {
+          "name": "Language",
+          "identifier": "language",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "A comprehensive AI agent skill for language learners at every level. Builds personalized study plans, teaches vocabulary in context, corrects your writing an..."
+        }
+      ]
+    },
+    {
+      "query": "personal finance",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Personal Finance",
+          "identifier": "openclaw-skill-personal-finance",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Parse personal finance CSV exports, validate schema, categorize transactions via local rules, and summarize/report income, expenses, merchants, and categories."
+        },
+        {
+          "name": "Personal Finance Beancount",
+          "identifier": "beancount-skill",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Professional personal finance advisor specializing in plain-text accounting with Beancount and Fava. Use when users need help with: (1) Analyzing spending habits and financial patterns from Beancount files, (2) Creating or understanding Beancount transactions and syntax, (3) Financial planning, budgeting, and investment advice, (4) Interpreting Fava reports and creating custom queries, (5) Organizing chart of accounts, (6) Double-entry bookkeeping principles, (7) Personal finance optimization and wealth building strategies. Provides analysis, education, and personalized recommendations while maintaining professional standards."
+        },
+        {
+          "name": "Personal Finance Hardened",
+          "identifier": "personal-finance-hardened",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Manage personal finances, track spending by category, set budgets, and receive reminders for EMIs and one-time annual expenses. Use for logging expenses, che..."
+        },
+        {
+          "name": "Personal Finance Mastery",
+          "identifier": "afrexai-personal-finance",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Complete personal finance system \u2014 budgeting, debt payoff, investing, tax optimization, net worth tracking, and financial independence planning. Use when man..."
+        },
+        {
+          "name": "Personal Finance Reconciler",
+          "identifier": "financial-reconciler",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Privacy-first personal finance tracker with local SQLite storage"
+        },
+        {
+          "name": "Personal Finance Tracker",
+          "identifier": "spotsccc-finance",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Manage personal finances: record expenses, income, transfers, check balances, and generate reports. TRIGGER when: user asks to record a transaction, expense,..."
+        }
+      ]
+    },
+    {
+      "query": "health evidence",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "azure-diagnostics",
+          "identifier": "skills-sh/microsoft/azure-skills/azure-diagnostics",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from microsoft/azure-skills \u00b7 576,542 installs"
+        },
+        {
+          "name": "firecrawl-research-papers",
+          "identifier": "skills-sh/firecrawl/firecrawl-workflows/firecrawl-research-papers",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from firecrawl/firecrawl-workflows \u00b7 33,932 installs"
+        },
+        {
+          "name": "convex-insights",
+          "identifier": "skills-sh/convex/agent-skills/convex-insights",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from convex/agent-skills \u00b7 38,483 installs"
+        },
+        {
+          "name": "cac-roas-benchmark",
+          "identifier": "skills-sh/mbfinotti/advertising-skills/cac-roas-benchmark",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from mbfinotti/advertising-skills \u00b7 24,887 installs"
+        },
+        {
+          "name": "om-ux-review-pr",
+          "identifier": "skills-sh/open-mercato/skills/om-ux-review-pr",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from open-mercato/skills \u00b7 3,062 installs"
+        },
+        {
+          "name": "platform-architecture-analyze",
+          "identifier": "skills-sh/forcedotcom/sf-skills/platform-architecture-analyze",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from forcedotcom/sf-skills \u00b7 2,961 installs"
+        }
+      ]
+    },
+    {
+      "query": "travel planning",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Travel Planning",
+          "identifier": "travel-planning-cellcog",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI travel planning and itinerary generation powered by CellCog. Vacation planning, travel research, flight planning, hotel recommendations, visa requirements, weather patterns, local events. Complete itineraries as PDFs or interactive dashboards."
+        },
+        {
+          "name": "Travel Planning",
+          "identifier": "travel-planning",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Plan trips with itineraries, multi-city routing, budget optimization, family logistics, packing lists, and visa timelines."
+        },
+        {
+          "name": "Plan Your Trip \u2014 Itinerary Builder, Flight + Hotel Bundles, Day-by-Day Travel Planning",
+          "identifier": "plan-trip",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Plan your entire trip with AI \u2014 flights, hotels, attractions, day-by-day itinerary. Tell me your destination, dates, and interests, I'll handle the rest. Als..."
+        },
+        {
+          "name": "AI Travel Agent",
+          "identifier": "ai-travel-agent",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Personal travel planning assistant. Requires a SerpAPI key (stored in ~/.serpapi_credentials). Searches real flights and hotels via Google (SerpAPI), checks..."
+        },
+        {
+          "name": "China Travel",
+          "identifier": "china-travel",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive travel planning, booking, and management skill. Use when needing to plan china trips, manage multi-destination itineraries, handle family trave..."
+        },
+        {
+          "name": "Ctrip",
+          "identifier": "ctrip",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive travel planning, booking, and management skill. Use when needing to plan china trips, manage multi-destination itineraries, handle family trave..."
+        }
+      ]
+    },
+    {
+      "query": "career coaching",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "one-on-ones",
+          "identifier": "skills-sh/guia-matthieu/clawfu-skills/one-on-ones",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from guia-matthieu/clawfu-skills \u00b7 229 installs"
+        },
+        {
+          "name": "finding-mentors-sponsors",
+          "identifier": "skills-sh/oldwinter/skills/finding-mentors-sponsors",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from oldwinter/skills \u00b7 50 installs"
+        },
+        {
+          "name": "running-effective-1-1s",
+          "identifier": "skills-sh/oldwinter/skills/running-effective-1-1s",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from oldwinter/skills \u00b7 47 installs"
+        },
+        {
+          "name": "mock-interview-coach",
+          "identifier": "skills-sh/art2url/career-agent-skills/mock-interview-coach",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from art2url/career-agent-skills \u00b7 35 installs"
+        },
+        {
+          "name": "career-coach",
+          "identifier": "skills-sh/ryanxkh/career-coach-skill/career-coach",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from ryanxkh/career-coach-skill \u00b7 17 installs"
+        },
+        {
+          "name": "find-recruiting-firm",
+          "identifier": "skills-sh/nostrband/servicegraph/find-recruiting-firm",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from nostrband/servicegraph \u00b7 21 installs"
+        }
+      ]
+    },
+    {
+      "query": "project management",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Project Management",
+          "identifier": "project-management-cellcog",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI project management powered by CellCog. Knowledge workspaces, document upload, AI-processed context trees, signed URL retrieval. Works standalone or as CellCog chat context."
+        },
+        {
+          "name": "Project Management",
+          "identifier": "project-management-2",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Manage projects, tasks, and priorities effectively as a solopreneur. Use when organizing work, tracking progress, managing deadlines, coordinating with contr..."
+        },
+        {
+          "name": "Project Management Guru (ADHD)",
+          "identifier": "project-management-guru-adhd",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Expert project manager for ADHD engineers managing multiple concurrent projects. Specializes in hyperfocus management, context-switching minimization, and parakeet-style gentle reminders."
+        },
+        {
+          "name": "Project Management System",
+          "identifier": "project-management-system",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "A comprehensive project management system for AI agents. Manage projects from initiation to delivery with structured workflows, templates, quality gates, and..."
+        },
+        {
+          "name": "AI-Driven Project Management: TensorPM",
+          "identifier": "tensorpm",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI-powered project management - a Notion and Jira alternative with local-first architecture. Manage projects, track action items, and coordinate teams via MCP tools or A2A agent communication. Signed & notarized. https://tensorpm.com"
+        },
+        {
+          "name": "APPM: Atlas-Parallel Project Management",
+          "identifier": "appm",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Manages AI Agent project memories by creating and updating .openclaw/MISSION.md and SNAPSHOT.md for parallel project progress tracking."
+        }
+      ]
+    },
+    {
+      "query": "localization",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "localization",
+          "identifier": "skills-sh/unity-technologies/skills/localization",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from unity-technologies/skills"
+        },
+        {
+          "name": "localization",
+          "identifier": "skills-sh/appeeky/aso-skills/localization",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from appeeky/aso-skills"
+        },
+        {
+          "name": "Localization",
+          "identifier": "localization",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Deep localization workflow\u2014locale strategy, string extraction, ICU and placeholders, formatting, RTL and layout, translation QA, and continuous delivery with..."
+        },
+        {
+          "name": "localization-design",
+          "identifier": "skills-sh/owl-listener/designer-skills/localization-design",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from owl-listener/designer-skills"
+        },
+        {
+          "name": "localization-l10n",
+          "identifier": "skills-sh/mindrally/skills/localization-l10n",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from mindrally/skills"
+        },
+        {
+          "name": "localization-strategy",
+          "identifier": "skills-sh/kostja94/marketing-skills/localization-strategy",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from kostja94/marketing-skills"
+        }
+      ]
+    },
+    {
+      "query": "customer support",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Customer Support",
+          "identifier": "customer-support",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Resolve issues, communicate with empathy, and turn frustrated customers into loyal advocates."
+        },
+        {
+          "name": "Customer Support Autopilot",
+          "identifier": "customer-support-autopilot",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Classify customer support tickets, draft accurate responses, suggest macros, and route escalations based on risk, SLA, and business impact."
+        },
+        {
+          "name": "Customer Support Command Center",
+          "identifier": "afrexai-customer-support",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Enterprise-grade customer support system: ticket triage, response templates, escalation workflows, CSAT tracking, knowledge base management, and churn prevention. Turns your AI agent into a support team lead."
+        },
+        {
+          "name": "Customer Support Operations Engine",
+          "identifier": "afrexai-support-operations",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Build and run a world-class customer support operation \u2014 from ticket management to team scaling. Complete methodology with templates, scoring systems, and au..."
+        },
+        {
+          "name": "Fintech Customer Support",
+          "identifier": "fintech-customer-support",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI-powered customer support agent for fintech and remittance products. Handles transfer status lookups, refund requests, account suspensions, KYC document gu..."
+        },
+        {
+          "name": "Generate Customer Support Ad Creative Brief",
+          "identifier": "toby-generate-customer-support-ad-creative-brief",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Plan campaign visuals and hooks for customer support promotions. Use when working on paid campaign planning for support teams, customer success managers."
+        }
+      ]
+    },
+    {
+      "query": "product strategy",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Product Strategy",
+          "identifier": "product-strategy",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Product strategy analysis for any consumer product. Competitive analysis, market sizing (TAM/SAM/SOM), pricing strategy, launch readiness assessment, and pos..."
+        },
+        {
+          "name": "CPO / Chief Product Officer",
+          "identifier": "cpo",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Drive product strategy with roadmap prioritization, team leadership, board communication, and competitive intelligence."
+        },
+        {
+          "name": "Decision Trees",
+          "identifier": "decision-trees",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Decision tree analysis for complex decision-making across all domains. Use when user needs to evaluate multiple options with uncertain outcomes, assess risk/reward scenarios, or structure choices systematically. Applicable to business, investment, personal decisions, operations, career choices, product strategy, and any situation requiring structured evaluation. Triggers include decision tree, should I, what if, evaluate options, compare alternatives, risk analysis."
+        },
+        {
+          "name": "Jobs-Ive",
+          "identifier": "jobs-ive",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Channel the combined product philosophy of Steve Jobs and Jony Ive to make product, design, messaging, naming, pricing, and strategic decisions. Use when the user wants to simplify copy, design interfaces, name products, write taglines, make strategic product choices, kill features, design onboarding, craft presentations, or apply Apple-level thinking. Triggers on: 'what would Steve do,' 'simplify this,' 'make it Apple-like,' 'channel Jobs/Ive,' 'too complex,' 'name this product,' 'write a tagline,' 'product strategy,' or any request for radical simplification and craft."
+        },
+        {
+          "name": "Kpc Comb",
+          "identifier": "kpc-comb",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Visualize Key Purchase Criteria importance and performance. Use for competitive positioning and product strategy."
+        },
+        {
+          "name": "Product Business",
+          "identifier": "product-business",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive Product & Business skill covering product management, business analysis,\nmarketing, sales, customer support, legal advisory, and technical support.\nTriggers when users ask about product strategy, business analysis, marketing content,\nsales automation, customer support, or legal documen"
+        }
+      ]
+    },
+    {
+      "query": "marketing analytics",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Marketing Analytics",
+          "identifier": "marketing-analytics",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Analyze marketing campaign data to generate performance reports and optimization recommendations"
+        },
+        {
+          "name": "JMPY.me Marketing & Analytics",
+          "identifier": "jmpy-marketing-analytics",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Master the JMPY.me ecosystem for professional URL shortening, advanced QR code generation, branded domain management, and deep marketing analytics. Use this..."
+        },
+        {
+          "name": "constant-contact",
+          "identifier": "constant-contact",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Constant Contact API integration with managed OAuth. This is a write-capable integration \u2014 it can read, create, update, delete, and bulk-modify contacts, email campaigns, contact lists, tags, custom fields, segments, and marketing analytics. Use this skill when users want to interact with Constant Contact marketing data. All write operations (POST, PUT, DELETE, bulk actions, campaign sending/scheduling) require explicit user approval with specific resource identifiers before execution. For other third party apps, use the api-gateway skill (https://clawhub.ai/byungkyu/api-gateway). Requires network access and valid Maton API key. Calls run through the `maton` CLI with OAuth login, or over raw HTTP with a Maton API key where the CLI cannot be installed. Every call is authenticated as the user's connection and reaches only what that connection's authorization allows, which the provider enforces on every request; the endpoints documented here are the ones this skill uses, and any other endpoint of this app needs the user to ask for it by name. Default to read and list calls, and confirm every write or new connection with the user. This file also documents the three constructs that turn a Constant Contact connection into automation, in the order they are used: the connection (the first step), a hosted function that runs a Constant Contact action through the Maton SDK, and a trigger that calls that function on a schedule or on an event. Those sections are the platform's own reference text, shared with the api-gateway skill, with Constant Contact examples; they add no Constant Contact capability - Constant Contact is not an event source, a trigger cannot read Constant Contact data, and the files under `references/<source>/triggers.md` are the platform's event catalogues for the sources Maton offers (time, Calendly, GitHub, Gmail, HubSpot, Linear, Notion, Slack, Stripe)."
+        }
+      ]
+    },
+    {
+      "query": "3d art",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "unreal-engine-development-engineer",
+          "identifier": "lobehub/unreal-engine-development-engineer",
+          "source": "lobehub",
+          "trust_level": "community",
+          "description": "Unreal Engine expert, proficient in C++ programming, rendering, memory, threading, and pipeline architecture. Experienced in applying UE on Android platforms, with comprehensive artistic knowledge, fa"
+        },
+        {
+          "name": "3d-cartoon-character-short",
+          "identifier": "skills-sh/learnprompt/goodcase-lite/3d-cartoon-character-short",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from learnprompt/goodcase-lite \u00b7 92 installs"
+        },
+        {
+          "name": "banner-design",
+          "identifier": "skills-sh/nextlevelbuilder/ui-ux-pro-max-skill/banner-design",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from nextlevelbuilder/ui-ux-pro-max-skill \u00b7 43,284 installs"
+        },
+        {
+          "name": "banner-design",
+          "identifier": "skills-sh/nextlevelbuilder/ui-ux-pro-max-skill/ckmbanner-design",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from nextlevelbuilder/ui-ux-pro-max-skill \u00b7 31,969 installs"
+        },
+        {
+          "name": "cad",
+          "identifier": "skills-sh/earthtojake/text-to-cad/cad",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from earthtojake/text-to-cad \u00b7 15,011 installs"
+        },
+        {
+          "name": "create-game-assets",
+          "identifier": "skills-sh/gamedev-skills/awesome-gamedev-agent-skills/create-game-assets",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from gamedev-skills/awesome-gamedev-agent-skills \u00b7 8,791 installs"
+        }
+      ]
+    },
+    {
+      "query": "creative writing",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "discernment-nudge",
+          "identifier": "anthropics/skills/skills/discernment-nudge",
+          "source": "github",
+          "trust_level": "trusted",
+          "description": "After you give a substantive answer or draft that the user may act on \u2014 advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument \u2014 invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions, each tied to something specific in what you just produced, that help the user check key facts, probe the reasoning or assumptions, and notice missing context. Do this at most once per conversation. Skip it when the user asked a trivial how-to or simple lookup, wants a purely educational explanation, asked you only to format, convert, or assemble a file from content they provided, is writing code they will run, is doing creative writing or casual chat, or already asked you to double-check, cite, or review \u2014 the skill file explains these boundaries and the exact output format.\n"
+        },
+        {
+          "name": "Creative Writing",
+          "identifier": "creative-writing-cellcog",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI creative writing and storytelling powered by CellCog. Novels, short stories, screenplays, fan fiction, poetry. World building, character development, narrative design across fantasy, sci-fi, mystery, romance, horror, and literary fiction."
+        },
+        {
+          "name": "Creative Writing workshop for AI agents",
+          "identifier": "ai-agent-creative-writing-workshop",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Fully autonomous agent skill for creative writing workshops. Handles its own registration and token lifecycle."
+        },
+        {
+          "name": "Creative Fiction Writer",
+          "identifier": "erotic-writer",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Craft tasteful adult fiction and intimate scenes. Triggers on requests for erotic stories, romance with mature themes, NSFW creative writing, or \u5c0f\u9ec4\u6587/\u60c5\u8272\u6545\u4e8b. Su..."
+        },
+        {
+          "name": "Fable Developer",
+          "identifier": "fable-dev",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Use when working on the Fable codebase \u2014 modifying, debugging, or extending any part of the Electron + React creative writing app. Covers architecture, codin..."
+        },
+        {
+          "name": "Peer Review",
+          "identifier": "peer-review",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Multi-model peer review layer using local LLMs via Ollama to catch errors in cloud model output.\nFan-out critiques to 2-3 local models, aggregate flags, synthesize consensus.\n\nUse when: validating trade analyses, reviewing agent output quality, testing local model accuracy,\nchecking any high-stakes Claude output before publishing or acting on it.\n\nDon't use when: simple fact-checking (just search the web), tasks that don't benefit from\nmulti-model consensus, time-critical decisions where 60s latency is unacceptable,\nreviewing trivial or low-stakes content.\n\nNegative examples:\n- \"Check if this date is correct\" \u2192 No. Just web search it.\n- \"Review my grocery list\" \u2192 No. Not worth multi-model inference.\n- \"I need this answer in 5 seconds\" \u2192 No. Peer review adds 30-60s latency.\n\nEdge cases:\n- Short text (<50 words) \u2192 Models may not find meaningful issues. Consider skipping.\n- Highly technical domain \u2192 Local models may lack domain knowledge. Weight flags lower.\n- Creative writing \u2192 Factual review doesn't apply well. Use only for logical consistency."
+        }
+      ]
+    },
+    {
+      "query": "knowledge management",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Knowledge Management",
+          "identifier": "knowledge-management",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Organize and classify OpenClaw knowledge entries into local folders by content type (Research, Decision, Insight, Lesson, Pattern, Project, Reference, Tutori..."
+        },
+        {
+          "name": "Afrexai Knowledge Management",
+          "identifier": "afrexai-knowledge-management",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u63d0\u4f9b\u7ec4\u7ec7\u77e5\u8bc6\u5ba1\u8ba1\u3001\u5206\u7c7b\u3001\u6587\u6863\u6a21\u677f\u3001\u8d21\u732e\u6fc0\u52b1\u4e0e\u65b0\u9c9c\u5ea6\u7ef4\u62a4\uff0c\u52a9\u529b\u5c06\u9690\u6027\u7ecf\u9a8c\u8f6c\u5316\u4e3a\u7ed3\u6784\u5316\u77e5\u8bc6\u8d44\u4ea7\u3002"
+        },
+        {
+          "name": "Uplo Knowledge Management",
+          "identifier": "uplo-knowledge-management",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "AI-powered knowledge management intelligence. Search taxonomies, content curation records, expertise directories, and communities of practice with structured..."
+        },
+        {
+          "name": "AI Knowledge Companion",
+          "identifier": "shutong-en",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "English knowledge management companion for Obsidian"
+        },
+        {
+          "name": "Agente Conhecimento",
+          "identifier": "agente-conhecimento",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Logs and organizes learnings, errors, and feature requests for continuous improvement, integrating with OpenClaw workspace for knowledge management."
+        },
+        {
+          "name": "Ai Workforce",
+          "identifier": "ai-workforce",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Turn an OpenClaw agent into an autonomous AI Chief that runs a business. Provides trust-based autonomy, structured knowledge management (bank/), worker deleg..."
+        }
+      ]
+    },
+    {
+      "query": "nutrition",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "fitness-nutrition",
+          "identifier": "official/health/fitness-nutrition",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Workout planning, macros, and body metrics via wger/USDA."
+        },
+        {
+          "name": "search-recipes",
+          "identifier": "browse-sh/allrecipes.com/search-recipes-p29w5t",
+          "source": "browse-sh",
+          "trust_level": "community",
+          "description": "Search Allrecipes for recipes (keyword, ingredient list, category browse, or direct recipe URL) and return structured JSON with ratings, ingredients, instructions, nutrition, times, and full media \u2014 by parsing the SSR HTML search cards and each recipe page's schema.org LD+JSON Recipe block."
+        },
+        {
+          "name": "recipe-discovery-generator",
+          "identifier": "browse-sh/recipebee.app/recipe-discovery-generator-cdqfi0",
+          "source": "browse-sh",
+          "trust_level": "community",
+          "description": "Discover and extract structured recipes from recipebee.app \u2014 by direct URL, natural-language query mapped to tag/category enums, or bulk sitemap mirror. Returns full schema.org/Recipe JSON-LD: ingredients, numbered steps, prep/cook times, yield, cuisine, keywords, nutrition. Read-only; AI meal-plan and shopping-list features require login and are out of scope."
+        },
+        {
+          "name": "Nutrition",
+          "identifier": "nutrition",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Closes micronutrient gaps and raises diet quality: vitamins, minerals, fiber, supplements, and food-drug interactions. Use when the user asks if they get enough iron, B12, vitamin D, magnesium, calcium, zinc, folate, iodine, potassium, or omega-3, reports fatigue, hair loss, cramps, tingling, or mouth sores, brings blood work to read (ferritin, 25-OH D, homocysteine), builds or prunes a supplement stack with doses, forms, and upper limits, checks a food or supplement against a medication, needs the gaps of a vegan, vegetarian, keto, gluten-free, low-FODMAP, DASH, or Mediterranean diet, eats for pregnancy, older age, celiac, IBD, kidney disease, or bariatric surgery, wants more fiber or less ultra-processed food and sodium, or reads a label's %DV, NRV, or ingredients. Not for calorie and macro counting (`calories`, `dietitian`), meal plans and recipes (`meal-planner`, `meals`), food logging or eating habits (`food`, `nutritionist`), hydration (`water`), or fasting windows (`fasting`)."
+        },
+        {
+          "name": "nutritional-specialist",
+          "identifier": "skills-sh/ailabs-393/ai-labs-claude-skills/nutritional-specialist",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Indexed by skills.sh from ailabs-393/ai-labs-claude-skills"
+        },
+        {
+          "name": "Nutrition  Logger Pro",
+          "identifier": "nutrition-logger-pro",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "\u8bb0\u5f55\u996e\u98df\u3001\u9910\u6b21\u3001\u70ed\u91cf\u3001\u86cb\u767d\u8d28\u3001\u78b3\u6c34\u3001\u8102\u80aa\u548c\u8425\u517b\u6807\u7b7e\u6570\u636e\uff1b\u7528\u4e8e\u7528\u6237\u8bf4\u201c\u6211\u5403\u4e86\u201d\u201c\u8bb0\u5f55\u201d\u201c\u65e9\u9910\u201d\u201c\u5348\u9910\u201d\u201c\u665a\u9910\u201d\u201c\u52a0\u9910\u201d\u201c\u4eca\u65e5\u6c47\u603b\u201d\u201c\u672c\u5468\u603b\u7ed3\u201d\u201c\u64a4\u9500\u4e0a\u4e00\u6761\u201d\u201c\u6539\u6210/\u4fee\u6539/\u4e0d\u662f...\u662f...\u201d\u7b49\u996e\u98df\u65e5\u5fd7\u3001\u8425\u517b\u4f30\u7b97\u3001\u6bcf\u65e5/\u6bcf\u5468\u6c47\u603b\u548c\u4fee\u6b63\u8bf7\u6c42\u3002"
+        }
+      ]
+    },
+    {
+      "query": "wearable",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "AI Product-on-Model Locale Studio",
+          "identifier": "product-on-model-locale-studio",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Create AI product-on-model images and clothing try-on presentations from apparel and wearable-accessory product photos for localized ecommerce campaigns. Plan one fashion-model visual per market with market-specific casting, styling, pose, and shopping scene, then prepare product-on-model photography for fashion listings, apparel ads, Shopify storefronts, Amazon Fashion pages, and social commerce launches."
+        },
+        {
+          "name": "Aavegotchi Traits",
+          "identifier": "aavegotchi-traits",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Retrieve Aavegotchi NFT data by gotchi ID or name on Base. Returns traits, wearables, rarity scores, kinship, XP, level, and owner data."
+        },
+        {
+          "name": "China Consumer Electronics Factory",
+          "identifier": "china-consumer-electronics-factory",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive consumer electronics industry factory guide for international buyers \u2013 provides detailed information about China's smartphone, wearable, audio,..."
+        },
+        {
+          "name": "China Consumer Electronics Sourcing",
+          "identifier": "china-consumer-electronics-sourcing",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive consumer electronics industry sourcing guide for international buyers \u2013 provides detailed information about China's smartphone, wearable, audio..."
+        },
+        {
+          "name": "China Consumer Electronics Suppliers",
+          "identifier": "china-consumer-electronics-suppliers",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Comprehensive consumer electronics industry suppliers guide for international buyers \u2013 provides detailed information about China's smartphone, wearable, audi..."
+        },
+        {
+          "name": "ClawHealth Data Skill",
+          "identifier": "clawhealth-data-skill",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "ClawHealth is an agent-native precision health service that connects wearable data, nutrition, goals, readiness, reports, anomaly context, and temporary visu..."
+        }
+      ]
+    },
+    {
+      "query": "test driven development",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "Test Driven Development",
+          "identifier": "tdd-ecc",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Test-driven development with red-green-refactor loop and de-sloppify pattern. Use when user wants to build features or fix bugs using TDD, mentions \"red-gree..."
+        }
+      ]
+    },
+    {
+      "query": "documentation",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "simple-english",
+          "identifier": "official/creative/simple-english",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Rewrite text to ASD-STE100 Simplified Technical English."
+        },
+        {
+          "name": "system-atlas",
+          "identifier": "official/creative/system-atlas",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Build explorable isometric architecture atlases as HTML."
+        },
+        {
+          "name": "code-wiki",
+          "identifier": "official/software-development/code-wiki",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Generate wiki docs + Mermaid diagrams for any codebase."
+        },
+        {
+          "name": "search-documentation",
+          "identifier": "browse-sh/algolia.com/search-documentation-kd312d",
+          "source": "browse-sh",
+          "trust_level": "community",
+          "description": "Search algolia.com/doc for documentation pages matching a free-text query and return ranked hits with section hierarchy, snippets, and direct anchor URLs \u2014 via the public hosted DocSearch API, with a per-page markdown fallback."
+        },
+        {
+          "name": "lookup-scout-docs",
+          "identifier": "browse-sh/docs.scoutos.com/lookup-scout-docs-ee1wgb",
+          "source": "browse-sh",
+          "trust_level": "community",
+          "description": "Given a free-text query about a Scout platform feature, concept, integration, or API/SDK reference, locate the relevant page on docs.scoutos.com and return structured JSON with title, breadcrumb, headings, prose, code blocks, tables, On-This-Page anchors, last-updated, canonical URL, and related pages."
+        },
+        {
+          "name": "write-prompt-guide",
+          "identifier": "browse-sh/platform.claude.com/write-prompt-guide-0j5xu3",
+          "source": "browse-sh",
+          "trust_level": "community",
+          "description": "A distilled, model-aware checklist for writing high-quality prompts for Claude's latest models, built from Anthropic's prompt-engineering overview and best-practices docs (LaTeX guidance excluded)."
+        }
+      ]
+    }
+  ],
+  "rejected": {
+    "github": "Existing role-owned GitHub workflows suffice; current bundled helper reads credential stores, so do not import it.",
+    "jupyter-notebook": "Reject unauthenticated server/XSRF-disable guidance and non-profile helper checkout; native execute_code already preserves state.",
+    "impeccable": "Reject catalog-only stub and floating first-run executable downloads; use reviewed design-md and existing design workflows.",
+    "memento-flashcards": "Reject persistence inside skill code tree and global-profile paths; existing teaching/retention workflows suffice.",
+    "godot-3d-essentials": "Inspected public Apache-2.0 source at 19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9; targets Godot 4.7 and overlaps existing scene/level skills. Keep version-specific official engine documentation through native web lookup.",
+    "hyperframes": "Reject global npm setup/floating binaries as a portable default; retain existing video-edit/export workflows.",
+    "fitness-nutrition": "Broad coach persona and body metrics overlap current Council skills; retain evidence-first coaching rather than add redundant authority.",
+    "community-security-best-practices": "Role-owned security skills and native Hermes security scans already cover general review; no additional overriding language policy.",
+    "generic-personal-domain-skills": "Retain existing narrow coaching skills rather than import competing personas, regulated advice or third-party storage.",
+    "autonomous-orchestration-plugins": "Native delegation/cron/kanban already exist; no new control plane or unsolicited automation."
+  }
+}

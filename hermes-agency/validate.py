@@ -287,10 +287,19 @@ def validate(root: Path) -> tuple[list[str], dict[str, int]]:
 
         skills_dir = profile_dir / "skills"
         actual_skills: list[str] = []
+        identity_trees: dict[str, dict[str, bytes]] = {}
         if not skills_dir.is_dir():
             errors.append(f"missing skills directory: {skills_dir}")
         else:
-            for skill_dir in sorted(path for path in skills_dir.iterdir() if path.is_dir()):
+            skill_dirs = [path for path in skills_dir.iterdir() if path.is_dir()]
+            # Hermes supports category containers. Supplemental roots have the
+            # same identity/procedure checks as every original role-owned skill.
+            for category_name in ("capabilities", "software-development", "research", "productivity", "creative", "autonomous-ai-agents", "web"):
+                category = skills_dir / category_name
+                if category.is_dir():
+                    skill_dirs.remove(category)
+                    skill_dirs.extend(path for path in category.iterdir() if path.is_dir())
+            for skill_dir in sorted(skill_dirs):
                 skill_name = skill_dir.name
                 if not SKILL_RE.fullmatch(skill_name):
                     errors.append(f"invalid skill directory name: {skill_dir}")
@@ -303,6 +312,15 @@ def validate(root: Path) -> tuple[list[str], dict[str, int]]:
                     errors.append(
                         f"skill identity mismatch in {skill_file}: frontmatter={declared_name!r}, directory={skill_name!r}"
                     )
+                tree = {str(path.relative_to(skill_dir)): path.read_bytes()
+                        for path in skill_dir.rglob("*")
+                        if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"}
+                # Native Hermes deduplicates identical same-root copies. Exact
+                # seeding shadows preserve existing authored skill identities;
+                # different-content collisions still fail below.
+                if skill_name in identity_trees and identity_trees[skill_name] == tree:
+                    continue
+                identity_trees[skill_name] = tree
                 source_file = skill_dir / "SOURCE.md"
                 if source_file.exists():
                     sourced_skill_count += 1

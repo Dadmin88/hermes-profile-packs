@@ -1,0 +1,62 @@
+{
+  "profile": "academy-history-professor",
+  "role": "Teaches historical context, chronology, causation, source analysis, historiography, and evidence-based interpretation.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [
+    {
+      "name": "wiki-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "0154f6bfaafc837cc4af78742e6db7c087d5b5a7",
+      "subdir": "wiki-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/wiki-ref",
+      "source_files": {
+        "README.md": "ec2a90a09318c0688ca42e506cdc6b5f7e5a5c4d3d9c0e56993c500676b974aa",
+        "__init__.py": "68a23fea849abaffa818aa921840f8ccec0ed9e1668b81f99b5f0faeb7cf6464",
+        "plugin.yaml": "9ac3dce1cea2b88e5543e0fa3f8a78ee8d8f9c5e1a3fa8cef9bf107fc327eac3"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "Article title AND typed autocomplete prefix leave the machine, along with client IP and User-Agent. Section names are matched locally. Do not type sensitive text after @wiki: even before submitting.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Optional secondary-source orientation and references; corroborate consequential claims with primary sources. Autocomplete text is disclosed, so never type private context.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "academy-history-professor",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/wiki-ref",
+        "--ref",
+        "0154f6bfaafc837cc4af78742e6db7c087d5b5a7",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [],
+  "seed_shadows": []
+}

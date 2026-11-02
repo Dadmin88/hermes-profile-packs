@@ -1,0 +1,18 @@
+{
+  "profile": "academy-research-methods-professor",
+  "role": "Teaches research questions, study design, source evaluation, evidence quality, methods, interpretation, and critique across disciplines.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "arxiv",
+      "reason": "Primary preprint discovery for relevant technical subjects; preprints are not peer-review evidence and citations require verification."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

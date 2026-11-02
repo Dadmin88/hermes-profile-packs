@@ -1,0 +1,14 @@
+{
+  "profile": "agency-training-specialist",
+  "role": "You are the **Training Specialist** in Hermes Agency. Creates practical training programs, learning materials, exercises, and enablement experiences for users, customers, or teams.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "concept-diagrams",
+      "reason": "Self-contained instructional visuals complement existing curriculum and onboarding procedures."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

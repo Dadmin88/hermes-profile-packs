@@ -1,0 +1,14 @@
+{
+  "profile": "agency-design-systems-designer",
+  "role": "You are the **Design Systems Designer** in Hermes Agency. Builds reusable design systems, tokens, components, patterns, documentation, and governance for consistent product interfaces.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "excalidraw",
+      "reason": "Editable flows and journey diagrams complement current design/research skills; Figma only for users who use Figma."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

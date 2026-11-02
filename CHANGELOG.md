@@ -6,6 +6,9 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Completed coordinated capability selection across all 166 public distributions: 24 pinned skill trees across 241 targeted assignments, an on-demand guide for every profile, six optional plugin declarations and 13 disabled MCP templates. Included full skill support trees, provenance, licenses, egress/setup disclosures, native seeding compatibility and offline materialization checks; preserved original role-owned source and restrictions.
+- Added complete machine-readable/readable matrices, a source preservation baseline, native install/seeding/discovery/update proof, least-privilege MCP allowlists, explicit credential/upload/billing gates and documented unsupported-candidate exclusions. Ordinary profile installation activates no external integration.
+
 - Added Hermes Wear device-awareness protocol, three on-demand device interpretation skills, and synthetic contract fixtures. Live watch/device tool integration remains separate and is not claimed complete.
 
 - Expanded standalone `hermes-wear` to v1.1.0 with ten wrist-specific skills, voice transcript repair, quick capture, time/reminder safeguards, integration-backed confirmation, background run/reconnect recovery, private memory rules, watch safety, and explicit skills/read-only web toolsets while preserving the restricted execution boundary.

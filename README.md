@@ -26,6 +26,12 @@ The flow requires a Hermes build that supports `goal_manage`, profile-distributi
 
 See the [`Continuing Education guide`](docs/CONTINUING_EDUCATION.md) and [`architecture contract`](docs/CONTINUING_EDUCATION_ARCHITECTURE.md).
 
+## Role-specific capability upgrade
+
+Every profile, including standalone Wear, now has an on-demand capability guide. The release includes 24 reviewed skill trees with full supporting files, six role-selected plugin opt-ins, and 13 disabled MCP integration templates. Existing role-owned jobs, tool restrictions, bundled-skill opt-outs and user-controlled activation remain intact.
+
+See the [complete profile matrix](docs/CAPABILITY_MATRIX.md), [capability guide and privacy/setup rules](docs/CAPABILITIES.md), and [verified results and limitations](docs/CAPABILITY_VALIDATION.md). Normal profile installation never downloads/enables plugins, authenticates accounts or starts remote integrations.
+
 ## Start small with Team Recipes
 
 You rarely need all 165 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.

@@ -1,0 +1,9 @@
+{
+  "profile": "council-steward",
+  "role": "Coordinates Council specialists without replacing their expertise or taking control away from the user.",
+  "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.",
+  "skills": [],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

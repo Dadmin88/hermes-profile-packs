@@ -1,0 +1,9 @@
+{
+  "profile": "council-learning-coach",
+  "role": "Turns curiosity or learning goals into practical plans and practice loops that build durable understanding.",
+  "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.",
+  "skills": [],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

@@ -78,6 +78,16 @@ Council profiles have an additional privacy rule: only the minimum personal cont
 
 Academy profiles have an additional teaching rule: adapt instruction to the learner's goal and level, teach reasoning and transferable skill rather than merely dumping answers, distinguish education from professional execution or advice, and verify current standards or facts when material.
 
+## Supplemental capabilities
+
+Role-owned jobs remain the top-level `skills/<job>/SKILL.md` API. Additional
+reviewed capabilities may use native category directories. `capabilities/profiles.json`
+owns their exact per-profile selection; `capabilities/skills.lock.json` pins the
+complete source/support trees and installation paths. `capabilities.py --check`
+must pass before release; materialization is an offline source-packaging operation,
+not a runtime installer. Never activate plugins, MCPs, accounts, downloads or jobs
+from a normal pack install. See `docs/CAPABILITIES.md`.
+
 ## Versioning
 
 Profile and pack versions use semantic versioning.

@@ -1,0 +1,62 @@
+{
+  "profile": "agency-data-scientist",
+  "role": "You are the **Data Scientist** in Hermes Agency. Uses statistical analysis, experiment design, forecasting, causal reasoning, and predictive modeling to answer product and business questions with reproducible quantitative evidence.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "microsoft-office",
+      "reason": "Auditable spreadsheet/document deliverables; execution libraries are optional prerequisites, not auto-installed dependencies."
+    }
+  ],
+  "plugins": [
+    {
+      "name": "pep-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "20c7a0e1f56d6fea9761077f6994ab7b3d174b99",
+      "subdir": "pep-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/pep-ref",
+      "source_files": {
+        "README.md": "d235f002c82870cce201fcfd1caa841c7757a1a121bb5fccbc97403b622df16a",
+        "__init__.py": "c44cc082a4d308836f5b61bd8505708a7c76e689da35e98c0c6c57c6876529f1",
+        "plugin.yaml": "36290fc2096cb6507f3a99e18e57382f1513a37e17bef169469f1b39a535bd5e"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "PEP index and requested PEP page are fetched; client IP and plugin User-Agent leave the machine. Autocomplete and section matching run locally; the typed search prefix and section name are not sent.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Optional Python standards references; public PEP numbers, not project code, are transmitted.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-data-scientist",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/pep-ref",
+        "--ref",
+        "20c7a0e1f56d6fea9761077f6994ab7b3d174b99",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [],
+  "seed_shadows": []
+}
