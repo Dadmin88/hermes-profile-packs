@@ -1,0 +1,13 @@
+{
+  "schema": "hermes-wear.tool-result.v1",
+  "synthetic": true,
+  "request_id": "synthetic-location-002",
+  "tool": "watch.location.current",
+  "status": "permission_required",
+  "source": "watch",
+  "observed_at": "2026-01-01T00:00:00Z",
+  "error": {
+    "code": "location_permission_required",
+    "message": "Grant location permission in the watch app."
+  }
+}

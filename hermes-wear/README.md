@@ -1,15 +1,54 @@
 # Hermes Wear
 
-Standalone, portable Hermes profile distribution for a Wear OS wrist assistant. This distribution is separate from the Agency, Council, and Academy team catalogs.
+Portable **Wear OS wrist assistant** profile, independent of Hermes Agency, Council, Academy, any particular owner, and any single watch application. Designed for a Galaxy Watch6-class device, but with no device ID or personal configuration bundled.
 
-From this repository checkout:
+## Installation
+From a checkout of this repository:
 
 ```sh
 hermes profile install ./hermes-wear --name hermes-wear
 ```
 
-Use a fresh profile or review an existing profile before updating it. Select a model and authenticate its provider independently through the installed Hermes version's native commands. No provider, deployment address, private preferences, or server-specific configuration is included.
+Review changes before updating an existing installed profile. Hermes generally **preserves a locally customized `config.yaml` on profile update**, so the new `skills` and `web` toolset settings might not apply automatically. Compare the installed configuration before enabling those toolsets; do not overwrite its working provider/model or credentials just to apply this template. Select and authenticate a model through the installed Hermes release. No provider, endpoint, API credential, personal history, pairing state, log or database is distributed. Installing this source **does not** change the running watch instance until its backend is configured/updated to use it.
 
-Only identity, reusable behavior, minimal tool configuration, and one interaction skill are distributed. Personal data, memories, history, authentication material, databases, logs, pairing state, and device credentials are excluded. Publishing this template does not modify the running device profile.
+## What it contains
 
-The watch application, relay, background execution, notifications, speech, and structured approvals require separately configured integrations. This template does not claim those capabilities are installed. Configured tool limits should be combined with a restricted runtime user and filesystem boundary. An operator must enforce consequential-action authorization outside the prompt.
+| Skill | Function |
+| --- | --- |
+| `wrist-interactions` | Route watch requests to the right workflow |
+| `glanceable-answers` | Short, accurate, spoken-friendly answers |
+| `voice-transcript-repair` | Recognize risky speech ambiguity and language mistakes |
+| `quick-capture` | Capture notes, ideas and tasks with truthful save status |
+| `reminders-and-time` | Interpret times and conditionally schedule alerts |
+| `action-confirmations` | Verify parameters, permissions and external outcomes |
+| `background-task-tracking` | Check running jobs and approval states |
+| `reconnection-recovery` | Recover from stalls, disconnects and voice failures |
+| `wear-memory-privacy` | Keep memory minimal, private and isolated |
+| `watch-context-safety` | Public speech, limited attention and urgent situations |
+
+## Device awareness (integration planned)
+
+Additional specialized skills: `watch-capability-discovery`, `watch-device-context`, and `watch-tool-results`. The [versioned device-awareness contract](DEVICE_AWARENESS.md) defines how Hermes will discover watch/phone capabilities, request location/battery/network readings and interpret actual tool responses. It includes synthetic JSON examples and permission/freshness rules. **No watch-location permission, live bridge or extra Hermes device tools are installed by this source change.**
+
+The distributed toolsets are memory, session search, skills and read-oriented web lookup (only when supported/configured). The older profile shipped skills but **disabled its skills toolset**. Version 1.1.0 allows native skills lookup, while keeping terminal, file, browser, code execution, delegation, cron, computer-use, image generation and server-side TTS disabled. The skills toolset may expose native skill management; enforce normal Hermes write approvals and an OS-level restricted runtime identity.
+
+**Capability ≠ instruction.** Watch notifications, timers, GPS, calls, texting, sensors, microphone/STT, audio playback, persistent backend runs, and structured approvals require separate integrations. This profile does not pretend they exist. Consequential actions additionally require actual backend permission enforcement.
+
+## Watch acceptance tests
+1. Confirm the watch backend actually selects the independent `hermes-wear` profile.
+2. List skills/toolsets from the authenticated backend; check the expected ten skills are available.
+3. Ask a fast fact, a long explanation, and an ambiguous dictated command.
+4. Request a note and a reminder with no destination integration: it must explicitly disclose that nothing was saved/scheduled.
+5. When narrow action integrations exist, verify confirmed/denied/expired approval and exact targeting.
+6. Disconnect or time out during a job and reconnect: original status should be checked before any retry.
+7. Verify text completion independently of actual audible output on the watch.
+8. Verify private profile memory and no cross-profile information leak.
+
+Repo checks:
+
+```sh
+python validate.py
+python -m unittest discover -s tests -p 'test_*.py'
+```
+
+The profile source alone cannot certify the installed watch app, backend, voice model, scheduler or notification path.
