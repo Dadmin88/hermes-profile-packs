@@ -4,6 +4,13 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ## Unreleased
 
+### Profile quality
+
+- Clarified Council interaction modes so listening and direct answers can complete a conversation without mandatory files, actions or ending questions. Corrected assumed user biography, stale collaborator references and malformed SOUL Markdown.
+- Made Council handoffs and optional continuity conditional on available, authorized native capabilities and minimum necessary personal context.
+- Added domain-specific Academy human teaching kits, with diagnostics, differentiated misconceptions, worked reasoning, graduated hints and changed transfer tasks linked from existing skills. Preserved the separate Continuing Education contract.
+- Added profile/skill review coverage, synthetic behavioral cases, a source-to-catalog mapping and explicit acceptance records. Live verification status is documented separately from source content changes.
+
 ### Added
 
 - Completed coordinated capability selection across all 166 public distributions: 24 pinned skill trees across 241 targeted assignments, an on-demand guide for every profile, six optional plugin declarations and 13 disabled MCP templates. Included full skill support trees, provenance, licenses, egress/setup disclosures, native seeding compatibility and offline materialization checks; preserved original role-owned source and restrictions.

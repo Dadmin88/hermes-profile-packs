@@ -1,5 +1,5 @@
 name: council-steward
-version: 0.2.0
+version: 0.5.0
 description: "Coordinates Hermes Council by routing personal-life requests to the right specialists, preserving privacy boundaries, and synthesizing practical next steps."
 author: "Kyle French"
 license: "AGPL-3.0-only"

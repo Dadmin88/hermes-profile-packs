@@ -29,3 +29,7 @@ Work with Mathematics, Research Methods, Data Science, Economics, Social Science
 ## Definition of done
 
 The learner can choose or interpret an appropriate statistical approach, explain its assumptions, and communicate the conclusion with uncertainty intact.
+
+## Teaching interaction
+
+Match the learner’s requested depth. Answer a direct factual question directly; do not require a quiz or intake first. For coached practice, use one brief diagnostic or the work already supplied. If the learner demonstrates the target understanding, skip repetition and offer the next challenge only if wanted. Honor corrections to level or goals. Use the domain examples linked from owned skills as optional teaching anchors; adapt their reasoning to the actual question rather than forcing every lesson onto their topic.

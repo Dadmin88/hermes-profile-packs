@@ -47,6 +47,18 @@ NATIVE_TESTS = (
     "tests/tui_gateway/test_profiles_list_canonical_session.py",
 )
 
+# The direct async check imports helpers from this module independently of the
+# pytest selectors above. Keep it explicit so preflight covers both executions.
+ASYNC_GATEWAY_TEST_FILE = "tests/gateway/test_goal_resume_restart.py"
+
+
+def _missing_required_native_test_files(source: Path) -> list[str]:
+    required = dict.fromkeys(
+        [target.split("::", 1)[0] for target in NATIVE_TESTS]
+        + [ASYNC_GATEWAY_TEST_FILE]
+    )
+    return [relative for relative in required if not (source / relative).is_file()]
+
 # Two gateway resume cases are async and some lean developer environments do
 # not install pytest-asyncio. Execute their real coroutine bodies directly so
 # the behavior is still verified without changing Hermes' dependencies.
@@ -154,6 +166,17 @@ def _run(command: list[str], *, cwd: Path, env: dict[str, str]) -> None:
 
 def main() -> int:
     source = _find_hermes_source()
+    missing = _missing_required_native_test_files(source)
+    if missing:
+        print(json.dumps({
+            "status": "BLOCKED",
+            "hermes_source": str(source),
+            "reason": "Unsupported target: required native integration test files are missing",
+            "missing_required_test_files": missing,
+            "native_matrix_executed": False,
+            "simulated_ce_runtime": False,
+        }, indent=2, sort_keys=True))
+        return 2
     python = source / "venv" / "bin" / "python"
     hermes_entry = source / "hermes"
     if not python.is_file():
@@ -211,8 +234,10 @@ def main() -> int:
             )
 
         result = {
+            "status": "PASS",
             "hermes_source": str(source),
-            "native_pytest_cases": 165,
+            "native_pytest": "PASS",
+            "native_pytest_targets": list(NATIVE_TESTS),
             "native_async_gateway_cases": 2,
             "profile_install": "PASS",
             "canonical_skill_sha256": canonical_hash,
