@@ -1,0 +1,114 @@
+{
+  "profile": "agency-privacy-engineer",
+  "role": "You are the **Privacy Engineer** in Hermes Agency. Implements privacy-by-design controls for data inventory, minimization, consent, purpose limitation, retention, deletion, access, and privacy risk in product and system architecture.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    }
+  ],
+  "plugins": [
+    {
+      "name": "osv-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "43ab2b75e660db5edcfe2f215776294c45408b40",
+      "subdir": "osv-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/osv-ref",
+      "source_files": {
+        "README.md": "ba7f4f460b04f964bada9b4c65e32837885eb6124575a91bc8a4193a5e9ed118",
+        "__init__.py": "95ca7dab21b7b0b0ddafa6b79b5b3cda68f9af27e7e07ec412329f6b46f99839",
+        "plugin.yaml": "b5629418608789552a426c9d8b511db12189501932a79c786db7f9806b6e5e6f"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "The vulnerability ID and up to four alias IDs, client IP and plugin User-Agent leave the machine. This retrieves advisory records; it does not inspect installed packages or establish exploitability.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "OSV references complement advisory investigation; Snyk requires separate code-upload consent and authentication.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-privacy-engineer",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/osv-ref",
+        "--ref",
+        "43ab2b75e660db5edcfe2f215776294c45408b40",
+        "--no-enable",
+        "--no-deps"
+      ]
+    },
+    {
+      "name": "snyk",
+      "repository": "https://github.com/NousResearch/hermes-official-plugins",
+      "commit": "abec9e822a23089943dd1d476a104bf746f19f86",
+      "subdir": "snyk",
+      "identifier": "https://github.com/NousResearch/hermes-official-plugins/snyk",
+      "source_files": {
+        ".gitignore": "9addeec56619685bab330ff2184db9f205a1b4628f551ededcb97800b269ca3e",
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "README.md": "c2c14b013bdf8c00e278bd40ec757cbbaa063eda6b9c194a2692c36b28776b07",
+        "mcp.json": "c3718e7fe25a8174eb777e2a6ccf4d175b025307ce8fc3af4831dffcc3f013c3",
+        "plugin.json": "d4305d9ecee77b0ef406f61043b524ca06366ebd3ecf1756bda0c34ab76d49e8",
+        "skills/snyk-security-scan/SKILL.md": "3ac19dd90499cd8a5611ffa802439337693f0b7e6fa6f18bd4d72057d5ab2384",
+        "skills/snyk-security-scan/references/tools.md": "3d526cf6e6442dd681d300601b41f9684a916a636c3bb25fb8ceeca686d43b47"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes portable plugin support and native MCP dependencies",
+        "Node.js/npm/npx and first-start network access",
+        "Snyk account; browser login via snyk_auth, not Hermes vault or API key copy",
+        "Project package manager for SCA; relevant image/IaC/SBOM artifacts; account feature/test quotas"
+      ],
+      "privacy": {
+        "data_sent": "SAST uploads source; SCA uploads dependency graph; scans and package intelligence contact Snyk cloud. Private/client code and dependency disclosure require explicit consent per target.",
+        "credentials": "Snyk CLI stores its own token/config outside Hermes; cross-profile credential/state isolation is not established. No account was connected.",
+        "telemetry": "Pinned wrapper disables CLI analytics via flag and SNYK_DISABLE_ANALYTICS=1, but still exposes snyk_send_feedback; the skill-only opt-in is not technical removal.",
+        "trust": "The raw pinned portable package has no Hermes trust:untrusted extension; do not treat it as sandboxed."
+      },
+      "warnings": [
+        "Never enable automatically as part of a broad plugin pack or profile install.",
+        "Pinned README/SKILL use obsolete long hashed tool prefixes; current Hermes uses mcp__<server>__<tool>. Discover tools rather than copying those names.",
+        "Wrapper, not the Snyk CLI/dependencies/cloud, was reviewed in full. No scanner readiness or license review of downloaded CLI dependency tree is claimed."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "OSV references complement advisory investigation; Snyk requires separate code-upload consent and authentication.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-privacy-engineer",
+        "plugins",
+        "install",
+        "https://github.com/NousResearch/hermes-official-plugins/snyk",
+        "--ref",
+        "abec9e822a23089943dd1d476a104bf746f19f86",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [],
+  "seed_shadows": []
+}

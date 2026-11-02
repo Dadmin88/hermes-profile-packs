@@ -1,0 +1,65 @@
+{
+  "profile": "academy-engineering-professor",
+  "role": "Teaches engineering analysis, design thinking, modeling, tradeoffs, and foundational principles across major engineering disciplines.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "concept-diagrams",
+      "reason": "Dependency-free SVG/HTML explanations support systems, quantitative and physical reasoning without expanding teaching into professional execution."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "wolfram",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/wolfram/manifest.yaml",
+      "manifest_sha256": "69d103768ecac7dc398e83015ba3c916932b24f0d42569508bcf2e69971c73f5",
+      "source": "https://www.wolfram.com/agent-tools/",
+      "config": {
+        "url": "https://agenttools.wolfram.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "WolframLanguageEvaluator",
+            "WolframAlpha"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for observed cloud endpoint; free per vendor support page; subject to service limits",
+        "Not local Wolfram Desktop; hosted code/results cannot be pinned by this manifest"
+      ],
+      "privacy": "The expression, source code or natural-language query is evaluated on Wolfram infrastructure. Never send private datasets/secrets. Do not obey the vendor WolframContext description asking for automatic conversation context uploads.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Locally strengthened catalog policy: whitelist WolframAlpha and WolframLanguageEvaluator, excluding WolframContext because it requests automatic conversation/context disclosure."
+      ],
+      "required_tool_exclusions": [
+        "WolframContext"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional computational checking: transmit only non-sensitive exercises, show reasoning, and avoid replacing learner practice with answers."
+    }
+  ],
+  "seed_shadows": []
+}

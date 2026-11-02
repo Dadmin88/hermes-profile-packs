@@ -52,6 +52,12 @@ class RuntimeCatalogTests(unittest.TestCase):
                     path.parent.name for path in (profile_dir / "skills").glob("*/SKILL.md")
                 )
                 self.assertEqual(profile["capabilities"], actual_skills)
+                expected_supplemental = sorted(
+                    str(path.parent.relative_to(profile_dir))
+                    for path in (profile_dir / "skills").glob("*/*/SKILL.md")
+                )
+                self.assertEqual(expected_supplemental, profile["supplemental_capabilities"])
+                self.assertIn("skills/capabilities/profile-capabilities", expected_supplemental)
                 self.assertEqual(
                     profile["content_digest"],
                     catalog.profile_content_digest(

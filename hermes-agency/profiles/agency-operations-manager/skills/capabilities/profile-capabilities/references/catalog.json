@@ -1,0 +1,18 @@
+{
+  "profile": "agency-operations-manager",
+  "role": "You are the **Operations Manager** in Hermes Agency. Coordinates recurring operational work, process quality, ownership, service levels, and cross-team execution.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "document-to-action-items",
+      "reason": "Cited obligations and deadlines improve operational follow-through without creating tasks or messages automatically."
+    },
+    {
+      "name": "one-three-one-rule",
+      "reason": "Compact tradeoff briefs help the accountable user decide; no invented model/provider/cost policy."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

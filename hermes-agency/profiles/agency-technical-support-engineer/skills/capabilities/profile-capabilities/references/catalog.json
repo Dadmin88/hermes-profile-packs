@@ -1,0 +1,148 @@
+{
+  "profile": "agency-technical-support-engineer",
+  "role": "You are the **Technical Support Engineer** in Hermes Agency. Diagnoses technically complex customer and operator issues through logs, environments, configuration, networking, reproduction, and engineering-quality escalation evidence.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "rest-graphql-debug",
+      "reason": "Focused REST/GraphQL reproduction, request/response inspection, and auth/schema diagnostics."
+    },
+    {
+      "name": "systematic-debugging",
+      "reason": "Reproduction-first technical diagnosis complements the existing specialist workflows."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "context7",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/context7/manifest.yaml",
+      "manifest_sha256": "b40a67ea1679ff5d932cfec2568c453baae4343183acaf2b80ffa4685b26888f",
+      "source": "https://context7.com/docs/resources/all-clients",
+      "config": {
+        "url": "https://mcp.context7.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "resolve-library-id",
+            "query-docs"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for catalog /mcp endpoint, confirmed anonymous discovery",
+        "Anonymous rate limits; optional higher limits use a user-owned API key; /mcp/oauth is a distinct optional OAuth URL, not silently substituted."
+      ],
+      "privacy": "Library identifiers, versions, natural-language queries and any pasted code sent as tool arguments go to Context7/Upstash; avoid private code and secrets.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Reproduction-first technical diagnosis complements the existing specialist workflows."
+    },
+    {
+      "name": "grafana",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/grafana/manifest.yaml",
+      "manifest_sha256": "8658ac97af107d76994330f298d0ae2d87b35caa9c16837100aa0de6f6a7710c",
+      "source": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/",
+      "config": {
+        "url": "https://mcp.grafana.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Hosted Grafana Cloud stack and suitable RBAC/Assistant MCP role",
+        "OAuth; choose Read access only initially (clear both Query and Write to prohibit raw SQL and writes)",
+        "Each connecting MCP user counts as an active Grafana Assistant user for billing; explicit cost consent"
+      ],
+      "privacy": "Cloud dashboards, raw queries/logs/metrics can reveal infrastructure, customer data and credentials to the model. This is hosted Grafana Cloud, not self-hosted OSS.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Catalog excludes ask_assistant and agento11y_*; maintain exclusion even if switching from initially empty include to selected exact names. Connecting itself may incur active-user billing, before any tool use."
+      ],
+      "required_tool_exclusions": [
+        "ask_assistant",
+        "agento11y_*"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Only connect to the user-selected telemetry system with scoped authorization; preserve self-hosted alternatives and billing disclosure."
+    },
+    {
+      "name": "sentry",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/sentry/manifest.yaml",
+      "manifest_sha256": "f8c20053a1472cfd3d5e98e0ffeae9ef43ca5b258ce555bc016624f13a8b3cf6",
+      "source": "https://docs.sentry.io/product/sentry-mcp/",
+      "config": {
+        "url": "https://mcp.sentry.dev/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Sentry account/org access and OAuth approval; provider quotas/features"
+      ],
+      "privacy": "Issue data, stack traces, request context and possible PII/secrets flow from Sentry into Hermes/model provider. Account scope must be minimized and data redacted.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Only connect to the user-selected telemetry system with scoped authorization; preserve self-hosted alternatives and billing disclosure."
+    }
+  ],
+  "seed_shadows": []
+}

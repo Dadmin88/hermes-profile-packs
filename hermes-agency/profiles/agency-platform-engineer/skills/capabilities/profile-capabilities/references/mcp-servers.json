@@ -1,0 +1,70 @@
+{
+  "mcp_servers": {
+    "aws-knowledge": {
+      "url": "https://knowledge-mcp.global.api.aws",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "aws___read_documentation",
+          "aws___search_documentation",
+          "aws___list_regions",
+          "aws___get_regional_availability"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "resolve-library-id",
+          "query-docs"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    },
+    "microsoft-learn": {
+      "url": "https://learn.microsoft.com/api/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "microsoft_docs_search",
+          "microsoft_code_sample_search",
+          "microsoft_docs_fetch"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

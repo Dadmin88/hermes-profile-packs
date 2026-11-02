@@ -1,0 +1,66 @@
+{
+  "profile": "agency-integration-engineer",
+  "role": "You are the **Integration Engineer** in Hermes Agency. Builds and maintains integrations between APIs, services, protocols, platforms, and external systems.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "rest-graphql-debug",
+      "reason": "Focused REST/GraphQL reproduction, request/response inspection, and auth/schema diagnostics."
+    },
+    {
+      "name": "systematic-debugging",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "test-driven-development",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "context7",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/context7/manifest.yaml",
+      "manifest_sha256": "b40a67ea1679ff5d932cfec2568c453baae4343183acaf2b80ffa4685b26888f",
+      "source": "https://context7.com/docs/resources/all-clients",
+      "config": {
+        "url": "https://mcp.context7.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "resolve-library-id",
+            "query-docs"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for catalog /mcp endpoint, confirmed anonymous discovery",
+        "Anonymous rate limits; optional higher limits use a user-owned API key; /mcp/oauth is a distinct optional OAuth URL, not silently substituted."
+      ],
+      "privacy": "Library identifiers, versions, natural-language queries and any pasted code sent as tool arguments go to Context7/Upstash; avoid private code and secrets.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    }
+  ],
+  "seed_shadows": []
+}

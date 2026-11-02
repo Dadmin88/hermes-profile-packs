@@ -1,0 +1,18 @@
+{
+  "profile": "agency-product-strategist",
+  "role": "You are the **Product Strategist** in Hermes Agency. Develops product direction, portfolio choices, opportunity framing, differentiation, and longer-horizon product strategy.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Verify consequential product, commercial, campaign and policy claims against retrievable evidence rather than assert unsupported numbers."
+    },
+    {
+      "name": "one-three-one-rule",
+      "reason": "Compact tradeoff briefs help the accountable user decide; no invented model/provider/cost policy."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

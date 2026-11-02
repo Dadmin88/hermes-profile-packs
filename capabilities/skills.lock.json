@@ -1,0 +1,788 @@
+{
+  "schema_version": 1,
+  "skills": {
+    "systematic-debugging": {
+      "name": "systematic-debugging",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/software-development/systematic-debugging",
+      "version": "1.1.0",
+      "license": "MIT",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "upstream_files": {
+        "SKILL.md": "bd480f51a2e9969c88544003c30b7539b7df0b7358703f99b0495514c2dd878a"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "691d8de51a61acf88190e8da352573a60a5372248e9cefa2a0e50271b5a28ff7",
+        "SKILL.md": "d2c9f5247baea0ad34e622cbbdfeabb14501b238c62ed18519211019c260e090"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/software-development/systematic-debugging"
+    },
+    "test-driven-development": {
+      "name": "test-driven-development",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/software-development/test-driven-development",
+      "version": "1.1.0",
+      "license": "MIT",
+      "author": "Hermes Agent (adapted from obra/superpowers)",
+      "upstream_files": {
+        "SKILL.md": "649e6ab89bd8aaad2f9b162c60321f227cff8a8cda56393f07a81d1c6825a692"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "498fa2747921e3c9613f067990216db2a5e661d7ff5a98734fc857be6574146c",
+        "SKILL.md": "a014398c670cd5ce98f626aa6d5209429b44ad65bad44359726f22c6d90a3bdd"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/software-development/test-driven-development"
+    },
+    "dogfood": {
+      "name": "dogfood",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/software-development/dogfood",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Teknium (teknium1), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "b0c93d87d160da63ad489743880bdcee634ccb7f5b68c15a668ef80048b37916",
+        "references/issue-taxonomy.md": "b90546fab5b59494ebea35b957ccc1d98bab8eaeaaa3529a142b15ea96df2b31",
+        "templates/dogfood-report-template.md": "6db9127715d3d1482542e48dd2d71fcb25238e614b1e5739ec193fa143962a26"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "64d0ebe600be2e343c0f620a0eaa76d4588ef3286f0cc52c0e1f1369ddd92dc1",
+        "SKILL.md": "7c59754345b52a970005e32f587f8a51acf5a3792b39572474f0687e0fcc31c5",
+        "references/issue-taxonomy.md": "b90546fab5b59494ebea35b957ccc1d98bab8eaeaaa3529a142b15ea96df2b31",
+        "templates/dogfood-report-template.md": "6db9127715d3d1482542e48dd2d71fcb25238e614b1e5739ec193fa143962a26"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/software-development/dogfood"
+    },
+    "arxiv": {
+      "name": "arxiv",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/research/arxiv",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "9b41877bcb64166dc2355a43aedd3198c3e5214af67f09e1d1b717a989d92f72",
+        "scripts/search_arxiv.py": "68f0bcc09ef1f59ecd9be8a7693e47239fd99b19d62cecb80a92b8c476cca371"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "615f3296bde1733d964fd5acff53788b1e42aade3c1356ad1cf3a70240f46054",
+        "SKILL.md": "bbf50ae6ad27ac65df58c32929dc60d8bb059bdf68b1fb4309855d8b06d840fe",
+        "scripts/search_arxiv.py": "3c388081728fa350883a5a8846c8e29d9dee9e0db68fd8268f37b68f4042fd9d"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md.",
+        "scripts/search_arxiv.py": " Trailing whitespace/EOF normalized for source distribution."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/research/arxiv"
+    },
+    "grounded-citations": {
+      "name": "grounded-citations",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/research/grounded-citations",
+      "version": "1.2.0",
+      "license": "MIT",
+      "author": "Hermes Agent + Teknium",
+      "upstream_files": {
+        "SKILL.md": "1e022ba6244fc68825127183d4632263f47d64dc857ea8d65c5e86d605b74f38",
+        "references/citation-formats.md": "0cf381542b4c636cc7e365f9213e41d284d346b14eebe0abea4cfa78e728b1ae",
+        "references/grounding-rationale.md": "2835754857ea05a1c801e88a50d4c2b4cc6ebd52cc4cc1f5741dba05f5af73c1",
+        "scripts/_hermes_home.py": "e2fba7b30ee22afdb21e8411b6a18431da6efc9ec3ef55e2223481bf906f4376",
+        "scripts/sources.py": "0c216e29e092faedcaa1ebae129db15dfc100465169490704b3628446db96788"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "9bcb1146f54401f4e5787e61b50488c57894a89b0fda13d8d1b8ddebf65caa9d",
+        "SKILL.md": "3e79864d2e7cc08eae8db1f8e855bf444270a34a86dba3fca2df17f45051fa60",
+        "references/citation-formats.md": "0cf381542b4c636cc7e365f9213e41d284d346b14eebe0abea4cfa78e728b1ae",
+        "references/grounding-rationale.md": "2835754857ea05a1c801e88a50d4c2b4cc6ebd52cc4cc1f5741dba05f5af73c1",
+        "scripts/_hermes_home.py": "e2fba7b30ee22afdb21e8411b6a18431da6efc9ec3ef55e2223481bf906f4376",
+        "scripts/sources.py": "0c216e29e092faedcaa1ebae129db15dfc100465169490704b3628446db96788"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/research/grounded-citations"
+    },
+    "blocked-page-recovery": {
+      "name": "blocked-page-recovery",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/web/blocked-page-recovery",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "b71179e82ff27c002e6593e792d9a64dad9a444901b8938f30204fa115592061",
+        "scripts/recover_page.py": "22b996996ae2bf252b31cfd2636231f08936729a381dce7ba8bfa4afb8ffe8c6"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "89502014e2145c4a13cd28d78e8dc7c39367e200a4d0ea7d9c7260ea067d6652",
+        "SKILL.md": "ef03fca64d4fd4ece49b9f25128bcf573c479b6cd6d69727f25e28cf820e5bff",
+        "scripts/recover_page.py": "22b996996ae2bf252b31cfd2636231f08936729a381dce7ba8bfa4afb8ffe8c6"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/web/blocked-page-recovery"
+    },
+    "document-to-action-items": {
+      "name": "document-to-action-items",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/productivity/document-to-action-items",
+      "version": "0.1.0",
+      "license": "MIT",
+      "author": "Ben Barclay (benbarclay), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "2a280b83964301717550e84474a2e557282636130589d15debb7d460e90f3952"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "12ebe63b9e6e5712a16da444f64ce6ebc9340dd64907f9fde8cbea194622d0d3",
+        "SKILL.md": "56f7f36805c0fd959839e728b19c615919e4098e6d6939501cd2dfc350395aa0"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/productivity/document-to-action-items"
+    },
+    "meeting-action-items": {
+      "name": "meeting-action-items",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/productivity/meeting-action-items",
+      "version": "0.1.0",
+      "license": "MIT",
+      "author": "Ben Barclay (benbarclay), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "1902f782551da96ee1f9b34d6f13af627f06150a498d874b0cc2a75d06d35aa8"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "143a3772afdf28fbf7a249a3a5a5347c0628cc79dbee2cfaa503067f789433c6",
+        "SKILL.md": "9284200ee32a213abaed8b72245631e61e65eb1e8a0e0207f1462eac2eeb0ffb"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/productivity/meeting-action-items"
+    },
+    "microsoft-office": {
+      "name": "microsoft-office",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/productivity/microsoft-office",
+      "version": "2.0.0",
+      "license": "MIT",
+      "author": "Nous Research",
+      "upstream_files": {
+        "LICENSE": "8aa3c7717d57a68490c31eef4b57b6887e892f0566ff866078ebd76113d357e2",
+        "SKILL.md": "3b626570f7583a6a95ef4f97cebc572d419d2d037fc73f8eca98d0a126fadb32",
+        "references/excel.md": "11a810e41d6e51dbdda6937328e8b9c1d7490271e9522d287bbef2de5c34af7d",
+        "references/powerpoint.md": "cd471bc9033618d98a70d891b1654cc7f1c0aabdeba0cb52bc928ab5dea7305a",
+        "references/restructuring.md": "75ad895aabfc5e48d6226384d268efd2cea4feca230b2835fcef6c50672e6e04",
+        "references/revisions-and-comments.md": "cd861f6e9ea77767b1a5e2ec3f48dd620b0664811d8f204c59c61571b408e9ba",
+        "references/word.md": "102ed2e3986f3b0c283062ae020f9569255f1894f5fa989a26a970db81023455",
+        "scripts/csv_to_xlsx.py": "4fb97f8e656d50c02d3c890c53b7864d5066a282b2568e552e168bd297c27c91",
+        "scripts/docx_comments.py": "1ab18ff6d84532f64d0a640c079ad37bee2d0e8ee91db203c438e5a98a1a5871",
+        "scripts/docx_common.py": "2f25c7b13aa9f5f12d7ac14eabade638bf9b2dc6b8e54739f73fb42b68a27029",
+        "scripts/docx_create.py": "8391869c97ab804374dddadff4fbebc060120c0b973d06133f84487cc2c442d5",
+        "scripts/docx_edit.py": "00feef0a58a318406077020a017dd0b2673daaef93e0bda81fa9437b237180ff",
+        "scripts/docx_read.py": "00b4eaea70eef5e4eb8993ae1357ed35f74b765d998740e3edde13b7327bc3e3",
+        "scripts/docx_revisions.py": "d0eed5c718ebc8a0d7e9f8ae80fe22b19e922202ba57a936db28092f2031e15b",
+        "scripts/docx_template.py": "aed1b1db212b72995bd47a28e6c9928a4d02d7596615f1dadf12cd43a4f34219",
+        "scripts/docx_validate.py": "66c1d307e940803e1505002477ced7ac156524566f16d29913807443a8d8826c",
+        "scripts/pptx_create.py": "06f52918293b3440b9cdc372b65dbf3d1da0e50ca0ccaeedfa1f5eef0d975fb8",
+        "scripts/pptx_edit.py": "edba76ade302c9889ffbe78b1ff8512f7b898b7871b60c24a6affa57c5ec403a",
+        "scripts/pptx_from_template.py": "69101b5e8d5b34f732539673fc27100b8a9454242bd5715c221c169d0214f063",
+        "scripts/pptx_read.py": "b2a6e246e40a6728e5e0e8bf2c4cbe4f788ab8c40bdb1b89e339571a34fdbc71",
+        "scripts/pptx_render.py": "c50e972b35ad1586e2a73d80c31d8744dda0a60c9d25e888fe04c349ecc1e7af",
+        "scripts/xlsx_create.py": "f6be8af8dfe1ad70c3456cf3063276e74d9453b7f1d2b65e08b0dad5bfeed417",
+        "scripts/xlsx_edit.py": "f689b1c3ae284656a95b149cef95c0599b2774cb639c0103926bf25fa4c4a9cc",
+        "scripts/xlsx_read.py": "5ab31b1b417efea11a8af7b15c6aa5f26d6d966effefaa19af604c1fa0ca0916",
+        "scripts/xlsx_recalc.py": "33b4143ce9dcf73e7f98c2a62030c6449fe7263d87254f916050d552b32bd496",
+        "scripts/xlsx_restructure.py": "8a039e0cd04e70d3f329c4919ce68d5570280955e4a6987e4867e6bc6bb3535e",
+        "scripts/xlsx_to_csv.py": "a141b37a01bad031970177fc48aa501524067cd882b58c9a4cf4e543e52fc896",
+        "tests/test_docx_skill.py": "ce979eafad377f1abd2e57afe255198cc3d635a2000976f6b5e7166ef39654c3",
+        "tests/test_powerpoint_skill.py": "3e26726b2e2918b012bafeeee31c5c9b704350393f3124529e69a431ab6d93b3",
+        "tests/test_xlsx_skill.py": "867939b73c109c0d3fbe05d8e0b88a9a0e6dad73ffafab26d222e7384a8d8c1e"
+      },
+      "files": {
+        "LICENSE": "8aa3c7717d57a68490c31eef4b57b6887e892f0566ff866078ebd76113d357e2",
+        "REVIEW.md": "4ad1fbd9f25c7c1efacb474d5aeea8839bd26923aa9d23c5fa1233c374e3ff30",
+        "SKILL.md": "72c50d50a2b29cd7e596f35d341fbf751a57cb2a5212b7714bead9af0b4e120b",
+        "references/excel.md": "11a810e41d6e51dbdda6937328e8b9c1d7490271e9522d287bbef2de5c34af7d",
+        "references/powerpoint.md": "cd471bc9033618d98a70d891b1654cc7f1c0aabdeba0cb52bc928ab5dea7305a",
+        "references/restructuring.md": "75ad895aabfc5e48d6226384d268efd2cea4feca230b2835fcef6c50672e6e04",
+        "references/revisions-and-comments.md": "cd861f6e9ea77767b1a5e2ec3f48dd620b0664811d8f204c59c61571b408e9ba",
+        "references/word.md": "102ed2e3986f3b0c283062ae020f9569255f1894f5fa989a26a970db81023455",
+        "scripts/csv_to_xlsx.py": "4fb97f8e656d50c02d3c890c53b7864d5066a282b2568e552e168bd297c27c91",
+        "scripts/docx_comments.py": "1ab18ff6d84532f64d0a640c079ad37bee2d0e8ee91db203c438e5a98a1a5871",
+        "scripts/docx_common.py": "2f25c7b13aa9f5f12d7ac14eabade638bf9b2dc6b8e54739f73fb42b68a27029",
+        "scripts/docx_create.py": "8391869c97ab804374dddadff4fbebc060120c0b973d06133f84487cc2c442d5",
+        "scripts/docx_edit.py": "00feef0a58a318406077020a017dd0b2673daaef93e0bda81fa9437b237180ff",
+        "scripts/docx_read.py": "00b4eaea70eef5e4eb8993ae1357ed35f74b765d998740e3edde13b7327bc3e3",
+        "scripts/docx_revisions.py": "d0eed5c718ebc8a0d7e9f8ae80fe22b19e922202ba57a936db28092f2031e15b",
+        "scripts/docx_template.py": "aed1b1db212b72995bd47a28e6c9928a4d02d7596615f1dadf12cd43a4f34219",
+        "scripts/docx_validate.py": "66c1d307e940803e1505002477ced7ac156524566f16d29913807443a8d8826c",
+        "scripts/pptx_create.py": "06f52918293b3440b9cdc372b65dbf3d1da0e50ca0ccaeedfa1f5eef0d975fb8",
+        "scripts/pptx_edit.py": "edba76ade302c9889ffbe78b1ff8512f7b898b7871b60c24a6affa57c5ec403a",
+        "scripts/pptx_from_template.py": "69101b5e8d5b34f732539673fc27100b8a9454242bd5715c221c169d0214f063",
+        "scripts/pptx_read.py": "b2a6e246e40a6728e5e0e8bf2c4cbe4f788ab8c40bdb1b89e339571a34fdbc71",
+        "scripts/pptx_render.py": "c50e972b35ad1586e2a73d80c31d8744dda0a60c9d25e888fe04c349ecc1e7af",
+        "scripts/xlsx_create.py": "f6be8af8dfe1ad70c3456cf3063276e74d9453b7f1d2b65e08b0dad5bfeed417",
+        "scripts/xlsx_edit.py": "f689b1c3ae284656a95b149cef95c0599b2774cb639c0103926bf25fa4c4a9cc",
+        "scripts/xlsx_read.py": "5ab31b1b417efea11a8af7b15c6aa5f26d6d966effefaa19af604c1fa0ca0916",
+        "scripts/xlsx_recalc.py": "33b4143ce9dcf73e7f98c2a62030c6449fe7263d87254f916050d552b32bd496",
+        "scripts/xlsx_restructure.py": "8a039e0cd04e70d3f329c4919ce68d5570280955e4a6987e4867e6bc6bb3535e",
+        "scripts/xlsx_to_csv.py": "a141b37a01bad031970177fc48aa501524067cd882b58c9a4cf4e543e52fc896",
+        "tests/test_docx_skill.py": "ce979eafad377f1abd2e57afe255198cc3d635a2000976f6b5e7166ef39654c3",
+        "tests/test_powerpoint_skill.py": "3e26726b2e2918b012bafeeee31c5c9b704350393f3124529e69a431ab6d93b3",
+        "tests/test_xlsx_skill.py": "867939b73c109c0d3fbe05d8e0b88a9a0e6dad73ffafab26d222e7384a8d8c1e"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/productivity/microsoft-office"
+    },
+    "maps": {
+      "name": "maps",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/productivity/maps",
+      "version": "1.2.0",
+      "license": "MIT",
+      "author": "Mibayy",
+      "upstream_files": {
+        "SKILL.md": "775ef9f79be9cd147bc81e0c4a4ef952230a04736a6082f44dbac78554ef89ab",
+        "scripts/maps_client.py": "94960e451d549766070c999f4979bd69ea956381b40c4d5b05bfa6c0501e7ffb"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "7b1ee905a0ce42a10412c5e749269ac36a3b83c888be1eba47e3311335560d17",
+        "SKILL.md": "e57bcfa3d294c472ccfa1c327653b0545609d737e7c6d7d83e4a8f4a68f6d15f",
+        "scripts/maps_client.py": "94960e451d549766070c999f4979bd69ea956381b40c4d5b05bfa6c0501e7ffb"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/productivity/maps"
+    },
+    "humanizer": {
+      "name": "humanizer",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/creative/humanizer",
+      "version": "2.5.1",
+      "license": "MIT",
+      "author": "Siqi Chen (@blader, https://github.com/blader/humanizer), ported by Hermes Agent",
+      "upstream_files": {
+        "LICENSE": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+        "SKILL.md": "887d5e3467a682da9b166e5293007f8bbbc299f8a6718ae00f26161b7d062b04"
+      },
+      "files": {
+        "LICENSE": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+        "REVIEW.md": "6ba838159c784843a512ebeeb2284adc29e9b0166511eacbe0ad020b80466dda",
+        "SKILL.md": "97500150bf0c7a965672dbd4abd50abb5ebbd193715905925b94a80b09631ad5"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/creative/humanizer"
+    },
+    "songwriting-and-ai-music": {
+      "name": "songwriting-and-ai-music",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/creative/songwriting-and-ai-music",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Teknium (teknium1), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "5dbf92dc336e9b17be45c35c92a5bb307e4655e39a86617f07b7654678f92583"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "dc5fc70ab122c24dc04f9cabe8ae095b61cf8448977b2d1b58fa2ad5860c92c4",
+        "SKILL.md": "7ec921ea43110225e6bb9cf4d62879746a45d11e98aa747a2e1d66f6b1a27717"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/creative/songwriting-and-ai-music"
+    },
+    "hermes-agent": {
+      "name": "hermes-agent",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "skills/autonomous-ai-agents/hermes-agent",
+      "version": "3.2.0",
+      "license": "MIT",
+      "author": "Hermes Agent + Teknium",
+      "upstream_files": {
+        "SKILL.md": "3bce24f8fa5e0419286cc6ea101bb064b0b064a788091272dce4029eb36d6d86",
+        "references/background-systems.md": "70099ca64774cc7e70a33330d180f862cf19a02c0f936dc4c50d51c6d0b73556",
+        "references/cli-reference.md": "5f1633c6eac7f363172dd5fce96a6628781de294d553b75fd32cef6243095c7d",
+        "references/configuration.md": "60e98213eda62521ec21fdc10dc916fb30858025de34e52437482ef68a2fcfe1",
+        "references/contributor-guide.md": "c92ea1a35fff35a665bfd19618198960d3afac10dab793f9372e16fb45895059",
+        "references/delegate-task-concurrency-diagnosis.md": "41019dd37c0c048b002d3639fe01455513b5c9aba142a21ff9c3bd4c7718a77b",
+        "references/desktop-plugins.md": "5f043c22ee1fc72cac041c3ef060b5bb6b6cc6dc36de0040319ad2107d493fe7",
+        "references/native-mcp.md": "ded08718d2eb141262a31b323f8e66eeb40f35e074e1f0e70abb76860891ec92",
+        "references/petdex.md": "2254eabf40c360efb54e4df482f3b84820b54a15e6954c4a7e9e7fee4eb90f77",
+        "references/portal-auth-for-third-party-apps.md": "4890617a80d8c70fc388a49201d5a718049a64c0ddd5fac3f35754641f063b99",
+        "references/project-context-files.md": "20b51406102e6498f62ed837978e5c67ebd91a917b985de7bbddfaaf23c1f593",
+        "references/providers-and-models.md": "7eb85c6f7c70685b2684964fd8978e3a3a29b71e2aa5806380736a9a95bce317",
+        "references/security-privacy.md": "f27913f7775915d8065b2dea782197907ff90cf37f07b865135c7f61aee98e83",
+        "references/slash-commands.md": "690dc6c2543dfa028bbf2918c229f27f4962e9d897fce25ebb1de67d56f3b822",
+        "references/themes.md": "f5a8269a7312173f0caa6736156a3f76d32e56b4e15511e84dc2e902f48e8157",
+        "references/troubleshooting.md": "41be52557d43230ff64d78a57c41c592fbd178cab6072ee3a436940d4a078306",
+        "references/tui-widgets.md": "20e21aabb757a9d3c7d895db8f05a3782fe8b28feef3768ac5550c8860b4a3db",
+        "references/webhooks.md": "f668c57d1900e249cb4b54e5d624e9aacb399ecf1452f9b258a1bf857ffa8a42",
+        "references/windows-quirks.md": "4af2c0907983376f1b21d2164de17f1229faeb0609c61762cfc026b806bc5501",
+        "templates/clock.mjs": "44ec25d560e16c7815a633039a783ddbba2d8e8cf1659560c0cd1cddec83f89d",
+        "templates/plugin.js": "a63c8f879756854b45373f5d6b1ae0a7fefcdd4a5af840be8a60d83b64724744",
+        "templates/skin.yaml": "bc8fddd7e5373b074c1c7dd423bb59d6e04769977e8a18354e3a6b3983209994"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "af49e1c54e1797c43bcd64ab7b009265294deb8712a2ceb283085adbb22e1eff",
+        "SKILL.md": "71d2f247c43e373dc01b5aa590b502fe7f774ce6cd445ff84e40bbfcd017e7b4",
+        "references/background-systems.md": "36f2475344df49d51ece37ac2d0a8bc56ef1fbf4366fb6afeb9025b769ec66a0",
+        "references/cli-reference.md": "fc93f3d3bd60bf0f8661cf8cafa06a6cf55ca59f71d41615b0cde7c23ad72fa4",
+        "references/configuration.md": "60e98213eda62521ec21fdc10dc916fb30858025de34e52437482ef68a2fcfe1",
+        "references/contributor-guide.md": "508c560045cf73ef3cdededef8cc9743fa68df9c392a61c5062baa274fb31b46",
+        "references/delegate-task-concurrency-diagnosis.md": "de0b1e75a41a9e9912760eceeec9d945aa6203a0de3e26d059d5c14240300173",
+        "references/desktop-plugins.md": "f175036072097df71527eda7699c0b9a25576ed31336d9f13f2d6cd46e06f7c5",
+        "references/native-mcp.md": "0470ad19f4abfe13ed5ce7423068cb47c1ec4b83c6c39d58c384409a55f22edf",
+        "references/petdex.md": "2254eabf40c360efb54e4df482f3b84820b54a15e6954c4a7e9e7fee4eb90f77",
+        "references/portal-auth-for-third-party-apps.md": "f3eabaed5e2028ffed67187d60d56cfe252933721eb8f96c94dd36fd81741764",
+        "references/project-context-files.md": "3e2816f3fa9efc47db5209016eac992d9f5b00ae35a633c02dfb708e74bee01b",
+        "references/providers-and-models.md": "7eb85c6f7c70685b2684964fd8978e3a3a29b71e2aa5806380736a9a95bce317",
+        "references/security-privacy.md": "371a561bad14822c79fa615e9ac0187292c7b6c6d50dca5fae376c2a7a0300c2",
+        "references/slash-commands.md": "690dc6c2543dfa028bbf2918c229f27f4962e9d897fce25ebb1de67d56f3b822",
+        "references/themes.md": "ce94564c2728bba0556aaeb411e86433a7db8a260b86990b06f0e6d1d9c802ab",
+        "references/troubleshooting.md": "e80a829d8ba23e94f7420c0b2902e4980efd452b3dcd9944e188e97351f7e4be",
+        "references/tui-widgets.md": "90c394109de0a0c7697351b4ab4930e278b09887ed195fa4e1cd540731a3224e",
+        "references/webhooks.md": "6de8ba59e302a03193f602b63d2261f06261d7da63c05b8aaf3b42280188e3bb",
+        "references/windows-quirks.md": "8c39dcd8b49c3ba9438847b6a4ef047d0ecc1fb687e38d7ce172c2552f9b9d07",
+        "templates/clock.mjs": "5e7e1294b1f079e40d6b5b1e922a3532e5043f72613dedaf496e40999cf9589a",
+        "templates/plugin.js": "bbff91e7a05f468cf58561b04c3115d91080cc1182618b6c1e5e4f413c2eb991",
+        "templates/skin.yaml": "bc8fddd7e5373b074c1c7dd423bb59d6e04769977e8a18354e3a6b3983209994"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md.",
+        "references/background-systems.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/cli-reference.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/contributor-guide.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/delegate-task-concurrency-diagnosis.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/desktop-plugins.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/native-mcp.md": "Removed token-shaped illustrative placeholders; examples are not credentials.",
+        "references/portal-auth-for-third-party-apps.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/project-context-files.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/security-privacy.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md. Trailing whitespace/EOF normalized for source distribution.",
+        "references/themes.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/troubleshooting.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md. Trailing whitespace/EOF normalized for source distribution.",
+        "references/tui-widgets.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/webhooks.md": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "templates/clock.mjs": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "templates/plugin.js": "Profile-safe locations and/or explicit scope/security compatibility adaptation; see REVIEW.md.",
+        "references/windows-quirks.md": " Trailing whitespace/EOF normalized for source distribution."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/autonomous-ai-agents/hermes-agent"
+    },
+    "rest-graphql-debug": {
+      "name": "rest-graphql-debug",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/software-development/rest-graphql-debug",
+      "version": "1.2.0",
+      "license": "MIT",
+      "author": "eren-karakus0",
+      "upstream_files": {
+        "SKILL.md": "18228139612c555dbb4a53b74039dadb53cb1163507dd9325a4fcfa3326e475d"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "879868a6ba6e6712a8df267308624085eaff0d264a03a961e2ec44ccc86099f4",
+        "SKILL.md": "32f23e9cbf4130b92dc716a1beb1c791ab69388cb313fce1ba645883b1738c54"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/rest-graphql-debug"
+    },
+    "docker-management": {
+      "name": "docker-management",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/devops/docker-management",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "sprmn24",
+      "upstream_files": {
+        "SKILL.md": "6425a2cf3f682f4b6812522dcb7ceaea7dab9ba0fbf159fb900280edc5f69e50"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "9bb16529e81449fad1b0df6b5547c920f2b9fd1c34a36481c77c6e15f0249eb5",
+        "SKILL.md": "649568d8c72f7cc8bd53a2bf316301beb25bfee9e32b4987ad01fda1f39822bc"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/docker-management"
+    },
+    "concept-diagrams": {
+      "name": "concept-diagrams",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/concept-diagrams",
+      "version": "0.1.0",
+      "license": "MIT",
+      "author": "v1k22 (original PR), ported into hermes-agent",
+      "upstream_files": {
+        "SKILL.md": "ae9bea1de66fb6e10a03520356458f7b3abf10fee5bd74d056f9ffce408bd558",
+        "examples/apartment-floor-plan-conversion.md": "ceb12290ea71a3ec13f54c3dfde169fd4535a05d2a0687ff9d85b1bcd7200fb5",
+        "examples/automated-password-reset-flow.md": "c208e230b4a9ed33e6f2e55a6f74bbcdad239cb3d3034337ffa3f9034bf56082",
+        "examples/autonomous-llm-research-agent-flow.md": "e736920b94e8f89e6f0275f1a94bad43843c0291e275a26edc0157dbf5545d86",
+        "examples/banana-journey-tree-to-smoothie.md": "84ea5c0351d7cd329a97cf4890517879cdd85f445b77f442a2542a609d0ccd70",
+        "examples/commercial-aircraft-structure.md": "baf688d75122cc5e66393efad04244121040315b4b5e8a2ad1783d0918451b26",
+        "examples/cpu-ooo-microarchitecture.md": "1870f34507b3ddd75101d0d4cc12de46fd789ad15280f900a8ba9a60a076e6b7",
+        "examples/electricity-grid-flow.md": "54815922d842f66fc689cde362f84543e003468d85369e7827499e99a6599e71",
+        "examples/feature-film-production-pipeline.md": "3c98c6bde3458aafef8c7b62067a14f767580a3652c90803a6a7c6ab400f7493",
+        "examples/hospital-emergency-department-flow.md": "0bae6b4d276c1cee035e379b2cf4824a462976b58e86cc976349dbc102e77977",
+        "examples/ml-benchmark-grouped-bar-chart.md": "98ff16c3d9d22a3c5a5b699e028f6a080abccb1e8fbf6c8e62d8cba8dc5fd851",
+        "examples/place-order-uml-sequence.md": "f162b36f0b849dde48800e91a11f07f1e7cb8728620d9ce4223820bede6414b6",
+        "examples/smart-city-infrastructure.md": "7ad7762ebf1b205ab37990c86f91fd493cbdf5ff659242ff72fcfb9fb1777ffb",
+        "examples/smartphone-layer-anatomy.md": "dce5b194797fbecce59e69ecec87f5dffaa82eff06cb6531e4d4e2dcb8e2f188",
+        "examples/sn2-reaction-mechanism.md": "1c4c7e62d31e8be5abdf00f19fe656c504d294519b96bdce539767fa518a08da",
+        "examples/wind-turbine-structure.md": "392aa932db6b626582dc8cfd4e89c4a99571c2edad032501fe7e4819a3bdba30",
+        "references/dashboard-patterns.md": "09db70368ea5a176388289491e9e30a0478422fa2913272a33cc389caf8cbedd",
+        "references/infrastructure-patterns.md": "ece5ef64f425ca6c736bd5acd994f3577142c53383812c2acf89449efd4e450d",
+        "references/physical-shape-cookbook.md": "37a57278ab296761fbe9a26ece1a312a947b69a2904963e33698572085b78b63",
+        "templates/template.html": "ae903da95a3a0a94da555bb22a689fba7a97c87659d581bb19ef089c7cf96973"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "8b1cf70f485a3bb31c62ca34d72a518f586ebbcf1dfd59a8a1f69ee538409f19",
+        "SKILL.md": "9be615ffb5b0c2a2f2c75f3d6c820594154d1a858d36db8f2d2a96e19e69cc3f",
+        "examples/apartment-floor-plan-conversion.md": "ceb12290ea71a3ec13f54c3dfde169fd4535a05d2a0687ff9d85b1bcd7200fb5",
+        "examples/automated-password-reset-flow.md": "c208e230b4a9ed33e6f2e55a6f74bbcdad239cb3d3034337ffa3f9034bf56082",
+        "examples/autonomous-llm-research-agent-flow.md": "e736920b94e8f89e6f0275f1a94bad43843c0291e275a26edc0157dbf5545d86",
+        "examples/banana-journey-tree-to-smoothie.md": "7e74bd127914673306afc912502c110c634626152fa491f5290266c38677cb54",
+        "examples/commercial-aircraft-structure.md": "7610885abd5c5e0749482fc4d85c434a4248a148a1e3b3dcbd5bbfe54d01812e",
+        "examples/cpu-ooo-microarchitecture.md": "877dc32bf418e1320837fa5ec4ad836bacff3a2bf3378cc0159e08f50dcf6947",
+        "examples/electricity-grid-flow.md": "bbe65a242097d03d55ff613bb874078046ba68881300ceac16fbf5d123d8b782",
+        "examples/feature-film-production-pipeline.md": "3c98c6bde3458aafef8c7b62067a14f767580a3652c90803a6a7c6ab400f7493",
+        "examples/hospital-emergency-department-flow.md": "0bae6b4d276c1cee035e379b2cf4824a462976b58e86cc976349dbc102e77977",
+        "examples/ml-benchmark-grouped-bar-chart.md": "98ff16c3d9d22a3c5a5b699e028f6a080abccb1e8fbf6c8e62d8cba8dc5fd851",
+        "examples/place-order-uml-sequence.md": "f162b36f0b849dde48800e91a11f07f1e7cb8728620d9ce4223820bede6414b6",
+        "examples/smart-city-infrastructure.md": "7ad7762ebf1b205ab37990c86f91fd493cbdf5ff659242ff72fcfb9fb1777ffb",
+        "examples/smartphone-layer-anatomy.md": "dce5b194797fbecce59e69ecec87f5dffaa82eff06cb6531e4d4e2dcb8e2f188",
+        "examples/sn2-reaction-mechanism.md": "3bcff351cc08b6a5a1e1536eca6130f1a85700c67e305e5eb1c573c71c00295a",
+        "examples/wind-turbine-structure.md": "d2ffbea4b1974ecf57082c82db451bd1964ee1014c24a32dcfd5dc99865ef071",
+        "references/dashboard-patterns.md": "09db70368ea5a176388289491e9e30a0478422fa2913272a33cc389caf8cbedd",
+        "references/infrastructure-patterns.md": "ece5ef64f425ca6c736bd5acd994f3577142c53383812c2acf89449efd4e450d",
+        "references/physical-shape-cookbook.md": "37a57278ab296761fbe9a26ece1a312a947b69a2904963e33698572085b78b63",
+        "templates/template.html": "ae903da95a3a0a94da555bb22a689fba7a97c87659d581bb19ef089c7cf96973"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md.",
+        "examples/banana-journey-tree-to-smoothie.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "examples/commercial-aircraft-structure.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "examples/cpu-ooo-microarchitecture.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "examples/electricity-grid-flow.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "examples/sn2-reaction-mechanism.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "examples/wind-turbine-structure.md": " Trailing whitespace/EOF normalized for source distribution."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/concept-diagrams"
+    },
+    "creative-ideation": {
+      "name": "creative-ideation",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/creative-ideation",
+      "version": "2.1.0",
+      "license": "MIT",
+      "author": "SHL0MS",
+      "upstream_files": {
+        "SKILL.md": "b0b2a36387ecdf363550a341ee6941fe4fae0443564d730c0121a6a66114f36c",
+        "references/anti-slop.md": "796a13eb2261da541bc88e998107bde05051afe98d4593067014870ddbec4622",
+        "references/exercises.md": "26d06abe06a0e9fc0777fdd1c94845bd7438d2085ebcf720b614cc4304193817",
+        "references/full-prompt-library.md": "2ff29d678fe05c5f4e3bf8cfa427fa388f04af1817820acde03d34d325ee403e",
+        "references/heuristics.md": "77e4a4e6d84d46a2032dacafce7f3aac7c84369d0567573d3f543454791ac71d",
+        "references/method-catalog.md": "7e2c3ea7a665b34e869732cc9cbe1e3fb3bcaf2775925b764c1985af8375ffc8",
+        "references/methods/affinity-diagrams.md": "530d23c4a5318081abdb02dd9a16cdccfb710f6ff3c59ca4c655103847ca1ee5",
+        "references/methods/analogy-and-blending.md": "c4791856bd9cfa6cc466a7afd41a6d575e8ea891f37c3f82cc5615df6acc0d36",
+        "references/methods/biomimicry.md": "858c03f00d012274ee1dd8ecb1dcbc3f0b863dfeffc81a5aee850a013ba6afb8",
+        "references/methods/chance-and-remix.md": "9598c9f6ebafdfa23c4066b50b6fb9ebe2c45867786095b7775d8b5e52163c94",
+        "references/methods/compression-progress.md": "bd4950f559d03ef2a225adc73cf6452acfc3d8863e41cf82ecf518aae26c29f0",
+        "references/methods/creative-discipline.md": "c9bb83348fd90b1315c5d78bbbe4f18d30b3c1b8378037588442cb38404fa77d",
+        "references/methods/defamiliarization.md": "588095139e2d48ab2c1af5af74676aca0bfc922f2d294c69dcb7c8351b3f8878",
+        "references/methods/derive-and-mapping.md": "16b88dee7743896616c4e81aa24cb736a4b85597f2527bc1094914d16108e354",
+        "references/methods/first-principles.md": "a16641171d7c2f2174f11ebb265a62d05e4872f41fb0165d8b59b5652c82a071",
+        "references/methods/jobs-to-be-done.md": "35572cbcb92f3281ee066821dede7d968b319be5c9c51a842f8852efa63adf27",
+        "references/methods/lateral-provocations.md": "de8149d9e88b0caf2fed9204fdabf5aded1fca374820a79bc21e228a1be01f8f",
+        "references/methods/leverage-points.md": "64843a765d197451c5a6b914f27ae96e1332df6196d39b52298f62609c5c3cbd",
+        "references/methods/oblique-strategies.md": "4dfeb8b6fe9440c6432c77d8c14a680a4494fd42e8732269e18515e0b26d163a",
+        "references/methods/oulipo.md": "939f40ca502fb462a63609ef98f8cf484b96dd57ba380cfbbd5eb4eac36eb946",
+        "references/methods/pataphysics.md": "23440de3e5a336154c24c002a66238cd1ddce166675a479a56d505c1e157af1a",
+        "references/methods/pattern-languages.md": "4337612cae61449b33a09417dffb4f078437c034d018d70d0bce94191a9c6040",
+        "references/methods/polya.md": "3d2cc6a75fac4cb488ddfbf8c895d7545fe7847f8f7ee6f58e4d44e5f99bcb33",
+        "references/methods/premortem-and-inversion.md": "188f1897e66276942bfadd0c54b1821b867487ff60ee9265583bbd439497a71f",
+        "references/methods/scamper.md": "73ab6700be4c46723a9a0d74845ce3f7ea0f722b476046ce440481790ec0cc6b",
+        "references/methods/story-skeletons.md": "17925ac3f62ecb730561bf118a0c2e55d509cc4c8ec85394b51506435bf73881",
+        "references/methods/triz-principles.md": "a4c877bc84f5fec2318c7a4929b86dbf1e48186d9510aff2e9a103ba9198c7a7",
+        "references/methods/volume-generation.md": "605a9b158a5d7f6305d61c7c14f50584e87b8201749492256c8e3d352c35e06c"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "04a63a2f7b2e83ab7ef01a54112cb8003ae5f5e1c4c1ad423019ba45dd6f65a2",
+        "SKILL.md": "00f49f82bc7bdaad71f94f1dae90b36e646323900666a394688d5f0a76d2209c",
+        "references/anti-slop.md": "796a13eb2261da541bc88e998107bde05051afe98d4593067014870ddbec4622",
+        "references/exercises.md": "26d06abe06a0e9fc0777fdd1c94845bd7438d2085ebcf720b614cc4304193817",
+        "references/full-prompt-library.md": "2ff29d678fe05c5f4e3bf8cfa427fa388f04af1817820acde03d34d325ee403e",
+        "references/heuristics.md": "77e4a4e6d84d46a2032dacafce7f3aac7c84369d0567573d3f543454791ac71d",
+        "references/method-catalog.md": "7e2c3ea7a665b34e869732cc9cbe1e3fb3bcaf2775925b764c1985af8375ffc8",
+        "references/methods/affinity-diagrams.md": "530d23c4a5318081abdb02dd9a16cdccfb710f6ff3c59ca4c655103847ca1ee5",
+        "references/methods/analogy-and-blending.md": "c4791856bd9cfa6cc466a7afd41a6d575e8ea891f37c3f82cc5615df6acc0d36",
+        "references/methods/biomimicry.md": "858c03f00d012274ee1dd8ecb1dcbc3f0b863dfeffc81a5aee850a013ba6afb8",
+        "references/methods/chance-and-remix.md": "9598c9f6ebafdfa23c4066b50b6fb9ebe2c45867786095b7775d8b5e52163c94",
+        "references/methods/compression-progress.md": "bd4950f559d03ef2a225adc73cf6452acfc3d8863e41cf82ecf518aae26c29f0",
+        "references/methods/creative-discipline.md": "c9bb83348fd90b1315c5d78bbbe4f18d30b3c1b8378037588442cb38404fa77d",
+        "references/methods/defamiliarization.md": "588095139e2d48ab2c1af5af74676aca0bfc922f2d294c69dcb7c8351b3f8878",
+        "references/methods/derive-and-mapping.md": "16b88dee7743896616c4e81aa24cb736a4b85597f2527bc1094914d16108e354",
+        "references/methods/first-principles.md": "a16641171d7c2f2174f11ebb265a62d05e4872f41fb0165d8b59b5652c82a071",
+        "references/methods/jobs-to-be-done.md": "35572cbcb92f3281ee066821dede7d968b319be5c9c51a842f8852efa63adf27",
+        "references/methods/lateral-provocations.md": "de8149d9e88b0caf2fed9204fdabf5aded1fca374820a79bc21e228a1be01f8f",
+        "references/methods/leverage-points.md": "64843a765d197451c5a6b914f27ae96e1332df6196d39b52298f62609c5c3cbd",
+        "references/methods/oblique-strategies.md": "4dfeb8b6fe9440c6432c77d8c14a680a4494fd42e8732269e18515e0b26d163a",
+        "references/methods/oulipo.md": "939f40ca502fb462a63609ef98f8cf484b96dd57ba380cfbbd5eb4eac36eb946",
+        "references/methods/pataphysics.md": "23440de3e5a336154c24c002a66238cd1ddce166675a479a56d505c1e157af1a",
+        "references/methods/pattern-languages.md": "4337612cae61449b33a09417dffb4f078437c034d018d70d0bce94191a9c6040",
+        "references/methods/polya.md": "3d2cc6a75fac4cb488ddfbf8c895d7545fe7847f8f7ee6f58e4d44e5f99bcb33",
+        "references/methods/premortem-and-inversion.md": "188f1897e66276942bfadd0c54b1821b867487ff60ee9265583bbd439497a71f",
+        "references/methods/scamper.md": "73ab6700be4c46723a9a0d74845ce3f7ea0f722b476046ce440481790ec0cc6b",
+        "references/methods/story-skeletons.md": "17925ac3f62ecb730561bf118a0c2e55d509cc4c8ec85394b51506435bf73881",
+        "references/methods/triz-principles.md": "a4c877bc84f5fec2318c7a4929b86dbf1e48186d9510aff2e9a103ba9198c7a7",
+        "references/methods/volume-generation.md": "605a9b158a5d7f6305d61c7c14f50584e87b8201749492256c8e3d352c35e06c"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/creative-ideation"
+    },
+    "excalidraw": {
+      "name": "excalidraw",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/excalidraw",
+      "version": "1.0.1",
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "cb0558445251fc1087a99dd85b445b83565a98aef6d3e0874641000f7e89e253",
+        "references/colors.md": "4546bb6756acb1ea2fd3a917c6883b2cee054345d3268fe8b377275fa590092c",
+        "references/dark-mode.md": "ef1ceeea938fe62ec745a4abec478188098f99573cac6f38db3992eacedbe6df",
+        "references/examples.md": "411e4c571135a94264becb365b7963f4370c7564aa7fb6eefa822b4538a1c399",
+        "scripts/upload.py": "d3d88dfd8930942a5f4ab51f830dbcf245939bfb546dd00d073205d888996a65"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "d2eec7cf2e44ff45b72a75fbab11347e515d269fd97eed6ca304492cc7d91881",
+        "SKILL.md": "803a9d6a8a4e5ec90ec2d565f4e4ef4abb9d6650c11a103cd7774441d5257801",
+        "references/colors.md": "4546bb6756acb1ea2fd3a917c6883b2cee054345d3268fe8b377275fa590092c",
+        "references/dark-mode.md": "792ad854261dac0baeb6b808f781a70576c891b7fee2c2576df0ad52197b4370",
+        "references/examples.md": "d476d5f1d59b39b9178a2e8cafb02b1e1f6cf4545b3fde6f1821e3696726edfc",
+        "scripts/upload.py": "d3d88dfd8930942a5f4ab51f830dbcf245939bfb546dd00d073205d888996a65"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md. Trailing whitespace/EOF normalized for source distribution.",
+        "references/dark-mode.md": " Trailing whitespace/EOF normalized for source distribution.",
+        "references/examples.md": " Trailing whitespace/EOF normalized for source distribution."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/excalidraw"
+    },
+    "social-media-content-calendar": {
+      "name": "social-media-content-calendar",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/social-media-content-calendar",
+      "version": "0.1.0",
+      "license": "MIT",
+      "author": "Ben Barclay (benbarclay), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "f12b235ea3eedf611022c0a89a967f08a5dc25bbd1531572f1c37f7545177298"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "337cd2c56c3f696af67727bb817b43fe736f835b5dd7f5739f41f26b893e58f1",
+        "SKILL.md": "966560cce7a208480f832119176332d7c0e5ad2f25fb65935fe0a10a250fea40"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/social-media-content-calendar"
+    },
+    "one-three-one-rule": {
+      "name": "one-three-one-rule",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/communication/one-three-one-rule",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Willard Moore",
+      "upstream_files": {
+        "SKILL.md": "31ae7d7c5fc127d7f49d3282c3f93e3e3c3afa295f9bbd6660cc88ca9248248b"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "689e406910190d991e4645d22dafbd77d16fc10a66f114dd8aba4c6f61baec69",
+        "SKILL.md": "e8b9ce7910224388fac9a9fa54f4064c2050b3d4df5026da0d91e113bce1b284"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/one-three-one-rule"
+    },
+    "simple-english": {
+      "name": "simple-english",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/simple-english",
+      "version": "1.2.0",
+      "license": "MIT",
+      "author": "AminBlg (https://github.com/AminBlg/SimpleEnglish), ported by Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "9d43d7ce95a09e9e65e04e9f99d46f223d3f0d4ec620f37fd8495536bca87a42",
+        "references/checklist.md": "c90c3834fa691da11e23f11ccb922ad09ddb18fbea04004ad047b5070c0ae846",
+        "references/use-cases.md": "a875819fe39687282b893d92d9d5f91c89685a01e21ffed0579d8873d4de6a68"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "98d2cc7ec2c4a1262854d5052a7c5cf4320c923e091a36102f31561467ad2d8a",
+        "SKILL.md": "7d543dffb098722f7749151d30ce783542b47986005ecca23d77ca960bd4456d",
+        "references/checklist.md": "c90c3834fa691da11e23f11ccb922ad09ddb18fbea04004ad047b5070c0ae846",
+        "references/use-cases.md": "a875819fe39687282b893d92d9d5f91c89685a01e21ffed0579d8873d4de6a68"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/simple-english"
+    },
+    "rss-feeds": {
+      "name": "rss-feeds",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/research/rss-feeds",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "Teknium (teknium1), Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "bdd3a7c1005cb7f1a5266b31fb464fc50d6c7b3389ad888a1e4341467be82ff8",
+        "scripts/feed.py": "b33392b1a87cb84ea3550d243f06bc213a0320d684f16be568956ecd7c78d5cb"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "0eec0ecf712970291dac95d2a2440eaa97b96b04d4e01266bcc24f1ebb3ad69b",
+        "SKILL.md": "c5afe2283cd0866024cb9f80036bdc059115a63968cd79f4f27da8bcb10cf5a5",
+        "scripts/feed.py": "b33392b1a87cb84ea3550d243f06bc213a0320d684f16be568956ecd7c78d5cb"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/rss-feeds"
+    },
+    "design-md": {
+      "name": "design-md",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "path": "optional-skills/creative/design-md",
+      "version": "1.1.0",
+      "license": "MIT",
+      "author": "Hermes Agent",
+      "upstream_files": {
+        "SKILL.md": "7ed56bba40ffc9573fa51b33b2424f37fb5f774e9ecb7e76e737797afd0b62ae",
+        "templates/starter.md": "587571ab914ebe6c228d786aeb3b531d88b5b53dcffd5295333d609275a0b2d4"
+      },
+      "files": {
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "REVIEW.md": "ab273fb4a464057f49577ddd2574f296571fadc11342219e1c5df32ccdbad4fc",
+        "SKILL.md": "f2b595ddb2c9f77e999f8842d322ccb7832bf594f3465dfdf78a5b4313304b89",
+        "templates/starter.md": "587571ab914ebe6c228d786aeb3b531d88b5b53dcffd5295333d609275a0b2d4"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/design-md"
+    },
+    "accessibility": {
+      "name": "accessibility",
+      "repository": "https://github.com/addyosmani/web-quality-skills",
+      "commit": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "path": "skills/accessibility",
+      "version": "2.0.0",
+      "license": "MIT",
+      "author": "Addy Osmani / web-quality-skills",
+      "upstream_files": {
+        "SKILL.md": "267fb2a0707d6142f2871f22688203a42ba21291a2aa200fb740936e41362b5d",
+        "references/A11Y-PATTERNS.md": "f10e238dd4dd3c4f51134c2056bc02d3dd4f8fb6ccc9145c2c1ba7aab4d58140",
+        "references/WCAG.md": "16683e025e3833d931c9d880645d98a448827f97e10189b6c8f12c832e7a2361"
+      },
+      "files": {
+        "LICENSE": "c122223ac43e86421958e18623979942c21b642951e2e3736dcb63eff13587c3",
+        "REVIEW.md": "f046d60f78745e11f910a8b15a1659093ceb674714b7cf3172fdd5a82ea1beba",
+        "SKILL.md": "ced2ec07052c9992cd364c7386cad81f69aad3771abff47b26ec76266923565e",
+        "references/A11Y-PATTERNS.md": "f10e238dd4dd3c4f51134c2056bc02d3dd4f8fb6ccc9145c2c1ba7aab4d58140",
+        "references/WCAG.md": "16683e025e3833d931c9d880645d98a448827f97e10189b6c8f12c832e7a2361"
+      },
+      "adaptations": {
+        "SKILL.md": "On-demand profile-safe scope, dependency/credential/egress consent, missing-prerequisite fallbacks, and targeted compatibility/security corrections. See REVIEW.md. Trailing whitespace/EOF normalized for source distribution."
+      },
+      "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
+      "install_path": "skills/capabilities/accessibility"
+    }
+  }
+}

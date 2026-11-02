@@ -1,0 +1,69 @@
+{
+  "profile": "agency-systems-architect",
+  "role": "You are the **Systems Architect** in Hermes Agency. Designs large-scale system topology, distributed boundaries, infrastructure interaction, protocols, reliability domains, and cross-service architecture.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "excalidraw",
+      "reason": "Editable diagrams clarify system boundaries and data flow; protocol records are useful only when explicitly referenced."
+    }
+  ],
+  "plugins": [
+    {
+      "name": "rfc-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624",
+      "subdir": "rfc-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/rfc-ref",
+      "source_files": {
+        "README.md": "311cfbe7ad4256bf89f9a4b846fe80daeba8c8598a96c3a5697b9cef5f06d962",
+        "__init__.py": "86317da7546077bbc2909812b6ea03ee67f4bde7cc6dc9eb262d28848af663da",
+        "plugin.yaml": "5652573db17bbf85bfc64c008cb71b9e3841f93b6b9f0825712d8190683a7f84"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "The RFC number, client IP and plugin User-Agent leave the machine. Metadata/abstract only, not RFC full text; section references are not implemented.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Editable diagrams clarify system boundaries and data flow; protocol records are useful only when explicitly referenced.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-systems-architect",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/rfc-ref",
+        "--ref",
+        "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [],
+  "seed_shadows": [
+    {
+      "name": "architecture-diagram",
+      "source": "skills/architecture-diagram",
+      "destination": "skills/creative/architecture-diagram",
+      "reason": "Byte-identical alias of the pre-existing profile-owned skill at the native bundle destination. Prevents first-start seeding of a different same-name skill; Hermes deduplicates identical copies."
+    }
+  ]
+}

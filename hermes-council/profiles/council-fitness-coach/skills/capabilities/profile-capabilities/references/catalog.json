@@ -1,0 +1,56 @@
+{
+  "profile": "council-fitness-coach",
+  "role": "Plans and adapts training, movement, recovery, and practical fitness routines.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Current source verification supports coaching/stewardship without substituting for clinical, legal, financial or repair professionals."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "strava",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/strava/manifest.yaml",
+      "manifest_sha256": "5d8e159c5c697d1d62137d56714cf4b5c6df5d773d4bfa0cdc0acbb76b4103e1",
+      "source": "https://support.strava.com/en-us/articles/15401531-strava-mcp-connector",
+      "config": {
+        "url": "https://mcp.strava.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Strava subscription or Strava+Runna bundle and OAuth permission",
+        "Vendor documents read-only own-account data; authenticated tools not inspected here"
+      ],
+      "privacy": "Highly sensitive activity/location/health-related data flows from own Strava account into Hermes/model provider. Read-only does not remove disclosure risk. No medical authority implied.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional read-only activity history; requires user OAuth, a Strava subscription, and explicit health-data consent."
+    }
+  ],
+  "seed_shadows": []
+}

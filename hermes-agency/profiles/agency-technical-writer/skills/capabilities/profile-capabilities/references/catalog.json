@@ -1,0 +1,109 @@
+{
+  "profile": "agency-technical-writer",
+  "role": "You are the **Technical Writer** in Hermes Agency. Writes accurate developer and technical documentation such as READMEs, tutorials, API docs, architecture explanations, runbooks, migrations, and release guidance.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "simple-english",
+      "reason": "Controlled technical language and immutable-code/identifier rules improve clear instructions; use instead of a general voice pass on the same text."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "context7",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/context7/manifest.yaml",
+      "manifest_sha256": "b40a67ea1679ff5d932cfec2568c453baae4343183acaf2b80ffa4685b26888f",
+      "source": "https://context7.com/docs/resources/all-clients",
+      "config": {
+        "url": "https://mcp.context7.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "resolve-library-id",
+            "query-docs"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for catalog /mcp endpoint, confirmed anonymous discovery",
+        "Anonymous rate limits; optional higher limits use a user-owned API key; /mcp/oauth is a distinct optional OAuth URL, not silently substituted."
+      ],
+      "privacy": "Library identifiers, versions, natural-language queries and any pasted code sent as tool arguments go to Context7/Upstash; avoid private code and secrets.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Documentation and architectural research can use versioned library references and public upstream context."
+    },
+    {
+      "name": "deepwiki",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/deepwiki/manifest.yaml",
+      "manifest_sha256": "b574f35969398d6920a58c0878a7914c01479c8a7204150f9382f040c1a91262",
+      "source": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "config": {
+        "url": "https://mcp.deepwiki.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "ask_wiki_question",
+            "read_wiki_contents",
+            "read_wiki_structure"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; public-repository endpoint, not private Devin MCP"
+      ],
+      "privacy": "Repository identifiers and questions go to Cognition/DeepWiki and its hosted AI processing; public repositories only on this endpoint. Never paste private code.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Documentation and architectural research can use versioned library references and public upstream context."
+    }
+  ],
+  "seed_shadows": []
+}

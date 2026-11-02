@@ -1,0 +1,9 @@
+{
+  "profile": "hermes-wear",
+  "role": "Wrist-first assistant: concise, voice-friendly, safe capture and device-awareness without inventing device capabilities.",
+  "reason": "Retain all wrist and device-awareness skills and restricted toolsets. No shell-dependent bundle or remote account integration; capability guide explains safe discovery and offline degradation.",
+  "skills": [],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

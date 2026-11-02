@@ -1,0 +1,61 @@
+{
+  "profile": "council-recreation-guide",
+  "role": "Supports recreation as a legitimate part of a good life, especially when the user has forgotten what they enjoy outside obligation or numbing.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "maps",
+      "reason": "Location/route discovery uses public mapping services; disclose location queries, rate limits, and accessibility/freshness limits."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "alltrails",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/alltrails/manifest.yaml",
+      "manifest_sha256": "060aeab675c55cf3f55901c616a58a516bf3f51ea504f88af3f4a3f8b96d43c5",
+      "source": "https://www.alltrails.com/mcp",
+      "config": {
+        "url": "https://www.alltrails.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "find_trails_near_location",
+            "find_trails_within_bounds",
+            "search_trails_by_name",
+            "get_trail_details",
+            "get_trail_weather_overview"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint",
+        "Five tools returned 95347 schema characters in this review; leave disabled unless needed, prune/allowlist tools. This is characters, not a measured token count."
+      ],
+      "privacy": "Location/coordinates, route names and outdoor preferences go to AllTrails. Use coarse location when possible; routes/weather are not a safety guarantee.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional trails discovery; the catalog warns of unusually large tool schemas, so leave disabled and prune tools before activation."
+    }
+  ],
+  "seed_shadows": []
+}

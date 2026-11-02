@@ -1,0 +1,17 @@
+{
+  "name": "agency-security-engineer-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "osv-ref",
+      "ref": "43ab2b75e660db5edcfe2f215776294c45408b40"
+    },
+    {
+      "repo": "https://github.com/NousResearch/hermes-official-plugins",
+      "subdir": "snyk",
+      "ref": "abec9e822a23089943dd1d476a104bf746f19f86"
+    }
+  ]
+}

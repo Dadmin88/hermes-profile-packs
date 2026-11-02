@@ -1,0 +1,16 @@
+{
+  "profile": "agency-editor-in-chief",
+  "role": "You are the **Editor in Chief** in Hermes Agency. Owns editorial quality, voice, standards, review, and publication readiness across written content.",
+  "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.",
+  "skills": [],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": [
+    {
+      "name": "humanizer",
+      "source": "skills/humanizer",
+      "destination": "skills/creative/humanizer",
+      "reason": "Byte-identical alias of the pre-existing profile-owned skill at the native bundle destination. Prevents first-start seeding of a different same-name skill; Hermes deduplicates identical copies."
+    }
+  ]
+}

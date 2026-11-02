@@ -1,0 +1,14 @@
+{
+  "profile": "agency-qa-tester",
+  "role": "You are the **QA Tester** in Hermes Agency. Executes exploratory, functional, regression, integration, and end-to-end testing with reproducible evidence.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "dogfood",
+      "reason": "Browser-based exploratory checks add reproducible evidence; native/mobile-only tasks remain out of scope for this skill."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

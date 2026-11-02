@@ -17,6 +17,8 @@ class WearDistributionTests(unittest.TestCase):
                    "examples/device-capabilities.example.json", "examples/location-ok.example.json",
                    "examples/location-permission-required.example.json"}
         allowed.update(f"skills/{name}/SKILL.md" for name in SKILLS)
+        allowed.update({"skills/capabilities/profile-capabilities/SKILL.md",
+                        "skills/capabilities/profile-capabilities/references/catalog.json"})
         actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob("*") if p.is_file()}
         self.assertEqual(allowed, actual)
         for name in actual:
@@ -30,7 +32,7 @@ class WearDistributionTests(unittest.TestCase):
     def test_identity_and_tool_boundary(self):
         manifest = yaml.safe_load((ROOT / "distribution.yaml").read_text())
         self.assertEqual("hermes-wear", manifest["name"])
-        self.assertEqual("1.1.0", manifest["version"])
+        self.assertEqual("1.2.0", manifest["version"])
         config = yaml.safe_load((ROOT / "config.yaml").read_text())
         self.assertNotIn("model", config)
         expected = ["memory", "session_search", "skills", "web"]

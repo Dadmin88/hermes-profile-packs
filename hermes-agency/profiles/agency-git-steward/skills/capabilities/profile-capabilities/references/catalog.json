@@ -1,0 +1,101 @@
+{
+  "profile": "agency-git-steward",
+  "role": "You are the **Git Steward** in Hermes Agency. Owns safe source-control integration: repository state, branches, commits, rebases, merges, pull requests, conflicts, and history hygiene.",
+  "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.",
+  "skills": [],
+  "plugins": [
+    {
+      "name": "gh-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "bb0001012c5b213ce5a09b5905d859635c440c17",
+      "subdir": "gh-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/gh-ref",
+      "source_files": {
+        "README.md": "b753592053d25ba3bb0beb539a43ab4804a171bbfebb4a9cbda742c74f573911",
+        "__init__.py": "55067e8526ba9ab287de190867f6475830d49e4c30628343c02049392db4a85e",
+        "plugin.yaml": "c76fd728cdf6c7cba867851172b0d9462c352f58223b07135576889e8543d7e4"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "Public repository owner/name and issue/PR number, client IP and plugin User-Agent leave the machine. No token support; no private repositories, diffs or line-review comments.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation.",
+      "reason": "Optional public issue/PR context attachments; no private-repository or credential access, complement native Git workflows.",
+      "install_command": [
+        "hermes",
+        "-p",
+        "agency-git-steward",
+        "plugins",
+        "install",
+        "https://github.com/EloquentBrush0x/hermes-context-refs/gh-ref",
+        "--ref",
+        "bb0001012c5b213ce5a09b5905d859635c440c17",
+        "--no-enable",
+        "--no-deps"
+      ]
+    }
+  ],
+  "mcps": [
+    {
+      "name": "deepwiki",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/deepwiki/manifest.yaml",
+      "manifest_sha256": "b574f35969398d6920a58c0878a7914c01479c8a7204150f9382f040c1a91262",
+      "source": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "config": {
+        "url": "https://mcp.deepwiki.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "ask_wiki_question",
+            "read_wiki_contents",
+            "read_wiki_structure"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; public-repository endpoint, not private Devin MCP"
+      ],
+      "privacy": "Repository identifiers and questions go to Cognition/DeepWiki and its hosted AI processing; public repositories only on this endpoint. Never paste private code.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "GitHub-specific workflows and public upstream context; gh authentication is user-owned and DeepWiki is not a private-repository reader."
+    }
+  ],
+  "seed_shadows": []
+}

@@ -1,0 +1,104 @@
+{
+  "profile": "council-travel-planner",
+  "role": "Turns a trip idea into a coherent, current, user-controlled plan without inventing availability, prices, entry requirements, or bookings.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Current source verification supports coaching/stewardship without substituting for clinical, legal, financial or repair professionals."
+    },
+    {
+      "name": "maps",
+      "reason": "Location/route discovery uses public mapping services; disclose location queries, rate limits, and accessibility/freshness limits."
+    }
+  ],
+  "plugins": [],
+  "mcps": [
+    {
+      "name": "kiwi",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/kiwi/manifest.yaml",
+      "manifest_sha256": "ca50ca4a0ed0b9788c48e3f5fa1149bdbf77c4d981faa1b676e809f8ad80dc6b",
+      "source": "https://www.kiwi.com/stories/kiwi-mcp-connector/",
+      "config": {
+        "url": "https://mcp.kiwi.com",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "search-flight"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint; actual fares/availability change; vendor AI-client subscription examples are not a separate Hermes credential prerequisite"
+      ],
+      "privacy": "Flight origin/destination, dates, traveler counts and preferences go to Kiwi; avoid passport/payment/identity data. Booking occurs on linked website, not through these search tools.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Whitelist search-flight only; feedback-to-devs is an outbound feedback channel, not part of travel search."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional flight/hotel search sends trip details to third parties; booking and payment stay outside the default profile."
+    },
+    {
+      "name": "trivago",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/trivago/manifest.yaml",
+      "manifest_sha256": "030bb895dd76dc85d8439b409bbb4de2f58aa0dd5cddd29f903f647c45b1d8ec",
+      "source": "https://mcp.trivago.com/mcp",
+      "config": {
+        "url": "https://mcp.trivago.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "trivago-accommodation-radius-search",
+            "trivago-accommodation-search",
+            "trivago-destination-price-trends"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint; compare quotes freshly; search is not booking/payment authorization"
+      ],
+      "privacy": "Destinations/coordinates, dates, guest composition and lodging filters go to trivago; booking occurs through linked vendors.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional flight/hotel search sends trip details to third parties; booking and payment stay outside the default profile."
+    }
+  ],
+  "seed_shadows": []
+}

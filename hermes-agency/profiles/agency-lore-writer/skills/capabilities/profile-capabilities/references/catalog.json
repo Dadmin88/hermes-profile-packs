@@ -1,0 +1,14 @@
+{
+  "profile": "agency-lore-writer",
+  "role": "You are the **Lore Writer** in Hermes Agency. Develops coherent world lore, histories, factions, cultures, terminology, and narrative background for fictional settings.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

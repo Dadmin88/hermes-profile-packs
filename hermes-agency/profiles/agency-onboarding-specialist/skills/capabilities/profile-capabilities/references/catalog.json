@@ -1,0 +1,14 @@
+{
+  "profile": "agency-onboarding-specialist",
+  "role": "You are the **Onboarding Specialist** in Hermes Agency. Designs first-run, setup, education, activation, and guided adoption experiences that help users reach value quickly.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "concept-diagrams",
+      "reason": "Self-contained instructional visuals complement existing curriculum and onboarding procedures."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

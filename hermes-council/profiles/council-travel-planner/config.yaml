@@ -1,0 +1,46 @@
+{
+  "mcp_servers": {
+    "kiwi": {
+      "url": "https://mcp.kiwi.com",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "search-flight"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    },
+    "trivago": {
+      "url": "https://mcp.trivago.com/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "trivago-accommodation-radius-search",
+          "trivago-accommodation-search",
+          "trivago-destination-price-trends"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

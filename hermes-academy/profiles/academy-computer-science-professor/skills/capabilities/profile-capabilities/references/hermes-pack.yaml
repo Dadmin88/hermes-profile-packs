@@ -1,0 +1,17 @@
+{
+  "name": "academy-computer-science-professor-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "pep-ref",
+      "ref": "20c7a0e1f56d6fea9761077f6994ab7b3d174b99"
+    },
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "rfc-ref",
+      "ref": "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624"
+    }
+  ]
+}

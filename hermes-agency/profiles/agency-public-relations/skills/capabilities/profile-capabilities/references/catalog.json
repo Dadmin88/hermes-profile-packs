@@ -1,0 +1,18 @@
+{
+  "profile": "agency-public-relations",
+  "role": "You are the **Public Relations** in Hermes Agency. Manages public narratives, media relations, announcements, statements, press materials, and reputation-sensitive communications.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Verify consequential product, commercial, campaign and policy claims against retrievable evidence rather than assert unsupported numbers."
+    },
+    {
+      "name": "humanizer",
+      "reason": "Optional editorial pass only: preserve facts, quotes, brand voice and author intent; never treat detector evasion as a quality metric."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

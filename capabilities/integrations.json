@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "plugins": {
+    "rfc-ref": {
+      "name": "rfc-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "7d10da5365b5f6d9cfac8c9f5ce8fdc8273f6624",
+      "subdir": "rfc-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/rfc-ref",
+      "source_files": {
+        "README.md": "311cfbe7ad4256bf89f9a4b846fe80daeba8c8598a96c3a5697b9cef5f06d962",
+        "__init__.py": "86317da7546077bbc2909812b6ea03ee67f4bde7cc6dc9eb262d28848af663da",
+        "plugin.yaml": "5652573db17bbf85bfc64c008cb71b9e3841f93b6b9f0825712d8190683a7f84"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "The RFC number, client IP and plugin User-Agent leave the machine. Metadata/abstract only, not RFC full text; section references are not implemented.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    },
+    "osv-ref": {
+      "name": "osv-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "43ab2b75e660db5edcfe2f215776294c45408b40",
+      "subdir": "osv-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/osv-ref",
+      "source_files": {
+        "README.md": "ba7f4f460b04f964bada9b4c65e32837885eb6124575a91bc8a4193a5e9ed118",
+        "__init__.py": "95ca7dab21b7b0b0ddafa6b79b5b3cda68f9af27e7e07ec412329f6b46f99839",
+        "plugin.yaml": "b5629418608789552a426c9d8b511db12189501932a79c786db7f9806b6e5e6f"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "The vulnerability ID and up to four alias IDs, client IP and plugin User-Agent leave the machine. This retrieves advisory records; it does not inspect installed packages or establish exploitability.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    },
+    "gh-ref": {
+      "name": "gh-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "bb0001012c5b213ce5a09b5905d859635c440c17",
+      "subdir": "gh-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/gh-ref",
+      "source_files": {
+        "README.md": "b753592053d25ba3bb0beb539a43ab4804a171bbfebb4a9cbda742c74f573911",
+        "__init__.py": "55067e8526ba9ab287de190867f6475830d49e4c30628343c02049392db4a85e",
+        "plugin.yaml": "c76fd728cdf6c7cba867851172b0d9462c352f58223b07135576889e8543d7e4"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "Public repository owner/name and issue/PR number, client IP and plugin User-Agent leave the machine. No token support; no private repositories, diffs or line-review comments.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    },
+    "pep-ref": {
+      "name": "pep-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "20c7a0e1f56d6fea9761077f6994ab7b3d174b99",
+      "subdir": "pep-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/pep-ref",
+      "source_files": {
+        "README.md": "d235f002c82870cce201fcfd1caa841c7757a1a121bb5fccbc97403b622df16a",
+        "__init__.py": "c44cc082a4d308836f5b61bd8505708a7c76e689da35e98c0c6c57c6876529f1",
+        "plugin.yaml": "36290fc2096cb6507f3a99e18e57382f1513a37e17bef169469f1b39a535bd5e"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "PEP index and requested PEP page are fetched; client IP and plugin User-Agent leave the machine. Autocomplete and section matching run locally; the typed search prefix and section name are not sent.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    },
+    "wiki-ref": {
+      "name": "wiki-ref",
+      "repository": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "commit": "0154f6bfaafc837cc4af78742e6db7c087d5b5a7",
+      "subdir": "wiki-ref",
+      "identifier": "https://github.com/EloquentBrush0x/hermes-context-refs/wiki-ref",
+      "source_files": {
+        "README.md": "ec2a90a09318c0688ca42e506cdc6b5f7e5a5c4d3d9c0e56993c500676b974aa",
+        "__init__.py": "68a23fea849abaffa818aa921840f8ccec0ed9e1668b81f99b5f0faeb7cf6464",
+        "plugin.yaml": "9ac3dce1cea2b88e5543e0fa3f8a78ee8d8f9c5e1a3fa8cef9bf107fc327eac3"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes >=0.21 with ContextReferenceProvider API",
+        "Python standard library plus Hermes; no separate dependency or credential",
+        "Outbound HTTPS to the disclosed host, only on expansion/autocomplete"
+      ],
+      "privacy": {
+        "file_writes": false,
+        "subprocess": false,
+        "credentials_read": false,
+        "network_on_registration": false,
+        "same_https_host_redirects_only": true,
+        "proxy_note": "urllib honors the process standard proxy environment; a configured proxy also sees requests.",
+        "data_sent": "Article title AND typed autocomplete prefix leave the machine, along with client IP and User-Agent. Section names are matched locally. Do not type sensitive text after @wiki: even before submitting.",
+        "instruction_boundary": "Retrieved text is quoted untrusted reference data, not instructions; label is not a security sandbox."
+      },
+      "warnings": [
+        "Interactive context attachment only: not a general web tool, authenticated connector, or guarantee that headless/quiet/gateway callers expand references.",
+        "No new execution tool, hook, middleware or competing scheduler/orchestrator is registered.",
+        "MIT LICENSE is at upstream repository root, outside the installed subdir. A redistributed vendored payload must include that exact full copyright/permission notice; preserve original file hashes and separately record the added LICENSE. Native subdir installation publishes tmp_target only and does not visibly copy parent LICENSE (plugins_cmd_install.py:445,543)."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    },
+    "snyk": {
+      "name": "snyk",
+      "repository": "https://github.com/NousResearch/hermes-official-plugins",
+      "commit": "abec9e822a23089943dd1d476a104bf746f19f86",
+      "subdir": "snyk",
+      "identifier": "https://github.com/NousResearch/hermes-official-plugins/snyk",
+      "source_files": {
+        ".gitignore": "9addeec56619685bab330ff2184db9f205a1b4628f551ededcb97800b269ca3e",
+        "LICENSE": "821556e6336796450ab852d375117b48a4887e71d255794fd6318d99982a5ab6",
+        "README.md": "c2c14b013bdf8c00e278bd40ec757cbbaa063eda6b9c194a2692c36b28776b07",
+        "mcp.json": "c3718e7fe25a8174eb777e2a6ccf4d175b025307ce8fc3af4831dffcc3f013c3",
+        "plugin.json": "d4305d9ecee77b0ef406f61043b524ca06366ebd3ecf1756bda0c34ab76d49e8",
+        "skills/snyk-security-scan/SKILL.md": "3ac19dd90499cd8a5611ffa802439337693f0b7e6fa6f18bd4d72057d5ab2384",
+        "skills/snyk-security-scan/references/tools.md": "3d526cf6e6442dd681d300601b41f9684a916a636c3bb25fb8ceeca686d43b47"
+      },
+      "license": "MIT",
+      "prerequisites": [
+        "Hermes portable plugin support and native MCP dependencies",
+        "Node.js/npm/npx and first-start network access",
+        "Snyk account; browser login via snyk_auth, not Hermes vault or API key copy",
+        "Project package manager for SCA; relevant image/IaC/SBOM artifacts; account feature/test quotas"
+      ],
+      "privacy": {
+        "data_sent": "SAST uploads source; SCA uploads dependency graph; scans and package intelligence contact Snyk cloud. Private/client code and dependency disclosure require explicit consent per target.",
+        "credentials": "Snyk CLI stores its own token/config outside Hermes; cross-profile credential/state isolation is not established. No account was connected.",
+        "telemetry": "Pinned wrapper disables CLI analytics via flag and SNYK_DISABLE_ANALYTICS=1, but still exposes snyk_send_feedback; the skill-only opt-in is not technical removal.",
+        "trust": "The raw pinned portable package has no Hermes trust:untrusted extension; do not treat it as sandboxed."
+      },
+      "warnings": [
+        "Never enable automatically as part of a broad plugin pack or profile install.",
+        "Pinned README/SKILL use obsolete long hashed tool prefixes; current Hermes uses mcp__<server>__<tool>. Discover tools rather than copying those names.",
+        "Wrapper, not the Snyk CLI/dependencies/cloud, was reviewed in full. No scanner readiness or license review of downloaded CLI dependency tree is claimed."
+      ],
+      "runtime_status": "Wrapper contract reviewed; authenticated/downstream application execution not tested. Install disabled; read exact declared permissions and resolve same-name conflicts before activation."
+    }
+  },
+  "mcps": {
+    "context7": {
+      "name": "context7",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/context7/manifest.yaml",
+      "manifest_sha256": "b40a67ea1679ff5d932cfec2568c453baae4343183acaf2b80ffa4685b26888f",
+      "source": "https://context7.com/docs/resources/all-clients",
+      "config": {
+        "url": "https://mcp.context7.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "resolve-library-id",
+            "query-docs"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for catalog /mcp endpoint, confirmed anonymous discovery",
+        "Anonymous rate limits; optional higher limits use a user-owned API key; /mcp/oauth is a distinct optional OAuth URL, not silently substituted."
+      ],
+      "privacy": "Library identifiers, versions, natural-language queries and any pasted code sent as tool arguments go to Context7/Upstash; avoid private code and secrets.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "deepwiki": {
+      "name": "deepwiki",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/deepwiki/manifest.yaml",
+      "manifest_sha256": "b574f35969398d6920a58c0878a7914c01479c8a7204150f9382f040c1a91262",
+      "source": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "config": {
+        "url": "https://mcp.deepwiki.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "ask_wiki_question",
+            "read_wiki_contents",
+            "read_wiki_structure"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; public-repository endpoint, not private Devin MCP"
+      ],
+      "privacy": "Repository identifiers and questions go to Cognition/DeepWiki and its hosted AI processing; public repositories only on this endpoint. Never paste private code.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "aws-knowledge": {
+      "name": "aws-knowledge",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/aws-knowledge/manifest.yaml",
+      "manifest_sha256": "ced8013639a85db3b4d6173885ee50fd6480f2cf51bf324fb18d7850c0979a5f",
+      "source": "https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server/",
+      "config": {
+        "url": "https://knowledge-mcp.global.api.aws",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "aws___read_documentation",
+            "aws___search_documentation",
+            "aws___list_regions",
+            "aws___get_regional_availability"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; HTTPS/network; service rate limits"
+      ],
+      "privacy": "Queries, region selections and documentation URLs go to AWS; no AWS account API credentials required. Not a live AWS account management connector.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Exclude aws___retrieve_skill; vendor-authored workflow/skill retrieval is not the Hermes skills layer. Search tool descriptions still mention agent_skills; do not follow that as an auto-install instruction."
+      ],
+      "required_tool_exclusions": [
+        "aws___retrieve_skill"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "microsoft-learn": {
+      "name": "microsoft-learn",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/microsoft-learn/manifest.yaml",
+      "manifest_sha256": "846a5847a35e8347fb263aba930056b0fff5b08c1367efc26956a7b119e20a9c",
+      "source": "https://learn.microsoft.com/en-us/training/support/mcp-get-started",
+      "config": {
+        "url": "https://learn.microsoft.com/api/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "microsoft_docs_search",
+            "microsoft_code_sample_search",
+            "microsoft_docs_fetch"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential; HTTPS/network"
+      ],
+      "privacy": "Queries and docs URLs go to Microsoft; no tenant/account administration access is implied.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "sentry": {
+      "name": "sentry",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/sentry/manifest.yaml",
+      "manifest_sha256": "f8c20053a1472cfd3d5e98e0ffeae9ef43ca5b258ce555bc016624f13a8b3cf6",
+      "source": "https://docs.sentry.io/product/sentry-mcp/",
+      "config": {
+        "url": "https://mcp.sentry.dev/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Sentry account/org access and OAuth approval; provider quotas/features"
+      ],
+      "privacy": "Issue data, stack traces, request context and possible PII/secrets flow from Sentry into Hermes/model provider. Account scope must be minimized and data redacted.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "grafana": {
+      "name": "grafana",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/grafana/manifest.yaml",
+      "manifest_sha256": "8658ac97af107d76994330f298d0ae2d87b35caa9c16837100aa0de6f6a7710c",
+      "source": "https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/",
+      "config": {
+        "url": "https://mcp.grafana.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Hosted Grafana Cloud stack and suitable RBAC/Assistant MCP role",
+        "OAuth; choose Read access only initially (clear both Query and Write to prohibit raw SQL and writes)",
+        "Each connecting MCP user counts as an active Grafana Assistant user for billing; explicit cost consent"
+      ],
+      "privacy": "Cloud dashboards, raw queries/logs/metrics can reveal infrastructure, customer data and credentials to the model. This is hosted Grafana Cloud, not self-hosted OSS.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Catalog excludes ask_assistant and agento11y_*; maintain exclusion even if switching from initially empty include to selected exact names. Connecting itself may incur active-user billing, before any tool use."
+      ],
+      "required_tool_exclusions": [
+        "ask_assistant",
+        "agento11y_*"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "linear": {
+      "name": "linear",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/linear/manifest.yaml",
+      "manifest_sha256": "88d93ae81ff175952802a6cca2b72c3f1be5cd113623dae6b53a67823e44770e",
+      "source": "https://linear.app/docs/mcp",
+      "config": {
+        "url": "https://mcp.linear.app/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Linear workspace membership and OAuth; select read-only OAuth scope first",
+        "Read/write tools need separate per-action authorization; no second coordination system"
+      ],
+      "privacy": "Private issues, projects and comments flow from Linear into Hermes/model provider; default endpoint grants read/write unless scoped.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "wolfram": {
+      "name": "wolfram",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/wolfram/manifest.yaml",
+      "manifest_sha256": "69d103768ecac7dc398e83015ba3c916932b24f0d42569508bcf2e69971c73f5",
+      "source": "https://www.wolfram.com/agent-tools/",
+      "config": {
+        "url": "https://agenttools.wolfram.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "WolframLanguageEvaluator",
+            "WolframAlpha"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "No credential for observed cloud endpoint; free per vendor support page; subject to service limits",
+        "Not local Wolfram Desktop; hosted code/results cannot be pinned by this manifest"
+      ],
+      "privacy": "The expression, source code or natural-language query is evaluated on Wolfram infrastructure. Never send private datasets/secrets. Do not obey the vendor WolframContext description asking for automatic conversation context uploads.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Locally strengthened catalog policy: whitelist WolframAlpha and WolframLanguageEvaluator, excluding WolframContext because it requests automatic conversation/context disclosure."
+      ],
+      "required_tool_exclusions": [
+        "WolframContext"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "kiwi": {
+      "name": "kiwi",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/kiwi/manifest.yaml",
+      "manifest_sha256": "ca50ca4a0ed0b9788c48e3f5fa1149bdbf77c4d981faa1b676e809f8ad80dc6b",
+      "source": "https://www.kiwi.com/stories/kiwi-mcp-connector/",
+      "config": {
+        "url": "https://mcp.kiwi.com",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "search-flight"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint; actual fares/availability change; vendor AI-client subscription examples are not a separate Hermes credential prerequisite"
+      ],
+      "privacy": "Flight origin/destination, dates, traveler counts and preferences go to Kiwi; avoid passport/payment/identity data. Booking occurs on linked website, not through these search tools.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity.",
+        "Whitelist search-flight only; feedback-to-devs is an outbound feedback channel, not part of travel search."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "trivago": {
+      "name": "trivago",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/trivago/manifest.yaml",
+      "manifest_sha256": "030bb895dd76dc85d8439b409bbb4de2f58aa0dd5cddd29f903f647c45b1d8ec",
+      "source": "https://mcp.trivago.com/mcp",
+      "config": {
+        "url": "https://mcp.trivago.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "trivago-accommodation-radius-search",
+            "trivago-accommodation-search",
+            "trivago-destination-price-trends"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint; compare quotes freshly; search is not booking/payment authorization"
+      ],
+      "privacy": "Destinations/coordinates, dates, guest composition and lodging filters go to trivago; booking occurs through linked vendors.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "alltrails": {
+      "name": "alltrails",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/alltrails/manifest.yaml",
+      "manifest_sha256": "060aeab675c55cf3f55901c616a58a516bf3f51ea504f88af3f4a3f8b96d43c5",
+      "source": "https://www.alltrails.com/mcp",
+      "config": {
+        "url": "https://www.alltrails.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "find_trails_near_location",
+            "find_trails_within_bounds",
+            "search_trails_by_name",
+            "get_trail_details",
+            "get_trail_weather_overview"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Anonymous endpoint",
+        "Five tools returned 95347 schema characters in this review; leave disabled unless needed, prune/allowlist tools. This is characters, not a measured token count."
+      ],
+      "privacy": "Location/coordinates, route names and outdoor preferences go to AllTrails. Use coarse location when possible; routes/weather are not a safety guarantee.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "strava": {
+      "name": "strava",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/strava/manifest.yaml",
+      "manifest_sha256": "5d8e159c5c697d1d62137d56714cf4b5c6df5d773d4bfa0cdc0acbb76b4103e1",
+      "source": "https://support.strava.com/en-us/articles/15401531-strava-mcp-connector",
+      "config": {
+        "url": "https://mcp.strava.com/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Strava subscription or Strava+Runna bundle and OAuth permission",
+        "Vendor documents read-only own-account data; authenticated tools not inspected here"
+      ],
+      "privacy": "Highly sensitive activity/location/health-related data flows from own Strava account into Hermes/model provider. Read-only does not remove disclosure risk. No medical authority implied.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    },
+    "todoist": {
+      "name": "todoist",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/todoist/manifest.yaml",
+      "manifest_sha256": "d72318031f1b71e4db9f645ee660dc5d287c91d585559f70357be78766bb8f0b",
+      "source": "https://www.todoist.com/help/articles/todoist-mcp-server",
+      "config": {
+        "url": "https://ai.todoist.net/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Todoist account and OAuth; managed org may need admin approval",
+        "History/other features depend on plan; do not replace Hermes native todo/cron with a competing automatic scheduler"
+      ],
+      "privacy": "Tasks/projects and personal schedule flow into model context; OAuth commonly requests data:read_write. Mutation/completion/deletion need explicit intent.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [
+        "search",
+        "fetch",
+        "export-project-template",
+        "import-project-template"
+      ],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed."
+    }
+  },
+  "excluded": {
+    "image-utils": [
+      "No-addition for this wave: generic raster resizing/format conversion overlaps existing terminal/Pillow workflows; Blender is the stronger nonredundant creative candidate.",
+      "Full 80KB tools.py implementation and all tests were inventoried but not read/reviewed end-to-end; do not certify as fully audited.",
+      "install.sh defaults to discovering/enabling every profile under ~/.hermes, creates live source symlinks and restarts gateways. Never run it for this portable scoped upgrade.",
+      "Pillow dependency is not declared in plugin.yaml; portability/readiness would need explicit dependency treatment and tests."
+    ],
+    "figma": [
+      "Hold activation: vendor approved-client restriction conflicts with generic native-client onboarding; pinned Hermes uses a Claude Code client_name compatibility default. Do not disguise a client or claim approval based on DCR metadata. Prefer documented local desktop MCP only after separate user-approved setup."
+    ],
+    "atlassian": [
+      "Hold activation/migration pending reviewed URL policy: catalog pins https://mcp.atlassian.com/v1/mcp/authv2 (401 + valid metadata observed), while current official docs recommend https://mcp.atlassian.com/v2/mcp and describe v1 transition. Do not silently rewrite either endpoint or claim authenticated interoperability."
+    ],
+    "indeed": [
+      "Hold portable promotion: official beta documentation explicitly restricts to Claude Connector. The unauthenticated 401/DCR metadata does not establish allowed generic Hermes use."
+    ],
+    "blender": [
+      "Reviewed wrapper, but raw skill auto-launches Blender online with a persistent unauthenticated local Python bridge. Existing scene/pipeline skills remain the safe default; do not package unverified downstream execution."
+    ]
+  },
+  "policy": "Disabled by default. Account, code-upload, billing, dependency and application permissions are separate explicit opt-ins. Hosted code is not pinned by a catalog commit."
+}

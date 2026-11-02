@@ -1,0 +1,25 @@
+{
+  "profile": "agency-market-researcher",
+  "role": "You are the **Market Researcher** in Hermes Agency. Researches markets, customers, categories, pricing, demand, trends, and market structure using current evidence.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "rss-feeds",
+      "reason": "Read-only structured release/news discovery adds deduplicated source coverage without creating a scheduler or new persistence system."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": [
+    {
+      "name": "grounded-citations",
+      "source": "skills/grounded-citations",
+      "destination": "skills/research/grounded-citations",
+      "reason": "Byte-identical alias of the pre-existing profile-owned skill at the native bundle destination. Prevents first-start seeding of a different same-name skill; Hermes deduplicates identical copies."
+    }
+  ]
+}

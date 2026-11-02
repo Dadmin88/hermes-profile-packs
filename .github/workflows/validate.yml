@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Prepare validation dependency
+        run: python -m pip install PyYAML==6.0.3
       - name: Validate repository
         run: python validate.py
       - name: Root installer unit tests

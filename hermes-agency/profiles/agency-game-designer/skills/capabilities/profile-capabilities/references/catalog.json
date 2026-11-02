@@ -1,0 +1,14 @@
+{
+  "profile": "agency-game-designer",
+  "role": "You are the **Game Designer** in Hermes Agency. Designs gameplay systems, mechanics, rules, progression, balance, player feedback, and experiential goals.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

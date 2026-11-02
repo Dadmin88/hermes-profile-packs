@@ -1,0 +1,12 @@
+{
+  "name": "academy-social-sciences-professor-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "wiki-ref",
+      "ref": "0154f6bfaafc837cc4af78742e6db7c087d5b5a7"
+    }
+  ]
+}

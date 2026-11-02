@@ -124,6 +124,12 @@ def main() -> int:
 
     errors.extend(validate_recipes(profile_to_pack, pack_keys))
 
+    import capabilities
+    try:
+        errors.extend(capabilities.run(ROOT, check=True))
+    except (ValueError, KeyError, OSError) as exc:
+        errors.append(f"capability validation failed: {exc}")
+
     readme_count_check = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "update_readme_counts.py"), "--check"],
         cwd=ROOT,

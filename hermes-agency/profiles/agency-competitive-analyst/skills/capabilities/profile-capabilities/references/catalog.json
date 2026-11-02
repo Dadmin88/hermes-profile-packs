@@ -1,0 +1,22 @@
+{
+  "profile": "agency-competitive-analyst",
+  "role": "You are the **Competitive Analyst** in Hermes Agency. Researches competitors, alternatives, market movements, and differentiation to support product and positioning decisions.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "rss-feeds",
+      "reason": "Read-only structured release/news discovery adds deduplicated source coverage without creating a scheduler or new persistence system."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

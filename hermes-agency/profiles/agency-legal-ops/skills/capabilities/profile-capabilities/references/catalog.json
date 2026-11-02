@@ -1,0 +1,22 @@
+{
+  "profile": "agency-legal-ops",
+  "role": "You are the **Legal Operations** in Hermes Agency. Organizes legal workflows, contract operations, licensing checks, policy coordination, and issues that require qualified legal review.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "blocked-page-recovery",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    },
+    {
+      "name": "document-to-action-items",
+      "reason": "Cited obligations and deadlines improve operational follow-through without creating tasks or messages automatically."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Source-grounded synthesis and lawful retrieval fallbacks complement evidence-sensitive specialist work; no authentication or paywall bypass."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

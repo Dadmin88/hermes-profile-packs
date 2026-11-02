@@ -1,0 +1,14 @@
+{
+  "profile": "agency-technical-artist",
+  "role": "You are the **Technical Artist** in Hermes Agency. Bridges art and engineering by building shaders, asset pipelines, procedural tools, optimization workflows, and technically robust visual systems.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "creative-ideation",
+      "reason": "Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

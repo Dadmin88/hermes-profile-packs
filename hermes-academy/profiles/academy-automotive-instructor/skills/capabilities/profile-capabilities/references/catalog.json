@@ -1,0 +1,18 @@
+{
+  "profile": "academy-automotive-instructor",
+  "role": "Teaches automotive systems, diagnostics, maintenance reasoning, procedure literacy, and safety-first shop fundamentals.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "concept-diagrams",
+      "reason": "Dependency-free SVG/HTML explanations support systems, quantitative and physical reasoning without expanding teaching into professional execution."
+    },
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}

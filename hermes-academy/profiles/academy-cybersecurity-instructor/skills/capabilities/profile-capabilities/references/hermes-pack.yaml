@@ -1,0 +1,12 @@
+{
+  "name": "academy-cybersecurity-instructor-integrations",
+  "version": "1.0.0",
+  "description": "Optional reviewed integrations; never installed automatically.",
+  "plugins": [
+    {
+      "repo": "https://github.com/EloquentBrush0x/hermes-context-refs",
+      "subdir": "osv-ref",
+      "ref": "43ab2b75e660db5edcfe2f215776294c45408b40"
+    }
+  ]
+}

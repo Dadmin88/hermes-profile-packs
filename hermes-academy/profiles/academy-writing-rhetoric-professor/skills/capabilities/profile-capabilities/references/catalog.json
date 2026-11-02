@@ -1,0 +1,14 @@
+{
+  "profile": "academy-writing-rhetoric-professor",
+  "role": "Teaches composition, grammar, rhetoric, argument, revision, and evidence-based academic or professional writing.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "skills": [
+    {
+      "name": "grounded-citations",
+      "reason": "Teaching should distinguish verified sources from illustrative examples and preserve learner assessment integrity."
+    }
+  ],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}
