@@ -2,6 +2,8 @@
   "schema_version": 1,
   "description": "Routing evaluation cases for professional Agency profile selection and the profile-before-node Fleet contract.",
   "cases": [
+    {"id":"pixel-art-production","task":"Draw a 32×32 pixel-art character, animate its four-direction walk with fixed foot registration, and deliver an editable sprite and PNG atlas.","expected_profile":"agency-pixel-artist","expected_runtime_action":"resolve-profile-presence"},
+    {"id":"pixel-tileset-production","task":"Create seamless 16×16 pixel-art terrain tiles with interior and exterior corners and verify a tiled adjacency patch.","expected_profile":"agency-pixel-artist","expected_runtime_action":"resolve-profile-presence"},
     {"id":"product-behavior","task":"Define the user-visible behavior and acceptance criteria for a new invitation redemption feature.","expected_profile":"agency-product-manager","expected_runtime_action":"resolve-profile-presence"},
     {"id":"technical-execution","task":"Turn accepted product scope and architecture into an implementation sequence across backend, frontend, and QA owners.","expected_profile":"agency-technical-lead","expected_runtime_action":"resolve-profile-presence"},
     {"id":"software-boundaries","task":"Decide durable service interfaces, dependency direction, migration shape, and failure behavior for a cross-repository change.","expected_profile":"agency-software-architect","expected_runtime_action":"resolve-profile-presence"},

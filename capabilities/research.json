@@ -1171,6 +1171,72 @@
           "description": "A distilled, model-aware checklist for writing high-quality prompts for Claude's latest models, built from Anthropic's prompt-engineering overview and best-practices docs (LaTeX guidance excluded)."
         }
       ]
+    },
+    {
+      "query": "pixel art",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "pixel-art",
+          "identifier": "official/creative/pixel-art",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Official retro palette conversion and scene overlays. Vendored with attribution and the full local scripts."
+        },
+        {
+          "name": "Pixel Art Processing",
+          "identifier": "pixel-art-processing",
+          "source": "clawhub",
+          "trust_level": "community",
+          "description": "Sprite-sheet and image processing. No verified source pin selected."
+        }
+      ]
+    },
+    {
+      "query": "creative ideation",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "creative-ideation",
+          "identifier": "official/creative/creative-ideation",
+          "source": "official",
+          "trust_level": "builtin",
+          "description": "Reused the pack\u2019s already-reviewed local ideation workflow."
+        }
+      ]
+    },
+    {
+      "query": "tileset",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "layer-tilesets",
+          "identifier": "skills-sh/layerai/skills/layer-tilesets",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Hosted provider workflow outside the local editor requirement."
+        },
+        {
+          "name": "spritecook-use-dual-grid-tilesets",
+          "identifier": "skills-sh/spritecook/skills/spritecook-use-dual-grid-tilesets",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Reviewed fixed SpriteCook atlas convention. The role needs to support project-specific terrain schemes."
+        }
+      ]
+    },
+    {
+      "query": "sprite animation",
+      "returncode": 0,
+      "results": [
+        {
+          "name": "sprite-animation-assets",
+          "identifier": "skills-sh/dwdestiny/codex-visual-asset-skills/sprite-animation-assets",
+          "source": "skills.sh",
+          "trust_level": "community",
+          "description": "Automatic frame centering conflicts with preserving the source pivot. The profile uses native editor exports with fixed registration."
+        }
+      ]
     }
   ],
   "rejected": {

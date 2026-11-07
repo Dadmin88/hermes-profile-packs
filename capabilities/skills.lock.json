@@ -783,6 +783,40 @@
       },
       "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
       "install_path": "skills/capabilities/accessibility"
+    },
+    "pixel-art": {
+      "name": "pixel-art",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "787ee808ae898e5aca55e519379ff6842d6a0911",
+      "path": "optional-skills/creative/pixel-art",
+      "version": "2.0.0",
+      "license": "MIT",
+      "author": "dodo-reach and Hermes Agent contributors",
+      "upstream_files": {
+        "ATTRIBUTION.md": "16e33382764250a5da332c3727e2383ae27ea5ddd05c0ef52071cb94d3562c22",
+        "SKILL.md": "eae06833ec560c7061e5c168a83fb564832c58f14c13c836c585fa013fd07aed",
+        "references/palettes.md": "ee2f510b1b3a6913f6ec19fb716573c173d8d251413fde4a8622009d6b5934fa",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/palettes.py": "102f8fa198ab00eb14ef37dcfc4db274a81e0522cd311e24f08ba24eb7e0962a",
+        "scripts/pixel_art.py": "16835553dc7350f32c03c600c5ff8811b4ea08fc324713b2ebd5f23f72bc5a22",
+        "scripts/pixel_art_video.py": "e483415bbccddb5447c66bc1aaecf9c29aad80e86c246be95ff5c777c81c1aac"
+      },
+      "files": {
+        "ATTRIBUTION.md": "16e33382764250a5da332c3727e2383ae27ea5ddd05c0ef52071cb94d3562c22",
+        "LICENSE": "819a3ebe3136787fed5229b0cfe55b26a07fbfde2191ae0ee65b12b7e44eaf85",
+        "REVIEW.md": "23a13469df19d648ed55fe9fa5249c477b13fe8150e43dbd6c3327ee044e374c",
+        "SKILL.md": "c22c6f5de823ed2fae4788300f6308497423479dae6a2a362a895e3d3814bac2",
+        "references/palettes.md": "ee2f510b1b3a6913f6ec19fb716573c173d8d251413fde4a8622009d6b5934fa",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/palettes.py": "102f8fa198ab00eb14ef37dcfc4db274a81e0522cd311e24f08ba24eb7e0962a",
+        "scripts/pixel_art.py": "16835553dc7350f32c03c600c5ff8811b4ea08fc324713b2ebd5f23f72bc5a22",
+        "scripts/pixel_art_video.py": "e483415bbccddb5447c66bc1aaecf9c29aad80e86c246be95ff5c777c81c1aac"
+      },
+      "adaptations": {
+        "SKILL.md": "Use profile-relative discovery, explicit local inputs and outputs, and document RGB/overlay limitations. See REVIEW.md."
+      },
+      "review": "Complete official Hub tree reviewed, including local Pillow and ffmpeg execution and upstream notices.",
+      "install_path": "skills/capabilities/pixel-art"
     }
   }
 }
