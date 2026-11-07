@@ -36,10 +36,10 @@
     "agency-software-architect",
     "agency-technical-lead"
   ],
-  "profile_count": 113,
+  "profile_count": 114,
   "categories": {
     "content": 10,
-    "design": 19,
+    "design": 20,
     "engineering": 29,
     "leadership": 10,
     "marketing": 12,
@@ -119,6 +119,7 @@
     {"name":"agency-platform-engineer","display_name":"Platform Engineer","category":"engineering"},
     {"name":"agency-privacy-engineer","display_name":"Privacy Engineer","category":"engineering"},
     {"name":"agency-procurement-specialist","display_name":"Procurement Specialist","category":"support"},
+    {"name":"agency-pixel-artist","display_name":"Agency Pixel Artist","category":"design"},
     {"name":"agency-product-designer","display_name":"Product Designer","category":"design"},
     {"name":"agency-product-manager","display_name":"Product Manager","category":"product"},
     {"name":"agency-product-marketing-manager","display_name":"Product Marketing Manager","category":"marketing"},
