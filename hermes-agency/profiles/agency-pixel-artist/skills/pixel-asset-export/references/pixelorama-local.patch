@@ -79,6 +79,31 @@ index 88541d1..e1c2520 100644
 -  );
 +
  }
+diff --git a/mcp-server/src/utils/schema_helpers.ts b/mcp-server/src/utils/schema_helpers.ts
+index 9f0efb6..31a872d 100644
+--- a/mcp-server/src/utils/schema_helpers.ts
++++ b/mcp-server/src/utils/schema_helpers.ts
+@@ -187,7 +187,7 @@ export const MAX_FLAT_PIXEL_ELEMENTS = 300_000;
+ 
+ /**
+  * High-performance flat array schema for batch pixel drawing.
+- * Validates Array structure in O(1) time without per-element Zod union allocations,
++ * Uses a JSON Schema-compatible array of numbers and strings,
+  * and guards against memory exhaustion with an informative limit error.
+  */
+ export const fastFlatArraySchema = z
+@@ -201,10 +201,7 @@ export const fastFlatArraySchema = z
+       }
+     }
+     return val;
+-  }, z.custom<Array<number | string>>(
+-    (val) => Array.isArray(val),
+-    { message: "Expected a flat array of numbers and hex color strings" }
+-  ))
++  }, z.array(z.union([z.number(), z.string()])))
+   .superRefine((arr, ctx) => {
+     if (arr.length <= MAX_FLAT_PIXEL_ELEMENTS) return;
+     const maxPixels = Math.floor(MAX_FLAT_PIXEL_ELEMENTS / 3);
 diff --git a/pixelorama-plugin/Main.gd b/pixelorama-plugin/Main.gd
 index f0ebacd..86dadec 100644
 --- a/pixelorama-plugin/Main.gd

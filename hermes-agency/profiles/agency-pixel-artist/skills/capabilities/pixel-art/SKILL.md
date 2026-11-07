@@ -125,6 +125,7 @@ Quantizing before would waste error-diffusion on detail that disappears.
 - Very small sources (<100px wide) collapse under 8-10px blocks. Upscale the
   source first if it's tiny.
 - Fractional `block` or `palette` will break quantization — keep them positive ints.
+- MP4 export pads an odd width or height by one pixel for encoding.
 - Animation particle counts are tuned for ~640x480 canvases. On very large
   images you may want a second pass with a different seed for density.
 - `mono_green` / `mono_amber` force `color=0.0` (desaturate). If you override

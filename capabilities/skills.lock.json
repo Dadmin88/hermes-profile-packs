@@ -804,16 +804,17 @@
       "files": {
         "ATTRIBUTION.md": "16e33382764250a5da332c3727e2383ae27ea5ddd05c0ef52071cb94d3562c22",
         "LICENSE": "819a3ebe3136787fed5229b0cfe55b26a07fbfde2191ae0ee65b12b7e44eaf85",
-        "REVIEW.md": "23a13469df19d648ed55fe9fa5249c477b13fe8150e43dbd6c3327ee044e374c",
-        "SKILL.md": "c22c6f5de823ed2fae4788300f6308497423479dae6a2a362a895e3d3814bac2",
+        "REVIEW.md": "691dc2a49d62b964f674dd6a07533a2e34c98a17a70f4982dea786bb5623047e",
+        "SKILL.md": "69946e6c7dd570ba786f0335780817fee00c7ef2fa0527d379867139f64413c3",
         "references/palettes.md": "ee2f510b1b3a6913f6ec19fb716573c173d8d251413fde4a8622009d6b5934fa",
         "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "scripts/palettes.py": "102f8fa198ab00eb14ef37dcfc4db274a81e0522cd311e24f08ba24eb7e0962a",
         "scripts/pixel_art.py": "16835553dc7350f32c03c600c5ff8811b4ea08fc324713b2ebd5f23f72bc5a22",
-        "scripts/pixel_art_video.py": "e483415bbccddb5447c66bc1aaecf9c29aad80e86c246be95ff5c777c81c1aac"
+        "scripts/pixel_art_video.py": "7a920e43e3f2a5c6f356b83852f2f327001bb6f7053327f31f3bd6800e663c7a"
       },
       "adaptations": {
-        "SKILL.md": "Use profile-relative discovery, explicit local inputs and outputs, and document RGB/overlay limitations. See REVIEW.md."
+        "SKILL.md": "Use profile-relative discovery, explicit local inputs and outputs, and document RGB/overlay limitations. See REVIEW.md.",
+        "scripts/pixel_art_video.py": "Clamp scene particle margins for small canvases and pad odd dimensions for H.264."
       },
       "review": "Complete official Hub tree reviewed, including local Pillow and ffmpeg execution and upstream notices.",
       "install_path": "skills/capabilities/pixel-art"

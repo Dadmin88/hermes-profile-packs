@@ -54,7 +54,8 @@ def draw_stars(draw, stars, t, W, H):
 
 
 def init_fireflies(rng, W, H):
-    return [{"x": rng.randint(20, W - 20), "y": rng.randint(H // 4, H - 20),
+    margin = min(20, W // 2)
+    return [{"x": rng.randint(margin, W - margin), "y": rng.randint(H // 4, max(H // 4, H - 20)),
              "phase": rng.uniform(0, 6.28), "speed": rng.uniform(0.3, 0.8)}
             for _ in range(10)]
 
@@ -84,7 +85,9 @@ def draw_leaves(draw, leaves, t, W, H):
 
 
 def init_dust_motes(rng, W, H):
-    return [{"x": rng.randint(30, W - 30), "y": rng.randint(30, H - 30),
+    margin_x = min(30, W // 2)
+    margin_y = min(30, H // 2)
+    return [{"x": rng.randint(margin_x, W - margin_x), "y": rng.randint(margin_y, H - margin_y),
              "phase": rng.uniform(0, 6.28), "speed": rng.uniform(0.2, 0.5),
              "amp": rng.uniform(2, 6)} for _ in range(20)]
 
@@ -137,7 +140,8 @@ def draw_lightning(draw, state, t, W, H):
 
 
 def init_bubbles(rng, W, H):
-    return [{"x": rng.randint(20, W - 20), "y": rng.randint(H, H * 2),
+    margin = min(20, W // 2)
+    return [{"x": rng.randint(margin, W - margin), "y": rng.randint(H, H * 2),
              "speed": rng.uniform(0.3, 0.8), "size": rng.choice([1, 2, 2])}
             for _ in range(15)]
 
@@ -298,6 +302,7 @@ def pixel_art_video(
             ["ffmpeg", "-y", "-loglevel", "error",
              "-framerate", str(fps),
              "-i", os.path.join(frames_dir, "frame_%04d.png"),
+             "-vf", "pad=ceil(iw/2)*2:ceil(ih/2)*2",
              "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18",
              output_path],
             stdin=subprocess.DEVNULL, check=True,

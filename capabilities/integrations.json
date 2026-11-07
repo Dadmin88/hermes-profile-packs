@@ -938,14 +938,15 @@
       "warnings": [
         "The bridge acts on the active tab and runs with local editor permissions. Work in a dedicated tab and inspect the target cel.",
         "The patch unregisters raw GDScript execution from both MCP and the editor bridge. Ordinary drawing, animation, palettes, tile tools, and export remain available.",
-        "Use the patched build and avoid forwarding its loopback listener."
+        "Use the patched build and avoid forwarding its loopback listener.",
+        "The patch makes the bulk pixel input representable in JSON Schema, which fixes MCP tools/list with the pinned SDK and Zod."
       ],
       "required_tool_exclusions": [
         "eval_gdscript"
       ],
-      "runtime_status": "Editor installation and activation are explicit; see the Pixel Asset Export skill for verification.",
+      "runtime_status": "Pixelorama 1.2.3 scratch MCP smoke passed: discovery, batch pixel drawing, frame timing, tags, and 16×16 PNG export. Browser-origin calls were rejected.",
       "setup_patch": "skills/pixel-asset-export/references/pixelorama-local.patch",
-      "setup_patch_sha256": "adbeee49b682b1b548c14773d8404b726405d502404424c412f18c96d23b3db2"
+      "setup_patch_sha256": "7312a59d9453277f8819b14fb3e130e3ace1f6b10135805b56412faed04682ac"
     },
     "aseprite": {
       "name": "aseprite",
@@ -1083,7 +1084,7 @@
         "The server can write files with your permissions. Keep HTTP transport disabled and use working copies."
       ],
       "required_tool_exclusions": [],
-      "runtime_status": "Editor installation and activation are explicit; see the Pixel Asset Export skill for verification.",
+      "runtime_status": "Aseprite 1.3.18.6 scratch MCP smoke passed: discovery, sprite creation, pixel drawing, and two-frame PNG/JSON export with verified 150 ms timing.",
       "setup_patch": "skills/pixel-asset-export/references/aseprite-local.patch",
       "setup_patch_sha256": "039aed3b83c7f64ae3e1eed16994b820b8422c8ac4bf9293f33b0471d280ac44"
     }
