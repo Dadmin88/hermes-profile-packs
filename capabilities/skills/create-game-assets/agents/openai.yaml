@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Game Assets"
+  short_description: "Direct cohesive production-ready game art"
+  default_prompt: "Use $create-game-assets to define an art direction and build a consistent sprite set for my game."

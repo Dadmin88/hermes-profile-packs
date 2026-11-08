@@ -1250,5 +1250,27 @@
     "community-security-best-practices": "Role-owned security skills and native Hermes security scans already cover general review; no additional overriding language policy.",
     "generic-personal-domain-skills": "Retain existing narrow coaching skills rather than import competing personas, regulated advice or third-party storage.",
     "autonomous-orchestration-plugins": "Native delegation/cron/kanban already exist; no new control plane or unsolicited automation."
+  },
+  "game_development_review": {
+    "queries": [
+      "Godot",
+      "Blender",
+      "game design",
+      "playtest",
+      "level design",
+      "Ink",
+      "Twine",
+      "Audacity",
+      "audio",
+      "localization"
+    ],
+    "selected_source": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+    "selection_method": "Inspect the Hub listing, follow the canonical repository, review the selected trees and related references, and assign the smallest practical role bundle.",
+    "decisions": {
+      "donchitos/playtest-report": "Requires Claude hooks and agent gates. The pack already has native role-owned playtest and QA workflows.",
+      "Blender MCP": "Official Blender Lab MCP exposes arbitrary Python. The reviewed asset roles use Blender CLI and Khronos validation with trusted project copies.",
+      "hosted generators": "No generation account, uploads, or hosted asset service is required by these selections.",
+      "Godot MCP": "Pinned Vollkorn source. Local patch removes raw runtime execution, generic method/property RPCs, nested batches and remote asset operations."
+    }
   }
 }

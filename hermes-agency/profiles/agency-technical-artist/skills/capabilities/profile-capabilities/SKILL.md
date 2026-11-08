@@ -12,9 +12,16 @@ You are the **Technical Artist** in Hermes Agency. Bridges art and engineering b
 
 ## Role-specific selection
 
-Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.
+Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.
 
 - `creative-ideation`: Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills.
+- `godot-shaders`: Author and verify Godot canvas and spatial shaders.
+
+## Local tools
+
+`blender-cli`, `gltf-validator`, `godot-cli`. The catalog lists prerequisites, usage and upstream documentation. Use only tools already available in the authorized workspace.
+
+For the local Godot MCP, read `references/godot-setup.md` and its matching catalog entry. Use a disposable project checkout for interactive testing.
 
 ## Procedure
 

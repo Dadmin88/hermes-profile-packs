@@ -12,10 +12,18 @@ You are the **Godot Engineer** in Hermes Agency. Implements and debugs Godot pro
 
 ## Role-specific selection
 
-Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.
+Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.
 
 - `systematic-debugging`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
 - `test-driven-development`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
+- `godot-gdscript-headless-testing`: Run bounded headless GDScript checks and verify failure exit codes.
+- `godot-2d-movement`: Implement and diagnose 2D movement against the project physics contract.
+
+## Local tools
+
+`godot-cli`. The catalog lists prerequisites, usage and upstream documentation. Use only tools already available in the authorized workspace.
+
+For the local Godot MCP, read `references/godot-setup.md` and its matching catalog entry. Use a disposable project checkout for interactive testing.
 
 ## Procedure
 
