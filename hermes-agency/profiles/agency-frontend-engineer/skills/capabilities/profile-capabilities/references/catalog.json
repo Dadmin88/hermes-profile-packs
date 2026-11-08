@@ -18,6 +18,22 @@
     {
       "name": "test-driven-development",
       "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "threejs-scene-setup",
+      "reason": "Set up and diagnose a scene, camera, responsive renderer and frame loop."
+    },
+    {
+      "name": "threejs-gameplay-systems",
+      "reason": "Build and test a playable loop with code-owned input, camera, collisions, state and encounters."
+    },
+    {
+      "name": "threejs-performance",
+      "reason": "Measure frame time, draw calls, pixel cost and resource lifetime."
+    },
+    {
+      "name": "threejs-game-ui-designer",
+      "reason": "Design and validate browser-game HUDs, menus, overlays and touch or keyboard states."
     }
   ],
   "plugins": [],

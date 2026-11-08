@@ -10,6 +10,14 @@
     {
       "name": "create-game-assets",
       "reason": "Check source provenance and produce import-ready game assets."
+    },
+    {
+      "name": "threejs-geometry",
+      "reason": "Build code-authored primitives, custom geometry and repeated props with instancing."
+    },
+    {
+      "name": "threejs-materials-lighting",
+      "reason": "Build readable lighting, materials and shadows in Three.js."
     }
   ],
   "plugins": [],

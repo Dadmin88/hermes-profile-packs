@@ -16,6 +16,9 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `dogfood`: Browser-based exploratory checks add reproducible evidence; native/mobile-only tasks remain out of scope for this skill.
 - `godot-gdscript-headless-testing`: Run bounded headless GDScript checks and verify failure exit codes.
+- `threejs-scene-setup`: Set up and diagnose a scene, camera, responsive renderer and frame loop.
+- `threejs-gameplay-systems`: Build and test a playable loop with code-owned input, camera, collisions, state and encounters.
+- `threejs-performance`: Measure frame time, draw calls, pixel cost and resource lifetime.
 
 ## Local tools
 

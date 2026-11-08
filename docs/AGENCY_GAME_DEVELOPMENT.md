@@ -22,6 +22,23 @@ These selections extend 17 existing Agency profiles. Skills install with the dis
 | `agency-ui-ux-designer` | 5 | `accessibility`, `design-md`, `excalidraw` | `game-ui-ux`, `godot-ui-control` | godot-cli, Godot MCP (22 tools) |
 | `agency-worldbuilder` | 6 | `creative-ideation` | `excalidraw` | ripgrep |
 
+## Three.js browser games
+
+These on-demand skills cover code-authored scenes and procedural art. Frontend Engineer owns browser implementation. Game Designer, Level Designer, QA and art specialists retain their production roles. For engine-free projects, keep gameplay state and collisions in project code and use Three.js for rendering.
+
+| Profile | Added skills |
+|---|---|
+| `agency-art-director` | `threejs-materials-lighting` |
+| `agency-asset-artist` | `threejs-geometry`, `threejs-materials-lighting` |
+| `agency-environment-artist` | `threejs-scene-setup`, `threejs-geometry`, `threejs-materials-lighting` |
+| `agency-frontend-engineer` | `threejs-scene-setup`, `threejs-gameplay-systems`, `threejs-performance`, `threejs-game-ui-designer` |
+| `agency-game-designer` | `threejs-gameplay-systems` |
+| `agency-level-designer` | `threejs-scene-setup`, `threejs-geometry`, `threejs-gameplay-systems` |
+| `agency-qa-tester` | `threejs-scene-setup`, `threejs-gameplay-systems`, `threejs-performance` |
+| `agency-technical-artist` | `threejs-scene-setup`, `threejs-geometry`, `threejs-materials-lighting`, `threejs-performance` |
+| `agency-tools-engineer` | `threejs-scene-setup`, `threejs-performance` |
+| `agency-ui-ux-designer` | `threejs-game-ui-designer` |
+
 ## Source review
 
 The Hub search covered Godot, Blender, game and level design, playtesting, Ink and Twine, audio, Audacity, and localization. The selected community trees come from the pinned [Awesome Gamedev Agent Skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9) catalog. Complete trees and reference files ship with Apache-2.0 notices. The existing reviewed Excalidraw skill is reused for world, canon and player-flow diagrams. Installed project tools and engine versions govern usage.

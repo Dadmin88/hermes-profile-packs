@@ -19,6 +19,7 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 - `excalidraw`: Editable flows and journey diagrams complement current design/research skills; Figma only for users who use Figma.
 - `game-ui-ux`: Design and test game UI flows, focus and accessibility at gameplay scale.
 - `godot-ui-control`: Lay out responsive Godot HUDs and verify keyboard or controller focus.
+- `threejs-game-ui-designer`: Design and validate browser-game HUDs, menus, overlays and touch or keyboard states.
 
 ## Local tools
 

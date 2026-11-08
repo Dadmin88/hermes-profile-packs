@@ -1,6 +1,6 @@
 # Role-specific capabilities
 
-This release covers all **167 public distributions**: 114 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 37 reviewed skill trees across 264 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
+This release covers all **167 public distributions**: 114 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 43 reviewed skill trees across 288 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
 
 ## What installs by default
 
