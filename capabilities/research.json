@@ -1272,5 +1272,24 @@
       "hosted generators": "No generation account, uploads, or hosted asset service is required by these selections.",
       "Godot MCP": "Pinned Vollkorn source. Local patch removes raw runtime execution, generic method/property RPCs, nested batches and remote asset operations."
     }
+  },
+  "threejs_review": {
+    "queries": [
+      "three.js",
+      "threejs",
+      "WebGL game"
+    ],
+    "selections": {
+      "threejs-scene-setup": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "threejs-materials-lighting": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "threejs-geometry": "https://github.com/cloudai-x/threejs-skills",
+      "threejs-performance": "https://github.com/cloudai-x/threejs-skills",
+      "threejs-gameplay-systems": "https://github.com/majidmanzarpour/threejs-game-skills",
+      "threejs-game-ui-designer": "https://github.com/majidmanzarpour/threejs-game-skills"
+    },
+    "excluded": [
+      "Asset generators and glTF loading are outside the code-authored art scope of this selection.",
+      "The gameplay source scaffold and external agent manifests are omitted. Reuse existing project tools and build scripts."
+    ]
   }
 }

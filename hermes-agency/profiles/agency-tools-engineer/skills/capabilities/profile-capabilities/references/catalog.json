@@ -18,6 +18,14 @@
     {
       "name": "godot-export",
       "reason": "Validate preset-driven Godot exports and headless build commands."
+    },
+    {
+      "name": "threejs-scene-setup",
+      "reason": "Set up and diagnose a scene, camera, responsive renderer and frame loop."
+    },
+    {
+      "name": "threejs-performance",
+      "reason": "Measure frame time, draw calls, pixel cost and resource lifetime."
     }
   ],
   "plugins": [
