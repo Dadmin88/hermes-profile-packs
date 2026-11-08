@@ -42,7 +42,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-environment-artist | creative-ideation, godot-3d-essentials, create-game-assets, threejs-scene-setup, threejs-geometry, threejs-materials-lighting | none | godot |
 | agency-finance-ops | microsoft-office | none | none |
 | agency-frontend-engineer | accessibility, design-md, systematic-debugging, test-driven-development, threejs-scene-setup, threejs-gameplay-systems, threejs-performance, threejs-game-ui-designer | none | context7 |
-| agency-fullstack-engineer | systematic-debugging, test-driven-development | none | context7 |
+| agency-fullstack-engineer | systematic-debugging, test-driven-development, playwright-cli, openapi-spec-generation, supabase-postgres-best-practices, rest-graphql-debug, accessibility | none | context7, sentry |
 | agency-game-designer | creative-ideation, game-feel, threejs-gameplay-systems | none | godot |
 | agency-git-steward | retain only | gh-ref | deepwiki |
 | agency-godot-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-2d-movement | none | context7, godot |

@@ -1471,6 +1471,26 @@
         {
           "name": "test-driven-development",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "playwright-cli",
+          "reason": "Exercise the real browser flow and inspect requests, console messages and failure behavior."
+        },
+        {
+          "name": "openapi-spec-generation",
+          "reason": "Keep REST contracts, API implementation and client behavior in sync."
+        },
+        {
+          "name": "supabase-postgres-best-practices",
+          "reason": "Validate schema, migrations, transactions and query plans for Postgres-backed features."
+        },
+        {
+          "name": "rest-graphql-debug",
+          "reason": "Reproduce REST or GraphQL request failures independently of the UI."
+        },
+        {
+          "name": "accessibility",
+          "reason": "Check keyboard, focus and semantic behavior across a user-facing feature."
         }
       ],
       "plugins": [],
@@ -1478,11 +1498,24 @@
         {
           "name": "context7",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "sentry",
+          "reason": "Optional incident evidence for a feature owner with explicitly approved issue and trace access."
         }
       ],
       "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
       "config_seed": true,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "playwright-cli",
+        "redocly-cli",
+        "curl",
+        "jq",
+        "psql",
+        "pg-isready",
+        "docker-cli"
+      ]
     },
     {
       "profile": "agency-game-designer",

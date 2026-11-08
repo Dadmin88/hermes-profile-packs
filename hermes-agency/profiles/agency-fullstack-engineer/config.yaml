@@ -20,6 +20,25 @@
         "resources": false,
         "prompts": false
       }
+    },
+    "sentry": {
+      "url": "https://mcp.sentry.dev/mcp",
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 60,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [],
+        "resources": false,
+        "prompts": false
+      },
+      "auth": "oauth"
     }
   }
 }

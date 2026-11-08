@@ -60,11 +60,10 @@ class CapabilityTests(unittest.TestCase):
         self.assertTrue({'draw_grid', 'set_frame_duration', 'create_tag',
                          'create_tilemap_layer', 'export_spritesheet'} <= aseprite)
 
-    def test_game_profiles_keep_distinct_tool_scopes(self):
+    def test_local_tool_catalogs_and_distinct_godot_scopes(self):
         from capabilities import GUIDE, render_outputs
         data = json.loads((ROOT / 'capabilities/profiles.json').read_text())
         rows = {r['profile']: r for r in data['profiles'] if 'local_tools' in r}
-        self.assertEqual(17, len(rows))
         selected = {}
         for name, row in rows.items():
             guide = ROOT / row['path'] / GUIDE

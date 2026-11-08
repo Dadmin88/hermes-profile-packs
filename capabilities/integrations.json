@@ -1347,6 +1347,69 @@
         "--version"
       ],
       "usage": "Hash the exact candidate artifacts from an explicit output directory. Verify filenames, sizes and checksums before handoff."
+    },
+    "playwright-cli": {
+      "source": "https://github.com/microsoft/playwright-cli",
+      "use": "Interact with a test site using a temporary browser session and inspect page, network or console state.",
+      "check": [
+        "playwright-cli",
+        "--version"
+      ],
+      "usage": "Use the installed browser or project config. Prefer the project’s pinned Playwright Test runner for repeatable regression coverage."
+    },
+    "redocly-cli": {
+      "source": "https://redocly.com/docs/cli/commands/lint",
+      "use": "Lint a local OpenAPI contract when the project permits Redocly CLI.",
+      "check": [
+        "redocly",
+        "--version"
+      ],
+      "usage": "Use REDOCLY_TELEMETRY=off redocly lint with local references and a reviewed config. Prefer the project’s pinned linter if present."
+    },
+    "curl": {
+      "source": "https://curl.se/docs/manpage.html",
+      "use": "Verify HTTP status, headers and body against an approved development endpoint.",
+      "check": [
+        "curl",
+        "--version"
+      ],
+      "usage": "Start with read-only requests. Use explicit timeouts and avoid printing credentials or sensitive response bodies."
+    },
+    "jq": {
+      "source": "https://jqlang.org/manual/",
+      "use": "Validate and extract expected fields from structured JSON responses.",
+      "check": [
+        "jq",
+        "--version"
+      ],
+      "usage": "Use jq -e for assertions against sanitized fixtures or development API responses."
+    },
+    "psql": {
+      "source": "https://www.postgresql.org/docs/current/app-psql.html",
+      "use": "Inspect schema and run approved PostgreSQL queries against the identified development database.",
+      "check": [
+        "psql",
+        "--version"
+      ],
+      "usage": "Use psql -X and ON_ERROR_STOP for reproducible fixture checks. Keep credentials out of commands and output."
+    },
+    "pg-isready": {
+      "source": "https://www.postgresql.org/docs/current/app-pg-isready.html",
+      "use": "Check whether a known test database is accepting connections.",
+      "check": [
+        "pg_isready",
+        "--version"
+      ],
+      "usage": "Supply the approved development host and port. Confirm auth and schema separately with the application role."
+    },
+    "docker-cli": {
+      "source": "https://docs.docker.com/reference/cli/docker/",
+      "use": "Inspect services and logs for the project’s authorized development stack.",
+      "check": [
+        "docker",
+        "--version"
+      ],
+      "usage": "Use the project’s existing Compose file and isolated project name. Review images and mounts before starting services."
     }
   }
 }
