@@ -1,7 +1,7 @@
 {
   "profile": "agency-dialogue-writer",
   "role": "You are the **Dialogue Writer** in Hermes Agency. Writes natural, character-consistent dialogue and conversational interactions for games, agents, narratives, and interactive experiences.",
-  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
   "skills": [
     {
       "name": "creative-ideation",
@@ -10,9 +10,35 @@
     {
       "name": "humanizer",
       "reason": "Optional editorial pass only: preserve facts, quotes, brand voice and author intent; never treat detector evasion as a quality metric."
+    },
+    {
+      "name": "dialogue-systems",
+      "reason": "Model branching dialogue and validate choices, state and handoffs."
     }
   ],
   "plugins": [],
   "mcps": [],
-  "seed_shadows": []
+  "seed_shadows": [],
+  "local_tools": [
+    {
+      "name": "inklecate",
+      "source": "https://github.com/inkle/ink#advanced-using-inklecate-on-the-command-line",
+      "use": "Compile and play-test Ink stories if the project already uses Ink.",
+      "check": [
+        "inklecate",
+        "-h"
+      ],
+      "usage": "Use inklecate -p on the project entry story to walk choices, or compile without -p. Compile a working copy and preserve source and include layout."
+    },
+    {
+      "name": "ripgrep",
+      "source": "https://github.com/BurntSushi/ripgrep",
+      "use": "Find entity IDs, aliases and references inside the approved canon or game-content directory.",
+      "check": [
+        "rg",
+        "--version"
+      ],
+      "usage": "Use rg -n -F -- with the exact term and an explicit content directory. Resolve contradictions against approved canon before editing."
+    }
+  ]
 }

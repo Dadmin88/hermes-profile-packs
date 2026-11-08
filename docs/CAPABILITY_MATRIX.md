@@ -7,9 +7,9 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-accessibility-reviewer | accessibility, dogfood | none | none |
 | agency-ai-engineer | systematic-debugging, test-driven-development | pep-ref | context7 |
 | agency-analytics-specialist | microsoft-office | none | none |
-| agency-art-director | creative-ideation | none | none |
-| agency-asset-artist | creative-ideation | none | none |
-| agency-audio-designer | creative-ideation | none | none |
+| agency-art-director | creative-ideation, create-game-assets | none | godot |
+| agency-asset-artist | creative-ideation, create-game-assets | none | godot |
+| agency-audio-designer | creative-ideation, godot-audio | none | godot |
 | agency-automation-engineer | systematic-debugging, test-driven-development | none | context7 |
 | agency-backend-engineer | rest-graphql-debug, systematic-debugging, test-driven-development | pep-ref | context7 |
 | agency-botfather | hermes-agent | none | none |
@@ -34,18 +34,18 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-desktop-application-engineer | systematic-debugging, test-driven-development | none | context7 |
 | agency-developer-relations-engineer | rss-feeds | gh-ref | context7, deepwiki |
 | agency-devops-engineer | docker-management | none | aws-knowledge, microsoft-learn |
-| agency-dialogue-writer | creative-ideation, humanizer | none | none |
+| agency-dialogue-writer | creative-ideation, humanizer, dialogue-systems | none | none |
 | agency-distributed-systems-engineer | excalidraw, systematic-debugging, test-driven-development | rfc-ref | context7 |
 | agency-docs-writer | blocked-page-recovery, grounded-citations, simple-english | none | context7, deepwiki |
 | agency-editor-in-chief | retain only | none | none |
 | agency-email-marketer | grounded-citations | none | none |
-| agency-environment-artist | creative-ideation | none | none |
+| agency-environment-artist | creative-ideation, godot-3d-essentials, create-game-assets | none | godot |
 | agency-finance-ops | microsoft-office | none | none |
 | agency-frontend-engineer | accessibility, design-md, systematic-debugging, test-driven-development | none | context7 |
 | agency-fullstack-engineer | systematic-debugging, test-driven-development | none | context7 |
-| agency-game-designer | creative-ideation | none | none |
+| agency-game-designer | creative-ideation, game-feel | none | godot |
 | agency-git-steward | retain only | gh-ref | deepwiki |
-| agency-godot-engineer | systematic-debugging, test-driven-development | none | context7 |
+| agency-godot-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-2d-movement | none | context7, godot |
 | agency-graphic-designer | creative-ideation | none | none |
 | agency-growth-marketer | retain only | none | none |
 | agency-hermes-config-manager | hermes-agent | none | none |
@@ -54,9 +54,9 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-knowledge-manager | rss-feeds | none | none |
 | agency-launch-manager | document-to-action-items, grounded-citations | none | none |
 | agency-legal-ops | blocked-page-recovery, document-to-action-items, grounded-citations | none | none |
-| agency-level-designer | creative-ideation | none | none |
+| agency-level-designer | creative-ideation, godot-tilemap | none | godot |
 | agency-localization-specialist | simple-english | none | none |
-| agency-lore-writer | creative-ideation | none | none |
+| agency-lore-writer | creative-ideation, excalidraw | none | none |
 | agency-market-researcher | blocked-page-recovery, rss-feeds | none | none |
 | agency-marketing-strategist | retain only | none | none |
 | agency-mlops-engineer | docker-management, systematic-debugging, test-driven-development | none | aws-knowledge, context7, microsoft-learn |
@@ -64,7 +64,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-monetization-strategist | grounded-citations | none | none |
 | agency-motion-designer | creative-ideation | none | none |
 | agency-music-producer | songwriting-and-ai-music | none | none |
-| agency-narrative-designer | creative-ideation | none | none |
+| agency-narrative-designer | creative-ideation, dialogue-systems | none | godot |
 | agency-onboarding-specialist | concept-diagrams | none | none |
 | agency-open-source-maintainer | rss-feeds | gh-ref | deepwiki |
 | agency-operations-manager | document-to-action-items, one-three-one-rule | none | none |
@@ -77,7 +77,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-procurement-specialist | blocked-page-recovery, grounded-citations, microsoft-office | none | none |
 | agency-pixel-artist | pixel-art, creative-ideation | none | pixelorama, aseprite |
 | agency-product-designer | excalidraw | none | none |
-| agency-product-manager | document-to-action-items | none | none |
+| agency-product-manager | document-to-action-items, excalidraw | none | godot |
 | agency-product-marketing-manager | retain only | none | none |
 | agency-product-operations-manager | document-to-action-items, meeting-action-items | none | linear |
 | agency-product-strategist | grounded-citations, one-three-one-rule | none | none |
@@ -86,9 +86,9 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-public-relations | grounded-citations, humanizer | none | none |
 | agency-qa-automation-engineer | dogfood, systematic-debugging | none | context7 |
 | agency-qa-lead | retain only | none | none |
-| agency-qa-tester | dogfood | none | none |
+| agency-qa-tester | dogfood, godot-gdscript-headless-testing | none | godot |
 | agency-red-team | retain only | osv-ref, snyk | none |
-| agency-release-manager | retain only | gh-ref | deepwiki |
+| agency-release-manager | godot-export | gh-ref | deepwiki, godot |
 | agency-release-notes-writer | simple-english | none | none |
 | agency-requirements-analyst | document-to-action-items, grounded-citations | none | none |
 | agency-research-analyst | blocked-page-recovery, grounded-citations, rss-feeds | wiki-ref | none |
@@ -107,17 +107,17 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-solutions-engineer | excalidraw, rest-graphql-debug | rfc-ref | none |
 | agency-support-specialist | document-to-action-items | none | none |
 | agency-systems-architect | excalidraw | rfc-ref | none |
-| agency-technical-artist | creative-ideation | none | none |
+| agency-technical-artist | creative-ideation, godot-shaders | none | godot |
 | agency-technical-lead | one-three-one-rule | none | none |
 | agency-technical-support-engineer | rest-graphql-debug, systematic-debugging | none | context7, grafana, sentry |
 | agency-technical-writer | blocked-page-recovery, grounded-citations, simple-english | none | context7, deepwiki |
-| agency-tools-engineer | systematic-debugging, test-driven-development | pep-ref | context7 |
+| agency-tools-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-export | pep-ref | context7, godot |
 | agency-traffic-manager | document-to-action-items | none | none |
 | agency-training-specialist | concept-diagrams | none | none |
-| agency-ui-ux-designer | accessibility, design-md, excalidraw | none | none |
+| agency-ui-ux-designer | accessibility, design-md, excalidraw, game-ui-ux, godot-ui-control | none | godot |
 | agency-user-researcher | excalidraw | none | none |
 | agency-video-producer | creative-ideation | none | none |
-| agency-worldbuilder | creative-ideation | none | none |
+| agency-worldbuilder | creative-ideation, excalidraw | none | none |
 | academy-dean | retain only | none | none |
 | academy-mathematics-professor | arxiv, concept-diagrams, grounded-citations | none | wolfram |
 | academy-writing-rhetoric-professor | grounded-citations | none | none |

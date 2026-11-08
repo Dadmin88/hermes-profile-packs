@@ -28,9 +28,11 @@ See the [`Continuing Education guide`](docs/CONTINUING_EDUCATION.md) and [`archi
 
 ## Role-specific capability upgrade
 
-Every profile, including standalone Wear, now has an on-demand capability guide. The release includes 25 reviewed skill trees with full supporting files, six role-selected plugin opt-ins, and 15 disabled MCP integration templates. Existing role-owned jobs, tool restrictions, bundled-skill opt-outs and user-controlled activation remain intact.
+Every profile, including standalone Wear, now has an on-demand capability guide. The release includes 37 reviewed skill trees with full supporting files, six role-selected plugin opt-ins, and 16 disabled MCP integration templates. Existing role-owned jobs, tool restrictions, bundled-skill opt-outs and user-controlled activation remain intact.
 
 See the [complete profile matrix](docs/CAPABILITY_MATRIX.md), [capability guide and privacy/setup rules](docs/CAPABILITIES.md), and [verified results and limitations](docs/CAPABILITY_VALIDATION.md). Normal profile installation never downloads/enables plugins, authenticates accounts or starts remote integrations.
+
+See the [Agency game development audit](docs/AGENCY_GAME_DEVELOPMENT.md) for the 17 updated profiles, their prior capability inventory, and the new Godot and local tools.
 
 ## Start small with Team Recipes
 

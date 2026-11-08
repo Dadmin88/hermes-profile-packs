@@ -1,0 +1,36 @@
+{
+  "mcp_servers": {
+    "godot": {
+      "command": "node",
+      "args": [
+        "<godot-mcp-checkout>/build/index.js"
+      ],
+      "enabled": false,
+      "trust": "untrusted",
+      "timeout": 120,
+      "connect_timeout": 30,
+      "supports_parallel_tool_calls": false,
+      "sampling": {
+        "enabled": false
+      },
+      "elicitation": {
+        "enabled": false
+      },
+      "tools": {
+        "include": [
+          "get_debug_output",
+          "get_godot_version",
+          "get_node_insights",
+          "get_node_properties",
+          "get_project_info",
+          "get_scene_insights",
+          "get_scene_tree",
+          "run_project",
+          "stop_project"
+        ],
+        "resources": false,
+        "prompts": false
+      }
+    }
+  }
+}

@@ -818,6 +818,324 @@
       },
       "review": "Complete official Hub tree reviewed, including local Pillow and ffmpeg execution and upstream notices.",
       "install_path": "skills/capabilities/pixel-art"
+    },
+    "godot-gdscript-headless-testing": {
+      "name": "godot-gdscript-headless-testing",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-gdscript-headless-testing",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "980ecf1815cb179bc92749e419e3d5c87cc998413c57ed87035e34dc45e87034"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "9de9b6430b733b29fc56453822fabb499920cc57397bd041171e495c159375ef",
+        "SKILL.md": "7f788a27429bde683a38b3f2f84407006e1733811041d79fed871c220e4b21fa"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-gdscript-headless-testing"
+    },
+    "godot-tilemap": {
+      "name": "godot-tilemap",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-tilemap",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "c92a7103c764963a4d065a637941bb537f2409e54277d05aa05ea2bf8fc75971",
+        "references/tileset-and-terrains.md": "c2486c7bacdd3f099d981f50b1aa881a7647bb14112b343370f76e1753d12ed8"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "6a5f7d118e2d492d9f98fdc46b0cb08cafa295daaee5f2822f730abf8193271e",
+        "SKILL.md": "33a63e74b7cb483bf0429b3870a8ded5d1c8776c56e35f9b057ef4e012dcebeb",
+        "references/tileset-and-terrains.md": "c2486c7bacdd3f099d981f50b1aa881a7647bb14112b343370f76e1753d12ed8"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-tilemap"
+    },
+    "godot-shaders": {
+      "name": "godot-shaders",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-shaders",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "e96ac075c0d85f14af8de2a3f92bc4f0389a9bb9e9ac32bc1519f2aa4679d6be",
+        "references/shading-language.md": "406987a5728ac06e5a93b878d390387545a0f118a014b65a65d0e003bf3a64c9"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "8f899a500bd6fa8c8a4596e4bc879bf92f4c95af27a3c8eb893199e5027771fa",
+        "SKILL.md": "2d7bf7bdac17c27b43776e9d822fe743c4ead4d1a9dd1004f3ffc6b5df3b3daf",
+        "references/shading-language.md": "406987a5728ac06e5a93b878d390387545a0f118a014b65a65d0e003bf3a64c9"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-shaders"
+    },
+    "godot-ui-control": {
+      "name": "godot-ui-control",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-ui-control",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "0b2cc92d670cc2274f6579748a1703ec6a2bf70dc3d2875985deea1018f05bdc",
+        "references/layout-and-theming.md": "5f54eed206cd7d7f5fecffd2ce1c189739eba5b5e18b2d1773f9ba7202427f66"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "bda27873d92084d7e6d5684a50817d9522538943910a89cef7011cc9abe555f0",
+        "SKILL.md": "16d2be7a15137a7523195ba88ca2f33fa8c8f3dd6f002352b7a5077bea3a3388",
+        "references/layout-and-theming.md": "5f54eed206cd7d7f5fecffd2ce1c189739eba5b5e18b2d1773f9ba7202427f66"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-ui-control"
+    },
+    "godot-audio": {
+      "name": "godot-audio",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-audio",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "9ed39d72403eef39e2cbedb1015262ee8413f4f71c91734ba25f82eece839b5b",
+        "references/buses-and-effects.md": "f84f5c91fc78631670315b4c63643603841ad1ca1f211a7891c8bc408f8c3e80"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "5b49a8bec2db6c98b1d7b37bfd98a3a355b15ecdf4de47ccce82ffcf81e3ae4f",
+        "SKILL.md": "f665758390e7911da542ff97b8d7d78b6da214b0eff5fd279e832001353c549d",
+        "references/buses-and-effects.md": "f84f5c91fc78631670315b4c63643603841ad1ca1f211a7891c8bc408f8c3e80"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-audio"
+    },
+    "godot-export": {
+      "name": "godot-export",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-export",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "473552185df50d5ab4a2ef874f47e08ffd7f6f552e191a7a5922c288b29800a6",
+        "references/presets-and-cli.md": "ab2388a1870a0b813d110066bb54bad9f3787d067d13043d10944baec5b13dc1"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "96ea46faf76f4be8c5ea6876b9ddc288e683db532a606732d926286541311bda",
+        "SKILL.md": "8f84da0f9c8ca997cbad83951cce092da49046576bfbdff3f989ed2c1d84beec",
+        "references/presets-and-cli.md": "ab2388a1870a0b813d110066bb54bad9f3787d067d13043d10944baec5b13dc1"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-export"
+    },
+    "godot-2d-movement": {
+      "name": "godot-2d-movement",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-2d-movement",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "ea396576540acb85f0ca2050a96cfa6399a03668971bb320ef612e52a32c8f0a",
+        "references/controller-recipes.md": "bcf89d3e8a820d75a78ed32eaa8eaf20c01ea1a8154791f58a8e3546d6fb0fba"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "b58e68215097dbb990216e4e245e12d08cf81e36d20b5d56a7e72103691e849d",
+        "SKILL.md": "d72c686a30a7f42606118f4cc0ac67d70c90adb899d7c974898800cf98f6c770",
+        "references/controller-recipes.md": "bcf89d3e8a820d75a78ed32eaa8eaf20c01ea1a8154791f58a8e3546d6fb0fba"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-2d-movement"
+    },
+    "godot-3d-essentials": {
+      "name": "godot-3d-essentials",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/godot/godot-3d-essentials",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "6164f02300775b7db62a79ca9f65f8dc2232efa64268fb330621cf898bbec73d",
+        "references/scene-and-environment.md": "94d016b194b9d2a5d5ffa3b9cef531b639b15413740f0132ba9f4cc0cba03c34"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "9f60a78b53bd39d0babad157f6aac6693ccd49b5aa71e8a5513aca891747e20f",
+        "SKILL.md": "44d0beb73dd5f9f0dca799ecc2d5a4e18d8966cdf289183b72aef234bc3fde81",
+        "references/scene-and-environment.md": "94d016b194b9d2a5d5ffa3b9cef531b639b15413740f0132ba9f4cc0cba03c34"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/godot-3d-essentials"
+    },
+    "game-feel": {
+      "name": "game-feel",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/disciplines/game-feel",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "48971c7ad1fbb39069cb165f0e45f88c13776585870d69d5de8a04bbe0988e28",
+        "references/feedback-recipes.md": "f8cca962733b0b1f5d1db75fe966f6e13bf11015e39a04a849d6ff5c3e0e835e"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "304b7ecd8952919d211a3a8dd2ddd2c0232a75252d8247c1d8fae441c46b3d3e",
+        "SKILL.md": "a490486c7408f8c01882c6b282f5a5a9adaad82b2bb2596857afba48957a8f7d",
+        "references/feedback-recipes.md": "f8cca962733b0b1f5d1db75fe966f6e13bf11015e39a04a849d6ff5c3e0e835e"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/game-feel"
+    },
+    "dialogue-systems": {
+      "name": "dialogue-systems",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/disciplines/dialogue-systems",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "8d7576b4d702cc3c3db0abc90b2e5375b73e63d72479ffef73b5797237bde30b",
+        "references/ink-and-yarn.md": "c43275e04428ad8edb374f83477046a12d525b1535cc286d3f4c8e8e159c991e",
+        "references/runner.md": "9d70ca1cb7a518170300c06bfb88984230e71ee23ff0b7b225f3355a22cb4fe4"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "ec751259d8e9bea24b5a150ea6967a8134c9768af5c50d3d374e3b6d3ea028c2",
+        "SKILL.md": "31c69a91bb4bc9c583a5ad9c82a11f2f00adbad115b960cd83aa4cda2bf6377f",
+        "references/ink-and-yarn.md": "c43275e04428ad8edb374f83477046a12d525b1535cc286d3f4c8e8e159c991e",
+        "references/runner.md": "9d70ca1cb7a518170300c06bfb88984230e71ee23ff0b7b225f3355a22cb4fe4"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/dialogue-systems"
+    },
+    "create-game-assets": {
+      "name": "create-game-assets",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/disciplines/create-game-assets",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "36cd246a434fefe1e36feff066597a6268d9f63364bee387ee65a22f03838b5d",
+        "agents/openai.yaml": "b5ff9e75ab8a845324d28745aa97af0a3cd4fccc56067a6494947e12e40f1990",
+        "assets/art-direction-brief.md": "6d5dc4f9f5fcb24300bab9ce7dbd56d5c948ba41da3cca2d3b3d235fee5fb72c",
+        "assets/asset-manifest.json": "6cce05638c11b80eb5c8f776cf187f479a2579f1a1729b0970b1cc8e5fab4c8e",
+        "references/art-direction.md": "19b2ccb827eae0c6c4cd3648ab7febb82e44706bef8515f2e8912de23dec0a5c",
+        "references/provenance.md": "098d3cf915cd66e8ff0ad3a639964167edf2280f9e23efbae3ea6242d5bea3db",
+        "references/raster-pipeline.md": "d7a5714628fd8f4b66d03e060488e353b163b811112b164af218beb2b6450a02",
+        "references/three-d-pipeline.md": "ee6ed7c373e15ffeb8e6b275618482f028279a8146f01b6cfe6a8411cb8a3db4",
+        "scripts/asset_report.py": "99f4b38f9c4fe036f97ab1d4effd7f6931b62d24a90330a5a2f5ae71e7d1a77c",
+        "scripts/build_preview_sheet.py": "002a550a7b5fac6d8815078a72afc249dd828c40d975b2323223fc770118c64b",
+        "scripts/requirements.txt": "bbced595a25debee9232fbb784d35ee4f04967d3dbc528e8c3073d3e9adbe2ca"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "6135bf3e1eae0115bea3f6a49e36c372cae545c236a97e556847e9014187d34d",
+        "SKILL.md": "66a9f9b4072e952c3c470437ab4ffb062223a32636e76efb871b2ed076d574e2",
+        "agents/openai.yaml": "b5ff9e75ab8a845324d28745aa97af0a3cd4fccc56067a6494947e12e40f1990",
+        "assets/art-direction-brief.md": "6d5dc4f9f5fcb24300bab9ce7dbd56d5c948ba41da3cca2d3b3d235fee5fb72c",
+        "assets/asset-manifest.json": "6cce05638c11b80eb5c8f776cf187f479a2579f1a1729b0970b1cc8e5fab4c8e",
+        "references/art-direction.md": "19b2ccb827eae0c6c4cd3648ab7febb82e44706bef8515f2e8912de23dec0a5c",
+        "references/provenance.md": "098d3cf915cd66e8ff0ad3a639964167edf2280f9e23efbae3ea6242d5bea3db",
+        "references/raster-pipeline.md": "d7a5714628fd8f4b66d03e060488e353b163b811112b164af218beb2b6450a02",
+        "references/three-d-pipeline.md": "ee6ed7c373e15ffeb8e6b275618482f028279a8146f01b6cfe6a8411cb8a3db4",
+        "scripts/asset_report.py": "99f4b38f9c4fe036f97ab1d4effd7f6931b62d24a90330a5a2f5ae71e7d1a77c",
+        "scripts/build_preview_sheet.py": "002a550a7b5fac6d8815078a72afc249dd828c40d975b2323223fc770118c64b",
+        "scripts/requirements.txt": "bbced595a25debee9232fbb784d35ee4f04967d3dbc528e8c3073d3e9adbe2ca"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/create-game-assets"
+    },
+    "game-ui-ux": {
+      "name": "game-ui-ux",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/disciplines/game-ui-ux",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "awesome-gamedev-agent-skills contributors",
+      "upstream_files": {
+        "SKILL.md": "54816447c4d07f9ab65782ebb7138dd0927c9cd84a3647e8806f2a86a3a094ff",
+        "references/layout-and-flow.md": "961fc8c8e45a1ee5120e1deef9f6aef932ae3949e6f1ce26548b9d7616775d73"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "64660c13909e091a9935c5a34f6d086f1b8c1d8f6a3cd318babd9a76a2504097",
+        "SKILL.md": "f73e3f42d3895a9efc0ff0c8d214d51b5e6031dfd69585cc5dd55d11ba792d5c",
+        "references/layout-and-flow.md": "961fc8c8e45a1ee5120e1deef9f6aef932ae3949e6f1ce26548b9d7616775d73"
+      },
+      "adaptations": {
+        "SKILL.md": "Add license metadata and Hermes version, workspace, and activation guidance."
+      },
+      "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
+      "install_path": "skills/capabilities/game-ui-ux"
     }
   }
 }

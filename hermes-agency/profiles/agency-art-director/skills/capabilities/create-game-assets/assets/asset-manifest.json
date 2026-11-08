@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "art_direction_brief": "docs/art-direction-brief.md",
+  "assets": [
+    {
+      "id": "player-idle",
+      "role": "player base pose",
+      "path": "assets/player/player-idle.png",
+      "status": "planned",
+      "technical": {
+        "dimensions": "64x64",
+        "alpha": true,
+        "anchor": "bottom-center",
+        "frames": 1,
+        "filtering": "nearest"
+      },
+      "visual_locks": [
+        "palette",
+        "silhouette",
+        "proportions",
+        "facing",
+        "light-direction"
+      ],
+      "source": {
+        "kind": "generated-or-authored",
+        "url_or_tool": "",
+        "creator": "",
+        "created_at": "",
+        "license": "",
+        "attribution": "",
+        "prompt_or_source_record": ""
+      },
+      "verification": {
+        "native_scale_reviewed": false,
+        "in_engine_reviewed": false,
+        "technical_checks_passed": false,
+        "approved_by": ""
+      }
+    }
+  ]
+}
