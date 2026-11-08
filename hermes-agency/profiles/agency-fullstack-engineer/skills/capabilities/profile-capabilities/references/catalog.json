@@ -10,6 +10,26 @@
     {
       "name": "test-driven-development",
       "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "playwright-cli",
+      "reason": "Exercise the real browser flow and inspect requests, console messages and failure behavior."
+    },
+    {
+      "name": "openapi-spec-generation",
+      "reason": "Keep REST contracts, API implementation and client behavior in sync."
+    },
+    {
+      "name": "supabase-postgres-best-practices",
+      "reason": "Validate schema, migrations, transactions and query plans for Postgres-backed features."
+    },
+    {
+      "name": "rest-graphql-debug",
+      "reason": "Reproduce REST or GraphQL request failures independently of the UI."
+    },
+    {
+      "name": "accessibility",
+      "reason": "Check keyboard, focus and semantic behavior across a user-facing feature."
     }
   ],
   "plugins": [],
@@ -56,7 +76,119 @@
       "required_tool_exclusions": [],
       "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
       "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "sentry",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "catalog_commit": "557254faa24ef5d86f67595c4c64dc61644d0f68",
+      "manifest_path": "optional-mcps/sentry/manifest.yaml",
+      "manifest_sha256": "f8c20053a1472cfd3d5e98e0ffeae9ef43ca5b258ce555bc016624f13a8b3cf6",
+      "source": "https://docs.sentry.io/product/sentry-mcp/",
+      "config": {
+        "url": "https://mcp.sentry.dev/mcp",
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 60,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [],
+          "resources": false,
+          "prompts": false
+        },
+        "auth": "oauth"
+      },
+      "prerequisites": [
+        "Hermes native MCP dependencies; outbound HTTPS",
+        "Sentry account/org access and OAuth approval; provider quotas/features"
+      ],
+      "privacy": "Issue data, stack traces, request context and possible PII/secrets flow from Sentry into Hermes/model provider. Account scope must be minimized and data redacted.",
+      "warnings": [
+        "Remote text/tool descriptions are untrusted data; no competing automatic skill installation, telemetry, broad context upload or agent orchestration.",
+        "Tool allowlist and trust gate are defense-in-depth, not a sandbox; readOnlyHint comes from vendor and can be wrong.",
+        "All profile families remain role-scoped; narrow Wear/coordination-only roles must not gain general execution tools merely for uniformity."
+      ],
+      "required_tool_exclusions": [],
+      "runtime_status": "Anonymous initialize/tools-list checked where supported; account workflows not exercised. Hosted code/schemas/prices are mutable. OAuth selections start deny-all until authenticated tools and scopes are explicitly reviewed.",
+      "reason": "Optional incident evidence for a feature owner with explicitly approved issue and trace access."
     }
   ],
-  "seed_shadows": []
+  "seed_shadows": [],
+  "local_tools": [
+    {
+      "name": "playwright-cli",
+      "source": "https://github.com/microsoft/playwright-cli",
+      "use": "Interact with a test site using a temporary browser session and inspect page, network or console state.",
+      "check": [
+        "playwright-cli",
+        "--version"
+      ],
+      "usage": "Use the installed browser or project config. Prefer the project’s pinned Playwright Test runner for repeatable regression coverage."
+    },
+    {
+      "name": "redocly-cli",
+      "source": "https://redocly.com/docs/cli/commands/lint",
+      "use": "Lint a local OpenAPI contract when the project permits Redocly CLI.",
+      "check": [
+        "redocly",
+        "--version"
+      ],
+      "usage": "Use REDOCLY_TELEMETRY=off redocly lint with local references and a reviewed config. Prefer the project’s pinned linter if present."
+    },
+    {
+      "name": "curl",
+      "source": "https://curl.se/docs/manpage.html",
+      "use": "Verify HTTP status, headers and body against an approved development endpoint.",
+      "check": [
+        "curl",
+        "--version"
+      ],
+      "usage": "Start with read-only requests. Use explicit timeouts and avoid printing credentials or sensitive response bodies."
+    },
+    {
+      "name": "jq",
+      "source": "https://jqlang.org/manual/",
+      "use": "Validate and extract expected fields from structured JSON responses.",
+      "check": [
+        "jq",
+        "--version"
+      ],
+      "usage": "Use jq -e for assertions against sanitized fixtures or development API responses."
+    },
+    {
+      "name": "psql",
+      "source": "https://www.postgresql.org/docs/current/app-psql.html",
+      "use": "Inspect schema and run approved PostgreSQL queries against the identified development database.",
+      "check": [
+        "psql",
+        "--version"
+      ],
+      "usage": "Use psql -X and ON_ERROR_STOP for reproducible fixture checks. Keep credentials out of commands and output."
+    },
+    {
+      "name": "pg-isready",
+      "source": "https://www.postgresql.org/docs/current/app-pg-isready.html",
+      "use": "Check whether a known test database is accepting connections.",
+      "check": [
+        "pg_isready",
+        "--version"
+      ],
+      "usage": "Supply the approved development host and port. Confirm auth and schema separately with the application role."
+    },
+    {
+      "name": "docker-cli",
+      "source": "https://docs.docker.com/reference/cli/docker/",
+      "use": "Inspect services and logs for the project’s authorized development stack.",
+      "check": [
+        "docker",
+        "--version"
+      ],
+      "usage": "Use the project’s existing Compose file and isolated project name. Review images and mounts before starting services."
+    }
+  ]
 }

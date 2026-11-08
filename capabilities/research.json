@@ -1291,5 +1291,26 @@
       "Asset generators and glTF loading are outside the code-authored art scope of this selection.",
       "The gameplay source scaffold and external agent manifests are omitted. Reuse existing project tools and build scripts."
     ]
+  },
+  "fullstack_review": {
+    "queries": [
+      "API design",
+      "schema migration",
+      "Playwright",
+      "playwright-cli",
+      "OpenAPI",
+      "end to end",
+      "accessibility",
+      "full stack",
+      "supabase postgres"
+    ],
+    "selections": {
+      "playwright-cli": "skills-sh/microsoft/playwright-cli/playwright-cli",
+      "openapi-spec-generation": "skills-sh/wshobson/agents/openapi-spec-generation",
+      "supabase-postgres-best-practices": "Canonical Supabase source selected after reviewing the Hub migration and Postgres results."
+    },
+    "excluded": [
+      "Generic full-stack skills that duplicate role-owned workflows, hosted database administration, and global installers embedded in skills."
+    ]
   }
 }

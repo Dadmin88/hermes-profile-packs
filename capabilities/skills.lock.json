@@ -1284,6 +1284,105 @@
       },
       "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
       "install_path": "skills/capabilities/threejs-game-ui-designer"
+    },
+    "openapi-spec-generation": {
+      "name": "openapi-spec-generation",
+      "repository": "https://github.com/wshobson/agents",
+      "commit": "4bde3168b43c0655c4d00ea2726e631719908a6d",
+      "path": "plugins/documentation-generation/skills/openapi-spec-generation",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "wshobson/agents",
+      "upstream_files": {
+        "LICENSE": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+        "SKILL.md": "8071736973f8a99cbe8644e21f638493ac062c77d650d8fabc4a469285485d7e",
+        "references/details.md": "b7c681062118a47126662bc6463b9be9430a45b983ddde71d1bdaf7fd091ad51",
+        "references/code-first-and-tooling.md": "533398d65b933040d13e642414e6b9846adbe7d5c95947223beffdb3ebe1590f"
+      },
+      "files": {
+        "LICENSE": "8ceaab71b527eb5db43810b74afc618ee36556197d2d51c45fd00aac483988c1",
+        "REVIEW.md": "7c8df3a3e334cd63427254eb6b351a91f54ed923b12cb599d30f79b024bdcd75",
+        "SKILL.md": "ad1b130ad5a1cec37eac6345731da067d64c6f18e049928998f0aff5d7b2db25",
+        "references/code-first-and-tooling.md": "0c61e23ec60f3fca9c9e5c7e1fc75c91c1246c5d5beb1206a2ca19d84bc21bf9",
+        "references/details.md": "300550c6ad213c940ad201e06fafbf9c83919abfba42970e943b6ff726216b13"
+      },
+      "adaptations": {
+        "SKILL.md": "Retains the upstream contract and code-first examples. Updates the OpenAPI 3.1 null example and replaces global installs and SDK commands with project-owned validation.",
+        "LICENSE": "Normalized line endings and trailing whitespace. Preserves license text and attribution."
+      },
+      "review": "Source and packaged references reviewed. No executable helpers or installers ship.",
+      "install_path": "skills/capabilities/openapi-spec-generation"
+    },
+    "playwright-cli": {
+      "name": "playwright-cli",
+      "repository": "https://github.com/microsoft/playwright-cli",
+      "commit": "4bc00fb7fa5b4329f2fb53ac4743a066c2c664e8",
+      "path": "skills/playwright-cli",
+      "version": "0.1.23",
+      "license": "Apache-2.0",
+      "author": "microsoft/playwright-cli",
+      "upstream_files": {
+        "LICENSE": "9a7110fc2d2f964038e5dc49128f908f29f47a574c961cba16085914e879cbda",
+        "SKILL.md": "b07a6cbe4e5b638046fe0b9df0e84783cb9899f0aed3db1eef915601c3260a64",
+        "references/playwright-tests.md": "c5b0719fef2cfdff50bd744051b2f9afc119775db4b48e9b2882c1cf3886797c",
+        "references/request-mocking.md": "54e801c9663fc2b6d68ceb058cb1c360724c2499f42acc7852a68e83e5b5f37c",
+        "references/element-attributes.md": "bf19aa4671e0a50a0fefa9c790f39124e803060eefe395042b723c29fcb7faa2"
+      },
+      "files": {
+        "LICENSE": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b",
+        "REVIEW.md": "8059798b751dc6713432afa6d10e8075b423f51723b95ea11f78d0e9d085785a",
+        "SKILL.md": "1826efe4d6fbb3c550612a3f6e3cc4b8cfa2e276e3aa68881b3601129f675885",
+        "references/element-attributes.md": "bf19aa4671e0a50a0fefa9c790f39124e803060eefe395042b723c29fcb7faa2",
+        "references/playwright-tests.md": "8061dd0a7042994804fe45a4ce7bfdebcf3b68ebcc2e03f3023499a34899a826",
+        "references/request-mocking.md": "8c255a0600eff5405353f8b9f6650dbcaa80f1c94290832bfb41ac296162e4d1"
+      },
+      "adaptations": {
+        "SKILL.md": "Adapted the upstream browser commands for temporary Hermes sessions and project-pinned tests. Install commands, existing-browser attachment, browser storage extraction and publishing guidance are outside the bundled selection.",
+        "LICENSE": "Normalized line endings and trailing whitespace. Preserves license text and attribution."
+      },
+      "review": "Source and packaged references reviewed. No executable helpers or installers ship.",
+      "install_path": "skills/capabilities/playwright-cli"
+    },
+    "supabase-postgres-best-practices": {
+      "name": "supabase-postgres-best-practices",
+      "repository": "https://github.com/supabase/agent-skills",
+      "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "path": "skills/supabase-postgres-best-practices",
+      "version": "1.1.1",
+      "license": "MIT",
+      "author": "supabase/agent-skills",
+      "upstream_files": {
+        "LICENSE": "b65e575eb4f04a13c187d64e958321298e2ab84d67aa8428819f362056ba292c",
+        "SKILL.md": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+        "references/schema-constraints.md": "90e8efda3e9e81095e642911ad4aae2809d160f29414338fa997253238f510f8",
+        "references/schema-data-types.md": "e01b58c14c7f3f65d8ead580b9a4fcf70b83baaab0f9a5f83c569c9fd113e8c8",
+        "references/schema-foreign-key-indexes.md": "7587713d12a65a212365459b3d39e4717d8a79e4073b10bd62f1054d8192c0dd",
+        "references/lock-short-transactions.md": "5aa7f61095916986d39644b446cdbcd2bacca7ef698a3bb50b3f82dd60207602",
+        "references/lock-deadlock-prevention.md": "09aee46f51d7178c8e55fe056cd5a94a64ba2c122fe418e6900cd99f297b2347",
+        "references/data-upsert.md": "2612af83b20a2701dde30ef1f8d7efd26b7e9eef84717226b8f038a2d2150ff7",
+        "references/data-pagination.md": "73c9fa10a3d439bedea0e11b640bd25bf30dd50f0d9006cf85baf7c3151543fa",
+        "references/query-composite-indexes.md": "73e42424e671f0266e74fdb220db3196790f69fb43e2b19c7b9483eb4971b554",
+        "references/monitor-explain-analyze.md": "4cb67ffbf8e57f2e5b380b0beb4242528b513723ce314a2c2ffcf083bd4203d7"
+      },
+      "files": {
+        "LICENSE": "b65e575eb4f04a13c187d64e958321298e2ab84d67aa8428819f362056ba292c",
+        "REVIEW.md": "b3554f864b5f0c4cb712a5c13f8fc9a1501b4f4cc38fd54d5dc75ef1b1157577",
+        "SKILL.md": "be619782552e7e1b3ae4ab629831116b3b61449f5e7782b7f1e74c31112ec584",
+        "references/data-pagination.md": "fc3d0596831e975f1d26a3d477ba16d5eabd176246b123ae8c8d464138184479",
+        "references/data-upsert.md": "2612af83b20a2701dde30ef1f8d7efd26b7e9eef84717226b8f038a2d2150ff7",
+        "references/lock-deadlock-prevention.md": "48153105b1f2feb4f562d7b20555c6130332ffd25fbf87cbb0ff545e28b89632",
+        "references/lock-short-transactions.md": "b01b5cf1c1593c702382f9a29afb9c1383fc4396ba0991749d69259e708441c2",
+        "references/monitor-explain-analyze.md": "a5e65c84c5f0b51402ff00d3279c1cb229263bfc49f6be0fb3f9428028e1f56c",
+        "references/query-composite-indexes.md": "3289050529e1fe8cd7a4c8037968528a676b74d623529899688b121809e5b7cf",
+        "references/schema-constraints.md": "b0a13868a124f282e70840f6e391ee03549ae77a9b1d95e95838ea254d8f58b2",
+        "references/schema-data-types.md": "e01b58c14c7f3f65d8ead580b9a4fcf70b83baaab0f9a5f83c569c9fd113e8c8",
+        "references/schema-foreign-key-indexes.md": "1d79459d584d55b27c24be2f06eccaef80dfbe75368a9013f8653b86c9ed4a23"
+      },
+      "adaptations": {
+        "SKILL.md": "Selected schema, transaction and query references for feature work. Scoped SQL to test databases and qualified example claims about locks, index selection and pagination. Hosted setup and example login roles are outside this distribution."
+      },
+      "review": "Source and packaged references reviewed. No executable helpers or installers ship.",
+      "install_path": "skills/capabilities/supabase-postgres-best-practices"
     }
   }
 }
