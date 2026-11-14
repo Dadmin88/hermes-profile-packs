@@ -35,7 +35,12 @@ def main():
         events.append(event)
         # Stream evidence to the controller so timeouts retain partial traces.
         print(json.dumps({"event": event}), file=sys.__stdout__, flush=True)
+    connection = {}
     try:
+        if not settings.get("preflight"):
+            from evals.connection import connect
+            connection = connect(settings)
+            emit("connection_ready", provider=settings["provider"], connection=settings.get("connection", "api-key"))
         with tempfile.TemporaryDirectory(prefix="hermes-profile-eval-") as tmp:
             lab = Path(tmp)
             home, workspace = lab / "home", lab / "workspace"
@@ -80,11 +85,15 @@ def main():
             if settings.get("preflight"):
                 output.update(execution_status="PREFLIGHT", reason="Native installation/readback only; no model call")
             else:
-                if not settings.get("model") or not settings.get("base_url") or not os.getenv("HERMES_EVAL_API_KEY"):
-                    raise RuntimeError("Live evaluation requires explicit model, base URL and HERMES_EVAL_API_KEY")
+                if not settings.get("model") or not settings.get("base_url") or not connection.get("api_key"):
+                    raise RuntimeError("Live evaluation requires a model, endpoint, and working connection")
                 cfg_path = target / "config.yaml"
                 cfg = yaml.safe_load(cfg_path.read_text()) if cfg_path.exists() else {}
                 cfg = cfg or {}
+                # Native supported setting: keep the fixture tools directly visible so the
+                # pilot has a small, exact, auditable tool surface rather than a search bridge.
+                cfg.setdefault("tools", {}).setdefault("tool_search", {})["enabled"] = "off"
+                cfg_path.write_text(yaml.safe_dump(cfg))
                 if any(v.get("enabled", True) for v in (cfg.get("mcp_servers") or {}).values()):
                     raise RuntimeError("Active MCP integrations unsupported in isolated pilot")
                 # Do not let runtime imports load a project .env or installed account resolver.
@@ -131,7 +140,7 @@ def main():
                             output.update(execution_status="FAIL", reason="Case model-turn limit exceeded")
                             raise EvaluationStop(output["reason"])
                     agent = AIAgent(model=settings["model"], provider=settings["provider"], base_url=settings["base_url"],
-                                    api_key=os.environ["HERMES_EVAL_API_KEY"], enabled_toolsets=["profile_eval"],
+                                    api_key=connection["api_key"], api_mode=connection.get("api_mode"), enabled_toolsets=["profile_eval"],
                                     max_iterations=request["limits"]["max_model_turns"], max_tokens=settings["max_output_tokens"],
                                     quiet_mode=True, save_trajectories=False, load_soul_identity=True,
                                     skip_memory=True, skip_background_review=True, cwd=str(workspace),
@@ -196,7 +205,10 @@ def main():
             output["execution_status"] = "BLOCKED"
         output["reason"] = f"{type(exc).__name__}: {exc}"
     output["duration_seconds"] = time.monotonic() - started
-    print(json.dumps({"result": output}), file=sys.__stdout__, flush=True)
+    serialized = json.dumps({"result": output})
+    if connection.get("api_key"):
+        serialized = serialized.replace(connection["api_key"], "[redacted]")
+    print(serialized, file=sys.__stdout__, flush=True)
 
 
 if __name__ == "__main__":

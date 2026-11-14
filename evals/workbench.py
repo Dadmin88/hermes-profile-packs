@@ -18,6 +18,7 @@ import threading
 from urllib.parse import parse_qs, urlsplit
 import uuid
 
+from evals.connection import validate_login_settings
 from evals.core import ROOT, compare_runs, digest, grade, load_cases, review_template
 from evals.run import atomic_json, outside_repo, write_report
 
@@ -37,7 +38,7 @@ def integer(data, key, default, low, high):
 
 
 class Workbench:
-    def __init__(self, root, output, hermes_source, python=sys.executable, defaults=None):
+    def __init__(self, root, output, hermes_source, python=sys.executable, defaults=None, connection="api-key"):
         self.root = Path(root).resolve()
         self.output = Path(output).resolve()
         outside_repo(self.output, self.root)
@@ -45,6 +46,9 @@ class Workbench:
         self.hermes_source = Path(hermes_source).resolve()
         self.python = str(Path(python).absolute())
         self.defaults = defaults or {}
+        self.connection = connection
+        if connection == "hermes-login":
+            validate_login_settings(self.defaults)
         self.token = secrets.token_urlsafe(32)
         self.lock = threading.RLock()
         self.active = None
@@ -82,6 +86,7 @@ class Workbench:
 
     def bootstrap(self):
         return {"csrf_token": self.token, "defaults": self.defaults,
+                "connection": self.connection,
                 "credential_configured": bool(os.environ.get("HERMES_EVAL_API_KEY")),
                 "runtime_available": (self.hermes_source / "run_agent.py").is_file(),
                 "jobs": self.jobs()}
@@ -104,8 +109,10 @@ class Workbench:
             settings[key] = data.get(key, self.defaults.get(key, ""))
             if not isinstance(settings[key], str) or len(settings[key]) > 500:
                 raise ValueError(f"Invalid {key}")
+        if self.connection == "hermes-login":
+            validate_login_settings(settings)
         if mode == "live":
-            if not all(settings.values()) or not os.environ.get("HERMES_EVAL_API_KEY"):
+            if not all(settings.values()) or (self.connection == "api-key" and not os.environ.get("HERMES_EVAL_API_KEY")):
                 raise ValueError("Live evaluation needs a model, provider, base URL and server-side HERMES_EVAL_API_KEY")
             url = urlsplit(settings["base_url"])
             if url.scheme not in {"https", "http"} or not url.hostname or url.username or url.password:
@@ -129,7 +136,7 @@ class Workbench:
             atomic_json(directory / "job.json", job)
             command = [sys.executable, "-m", "evals.run", "--root", str(self.root), "run", "--suite", suite,
                        "--hermes-source", str(self.hermes_source), "--python", self.python,
-                       "--output", str(directory), "--repeat", str(repeat), "--limit", str(len(ids) * repeat),
+                       "--output", str(directory), "--connection", self.connection, "--repeat", str(repeat), "--limit", str(len(ids) * repeat),
                        "--max-total-tokens", str(budget), "--max-output-tokens", str(output_tokens)]
             for key, value in settings.items():
                 command.extend(["--" + key.replace("_", "-"), value])
@@ -325,6 +332,7 @@ def main():
     parser.add_argument("--python", default=sys.executable, help="Interpreter with Hermes dependencies")
     parser.add_argument("--output", type=Path, default=Path.home() / ".local/share/hermes-eval-workbench")
     parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument("--connection", choices=["api-key", "hermes-login"], default="api-key")
     parser.add_argument("--model", default="")
     parser.add_argument("--provider", default="openai")
     parser.add_argument("--base-url", default="")
@@ -337,7 +345,7 @@ def main():
     except BlockingIOError:
         parser.error("Another workbench is using this output directory")
     app = Workbench(args.root, args.output, args.hermes_source, args.python,
-                    {key: getattr(args, key) for key in ("model", "provider", "base_url")})
+                    {key: getattr(args, key) for key in ("model", "provider", "base_url")}, args.connection)
     server = ThreadingHTTPServer(("127.0.0.1", args.port), handler_for(app))
     def stop(signum, frame):
         raise KeyboardInterrupt

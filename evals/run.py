@@ -17,7 +17,7 @@ from evals.core import (ROOT, GRADER_VERSION, compare_runs, digest, git_revision
 
 def manifest(args, root):
     settings = {"model": args.model, "provider": args.provider, "base_url": args.base_url,
-                "max_output_tokens": args.max_output_tokens,
+                "max_output_tokens": args.max_output_tokens, "connection": getattr(args, "connection", "api-key"),
                 "hermes_source": str(Path(args.hermes_source).resolve()), "preflight": args.preflight}
     data = {"schema_version": 1, "pack_commit": git_revision(root), "runtime_commit": git_revision(Path(args.hermes_source)),
             "model": args.model, "provider": args.provider, "base_url": args.base_url,
@@ -37,12 +37,26 @@ def execute(request, python, root, timeout):
     env = {k: os.environ[k] for k in ("PATH", "LANG", "LC_ALL", "SSL_CERT_FILE", "SSL_CERT_DIR", "PLAYWRIGHT_BROWSERS_PATH", "HERMES_EVAL_CHROMIUM") if k in os.environ}
     if "HERMES_EVAL_API_KEY" in os.environ:
         env["HERMES_EVAL_API_KEY"] = os.environ["HERMES_EVAL_API_KEY"]
+    if request.get("settings", {}).get("connection") == "hermes-login":
+        env["HERMES_EVAL_LOGIN_HOME"] = str(Path.home())
     env["PYTHONPATH"] = str(root)
     env["PYTHONUNBUFFERED"] = "1"
     # start_new_session lets a timeout stop the worker and any browser subprocesses.
     with tempfile.TemporaryDirectory(prefix="profile-eval-parent-") as tmp:
         env.update(HOME=tmp, HERMES_HOME=str(Path(tmp) / ".hermes"))
-        process = subprocess.Popen([python, "-m", "evals.native_worker"], stdin=subprocess.PIPE,
+        command = [python, "-m", "evals.native_worker"]
+        if request.get("settings", {}).get("connection") == "hermes-login" and not request["settings"].get("preflight"):
+            # Let native PM activate its installed dependencies before creating the isolated
+            # profile home. A -c entry survives native interpreter relaunch without losing
+            # this repository's package path. No bootstrap flags or checks are bypassed.
+            env.update(HOME=env["HERMES_EVAL_LOGIN_HOME"],
+                       HERMES_HOME=str(Path(env["HERMES_EVAL_LOGIN_HOME"]) / ".hermes"))
+            source = str(Path(request["settings"]["hermes_source"]).resolve())
+            entry = (f"import sys, runpy; sys.path.insert(0, {source!r}); "
+                     f"import hermes_bootstrap; sys.path.insert(0, {str(root)!r}); "
+                     "runpy.run_module('evals.native_worker', run_name='__main__')")
+            command = [python, "-c", entry]
+        process = subprocess.Popen(command, stdin=subprocess.PIPE,
                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=tmp,
                                    env=env, start_new_session=True)
         timed_out = False
@@ -165,6 +179,7 @@ def main(argv=None):
     run.add_argument("--hermes-source", required=True)
     run.add_argument("--python", default=sys.executable)
     run.add_argument("--preflight", action="store_true")
+    run.add_argument("--connection", choices=["api-key", "hermes-login"], default="api-key")
     run.add_argument("--model", default="")
     run.add_argument("--provider", default="openai")
     run.add_argument("--base-url", default="")

@@ -64,6 +64,17 @@ class WorkbenchTests(unittest.TestCase):
                 self.app.start({'case_ids':['C01'], 'mode':'live', 'model':'test', 'provider':'openai', 'base_url':'https://example.invalid/v1'})
             spawn.assert_not_called()
 
+    def test_login_mode_pins_route_without_requiring_api_key(self):
+        from evals.connection import CODEX_URL
+        self.app.connection = 'hermes-login'
+        self.app.defaults = {'provider':'openai-codex', 'model':'test-model', 'base_url':CODEX_URL}
+        with patch.dict(os.environ, {}, clear=True), patch('evals.workbench.subprocess.Popen') as spawn, patch('evals.workbench.threading.Thread'):
+            with self.assertRaises(ValueError):
+                self.app.start({'case_ids':['C01'], 'mode':'live', 'base_url':'https://evil.invalid'})
+            spawn.assert_not_called()
+            self.app.start({'case_ids':['C01'], 'mode':'live'})
+            self.assertIn('hermes-login', spawn.call_args.args[0])
+
     def test_shell_text_is_passed_as_literal_argument(self):
         with patch('evals.workbench.subprocess.Popen') as spawn, patch('evals.workbench.threading.Thread'):
             spawn.return_value.poll.return_value = None
