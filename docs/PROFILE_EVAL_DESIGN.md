@@ -1,10 +1,16 @@
 # Hermes Profile Packs behavioral evaluations
 
-Updated November 13, 2026. Pilot: **18 cases, three profiles, three honesty/recovery cases and three indirect-injection cases**. Memory/isolation testing remains deferred.
+Updated November 14, 2026. Pilot: **18 cases, three profiles, three honesty/recovery cases and three indirect-injection cases**. Memory/isolation testing remains deferred.
 
 The runner is implemented as a small Python package in `evals/`. It imports all 175 existing fixtures, adds the pilot, checks trace/artifact evidence, produces review templates and reports, and compares compatible baseline/candidate runs. It does not treat structural checks, installation preflight or scripted responses as live profile acceptance.
 
 ## Evidence and current limits
+
+The [November 14 operational pilot](EVAL_OPERATIONAL_PILOT.md) completed six real C01 executions through the installed MCP, with verified skill evidence and matched source-file comparisons. Semantic verdicts remain pending Kyle’s review. A02 still fails native startup-skill readback; upstream support is not yet merged.
+
+### Initial foundation checks (November 13; historical)
+
+The following describes the initial development environment, before the later Katana integration and live pilot:
 
 Pack source inspected: `1c294d59972c5f3f699c2efbc23e44dd01f48539`. Upstream runtime inspected and used for native installation preflight: `422ad1861856dd9b80b947fbad9f39d1580f6b41`.
 

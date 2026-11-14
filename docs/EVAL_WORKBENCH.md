@@ -2,6 +2,8 @@
 
 A local website for selecting Profile Packs cases, launching bounded runs, inspecting answers and tool traces, reviewing behavior, and comparing baselines. It runs the same native adapter and grader as the CLI. There is no separate hosted service, database, frontend build, or JavaScript dependency installation.
 
+For a demonstrated live baseline/candidate workflow, readiness by case, saved run links and a repeatable Hermes prompt, see the [operational pilot guide](EVAL_OPERATIONAL_PILOT.md). C01 has completed live trials; A02 remains blocked on native distribution preloads. Official pilot verdicts await Kyle’s review.
+
 ## Your first test, in plain English
 
 Once the workbench is running, open **http://localhost:8765** on that computer. A **case** is a prepared question with a checklist describing a good answer.
