@@ -57,6 +57,7 @@ class APIClientTests(unittest.TestCase):
             self.assertEqual(caught.exception.code, 'START_OUTCOME_UNKNOWN')
             self.assertIn('history', caught.exception.message)
             self.assertEqual(api.opener.open.call_count, 2)
+            if isinstance(error, HTTPError): self.assertTrue(error.fp.closed)
 
     def test_unreachable_bootstrap_does_not_claim_a_start_was_sent(self):
         api = WorkbenchAPI(); api.opener = Mock()
@@ -68,11 +69,13 @@ class APIClientTests(unittest.TestCase):
     def test_token_rejection_and_error_body_do_not_leak(self):
         for code in [403, 400, 302]:
             api = WorkbenchAPI(); api.opener = Mock()
+            error = HTTPError('local', code, 'private-token', {}, BytesIO(b'{"error":"private-token"}'))
             api.opener.open.side_effect = [self.response({'csrf_token': 'private-token'}),
-                HTTPError('local', code, 'private-token', {}, BytesIO(b'{"error":"private-token"}'))]
+                error]
             with self.assertRaises(AdapterError) as caught: api.request('runs', {})
             self.assertNotIn('private-token', str(caught.exception))
             self.assertEqual(api.opener.open.call_count, 2)
+            self.assertTrue(error.fp.closed)
 
     def test_only_loopback_and_bounded_run_inputs(self):
         for port in [0, 65536, True, 'http://example.invalid']:
@@ -90,6 +93,19 @@ class APIClientTests(unittest.TestCase):
         self.assertFalse({'model','provider','base_url','python','hermes_source'} & body.keys())
         from evals.mcp_server import NoRedirects
         self.assertIsNone(NoRedirects().redirect_request(None, None, None, None, None, None))
+
+    def test_setup_and_pending_review_labels_match_browser_without_changing_verdicts(self):
+        adapter = Adapter(WorkbenchAPI())
+        detail = dict(job={'id':'a'*32}, run={'manifest':{}})
+        record = dict(case_id='C01', repetition=0, mode='native', execution_status='PREFLIGHT',
+                      grade={'status':'BLOCKED', 'blocked':['Semantic evidence review required']})
+        setup = adapter.trial_summary(detail, record)
+        self.assertEqual((setup['kind'], setup['display_status'], setup['verdict']), ('setup', 'SETUP OK', 'BLOCKED'))
+        self.assertFalse(setup['behavioral_evidence_complete'])
+        record['execution_status'] = 'COMPLETE'
+        pending = adapter.trial_summary(detail, record)
+        self.assertEqual(pending['display_status'], 'NEEDS REVIEW')
+        self.assertFalse(pending['behavioral_evidence_complete'])
 
 
 class MCPWorkflowTests(unittest.IsolatedAsyncioTestCase):

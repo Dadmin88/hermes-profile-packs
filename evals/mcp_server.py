@@ -58,22 +58,25 @@ class WorkbenchAPI:
             with self.opener.open(request, timeout=self.timeout) as response:
                 return json.load(response)
         except HTTPError as exc:
-            # Do not reflect arbitrary server text, headers, filesystem paths or tokens.
-            if exc.code == 403:
-                raise AdapterError('REQUEST_REJECTED', 'Local request check failed. The server may have restarted; check run history before retrying.') from None
-            if starting and exc.code >= 500:
-                raise self.uncertain_start() from None
             try:
-                error = json.loads(exc.read(4096)).get('error', '')
-            except (ValueError, AttributeError):
-                error = ''
-            if 'already active' in error:
-                raise AdapterError('BUSY', 'A run is already active. Check run history; wait or explicitly cancel it.') from None
-            if 'not active' in error:
-                raise AdapterError('NOT_ACTIVE', 'The requested run is not active.') from None
-            if 'completed runs' in error:
-                raise AdapterError('RUN_NOT_FINISHED', 'Compare finished runs; cancelled or partial jobs cannot establish regression.') from None
-            raise AdapterError('WORKBENCH_REJECTED', f'Workbench rejected the request (HTTP {exc.code}). Check IDs, case definitions and server configuration.') from None
+                # Do not reflect arbitrary server text, headers, filesystem paths or tokens.
+                if exc.code == 403:
+                    raise AdapterError('REQUEST_REJECTED', 'Local request check failed. The server may have restarted; check run history before retrying.') from None
+                if starting and exc.code >= 500:
+                    raise self.uncertain_start() from None
+                try:
+                    error = json.loads(exc.read(4096)).get('error', '')
+                except (ValueError, AttributeError):
+                    error = ''
+                if 'already active' in error:
+                    raise AdapterError('BUSY', 'A run is already active. Check run history; wait or explicitly cancel it.') from None
+                if 'not active' in error:
+                    raise AdapterError('NOT_ACTIVE', 'The requested run is not active.') from None
+                if 'completed runs' in error:
+                    raise AdapterError('RUN_NOT_FINISHED', 'Compare finished runs; cancelled or partial jobs cannot establish regression.') from None
+                raise AdapterError('WORKBENCH_REJECTED', f'Workbench rejected the request (HTTP {exc.code}). Check IDs, case definitions and server configuration.') from None
+            finally:
+                exc.close()  # Avoid deferred HTTPError warnings containing response text.
         except (TimeoutError, socket.timeout, URLError, OSError, ValueError):
             if starting:
                 raise self.uncertain_start() from None
@@ -206,9 +209,16 @@ class Adapter:
         synthetic = bool(detail['run'].get('manifest', {}).get('synthetic') or record.get('synthetic') or record.get('mode') == 'synthetic')
         setup = detail['job'].get('mode') == 'preflight' or record.get('execution_status') == 'PREFLIGHT'
         review_complete = grade.get('review_complete', {'Role and task requirements', 'No prohibited behavior', 'Completion quality'} <= {x['name'] for x in grade.get('checks', [])})
+        display_status = grade.get('status')
+        if record.get('execution_status') == 'PREFLIGHT':
+            display_status = 'SETUP OK'
+        elif (record.get('execution_status') == 'COMPLETE' and grade.get('status') == 'BLOCKED'
+              and grade.get('blocked') == ['Semantic evidence review required']):
+            display_status = 'NEEDS REVIEW'
         return {**select_fields(record, 'case_id profile repetition execution_status case_hash evidence_hash profile_hash'),
                 'kind': 'synthetic' if synthetic else 'setup' if setup else record.get('mode', 'unknown'),
-                'verdict': grade.get('status'), 'review_state': 'reviewed' if review_complete else 'unreviewed',
+                'verdict': grade.get('status'), 'display_status': display_status,
+                'review_state': 'reviewed' if review_complete else 'unreviewed',
                 'behavioral_evidence_complete': not synthetic and not setup and reviewed_verdict(record),
                 'browser_url': self.browser_url(detail['job']['id'], record['case_id'], record['repetition'])}
 
