@@ -22,7 +22,8 @@ def manifest(args, root):
     data = {"schema_version": 1, "pack_commit": git_revision(root), "runtime_commit": git_revision(Path(args.hermes_source)),
             "model": args.model, "provider": args.provider, "base_url": args.base_url,
             "settings_hash": digest({k: v for k, v in settings.items() if k not in {"hermes_source", "preflight"}}),
-            "adapter_version": digest(tree_hashes(root / "evals")), "grader_version": GRADER_VERSION,
+            "adapter_version": digest({k: v for k, v in tree_hashes(root / "evals").items()
+                                       if not k.startswith("web/") and k != "workbench.py"}), "grader_version": GRADER_VERSION,
             "browser_version": None, "preflight": args.preflight,
             "limitations": ["Controlled fixture tools; no real delivery or production execution.",
                             "Native skill preprocessing disabled; no shell or script execution.",
@@ -45,12 +46,24 @@ def execute(request, python, root, timeout):
                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=tmp,
                                    env=env, start_new_session=True)
         timed_out = False
+        previous = signal.getsignal(signal.SIGTERM)
+        def terminate(signum, frame):
+            raise KeyboardInterrupt("Run cancelled")
+        signal.signal(signal.SIGTERM, terminate)
         try:
-            out, err = process.communicate(json.dumps(request), timeout=timeout)
-        except subprocess.TimeoutExpired:
-            timed_out = True
-            os.killpg(process.pid, signal.SIGKILL)
-            out, err = process.communicate()
+            try:
+                out, err = process.communicate(json.dumps(request), timeout=timeout)
+            except subprocess.TimeoutExpired:
+                timed_out = True
+                os.killpg(process.pid, signal.SIGKILL)
+                out, err = process.communicate()
+            except BaseException:
+                if process.poll() is None:
+                    os.killpg(process.pid, signal.SIGKILL)
+                process.communicate()
+                raise
+        finally:
+            signal.signal(signal.SIGTERM, previous)
     events, result = [], None
     for line in out.splitlines():
         try:
@@ -70,9 +83,16 @@ def execute(request, python, root, timeout):
     return result
 
 
+def atomic_json(path, value):
+    # Readers always see a complete snapshot, including while the workbench polls.
+    temp = path.with_suffix(path.suffix + ".tmp")
+    temp.write_text(json.dumps(value, indent=2) + "\n")
+    temp.replace(path)
+
+
 def write_report(run, output):
     output.mkdir(parents=True, exist_ok=True)
-    (output / "results.json").write_text(json.dumps(run, indent=2) + "\n")
+    atomic_json(output / "results.json", run)
     counts = {s: sum(r["grade"]["status"] == s for r in run["results"]) for s in ("PASS", "FAIL", "BLOCKED", "NOT RUN")}
     lines = ["# Profile evaluation results", "", "Behavioral verdicts require observed native execution and semantic review.", "",
              "Counts: " + ", ".join(f"{k}={v}" for k, v in counts.items()), "",

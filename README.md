@@ -140,7 +140,7 @@ The validation suite checks pack manifests, namespaces, distribution metadata, s
 
 ## Behavioral evaluations
 
-An 18-case pilot tests role boundaries, handoffs, skill loading, task quality, token usage, deterministic tool failures, and indirect prompt injection across Agency, Council and Academy. The runner also imports the existing 175 behavioral fixtures. See [the evaluation design and commands](docs/PROFILE_EVAL_DESIGN.md) for evidence requirements, manual review, and native-runtime compatibility limits. Structural test success is not live behavioral certification.
+An 18-case pilot tests role boundaries, handoffs, skill loading, task quality, token usage, deterministic tool failures, and indirect prompt injection across Agency, Council and Academy. The runner also imports the existing 175 behavioral fixtures. Use the [local web workbench](docs/EVAL_WORKBENCH.md) to select cases, run checks, inspect traces, review results, and compare baselines in your browser. See [the evaluation design and commands](docs/PROFILE_EVAL_DESIGN.md) for evidence requirements, manual review, and native-runtime compatibility limits. Structural test success is not live behavioral certification.
 
 ## Design principles
 

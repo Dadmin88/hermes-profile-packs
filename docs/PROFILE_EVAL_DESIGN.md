@@ -142,3 +142,7 @@ HERMES_EVAL_CHROMIUM=/path/to/chromium \
 The tests cover case import/counts, canonical prompt integrity, grader-key separation, blocked continuity, stale reviews, unobserved injection, forbidden submissions, failed-tool/success-claim contradictions, skill evidence, preloads, usage totals, path isolation, missing-runtime failure and incompatible comparisons. The optional browser check verifies broken fixtures fail and corrected fixtures pass; it is harness verification, not model evaluation.
 
 The next live gate is a compatible native preload path plus one observed model response/skill read/usage capture on the target runtime. Only after that should all three profiles receive a reviewed baseline and the broader roster expand. Deeper memory/isolation remains deferred as agreed.
+
+## Browser workbench
+
+The [local evaluation workbench](EVAL_WORKBENCH.md) provides case selection, bounded execution, cancellation, saved run history, response/tool-trace inspection, evidence-bound semantic reviews, JSON exports, and comparison tables. It uses the same runner and grading functions. Setup checks remain distinct from behavioral passes. The CLI remains available for automation and CI.
