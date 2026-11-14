@@ -9,6 +9,7 @@ import hashlib
 import inspect
 import json
 import os
+import shutil
 from pathlib import Path
 import sys
 import tempfile
@@ -21,6 +22,12 @@ from evals.fixture_tools import FixtureTools, browser_observations
 
 class EvaluationStop(BaseException):
     """Escape native callback error suppression without starting another provider call."""
+
+
+def snapshot_profile(source, target):
+    """Copy once, then hash the exact immutable package passed to the installer."""
+    shutil.copytree(source, target)
+    return tree_hashes(target)
 
 
 def main():
@@ -54,7 +61,12 @@ def main():
             os.chdir(workspace)
             import yaml
             from hermes_cli.profile_distribution import install_distribution
-            profile_source = Path(request["profile_source"])
+            # Freeze the package actually handed to the installer. Later checkout edits
+            # must not change this trial's identity or its install readback expectations.
+            profile_source = lab / "source-package" / request["profile"]
+            payload = snapshot_profile(Path(request["profile_source"]), profile_source)
+            output["profile_files"] = payload
+            emit("profile_source", files=payload, content_hash=digest(payload))
             manifest = yaml.safe_load((profile_source / "distribution.yaml").read_text())
             plan = install_distribution(str(profile_source), create_alias=False)
             target = plan.target_dir.resolve()
@@ -67,7 +79,6 @@ def main():
             from tools.skills_sync import sync_skills
             sync_skills(quiet=True)
             # Full profile payload readback, including markers and referenced skill files.
-            payload = tree_hashes(profile_source)
             for name, value in payload.items():
                 if name == "distribution.yaml":
                     continue  # installer stamps provenance

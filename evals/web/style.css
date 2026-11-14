@@ -2,3 +2,6 @@
 
 #advanced-settings{margin:18px 0;color:var(--muted);font-size:12px}#advanced-settings>summary{cursor:pointer;padding:8px 0}#advanced-settings .two-col label{display:flex;flex-direction:column;gap:8px;margin:15px 0}
 .badge.NEEDS-REVIEW{color:var(--blue)}
+
+.comparison{max-width:none}.table-scroll{overflow-x:auto}.table-scroll td{overflow-wrap:anywhere;max-width:360px;vertical-align:top}.paired-evidence{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:26px}.paired-evidence>section{min-width:0;border:1px solid var(--line);border-radius:8px;padding:18px}.paired-evidence .evidence-grid{grid-template-columns:1fr}.paired-detail{scroll-margin-top:24px}.paired-detail h3{margin-top:24px}.file-change{padding:8px 0}.file-change summary{cursor:pointer}.synthetic-banner{border:1px solid var(--yellow);color:var(--yellow);padding:15px;border-radius:8px;line-height:1.6}.trace-event figure{margin:10px 0}.trace-event figcaption{margin:8px 0}.review-summary{padding:16px 0;border-bottom:1px solid var(--line)}.review-summary .response{margin-bottom:8px}
+@media(max-width:1000px){.paired-evidence{grid-template-columns:1fr}}@media(max-width:540px){.comparison{padding:16px}}

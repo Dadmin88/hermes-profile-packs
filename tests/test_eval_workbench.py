@@ -97,6 +97,34 @@ class WorkbenchTests(unittest.TestCase):
         review['requirements'][0] = False
         self.assertEqual(self.app.review(run_id, 0, review)['status'], 'FAIL')
 
+    def test_old_results_and_removed_cases_still_load(self):
+        run_id, path, review = self.fixture()
+        run = json.loads((path / 'results.json').read_text())
+        run['results'][0]['case_id'] = 'retired-case'
+        atomic_json(path / 'results.json', run)
+        self.assertEqual(self.app.run_data(run_id)['run'], run)
+        self.assertEqual(self.app.run_data(run_id)['reviews'], [None])
+        atomic_json(path / 'reviews.json', {'0': review})
+        self.assertEqual(self.app.run_data(run_id)['reviews'], [review])
+        self.assertEqual(self.request('GET', '/api/runs/' + run_id)[0], 200)
+
+    def test_synthetic_walkthrough_is_read_only_and_uses_existing_api(self):
+        from evals.demo import seed
+        observation = dict(ok=True, observations={'browser_version': 'fixture-browser'},
+                           checks={name: True for name in self.app.cases['A02']['artifact_checks']})
+        baseline, candidate = seed(self.app.output, observation)
+        headers = {'Content-Type': 'application/json', 'X-Workbench-Token': self.app.token}
+        status, result = self.request('POST', '/api/compare', headers, {'baseline': baseline, 'candidate': candidate})
+        self.assertEqual(status, 200)
+        self.assertTrue(result['synthetic'])
+        self.assertEqual(result['changes'][0]['transition'], 'improved')
+        status, detail = self.request('GET', '/api/runs/' + candidate)
+        self.assertEqual(status, 200)
+        self.assertEqual(detail['reviews'][0]['evidence_ids'][3], 'event:6')
+        self.assertEqual(detail['run']['results'][0]['mode'], 'synthetic')
+        with self.assertRaisesRegex(ValueError, 'read-only'): self.app.review(candidate, 0, detail['reviews'][0])
+        with self.assertRaisesRegex(ValueError, 'already exist'): seed(self.app.output, observation)
+
     def test_review_rejects_changed_evidence_and_stale_hashes(self):
         run_id, path, review = self.fixture()
         stale = copy.deepcopy(review); stale['evidence_hash'] = 'wrong'

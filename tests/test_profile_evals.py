@@ -133,7 +133,7 @@ class EvalTests(unittest.TestCase):
 
     def test_comparison_blocks_confounds_and_reports_individual_regressions(self):
         _, record, _ = self.record('S03')
-        record['grade']={'status':'PASS','quality':{}}
+        record['grade']={'status':'PASS','quality':{},'review_complete':True}
         base={'manifest':{k:'one' for k in ['model','provider','base_url','runtime_commit','settings_hash','adapter_version','grader_version']},'results':[record]}
         other=copy.deepcopy(base); other['manifest']['model']='two'
         self.assertEqual(compare_runs(base,other)['status'],'INCOMPATIBLE')

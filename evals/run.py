@@ -19,12 +19,14 @@ def manifest(args, root):
     settings = {"model": args.model, "provider": args.provider, "base_url": args.base_url,
                 "max_output_tokens": args.max_output_tokens, "connection": getattr(args, "connection", "api-key"),
                 "hermes_source": str(Path(args.hermes_source).resolve()), "preflight": args.preflight}
+    settings.update(max_total_tokens=args.max_total_tokens, case_limit=args.limit, repetitions=args.repeat)
     data = {"schema_version": 1, "pack_commit": git_revision(root), "runtime_commit": git_revision(Path(args.hermes_source)),
             "model": args.model, "provider": args.provider, "base_url": args.base_url,
             "settings_hash": digest({k: v for k, v in settings.items() if k not in {"hermes_source", "preflight"}}),
             "adapter_version": digest({k: v for k, v in tree_hashes(root / "evals").items()
                                        if not k.startswith("web/") and k != "workbench.py"}), "grader_version": GRADER_VERSION,
-            "browser_version": None, "preflight": args.preflight,
+            "browser_version": None, "preflight": args.preflight, "profile_packages": {},
+            "settings": {k: v for k, v in settings.items() if k not in {"hermes_source", "preflight"}},
             "limitations": ["Controlled fixture tools; no real delivery or production execution.",
                             "Native skill preprocessing disabled; no shell or script execution.",
                             "Semantic results require evidence-bound manual review.",
@@ -147,7 +149,14 @@ def run_command(args):
                 evidence = execute(request, args.python, root, c["limits"]["max_seconds"] + 30)
                 attempts += 1
             record = {**evidence, "case_id": c["id"], "profile": c["profile"], "case_hash": c["case_hash"],
-                      "repetition": repeat, "profile_hash": digest(tree_hashes(profile_path(root, c["profile"])))}
+                      "repetition": repeat, "profile_hash": None}
+            # Source identities come from the worker snapshot, including partial traces
+            # after a timeout, never from re-reading a potentially edited checkout.
+            files = evidence.get("profile_files") or next((e["files"] for e in evidence.get("events", [])
+                    if e.get("type") == "profile_source"), None)
+            if files:
+                record["profile_hash"] = digest(files)
+                meta["profile_packages"][record["profile_hash"]] = {"profile": c["profile"], "files": files}
             record["evidence_hash"] = digest(evidence)
             record["usage"] = usage_total(record.get("events", []))
             if record.get("execution_status") != "COMPLETE":
@@ -207,7 +216,7 @@ def main(argv=None):
         if args.command == "compare":
             result = compare_runs(json.loads(args.baseline.read_text()), json.loads(args.candidate.read_text()))
             print(json.dumps(result, indent=2))
-            return 0 if result["status"] == "NO_REGRESSION" else 2
+            return 0 if result["status"] == "NO_REGRESSION" and not result.get("synthetic") else 2
         outside_repo(args.output, args.root)
         run = json.loads(args.results.read_text())
         reviews = json.loads(args.reviews.read_text())
@@ -223,6 +232,7 @@ def main(argv=None):
             if digest(evidence) != record["evidence_hash"]:
                 raise ValueError("Evidence was altered after execution")
             record["grade"] = grade(c, record, lookup.get((record["case_id"], record["evidence_hash"])))
+        run["manifest"]["grader_version"] = GRADER_VERSION
         write_report(run, args.output)
         return 0 if all(r["grade"]["status"] == "PASS" for r in run["results"]) else 2
     except (ValueError, KeyError, OSError) as exc:

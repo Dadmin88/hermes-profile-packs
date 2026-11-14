@@ -95,7 +95,7 @@ The tested agent receives only user turns, fixture documents and available tools
 
 A successful installation does not prove skill loading. The worker requires SOUL content in the native prompt, verifies declared preload injection, and records matching content from native `skill_view`. Listing a skill or merely claiming to have used it is insufficient. Existing fixture `skills` arrays indicate relevance; the runner does not require every listed skill to be read.
 
-The grader runs deterministic checks first. It never grants semantic PASS from keywords. A human reviewer must inspect transcript **and** tool results, then fill the generated template:
+The grader runs deterministic checks first. It never grants semantic PASS from keywords. An attributed human or assistant reviewer must inspect transcript **and** tool results, then fill the generated template:
 
 - `requirements`: one boolean per expected behavior.
 - `prohibited_observed`: one boolean per prohibited behavior.
@@ -124,7 +124,7 @@ python -m evals.run compare \
   /path/to/reviewed-candidate/results.json
 ```
 
-Comparison checks coverage and provenance, lists every case/repetition transition and quality score, and reports token ratios only when both results pass with comparable cache regimes. Existing failures remain failures. A pass-to-fail transition is a provisional regression: repeat the affected pair twice and retain all observations. The initial runner leaves confirmation and baseline promotion explicit; it does not silently rerun, discard flakes or promote baselines. Three samples are not statistical certification.
+Comparison rejects empty and setup-only runs and checks case hashes, coverage, model/provider/endpoint, runtime, settings, adapter, grader and browser compatibility. It matches by case ID plus repetition. Both sides need completed evidence-bound semantic reviews for a behavioral transition: BLOCKED, NOT RUN, unavailable execution, or incomplete review on either side yields an incomplete pair. Reviewed FAIL → PASS, PASS → FAIL and unchanged verdicts are separate observations from a trial. Independent counts preserve both pass-to-fail transitions and incomplete pairs in the same suite. Token ratios require two reviewed passes, complete usage, matching cache regimes and nonzero baseline usage. Existing failures remain failures. A pass-to-fail transition is a provisional regression: repeat the affected pair twice and retain all observations. The initial runner leaves confirmation and baseline promotion explicit; it does not silently rerun, discard flakes or promote baselines. Three samples are not statistical certification.
 
 For a SOUL or owned-skill change, select all cases for that profile, including negative and neighboring-skill cases. For shared skills, preloads, adapter/runtime or unknown dependencies, rerun the full relevant suite. Automatic Git dependency selection is deferred; use explicit `--case` or whole-suite selection. Changed profiles with no authored cases are uncovered, not certified by the pilot.
 
@@ -141,8 +141,25 @@ HERMES_EVAL_CHROMIUM=/path/to/chromium \
 
 The tests cover case import/counts, canonical prompt integrity, grader-key separation, blocked continuity, stale reviews, unobserved injection, forbidden submissions, failed-tool/success-claim contradictions, skill evidence, preloads, usage totals, path isolation, missing-runtime failure and incompatible comparisons. The optional browser check verifies broken fixtures fail and corrected fixtures pass; it is harness verification, not model evaluation.
 
-The next live gate is a compatible native preload path plus one observed model response/skill read/usage capture on the target runtime. Only after that should all three profiles receive a reviewed baseline and the broader roster expand. Deeper memory/isolation remains deferred as agreed.
+The remaining gate for a complete three-profile live baseline is a compatible native preload path and observed model/skill/usage evidence for every selected case. This comparison/UI pass runs no live evaluations; its synthetic examples do not advance that gate. Only after that should all three profiles receive a reviewed baseline and the broader roster expand. Deeper memory/isolation remains deferred as agreed.
 
 ## Browser workbench
 
 The [local evaluation workbench](EVAL_WORKBENCH.md) provides case selection, bounded execution, cancellation, saved run history, response/tool-trace inspection, evidence-bound semantic reviews, JSON exports, and comparison tables. It uses the same runner and grading functions. Setup checks remain distinct from behavioral passes. The CLI remains available for automation and CI.
+
+
+## Source provenance and paired evidence (comparison pass)
+
+Each new worker freezes the source distribution in a disposable copy before native installation. `tree_hashes` identifies its relative files; readback still verifies the installed payload. The controller uses these worker identities (including streamed snapshot events on timeout), never a post-execution checkout read. `manifest.profile_packages[profile_hash]` stores the profile name and relative-path SHA-256 map; each record references its package hash. Multiple source versions within a suite remain distinguishable. Package contents, secrets and machine-specific paths are not included in this manifest. No source snapshot means provenance is unavailable, not inferred.
+
+Compare Runs shows added/changed/removed files from validated stored maps. Missing legacy maps remain readable with an explicit unavailable label. Hashes establish file changes only, not causation. Readable settings accompany their compatibility hash, including output and run budgets, case limit and repetition count. Grader version 2 adds explicit review completion; legacy completion is recognized only through the semantic checks emitted after a valid review. Re-reviewing uses the current grader version.
+
+The paired inspector reuses the local run-detail API and shared evidence renderer. Review citations stay scoped to their baseline/candidate column. Deterministic artifact checks, semantic judgments and tool results are presented separately. Post-agent harness screenshots are labeled separately from screenshots returned by `browser_check`; neither alone establishes pixel inspection by the evaluated model. See the [A02 walkthrough](EVAL_WORKBENCH.md#reproduce-the-synthetic-a02-walkthrough) for exact clicks and the limits of the resulting conclusion.
+
+### Design references
+
+- [Bent Solutions' Hermes Bench](https://github.com/Bent-Solutions/hermes-bench): side-by-side outputs alongside timing, tool traces and review scores informed the paired inspector.
+- [Anthropic's Skill Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md): matching the evaluation prompt and retaining the old skill version informed paired trials and immutable source snapshots.
+- [riceharvest/hermesbench](https://github.com/riceharvest/hermesbench): separate tool telemetry and task outcomes, false-completion penalties and unavailable-infrastructure handling informed evidence labels and incomplete-pair semantics.
+
+These are design references, not added runtime dependencies. The workbench retains the native Hermes adapter and evidence-bound manual review; no database, new frontend stack or leaderboard is introduced.

@@ -54,3 +54,50 @@ The server rejects non-local Host headers, cross-origin requests, and mutations 
 - No in-browser SOUL editing, credential storage, multi-user accounts, or memory/isolation suite in this pilot.
 
 See [the evaluation design](PROFILE_EVAL_DESIGN.md) for the 18-case matrix and detailed grading contract.
+
+## Compare two runs, then inspect one trial
+
+Select **Compare runs**, choose a **Baseline** and **Candidate**, then click **Compare evidence →**. The settings table shows both models, runtimes, browser versions and settings. Missing or different required provenance, changed case definitions, or different case/repetition coverage prevent a behavioral comparison. Empty runs and setup-only runs are rejected. Historical results still open, even if their case no longer exists in today's catalog.
+
+The summary counts four observations independently: **Fail to pass**, **Pass to fail**, **Same verdict**, and **Not enough evidence**. A blocked, unattempted, or unreviewed result on either side cannot establish a behavioral change. This includes deterministic failures whose semantic review is incomplete. A confirmed reviewed pass-to-fail trial remains visible even when other pairs lack evidence. These are observations from individual trials, not proof that a profile edit caused an improvement. Repeat matched trials before drawing broader conclusions.
+
+Click **Inspect A02 · trial 1** (or the corresponding row) to open both records, matched by case ID and repetition rather than list order. Each side includes deterministic checks, review checks, reviewer reasoning, final answers and the tool trace. Citation buttons open the evidence in the correct column. Missing review reasoning is labeled explicitly rather than reconstructed from a verdict. Changing the selected runs clears the previous comparison.
+
+**Profile files** lists added, changed and removed relative paths. Expand a filename to see its two content hashes. New workers copy the source package into a disposable snapshot before installation and hash that snapshot using the existing tree-hash function. Each result references a package hash; the manifest deduplicates `{profile, files}` maps under `profile_packages`. No source text, credentials, or absolute machine paths enter this file manifest. A worker that never reached source installation has no source-package evidence. Older runs without file manifests show **File-level provenance unavailable**. The aggregate hash is not a substitute for missing file history.
+
+Token differences remain unavailable unless both trials have reviewed passes, complete usage, matching cache regimes and a nonzero baseline token count. Model/provider/endpoint, runtime, adapter, grader, browser and settings compatibility still apply. New settings provenance includes output limits, total token budget, case limit and repetitions. Grader version 2 records whether a semantic review completed; legacy grades can establish reviewed status through their existing semantic checks. Re-reviewing stamps the current grader version. Different grader/adapter versions need fresh matched runs; old runs are never silently relabeled as comparable.
+
+## Reproduce the synthetic A02 walkthrough
+
+This is an interface demonstration, **not a live evaluation**. The example agent actions, answers, reviews, model/runtime names, and profile edits are authored fixtures. Only the offline Save-button browser observations and screenshots are captured by real Chromium. The real profile package is unchanged: demo SOUL/skill edits happen in a disposable copy.
+
+From the repository root, with Playwright and Chromium available:
+
+```bash
+HERMES_EVAL_CHROMIUM=/path/to/chromium python -m evals.demo \
+  --output /path/outside/repository/comparison-demo
+python -m evals.workbench \
+  --hermes-source /path/to/hermes-agent \
+  --output /path/outside/repository/comparison-demo
+```
+
+The demo makes no model calls and needs no provider login. Choose a fresh output directory: existing demo results are never overwritten. You can also seed a workbench's existing output directory once, then refresh its run list. Synthetic runs are read-only, cannot be compared with live runs, and never yield a successful CLI comparison exit code for certification.
+
+Open **http://localhost:8765**, then:
+
+1. Click **Compare runs**.
+2. Set **Baseline** to **SYNTHETIC · A02 baseline**, and **Candidate** to **SYNTHETIC · A02 candidate**.
+3. Click **Compare evidence →**. Expect **1 fail to pass**, with token comparison unavailable.
+4. Click **Inspect A02 · trial 1**. Expand **changed · SOUL.md** and **changed · skills/accessibility-implementation/SKILL.md**. The demo appends instructions to distinguish failed automated tests from browser verification and report the remaining blocker. Model/runtime/settings and A02's task remain fixed. Hashes establish the file differences, not their effect on behavior.
+5. Under the baseline's **Review reasoning & citations**, click **event:4**. The test runner returned exit code 127: no automated checks ran. Yet **final:0** claims they passed. This is why the example fails, even though the harness later finds a working button.
+6. Under the candidate's review, click **event:6**. The preceding **event:5 · tool_call · browser_check** shows the requested browser check. The result records Tab focus, an accessible Save button, focus style, and activation counts **0 → 1 → 2 → 3** for Enter, Space and mouse. Its final answer acknowledges the broken automated suite and asks for its runner to be restored.
+7. Expand the baseline's **event:6 · artifact_check**. Its screenshot is labeled **Harness capture after the agent finished**. The candidate screenshot is labeled **Capture returned by browser_check**. Neither screenshot alone establishes that an agent inspected its pixels. The tool observations establish the specific scripted interactions; they do not establish a full visual/accessibility audit or a passed automated suite.
+
+The useful conclusion is that the interface distinguishes a working artifact from an honest, supported completion report. This synthetic fail-to-pass example proves no actual profile improvement. Reverse the selected runs to see the pass-to-fail observation.
+
+### Verification for this pass (2026-11-14)
+
+- Browser walkthrough exercised against the local API: run selection, compatibility/settings summary, matched evidence, file-hash expansion, review citations, both screenshot labels, and reversed pass-to-fail comparison.
+- Real offline A02 fixture checks passed in Chromium on the target machine. The cloud shell could not launch a fresh Chromium process; fixture capture was performed on the target instead. These are harness checks, not live agent evaluations.
+- Regression coverage includes empty/setup comparisons, incomplete evidence on either side, reviewed transitions, mixed regressions and incomplete pairs, old result loading, unknown historical cases, source snapshots, file diffs, token restrictions, and synthetic/live separation.
+- **Live evaluations in this pass: zero.** Existing native preload compatibility blockers are unchanged.

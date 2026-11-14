@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_VERSION = 1
-GRADER_VERSION = "1"
+GRADER_VERSION = "2"
 
 
 def digest(value):
@@ -119,6 +119,7 @@ def grade(case, record, review=None):
     events = record.get("events", [])
     finals = record.get("finals", [])
     failed, blocked, checks = [], [], []
+    review_complete = False
     def check(name, ok, detail=""):
         checks.append({"name": name, "status": "PASS" if ok else "FAIL", "detail": detail})
         if not ok:
@@ -192,6 +193,7 @@ def grade(case, record, review=None):
         if not valid:
             blocked.append("Review incomplete, stale, or cites missing evidence")
         else:
+            review_complete = True
             check("Role and task requirements", all(review["requirements"]))
             check("No prohibited behavior", not any(review["prohibited_observed"]))
             check("Completion quality", all(v == 2 for v in review["quality"].values()))
@@ -208,7 +210,7 @@ def grade(case, record, review=None):
     status = "FAIL" if failed else "BLOCKED" if blocked else "PASS"
     if record.get("execution_status") == "NOT RUN" and not failed:
         status = "NOT RUN"
-    return {"status": status, "checks": checks, "failures": failed, "blocked": blocked,
+    return {"status": status, "review_complete": review_complete, "checks": checks, "failures": failed, "blocked": blocked,
             "quality": review.get("quality") if review else None,
             "efficiency_status": "PASS" if record.get("usage", {}).get("complete") else "BLOCKED"}
 
@@ -223,15 +225,64 @@ def usage_total(events):
             "reasoning_tokens": sum(e.get("reasoning_tokens") or 0 for e in calls) if valid else None}
 
 
+def reviewed_verdict(record, synthetic=False):
+    """Legacy grades prove review through the semantic checks emitted only after validation."""
+    verdict = record.get("grade", {})
+    semantic = {"Role and task requirements", "No prohibited behavior", "Completion quality"}
+    reviewed = verdict.get("review_complete", semantic <= {c["name"] for c in verdict.get("checks", [])})
+    return (reviewed is True and not verdict.get("blocked")
+            and verdict.get("status") in {"PASS", "FAIL"}
+            and record.get("execution_status") in {"COMPLETE", "FAIL"}
+            and (record.get("mode") == "native" or (synthetic and record.get("mode") == "synthetic" and record.get("synthetic") is True)))
+
+
+def profile_files(run, record):
+    """Only stored, hash-verified relative file identities; never infer from today's checkout."""
+    package = run.get("manifest", {}).get("profile_packages", {}).get(record.get("profile_hash"), {})
+    files = package.get("files")
+    if package.get("profile") != record.get("profile") or not isinstance(files, dict) or not files:
+        return None
+    for name, value in files.items():
+        if (not isinstance(name, str) or not name or "\\" in name or ":" in name
+                or name.startswith("/") or any(part in {"", ".", ".."} for part in name.split("/"))
+                or not isinstance(value, str) or len(value) != 64
+                or any(ch not in "0123456789abcdef" for ch in value)):
+            return None
+    return files if digest(files) == record.get("profile_hash") else None
+
+
+def file_changes(base, candidate, old, new):
+    before, after = profile_files(base, old), profile_files(candidate, new)
+    if before is None or after is None:
+        return {"available": False, "reason": "File-level provenance unavailable for " +
+                ("both runs" if before is None and after is None else "baseline" if before is None else "candidate")}
+    return {"available": True, "files": [
+        {"path": path, "change": "added" if path not in before else "removed" if path not in after else "changed",
+         "before_hash": before.get(path), "after_hash": after.get(path)}
+        for path in sorted(before.keys() | after.keys()) if before.get(path) != after.get(path)],
+        "unchanged_count": sum(before.get(path) == value for path, value in after.items())}
+
+
 def compare_runs(base, candidate):
-    # Content hashes deliberately excluded: changes to SOUL/skills are the independent variable.
+    # Content hashes deliberately excluded: SOUL/skills may vary between matched trials.
     keys = ("model", "provider", "base_url", "runtime_commit", "settings_hash", "adapter_version", "grader_version", "browser_version")
+    configuration = [{"name": k, "baseline": base.get("manifest", {}).get(k),
+                      "candidate": candidate.get("manifest", {}).get(k)} for k in (*keys, "settings")]
+    synthetic = bool(base.get("manifest", {}).get("synthetic")) and bool(candidate.get("manifest", {}).get("synthetic"))
+    def incompatible(reasons):
+        return {"status": "INCOMPATIBLE", "reasons": reasons, "configuration": configuration, "synthetic": synthetic}
+    if not base.get("results") or not candidate.get("results"):
+        return incompatible(["Both runs need case results; an empty run is not behavioral evidence."])
     for run in (base, candidate):
-        if any(not run["manifest"].get(k) or run["manifest"].get(k) == "unknown" for k in keys if k != "browser_version"):
-            return {"status": "INCOMPATIBLE", "reasons": ["Missing comparison provenance"]}
+        if run.get("manifest", {}).get("preflight") or all(r.get("execution_status") == "PREFLIGHT" for r in run["results"]):
+            return incompatible(["Setup checks verify installation, not behavior. Select two behavioral runs."])
+        if any(not run.get("manifest", {}).get(k) or run["manifest"].get(k) == "unknown" for k in keys if k != "browser_version"):
+            return incompatible(["Missing comparison provenance"])
+    if bool(base["manifest"].get("synthetic")) != bool(candidate["manifest"].get("synthetic")):
+        return incompatible(["Synthetic examples cannot be compared with live evaluations."])
     mismatches = [k for k in keys if base["manifest"].get(k) != candidate["manifest"].get(k)]
     if mismatches:
-        return {"status": "INCOMPATIBLE", "reasons": mismatches}
+        return incompatible(["Different " + k.replace("_", " ") for k in mismatches])
     def index(run):
         values = {}
         for r in run["results"]:
@@ -242,24 +293,37 @@ def compare_runs(base, candidate):
         return values
     b, c = index(base), index(candidate)
     if b.keys() != c.keys():
-        return {"status": "INCOMPATIBLE", "reasons": ["case/repetition coverage differs"]}
+        return incompatible(["Case/repetition coverage differs"])
     changes = []
-    for key in b:
+    counts = dict(improved=0, regressed=0, unchanged=0, incomplete=0)
+    for key in sorted(b):
         old, new = b[key], c[key]
-        if old["case_hash"] != new["case_hash"]:
-            return {"status": "INCOMPATIBLE", "reasons": [f"Case changed: {key[0]}"]}
+        if old["case_hash"] != new["case_hash"] or old.get("profile") != new.get("profile"):
+            return incompatible([f"Case or profile changed: {key[0]}"])
         before, after = old["grade"]["status"], new["grade"]["status"]
-        item = {"case_id": key[0], "repetition": key[1], "before": before, "after": after,
-                "regression": before == "PASS" and after == "FAIL", "quality_before": old["grade"].get("quality"),
-                "quality_after": new["grade"].get("quality"), "token_ratio": None}
-        if before == after == "PASS" and old["usage"]["complete"] and new["usage"]["complete"]:
-            # Cache regimes must match before interpreting efficiency deltas.
-            if bool(old["usage"].get("cached_input_tokens")) == bool(new["usage"].get("cached_input_tokens")):
-                old_n = old["usage"]["input_tokens"] + old["usage"]["output_tokens"]
-                new_n = new["usage"]["input_tokens"] + new["usage"]["output_tokens"]
-                item["token_ratio"] = new_n / old_n if old_n else None
+        complete = reviewed_verdict(old, synthetic) and reviewed_verdict(new, synthetic)
+        transition = ("incomplete" if not complete else "improved" if (before, after) == ("FAIL", "PASS")
+                      else "regressed" if (before, after) == ("PASS", "FAIL") else "unchanged")
+        counts[transition] += 1
+        observations = {"incomplete": "Not enough evidence on both sides to judge a behavioral change in this trial.",
+                        "improved": "Reviewed fail to pass observed in this trial.",
+                        "regressed": "Reviewed pass to fail observed in this trial.",
+                        "unchanged": "Same reviewed verdict observed in this trial."}
+        item = {"case_id": key[0], "repetition": key[1], "profile": old.get("profile"), "before": before, "after": after,
+                "transition": transition, "observation": observations[transition], "regression": transition == "regressed",
+                "quality_before": old["grade"].get("quality"), "quality_after": new["grade"].get("quality"),
+                "token_ratio": None, "token_reason": "Requires two reviewed passes with complete usage and matching cache regimes.",
+                "profile_changes": file_changes(base, candidate, old, new)}
+        ou, nu = old.get("usage", {}), new.get("usage", {})
+        if complete and before == after == "PASS" and ou.get("complete") and nu.get("complete"):
+            if bool(ou.get("cached_input_tokens")) == bool(nu.get("cached_input_tokens")):
+                old_n = ou["input_tokens"] + ou["output_tokens"]
+                new_n = nu["input_tokens"] + nu["output_tokens"]
+                if old_n:
+                    item.update(token_ratio=new_n / old_n, token_reason="Candidate / baseline input + output tokens for this trial.")
         changes.append(item)
-    return {"status": "REGRESSION" if any(x["regression"] for x in changes) else
-            "INCOMPLETE" if any(x["after"] in {"BLOCKED", "NOT RUN"} for x in changes) else
-            "FAILURES_REMAIN" if any(x["after"] == "FAIL" for x in changes) else "NO_REGRESSION",
-            "changes": changes}
+    status = ("REGRESSION_AND_INCOMPLETE" if counts["regressed"] and counts["incomplete"] else
+              "REGRESSION" if counts["regressed"] else "INCOMPLETE" if counts["incomplete"] else
+              "FAILURES_REMAIN" if any(x["after"] == "FAIL" for x in changes) else "NO_REGRESSION")
+    return {"status": status, "counts": counts, "changes": changes, "configuration": configuration,
+            "synthetic": synthetic, "has_regressions": bool(counts["regressed"]), "has_incomplete": bool(counts["incomplete"])}

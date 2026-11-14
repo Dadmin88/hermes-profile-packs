@@ -19,7 +19,7 @@ from urllib.parse import parse_qs, urlsplit
 import uuid
 
 from evals.connection import validate_login_settings
-from evals.core import ROOT, compare_runs, digest, grade, load_cases, review_template
+from evals.core import GRADER_VERSION, ROOT, compare_runs, digest, grade, load_cases, review_template
 from evals.run import atomic_json, outside_repo, write_report
 
 WEB = Path(__file__).with_name("web")
@@ -196,7 +196,8 @@ class Workbench:
             run = json.loads(reviewed.read_text())
         templates = []
         for i, record in enumerate(run["results"]):
-            templates.append(reviews.get(str(i), review_template(self.cases[record["case_id"]], record)))
+            case = self.cases.get(record["case_id"])
+            templates.append(reviews.get(str(i)) or (review_template(case, record) if case else None))
         log = directory / "runner.log"
         return {"job": json.loads((directory / "job.json").read_text()), "run": run, "reviews": templates,
                 "log": log.read_text(errors="replace")[-12000:] if log.exists() else ""}
@@ -209,6 +210,8 @@ class Workbench:
             run = json.loads((directory / "results.json").read_text())
             if type(index) is not int or not 0 <= index < len(run["results"]) or not isinstance(review, dict):
                 raise ValueError("Invalid review")
+            if run.get("manifest", {}).get("synthetic"):
+                raise ValueError("Synthetic walkthroughs are read-only examples, not live evaluations")
             record = run["results"][index]
             case = self.cases[record["case_id"]]
             if record["case_hash"] != case["case_hash"]:
@@ -240,6 +243,7 @@ class Workbench:
                 if c["case_hash"] != entry["case_hash"] or digest({k: v for k, v in entry.items() if k not in RECORD_METADATA}) != entry["evidence_hash"]:
                     raise ValueError("Run evidence or case definitions changed")
                 entry["grade"] = grade(c, entry, reviews.get(str(i)))
+            run["manifest"]["grader_version"] = GRADER_VERSION
             atomic_json(path, reviews)
             write_report(run, directory / "reviewed")
             return run["results"][index]["grade"]
