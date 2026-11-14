@@ -1,0 +1,3 @@
+# Isolate these adapter dependencies from the native Hermes worker environment.
+# Official Python MCP SDK v1, including stdio client/server and typed image blocks.
+mcp==1.29.0

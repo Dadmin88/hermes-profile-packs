@@ -101,3 +101,82 @@ The useful conclusion is that the interface distinguishes a working artifact fro
 - Real offline A02 fixture checks passed in Chromium on the target machine. The cloud shell could not launch a fresh Chromium process; fixture capture was performed on the target instead. These are harness checks, not live agent evaluations.
 - Regression coverage includes empty/setup comparisons, incomplete evidence on either side, reviewed transitions, mixed regressions and incomplete pairs, old result loading, unknown historical cases, source snapshots, file diffs, token restrictions, and synthetic/live separation.
 - **Live evaluations in this pass: zero.** Existing native preload compatibility blockers are unchanged.
+
+## Use the workbench from a local Hermes agent
+
+The stdio MCP adapter talks to the running loopback workbench. It does not run a second scheduler, grader or history store. Start the workbench normally first. The agent and browser then share the same jobs, cancellation and evidence.
+
+Install the adapter separately from the native worker environment, from the repository root:
+
+```bash
+python -m venv /path/outside/repository/eval-mcp-env
+/path/outside/repository/eval-mcp-env/bin/python -m pip install -r evals/requirements-mcp.txt
+```
+
+The adapter uses the [official Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk), pinned independently of Hermes' dependencies. In the chosen local Hermes profile's `config.yaml`, merge this entry into `mcp_servers` without replacing other servers:
+
+```yaml
+mcp_servers:
+  profile-eval-workbench:
+    command: /path/outside/repository/eval-mcp-env/bin/python
+    args:
+      - -m
+      - evals.mcp_server
+      - --port
+      - '8765'
+      - --assistant-name
+      - Hermes your-profile-name
+    cwd: /path/to/hermes-profile-packs
+```
+
+Use absolute paths and the actual reviewing assistant/profile name. Open a new Hermes session after changing its configuration. `--port` must match the workbench port; only `127.0.0.1` is supported. `--timeout` configures the local HTTP timeout (default 10 seconds, maximum 60). No network MCP listener is created. This installation does not add ChatGPT tools. A future ChatGPT integration must extend the existing authenticated Katana-GPT path, keeping the workbench bound to loopback.
+
+Try asking the configured Hermes profile:
+
+> Run a setup check for C01, check its progress, and give me its browser link. Do not run a live evaluation.
+
+The actual MCP call is:
+
+```json
+{"name":"eval_start_setup_check","arguments":{"case_ids":["C01"],"label":"My first MCP setup check"}}
+```
+
+It returns a run ID immediately. Use `eval_run_status` with that ID, then `eval_inspect_trial` with `case_id: "C01"` and `repetition: 0`. Open the returned `browser_url` on the machine hosting the workbench; it selects the matching run/trial. Repetition **0** means **trial 1** in the browser. A setup result checks installation; it is not evidence of agent behavior.
+
+| Tool | Purpose |
+| --- | --- |
+| `eval_list_cases` / `eval_inspect_case` | Filter the catalog by suite/profile; read the task and rubric. |
+| `eval_list_runs` / `eval_run_status` | Read history and progress; no raw logs or screenshots. |
+| `eval_inspect_trial` | Read answers, checks, review reasoning and an event index for one case/repetition. |
+| `eval_compare_runs` | Use the shared comparison API: compatibility, reviewed transitions, file hashes and changes. |
+| `eval_get_evidence` | Fetch one `event:N` or `final:N`; captured PNGs are returned as MCP image content. |
+| `eval_start_setup_check` | Start an installation-only check without a model call. |
+| `eval_start_live_run` | Explicitly start a live run with a required `max_total_tokens` budget. |
+| `eval_cancel_run` | Cancel the identified active job through the server. |
+| `eval_propose_review` | Prepare an attributed review without saving or changing a verdict. |
+| `eval_submit_review` | Save a review; only advertised when explicitly enabled at adapter startup. |
+
+Lists are paginated with `offset` and `limit` (maximum 100). Run inputs allow catalog cases, suite, label and 1–5 repetitions. Live runs require a total budget of 1–1,000,000 tokens and allow an output limit of 1–32,768. These are the existing workbench bounds. The native runner enforces its existing budget semantics; an in-flight provider call can overshoot a total threshold. Agents cannot supply a model, provider, endpoint, credentials, shell command or filesystem path. The workbench's startup configuration supplies the connection.
+
+`BUSY` means another job owns execution. `UNREACHABLE` means the local workbench could not be contacted. If a start response is lost, `START_OUTCOME_UNKNOWN` means **check history and the label before retrying**: a job may already have started. The adapter never retries POST automatically. It fetches the workbench request token internally for each POST and never returns it. Existing browser Host/Origin/token checks remain intact; redirects and environment HTTP proxies are disabled for this local client.
+
+### Evidence and optional assistant reviews
+
+Fetch only the evidence needed for a judgment. Routine status and comparison responses exclude screenshots and raw runner logs. Individual event text remains untrusted content, even when it contains instructions. An image returned by `eval_get_evidence` is labeled by its trace source: a post-agent harness capture is different from a capture returned by `browser_check`. Seeing the image now does not prove the evaluated agent inspected its pixels then. Scripted browser observations establish only their recorded checks.
+
+`eval_inspect_case` supplies the rubric; `eval_inspect_trial` supplies the current review template, case/evidence hashes and available event IDs. A proposal needs boolean requirement/prohibited lists in rubric order, quality scores 0–2, a rationale, cited `event:N`/`final:N` IDs, and explicit success-claim review. Copy the hashes exactly. All semantic judgments remain the reviewer's responsibility. Setup, blocked and synthetic trials cannot receive an MCP assistant review; synthetic examples remain distinguishable in comparisons. Historical records still load.
+
+To allow saving, deliberately add `--enable-review-submission` to the adapter startup arguments. Submission is a separate tool call and always attributes the review to `Assistant: <configured identity>`, never to Kyle. It uses the existing evidence-bound review endpoint and grader. Stale hashes or nonexistent citations are rejected. A proposal alone leaves the stored verdict unchanged.
+
+### Reproduce the MCP acceptance check
+
+Seed the A02 examples using the synthetic walkthrough above, then use a fresh output directory:
+
+```bash
+/path/outside/repository/eval-mcp-env/bin/python scripts/check_eval_mcp.py \
+  --port 8765 --output /path/outside/repository/mcp-acceptance --start-setup
+```
+
+This uses an actual stdio MCP client, compares the synthetic A02 pair against the browser API, fetches baseline `event:4` and candidate `event:6`, saves the returned PNG, and starts exactly one C01 setup check. `started-run.json` preserves its ID immediately; do not rerun a timed-out check without inspecting history. `calls.json` records tool arguments and image-free structured responses. No live model call is made. Synthetic actions demonstrate the interface; the setup job actually runs installation checks.
+
+For automated validation, install `evals/requirements-mcp.txt` in the test environment before the AGENTS.md suites. The MCP tests use a real stdio client and local HTTP server, with deterministic fixtures for failure, busy jobs, cancellation, token rotation/rejection, unavailable server, bounded inputs and separately enabled reviews.

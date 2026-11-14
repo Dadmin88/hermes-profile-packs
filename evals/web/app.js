@@ -181,4 +181,19 @@ async function init() { const data = await api('bootstrap'); state.csrf = data.c
 document.querySelectorAll('.nav').forEach(n => n.addEventListener('click', () => view(n.dataset.view))); $('suite').onchange = () => loadCases().catch(notice); $('search').oninput = renderCases; $('profile-filter').onchange = renderCases; $('select-visible').onchange = event => { visibleCases().forEach(c => event.target.checked ? state.selected.add(c.id) : state.selected.delete(c.id)); renderCases(); }; $('repeat').oninput = selection; document.querySelectorAll('input[name=mode]').forEach(n => n.onchange = modeChanged); $('launch-form').onsubmit = event => launch(event).catch(notice); $('close-case').onclick = () => $('case-dialog').close(); $('refresh-runs').onclick = () => refreshJobs().then(() => state.runId && loadRun(state.runId)).catch(notice); $('compare-form').onsubmit = compare; window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
 let polling = false;
 setInterval(async () => { if (polling || document.hidden) return; polling = true; try { const running = state.jobs.some(j => j.status === 'RUNNING'); if (running) { await refreshJobs(); if (state.view === 'runs' && state.runId && !state.dirty) await loadRun(state.runId); } } catch (error) { notice(error); } finally { polling = false; } }, 2500);
-init().catch(notice);
+async function openLinkedRun() {
+ const params = new URLSearchParams(window.location.hash.slice(1)), id = params.get('run');
+ if (!id) return;
+ if (!/^[0-9a-f]{32}$/.test(id)) throw new Error('Invalid run link.');
+ if (!leaveReview()) return;
+ state.record = null; view('runs'); await loadRun(id); renderJobSelection();
+ if (params.has('case')) {
+  const repetition = Number(params.get('repetition') || '0');
+  if (!Number.isSafeInteger(repetition) || repetition < 0) throw new Error('Invalid trial number in run link.');
+  const index = state.detail.run.results.findIndex(r => r.case_id === params.get('case') && r.repetition === repetition);
+  if (index < 0) { notice('This trial is not available yet. The run history shows its current progress.'); return; }
+  state.record = index; renderRun();
+ }
+}
+window.addEventListener('hashchange', () => openLinkedRun().catch(notice));
+init().then(openLinkedRun).catch(notice);
