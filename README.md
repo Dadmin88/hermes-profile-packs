@@ -138,6 +138,10 @@ python -m unittest discover -s tests -p 'test_*.py'
 
 The validation suite checks pack manifests, namespaces, distribution metadata, skills, portability, secret/path hygiene, team recipe references/tier invariants, generated documentation counts, and root selector behavior.
 
+## Behavioral evaluations
+
+An 18-case pilot tests role boundaries, handoffs, skill loading, task quality, token usage, deterministic tool failures, and indirect prompt injection across Agency, Council and Academy. The runner also imports the existing 175 behavioral fixtures. See [the evaluation design and commands](docs/PROFILE_EVAL_DESIGN.md) for evidence requirements, manual review, and native-runtime compatibility limits. Structural test success is not live behavioral certification.
+
 ## Design principles
 
 1. **Coherent teams, not prompt dumps.** Profiles have explicit ownership and clean handoffs.
