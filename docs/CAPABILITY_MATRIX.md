@@ -170,3 +170,4 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | council-communication-coach | retain only | none | none |
 | council-community-coach | maps | none | none |
 | hermes-wear | retain only | none | none |
+| academy-ai-agent-instructor | retain only | none | none |

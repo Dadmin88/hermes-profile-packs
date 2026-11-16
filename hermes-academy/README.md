@@ -6,7 +6,7 @@ Hermes Academy is the education profile pack for Hermes Agent: a faculty of prof
 
 Opening an Academy profile should feel like walking into the office, classroom, lab, studio, or training room of the instructor you need.
 
-Academy v0.2 contains **30 faculty profiles and 120 purpose-built teaching skills**. It keeps broad faculty roles for interdisciplinary learning while adding dedicated specialists for subjects that benefit from deeper routing.
+Academy v0.2 contains **31 faculty profiles and 125 purpose-built teaching skills**. It keeps broad faculty roles for interdisciplinary learning while adding dedicated specialists for subjects that benefit from deeper routing.
 
 ## Continuing Education
 
@@ -26,6 +26,7 @@ Continuing Education requires no separate training or distributed runtime. Do no
 
 | Profile | Teaching domain |
 | --- | --- |
+| `academy-ai-agent-instructor` | AI fundamentals, agent design, profile walkthroughs, and evaluation evidence |
 | `academy-dean` | Faculty routing, learner brief, curriculum path, cross-faculty synthesis |
 | `academy-mathematics-professor` | Mathematics and quantitative problem solving |
 | `academy-writing-rhetoric-professor` | Writing, rhetoric, grammar, argument, revision |

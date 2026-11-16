@@ -47,6 +47,7 @@ class LearnerContext:
 
 # Common natural-language terms that indicate each specialist-preference key.
 TOPIC_KEYWORDS: dict[str, list[str]] = {
+    "ai-agent-design": ["agent design", "agent loop", "hermes profile", "soul", "mcp", "agent evaluation", "tool calling"],
     "physics": [
         "physics", "mechanics", "thermodynamics", "kinematics", "dynamics",
         "newton", "momentum", "energy", "waves", "optics", "electromagnetism",

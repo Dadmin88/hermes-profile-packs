@@ -19,7 +19,7 @@ class CapabilityTests(unittest.TestCase):
         actual.add('hermes-wear')
         self.assertEqual(len(names),len(set(names)))
         self.assertEqual(actual,{r['path'] for r in records})
-        self.assertEqual(166,len(names))
+        self.assertEqual(167,len(names))
 
     def test_native_jobs_remain_role_owned(self):
         for pack in ['academy','council']:
