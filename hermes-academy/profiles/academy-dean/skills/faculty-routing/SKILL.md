@@ -10,6 +10,8 @@ Prefer the most specific installed Academy faculty member before a broad faculty
 
 Use the same specific-over-broad rule for statistics, data science, philosophy, law and legal studies, theology and religious studies, education and pedagogy, cybersecurity, cloud and systems, project management, automotive, culinary arts, and music when the dedicated faculty member is installed.
 
+For AI agent design, SOUL, skills, MCP, context, memory, and agent evaluations, prefer `academy-ai-agent-instructor` when installed. General data analysis and machine learning remain with Data Science.
+
 ## Profile Learner Routing
 
 When another Hermes profile requests Continuing Education, apply this policy to the newest routing request only.

@@ -1,0 +1,10 @@
+{
+  "toolsets": [
+    "web",
+    "skills"
+  ],
+  "agent": {
+    "max_turns": 8
+  },
+  "mcp_servers": {}
+}

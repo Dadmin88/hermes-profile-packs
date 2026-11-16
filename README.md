@@ -15,7 +15,7 @@ This repository is the public upstream home for reusable Hermes profile distribu
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
 <!-- profile-counts:start -->
-Hermes Agency contains 113 professional specialists. Hermes Council contains 22 focused profiles and 88 purpose-built personal-life skills. Hermes Academy contains 30 faculty profiles and 120 purpose-built teaching skills.
+Hermes Agency contains 113 professional specialists. Hermes Council contains 22 focused profiles and 88 purpose-built personal-life skills. Hermes Academy contains 31 faculty profiles and 125 purpose-built teaching skills.
 <!-- profile-counts:end -->
 
 ### Academy Continuing Education
@@ -34,7 +34,7 @@ See the [complete profile matrix](docs/CAPABILITY_MATRIX.md), [capability guide 
 
 ## Start small with Team Recipes
 
-You rarely need all 165 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
+You rarely need all 166 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
 
 The main installer understands them directly:
 
@@ -137,6 +137,10 @@ python -m unittest discover -s tests -p 'test_*.py'
 `validate.py` also checks that the generated README profile and skill counts match the pack manifests. After adding or removing a profile or skill, run `python scripts/update_readme_counts.py` to refresh the README. GitHub README files cannot run inline JavaScript, so the committed Markdown is generated and CI-enforced instead.
 
 The validation suite checks pack manifests, namespaces, distribution metadata, skills, portability, secret/path hygiene, team recipe references/tier invariants, generated documentation counts, and root selector behavior.
+
+## Behavioral evaluations
+
+An 18-case pilot tests role boundaries, handoffs, skill loading, task quality, token usage, deterministic tool failures, and indirect prompt injection across Agency, Council and Academy. The runner also imports the existing 175 behavioral fixtures. Use the [local web workbench](docs/EVAL_WORKBENCH.md) to select cases, run checks, inspect traces, review results, and compare baselines in your browser. See [the evaluation design and commands](docs/PROFILE_EVAL_DESIGN.md) for evidence requirements, manual review, and native-runtime compatibility limits. Structural test success is not live behavioral certification.
 
 ## Design principles
 

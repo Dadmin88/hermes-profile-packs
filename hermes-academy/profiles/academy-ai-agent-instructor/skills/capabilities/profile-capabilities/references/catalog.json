@@ -1,0 +1,9 @@
+{
+  "profile": "academy-ai-agent-instructor",
+  "role": "Teaches AI fundamentals, agent design, profile inspection, and evidence-based evaluation.",
+  "reason": "Five focused teaching skills cover guided study, profile walkthroughs, evidence review, recaps, and source research. Native web and bounded study/eval tools support those jobs. Inline Markdown, math and Mermaid are rendered by the study chat; no artifact-building or operational tools are needed.",
+  "skills": [],
+  "plugins": [],
+  "mcps": [],
+  "seed_shadows": []
+}
