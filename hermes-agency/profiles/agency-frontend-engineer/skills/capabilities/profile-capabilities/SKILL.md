@@ -18,6 +18,10 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 - `design-md`: Portable machine-readable design tokens and reference/export contracts complement existing visual design; Node linter remains optional setup.
 - `systematic-debugging`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
 - `test-driven-development`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
+- `threejs-scene-setup`: Set up and diagnose a scene, camera, responsive renderer and frame loop.
+- `threejs-gameplay-systems`: Build and test a playable loop with code-owned input, camera, collisions, state and encounters.
+- `threejs-performance`: Measure frame time, draw calls, pixel cost and resource lifetime.
+- `threejs-game-ui-designer`: Design and validate browser-game HUDs, menus, overlays and touch or keyboard states.
 
 ## Procedure
 

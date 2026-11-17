@@ -7,8 +7,8 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-accessibility-reviewer | accessibility, dogfood | none | none |
 | agency-ai-engineer | systematic-debugging, test-driven-development | pep-ref | context7 |
 | agency-analytics-specialist | microsoft-office | none | none |
-| agency-art-director | creative-ideation, create-game-assets | none | godot |
-| agency-asset-artist | creative-ideation, create-game-assets | none | godot |
+| agency-art-director | creative-ideation, create-game-assets, threejs-materials-lighting | none | godot |
+| agency-asset-artist | creative-ideation, create-game-assets, threejs-geometry, threejs-materials-lighting | none | godot |
 | agency-audio-designer | creative-ideation, godot-audio | none | godot |
 | agency-automation-engineer | systematic-debugging, test-driven-development | none | context7 |
 | agency-backend-engineer | rest-graphql-debug, systematic-debugging, test-driven-development | pep-ref | context7 |
@@ -39,11 +39,11 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-docs-writer | blocked-page-recovery, grounded-citations, simple-english | none | context7, deepwiki |
 | agency-editor-in-chief | retain only | none | none |
 | agency-email-marketer | grounded-citations | none | none |
-| agency-environment-artist | creative-ideation, godot-3d-essentials, create-game-assets | none | godot |
+| agency-environment-artist | creative-ideation, godot-3d-essentials, create-game-assets, threejs-scene-setup, threejs-geometry, threejs-materials-lighting | none | godot |
 | agency-finance-ops | microsoft-office | none | none |
-| agency-frontend-engineer | accessibility, design-md, systematic-debugging, test-driven-development | none | context7 |
+| agency-frontend-engineer | accessibility, design-md, systematic-debugging, test-driven-development, threejs-scene-setup, threejs-gameplay-systems, threejs-performance, threejs-game-ui-designer | none | context7 |
 | agency-fullstack-engineer | systematic-debugging, test-driven-development | none | context7 |
-| agency-game-designer | creative-ideation, game-feel | none | godot |
+| agency-game-designer | creative-ideation, game-feel, threejs-gameplay-systems | none | godot |
 | agency-git-steward | retain only | gh-ref | deepwiki |
 | agency-godot-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-2d-movement | none | context7, godot |
 | agency-graphic-designer | creative-ideation | none | none |
@@ -54,7 +54,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-knowledge-manager | rss-feeds | none | none |
 | agency-launch-manager | document-to-action-items, grounded-citations | none | none |
 | agency-legal-ops | blocked-page-recovery, document-to-action-items, grounded-citations | none | none |
-| agency-level-designer | creative-ideation, godot-tilemap | none | godot |
+| agency-level-designer | creative-ideation, godot-tilemap, threejs-scene-setup, threejs-geometry, threejs-gameplay-systems | none | godot |
 | agency-localization-specialist | simple-english | none | none |
 | agency-lore-writer | creative-ideation, excalidraw | none | none |
 | agency-market-researcher | blocked-page-recovery, rss-feeds | none | none |
@@ -86,7 +86,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-public-relations | grounded-citations, humanizer | none | none |
 | agency-qa-automation-engineer | dogfood, systematic-debugging | none | context7 |
 | agency-qa-lead | retain only | none | none |
-| agency-qa-tester | dogfood, godot-gdscript-headless-testing | none | godot |
+| agency-qa-tester | dogfood, godot-gdscript-headless-testing, threejs-scene-setup, threejs-gameplay-systems, threejs-performance | none | godot |
 | agency-red-team | retain only | osv-ref, snyk | none |
 | agency-release-manager | godot-export | gh-ref | deepwiki, godot |
 | agency-release-notes-writer | simple-english | none | none |
@@ -107,14 +107,14 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-solutions-engineer | excalidraw, rest-graphql-debug | rfc-ref | none |
 | agency-support-specialist | document-to-action-items | none | none |
 | agency-systems-architect | excalidraw | rfc-ref | none |
-| agency-technical-artist | creative-ideation, godot-shaders | none | godot |
+| agency-technical-artist | creative-ideation, godot-shaders, threejs-scene-setup, threejs-geometry, threejs-materials-lighting, threejs-performance | none | godot |
 | agency-technical-lead | one-three-one-rule | none | none |
 | agency-technical-support-engineer | rest-graphql-debug, systematic-debugging | none | context7, grafana, sentry |
 | agency-technical-writer | blocked-page-recovery, grounded-citations, simple-english | none | context7, deepwiki |
-| agency-tools-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-export | pep-ref | context7, godot |
+| agency-tools-engineer | systematic-debugging, test-driven-development, godot-gdscript-headless-testing, godot-export, threejs-scene-setup, threejs-performance | pep-ref | context7, godot |
 | agency-traffic-manager | document-to-action-items | none | none |
 | agency-training-specialist | concept-diagrams | none | none |
-| agency-ui-ux-designer | accessibility, design-md, excalidraw, game-ui-ux, godot-ui-control | none | godot |
+| agency-ui-ux-designer | accessibility, design-md, excalidraw, game-ui-ux, godot-ui-control, threejs-game-ui-designer | none | godot |
 | agency-user-researcher | excalidraw | none | none |
 | agency-video-producer | creative-ideation | none | none |
 | agency-worldbuilder | creative-ideation, excalidraw | none | none |

@@ -17,6 +17,9 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 - `creative-ideation`: Structured ideation methods complement craft-specific procedures without introducing external services.
 - `godot-3d-essentials`: Review 3D environments, camera, lights and scene structure in Godot.
 - `create-game-assets`: Check source provenance and produce import-ready game assets.
+- `threejs-scene-setup`: Set up and diagnose a scene, camera, responsive renderer and frame loop.
+- `threejs-geometry`: Build code-authored primitives, custom geometry and repeated props with instancing.
+- `threejs-materials-lighting`: Build readable lighting, materials and shadows in Three.js.
 
 ## Local tools
 

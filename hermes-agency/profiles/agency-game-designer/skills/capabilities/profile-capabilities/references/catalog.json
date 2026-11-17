@@ -10,6 +10,10 @@
     {
       "name": "game-feel",
       "reason": "Tune input response, timing and feedback using playable evidence."
+    },
+    {
+      "name": "threejs-gameplay-systems",
+      "reason": "Build and test a playable loop with code-owned input, camera, collisions, state and encounters."
     }
   ],
   "plugins": [],

@@ -16,6 +16,10 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `creative-ideation`: Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills.
 - `godot-shaders`: Author and verify Godot canvas and spatial shaders.
+- `threejs-scene-setup`: Set up and diagnose a scene, camera, responsive renderer and frame loop.
+- `threejs-geometry`: Build code-authored primitives, custom geometry and repeated props with instancing.
+- `threejs-materials-lighting`: Build readable lighting, materials and shadows in Three.js.
+- `threejs-performance`: Measure frame time, draw calls, pixel cost and resource lifetime.
 
 ## Local tools
 

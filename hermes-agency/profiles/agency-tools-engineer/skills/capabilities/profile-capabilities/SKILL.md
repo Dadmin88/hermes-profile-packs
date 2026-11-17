@@ -18,6 +18,8 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 - `test-driven-development`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
 - `godot-gdscript-headless-testing`: Run bounded headless GDScript checks and verify failure exit codes.
 - `godot-export`: Validate preset-driven Godot exports and headless build commands.
+- `threejs-scene-setup`: Set up and diagnose a scene, camera, responsive renderer and frame loop.
+- `threejs-performance`: Measure frame time, draw calls, pixel cost and resource lifetime.
 
 ## Local tools
 

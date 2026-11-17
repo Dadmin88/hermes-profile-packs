@@ -16,6 +16,7 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `creative-ideation`: Structured ideation methods complement craft-specific procedures without introducing external services.
 - `game-feel`: Tune input response, timing and feedback using playable evidence.
+- `threejs-gameplay-systems`: Build and test a playable loop with code-owned input, camera, collisions, state and encounters.
 
 ## Local tools
 

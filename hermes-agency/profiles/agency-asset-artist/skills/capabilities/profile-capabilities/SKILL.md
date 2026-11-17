@@ -16,6 +16,8 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `creative-ideation`: Structured ideation methods complement craft-specific procedures without introducing external services.
 - `create-game-assets`: Check source provenance and produce import-ready game assets.
+- `threejs-geometry`: Build code-authored primitives, custom geometry and repeated props with instancing.
+- `threejs-materials-lighting`: Build readable lighting, materials and shadows in Three.js.
 
 ## Local tools
 

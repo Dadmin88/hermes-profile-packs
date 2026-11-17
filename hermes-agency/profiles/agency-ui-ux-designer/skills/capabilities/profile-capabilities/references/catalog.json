@@ -22,6 +22,10 @@
     {
       "name": "godot-ui-control",
       "reason": "Lay out responsive Godot HUDs and verify keyboard or controller focus."
+    },
+    {
+      "name": "threejs-game-ui-designer",
+      "reason": "Design and validate browser-game HUDs, menus, overlays and touch or keyboard states."
     }
   ],
   "plugins": [],

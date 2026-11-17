@@ -10,6 +10,10 @@
     {
       "name": "create-game-assets",
       "reason": "Check source provenance and produce import-ready game assets."
+    },
+    {
+      "name": "threejs-materials-lighting",
+      "reason": "Build readable lighting, materials and shadows in Three.js."
     }
   ],
   "plugins": [],

@@ -1136,6 +1136,154 @@
       },
       "review": "Reviewed full Markdown tree, code examples, upstream notices and capability boundaries.",
       "install_path": "skills/capabilities/game-ui-ux"
+    },
+    "threejs-scene-setup": {
+      "name": "threejs-scene-setup",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/web-engines/threejs-scene-setup",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "gamedev-skills/awesome-gamedev-agent-skills",
+      "upstream_files": {
+        "SKILL.md": "4f229f27bc84eba0ba9197a775245cf8ddc1ba9959798d6caf9a9f59b4706c17",
+        "references/scene-graph.md": "ab2f19b3f2425d3e6f67ba26faa6e76fd67290fff977b410feef8aaab088c82e"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "e1503b0be8b8c7bc61b6b607625ed348e8ed4e6e9fff6e39c285afa7ada45db5",
+        "SKILL.md": "b16ef5b3849ea5d2dc53df2a499f5d32ba8dc2eeb32fdf666212b09987fb95ec",
+        "references/scene-graph.md": "ab2f19b3f2425d3e6f67ba26faa6e76fd67290fff977b410feef8aaab088c82e"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-scene-setup"
+    },
+    "threejs-materials-lighting": {
+      "name": "threejs-materials-lighting",
+      "repository": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+      "commit": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "path": "skills/web-engines/threejs-materials-lighting",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "author": "gamedev-skills/awesome-gamedev-agent-skills",
+      "upstream_files": {
+        "SKILL.md": "51451f53c44b9bb3ee87b8f12fcc0d8c8f5b44d9426686cec4090636d7580784",
+        "references/materials-lights-table.md": "b35eb1e9f194e871f9f79965f947928efa9b5626d41facac1b53fcf539113909"
+      },
+      "files": {
+        "LICENSE": "6f82dcfeb95a1c0a0452180a3b16f21bf82111780018fed59d95a052b5b75f6c",
+        "NOTICE": "2dcb65b1c5be24e5ba11e937f3996100f4e980d8cf8ac5b30ba1d70dae6c40f8",
+        "REVIEW.md": "0747d6aedc3726c21bd5639f5a291ba3bc8e0678cb000a40d3c109a36508c69a",
+        "SKILL.md": "bb52797bdec9ee7df4b42e5e3f60b2688ab499d70a7d839cd51fd4df2285aeac",
+        "references/materials-lights-table.md": "b35eb1e9f194e871f9f79965f947928efa9b5626d41facac1b53fcf539113909"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-materials-lighting"
+    },
+    "threejs-geometry": {
+      "name": "threejs-geometry",
+      "repository": "https://github.com/cloudai-x/threejs-skills",
+      "commit": "0e181866f095b5f06d005133876e926515390d95",
+      "path": "skills/threejs-geometry",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "cloudai-x/threejs-skills",
+      "upstream_files": {
+        "SKILL.md": "c29c1568cb56e902999b6a50316cd5079c53ee620138148897d269e9716e8da7"
+      },
+      "files": {
+        "LICENSE": "d26f12fa1a0e03fd5aa4d3cbf05262a9f1c684672d0864abac78b3bbb12b268c",
+        "REVIEW.md": "6511fdd4788f17132edc755e4b07bfec7a34dbd94bc9b98eb4fe407764227dfc",
+        "SKILL.md": "0957749c0dbeac2be0c36dc3a752d699f76717fc8f0e1b33151abc2d0398560f"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-geometry"
+    },
+    "threejs-performance": {
+      "name": "threejs-performance",
+      "repository": "https://github.com/cloudai-x/threejs-skills",
+      "commit": "0e181866f095b5f06d005133876e926515390d95",
+      "path": "skills/threejs-performance",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "cloudai-x/threejs-skills",
+      "upstream_files": {
+        "SKILL.md": "dacbf6a43ed280bdfcda2ce9fcf7a3f0ae54c25ed264e62f6e9a0117d6534285"
+      },
+      "files": {
+        "LICENSE": "d26f12fa1a0e03fd5aa4d3cbf05262a9f1c684672d0864abac78b3bbb12b268c",
+        "REVIEW.md": "565caed78320e35e5381c297eebdff669595cb1e2d774a2cbd39255180894c3f",
+        "SKILL.md": "bf0948efc621e31f0680d7d9cb5caebb8f1bea2c4d1effd275901f29a3e4f0a9"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-performance"
+    },
+    "threejs-gameplay-systems": {
+      "name": "threejs-gameplay-systems",
+      "repository": "https://github.com/majidmanzarpour/threejs-game-skills",
+      "commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "path": "skills/threejs-gameplay-systems",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "majidmanzarpour/threejs-game-skills",
+      "upstream_files": {
+        "SKILL.md": "4d3501c0356673ca99d7559e6b8804bdd8ef79175f546bfdc43bd0ebd4ece245",
+        "references/game-feel.md": "d328c7bb64ece26841c3119d5820097aee9d4719c6355fbfe6a7c65e5518c9ef",
+        "references/genre-design.md": "08ee8fe4e7920db1853a49b5f9f8765dac4988ff678cc616fcea46c91b5fe684",
+        "references/physics-engine-selection.md": "8eb53e2f04af048fd25cba42aa908be4062ffe28be0f320e751167be9bce5d79"
+      },
+      "files": {
+        "LICENSE": "306512561953da83863404efe11ba8845c6a7cf47a8744321c7cbd67f9944304",
+        "REVIEW.md": "90924b6d4ee85217ca8967e98771090733bbc9492145d92310eee934b4c7e078",
+        "SKILL.md": "1bb4ba5246b45ef8ce5d4d7409bdf2911e1739d706ff00eb2899b1e49941c4d4",
+        "references/game-feel.md": "014ca55876cb2dffa185591171ce14c72852d2bf9101e95e07346904b5e8c67f",
+        "references/genre-design.md": "08ee8fe4e7920db1853a49b5f9f8765dac4988ff678cc616fcea46c91b5fe684",
+        "references/physics-engine-selection.md": "0ed30e2c1d8a9b79ec3cde0b513757bf70b4def91a32129990404319ebd4257b"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries.",
+        "references/game-feel.md": "Remove scaffold assumptions and require project approval for optional effects or dependencies.",
+        "references/physics-engine-selection.md": "Remove scaffold assumptions and require project approval for optional effects or dependencies."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-gameplay-systems"
+    },
+    "threejs-game-ui-designer": {
+      "name": "threejs-game-ui-designer",
+      "repository": "https://github.com/majidmanzarpour/threejs-game-skills",
+      "commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "path": "skills/threejs-game-ui-designer",
+      "version": "1.0.0",
+      "license": "MIT",
+      "author": "majidmanzarpour/threejs-game-skills",
+      "upstream_files": {
+        "SKILL.md": "f68b6a0ad4347ed30fb416d3e5d9ee21e63af6c43dc05a3784f3e333f21e4f85",
+        "references/ui-patterns.md": "a5f3d2350e91ef21a610c68a878a9feb42f1e53aa01f78a05655e7bf158f2b0b"
+      },
+      "files": {
+        "LICENSE": "306512561953da83863404efe11ba8845c6a7cf47a8744321c7cbd67f9944304",
+        "REVIEW.md": "2c123b780590c8205bfc0ddb873c2b274de3396816507ec104512b9526f49af7",
+        "SKILL.md": "6876eec4e6b1ce5d488f4aa58fec8ddde01f95e9e6d6b31b69ddfdfd6739ec8b",
+        "references/ui-patterns.md": "a5f3d2350e91ef21a610c68a878a9feb42f1e53aa01f78a05655e7bf158f2b0b"
+      },
+      "adaptations": {
+        "SKILL.md": "Use installed tools and project-pinned APIs. See REVIEW.md for source boundaries."
+      },
+      "review": "Selected Markdown and local references reviewed. No executable scaffold or installer is distributed.",
+      "install_path": "skills/capabilities/threejs-game-ui-designer"
     }
   }
 }
