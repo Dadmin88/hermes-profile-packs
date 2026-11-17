@@ -15,7 +15,7 @@ This repository is the public upstream home for reusable Hermes profile distribu
 The packs deliberately separate durable context domains. Agency executes professional work, Council supports the person, and Academy teaches. A work profile should not need private life context, a personal profile should not inherit repository state merely because both run on Hermes, and a teaching profile should not silently become a production executor.
 
 <!-- profile-counts:start -->
-Hermes Agency contains 113 professional specialists. Hermes Council contains 22 focused profiles and 88 purpose-built personal-life skills. Hermes Academy contains 30 faculty profiles and 120 purpose-built teaching skills.
+Hermes Agency contains 114 professional specialists. Hermes Council contains 22 focused profiles and 88 purpose-built personal-life skills. Hermes Academy contains 30 faculty profiles and 120 purpose-built teaching skills.
 <!-- profile-counts:end -->
 
 ### Academy Continuing Education
@@ -28,13 +28,13 @@ See the [`Continuing Education guide`](docs/CONTINUING_EDUCATION.md) and [`archi
 
 ## Role-specific capability upgrade
 
-Every profile, including standalone Wear, now has an on-demand capability guide. The release includes 24 reviewed skill trees with full supporting files, six role-selected plugin opt-ins, and 13 disabled MCP integration templates. Existing role-owned jobs, tool restrictions, bundled-skill opt-outs and user-controlled activation remain intact.
+Every profile, including standalone Wear, now has an on-demand capability guide. The release includes 25 reviewed skill trees with full supporting files, six role-selected plugin opt-ins, and 15 disabled MCP integration templates. Existing role-owned jobs, tool restrictions, bundled-skill opt-outs and user-controlled activation remain intact.
 
 See the [complete profile matrix](docs/CAPABILITY_MATRIX.md), [capability guide and privacy/setup rules](docs/CAPABILITIES.md), and [verified results and limitations](docs/CAPABILITY_VALIDATION.md). Normal profile installation never downloads/enables plugins, authenticates accounts or starts remote integrations.
 
 ## Start small with Team Recipes
 
-You rarely need all 165 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
+You rarely need all 166 profiles. Team Recipes are validated compositions of existing profiles for common outcomes, with `minimal`, `recommended`, and `expanded` tiers.
 
 The main installer understands them directly:
 

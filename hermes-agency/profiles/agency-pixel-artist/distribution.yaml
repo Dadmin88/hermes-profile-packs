@@ -1,0 +1,7 @@
+name: agency-pixel-artist
+version: 0.2.0
+description: "Creates native-resolution pixel art for games and interfaces, including layered sprites, frame animations, seamless tilesets, palettes, and engine-ready atlases."
+author: "Kyle French"
+license: "AGPL-3.0-only"
+preload_skills:
+  - academy-continuing-education

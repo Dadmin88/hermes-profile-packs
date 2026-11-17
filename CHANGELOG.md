@@ -13,6 +13,8 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ### Added
 
+- Added Agency Pixel Artist with editable sprite, frame-animation, tileset and export workflows, two reviewed Hermes Hub skills, and disabled Pixelorama and Aseprite integrations. The pinned bridge builds retain normal editor tools and separate raw script execution from the shipped integrations.
+
 - Completed coordinated capability selection across all 166 public distributions: 24 pinned skill trees across 241 targeted assignments, an on-demand guide for every profile, six optional plugin declarations and 13 disabled MCP templates. Included full skill support trees, provenance, licenses, egress/setup disclosures, native seeding compatibility and offline materialization checks; preserved original role-owned source and restrictions.
 - Added complete machine-readable/readable matrices, a source preservation baseline, native install/seeding/discovery/update proof, least-privilege MCP allowlists, explicit credential/upload/billing gates and documented unsupported-candidate exclusions. Ordinary profile installation activates no external integration.
 

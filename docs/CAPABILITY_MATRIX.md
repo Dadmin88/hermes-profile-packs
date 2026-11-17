@@ -75,6 +75,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-platform-engineer | docker-management, excalidraw, systematic-debugging, test-driven-development | rfc-ref | aws-knowledge, context7, microsoft-learn |
 | agency-privacy-engineer | blocked-page-recovery, grounded-citations | osv-ref, snyk | none |
 | agency-procurement-specialist | blocked-page-recovery, grounded-citations, microsoft-office | none | none |
+| agency-pixel-artist | pixel-art, creative-ideation | none | pixelorama, aseprite |
 | agency-product-designer | excalidraw | none | none |
 | agency-product-manager | document-to-action-items | none | none |
 | agency-product-marketing-manager | retain only | none | none |

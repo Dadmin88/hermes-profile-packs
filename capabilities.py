@@ -122,8 +122,30 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                     cfg = item['config']
                     if cfg.get('enabled') is not False or cfg.get('sampling', {}).get('enabled') is not False:
                         raise ValueError('integration auto-activation/sampling: ' + item['name'])
-                    if not str(cfg.get('url', '')).startswith('https://') or 'command' in cfg:
-                        raise ValueError('only reviewed HTTPS MCP templates ship: ' + item['name'])
+                    if item.get('transport') == 'local-stdio':
+                        expected_entrypoints = {
+                            'pixelorama': '<pixelorama-mcp-checkout>/mcp-server/dist/index.js',
+                            'aseprite': '<aseprite-mcp-checkout>/build/index.js',
+                        }
+                        entrypoint = expected_entrypoints.get(item['name'])
+                        tools = cfg.get('tools', {})
+                        allowlist = tools.get('include')
+                        patch = target / item['setup_patch']
+                        if (not patch.is_file() or file_hash(patch) != item['setup_patch_sha256']
+                                or not entrypoint or not SHA.fullmatch(item.get('commit', ''))
+                                or cfg.get('command') != 'node' or cfg.get('args') != [entrypoint]
+                                or 'url' in cfg or cfg.get('env') or cfg.get('cwd')
+                                or cfg.get('trust') != 'untrusted'
+                                or cfg.get('elicitation', {}).get('enabled') is not False
+                                or cfg.get('supports_parallel_tool_calls') is not False
+                                or tools.get('resources') is not False or tools.get('prompts') is not False
+                                or not isinstance(allowlist, list) or not allowlist
+                                or any(not isinstance(tool, str) or not re.fullmatch(r'[a-z][a-z0-9_]*', tool)
+                                       for tool in allowlist)
+                                or set(allowlist).intersection(item['required_tool_exclusions'])):
+                            raise ValueError('invalid reviewed local MCP template: ' + item['name'])
+                    elif not str(cfg.get('url', '')).startswith('https://') or 'command' in cfg:
+                        raise ValueError('invalid reviewed HTTPS MCP template: ' + item['name'])
                     if cfg.get('headers') or cfg.get('env'):
                         raise ValueError('credential-bearing MCP seed: ' + item['name'])
                 catalog[kind].append(item)

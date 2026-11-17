@@ -2363,6 +2363,45 @@
       "seed_shadows": []
     },
     {
+      "profile": "agency-pixel-artist",
+      "pack": "agency",
+      "path": "hermes-agency/profiles/agency-pixel-artist",
+      "category": "design",
+      "role": "Creates native-resolution pixel sprites, frame animations, tilesets and engine-ready atlases.",
+      "existing_skills": [
+        "academy-continuing-education",
+        "pixel-asset-export",
+        "pixel-frame-animation",
+        "pixel-sprite-production",
+        "pixel-tileset-production"
+      ],
+      "bundled_skills_opt_out": false,
+      "skills": [
+        {
+          "name": "pixel-art",
+          "reason": "Official Hermes Hub workflow for local palette conversion and retro scene overlays."
+        },
+        {
+          "name": "creative-ideation",
+          "reason": "Compare silhouettes and art directions before committing to a production asset set."
+        }
+      ],
+      "plugins": [],
+      "mcps": [
+        {
+          "name": "pixelorama",
+          "reason": "Live pixel placement, cel inspection and editable Pixelorama projects on a local workstation."
+        },
+        {
+          "name": "aseprite",
+          "reason": "Batch sprite authoring, frame timing and verified atlas export on a local workstation."
+        }
+      ],
+      "reason": "Keep native-grid production workflows available offline and offer two pinned editor integrations as explicit local opt-ins.",
+      "config_seed": true,
+      "seed_shadows": []
+    },
+    {
       "profile": "agency-product-designer",
       "pack": "agency",
       "path": "hermes-agency/profiles/agency-product-designer",
