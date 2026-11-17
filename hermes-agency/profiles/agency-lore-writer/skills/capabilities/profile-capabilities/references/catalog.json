@@ -1,14 +1,30 @@
 {
   "profile": "agency-lore-writer",
   "role": "You are the **Lore Writer** in Hermes Agency. Develops coherent world lore, histories, factions, cultures, terminology, and narrative background for fictional settings.",
-  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
   "skills": [
     {
       "name": "creative-ideation",
       "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    },
+    {
+      "name": "excalidraw",
+      "reason": "Make and review a local world, system or player-flow diagram."
     }
   ],
   "plugins": [],
   "mcps": [],
-  "seed_shadows": []
+  "seed_shadows": [],
+  "local_tools": [
+    {
+      "name": "ripgrep",
+      "source": "https://github.com/BurntSushi/ripgrep",
+      "use": "Find entity IDs, aliases and references inside the approved canon or game-content directory.",
+      "check": [
+        "rg",
+        "--version"
+      ],
+      "usage": "Use rg -n -F -- with the exact term and an explicit content directory. Resolve contradictions against approved canon before editing."
+    }
+  ]
 }

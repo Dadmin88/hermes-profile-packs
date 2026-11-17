@@ -129,13 +129,35 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "create-game-assets",
+          "reason": "Check source provenance and produce import-ready game assets."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Inspect visual output and collect comparable screenshots for an art review.",
+          "tools": [
+            "capture_screenshot",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "validate_scene"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "gltf-validator"
+      ]
     },
     {
       "profile": "agency-asset-artist",
@@ -156,13 +178,39 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "create-game-assets",
+          "reason": "Check source provenance and produce import-ready game assets."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Check imported assets, resource metadata and rendered samples.",
+          "tools": [
+            "capture_screenshot",
+            "create_resource",
+            "export_mesh_library",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "load_sprite",
+            "validate_scene"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "blender-cli",
+        "gltf-validator"
+      ]
     },
     {
       "profile": "agency-audio-designer",
@@ -183,13 +231,45 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "godot-audio",
+          "reason": "Configure and test buses, audio playback and spatial cues in Godot."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Check audio cue triggers in a playable scene and inspect relevant nodes.",
+          "tools": [
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "ffmpeg",
+        "ffprobe"
+      ]
     },
     {
       "profile": "agency-automation-engineer",
@@ -1030,13 +1110,21 @@
         {
           "name": "humanizer",
           "reason": "Optional editorial pass only: preserve facts, quotes, brand voice and author intent; never treat detector evasion as a quality metric."
+        },
+        {
+          "name": "dialogue-systems",
+          "reason": "Model branching dialogue and validate choices, state and handoffs."
         }
       ],
       "plugins": [],
       "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
       "config_seed": false,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "inklecate",
+        "ripgrep"
+      ]
     },
     {
       "profile": "agency-distributed-systems-engineer",
@@ -1203,13 +1291,49 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "godot-3d-essentials",
+          "reason": "Review 3D environments, camera, lights and scene structure in Godot."
+        },
+        {
+          "name": "create-game-assets",
+          "reason": "Check source provenance and produce import-ready game assets."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Assemble and inspect approved environment scenes and imported modular assets.",
+          "tools": [
+            "add_node",
+            "capture_screenshot",
+            "create_resource",
+            "create_scene",
+            "duplicate_node",
+            "export_mesh_library",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "instantiate_scene",
+            "load_sprite",
+            "save_scene",
+            "set_node_properties",
+            "validate_scene"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "blender-cli",
+        "gltf-validator"
+      ]
     },
     {
       "profile": "agency-finance-ops",
@@ -1341,13 +1465,44 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "game-feel",
+          "reason": "Tune input response, timing and feedback using playable evidence."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Run bounded playtests and record player-visible feedback.",
+          "tools": [
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "python"
+      ]
     },
     {
       "profile": "agency-git-steward",
@@ -1408,6 +1563,14 @@
         {
           "name": "test-driven-development",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "godot-gdscript-headless-testing",
+          "reason": "Run bounded headless GDScript checks and verify failure exit codes."
+        },
+        {
+          "name": "godot-2d-movement",
+          "reason": "Implement and diagnose 2D movement against the project physics contract."
         }
       ],
       "plugins": [],
@@ -1415,11 +1578,87 @@
         {
           "name": "context7",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "godot",
+          "reason": "Build scenes, inspect runtime state, run tests and export a trusted project.",
+          "tools": [
+            "add_animation",
+            "add_node",
+            "add_to_group",
+            "attach_script",
+            "capture_screenshot",
+            "connect_signal",
+            "create_animation_player",
+            "create_resource",
+            "create_scene",
+            "create_tileset",
+            "duplicate_node",
+            "edit_project_settings",
+            "export_mesh_library",
+            "export_project",
+            "find_nodes",
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_performance_metrics",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "get_signal_events",
+            "get_tile_data",
+            "get_uid",
+            "instantiate_scene",
+            "launch_editor",
+            "list_input_actions",
+            "list_projects",
+            "load_sprite",
+            "manage_autoloads",
+            "pause_game",
+            "read_script",
+            "remove_from_group",
+            "remove_node",
+            "rename_node",
+            "reparent_node",
+            "reset_scene",
+            "run_and_capture",
+            "run_interactive",
+            "run_project",
+            "run_tests",
+            "save_scene",
+            "send_input",
+            "send_joypad_button",
+            "send_joypad_motion",
+            "send_key",
+            "send_key_sequence",
+            "send_mouse_click",
+            "send_mouse_drag",
+            "send_mouse_motion",
+            "set_cells",
+            "set_collision_layer_mask",
+            "set_custom_tile_data",
+            "set_node_properties",
+            "stop_project",
+            "subscribe_signals",
+            "update_project_uids",
+            "validate_scene",
+            "validate_script",
+            "wait_for_node",
+            "wait_for_signal",
+            "write_script"
+          ]
         }
       ],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
       "config_seed": true,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-graphic-designer",
@@ -1700,13 +1939,57 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "godot-tilemap",
+          "reason": "Paint and validate TileMapLayer terrain, collision and navigation."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Build blockouts and tile layers, then validate playable routes.",
+          "tools": [
+            "add_node",
+            "capture_screenshot",
+            "create_scene",
+            "create_tileset",
+            "duplicate_node",
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "get_tile_data",
+            "instantiate_scene",
+            "run_interactive",
+            "save_scene",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "set_cells",
+            "set_collision_layer_mask",
+            "set_custom_tile_data",
+            "set_node_properties",
+            "stop_project",
+            "validate_scene",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-localization-specialist",
@@ -1755,13 +2038,20 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "excalidraw",
+          "reason": "Make and review a local world, system or player-flow diagram."
         }
       ],
       "plugins": [],
       "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
       "config_seed": false,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "ripgrep"
+      ]
     },
     {
       "profile": "agency-market-researcher",
@@ -2007,13 +2297,45 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "dialogue-systems",
+          "reason": "Model branching dialogue and validate choices, state and handoffs."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Play through quest branches and inspect gameplay state without editing implementation.",
+          "tools": [
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "inklecate",
+        "ripgrep"
+      ]
     },
     {
       "profile": "agency-onboarding-specialist",
@@ -2449,13 +2771,36 @@
         {
           "name": "document-to-action-items",
           "reason": "Cited obligations and unresolved owner/deadline handling add traceability without automatically creating tickets or sending messages."
+        },
+        {
+          "name": "excalidraw",
+          "reason": "Make and review a local world, system or player-flow diagram."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Open a trusted candidate build to check vertical-slice acceptance criteria.",
+          "tools": [
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_project",
+            "stop_project"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-product-marketing-manager",
@@ -2726,13 +3071,49 @@
         {
           "name": "dogfood",
           "reason": "Browser-based exploratory checks add reproducible evidence; native/mobile-only tasks remain out of scope for this skill."
+        },
+        {
+          "name": "godot-gdscript-headless-testing",
+          "reason": "Run bounded headless GDScript checks and verify failure exit codes."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Reproduce failures in a playable build with deterministic input, logs and screenshots.",
+          "tools": [
+            "capture_screenshot",
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "list_input_actions",
+            "reset_scene",
+            "run_interactive",
+            "run_tests",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "validate_scene",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-red-team",
@@ -2780,7 +3161,12 @@
         "rollback-plan"
       ],
       "bundled_skills_opt_out": false,
-      "skills": [],
+      "skills": [
+        {
+          "name": "godot-export",
+          "reason": "Validate preset-driven Godot exports and headless build commands."
+        }
+      ],
       "plugins": [
         {
           "name": "gh-ref",
@@ -2791,11 +3177,31 @@
         {
           "name": "deepwiki",
           "reason": "GitHub-specific workflows and public upstream context; gh authentication is user-owned and DeepWiki is not a private-repository reader."
+        },
+        {
+          "name": "godot",
+          "reason": "Verify approved Godot export presets and smoke-test release candidates.",
+          "tools": [
+            "export_project",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_project",
+            "stop_project"
+          ]
         }
       ],
-      "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.",
+      "reason": "Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas. Game production additions are scoped to this role and available on demand.",
       "config_seed": true,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli",
+        "sha256sum"
+      ]
     },
     {
       "profile": "agency-release-notes-writer",
@@ -3433,13 +3839,54 @@
         {
           "name": "creative-ideation",
           "reason": "Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills."
+        },
+        {
+          "name": "godot-shaders",
+          "reason": "Author and verify Godot canvas and spatial shaders."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Inspect assets, scenes, visual behavior and runtime performance.",
+          "tools": [
+            "add_animation",
+            "capture_screenshot",
+            "create_animation_player",
+            "create_resource",
+            "export_mesh_library",
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_performance_metrics",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "load_sprite",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "validate_scene",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "blender-cli",
+        "gltf-validator",
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-technical-lead",
@@ -3581,6 +4028,14 @@
         {
           "name": "test-driven-development",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "godot-gdscript-headless-testing",
+          "reason": "Run bounded headless GDScript checks and verify failure exit codes."
+        },
+        {
+          "name": "godot-export",
+          "reason": "Validate preset-driven Godot exports and headless build commands."
         }
       ],
       "plugins": [
@@ -3593,11 +4048,34 @@
         {
           "name": "context7",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "godot",
+          "reason": "Verify importer and build workflows against a disposable Godot project.",
+          "tools": [
+            "export_project",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_scene_insights",
+            "get_scene_tree",
+            "get_uid",
+            "run_project",
+            "run_tests",
+            "stop_project",
+            "validate_script"
+          ]
         }
       ],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
       "config_seed": true,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli",
+        "gltf-validator"
+      ]
     },
     {
       "profile": "agency-traffic-manager",
@@ -3680,13 +4158,53 @@
         {
           "name": "excalidraw",
           "reason": "Editable flows and journey diagrams complement current design/research skills; Figma only for users who use Figma."
+        },
+        {
+          "name": "game-ui-ux",
+          "reason": "Design and test game UI flows, focus and accessibility at gameplay scale."
+        },
+        {
+          "name": "godot-ui-control",
+          "reason": "Lay out responsive Godot HUDs and verify keyboard or controller focus."
         }
       ],
       "plugins": [],
-      "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
-      "config_seed": false,
-      "seed_shadows": []
+      "mcps": [
+        {
+          "name": "godot",
+          "reason": "Inspect and playtest HUDs, menu flows and controller focus.",
+          "tools": [
+            "capture_screenshot",
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "list_input_actions",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_joypad_motion",
+            "send_key_sequence",
+            "send_mouse_click",
+            "stop_project",
+            "validate_scene",
+            "wait_for_node",
+            "wait_for_signal"
+          ]
+        }
+      ],
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
+      "config_seed": true,
+      "seed_shadows": [],
+      "local_tools": [
+        "godot-cli"
+      ]
     },
     {
       "profile": "agency-user-researcher",
@@ -3763,13 +4281,20 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "excalidraw",
+          "reason": "Make and review a local world, system or player-flow diagram."
         }
       ],
       "plugins": [],
       "mcps": [],
-      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+      "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
       "config_seed": false,
-      "seed_shadows": []
+      "seed_shadows": [],
+      "local_tools": [
+        "ripgrep"
+      ]
     },
     {
       "profile": "academy-dean",

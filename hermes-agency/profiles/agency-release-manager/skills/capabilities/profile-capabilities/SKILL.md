@@ -12,9 +12,15 @@ You are the **Release Manager** in Hermes Agency. Coordinates release readiness,
 
 ## Role-specific selection
 
-Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas.
+Role-owned skills already cover the bounded workflow. Add only the capability guide; do not duplicate coaching, review, orchestration, or regulated-advice personas. Game production additions are scoped to this role and available on demand.
 
-- No additional execution skill: existing specialist workflows already cover this scope.
+- `godot-export`: Validate preset-driven Godot exports and headless build commands.
+
+## Local tools
+
+`godot-cli`, `sha256sum`. The catalog lists prerequisites, usage and upstream documentation. Use only tools already available in the authorized workspace.
+
+For the local Godot MCP, read `references/godot-setup.md` and its matching catalog entry. Use a disposable project checkout for interactive testing.
 
 ## Procedure
 

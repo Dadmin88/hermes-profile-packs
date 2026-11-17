@@ -107,6 +107,16 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
         catalog = {'profile': name, 'role': row['role'], 'reason': row['reason'],
                    'skills': row['skills'], 'plugins': [], 'mcps': [],
                    'seed_shadows': row.get('seed_shadows', [])}
+        guide = target / GUIDE
+        if 'local_tools' in row:
+            selected_tools = row['local_tools']
+            if not selected_tools or len(selected_tools) != len(set(selected_tools)):
+                raise ValueError('invalid local tools selection: ' + name)
+            catalog['local_tools'] = []
+            for tool in selected_tools:
+                if tool not in integrations.get('local_tools', {}):
+                    raise ValueError('unreviewed local tool: ' + tool)
+                catalog['local_tools'].append({'name': tool, **integrations['local_tools'][tool]})
         for kind in ('plugins', 'mcps'):
             for selected in row[kind]:
                 item = integrations[kind].get(selected['name'])
@@ -120,17 +130,34 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                                                '--ref', item['commit'], '--no-enable', '--no-deps']
                 else:
                     cfg = item['config']
+                    if 'tools' in selected:
+                        selected_tools = selected['tools']
+                        approved = cfg.get('tools', {}).get('include', [])
+                        if (item.get('transport') != 'local-stdio' or not selected_tools
+                                or len(selected_tools) != len(set(selected_tools))
+                                or not set(selected_tools) <= set(approved)):
+                            raise ValueError('invalid per-profile MCP tools: ' + name + '/' + item['name'])
+                        cfg = {**cfg, 'tools': {**cfg['tools'], 'include': selected_tools}}
+                        item['config'] = cfg
                     if cfg.get('enabled') is not False or cfg.get('sampling', {}).get('enabled') is not False:
                         raise ValueError('integration auto-activation/sampling: ' + item['name'])
                     if item.get('transport') == 'local-stdio':
                         expected_entrypoints = {
                             'pixelorama': '<pixelorama-mcp-checkout>/mcp-server/dist/index.js',
                             'aseprite': '<aseprite-mcp-checkout>/build/index.js',
+                            'godot': '<godot-mcp-checkout>/build/index.js',
                         }
                         entrypoint = expected_entrypoints.get(item['name'])
                         tools = cfg.get('tools', {})
                         allowlist = tools.get('include')
-                        patch = target / item['setup_patch']
+                        if item['name'] == 'godot':
+                            patch = root / 'capabilities/mcps/godot-local.patch'
+                            item['setup_patch'] = 'references/godot-local.patch'
+                            outputs[guide / item['setup_patch']] = patch.read_bytes()
+                            outputs[guide / 'references/godot-setup.md'] = (
+                                root / 'capabilities/mcps/godot-setup.md').read_bytes()
+                        else:
+                            patch = target / item['setup_patch']
                         if (not patch.is_file() or file_hash(patch) != item['setup_patch_sha256']
                                 or not entrypoint or not SHA.fullmatch(item.get('commit', ''))
                                 or cfg.get('command') != 'node' or cfg.get('args') != [entrypoint]
@@ -149,7 +176,6 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                     if cfg.get('headers') or cfg.get('env'):
                         raise ValueError('credential-bearing MCP seed: ' + item['name'])
                 catalog[kind].append(item)
-        guide = target / GUIDE
         outputs[guide / 'references/catalog.json'] = json_text(catalog).encode()
         if row['mcps']:
             seed = {'mcp_servers': {m['name']: m['config'] for m in catalog['mcps']}}
@@ -164,6 +190,15 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                     'plugins': [{'repo': p['repository'], 'subdir': p['subdir'], 'ref': p['commit']} for p in catalog['plugins']]}
             outputs[guide / 'references/hermes-pack.yaml'] = json_text(pack).encode()
         skill_list = '\n'.join('- `' + s['name'] + '`: ' + s['reason'] for s in row['skills']) or '- No additional execution skill: existing specialist workflows already cover this scope.'
+        local_tools = ''
+        if row.get('local_tools'):
+            tools_list = ', '.join('`' + tool + '`' for tool in row['local_tools'])
+            local_tools = ('\n## Local tools\n\n'
+                           f'{tools_list}. The catalog lists prerequisites, usage and upstream documentation. '
+                           'Use only tools already available in the authorized workspace.\n')
+        if any(m['name'] == 'godot' for m in catalog['mcps']):
+            local_tools += ('\nFor the local Godot MCP, read `references/godot-setup.md` and its matching '
+                            'catalog entry. Use a disposable project checkout for interactive testing.\n')
         skill = f'''---
 name: profile-capabilities
 description: "Use when discovering this profile's skills or optional integrations."
@@ -181,7 +216,7 @@ license: AGPL-3.0-only
 {row['reason']}
 
 {skill_list}
-
+{local_tools}
 ## Procedure
 
 1. Prefer the existing role-owned workflow and native Hermes tools. Load one matching supplemental skill on demand with `skill_view`; never preload the whole catalog or duplicate a capability via a connector and MCP.

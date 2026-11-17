@@ -1,14 +1,149 @@
 {
   "profile": "agency-narrative-designer",
   "role": "You are the **Narrative Designer** in Hermes Agency. Connects narrative intent to interactive systems through quests, narrative state, player choice, consequences, systemic storytelling, progression, pacing, and implementation-ready narrative logic.",
-  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.",
+  "reason": "Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.",
   "skills": [
     {
       "name": "creative-ideation",
       "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    },
+    {
+      "name": "dialogue-systems",
+      "reason": "Model branching dialogue and validate choices, state and handoffs."
     }
   ],
   "plugins": [],
-  "mcps": [],
-  "seed_shadows": []
+  "mcps": [
+    {
+      "name": "godot",
+      "repository": "https://github.com/Vollkorn-Games/godot-mcp",
+      "commit": "632530638448ea3e79394fbf74e9a5c92c4b67e5",
+      "source": "https://github.com/Vollkorn-Games/godot-mcp/tree/632530638448ea3e79394fbf74e9a5c92c4b67e5",
+      "license": "MIT",
+      "transport": "local-stdio",
+      "setup_patch_sha256": "9855f547cddd96a0e24559ee6b3f07125aa41fb64642f5d699b25d0449127259",
+      "reviewed_source_files": {
+        "pnpm-lock.yaml": "3df66cd62e6f4021866c9395c8e2c582d273973078e7bb47d07ffd96b6198359",
+        "package.json": "82bc654e4c923c5d1567168fcdfa5bf4583206db694d88153e9e4450b9338062",
+        "scripts/build.js": "eff49783a3e5b44e7b556caad22aee8b976173b53457a9acccdf2791a0a653bf",
+        "src/context.ts": "52ce193c755adf5577fd92702d1c96c568fb287d69635e2267282012c0dd1905",
+        "src/godot-executor.ts": "f4fb79789e3405b5ee4bf3f62ddf72ab38dab1e5ef0dfdc6ab35e9095010555d",
+        "src/godot-path.ts": "a7d9068614a82845c35ba0735c5aa09a7dc20c0f1b5c091ada64d0c3b75ad9b6",
+        "src/handlers/analysis-handlers.ts": "ab41235383e9dc6c3f61fb9fb3327cee2bca75d2ef381bb7e45be3a283b059fa",
+        "src/handlers/animation-handlers.ts": "8a6bd7d08f3cf18ca3d9aa8882da16a10aa63103b66e367637b815d576383c53",
+        "src/handlers/asset-handlers.ts": "9c6b7a566b750acb0e65fda4ec2b2843116dc76b758dc7acd9688f3ee07314e9",
+        "src/handlers/interactive-handlers.ts": "da36543543ad0cffe81e5e5bb6e569a0ea8333dc05faba55c90c1f3176fd33d4",
+        "src/handlers/node-handlers.ts": "8c659a9a0f938eb3e81a7d16013aeb739e6bbef724404ab372e39bf2da57503a",
+        "src/handlers/process-handlers.ts": "f717f2259ed7572cccd580d7e51b56c06221bae9ab294f47ac49419cfa311aa7",
+        "src/handlers/project-handlers.ts": "1b2b8809964bd30433734456f4a2bed0880bf4287f9745f5bf0941354beadd17",
+        "src/handlers/resource-handlers.ts": "8c470170f9874a26da840f8d403f5b6e5def4e9b4bb21349a74a3eece5e0c141",
+        "src/handlers/scene-handlers.ts": "6f18c4013aa09f2f5cda11ec26fd4de25d119926bdecef2b05de8320782c0f1b",
+        "src/handlers/screenshot-handlers.ts": "450be98cb4711f9652cab14252b440f619d541418197b632163b136da7ba253c",
+        "src/handlers/script-handlers.ts": "d6043362b1f48af73dc9396964393205a1b5b008f9440bf860e0ce6d805eda9d",
+        "src/handlers/settings-handlers.ts": "c048c70085c6e43d15b8aec7d5a544e5ed5e56b97a7f899d04fd7db0a1896d87",
+        "src/handlers/signal-group-handlers.ts": "823c27b4f22ea40da595f8d1a3164afc3e961a180f340be2ac44555a2308c4bc",
+        "src/handlers/test-handlers.ts": "8ddbe49fa3be0b7a588d57a2769d5de5adf263418931cf4b617bd255ad0947a1",
+        "src/handlers/tilemap-handlers.ts": "5cf1e2fa075bd9da73eb2f4536d81d77ae17224554495a40050788f3da8b1b18",
+        "src/handlers/uid-handlers.ts": "5682aaf6be29d4d51cc72820f63da42fc0afaf76c2c60710c1cf192e0cbbf0a0",
+        "src/index.ts": "045a98f2442b4c3b838455a1e948b879ff09798e63fe5ea21ca1764255f701b1",
+        "src/scripts/capture_screenshot.gd": "cb9aa2d5f70cdcb48981398e2b206f72a4a3705a98c66bf2b9c7319888368402",
+        "src/scripts/godot_operations.gd": "4552c87ec164534254552e0550b40eb28af2fc238220d7e170be92e2426101e6",
+        "src/scripts/input_receiver.gd": "9edc9297e21d8f1da1eb396582a30171aec817ce615ba635f40c7b236e9521e0",
+        "src/scripts/run_and_capture.gd": "87b15103a33f3b6b301dcd4f561091d5d79b81cb7826249b6e0856900a483a51",
+        "src/tcp-client.ts": "e169c896d3312106be867663fce05a2f85dad96cfd8f71d34029ea6de60736dc",
+        "src/tool-definitions.ts": "7543dda2c252297e5f4d2358e08f496b7bacf065c93a355934cc18ed4e9ba7ff",
+        "src/tool-router.ts": "0fc4328f7ab289697a432afa3d9a5a81ce125bf619ac9d7747c5a5a268cccc07",
+        "src/types.ts": "ff3e8c88f88876533c80b6d87bea9e41cec00b5f72e366713a9774bdedd3c422",
+        "src/utils.ts": "00ed5de9715af693dc41da135e3c4a30a3757134ab05208a8ef102f5f8cf2192"
+      },
+      "config": {
+        "command": "node",
+        "args": [
+          "<godot-mcp-checkout>/build/index.js"
+        ],
+        "enabled": false,
+        "trust": "untrusted",
+        "timeout": 120,
+        "connect_timeout": 30,
+        "supports_parallel_tool_calls": false,
+        "sampling": {
+          "enabled": false
+        },
+        "elicitation": {
+          "enabled": false
+        },
+        "tools": {
+          "include": [
+            "game_screenshot",
+            "game_state",
+            "get_debug_output",
+            "get_godot_version",
+            "get_node_insights",
+            "get_node_properties",
+            "get_project_info",
+            "get_runtime_errors",
+            "get_scene_insights",
+            "get_scene_tree",
+            "run_interactive",
+            "send_input",
+            "send_joypad_button",
+            "send_key_sequence",
+            "stop_project",
+            "wait_for_node",
+            "wait_for_signal"
+          ],
+          "resources": false,
+          "prompts": false
+        }
+      },
+      "prerequisites": [
+        "Godot 4 and Node.js 20 or later",
+        "Pinned pnpm and the included source patch",
+        "Trusted local project or disposable checkout"
+      ],
+      "privacy": "The stdio server and Godot process run locally with workstation-user permissions. Interactive playtest commands reach a loopback-only runtime receiver.",
+      "warnings": [
+        "Interactive mode temporarily changes project.godot and installs a local input receiver. Use a disposable checkout and verify cleanup.",
+        "Running a project runs its existing project code. Approve the workspace before starting execution.",
+        "The shipped patch removes raw evaluation, generic method/property calls and remote asset operations.",
+        "The patch removes unused Axios and pins the patched MCP SDK and Zod in the lockfile."
+      ],
+      "required_tool_exclusions": [
+        "call_method",
+        "evaluate_expression",
+        "execute_script",
+        "set_property",
+        "search_assets",
+        "install_asset",
+        "batch_operations",
+        "discover_tools"
+      ],
+      "runtime_status": "Patched frozen build passed. pnpm audit --prod returned zero known advisories. Runtime verification is separate from dependency audit.",
+      "reason": "Play through quest branches and inspect gameplay state without editing implementation.",
+      "setup_patch": "references/godot-local.patch"
+    }
+  ],
+  "seed_shadows": [],
+  "local_tools": [
+    {
+      "name": "inklecate",
+      "source": "https://github.com/inkle/ink#advanced-using-inklecate-on-the-command-line",
+      "use": "Compile and play-test Ink stories if the project already uses Ink.",
+      "check": [
+        "inklecate",
+        "-h"
+      ],
+      "usage": "Use inklecate -p on the project entry story to walk choices, or compile without -p. Compile a working copy and preserve source and include layout."
+    },
+    {
+      "name": "ripgrep",
+      "source": "https://github.com/BurntSushi/ripgrep",
+      "use": "Find entity IDs, aliases and references inside the approved canon or game-content directory.",
+      "check": [
+        "rg",
+        "--version"
+      ],
+      "usage": "Use rg -n -F -- with the exact term and an explicit content directory. Resolve contradictions against approved canon before editing."
+    }
+  ]
 }

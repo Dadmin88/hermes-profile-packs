@@ -12,9 +12,16 @@ You are the **QA Tester** in Hermes Agency. Executes exploratory, functional, re
 
 ## Role-specific selection
 
-Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.
+Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs. Game production additions are scoped to this role and available on demand.
 
 - `dogfood`: Browser-based exploratory checks add reproducible evidence; native/mobile-only tasks remain out of scope for this skill.
+- `godot-gdscript-headless-testing`: Run bounded headless GDScript checks and verify failure exit codes.
+
+## Local tools
+
+`godot-cli`. The catalog lists prerequisites, usage and upstream documentation. Use only tools already available in the authorized workspace.
+
+For the local Godot MCP, read `references/godot-setup.md` and its matching catalog entry. Use a disposable project checkout for interactive testing.
 
 ## Procedure
 

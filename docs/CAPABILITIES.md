@@ -1,13 +1,13 @@
 # Role-specific capabilities
 
-This release covers all **167 public distributions**: 114 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 25 reviewed skill trees across 243 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
+This release covers all **167 public distributions**: 114 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 37 reviewed skill trees across 264 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
 
 ## What installs by default
 
 - Existing SOULs, original skills, preloads, teaching/coaching contracts and tool restrictions are preserved. Release metadata versions advance; no identity is renamed.
 - Selected skills, their reference documents, scripts, templates and license notices ship with the profile. They are available **on demand**, not blanket-preloaded. Inclusion does not install dependencies or authorize tool execution.
 - Six plugins are offered where relevant: RFC, OSV, GitHub, PEP and Wikipedia context references, and optional Snyk. They are pinned declarations, **not downloaded or enabled by profile installation**.
-- Thirteen remote MCP integrations have role-specific **disabled** native config templates: Context7, DeepWiki, AWS Knowledge, Microsoft Learn, Sentry, Grafana Cloud, Linear, Wolfram, Kiwi, trivago, AllTrails, Strava and Todoist. Agency Pixel Artist also ships two disabled local stdio templates for Pixelorama and Aseprite. There are 73 per-profile MCP selections. Newly introduced config seeds contain no model/provider choices, credentials or enabled remote connection.
+- Thirteen remote MCP integrations have role-specific **disabled** native config templates: Context7, DeepWiki, AWS Knowledge, Microsoft Learn, Sentry, Grafana Cloud, Linear, Wolfram, Kiwi, trivago, AllTrails, Strava and Todoist. Agency Pixel Artist also ships two disabled local stdio templates for Pixelorama and Aseprite. Fourteen Agency game-development profiles also receive a role-specific Godot MCP template. There are 87 per-profile MCP selections. Newly introduced config seeds contain no model/provider choices, credentials or enabled remote connection.
 - Wear and coordination-only profiles receive a discovery guide, not a general execution bundle or external integration.
 
 A normal profile distribution remains the supported installation/update mechanism; this repository adds no runtime installer, scheduler, memory service, orchestration system or automatic account connection.[1]

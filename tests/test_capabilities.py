@@ -60,6 +60,35 @@ class CapabilityTests(unittest.TestCase):
         self.assertTrue({'draw_grid', 'set_frame_duration', 'create_tag',
                          'create_tilemap_layer', 'export_spritesheet'} <= aseprite)
 
+    def test_game_profiles_keep_distinct_tool_scopes(self):
+        from capabilities import GUIDE, render_outputs
+        data = json.loads((ROOT / 'capabilities/profiles.json').read_text())
+        rows = {r['profile']: r for r in data['profiles'] if 'local_tools' in r}
+        self.assertEqual(17, len(rows))
+        selected = {}
+        for name, row in rows.items():
+            guide = ROOT / row['path'] / GUIDE
+            catalog = json.loads((guide / 'references/catalog.json').read_text())
+            self.assertEqual(row['local_tools'], [tool['name'] for tool in catalog['local_tools']])
+            godot = next((m for m in catalog['mcps'] if m['name'] == 'godot'), None)
+            if godot is None:
+                continue
+            cfg = godot['config']
+            selected[name] = set(cfg['tools']['include'])
+            self.assertIs(False, cfg['enabled'])
+            self.assertFalse(selected[name].intersection(godot['required_tool_exclusions']))
+            self.assertTrue((guide / godot['setup_patch']).is_file())
+        self.assertEqual(14, len(selected))
+        self.assertIn('set_cells', selected['agency-level-designer'])
+        self.assertIn('send_key_sequence', selected['agency-qa-tester'])
+        self.assertNotIn('set_cells', selected['agency-qa-tester'])
+        self.assertIn('export_project', selected['agency-release-manager'])
+        self.assertNotIn('export_project', selected['agency-art-director'])
+        qa = next(m for m in rows['agency-qa-tester']['mcps'] if m['name'] == 'godot')
+        qa['tools'].append('execute_script')
+        with self.assertRaisesRegex(ValueError, 'invalid per-profile MCP tools'):
+            render_outputs(ROOT, data)
+
     def test_narrow_profiles_are_not_given_execution_bundles(self):
         rows=json.loads((ROOT/'capabilities/profiles.json').read_text())['profiles']
         for r in rows:
