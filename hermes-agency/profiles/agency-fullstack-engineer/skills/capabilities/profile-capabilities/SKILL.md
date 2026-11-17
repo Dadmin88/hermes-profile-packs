@@ -16,6 +16,15 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `systematic-debugging`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
 - `test-driven-development`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
+- `playwright-cli`: Exercise the real browser flow and inspect requests, console messages and failure behavior.
+- `openapi-spec-generation`: Keep REST contracts, API implementation and client behavior in sync.
+- `supabase-postgres-best-practices`: Validate schema, migrations, transactions and query plans for Postgres-backed features.
+- `rest-graphql-debug`: Reproduce REST or GraphQL request failures independently of the UI.
+- `accessibility`: Check keyboard, focus and semantic behavior across a user-facing feature.
+
+## Local tools
+
+`playwright-cli`, `redocly-cli`, `curl`, `jq`, `psql`, `pg-isready`, `docker-cli`. The catalog lists prerequisites, usage and upstream documentation. Use only tools already available in the authorized workspace.
 
 ## Procedure
 
