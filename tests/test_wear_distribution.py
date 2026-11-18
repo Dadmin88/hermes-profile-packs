@@ -32,7 +32,7 @@ class WearDistributionTests(unittest.TestCase):
     def test_identity_and_tool_boundary(self):
         manifest = yaml.safe_load((ROOT / "distribution.yaml").read_text())
         self.assertEqual("hermes-wear", manifest["name"])
-        self.assertEqual("1.2.0", manifest["version"])
+        self.assertEqual("1.3.0", manifest["version"])
         config = yaml.safe_load((ROOT / "config.yaml").read_text())
         self.assertNotIn("model", config)
         expected = ["memory", "session_search", "skills", "web"]
