@@ -60,7 +60,7 @@ profiles/<profile-name>/
         └── SKILL.md
 ```
 
-Every profile must ship with at least one useful role-specific skill. Additional Hermes configuration, references, or skill helper scripts may be added when they materially improve the specialty.
+Every profile must have a corresponding curated native personality source at the repository root in `personalities/<profile-name>.json`, materialized into its native `config.yaml` without changing SOUL responsibilities or runtime permissions. See `docs/PROFILE_PERSONALITIES.md`. Every profile must ship with at least one useful role-specific skill. Additional Hermes configuration, references, or skill helper scripts may be added when they materially improve the specialty.
 
 Profile names use the `agency-` prefix and lowercase kebab case.
 

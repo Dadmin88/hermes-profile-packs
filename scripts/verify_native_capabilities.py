@@ -31,11 +31,13 @@ def main():
         from hermes_cli.profile_distribution import install_distribution,update_distribution,DistributionError
         from hermes_cli.profiles import get_profile_dir
         from hermes_cli.plugin_packs import parse_pack
+        from hermes_cli.personality import active_personality_name, resolve_ephemeral_system_prompt
         from tools.skills_tool import skills_list,clear_skills_cache
         from tools.skills_sync import sync_skills
         assert get_default_hermes_root().resolve()==hroot.resolve()
         rows=json.loads((root/'capabilities/profiles.json').read_text())['profiles']
         installed=discovered=packs=updated=collisions=0
+        native_personalities=0
         def no_network(*_a,**_kw):raise AssertionError('network forbidden in native packaging proof')
         with patch.object(socket.socket,'connect',no_network),patch.object(socket,'create_connection',no_network):
             for row in rows:
@@ -63,6 +65,15 @@ def main():
                 cfg=target/'config.yaml'
                 if row.get('config_seed'):
                     settings=json.loads(cfg.read_text());assert all(s['enabled'] is False for s in settings['mcp_servers'].values())
+                personality_source=root/'personalities'/(row['profile']+'.json')
+                if personality_source.exists():
+                    assert cfg.is_file(),row['profile']
+                    settings=json.loads(cfg.read_text())
+                    assert active_personality_name(settings)==row['profile'],row['profile']
+                    prompt=resolve_ephemeral_system_prompt(settings)
+                    expected=json.loads(personality_source.read_text())['system_prompt']
+                    assert expected in prompt,row['profile']
+                    native_personalities+=1
                 guide=target/'skills/capabilities/profile-capabilities/references'
                 pack=guide/'hermes-pack.yaml'
                 if pack.exists():parse_pack(pack.read_text());packs+=1
@@ -83,6 +94,6 @@ def main():
                 try:install_distribution(str(root/next(r['path'] for r in rows if r['profile']==name)))
                 except DistributionError:collisions+=1
                 else:raise AssertionError('existing install did not fail closed')
-        print(json.dumps({'status':'PASS','installed_profiles':installed,'discovered_expected_skills':discovered,'native_plugin_packs_parsed':packs,'update_preservation_cases':updated,'existing_install_refusals':collisions,'network':'blocked during all install/discovery/update operations','limitations':'No account authentication, plugin activation, MCP tool calls, or model-based behavioral certification.'},indent=2))
+        print(json.dumps({'status':'PASS','installed_profiles':installed,'discovered_expected_skills':discovered,'native_plugin_packs_parsed':packs,'native_personalities_resolved':native_personalities,'update_preservation_cases':updated,'existing_install_refusals':collisions,'network':'blocked during all install/discovery/update operations','limitations':'No account authentication, plugin activation, MCP tool calls, or model-based behavioral certification.'},indent=2))
 
 if __name__=='__main__':main()

@@ -4,6 +4,13 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ## Unreleased
 
+### Native profile personalities
+
+- Authored individually differentiated native `/personality` defaults for all 167 public Profile Packs distributions (114 Agency, 30 Academy, 22 Council, Hermes Wear). Each retains its SOUL, existing skills, model/provider freedom, reviewed disabled integrations and restricted execution controls.
+- Made curated personality sources and deterministic configuration materialization part of the authoring standard, including updates to BotFather and regression coverage. Existing installed profiles preserve their local `config.yaml` unless a user explicitly approves a scoped migration.
+- Completed two matched, bounded Parenting Coach live model comparisons (four successful native executions): confirmed actual overlay delivery and modest improvements in focus/precision. No blanket behavioral certification or automatic installation is claimed.
+
+
 ### Profile quality
 
 - Clarified Council interaction modes so listening and direct answers can complete a conversation without mandatory files, actions or ending questions. Corrected assumed user biography, stale collaborator references and malformed SOUL Markdown.
