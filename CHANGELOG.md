@@ -4,6 +4,11 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ## Unreleased
 
+### Reviewed installed-profile content updates
+
+- Added an optional, read-only-first source sync for individually approved SOUL and skill packages, with exact-file-hash approval, private atomic backups and guarded rollback. The command preserves user-added skills and leaves installed configuration, manifests, runtime state and profile versions untouched. Unlike native `hermes profile update`, it never bulk-overwrites locally different content.
+
+
 ### Native profile personalities
 
 - Authored individually differentiated native `/personality` defaults for all 167 public Profile Packs distributions (114 Agency, 30 Academy, 22 Council, Hermes Wear). Each retains its SOUL, existing skills, model/provider freedom, reviewed disabled integrations and restricted execution controls.
