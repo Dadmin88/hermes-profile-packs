@@ -76,8 +76,17 @@ def catalog(source: Path) -> dict[str, Path]:
         name, rel = row["profile"], row["path"]
         if not re.fullmatch(r"(agency|academy|council)-[a-z0-9-]+|hermes-wear", name):
             raise ValueError(f"invalid catalog identity: {name}")
-        src = source / rel
-        if src.is_symlink() or not src.is_dir() or src.resolve() != (source / rel).resolve():
+        relpath = PurePosixPath(rel)
+        parts = relpath.parts
+        if (not parts or relpath.is_absolute() or ".." in parts
+                or rel != "/".join(parts)):
+            raise ValueError(f"unsafe source catalog path: {name}")
+        src = source
+        for part in parts:
+            src = src / part
+            if src.is_symlink():
+                raise ValueError(f"symlinked source catalog path: {name}")
+        if not src.is_dir() or not src.resolve().is_relative_to(source.resolve()):
             raise ValueError(f"unsafe source distribution: {name}")
         if name in result:
             raise ValueError(f"duplicate source identity: {name}")
@@ -204,8 +213,8 @@ def summary(units, skip, selected):
     return {
         "mode": "preview", "matched_profiles": len({u["profile"] for u in units}),
         "units_seen": len(units), "files": dict(counts),
-        "skipped_profiles": dict(skip), "units": per_unit[:200],
-        "units_truncated": len(per_unit) > 200,
+        "skipped_profiles": dict(skip), "units": per_unit[:25],
+        "units_truncated": len(per_unit) > 25,
         "plan_sha256": fingerprint(units) if selected else None,
     }
 
@@ -312,22 +321,32 @@ def apply(units, source: Path, installed: Path, backups: Path, approved: str):
 def rollback(installed: Path, backups: Path, id: str):
     if not BACKUP_ID.fullmatch(id):
         raise ValueError("invalid backup identifier")
+    if backups.is_symlink():
+        raise ValueError("symlinked backup root")
     folder = backups / id
     if folder.is_symlink() or not folder.is_dir():
         raise ValueError("backup not found")
     record = json.loads((folder / "manifest.json").read_text())
-    if record.get("version") != 1:
+    if record.get("version") != 1 or not isinstance(record.get("files"), list):
         raise ValueError("unsupported backup manifest")
+    if len(record["files"]) > 500:
+        raise ValueError("oversized backup manifest")
     changes = []
+    seen = set()
     for file in record["files"]:
         profile, rel = file["profile"], file["relative"]
         if not re.fullmatch(r"(agency|academy|council)-[a-z0-9-]+|hermes-wear", profile):
             raise ValueError("unsafe rollback profile")
         target = no_symlink_path(installed / profile, rel)
+        if (profile, rel) in seen:
+            raise ValueError("duplicate backup file")
+        seen.add((profile, rel))
         if sha(read_optional_file(target)) != file["after"]:
             raise ValueError("rollback blocked: destination changed after sync")
         original = None
         if file["existed"]:
+            if not re.fullmatch(r"[0-9]{4}\.bak", file["backup"] or ""):
+                raise ValueError("invalid backup filename")
             saved = folder / file["backup"]
             original = read_optional_file(saved)
             if original is None or sha(original) != file["before"]:
