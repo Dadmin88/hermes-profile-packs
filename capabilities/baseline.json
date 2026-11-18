@@ -950,7 +950,7 @@
     "hermes-agency/profiles/agency-operations-manager/skills/process-design/SKILL.md": "2ec88b2d7cc895fd8b282fd65d08e556afcdadf2c1139095702c0a03bc3169dd",
     "hermes-agency/profiles/agency-orchestrator/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "hermes-agency/profiles/agency-orchestrator/SOUL.md": "c67b36bf2d8e983a012667815cd76062d4839206849e9838765ba07bbce263db",
-    "hermes-agency/profiles/agency-orchestrator/config.yaml": "308f4149e2b154153f5bd6ca4e99dba49ee5ddf8ce9f98d8cce4a117790415de",
+    "hermes-agency/profiles/agency-orchestrator/config.yaml": "203ea54dc21746d1d10513347a81a6c7457f06a18e89e8b14378a6c44bfc412e",
     "hermes-agency/profiles/agency-orchestrator/skills/academy-continuing-education/SKILL.md": "580080ca4c373cbe8705dec491d9792008828a6ac352bb17d660928d7f1a8e72",
     "hermes-agency/profiles/agency-orchestrator/skills/coordination-pattern-selection/SKILL.md": "fb358b7a96f67a620dbb8119d3d9a5b2c4a9b0c107b2769178defd22a6f802e6",
     "hermes-agency/profiles/agency-orchestrator/skills/dependency-planning/SKILL.md": "b007fbf5904bf4db8dc071d1eab1e2cedf21163fd202396fe17825e3e98528ca",
@@ -1453,7 +1453,7 @@
     "hermes-wear/DEVICE_AWARENESS.md": "2b2a9cc4671fe7c1deb8192dac7334d35d540008a31a6c45d94fb53e2112201a",
     "hermes-wear/README.md": "8071cf4a5e6fdb42fe4db21c6698046b10ec114ed4de09999371329201b4c3d8",
     "hermes-wear/SOUL.md": "9ef79c699874fd694f7c18b3a088da6bdaad84ac1ffbf5a8db766495e4b11532",
-    "hermes-wear/config.yaml": "8e04f1670b687d5df00a20d2bb5d984022d9a78529279cb7423ba4258e1ced91",
+    "hermes-wear/config.yaml": "e6b16e6888ac5483cb5d586f6535af384ab686ebbd33ac4bfb39792f632f1360",
     "hermes-wear/examples/device-capabilities.example.json": "029996a256cb8685833680499bdbb87fa2976d5f6c5bfc4b701b5b09f798c20b",
     "hermes-wear/examples/location-ok.example.json": "6f10dab0616f02c70412e682d50f509619bebb5b2498d2ba68368761ff6c3914",
     "hermes-wear/examples/location-permission-required.example.json": "8761cd63d017663fffdab12ab8ab48e2602e32d308ec679ee45f03927e4e49f0",
@@ -2715,6 +2715,14 @@
     "hermes-council/profiles/council-travel-planner/SOUL.md": {
       "prior_sha256": "321ff03989bc688fe75b6f4850bb7bc550f5d3b8875470030da8c3a0da2c3cb8",
       "approved_sha256": "949addc7f3257a531f08c88ec273a4af61433ab896df5a210e8fbc08e84ea6fd"
+    },
+    "hermes-agency/profiles/agency-orchestrator/config.yaml": {
+      "prior_sha256": "308f4149e2b154153f5bd6ca4e99dba49ee5ddf8ce9f98d8cce4a117790415de",
+      "approved_sha256": "203ea54dc21746d1d10513347a81a6c7457f06a18e89e8b14378a6c44bfc412e"
+    },
+    "hermes-wear/config.yaml": {
+      "prior_sha256": "8e04f1670b687d5df00a20d2bb5d984022d9a78529279cb7423ba4258e1ced91",
+      "approved_sha256": "e6b16e6888ac5483cb5d586f6535af384ab686ebbd33ac4bfb39792f632f1360"
     }
   }
 }
