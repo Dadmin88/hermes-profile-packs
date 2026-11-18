@@ -133,6 +133,48 @@ The source-rollout operation does not modify production profile configs,
 runtime memory, models, tool permissions, or gateway state. Installing a fresh
 distribution is still a distinct user-controlled operation.
 
+## Activating personalities in existing installations
+
+Profile updates normally preserve the locally owned `config.yaml`. The
+repository includes a deliberately separate, offline migration command for
+users who choose to activate the new native personalities in already-installed
+profiles:
+
+```bash
+python3 scripts/migrate_personalities.py             # read-only preview
+python3 scripts/migrate_personalities.py --apply     # scoped merge + private backup
+python3 scripts/migrate_personalities.py --rollback BACKUP_ID
+```
+
+The command uses the current checkout as its personality source. It scans
+only installed names present in the source pack manifests. It never creates
+uninstalled profiles, installs dependencies, activates MCP servers, changes
+toolset permissions, copies user files into the repository, or restarts Hermes.
+A source profile's `config.yaml` supplies only its native personality; it
+does not overwrite an installed recipient's other fields.
+
+Only `agent.personalities.<profile-name>` is added and, **when previously
+unset and no manual system prompt exists**, `display.personality` is selected.
+An existing personality choice or a manual prompt is retained. A different
+user-customized preset under the same name is never overwritten. JSON configs
+are kept valid JSON; YAML configs use key-scoped insertions to preserve
+unrelated comments and formatting. A round-trip semantic comparison rejects
+unexpected mutations.
+
+Before writing, the command checks all matching profiles and makes private
+per-profile config backups under
+`~/.hermes/backups/profile-personalities/<BACKUP_ID>/`. It checks source and
+target hashes, writes atomically, and supports guarded rollback only while the
+post-migration files still match the recorded versions. Output contains names,
+actions and backup IDs, not configuration contents. New Hermes sessions read
+the updated profile configuration; running sessions and the gateway are not
+restarted by this operation.
+
+When working with a separate checkout or Hermes installation, use the
+explicit `--source`, `--installed` and `--backup-root` flags. Confirm the
+preview's **exact target names** before applying. An installed profile absent
+from the source manifest is intentionally ignored.
+
 ## Behavioral acceptance
 
 Static validation proves that a personality is packaged and resolves. It
