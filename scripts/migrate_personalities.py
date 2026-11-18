@@ -95,6 +95,7 @@ def render(existing: bytes | None, name: str, personality: dict) -> tuple[bytes 
     if not isinstance(presets, dict):
         raise ValueError("agent.personalities must be a mapping")
 
+    had_presets_section = "personalities" in agent
     prior = presets.get(name)
     if prior is not None and prior != personality:
         return None, "preserved different locally customized preset"
@@ -104,7 +105,7 @@ def render(existing: bytes | None, name: str, personality: dict) -> tuple[bytes 
     activate = "personality" not in display and not manual
     if prior == personality and not activate:
         return None, "already installed; existing selection preserved"
-    cfg.setdefault("agent", {}) .setdefault("personalities", {})[name] = personality
+    cfg.setdefault("agent", {}).setdefault("personalities", {})[name] = personality
     if activate:
         cfg.setdefault("display", {})["personality"] = name
 
@@ -116,7 +117,7 @@ def render(existing: bytes | None, name: str, personality: dict) -> tuple[bytes 
         if prior is None:
             if "agent" not in old:
                 candidate = add_top(candidate, {"agent": {"personalities": {name: personality}}})
-            elif "personalities" not in agent:
+            elif not had_presets_section:
                 candidate = add_nested(candidate, "agent", {"personalities": {name: personality}})
             else:
                 raise ValueError("existing presets need reviewable manual merge")
