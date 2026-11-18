@@ -77,6 +77,10 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
     if len(names) != len(set(names)) or set(names) != set(expected):
         raise ValueError('capability identities do not exactly match public source rosters + Wear')
     personalities = load_personalities(root, expected)
+    if set(personalities) != set(expected):
+        raise ValueError('all public distributions require a curated native personality')
+    if len({p['description'] for p in personalities.values()}) != len(personalities):
+        raise ValueError('personality descriptions must be individually distinctive')
     expected_seed_names = {'agency-orchestrator', 'hermes-wear'}
     preserved_config_seeds = load_json(root / 'capabilities/preserved-config-seeds.json')
     if set(preserved_config_seeds) != expected_seed_names or any(
