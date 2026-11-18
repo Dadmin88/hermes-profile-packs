@@ -49,6 +49,20 @@ The server rejects non-local Host headers, cross-origin requests, and mutations 
 
 ## Evaluating a named native personality
 
+Choose **Personalities · 6 cases** in the case library, or run the exact same
+scenarios with `python -m evals.run list --suite personality`. The suite has
+two identity probes each for Backend Engineer (`PBE01`, `PBE02`),
+Cybersecurity Instructor (`PCI01`, `PCI02`), and Parenting Coach
+(`PCP01`, `PCP02`). The combined catalog contains 196 distinct cases.
+
+A personality case evaluates decision style, correction, communication and
+role-specific boundaries, not a memorized phrase or a self-description. The
+reviewer still checks task correctness and evidence. To compare versions,
+use the same case ID with matching runtime and settings. Backend Engineer
+and Cybersecurity Instructor may remain blocked by native preloaded-skill
+readback until Hermes preserves the distribution contract; do not bypass that
+gate. Parenting Coach can serve as the first end-to-end live A/B pilot.
+
 A curated personality can live in a profile distribution's `config.yaml`
 under `agent.personalities`, with `display.personality` choosing the active
 name. Keep the same SOUL.md and skill trees in baseline and candidate
