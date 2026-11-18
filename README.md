@@ -75,6 +75,19 @@ hermes-profile-packs/
 
 Runtime state is never distributed. Authentication material, `.env` files, logs, caches, databases, local paths, session history, and machine-specific configuration do not belong in this repository.
 
+## Native personalities
+
+Each of the 167 distributions includes a curated, role-specific native Hermes
+personality in addition to `SOUL.md`: professional judgment and boundaries
+remain in the SOUL, while conversational temperament, correction habits and
+voice live in the selected `/personality` preset. Fresh installs receive the
+profile's default personality, and users may select another or clear it.
+Normal updates preserve existing installed `config.yaml`; personality
+migration for existing users requires deliberate, scoped approval.
+
+See [Profile personalities](docs/PROFILE_PERSONALITIES.md) for authoring,
+preserved security settings and the limited behavioral evidence.
+
 ## Install
 
 For most people, launch the selector:
