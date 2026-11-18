@@ -77,6 +77,45 @@ def add_nested(text: str, parent: str, child: dict) -> str:
     return prefix + indented + "".join(lines[end:])
 
 
+def fill_empty_presets(text: str, name: str, personality: dict) -> str:
+    """Replace only an empty inline agent.personalities mapping.
+
+    Preserve the rest of the user's YAML exactly, including other agent
+    fields and unrelated custom sections. Complex or ambiguous shapes fail
+    closed rather than reserializing a live configuration.
+    """
+    lines = text.splitlines(keepends=True)
+    agent_headers = [
+        i for i, line in enumerate(lines)
+        if re.fullmatch(r"agent:[ \t]*(?:#.*)?", line.rstrip("\r\n"))
+    ]
+    if len(agent_headers) != 1:
+        raise ValueError("non-block or ambiguous agent YAML section")
+    start = agent_headers[0] + 1
+    end = next((
+        i for i in range(start, len(lines))
+        if re.match(r"^[A-Za-z_][A-Za-z0-9_-]*[ \t]*:", lines[i])
+    ), len(lines))
+    matches = [
+        i for i in range(start, end)
+        if re.fullmatch(r"  personalities:[ \t]*\{\}[ \t]*(?:#.*)?", lines[i].rstrip("\r\n"))
+    ]
+    if len(matches) != 1:
+        raise ValueError("existing personalities requires reviewable manual merge")
+
+    i = matches[0]
+    old_line = lines[i].rstrip("\r\n")
+    comment = old_line.split("}", 1)[1].strip()
+    if comment and not comment.startswith("#"):
+        raise ValueError("unexpected inline personality suffix")
+    header = "  personalities:" + (" " + comment if comment else "") + "\n"
+    fragment = yaml.safe_dump({name: personality}, allow_unicode=True, sort_keys=False, width=120)
+    replacement = header + "".join(
+        "    " + line for line in fragment.splitlines(keepends=True)
+    )
+    return "".join(lines[:i]) + replacement + "".join(lines[i + 1:])
+
+
 def add_top(text: str, value: dict) -> str:
     if text.strip() and not text.endswith("\n"):
         text += "\n"
@@ -120,7 +159,9 @@ def render(existing: bytes | None, name: str, personality: dict) -> tuple[bytes 
             elif not had_presets_section:
                 candidate = add_nested(candidate, "agent", {"personalities": {name: personality}})
             else:
-                raise ValueError("existing presets need reviewable manual merge")
+                if presets:
+                    raise ValueError("existing nonempty presets need reviewable manual merge")
+                candidate = fill_empty_presets(candidate, name, personality)
         if activate:
             if "display" not in old:
                 candidate = add_top(candidate, {"display": {"personality": name}})

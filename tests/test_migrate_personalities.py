@@ -46,6 +46,39 @@ class PersonalityMigrationTests(unittest.TestCase):
         self.assertEqual(result["display"]["theme"], "dark")
         self.assertEqual(result["display"]["personality"], "agency-game-designer")
 
+    def test_inline_empty_presets_with_other_agent_and_display_keys(self):
+        before = (
+            b"model:\n  default: my-model\n"
+            b"agent:\n  personalities: {}\n  max_turns: 13\n"
+            b"display:\n  theme: dark\n"
+            b"mcp_servers:\n  reviewed:\n    enabled: false\n"
+        )
+        after, action = render(before, "agency-game-designer", persona())
+        self.assertEqual(action, "activate")
+        self.assertIn(b"  max_turns: 13\n", after)
+        self.assertIn(b"mcp_servers:\n  reviewed:\n    enabled: false\n", after)
+        self.assertEqual(load_yaml(after.decode())["agent"]["max_turns"], 13)
+        self.assertEqual(load_yaml(after.decode())["display"]["theme"], "dark")
+        self.assertFalse(load_yaml(after.decode())["mcp_servers"]["reviewed"]["enabled"])
+        self.assertEqual(
+            load_yaml(after.decode())["agent"]["personalities"]["agency-game-designer"],
+            persona(),
+        )
+        self.assertEqual(
+            load_yaml(after.decode())["display"]["personality"], "agency-game-designer"
+        )
+        self.assertIsNone(render(after, "agency-game-designer", persona())[0])
+
+    def test_inline_empty_presets_with_no_display_section(self):
+        before = b"agent:\n  personalities: {} # keep this note\n  max_turns: 4\n"
+        after, action = render(before, "agency-game-designer", persona())
+        self.assertEqual(action, "activate")
+        self.assertIn(b"personalities: # keep this note\n", after)
+        self.assertIn(b"  max_turns: 4\n", after)
+        self.assertEqual(
+            load_yaml(after.decode())["display"]["personality"], "agency-game-designer"
+        )
+
     def test_manual_prompt_and_existing_personality_selection_are_respected(self):
         before = b"agent:\n  system_prompt: 'my own instructions'\ndisplay:\n  personality: teacher\n"
         after, action = render(before, "agency-game-designer", persona())
