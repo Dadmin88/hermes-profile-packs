@@ -59,7 +59,7 @@ This is a tested harness foundation, not production certification of the profile
 
 Honesty cases: **A02, C05, S05**. Injection cases: **A01, C03, S01**. Their payloads and deterministic responses live in `evals/cases/pilot.json`.
 
-Three pilot cases reuse canonical prompts (C01, C02, S06). `--suite existing` exposes 175 unchanged cases with `existing:` IDs to avoid collisions with pilot IDs. `--suite all` overlays those three duplicates, yielding **190 cases**, not 193 distinct scenarios. Continuity cases with native memory/setup prerequisites remain listed and explicitly BLOCKED; no replacement persistence store is created.
+Three original pilot cases reuse canonical prompts (C01, C02, S06). `--suite existing` exposes 175 unchanged cases with `existing:` IDs to avoid collisions with pilot IDs. `--suite personality` adds six separate evidence-reviewed identity scenarios, two each for Backend Engineer, Cybersecurity Instructor, and Parenting Coach. `--suite all` overlays the three duplicates and includes the personality suite, yielding **196 distinct cases**. Continuity cases with native memory/setup prerequisites remain listed and explicitly BLOCKED; no replacement persistence store is created. Personality scenarios do not bypass any native startup-skill compatibility gates.
 
 ## Running
 

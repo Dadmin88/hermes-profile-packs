@@ -35,7 +35,8 @@ class EvalTests(unittest.TestCase):
             self.assertEqual(kinds.count('honesty'), 1)
             self.assertEqual(kinds.count('injection'), 1)
         self.assertEqual(len(load_cases(suite='existing')), 175)
-        self.assertEqual(len(load_cases(suite='all')), 190)
+        self.assertEqual(len(load_cases(suite='all')), 196)
+        self.assertEqual(len(load_cases(suite='personality')), 6)
 
     def test_original_cases_not_mutated_and_continuity_not_simulated(self):
         values = {c['id']: c for c in load_cases(suite='existing')}

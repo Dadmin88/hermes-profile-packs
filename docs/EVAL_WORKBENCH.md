@@ -47,6 +47,61 @@ Reviews are bound to case and evidence hashes. A changed rubric requires the ori
 
 The server rejects non-local Host headers, cross-origin requests, and mutations without its per-session request token. It invokes fixed Python entry points using argument arrays, never shell input. The browser renders agent responses and fixtures as text, not executable HTML. This protects the workbench from poisoned eval content; it does not certify the evaluated agent's resistance.
 
+## Evaluating a named native personality
+
+Choose **Personalities · 6 cases** in the case library, or run the exact same
+scenarios with `python -m evals.run list --suite personality`. The suite has
+two identity probes each for Backend Engineer (`PBE01`, `PBE02`),
+Cybersecurity Instructor (`PCI01`, `PCI02`), and Parenting Coach
+(`PCP01`, `PCP02`). The combined catalog contains 196 distinct cases.
+
+A personality case evaluates decision style, correction, communication and
+role-specific boundaries, not a memorized phrase or a self-description. The
+reviewer still checks task correctness and evidence. To compare versions,
+use the same case ID with matching runtime and settings. Backend Engineer
+and Cybersecurity Instructor may remain blocked by native preloaded-skill
+readback until Hermes preserves the distribution contract; do not bypass that
+gate. Parenting Coach can serve as the first end-to-end live A/B pilot.
+
+A curated personality can live in a profile distribution's `config.yaml`
+under `agent.personalities`, with `display.personality` choosing the active
+name. Keep the same SOUL.md and skill trees in baseline and candidate
+packages, and change only the intended personality configuration for the
+comparison. The workbench snapshots the exact distributed files for each run.
+
+The worker uses Hermes's own `resolve_ephemeral_system_prompt` resolver and
+passes its result into the native `AIAgent(ephemeral_system_prompt=...)`.
+This matters: personality overlays are applied at API-call time, not inside
+the cached `_build_system_prompt()` string. Merely reading `config.yaml` or
+seeing SOUL in the cached prompt does **not** prove the selected personality
+was delivered to the model.
+
+New trace evidence separates two observations:
+
+- `personality_resolved`: native config selected a known personality and
+  Hermes produced an overlay (or shows `null` when none is active).
+  A setup-only check stops at this stage and makes no model call.
+- `personality_applied`: the live `AIAgent` constructor retained the exact
+  resolved overlay. The trace carries only a name and hash, never the text
+  of the overlay. The runtime's normal model-call path applies the prompt.
+
+Unknown named personalities, empty selected overlays, and runtimes without
+the required prompt parameter fail closed instead of silently evaluating a
+neutral agent. A cleared `display.personality` selection is a valid neutral
+baseline. An explicitly supplied `agent.system_prompt` without a selected
+personality remains a native manual overlay, not a neutral condition.
+
+For a fair A/B comparison, retain model, runtime, adapter version, task,
+case rubric, tool allowances, and token/turn budgets. Keep source-only
+personality changes in an isolated evaluation checkout. If the case's
+distribution declares startup skills and your native Hermes build drops
+`preload_skills`, the check must remain blocked; do not bypass the
+preload readback just to produce a personality result.
+
+The existence and delivery of the overlay are technical checks. Whether
+the personality is distinctive, useful, and safe still requires reviewing
+the real model answers and evidence, preferably blind to condition.
+
 ## Current limits
 
 - Semantic grading uses an explicitly submitted, attributed evidence review; there is no automatic judge. Human and assistant reviews must identify their actual reviewer.

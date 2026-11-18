@@ -42,7 +42,8 @@ class WorkbenchTests(unittest.TestCase):
         return run_id, path, review
 
     def test_catalog_matches_pilot_and_canonical_suites(self):
-        self.assertEqual([len(self.app.catalogs[k]) for k in ('pilot', 'existing', 'all')], [18, 175, 190])
+        self.assertEqual([len(self.app.catalogs[k]) for k in ('pilot', 'existing', 'personality', 'all')], [18, 175, 6, 196])
+        self.assertTrue({'PBE01', 'PCI01', 'PCP01'} <= set(self.app.cases))
 
     def test_secret_never_in_bootstrap(self):
         with patch.dict(os.environ, {'HERMES_EVAL_API_KEY': 'synthetic-secret'}):
