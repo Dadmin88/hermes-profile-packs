@@ -73,7 +73,14 @@ def load_cases(root=ROOT, suite="pilot"):
             c["fixture_data"] = pilot["fixtures"].get(c.get("fixture"), {})
             c["source_file"] = "evals/cases/pilot.json"
             cases.append(c)
-    if suite not in {"pilot", "existing", "all"}:
+    if suite in {"personality", "all"}:
+        personalities = json.loads((root / "evals/cases/personality.json").read_text())
+        for original in personalities["cases"]:
+            c = dict(original)
+            c["fixture_data"] = personalities.get("fixtures", {}).get(c.get("fixture"), {})
+            c["source_file"] = "evals/cases/personality.json"
+            cases.append(c)
+    if suite not in {"pilot", "existing", "all", "personality"}:
         raise ValueError("Unknown suite")
     if len({c["id"] for c in cases}) != len(cases):
         raise ValueError("Duplicate case IDs")
