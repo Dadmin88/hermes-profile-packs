@@ -77,6 +77,14 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
     if len(names) != len(set(names)) or set(names) != set(expected):
         raise ValueError('capability identities do not exactly match public source rosters + Wear')
     personalities = load_personalities(root, expected)
+    expected_seed_names = {'agency-orchestrator', 'hermes-wear'}
+    preserved_config_seeds = load_json(root / 'capabilities/preserved-config-seeds.json')
+    if set(preserved_config_seeds) != expected_seed_names or any(
+        not isinstance(value, dict) or 'display' in value or
+        'personalities' in (value.get('agent') or {})
+        for value in preserved_config_seeds.values()
+    ):
+        raise ValueError('invalid explicitly preserved native config seeds')
     lock = load_json(root / 'capabilities/skills.lock.json')['skills']
     integrations = load_json(root / 'capabilities/integrations.json')
     outputs = {}
@@ -176,7 +184,10 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                 catalog[kind].append(item)
         guide = target / GUIDE
         outputs[guide / 'references/catalog.json'] = json_text(catalog).encode()
-        config_seed = {}
+        # These two role-specific seeds preserve existing native execution
+        # restrictions (notably Wear's disabled execution toolsets). Never
+        # replace them with personality-only config.
+        config_seed = json.loads(json_text(preserved_config_seeds[name])) if name in preserved_config_seeds else {}
         if row['mcps']:
             seed = {'mcp_servers': {m['name']: m['config'] for m in catalog['mcps']}}
             outputs[guide / 'references/mcp-servers.json'] = json_text(seed).encode()
@@ -189,8 +200,12 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
             # preserves recipients' customized config.yaml on ordinary updates.
             config = dict(config_seed)
             if personality:
-                config['agent'] = {'personalities': {name: personality}}
-                config['display'] = {'personality': name}
+                agent = dict(config.get('agent') or {})
+                agent['personalities'] = {name: personality}
+                config['agent'] = agent
+                display = dict(config.get('display') or {})
+                display['personality'] = name
+                config['display'] = display
             outputs[target / 'config.yaml'] = json_text(config).encode()
         if row['plugins']:
             pack = {'name': name + '-integrations', 'version': '1.0.0',
