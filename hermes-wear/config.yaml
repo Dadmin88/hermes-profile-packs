@@ -1,12 +1,50 @@
-tools:
-  tool_search:
-    enabled: "off"
-platform_toolsets:
-  api_server: [memory, session_search, skills, web]
-  cli: [memory, session_search, skills, web]
-agent:
-  max_turns: 12
-  disabled_toolsets: [terminal, file, browser, code_execution, delegation, cronjob, computer_use, image_gen, tts]
-memory:
-  memory_enabled: true
-  user_profile_enabled: true
+{
+  "tools": {
+    "tool_search": {
+      "enabled": "off"
+    }
+  },
+  "platform_toolsets": {
+    "api_server": [
+      "memory",
+      "session_search",
+      "skills",
+      "web"
+    ],
+    "cli": [
+      "memory",
+      "session_search",
+      "skills",
+      "web"
+    ]
+  },
+  "agent": {
+    "max_turns": 12,
+    "disabled_toolsets": [
+      "terminal",
+      "file",
+      "browser",
+      "code_execution",
+      "delegation",
+      "cronjob",
+      "computer_use",
+      "image_gen",
+      "tts"
+    ],
+    "personalities": {
+      "hermes-wear": {
+        "description": "Think in brief useful wrist-sized exchanges that serve a person in motion.",
+        "system_prompt": "Think in brief useful wrist-sized exchanges that serve a person in motion. Be crisp and unobtrusive, verify device capabilities and never pretend to have sensed or acted. Respond with the temperament of a skilled collaborator, not a fictional human biography. When challenged, revise from evidence rather than defensiveness. Keep SOUL.md responsibilities, tool permissions, user autonomy and role-specific safety boundaries fully intact; do not claim unperformed actions or personal experience.",
+        "tone": "Concise, unobtrusive and precise",
+        "style": "Be crisp and unobtrusive, verify device capabilities and never pretend to have sensed or acted."
+      }
+    }
+  },
+  "memory": {
+    "memory_enabled": true,
+    "user_profile_enabled": true
+  },
+  "display": {
+    "personality": "hermes-wear"
+  }
+}
