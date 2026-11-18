@@ -24,6 +24,29 @@ class EvaluationStop(BaseException):
     """Escape native callback error suppression without starting another provider call."""
 
 
+def resolve_distribution_personality(cfg):
+    """Use the installed Hermes resolver, rejecting broken named selections.
+
+    The returned overlay is passed to AIAgent at API time. It is intentionally
+    not part of the cached _build_system_prompt() text.
+    """
+    from hermes_cli.personality import (
+        active_personality_name, normalize_personality_name,
+        resolve_ephemeral_system_prompt,
+    )
+    display = cfg.get("display") or {}
+    if not isinstance(display, dict):
+        raise RuntimeError("Native display config must be a mapping")
+    wanted = normalize_personality_name(display.get("personality", ""))
+    selected = active_personality_name(cfg)
+    if wanted and wanted != selected:
+        raise RuntimeError("Native personality selection is unknown or unavailable")
+    overlay = resolve_ephemeral_system_prompt(cfg)
+    if selected and not overlay:
+        raise RuntimeError("Selected native personality resolved to an empty overlay")
+    return selected, overlay
+
+
 def snapshot_profile(source, target):
     """Copy once, then hash the exact immutable package passed to the installer."""
     shutil.copytree(source, target)
@@ -89,6 +112,15 @@ def main():
             output["installed_hash"] = digest(payload)
             output["installed_skills_hash"] = digest(tree_hashes(target / "skills"))
             emit("installed", profile=request["profile"], content_hash=output["installed_hash"])
+            cfg_path = target / "config.yaml"
+            cfg = yaml.safe_load(cfg_path.read_text()) if cfg_path.exists() else {}
+            cfg = cfg or {}
+            if not isinstance(cfg, dict):
+                raise RuntimeError("Native profile config must be a mapping")
+            selected_personality, personality_overlay = resolve_distribution_personality(cfg)
+            overlay_hash = hashlib.sha256(personality_overlay.encode()).hexdigest() if personality_overlay else None
+            emit("personality_resolved", name=selected_personality or None, overlay_hash=overlay_hash,
+                 requires_api_time_overlay=bool(personality_overlay))
             for name, content in request["fixture"].get("workspace_files", {}).items():
                 from evals.core import within
                 path = within(workspace, name)
@@ -98,9 +130,6 @@ def main():
             else:
                 if not settings.get("model") or not settings.get("base_url") or not connection.get("api_key"):
                     raise RuntimeError("Live evaluation requires a model, endpoint, and working connection")
-                cfg_path = target / "config.yaml"
-                cfg = yaml.safe_load(cfg_path.read_text()) if cfg_path.exists() else {}
-                cfg = cfg or {}
                 # Native supported setting: keep the fixture tools directly visible so the
                 # pilot has a small, exact, auditable tool surface rather than a search bridge.
                 cfg.setdefault("tools", {}).setdefault("tool_search", {})["enabled"] = "off"
@@ -117,8 +146,11 @@ def main():
                     from agent import turn_response_check
                     from agent.usage_pricing import normalize_usage
                     required = {"load_soul_identity", "tool_complete_callback", "skip_memory", "skip_background_review"}
-                    if not required <= set(inspect.signature(AIAgent).parameters):
+                    actual_parameters = set(inspect.signature(AIAgent).parameters)
+                    if not required <= actual_parameters:
                         raise RuntimeError("Unsupported native AIAgent API")
+                    if personality_overlay and "ephemeral_system_prompt" not in actual_parameters:
+                        raise RuntimeError("Native AIAgent does not support personality prompt overlays")
                     fixture_tools = FixtureTools(request, workspace, emit)
                     for schema in fixture_tools.schemas():
                         name = schema["name"]
@@ -156,7 +188,12 @@ def main():
                                     quiet_mode=True, save_trajectories=False, load_soul_identity=True,
                                     skip_memory=True, skip_background_review=True, cwd=str(workspace),
                                     run_budget_seconds=request["limits"]["max_seconds"], fallback_model=None,
-                                    step_callback=bound_step)
+                                    step_callback=bound_step,
+                                    **({"ephemeral_system_prompt": personality_overlay} if personality_overlay else {}))
+                    if personality_overlay and getattr(agent, "ephemeral_system_prompt", None) != personality_overlay:
+                        raise RuntimeError("Native AIAgent did not retain the selected personality overlay")
+                    emit("personality_applied", name=selected_personality or None, overlay_hash=overlay_hash,
+                         api_time_overlay=bool(personality_overlay))
                     allowed = {s["name"] for s in fixture_tools.schemas()} | {"skills_list", "skill_view"}
                     if agent.valid_tool_names != allowed:
                         raise RuntimeError(f"Unexpected native tool surface: {sorted(agent.valid_tool_names ^ allowed)}")
