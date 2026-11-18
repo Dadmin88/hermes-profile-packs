@@ -43,15 +43,15 @@ Continuing Education routing must fail closed:
 
 Public status language must state the Hermes capabilities required by Continuing Education and distinguish implemented pack behavior from compatibility with a given Hermes release. Do not claim unqualified production readiness until the normal Hermes release used with Profile Packs provides those capabilities.
 
-## Native personality pilot
+## Native personality standard
 
 Curated personalities are authored under `personalities/<profile-name>.json`
 and materialized into native `config.yaml` by `capabilities.py`. Only
 `description`, `system_prompt`, `tone`, and `style` are accepted. Preserve
 SOUL.md authority and existing disabled MCP seed settings; do not treat
 `AGENTS.md`, `USER.md`, `MEMORY.md`, or OpenClaw-style Markdown files as
-additional automatically loaded identity layers. Existing installed config
-must not be replaced as part of a source-only personality pilot.
+additional automatically loaded identity layers. Every profile must have a distinct native personality source. Existing installed
+config must not be replaced by a distribution update without consent.
 See `docs/PROFILE_PERSONALITIES.md` for the pilot, evaluation, and release gates.
 
 ## Editing profiles
