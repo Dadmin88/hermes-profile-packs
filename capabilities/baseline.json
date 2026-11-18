@@ -274,7 +274,7 @@
     "hermes-agency/profiles/agency-botfather/.no-bundled-skills": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "hermes-agency/profiles/agency-botfather/SOUL.md": "16209c93034c88650593aa81e5f9908d0caa5210b6918632ec12b458d5c69ffa",
     "hermes-agency/profiles/agency-botfather/skills/academy-continuing-education/SKILL.md": "580080ca4c373cbe8705dec491d9792008828a6ac352bb17d660928d7f1a8e72",
-    "hermes-agency/profiles/agency-botfather/skills/profile-pack-authoring/SKILL.md": "592b7f38f48e5460cd00109d916dc95cb6ef2e91d2c80b2a0a2b172ea9fc419b",
+    "hermes-agency/profiles/agency-botfather/skills/profile-pack-authoring/SKILL.md": "d94fa8127842d1e322ee179910559e19ac91fc4fe1bc18bdfeb9bf226f15189d",
     "hermes-agency/profiles/agency-botfather/skills/profile-pack-authoring/SOURCE.md": "3ea8dc34ea760f8a2550a9556633682726d93d74c65587b86b2754f7ba9078cb",
     "hermes-agency/profiles/agency-brand-designer/SOUL.md": "cabf4e461d491dcbd0a38a152abcd5b175a24d1e828f71a359cfab00e2f24aab",
     "hermes-agency/profiles/agency-brand-designer/skills/academy-continuing-education/SKILL.md": "580080ca4c373cbe8705dec491d9792008828a6ac352bb17d660928d7f1a8e72",
@@ -2726,7 +2726,7 @@
     },
     "hermes-agency/profiles/agency-botfather/skills/profile-pack-authoring/SKILL.md": {
       "prior_sha256": "7c95b6e1336b36998f8d05c3be78b00c9f2bea8b0dc5dbd73df81ee2204e88a8",
-      "approved_sha256": "592b7f38f48e5460cd00109d916dc95cb6ef2e91d2c80b2a0a2b172ea9fc419b"
+      "approved_sha256": "d94fa8127842d1e322ee179910559e19ac91fc4fe1bc18bdfeb9bf226f15189d"
     }
   }
 }
