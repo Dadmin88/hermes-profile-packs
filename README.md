@@ -88,6 +88,10 @@ migration for existing users requires deliberate, scoped approval.
 See [Profile personalities](docs/PROFILE_PERSONALITIES.md) for authoring,
 preserved security settings and the limited behavioral evidence.
 
+## Reviewed updates to existing profiles
+
+Use [reviewed profile source sync](docs/REVIEWED_PROFILE_SYNC.md) to preview SOUL and skill changes before updating an installed profile with local customizations. Updates are scoped to explicitly selected units, tied to a reviewed hash, backed up privately and reversible. This avoids using the native distribution updater to overwrite customized SOULs or skills. It does **not** change installed versions or configuration.
+
 ## Install
 
 For most people, launch the selector:
