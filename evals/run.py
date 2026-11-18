@@ -181,9 +181,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     sub = parser.add_subparsers(dest="command", required=True)
-    ls = sub.add_parser("list"); ls.add_argument("--suite", choices=["pilot", "existing", "all"], default="pilot")
+    ls = sub.add_parser("list"); ls.add_argument("--suite", choices=["pilot", "existing", "personality", "all"], default="pilot")
     run = sub.add_parser("run")
-    run.add_argument("--suite", choices=["pilot", "existing", "all"], default="pilot")
+    run.add_argument("--suite", choices=["pilot", "existing", "personality", "all"], default="pilot")
     run.add_argument("--case", action="append")
     run.add_argument("--hermes-source", required=True)
     run.add_argument("--python", default=sys.executable)
@@ -221,7 +221,7 @@ def main(argv=None):
         run = json.loads(args.results.read_text())
         reviews = json.loads(args.reviews.read_text())
         # Include both canonical and pilot IDs when grading a run of either suite.
-        cases = {c["id"]: c for suite in ["existing", "pilot"] for c in load_cases(args.root, suite)}
+        cases = {c["id"]: c for suite in ["existing", "pilot", "personality"] for c in load_cases(args.root, suite)}
         lookup = {(r["case_id"], r["evidence_hash"]): r for r in reviews}
         for record in run["results"]:
             c = cases[record["case_id"]]
