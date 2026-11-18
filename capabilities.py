@@ -34,6 +34,30 @@ def file_hash(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+
+def load_personalities(root: Path, expected: dict[str, str]) -> dict[str, dict[str, str]]:
+    """Curated author-owned personality sources, not files copied into Hermes homes."""
+    folder = root / 'personalities'
+    if not folder.is_dir() or folder.is_symlink():
+        raise ValueError('missing or invalid personalities source directory')
+    result = {}
+    fields = {'description', 'system_prompt', 'tone', 'style'}
+    for source in sorted(folder.iterdir()):
+        if (not source.is_file() or source.is_symlink()
+                or source.suffix != '.json' or source.stem not in expected):
+            raise ValueError('unknown or unsafe personality source: ' + source.name)
+        value = load_json(source)
+        if not isinstance(value, dict) or set(value) != fields:
+            raise ValueError('invalid personality fields: ' + source.name)
+        if (any(not isinstance(value[field], str) or not value[field].strip()
+                for field in fields)
+                or len(value['system_prompt']) < 180
+                or len(value['system_prompt']) > 3000
+                or any(len(value[field]) > 180 for field in ('description', 'tone', 'style'))):
+            raise ValueError('invalid personality content: ' + source.name)
+        result[source.stem] = value
+    return result
+
 def source_profiles(root: Path) -> dict[str, str]:
     result = {}
     for pack in load_json(root / 'packs.json')['packs']:
@@ -52,6 +76,7 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
     expected = source_profiles(root)
     if len(names) != len(set(names)) or set(names) != set(expected):
         raise ValueError('capability identities do not exactly match public source rosters + Wear')
+    personalities = load_personalities(root, expected)
     lock = load_json(root / 'capabilities/skills.lock.json')['skills']
     integrations = load_json(root / 'capabilities/integrations.json')
     outputs = {}
@@ -151,13 +176,22 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                 catalog[kind].append(item)
         guide = target / GUIDE
         outputs[guide / 'references/catalog.json'] = json_text(catalog).encode()
+        config_seed = {}
         if row['mcps']:
             seed = {'mcp_servers': {m['name']: m['config'] for m in catalog['mcps']}}
             outputs[guide / 'references/mcp-servers.json'] = json_text(seed).encode()
-            # Valid JSON is valid YAML; supported Hermes fresh-install config seed.
-            # Updates preserve the recipient's config.yaml unless they deliberately reset it.
             if row.get('config_seed', False):
-                outputs[target / 'config.yaml'] = json_text(seed).encode()
+                config_seed = seed
+        personality = personalities.get(name)
+        if config_seed or personality:
+            # Native Hermes accepts JSON as YAML; never discard a reviewed MCP seed
+            # when adding a persona. This affects fresh installs only; Hermes
+            # preserves recipients' customized config.yaml on ordinary updates.
+            config = dict(config_seed)
+            if personality:
+                config['agent'] = {'personalities': {name: personality}}
+                config['display'] = {'personality': name}
+            outputs[target / 'config.yaml'] = json_text(config).encode()
         if row['plugins']:
             pack = {'name': name + '-integrations', 'version': '1.0.0',
                     'description': 'Optional reviewed integrations; never installed automatically.',
