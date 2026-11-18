@@ -66,6 +66,7 @@ Create the approved repository-relative distribution directory using the owning 
 - `SOUL.md` with role, responsibilities, authority boundaries, working standard, collaborators, communication, and definition of done;
 - at least one focused `skills/<skill>/SKILL.md` containing a repeatable procedure and quality gate;
 - `personalities/<exact-profile-name>.json` at the repository root, defining a curated native `description`, `system_prompt`, `tone`, and `style` as specified in `docs/PROFILE_PERSONALITIES.md`;
+- any repository-mandated shared skills materialized byte-for-byte from their canonical source and declared in distribution metadata, when that pack requires it;
 - `.no-bundled-skills` only when the approved profile intentionally excludes unrelated default skills and pack conventions permit the marker;
 - supporting references or scripts only when they materially improve reliable execution.
 
@@ -104,6 +105,8 @@ Complete this step when a regression in a material product constraint fails an a
 ### 8. Validate and hand off
 
 Run every validation command required by the repository instructions, not only the pack-local suite. Also run the pack catalog or dry-run surface when local instructions require it. Inspect the final diff and working-tree status for unrelated changes, generated state, secrets, local paths, inconsistent counts, and malformed metadata.
+
+Do not use a real `hermes profile install` as an isolation smoke test, even with a temporary `HOME`: an active Hermes session may resolve profile storage from a pinned profile/home environment and mutate the live Hermes home. Use the repository installer’s `--dry-run`, structural checks on a temporary source copy, and non-mutating catalog/recommender commands instead.
 
 Do not commit, push, install, or modify a live profile. Hand runtime actions to their owning specialist, then hand off the changed files, exact command results, provenance, material risks, and next certification/review action.
 
