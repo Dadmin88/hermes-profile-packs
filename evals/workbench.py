@@ -53,8 +53,8 @@ class Workbench:
         self.lock = threading.RLock()
         self.active = None
         self.process = None
-        self.catalogs = {suite: load_cases(self.root, suite) for suite in ("pilot", "existing", "all")}
-        self.cases = {c["id"]: c for suite in ("existing", "pilot") for c in self.catalogs[suite]}
+        self.catalogs = {suite: load_cases(self.root, suite) for suite in ("pilot", "existing", "personality", "all")}
+        self.cases = {c["id"]: c for suite in ("existing", "pilot", "personality") for c in self.catalogs[suite]}
         # A previous server's interrupted run is never shown as still running.
         for directory in self.output.glob("*/job.json"):
             job = json.loads(directory.read_text())
