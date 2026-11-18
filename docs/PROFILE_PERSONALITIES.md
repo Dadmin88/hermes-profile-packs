@@ -1,17 +1,17 @@
-# Profile personality standard (pilot)
+# Profile personality standard
 
-Status: **pilot on an isolated branch**, not a catalog-wide release or live-profile migration.
+Status: **source rollout authored for all 167 Profile Packs distributions** (114 Agency, 30 Academy, 22 Council and Wear). Packaging and focused tests passed on a disposable branch. The native changes are not installed into everyday profiles, and this document does not claim complete behavioral certification for 167 personalities.
 
 ## Intent
 
-Every Hermes Profile Packs specialist should eventually have a recognizable,
+Every Hermes Profile Packs specialist should have a recognizable,
 role-appropriate temperament and way of communicating. A personality is not a
 second job description, a fictional human biography, or a way to bypass role
 restrictions. It should change *how* the agent reasons with people, handles
 uncertainty, disagrees, and communicates, while leaving its professional
 responsibilities and safety boundaries intact.
 
-The pilot covers one representative profile from each pack:
+The initial native-authoring pilot used one representative profile from each pack; the same standard now applies to every distribution:
 
 | Profile | Personality signature |
 | --- | --- |
@@ -100,6 +100,10 @@ They are ordinary Hermes config files, not a new personality runtime.
 When an existing reviewed integration requires a disabled MCP config seed,
 the packager **combines** the MCP seed with the personality in the same
 `config.yaml`. It never discards the MCP seed to add personality.
+Two restrictive distributions, `agency-orchestrator` and `hermes-wear`,
+also retain their original native tool restrictions through canonical,
+reviewed `capabilities/preserved-config-seeds.json`. All 167 personalizations
+are deterministic and can be checked for drift.
 `python capabilities.py --check` must detect missing or stale generated
 config. `python capabilities.py --write` modifies only source-tree
 distributions, not installed Hermes profiles.
@@ -125,17 +129,18 @@ Therefore:
 - Clearing the selection with `/personality none` preserves SOUL.md and
   turns off the personality overlay; it need not remove the definition.
 
-Nothing in this pilot modifies production profile configs, runtime memory,
-Hermes models, tool permissions, or Gateway state.
+The source-rollout operation does not modify production profile configs,
+runtime memory, models, tool permissions, or gateway state. Installing a fresh
+distribution is still a distinct user-controlled operation.
 
 ## Behavioral acceptance
 
 Static validation proves that a personality is packaged and resolves. It
 **does not** prove that a model actually expresses a distinctive identity.
-For each pilot, use the Profile Packs eval workbench once its branch/runtime
-is available. Compare matched prompts with and without the selected overlay,
-using the same model, tool availability, and task context. Review evidence,
-not simply the model's own claims about its persona.
+A small representative comparison is enough to justify the identity
+direction, but not a statistically reliable claim about all profiles.
+Compare matched prompts with and without the overlay, and review actual
+behavior rather than model claims about its personality.
 
 | Profile | Behavioral probes | Must not regress |
 | --- | --- | --- |
@@ -152,25 +157,51 @@ Evaluate four dimensions for each matched run:
 - **Task competence:** Does it maintain or improve correctness and usefulness?
 - **Boundary preservation:** Are authorization, evidence, and role limits intact?
 
-Use independent, attributed review of actual responses, tool traces, and
-source excerpts where available. Reviewers should be blind to A/B condition
-when feasible. Record failures and counterexamples. The pilot is not certified
-until all three profiles pass their own role-specific behavioral checks without
-material regression.
+### Minimal live evidence (November 18, 2026)
+
+Two matched cases were executed with the installed Hermes `gpt-6.1-sol`
+Codex route through disposable Parenting Coach profiles. Model, prompts,
+runtime and tool availability were held equal. The workbench recorded
+`personality_resolved` and `personality_applied` with the expected name
+and identical overlay hashes, versus `null` for the neutral baseline.
+
+- **PCP01, listening request:** both responses respected the request not to
+  receive a plan. The curated response was shorter, avoided a slightly
+  presumptive reassurance about the caregiver's love for their children,
+  and stayed focused on the user's expressed need.
+- **PCP02, requested boundary advice:** both responses offered clear,
+  age-appropriate scripts and adapted to a request for brevity. The curated
+  version paid extra attention to confirmed versus suspected misbehavior
+  and preserving school-related access. It recommended a different,
+  somewhat firmer consequence. That choice is not proof of superior
+  parenting advice.
+
+All four native model executions completed. The evaluator's official
+semantic verdicts remain **BLOCKED / awaiting review**, not four certified
+passes. This is a useful proof of delivery, controlled behavior variation,
+and a modest qualitative improvement in one representative interaction.
+It does **not** establish a population-wide improvement across profiles.
+Do not multiply live tests merely to manufacture a passing statistic.
+
+All source profiles are now authored. Remaining checks are packaging,
+security-preservation, and release compatibility checks, not repetitive
+full-catalog personality evaluation.
 
 ## Release and rollout gates
 
-1. Source validator, pack validators, and full test suite pass.
-2. Native Hermes resolves each selected custom personality in an isolated
-   profile environment, and shows `SOUL.md` plus the overlay in a new session.
-3. Existing MCP seeds remain disabled and otherwise unchanged.
-4. User-owned `config.yaml` remains untouched in a normal profile update.
-5. A/B behavioral evaluations demonstrate benefits without material regression.
-6. Apply the appropriate pack/profile versioning and changelog when promoting
-   the pilot to a real release.
-7. Only then make personality authoring an expected part of BotFather's
-   profile-pack-authoring process and expand incrementally to the remaining
-   profiles; do not mass-generate interchangeable personas.
+1. Ensure all 167 manifest identities have an exact reviewed personality
+   source and deterministic native `config.yaml` output.
+2. Run the normal source validator and test suite once for the complete
+   rollout. No unbounded A/B study is required.
+3. Preserve role-owned SOULs, preloaded skills, all disabled MCPs, Orchestrator
+   and Wear tool restrictions, and every existing user's local configuration.
+4. Record compatible version/changelog details before public release.
+5. New profile authors must supply an intentional personality signature and
+   maintain native config packaging; BotFather's authoring skill enforces
+   this source requirement.
+6. Existing users receive a **reviewable, key-scoped** opt-in migration. A
+   normal distribution update must not silently replace personalized model,
+   integration, security or personality settings.
 
-No evaluation score, live install, or production readiness is claimed by
-these source changes.
+Source-ready is not equivalent to runtime deployment. No ongoing expensive
+test campaign is required to author the remaining profiles.
