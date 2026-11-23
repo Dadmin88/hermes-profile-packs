@@ -14,7 +14,7 @@ Use when a full-stack feature is implemented and needs an engineer-level readine
 5. Sequence migrations, artifact deployment, feature enablement, background work, and cache/index changes so partially deployed states remain safe or are explicitly blocked.
 6. Define health/readiness and user-visible validation that proves the feature works after deployment, plus telemetry needed to detect regression.
 7. Identify rollback versus forward-recovery limits, especially after data changes or external side effects, and hand deployment strategy details to DevOps/Release roles when they own them.
-8. Validate production-like build/startup, critical feature flow, static/assets, API connectivity, permissions, and background processing in the most representative available environment.
+8. Reuse passing evidence for the applicable source, artifact, and environment. For routine releases, confirm the deployed version and startup. Add a focused check for changed runtime behavior, permissions, persisted data, or migrations when existing evidence leaves a concrete release risk open. Use the owner's requested acceptance scope.
 9. Record known limitations, manual steps, migration/compatibility concerns, verification commands, and any external dependency change requiring coordination.
 10. Hand off exact source/artifact/migration state to the deployment/release owner rather than a vague “ready to ship” claim.
 

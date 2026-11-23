@@ -15,7 +15,7 @@ Use when one engineer owns a coherent feature across frontend and backend and ne
 6. Control test data, time, randomness, network, authentication/permissions, and environment so tests remain deterministic and independent.
 7. Include at least one assembled critical flow from a known starting state through user action, backend effect, durable state, and returned UI/result when the feature warrants it.
 8. For bug fixes, capture the original failure at the narrowest reliable layer and add cross-boundary coverage only when the defect arose from integration rather than local logic.
-9. Run focused tests during implementation, then broader relevant client/server suites plus the assembled-flow proof before completion.
+9. Run the smallest focused check that proves the changed behavior. Use an assembled-flow check for changes that cross a meaningful boundary, such as persistence, permissions, or migrations. Reuse applicable passing results and required CI. Run broader suites only for a specific regression risk the focused evidence leaves open. The troubleshooting below applies only when the selected check encounters that problem.
 10. Record exact validation and remaining risk; independent QA remains separate from the engineer's implementation tests.
 
 ## Decision rules

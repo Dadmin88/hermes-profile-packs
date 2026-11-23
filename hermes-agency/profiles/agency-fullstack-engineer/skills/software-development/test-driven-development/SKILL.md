@@ -26,23 +26,12 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 ## When to Use
 
-**Always:**
-- New features
-- Bug fixes
-- Refactoring
-- Behavior changes
-
-**Exceptions (ask the user first):**
-- Throwaway prototypes
-- Generated code
-- Configuration files
-
-Thinking "skip TDD just this once"? Stop. That's rationalization.
+Use TDD when explicitly requested or when a focused failing test helps reproduce a bug or specify a nontrivial behavior. For routine changes, rely on applicable existing checks and required CI. Keep the test selection focused and follow the owner's testing scope.
 
 ## The Iron Law
 
 ```
-NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
+WHEN USING TDD, SHOW THE TARGETED TEST FAILING BEFORE THE FIX
 ```
 
 If implementation predates the test, preserve the user's work. Add a red-capable regression test before making further changes.
@@ -149,8 +138,7 @@ We'll fix it in REFACTOR.
 # Run the specific test
 pytest tests/test_feature.py::test_specific_behavior -v
 
-# Then run ALL tests to check for regressions
-pytest tests/ -q
+# Run any additional targeted regression check justified by the change.
 ```
 
 Confirm:
