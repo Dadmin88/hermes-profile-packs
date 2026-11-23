@@ -4,6 +4,8 @@ description: Build and execute a release checklist from the actual release surfa
 ---
 # Release Checklist
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when coordinating a software, product, content, configuration, or operational release with multiple readiness conditions.
 
 ## Procedure

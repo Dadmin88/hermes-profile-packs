@@ -20,7 +20,6 @@ Use when code or configuration changes who can read, change, execute, route, adm
 
 ## Decision rules
 - Authentication establishes identity; authorization must still evaluate what that identity can do to this resource in this context.
-- Internal/Fleet/Keryx transport identity does not automatically imply application-level resource authority.
 - UI checks are useful UX controls but never sufficient authorization evidence for server-side capabilities.
 - Security Reviewer independently evaluates the implementation; Security Engineer owns redesigning the security model when policy changes are required.
 

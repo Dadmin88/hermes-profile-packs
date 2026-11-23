@@ -22,7 +22,6 @@ Use when a system is slow or cannot scale and several components appear busy at 
 - The bottleneck is the constraint on the goal, not simply the busiest component.
 - Removing one bottleneck reveals another; optimization is iterative.
 - Queue growth and tail latency often expose capacity limits before average utilization reaches an intuitive threshold.
-- If the bottleneck is Fleet node scarcity or placement constraint, report the capability/capacity evidence to Fleet rather than embedding scheduling logic in the workload.
 
 ## Quality gate
 Analysis is complete when the end-to-end constraint is explained by measured critical-path/resource/queue behavior, a model predicts the effect of relieving it, a controlled change validates or falsifies that model, and the next limiting factor or uncertainty is explicit.

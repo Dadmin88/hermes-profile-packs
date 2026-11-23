@@ -4,6 +4,8 @@ description: Design a release rollback or forward-recovery plan from failure mod
 ---
 # Rollback Plan
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use before a release where failed deployment or behavior could require fast, controlled recovery.
 
 ## Procedure

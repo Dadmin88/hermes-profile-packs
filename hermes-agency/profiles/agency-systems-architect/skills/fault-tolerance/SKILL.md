@@ -22,7 +22,6 @@ Use when a system must continue useful work or recover predictably despite compo
 - Failover without fencing or state ownership can create a second writer instead of recovery.
 - Health detection is not perfect truth; pair detection thresholds with actions safe for that confidence level.
 - Tolerance should match consequence and probability; not every component needs seamless redundancy.
-- In Fleet, rescheduling a task after node loss must respect the task's side-effect/idempotency semantics and the profile readiness of the replacement node.
 
 ## Quality gate
 Fault tolerance is credible when expected faults have explicit containment and response, duplicate/late execution cannot silently corrupt state, failover preserves ownership guarantees, recovery work is bounded, recovered components meet return-to-service criteria, and fault tests demonstrate the intended behavior.

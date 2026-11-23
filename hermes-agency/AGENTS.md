@@ -39,7 +39,6 @@ External systems may consume Agency identities and packages through the static, 
 - `profiles/<name>/distribution.yaml` defines distribution metadata for a profile.
 - `profiles/<name>/SOUL.md` defines the professional behavior of a profile.
 - `profiles/<name>/skills/` is the canonical capability set bundled with that profile.
-- `AGENCY.md` defines the shared collaboration model.
 - `catalog.py` emits the deterministic runtime-facing profile catalog from the real profile tree.
 - `runtime-contract.json` describes the small static source contract used by external consumers.
 - `evals/routing.json` contains routing evaluation cases.

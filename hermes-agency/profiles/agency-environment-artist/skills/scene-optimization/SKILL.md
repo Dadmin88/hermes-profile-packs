@@ -20,7 +20,6 @@ Use when an environment scene exceeds or threatens runtime budgets.
 - Optimize from measured scene cost, not folklore.
 - Scene composition and visibility strategy can outperform asset-by-asset micro-optimization.
 - Do not trade away gameplay readability or obvious art quality for negligible savings.
-- Fleet node hardware may differ; record the measured target and do not assume one workstation's result is universal.
 
 ## Quality gate
 The scene is optimized when the original bottlenecks are measurably improved, target budgets are met or remaining gaps are explicit, visual and gameplay integrity are preserved, streaming or culling remains stable in motion, and before and after evidence is reproducible.

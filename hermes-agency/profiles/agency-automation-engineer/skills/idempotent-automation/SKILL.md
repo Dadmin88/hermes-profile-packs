@@ -22,7 +22,6 @@ Use when an automation may execute the same logical intent more than once or res
 - A unique job/message ID is not enough when the same business intent can be enqueued again with a new ID.
 - “Check then act” can race unless the check/action boundary is made atomic where concurrency matters.
 - Suppressing duplicates is only half the problem; uncertain outcomes still require reconciliation.
-- Portable automation should store durable idempotency state outside transient node-local process memory when Fleet may relocate execution.
 
 ## Quality gate
 The automation is idempotent when repeated or concurrent execution of the same intent converges on one accepted outcome, uncertain attempts can be reconciled, state survives restart/relocation where required, duplicate suppression is observable, and fault tests demonstrate consequential side effects cannot silently multiply.

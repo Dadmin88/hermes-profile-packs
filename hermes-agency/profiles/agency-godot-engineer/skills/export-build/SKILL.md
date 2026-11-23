@@ -21,7 +21,6 @@ Use when a Godot project must produce a distributable build for desktop, mobile,
 ## Decision rules
 - Running correctly in the editor is not proof that exported resource paths, native libraries, permissions, or platform lifecycle work.
 - Export requirements are version/platform-specific; verify current official Godot/platform documentation during implementation.
-- Do not hardcode a build machine or Fleet node; declare toolchain/platform requirements so an eligible builder can be selected.
 - Store release/submission governance belongs to Release/DevOps roles after the Godot artifact itself is proven.
 
 ## Quality gate

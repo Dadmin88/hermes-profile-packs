@@ -21,7 +21,6 @@ Use when a platform needs repeatable starting artifacts for a common service, wo
 - A template is a starting point, not a control plane.
 - Avoid copying logic into every service when a maintained shared capability can enforce or deliver it centrally.
 - Do not add options until real consumers demonstrate distinct needs.
-- Fleet-compatible workloads should remain portable; placement-specific state belongs to Fleet/node runtime metadata, not the template.
 
 ## Quality gate
 The template is ready when clean generation produces a small understandable project with approved defaults, no machine-specific or secret state is embedded, versions are reproducible, the supported workflow succeeds from scratch, and there is a clear strategy for future platform changes affecting existing consumers.

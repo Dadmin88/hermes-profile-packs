@@ -4,6 +4,8 @@ description: Coordinate a multi-system or multi-team cutover with prerequisites,
 ---
 # Program Cutover Plan
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when this procedure is the primary professional method needed for the assignment.
 
 ## Procedure

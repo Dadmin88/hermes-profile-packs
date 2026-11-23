@@ -4,6 +4,8 @@ description: Review a change for behavior it can accidentally break by tracing a
 ---
 # Regression Risk Review
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when a code change appears locally correct but may affect existing behavior outside the immediate implementation path.
 
 ## Procedure

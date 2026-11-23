@@ -21,7 +21,6 @@ Use when a CLI, language/tooling service, generator, formatter, debugger, or pla
 ## Decision rules
 - The editor extension should be an interface to engineering capability, not the only place the capability exists unless the task is inherently editor-specific.
 - Never apply stale edits to a newer buffer silently.
-- Remote Fleet execution should be surfaced as a normal capability boundary/status, not encoded as a permanent connection to one node.
 - Verify version-specific editor APIs against current official documentation when implementing a concrete integration.
 
 ## Quality gate

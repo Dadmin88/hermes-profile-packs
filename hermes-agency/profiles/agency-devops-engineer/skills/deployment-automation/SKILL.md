@@ -4,6 +4,8 @@ description: Automate deployment from an immutable release artifact through envi
 ---
 # Deployment Automation
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when manual or inconsistent release steps need to become a repeatable delivery workflow.
 
 ## Procedure
@@ -21,7 +23,6 @@ Use when manual or inconsistent release steps need to become a repeatable delive
 ## Decision rules
 - A deployment command returning success is not release validation.
 - Automate the decision boundaries and evidence, not only the shell commands.
-- Infrastructure placement chosen by Fleet should be consumed as runtime target state, not hardcoded into an Agency skill or deployment artifact.
 - Prefer fewer deployment mechanisms with well-understood failure behavior over one bespoke script per service.
 
 ## Quality gate

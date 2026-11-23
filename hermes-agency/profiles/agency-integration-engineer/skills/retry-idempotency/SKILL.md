@@ -22,7 +22,6 @@ Use when an integration can be retried by clients, queues, providers, schedulers
 - “Retry on any exception” is unsafe for side effects.
 - An idempotency key should represent one business intent, not merely one network attempt.
 - Exactly-once effects require an end-to-end guarantee; design for duplicate/uncertain execution unless every boundary proves otherwise.
-- Keryx/Fleet may retry transport or placement after node failure; integration task semantics must still remain safe when work is resumed elsewhere.
 
 ## Quality gate
 The integration is reliable when retryable versus permanent failures are explicit, duplicate/uncertain execution converges safely, attempt state survives interruption, retry amplification is bounded, unresolved outcomes have a reconciliation path, and fault tests prove repeated delivery cannot silently duplicate consequential effects.

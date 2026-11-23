@@ -22,7 +22,6 @@ Use when the same source can produce inconsistent artifacts, releases cannot be 
 - A build that succeeds twice on one developer machine is not proof of reproducibility.
 - Lockfiles help only when the entire dependency/toolchain resolution path respects them.
 - Do not require bit-for-bit identity when it adds large complexity without supporting a real supply-chain or release need; define the needed guarantee explicitly.
-- Fleet may choose the build node, but the artifact should not depend on which eligible node performed the build unless architecture/platform is an intentional input.
 
 ## Quality gate
 The build is reproducible enough when declared inputs can recreate the intended artifact on a clean compatible builder, hidden host state is absent, cache behavior cannot silently change correctness, release artifacts carry traceable identity/provenance, and the chosen reproducibility guarantee has been verified rather than assumed.

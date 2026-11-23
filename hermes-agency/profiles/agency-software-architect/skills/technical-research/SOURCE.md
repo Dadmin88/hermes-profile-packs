@@ -9,7 +9,6 @@
 
 ## Local adaptations
 
-Hermes Agency preserves the upstream research sequence of project documents of record first, then external prior art, with primary-source preference, explicit evidence quality, source URLs, and license review before reuse. The Agency version removes harness-specific subagent syntax and `gh` command assumptions, adds architecture-focused comparison criteria and Fleet-compatible delegation language, and keeps research separate from distributed node placement.
 
 ## MIT license notice
 

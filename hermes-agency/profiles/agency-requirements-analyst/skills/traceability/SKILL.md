@@ -14,7 +14,6 @@ Use when individual requirements need durable links to their origin, downstream 
 5. Link validation evidence such as test cases, review findings, demonstrations, or acceptance records that prove the requirement rather than merely mention it.
 6. Record supersession, scope change, deferral, or removal with the decision that authorized it.
 7. Review orphaned requirements and artifacts and repair or explicitly explain missing links.
-8. Use stable repository, task, document, or system identifiers so traceability survives Fleet-routed work and context changes.
 
 ## Decision rules
 - A link is navigation, not proof of satisfaction.

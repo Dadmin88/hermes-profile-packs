@@ -4,7 +4,7 @@ description: Decompose a multi-role goal into bounded specialist assignments wit
 ---
 # Work Decomposition
 
-Use this skill when a goal spans more than one Agency specialty or contains meaningful dependencies.
+Use when a goal has meaningful dependencies or the user requests work across specialties.
 
 ## Procedure
 1. Restate the desired outcome in observable terms. Separate the goal from proposed implementation details.

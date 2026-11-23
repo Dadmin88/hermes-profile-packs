@@ -22,7 +22,6 @@ Use when a change touches personal, customer, confidential, regulated, credentia
 - Start from explicit requirements and observed data flows, not generic privacy checklists detached from the product.
 - Logs, backups, analytics, and exports are data stores/flows too.
 - A compliance reviewer can establish factual handling and requirement mapping but should escalate legal interpretation beyond available authority.
-- Data location on a Fleet node is dynamic runtime state; requirements should be expressed as policy/eligibility constraints for Fleet rather than hardcoded host selection in Agency.
 
 ## Quality gate
 The review is complete when scoped data categories and requirement sources are explicit, the full data lifecycle is traced with access and external-sharing boundaries, retention/deletion and telemetry are included, conforming evidence and gaps are separated, and any interpretation-dependent conclusion is clearly escalated rather than overstated.

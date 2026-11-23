@@ -22,7 +22,6 @@ Use when a recurring process spans several steps or systems and needs more struc
 - Durable workflows need durable state; process memory is not a workflow database.
 - Compensation is a domain decision, not an automatic inverse of every side effect.
 - Avoid a workflow engine abstraction when a small idempotent script genuinely solves the process reliably.
-- Fleet may move/resume execution on another node, so workflow state and operation identity must not depend on one machine's local memory.
 
 ## Quality gate
 The workflow is ready when state and ownership are explicit, process interruption can resume safely, side effects cannot silently duplicate, waiting/approval/cancellation behavior is defined, partial outcomes reconcile predictably, and tests cover the failure transitions most likely to strand work.

@@ -12,9 +12,7 @@
   },
   "routing": {
     "profile_metadata_template": "profiles/{name}/distribution.yaml",
-    "selection_order": ["professional-profile", "eligible-node"],
-    "live_presence_owner": "hermes-fleet",
-    "missing_presence_behavior": "fleet-locate-or-place"
+    "selection_order": ["professional-profile"]
   },
   "backbone_profiles": [
     "agency-ai-engineer",

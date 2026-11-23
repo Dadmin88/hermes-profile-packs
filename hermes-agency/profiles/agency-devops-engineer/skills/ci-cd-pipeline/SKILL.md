@@ -4,6 +4,8 @@ description: Design or improve CI/CD so changes are reproducibly built, tested, 
 ---
 # CI/CD Pipeline
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when creating or changing build, test, artifact, promotion, or deployment automation.
 
 ## Procedure

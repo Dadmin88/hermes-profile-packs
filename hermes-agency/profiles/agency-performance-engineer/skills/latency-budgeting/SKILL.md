@@ -21,7 +21,6 @@ Use when a user/system journey has a latency target that spans multiple componen
 - End-to-end latency is not the sum of every component duration when work overlaps; use the actual critical path.
 - Tail latency and variance often matter more than average latency for user experience and timeout policy.
 - A component meeting its local budget does not excuse a missed user-level objective.
-- Fleet placement can affect network/data-locality latency, but placement policy remains Fleet-owned; report measurable constraints or preferences.
 
 ## Quality gate
 The latency budget is useful when the end-to-end boundary and percentile are explicit, critical-path contributions are measured, tail/queue/retry behavior is included, allocations reflect real constraints, local signals connect to the user objective, and optimization priorities follow the measured largest contributors.
