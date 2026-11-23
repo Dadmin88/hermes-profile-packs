@@ -6,6 +6,10 @@
     {
       "name": "creative-ideation",
       "reason": "Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills."
+    },
+    {
+      "name": "reference-to-game",
+      "reason": "Carry materials, color, camera, and asset identity into playable runtime scenes."
     }
   ],
   "plugins": [],

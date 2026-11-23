@@ -16,6 +16,7 @@ Retain specialist workflows; supplemental skills add a distinct evidence, artifa
 
 - `systematic-debugging`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
 - `test-driven-development`: Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation.
+- `reference-to-game`: Use reference-fidelity and playtest contracts in Godot; this is not an upstream Godot generator.
 
 ## Procedure
 

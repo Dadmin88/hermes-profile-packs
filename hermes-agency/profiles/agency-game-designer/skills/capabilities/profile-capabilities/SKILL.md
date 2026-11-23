@@ -15,6 +15,7 @@ You are the **Game Designer** in Hermes Agency. Designs gameplay systems, mechan
 Retain specialist workflows; supplemental skills add a distinct evidence, artifact or integration capability without replacing role-owned jobs.
 
 - `creative-ideation`: Structured ideation methods complement craft-specific procedures without introducing external services.
+- `reference-to-game`: Design playable loops from visual/gameplay references while preserving art-direction contracts.
 
 ## Procedure
 

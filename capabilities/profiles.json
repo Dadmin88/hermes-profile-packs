@@ -129,6 +129,10 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Define style contracts and review visual identity through actual gameplay."
         }
       ],
       "plugins": [],
@@ -1307,6 +1311,10 @@
         {
           "name": "test-driven-development",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Build reference-guided Three.js/TypeScript games with playable and visual verification."
         }
       ],
       "plugins": [],
@@ -1341,6 +1349,10 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Design playable loops from visual/gameplay references while preserving art-direction contracts."
         }
       ],
       "plugins": [],
@@ -1408,6 +1420,10 @@
         {
           "name": "test-driven-development",
           "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Use reference-fidelity and playtest contracts in Godot; this is not an upstream Godot generator."
         }
       ],
       "plugins": [],
@@ -1700,6 +1716,10 @@
         {
           "name": "creative-ideation",
           "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Translate visual and motion references into playable spatial flow, documenting inferred layout."
         }
       ],
       "plugins": [],
@@ -3433,6 +3453,10 @@
         {
           "name": "creative-ideation",
           "reason": "Named creative methods support preproduction and pipeline alternatives; retain existing specialist implementation/export skills."
+        },
+        {
+          "name": "reference-to-game",
+          "reason": "Carry materials, color, camera, and asset identity into playable runtime scenes."
         }
       ],
       "plugins": [],

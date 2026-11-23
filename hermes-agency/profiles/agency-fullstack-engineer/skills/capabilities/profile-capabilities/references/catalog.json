@@ -10,6 +10,10 @@
     {
       "name": "test-driven-development",
       "reason": "Implementation work benefits from root-cause debugging, regression evidence, and version-specific library documentation."
+    },
+    {
+      "name": "reference-to-game",
+      "reason": "Build reference-guided Three.js/TypeScript games with playable and visual verification."
     }
   ],
   "plugins": [],
