@@ -16,13 +16,11 @@ Use when scheduled, queued, event-triggered, or background automation needs to b
 7. Distinguish retry churn from healthy throughput. A job eventually succeeding after many attempts may still indicate a degraded dependency or broken policy.
 8. Alert on actionable conditions: missed schedules/objectives, old queue age, repeated failure, retry exhaustion, stalled checkpoints, or systematic duplicate suppression/reconciliation anomalies.
 9. Provide a queryable history that supports replay/recovery decisions and can answer what ran, what changed, which side effects occurred, and why the job ended in its current state.
-10. Test telemetry during crash/restart, duplicate trigger, retry, stale worker, relocation to another Fleet node, partial side effect, and final reconciliation.
 
 ## Decision rules
 - Attempt logs alone are not job history; preserve the logical operation across attempts.
 - Metrics show population health while event/run records explain individual failures; use both where the scale warrants it.
 - Do not mark a job successful merely because its process exited zero if its intended side effect or durable outcome is unverified.
-- Fleet may own node/task placement, but automation telemetry should carry node/attempt identity so relocation and correlated node failures are diagnosable.
 
 ## Quality gate
 Job observability is sufficient when operators can follow one logical job across triggers, attempts, nodes, checkpoints, and side effects; population-level backlog/failure health is visible; stuck work is detectable; alerts are actionable; and replay/recovery decisions can be made from recorded evidence.

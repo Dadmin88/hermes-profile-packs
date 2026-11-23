@@ -21,7 +21,6 @@ Use when deciding how much compute, memory, storage, network, concurrency, or ot
 - Capacity plans are measured models, not fixed hardware shopping lists.
 - Headroom should correspond to real burst and failure requirements rather than a ritual percentage.
 - Scaling is not instantaneous; provisioning and warmup time are part of capacity.
-- Under Fleet, publish trustworthy live capacity/pressure signals and hard constraints; Fleet owns which node receives a profile or task.
 
 ## Quality gate
 The plan is ready when demand maps to measured resource use, credible peaks and failures fit within explicit headroom or degradation policy, scaling constraints are included, overload behavior is defined, and the assumptions can be updated from new measurements.

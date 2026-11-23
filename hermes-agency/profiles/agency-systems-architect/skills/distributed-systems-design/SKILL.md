@@ -22,7 +22,6 @@ Use when correctness or availability depends on communication and state across m
 - Network calls are not local function calls; timeout and uncertainty are part of the contract.
 - “Exactly once” is an end-to-end property requiring precise proof; prefer idempotent at-least-once handling when it satisfies the domain.
 - Avoid consensus or distributed locking when a simpler ownership boundary removes the coordination need.
-- For Fleet/Keryx/Nodescale designs, treat node identity, live profile presence, placement, and authenticated transport as explicit distributed state/contracts rather than local assumptions.
 
 ## Quality gate
 The design is ready when invariants and state ownership are explicit, failure/partition/retry behavior is defined, coordination matches the required guarantees, work remains bounded under failure, mixed-version behavior is understood, and critical distributed assumptions have evidence beyond a healthy-cluster demo.

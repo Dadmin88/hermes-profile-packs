@@ -22,7 +22,6 @@ Use when compilation, bundling, packaging, asset processing, code generation, or
 - A fast incremental build that misses a required invalidation is incorrect.
 - Parallelism is bounded by the actual resource bottleneck.
 - Caches must be optional accelerators, not hidden required state for correctness.
-- Fleet can select an eligible build node, but build outputs should remain traceable/reproducible across compatible nodes rather than depending on one host's undeclared state.
 
 ## Quality gate
 Build tooling is ready when dependency/input ownership is explicit, clean and incremental builds are correct, caching cannot serve stale/untrusted output silently, critical-path time is measured and improved where intended, diagnostics explain rebuild/cache behavior, and the same declared inputs produce the expected artifacts on a clean compatible builder.

@@ -4,6 +4,8 @@ description: Define the quality evidence required for a release by mapping chang
 ---
 # Release Quality Plan
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when a release or milestone needs an explicit quality gate rather than relying on accumulated ad hoc tests.
 
 ## Procedure
@@ -22,7 +24,6 @@ Use when a release or milestone needs an explicit quality gate rather than relyi
 - Release quality is a risk decision supported by evidence, not a raw test-count or pass-rate calculation.
 - Do not treat lower environments as proof of behaviors they do not reproduce.
 - Quality ownership stays independent from implementation; accepting residual product/business risk belongs to the appropriate decision owner.
-- In Fleet deployments, include distributed/node/placement validation only when it is material to the release, while keeping live scheduling policy Fleet-owned.
 
 ## Quality gate
 The plan is complete when release risks and critical journeys are explicit, each material risk has an appropriate validation owner/evidence path, environments and revision identity are clear, exit criteria expose residual risk, and post-release verification can detect failures that pre-release testing cannot prove away.

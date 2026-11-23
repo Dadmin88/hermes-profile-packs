@@ -4,7 +4,7 @@ description: Synthesize completed specialist work into one coherent outcome by p
 ---
 # Result Synthesis
 
-Use when multiple Agency profiles have produced decisions, artifacts, findings, implementations, or validation results that must become one final answer or delivery state.
+Use when multiple contributors have produced decisions, artifacts, findings, implementations, or validation results that must become one final answer or delivery state.
 
 ## Procedure
 1. Collect the completed outputs, attachments, comments, validation findings, blocked items, and relevant decisions from every branch of work. Do not synthesize from status labels alone.

@@ -22,7 +22,6 @@ Use when a process, service, browser/app, game, worker, or system consumes too m
 - High memory usage is not automatically a leak if it is bounded and intentionally caches useful data.
 - A falling managed heap does not prove process RSS or native/GPU memory is healthy.
 - Restarting a worker hides retention but does not explain it; use restart only as an explicit containment strategy.
-- For Fleet-managed nodes, report actual memory requirements/pressure to capacity scheduling rather than teaching the profile to choose its own host.
 
 ## Quality gate
 Analysis is complete when memory behavior is reproducible, the growing or dominant memory domain is identified with profiler/snapshot evidence, ownership/lifetime explains the retention or churn, the fix measurably changes memory under the same workload, and sustained operation remains within the required bound without unacceptable regressions.

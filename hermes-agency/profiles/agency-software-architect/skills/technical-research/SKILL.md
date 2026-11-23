@@ -23,7 +23,6 @@ Use when an architecture or engineering decision depends on how a technology act
 - Current vendor/API/standard claims require current authoritative evidence when they can change.
 - Popularity is not proof of technical fit.
 - Research should reduce uncertainty for a decision, not become an unbounded survey.
-- Agency research produces portable evidence and recommendations; Fleet decides where research profiles execute.
 
 ## Quality gate
 The research is decision-ready when project truth has been reconciled, material external claims trace to current primary sources, reusable prior art has license/revision provenance, alternatives are compared against real constraints, fact and inference are separated, and the recommendation states what should change or be tested next.

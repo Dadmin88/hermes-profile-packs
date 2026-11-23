@@ -22,7 +22,6 @@ Use when development, test, staging, production, preview, or other delivery envi
 - Environment names do not guarantee parity; compare the behavior and dependencies that matter.
 - Do not use production as the only place a deployment process is exercised.
 - Avoid one-off configuration edits that bypass the declared source of truth without a reconciliation plan.
-- Node-specific Fleet placement is runtime state; environment configuration should describe requirements and contracts rather than permanent node addresses.
 
 ## Quality gate
 Environment management is sound when each environment has a clear purpose and lifecycle, configuration and secrets are controlled, meaningful behavioral differences are explicit, drift is detectable, sensitive data is handled intentionally, and representative environments can be recreated without undocumented manual steps.

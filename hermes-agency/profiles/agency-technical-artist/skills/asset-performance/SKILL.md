@@ -20,7 +20,6 @@ Use when art content is suspected of causing runtime performance or memory press
 - Art optimization starts from measured runtime cost.
 - Optimize the expensive dimension, not the easiest attribute to count.
 - Technical Artist bridges art intent and engine cost; neither side should be ignored.
-- One powerful workstation is not representative of all Fleet or target devices.
 
 ## Quality gate
 The optimization is complete when the targeted asset cost is measurably reduced in representative scenes, visible or artistic loss is within the accepted threshold, import and source changes are reproducible, and useful budget guidance is captured for future production.

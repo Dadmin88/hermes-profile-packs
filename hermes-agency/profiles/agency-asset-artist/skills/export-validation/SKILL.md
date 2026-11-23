@@ -20,7 +20,6 @@ Use when moving art from authoring tools into an engine, application, build pipe
 - An exporter reporting success is not proof the target importer interpreted the asset correctly.
 - Validate in the receiving application, not only by reopening the export in the authoring tool.
 - Do not bake absolute machine paths into portable asset packages.
-- Source and export revisions must be traceable when distributed production spans multiple Fleet nodes.
 
 ## Quality gate
 Export is complete when the target application imports the intended revision without missing dependencies or transform, material, or animation surprises, the result matches approved appearance within known conversion limits, and another node can reproduce the artifact from the documented source.

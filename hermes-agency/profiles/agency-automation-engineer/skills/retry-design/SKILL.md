@@ -16,13 +16,11 @@ Use when automation depends on operations that can fail transiently and repeated
 7. Define behavior after exhaustion: durable failure state, dead-letter/quarantine, delayed reschedule, alternate dependency, operator escalation, or product-visible failure.
 8. Preserve attempt history, operation identity, error class, timing, and final outcome for diagnosis without flooding logs with identical stack traces.
 9. For uncertain side effects, reconcile remote/current state before another attempt when the operation could already have succeeded.
-10. Test transient recovery, permanent failure, rate limiting, timeout-after-success/unknown outcome, process restart, exhaustion, and fleet-wide correlated dependency failure.
 
 ## Decision rules
 - Retry is a reliability tool and a load generator; design both effects.
 - Exponential backoff without a maximum/deadline can still produce endless stuck work.
 - Circuit breaking or admission control may be more appropriate than retry when a dependency is broadly unhealthy.
-- Fleet rescheduling after node failure should not reset the logical retry/idempotency budget for the same operation automatically.
 
 ## Quality gate
 Retry behavior is ready when errors are classified, only safe/transient cases repeat, attempts and time are bounded, backoff avoids synchronized amplification, unknown outcomes reconcile, exhaustion has an owned terminal path, and correlated-failure tests show the automation does not turn an outage into a retry storm.

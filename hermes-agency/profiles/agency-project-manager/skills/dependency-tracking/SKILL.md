@@ -19,7 +19,6 @@ Use when delivery depends on outputs, approvals, decisions, vendors, environment
 ## Decision rules
 - A dependency is an outcome relationship, not a status label.
 - Soft dependencies should not block work unnecessarily.
-- Dynamic Fleet node placement is runtime orchestration state, not a project dependency unless a deliverable genuinely requires a specific environment capability.
 - Keep dependency data current enough to drive scheduling decisions.
 
 ## Quality gate

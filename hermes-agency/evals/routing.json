@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Routing evaluation cases for professional Agency profile selection and the profile-before-node Fleet contract.",
+  "description": "Routing evaluation cases for professional Agency profile selection.",
   "cases": [
     {"id":"pixel-art-production","task":"Draw a 32×32 pixel-art character, animate its four-direction walk with fixed foot registration, and deliver an editable sprite and PNG atlas.","expected_profile":"agency-pixel-artist","expected_runtime_action":"resolve-profile-presence"},
     {"id":"pixel-tileset-production","task":"Create seamless 16×16 pixel-art terrain tiles with interior and exterior corners and verify a tiled adjacency patch.","expected_profile":"agency-pixel-artist","expected_runtime_action":"resolve-profile-presence"},
@@ -26,10 +26,6 @@
     {"id":"market-evidence","task":"Estimate the market, compare category structure and pricing, and identify current demand evidence for a product opportunity.","expected_profile":"agency-market-researcher","expected_runtime_action":"resolve-profile-presence"},
     {"id":"user-evidence","task":"Plan interviews and usability sessions to understand real user behavior and mental models around onboarding.","expected_profile":"agency-user-researcher","expected_runtime_action":"resolve-profile-presence"},
     {"id":"social-launch","task":"Turn a finished demo into a launch post and capture plan that makes sense to people who have never heard of the project.","expected_profile":"agency-social-media-manager","expected_runtime_action":"resolve-profile-presence"},
-    {"id":"fleet-remote-presence","task":"Implement a backend endpoint. The local node does not have Backend Engineer installed, but another healthy Fleet node advertises agency-backend-engineer ready.","expected_profile":"agency-backend-engineer","expected_runtime_action":"route-same-profile-to-ready-node"},
-    {"id":"fleet-lazy-placement","task":"Implement a backend endpoint. No current Fleet node advertises agency-backend-engineer, but an eligible node can install the Agency distribution.","expected_profile":"agency-backend-engineer","expected_runtime_action":"place-same-profile-then-route"},
-    {"id":"fleet-node-failure","task":"The selected node running agency-backend-engineer disappears before task delivery completes, while another eligible node can run the same profile.","expected_profile":"agency-backend-engineer","expected_runtime_action":"reselect-node-without-changing-profile"},
-    {"id":"fleet-capacity-pressure","task":"The least-loaded local profile is Frontend Engineer, but the requested outcome is a database schema and query optimization review. A remote node has Database Engineer capacity.","expected_profile":"agency-database-engineer","expected_runtime_action":"route-same-profile-to-ready-node"},
     {"id":"multi-role-decompose","task":"Define product behavior, implement the backend change, independently review the code, and run end-to-end validation.","expected_profile":"agency-orchestrator","expected_runtime_action":"decompose-and-resolve-profile-presence"},
     {"id":"missing-specialization","task":"Provide a professional specialty that does not exist anywhere in the current Agency catalog and cannot legitimately be owned by an existing role.","expected_profile":null,"expected_runtime_action":"report-missing-specialization"},
     {"id":"site-reliability-engineer-ownership","task":"Define SLIs, SLOs, error budgets, alert policy, incident readiness, and a resilience game day for a production service.","expected_profile":"agency-site-reliability-engineer","expected_runtime_action":"resolve-profile-presence"},

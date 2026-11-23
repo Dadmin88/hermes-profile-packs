@@ -14,7 +14,6 @@ Use when services, workers, control planes, or stateful components can run acros
 5. Model communication cost and reachability between placements. Cross-zone/region/device traffic may alter latency, bandwidth, security, or dependency assumptions.
 6. Define rollout cohorts and mixed-version compatibility. Decide whether upgrades proceed by node, service, zone, ring, canary group, or another boundary and what versions may coexist.
 7. Define drain, handoff, shutdown, and rescheduling behavior for maintenance or failure, including in-flight work and state reconciliation.
-8. For Fleet-controlled Hermes nodes, publish profile/workload requirements and topology constraints while keeping live `profile -> nodes` presence and final placement decisions in Fleet's runtime registry.
 9. Define observability that can relate logical component identity, version, node identity, and current placement during diagnosis without treating historical placement as static architecture.
 10. Validate topology assumptions with a representative failover, relocation, or rolling upgrade across at least one real failure/placement boundary when practical.
 
@@ -22,7 +21,7 @@ Use when services, workers, control planes, or stateful components can run acros
 - Architecture defines where a component is allowed or preferred to run; orchestration decides where it runs now.
 - Replicas on one host are not host-failure redundancy.
 - Stateful relocation requires ownership/data semantics, not just starting another process.
-- Heterogeneous fleets should advertise capabilities and constraints rather than pretending every node is interchangeable.
+- Record node capabilities and constraints when hardware differs.
 
 ## Quality gate
 The deployment topology is ready when eligibility and preference constraints are explicit, redundancy spans the intended failure domains, stateful versus movable components are distinguished, rollout/drain/reschedule behavior is defined, live placement remains an orchestration concern, and relocation or upgrade behavior has been validated against realistic boundaries.

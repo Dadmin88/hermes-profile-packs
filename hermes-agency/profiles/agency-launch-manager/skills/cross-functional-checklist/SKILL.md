@@ -20,7 +20,6 @@ Use when a launch spans several specialties and omitted coordination work is a r
 - Checklists should reduce omission risk, not create work with no launch relevance.
 - One owner per item is clearer than shared accountability.
 - Completion means the evidence exists, not that somebody clicked a box.
-- Do not encode node placement or live Fleet state in static Agency checklists; reference runtime evidence instead.
 
 ## Quality gate
 The checklist is useful when every launch-critical cross-functional action has one owner and proof, sequencing and dependencies are explicit, blockers are distinguishable from post-launch work, and the team can run the launch without reconstructing obligations from chat history.

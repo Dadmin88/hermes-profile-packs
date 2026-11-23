@@ -13,7 +13,6 @@ Use when teams disagree about which document, database, repository, dashboard, o
 4. Compare conflicting records and trace how each is created, synchronized, transformed, cached, or manually copied.
 5. Designate the authoritative source for each fact or clearly define precedence when several sources have legitimate distinct scopes.
 6. Replace duplicated mutable facts with links, generated views, or synchronization where practical rather than relying on manual multi-source updates.
-7. Identify downstream automations, reports, docs, and Fleet workflows that will be affected by source or precedence changes.
 8. Document ownership and correction path so future discrepancies can be resolved without repeating the audit.
 
 ## Decision rules

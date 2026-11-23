@@ -21,7 +21,6 @@ Use when an application or worker is unhealthy but the failing runtime or infras
 ## Decision rules
 - Do not reboot first and investigate later when evidence can be collected safely.
 - Application errors can be infrastructure symptoms, and infrastructure alarms can be consequences of application behavior; follow evidence across the boundary.
-- If Fleet moves a failed task/profile to another node, treat successful relocation as availability recovery, not proof the original node is healthy.
 - Escalate software defects to the implementation owner with the runtime evidence intact.
 
 ## Quality gate

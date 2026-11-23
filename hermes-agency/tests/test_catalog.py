@@ -26,10 +26,8 @@ class RuntimeCatalogTests(unittest.TestCase):
         self.assertEqual(len(value["profiles"]), manifest["profile_count"])
         self.assertEqual(
             value["routing"]["selection_order"],
-            ["professional-profile", "eligible-node"],
+            ["professional-profile"],
         )
-        self.assertEqual(value["routing"]["live_presence_owner"], "hermes-fleet")
-        self.assertEqual(value["routing"]["missing_presence_behavior"], "fleet-locate-or-place")
 
         names = [profile["name"] for profile in value["profiles"]]
         self.assertEqual(names, sorted(names))

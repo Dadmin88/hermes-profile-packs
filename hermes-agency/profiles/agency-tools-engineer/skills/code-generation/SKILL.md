@@ -22,7 +22,6 @@ Use when repeated boilerplate or schema-driven artifacts can be generated more r
 - Generate repeated facts; do not generate business logic that developers need to understand and evolve independently without a compelling reason.
 - Deterministic output keeps diffs reviewable and caches trustworthy.
 - A generator is a maintained product; copied generated code still needs an upgrade story if its source contract evolves.
-- Never bake local machine paths, credentials, or Fleet node identities into generated output unless they are explicitly supplied runtime configuration and truly belong there.
 
 ## Quality gate
 The generator is ready when source-of-truth ownership is explicit, repeated runs are deterministic and safe, user edits cannot be silently destroyed, version/migration behavior is defined, representative generated output passes its real toolchain, and another developer can regenerate or upgrade without private knowledge.

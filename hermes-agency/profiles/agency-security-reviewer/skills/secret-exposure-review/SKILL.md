@@ -22,7 +22,6 @@ Use when a change touches authentication material, configuration, logging, deplo
 - Never include a live secret in a review report merely to prove it exists; identify location/type and use redacted evidence.
 - Deleting an exposed credential from source does not revoke it.
 - Client-side/browser/mobile code and distributed artifacts must be assumed inspectable by recipients.
-- Agency profiles must not contain local credentials; Fleet/Keryx/Nodescale runtime credentials belong to their managed runtime/security boundaries, not profile packages.
 
 ## Quality gate
 The review is complete when secret lifecycle and propagation are traced, source/log/artifact/client exposure paths are checked, confirmed exposures use non-sensitive evidence and trigger ownership for rotation/response, least exposure is verified, and preventive controls are added or recommended for the exact failure path.

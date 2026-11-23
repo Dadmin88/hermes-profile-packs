@@ -296,7 +296,6 @@ A profile may include additional Hermes configuration when the specialty benefit
 ```text
 .
 ├── README.md
-├── AGENCY.md
 ├── AGENTS.md
 ├── agency.json
 ├── install.py
@@ -304,45 +303,10 @@ A profile may include additional Hermes configuration when the specialty benefit
 ```
 
 - `README.md` provides installation and usage documentation.
-- `AGENCY.md` defines the shared operating model used across the profile pack.
 - `AGENTS.md` contains repository contribution instructions for coding agents and maintainers.
 - `agency.json` is the roster used by the installer.
 - `install.py` installs all, selected, or category-scoped profiles.
 - `profiles/` contains the Hermes profile distributions and their bundled skills.
-
-## Operating model
-
-Profiles are routed by responsibility and ownership. Complex tasks can move through several specialists, with each profile responsible for a bounded part of the work.
-
-A typical software delivery flow might involve:
-
-```text
-Product Manager
-      ↓
-Technical Lead / Architect
-      ↓
-Implementation Specialists
-      ↓
-Code Review / QA / Security
-      ↓
-Git Steward / Release Manager
-```
-
-A typical public launch might involve:
-
-```text
-Product Manager
-      ↓
-Launch Manager
-      ↓
-Marketing Strategist
-      ↓
-Copy / Content / Social / Brand
-      ↓
-Analytics / Customer Success
-```
-
-See [`AGENCY.md`](./AGENCY.md) for the full collaboration contract.
 
 ## Contributing
 

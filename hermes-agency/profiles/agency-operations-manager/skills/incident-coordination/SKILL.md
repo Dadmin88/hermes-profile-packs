@@ -20,7 +20,6 @@ Use when an incident spans multiple responders or functions and coordination qua
 - Coordination should reduce responder load, not add status bureaucracy.
 - Restored availability does not automatically prove correctness or data integrity.
 - Do not let incident urgency erase security or recovery boundaries unnecessarily.
-- Fleet may reroute workloads during a node failure; successful failover is mitigation evidence, not root cause.
 
 ## Quality gate
 The incident is coordinated effectively when ownership and workstreams are clear, current impact and evidence are visible, communications are accurate, recovery is validated, and post-incident owners receive a complete timeline and unresolved risks.

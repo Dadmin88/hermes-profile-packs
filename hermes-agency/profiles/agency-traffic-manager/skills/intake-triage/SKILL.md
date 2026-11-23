@@ -14,7 +14,6 @@ Use when requests arrive from users, stakeholders, incidents, ideas, support, pr
 5. Record prerequisites, dependencies, artifacts, constraints, and acceptance evidence needed for clean execution.
 6. Classify urgency from consequence and deadline rather than requester intensity.
 7. Admit work with a clear owner and queue/priority state; preserve deferred/rejected rationale when it may matter later.
-8. For distributed execution, pass the selected profile identity to Fleet rather than binding intake to a particular machine.
 
 ## Decision rules
 - Intake is a quality gate, not a paperwork tax.

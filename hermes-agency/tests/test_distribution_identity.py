@@ -80,9 +80,7 @@ class DistributionIdentityTests(unittest.TestCase):
         self.assertEqual(distribution["format"], "hermes-profile-distribution")
         self.assertEqual(distribution["profile_identity_field"], "name")
         self.assertEqual(distribution["profile_path_template"], "profiles/{name}")
-        self.assertEqual(routing["selection_order"], ["professional-profile", "eligible-node"])
-        self.assertEqual(routing["live_presence_owner"], "hermes-fleet")
-        self.assertEqual(routing["missing_presence_behavior"], "fleet-locate-or-place")
+        self.assertEqual(routing["selection_order"], ["professional-profile"])
 
 
 if __name__ == "__main__":

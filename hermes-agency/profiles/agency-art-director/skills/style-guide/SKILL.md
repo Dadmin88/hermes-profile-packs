@@ -4,7 +4,6 @@ description: Codify an approved visual language into durable rules, examples, ra
 ---
 # Visual Style Guide
 
-Use when a visual direction must scale across multiple creators, assets, scenes, screens, or Fleet-routed specialists.
 
 ## Procedure
 1. Inventory recurring visual decisions that need consistency: shape language, palette, value range, materials, lighting, line treatment, typography, iconography, composition, motion, or other project-specific dimensions.
@@ -23,4 +22,3 @@ Use when a visual direction must scale across multiple creators, assets, scenes,
 - Update the guide when the approved visual language evolves; stale rules are worse than missing rules.
 
 ## Quality gate
-The guide is effective when independent creators can produce recognizably coherent work, hard constraints and flexible ranges are distinguishable, examples clarify rather than constrain, and the document remains usable across tools and Fleet nodes.

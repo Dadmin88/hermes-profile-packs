@@ -22,7 +22,6 @@ Use when a feature fails across frontend/backend boundaries and the owning layer
 - A visible frontend error can originate from backend/data failure, and a backend 200 can still produce a broken user experience; trace the whole path.
 - Do not change frontend and backend simultaneously until evidence requires both.
 - Reproducing through direct database/API shortcuts can isolate layers but does not replace final validation through the user flow.
-- Fleet/Keryx execution location is part of runtime evidence when relevant, but the full-stack fix should not hardcode around a particular node.
 
 ## Quality gate
 The defect is resolved when the first divergence is supported by cross-layer evidence, the fix is made in the responsible layer, persisted and user-visible outcomes both validate correctly, regression coverage protects the relevant boundary, and the original assembled flow succeeds under the documented conditions.

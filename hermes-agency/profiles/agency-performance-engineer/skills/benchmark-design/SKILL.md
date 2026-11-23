@@ -22,7 +22,6 @@ Use when performance changes need repeatable evidence rather than one-off timing
 - Microbenchmarks prove microbehavior; do not generalize them to end-to-end system performance without a model connecting the two.
 - A benchmark that is too noisy to distinguish the claimed improvement needs better design before stronger conclusions.
 - Production telemetry can validate external relevance, while controlled benchmarks isolate causes; they complement each other.
-- When hardware heterogeneity matters in Fleet, benchmark per relevant capability class instead of mixing incomparable nodes into one score.
 
 ## Quality gate
 The benchmark is trustworthy when it answers a precise performance question, executes correct representative work, controls or records material environmental factors, captures enough samples to interpret variance, compares candidates fairly, and can be rerun by another engineer to reproduce the claimed result.

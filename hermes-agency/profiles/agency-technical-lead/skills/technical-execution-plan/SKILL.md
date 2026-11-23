@@ -4,6 +4,8 @@ description: Convert approved product scope and architecture into a coordinated 
 ---
 # Technical Execution Plan
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when a change spans multiple engineering domains or requires careful integration sequencing.
 
 ## Procedure

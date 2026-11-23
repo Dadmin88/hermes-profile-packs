@@ -22,7 +22,6 @@ Use when an external integration fails, disagrees with local state, behaves inte
 - The provider error may be a symptom of bad local mapping, and a local error may be a consequence of provider behavior; trace the complete operation.
 - Do not “just retry” an uncertain side effect until idempotency/reconciliation is understood.
 - Provider status pages and docs are useful evidence but do not replace the trace of the affected request/event.
-- If failure is primarily Fleet/Keryx transport between Hermes nodes rather than the external provider boundary, hand off the trace to the distributed runtime owner.
 
 ## Quality gate
 The investigation is complete when one failing operation is traceable across every integration boundary, the first divergence and owning layer are supported by evidence, uncertain state has been reconciled, the fix is covered by executable evidence, and provider-specific assumptions are documented for future diagnosis.
