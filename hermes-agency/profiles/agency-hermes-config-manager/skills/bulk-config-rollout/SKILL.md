@@ -19,7 +19,6 @@ Use only after the exact profile target matrix, operations, exceptions, batching
 3. Preserve each target's rollback operation: restore the previous explicit value, or unset the new override when the prior state was inherited/absent. Do not snapshot credential contents.
 4. Apply supported profile-scoped `config set` or `config unset` operations to a small canary batch when the scope or impact is material. Use exact profile identities and exact key/value strings.
 5. Read back the canary profiles and, when configuration activation requires it, validate in fresh sessions. Stop if effective values, provider readiness, or behavior differ from the approved plan.
-6. Continue in bounded batches. Record attempted, changed, already-compliant, failed, and not-attempted identities; do not retry systematic failures across the whole fleet.
 7. Apply an explicitly included active Configuration Manager last. Warn that changing its model/provider or tools may not affect the current conversation and may require a new session.
 8. Reconcile the complete target set and hand gateway/service restarts to the designated operator. Never restart or interrupt live messaging implicitly as part of a config write.
 

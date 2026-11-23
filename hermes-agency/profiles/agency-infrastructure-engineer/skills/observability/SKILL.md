@@ -21,7 +21,6 @@ Use when infrastructure health, performance, failure, or capacity cannot be unde
 - Telemetry is valuable when it reduces uncertainty during operation, capacity planning, or incident response.
 - Infrastructure metrics do not replace application-level outcome signals, and application metrics do not replace host/network/storage evidence.
 - Prefer a smaller set of trustworthy correlated signals over large dashboards of unowned data.
-- When a Fleet manages nodes, expose node health and resource signals in a machine-consumable form but leave scheduling decisions to Fleet.
 
 ## Quality gate
 Observability is sufficient when responders can connect user-visible symptoms to the responsible infrastructure layer, identify saturation and recent change, trace important flows, act on alerts, and do so without leaking sensitive information or depending on one operator's memory.

@@ -22,7 +22,6 @@ Use when validating throughput, latency, scaling, overload behavior, or capacity
 - Closed-loop concurrency and open-loop arrival-rate tests answer different questions; choose the model that matches real demand.
 - Average latency hides overload and tail behavior; use distributions/percentiles appropriate to the objective.
 - A test environment smaller than production can still reveal bottlenecks if its scaling relationship is understood, but do not extrapolate blindly.
-- Fleet-wide tests should include placement/capacity behavior only when Fleet itself is part of the system under test.
 
 ## Quality gate
 The load test is valid when workload and environment assumptions are documented, functional correctness is maintained, demand is controlled and reproducible, saturation and recovery are observed across end-to-end and resource signals, the first bottleneck is supported by evidence, and conclusions stay within what the test actually measured.

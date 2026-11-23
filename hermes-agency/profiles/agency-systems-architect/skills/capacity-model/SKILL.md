@@ -13,7 +13,6 @@ Use when a distributed or multi-service architecture needs quantitative reasonin
 4. Identify the constraining resource for each scale regime: CPU, memory, GPU/accelerator, disk capacity/I/O, network, connections, queue throughput, database locks, provider quotas, control-plane rate, or human operation as relevant.
 5. Model peak/burst behavior and queueing, not only average throughput. Include how long bursts can be buffered and the latency or failure consequence of backlog growth.
 6. Include redundancy and failure headroom. Capacity required to survive designed node/zone/service loss is different from capacity when everything is healthy.
-7. Include placement constraints and heterogeneity. For Fleet-managed nodes, distinguish hard capability requirements from live free capacity so Fleet can match profiles/tasks to eligible nodes.
 8. Define scaling thresholds, provisioning latency, maximum practical scale, and the next architectural breakpoint where simply adding instances stops helping.
 9. Validate the model with load tests, production telemetry, or representative benchmarks and recalibrate when observed behavior diverges.
 10. Present assumptions, formulas, bottlenecks, headroom, and sensitivity so another engineer can update the model rather than treating one forecast number as truth.

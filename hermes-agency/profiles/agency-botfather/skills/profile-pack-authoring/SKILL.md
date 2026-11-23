@@ -24,7 +24,8 @@ Before writing a new profile directory, establish:
 4. Explicit authority boundaries and a not-list.
 5. Neighboring profiles whose ownership could be confused with the proposal.
 6. Initial role-specific skill set.
-7. Human approval of items 1-6. An approved task specification or a human sign-off on the specific draft satisfies this gate.
+7. A distinct personality brief: what this professional notices, how it handles correction and disagreement, and its natural voice without a fictitious biography.
+8. Human approval of items 1-7. An approved task specification or a human sign-off on the specific draft satisfies this gate.
 
 If the responsibility still contains unrelated jobs or the boundary cannot be routed reliably, stop at the proposal and ask one focused question. Do not materialize a catch-all profile.
 
@@ -40,7 +41,7 @@ Complete this step only when the exact required artifact set, category, release 
 
 ### 2. Sharpen and approve the role
 
-Draft a compact proposal containing the identity, display name, category, one-sentence responsibility, owned deliverables, not-list, collaborators, and initial skill names. Compare it explicitly with each neighboring specialty.
+Draft a compact proposal containing the identity, display name, category, one-sentence responsibility, owned deliverables, not-list, collaborators, initial skill names, and a short personality signature. Distinguish how this specialist makes judgments and communicates from the SOUL's professional authority and tasks. Compare it explicitly with each neighboring specialty.
 
 Do not create the profile directory or publish a roster entry until the human approves this concrete proposal. Treat a signed task card as approval only for decisions it actually fixes; surface any material gap rather than guessing.
 
@@ -64,12 +65,14 @@ Create the approved repository-relative distribution directory using the owning 
 - `distribution.yaml` with identity, pack release version, clear routing description, author, and license;
 - `SOUL.md` with role, responsibilities, authority boundaries, working standard, collaborators, communication, and definition of done;
 - at least one focused `skills/<skill>/SKILL.md` containing a repeatable procedure and quality gate;
+- `personalities/<exact-profile-name>.json` at the repository root, defining a curated native `description`, `system_prompt`, `tone`, and `style` as specified in `docs/PROFILE_PERSONALITIES.md`;
+- any repository-mandated shared skills materialized byte-for-byte from their canonical source and declared in distribution metadata, when that pack requires it;
 - `.no-bundled-skills` only when the approved profile intentionally excludes unrelated default skills and pack conventions permit the marker;
 - supporting references or scripts only when they materially improve reliable execution.
 
 Do not add model/provider pins, credentials, memories, runtime databases, logs, sessions, local absolute paths, host identifiers, live presence, or placement behavior. Do not alter protected-instruction or approval safeguards.
 
-Keep identity and durable behavior in the SOUL. Put commands, checklists, validation sequences, and reusable methods in skills. Complete this step when the profile can be reviewed as a standalone portable distribution.
+Keep professional identity, responsibilities, and durable boundaries in the SOUL. Put distinctive interpersonal temperament and voice in the native personality definition. Put commands, checklists, validation sequences, and reusable methods in skills. Use the existing `capabilities.py --write` source materializer to combine the personality with reviewed native config seeds: never overwrite disabled MCPs, model choices, or restricted toolsets. An installed profile's user-owned config is not part of this authoring workflow. Complete this step when the profile can be reviewed as a standalone portable distribution.
 
 ### 5. Prove routing boundaries
 
@@ -95,7 +98,7 @@ Do not add the role to a routing backbone unless the product decision explicitly
 
 Extend tests or validators for new invariants that generic pack validation does not prove. Prefer behavior and contract assertions over snapshots of incidental prose.
 
-For a profile-authoring specialist, protect at least: stable identity/category, required focused skill, isolation marker if approved, absence of model/provider and safeguard overrides, preserved source revision/license notice, and routing boundaries against adjacent roles.
+For a profile-authoring specialist, protect at least: stable identity/category, required focused skill, distinct named personality source and rendered native config, preservation of pre-existing disabled integrations/tool restrictions, isolation marker if approved, absence of model/provider and safeguard overrides, preserved source revision/license notice, and routing boundaries against adjacent roles.
 
 Complete this step when a regression in a material product constraint fails an automated check.
 
@@ -103,8 +106,10 @@ Complete this step when a regression in a material product constraint fails an a
 
 Run every validation command required by the repository instructions, not only the pack-local suite. Also run the pack catalog or dry-run surface when local instructions require it. Inspect the final diff and working-tree status for unrelated changes, generated state, secrets, local paths, inconsistent counts, and malformed metadata.
 
+Do not use a real `hermes profile install` as an isolation smoke test, even with a temporary `HOME`: an active Hermes session may resolve profile storage from a pinned profile/home environment and mutate the live Hermes home. Use the repository installer’s `--dry-run`, structural checks on a temporary source copy, and non-mutating catalog/recommender commands instead.
+
 Do not commit, push, install, or modify a live profile. Hand runtime actions to their owning specialist, then hand off the changed files, exact command results, provenance, material risks, and next certification/review action.
 
 ## Quality gate
 
-A profile is ready for review when its responsibility is singular and approved; the SOUL and skills are separated correctly; routing language distinguishes adjacent roles; distribution metadata, roster, counts, docs, and evals agree; external inspiration is pinned and attributed; no live state, secret, local path, model/provider pin, safeguard override, or recursive profile factory is present; and every required validator and test passes.
+A profile is ready for review when its responsibility is singular and approved; the SOUL, personality, and skills are separated correctly; routing language distinguishes adjacent roles; distribution metadata, roster, counts, docs, and evals agree; external inspiration is pinned and attributed; no live state, secret, local path, model/provider pin, safeguard override, or recursive profile factory is present; and every required validator and test passes.

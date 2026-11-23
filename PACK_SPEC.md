@@ -20,6 +20,28 @@ Every profile must contain:
 
 A skill file begins with YAML frontmatter containing a matching `name` and useful `description`, followed by a concrete procedure or operating guidance.
 
+## Curated native personalities
+
+Every profile ships a native, profile-specific personality in addition to
+`SOUL.md`. Author the source at
+`personalities/<exact-profile-name>.json` using the four native structured
+personality fields: `description`, `system_prompt`, `tone`, and `style`.
+The source-pack materializer emits `agent.personalities.<name>` and
+`display.personality: <name>` into that profile's native `config.yaml`.
+It must preserve existing reviewed disabled MCP config seeds.
+
+`SOUL.md` remains the authoritative professional role and boundary contract.
+Personality specifies distinctive temperament, communication, correction, and
+judgment habits. Do not duplicate job procedures or create separate, inert
+runtime Markdown persona layers. The public package must not ship `USER.md`,
+`MEMORY.md`, or personal runtime state. The identity standard, update/merge
+semantics, and required evaluations are in `docs/PROFILE_PERSONALITIES.md`.
+
+All public profile distributions must carry a distinct, validated native personality.
+The packaged default applies to fresh installations; do not overwrite installed
+users' `config.yaml` or enable a new personality during ordinary updates without
+an explicit, reviewable user action.
+
 ## Portable versus runtime state
 
 Profile packs contain source artifacts only. Never commit:

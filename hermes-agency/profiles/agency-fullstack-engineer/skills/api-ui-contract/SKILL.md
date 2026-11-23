@@ -21,7 +21,6 @@ Use when one bounded feature spans frontend and backend and the two layers need 
 - The API is not merely a database-shaped transport for the UI.
 - Frontend state should reflect server truth without duplicating server authorization/business invariants as authority.
 - If the contract becomes a shared public/cross-team interface, involve `agency-software-architect` or the owning Backend/Frontend specialists rather than making a local full-stack decision silently.
-- Provider or Fleet node details should remain behind backend/runtime boundaries unless the product explicitly exposes them.
 
 ## Quality gate
 The contract is ready when every important UI state maps to explicit server behavior, types/errors/concurrency are understood on both sides, authorization and business invariants remain server-enforced, compatibility is workable, and client/server plus assembled-flow tests prove the shared semantics.

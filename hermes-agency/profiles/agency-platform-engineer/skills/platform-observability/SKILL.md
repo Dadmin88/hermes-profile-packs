@@ -21,7 +21,6 @@ Use when a shared platform must be diagnosable across both its control surface a
 - Consumer-visible success is the primary platform outcome; internal controller activity is supporting evidence.
 - A shared platform needs both reliability telemetry and product/adoption telemetry.
 - Do not expose sensitive infrastructure details to consumers merely to make errors verbose.
-- If Fleet is the placement/control plane, platform telemetry may feed Fleet health/capacity decisions but should not create a competing placement registry.
 
 ## Quality gate
 Platform observability is ready when operators can trace a consumer request through the platform, consumers receive useful non-sensitive status, control-plane failures are separable from workload failures, actionable alerts exist, and adoption/support data reveals whether the platform is actually serving its users.

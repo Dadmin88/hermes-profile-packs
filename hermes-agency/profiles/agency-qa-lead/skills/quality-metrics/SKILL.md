@@ -22,7 +22,6 @@ Use when a team needs ongoing evidence about product/release quality, test effec
 - Metrics are evidence for judgment, not substitutes for reading severe defects and incidents.
 - Coverage/test counts without risk context are weak quality measures.
 - Optimize user/system outcomes, not the metric itself.
-- Distributed Fleet execution may add useful dimensions such as node/profile/revision when diagnosing escapes, but those dimensions should explain quality rather than become placement policy inside QA.
 
 ## Quality gate
 The metric set is useful when definitions and sources are stable, denominators/scope make trends interpretable, leading indicators are separated from product outcomes, severe cases remain visible, incentives do not reward hiding problems, and metric changes lead to testable quality improvements rather than dashboard decoration.

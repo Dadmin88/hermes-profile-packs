@@ -34,6 +34,30 @@ def file_hash(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+
+def load_personalities(root: Path, expected: dict[str, str]) -> dict[str, dict[str, str]]:
+    """Curated author-owned personality sources, not files copied into Hermes homes."""
+    folder = root / 'personalities'
+    if not folder.is_dir() or folder.is_symlink():
+        raise ValueError('missing or invalid personalities source directory')
+    result = {}
+    fields = {'description', 'system_prompt', 'tone', 'style'}
+    for source in sorted(folder.iterdir()):
+        if (not source.is_file() or source.is_symlink()
+                or source.suffix != '.json' or source.stem not in expected):
+            raise ValueError('unknown or unsafe personality source: ' + source.name)
+        value = load_json(source)
+        if not isinstance(value, dict) or set(value) != fields:
+            raise ValueError('invalid personality fields: ' + source.name)
+        if (any(not isinstance(value[field], str) or not value[field].strip()
+                for field in fields)
+                or len(value['system_prompt']) < 180
+                or len(value['system_prompt']) > 3000
+                or any(len(value[field]) > 180 for field in ('description', 'tone', 'style'))):
+            raise ValueError('invalid personality content: ' + source.name)
+        result[source.stem] = value
+    return result
+
 def source_profiles(root: Path) -> dict[str, str]:
     result = {}
     for pack in load_json(root / 'packs.json')['packs']:
@@ -52,6 +76,19 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
     expected = source_profiles(root)
     if len(names) != len(set(names)) or set(names) != set(expected):
         raise ValueError('capability identities do not exactly match public source rosters + Wear')
+    personalities = load_personalities(root, expected)
+    if set(personalities) != set(expected):
+        raise ValueError('all public distributions require a curated native personality')
+    if len({p['description'] for p in personalities.values()}) != len(personalities):
+        raise ValueError('personality descriptions must be individually distinctive')
+    expected_seed_names = {'agency-orchestrator', 'hermes-wear'}
+    preserved_config_seeds = load_json(root / 'capabilities/preserved-config-seeds.json')
+    if set(preserved_config_seeds) != expected_seed_names or any(
+        not isinstance(value, dict) or 'display' in value or
+        'personalities' in (value.get('agent') or {})
+        for value in preserved_config_seeds.values()
+    ):
+        raise ValueError('invalid explicitly preserved native config seeds')
     lock = load_json(root / 'capabilities/skills.lock.json')['skills']
     integrations = load_json(root / 'capabilities/integrations.json')
     outputs = {}
@@ -122,20 +159,58 @@ def render_outputs(root: Path, data: dict) -> dict[Path, bytes]:
                     cfg = item['config']
                     if cfg.get('enabled') is not False or cfg.get('sampling', {}).get('enabled') is not False:
                         raise ValueError('integration auto-activation/sampling: ' + item['name'])
-                    if not str(cfg.get('url', '')).startswith('https://') or 'command' in cfg:
-                        raise ValueError('only reviewed HTTPS MCP templates ship: ' + item['name'])
+                    if item.get('transport') == 'local-stdio':
+                        expected_entrypoints = {
+                            'pixelorama': '<pixelorama-mcp-checkout>/mcp-server/dist/index.js',
+                            'aseprite': '<aseprite-mcp-checkout>/build/index.js',
+                        }
+                        entrypoint = expected_entrypoints.get(item['name'])
+                        tools = cfg.get('tools', {})
+                        allowlist = tools.get('include')
+                        patch = target / item['setup_patch']
+                        if (not patch.is_file() or file_hash(patch) != item['setup_patch_sha256']
+                                or not entrypoint or not SHA.fullmatch(item.get('commit', ''))
+                                or cfg.get('command') != 'node' or cfg.get('args') != [entrypoint]
+                                or 'url' in cfg or cfg.get('env') or cfg.get('cwd')
+                                or cfg.get('trust') != 'untrusted'
+                                or cfg.get('elicitation', {}).get('enabled') is not False
+                                or cfg.get('supports_parallel_tool_calls') is not False
+                                or tools.get('resources') is not False or tools.get('prompts') is not False
+                                or not isinstance(allowlist, list) or not allowlist
+                                or any(not isinstance(tool, str) or not re.fullmatch(r'[a-z][a-z0-9_]*', tool)
+                                       for tool in allowlist)
+                                or set(allowlist).intersection(item['required_tool_exclusions'])):
+                            raise ValueError('invalid reviewed local MCP template: ' + item['name'])
+                    elif not str(cfg.get('url', '')).startswith('https://') or 'command' in cfg:
+                        raise ValueError('invalid reviewed HTTPS MCP template: ' + item['name'])
                     if cfg.get('headers') or cfg.get('env'):
                         raise ValueError('credential-bearing MCP seed: ' + item['name'])
                 catalog[kind].append(item)
         guide = target / GUIDE
         outputs[guide / 'references/catalog.json'] = json_text(catalog).encode()
+        # These two role-specific seeds preserve existing native execution
+        # restrictions (notably Wear's disabled execution toolsets). Never
+        # replace them with personality-only config.
+        config_seed = json.loads(json_text(preserved_config_seeds[name])) if name in preserved_config_seeds else {}
         if row['mcps']:
             seed = {'mcp_servers': {m['name']: m['config'] for m in catalog['mcps']}}
             outputs[guide / 'references/mcp-servers.json'] = json_text(seed).encode()
-            # Valid JSON is valid YAML; supported Hermes fresh-install config seed.
-            # Updates preserve the recipient's config.yaml unless they deliberately reset it.
             if row.get('config_seed', False):
-                outputs[target / 'config.yaml'] = json_text(seed).encode()
+                config_seed = seed
+        personality = personalities.get(name)
+        if config_seed or personality:
+            # Native Hermes accepts JSON as YAML; never discard a reviewed MCP seed
+            # when adding a persona. This affects fresh installs only; Hermes
+            # preserves recipients' customized config.yaml on ordinary updates.
+            config = dict(config_seed)
+            if personality:
+                agent = dict(config.get('agent') or {})
+                agent['personalities'] = {name: personality}
+                config['agent'] = agent
+                display = dict(config.get('display') or {})
+                display['personality'] = name
+                config['display'] = display
+            outputs[target / 'config.yaml'] = json_text(config).encode()
         if row['plugins']:
             pack = {'name': name + '-integrations', 'version': '1.0.0',
                     'description': 'Optional reviewed integrations; never installed automatically.',

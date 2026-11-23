@@ -35,6 +35,20 @@ Open a fresh session with one installed profile and ask it to state:
 
 The answer should match the shipped SOUL contract rather than a generic assistant identity.
 
+## 3a. Native personality (when a profile ships one)
+
+For a **fresh, disposable** profile install, confirm that the distribution's
+`config.yaml` registers the exact named preset under
+`agent.personalities`, and that `display.personality` selects it.
+In a fresh session, verify that the overlay complements `SOUL.md` instead of
+replacing role boundaries. Compare against `/personality none`, which keeps
+the SOUL contract but clears the extra overlay.
+
+For an existing installed profile, note that Hermes normally preserves the
+user's `config.yaml` on update. Do not assume the new preset was activated,
+and never force-reset their config to make this check pass.
+See `docs/PROFILE_PERSONALITIES.md`.
+
 ## 4. Skill availability
 
 Give the profile a task that should naturally call for one of its bundled skills. Confirm the procedure/behavior matches that specialty.

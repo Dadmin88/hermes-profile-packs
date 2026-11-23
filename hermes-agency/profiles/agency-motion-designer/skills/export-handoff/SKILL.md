@@ -20,7 +20,6 @@ Use when completed motion work must move reliably into another production or run
 - Choose deliverables from the receiver's needs, not the motion tool's easiest export.
 - Video, vector animation, sprite sequence, native UI animation, and engine animation have different constraints.
 - Always validate the encoded or imported result.
-- Portable handoff matters when work can move across Fleet nodes.
 
 ## Quality gate
 The handoff is complete when the receiving system reproduces the approved motion without color, alpha, timing, or loop surprises, implementation states and accessibility behavior are documented where needed, files meet platform budgets, and source-to-export traceability is preserved.

@@ -42,6 +42,24 @@ class CapabilityTests(unittest.TestCase):
                 self.assertIn('--no-enable',p['install_command'])
                 self.assertIn('--no-deps',p['install_command'])
 
+    def test_pixel_editors_ship_disabled_with_workflow_tools(self):
+        profile = ROOT / 'hermes-agency/profiles/agency-pixel-artist'
+        configs = json.loads((profile / 'config.yaml').read_text())['mcp_servers']
+        self.assertEqual({'pixelorama', 'aseprite'}, set(configs))
+        for config in configs.values():
+            self.assertIs(False, config['enabled'])
+            self.assertIs(False, config['supports_parallel_tool_calls'])
+            self.assertIs(False, config['elicitation']['enabled'])
+            self.assertIs(False, config['tools']['resources'])
+            self.assertIs(False, config['tools']['prompts'])
+        pixelorama = set(configs['pixelorama']['tools']['include'])
+        self.assertTrue({'draw_pixels_fast', 'set_frame_duration', 'add_animation_tag',
+                         'check_seamless_tile', 'export_animation'} <= pixelorama)
+        self.assertNotIn('eval_gdscript', pixelorama)
+        aseprite = set(configs['aseprite']['tools']['include'])
+        self.assertTrue({'draw_grid', 'set_frame_duration', 'create_tag',
+                         'create_tilemap_layer', 'export_spritesheet'} <= aseprite)
+
     def test_narrow_profiles_are_not_given_execution_bundles(self):
         rows=json.loads((ROOT/'capabilities/profiles.json').read_text())['profiles']
         for r in rows:

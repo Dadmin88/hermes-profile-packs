@@ -7,7 +7,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-accessibility-reviewer | accessibility, dogfood | none | none |
 | agency-ai-engineer | systematic-debugging, test-driven-development | pep-ref | context7 |
 | agency-analytics-specialist | microsoft-office | none | none |
-| agency-art-director | creative-ideation | none | none |
+| agency-art-director | creative-ideation, reference-to-game | none | none |
 | agency-asset-artist | creative-ideation | none | none |
 | agency-audio-designer | creative-ideation | none | none |
 | agency-automation-engineer | systematic-debugging, test-driven-development | none | context7 |
@@ -42,10 +42,10 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-environment-artist | creative-ideation | none | none |
 | agency-finance-ops | microsoft-office | none | none |
 | agency-frontend-engineer | accessibility, design-md, systematic-debugging, test-driven-development | none | context7 |
-| agency-fullstack-engineer | systematic-debugging, test-driven-development | none | context7 |
-| agency-game-designer | creative-ideation | none | none |
+| agency-fullstack-engineer | systematic-debugging, test-driven-development, reference-to-game | none | context7 |
+| agency-game-designer | creative-ideation, reference-to-game | none | none |
 | agency-git-steward | retain only | gh-ref | deepwiki |
-| agency-godot-engineer | systematic-debugging, test-driven-development | none | context7 |
+| agency-godot-engineer | systematic-debugging, test-driven-development, reference-to-game | none | context7 |
 | agency-graphic-designer | creative-ideation | none | none |
 | agency-growth-marketer | retain only | none | none |
 | agency-hermes-config-manager | hermes-agent | none | none |
@@ -54,7 +54,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-knowledge-manager | rss-feeds | none | none |
 | agency-launch-manager | document-to-action-items, grounded-citations | none | none |
 | agency-legal-ops | blocked-page-recovery, document-to-action-items, grounded-citations | none | none |
-| agency-level-designer | creative-ideation | none | none |
+| agency-level-designer | creative-ideation, reference-to-game | none | none |
 | agency-localization-specialist | simple-english | none | none |
 | agency-lore-writer | creative-ideation | none | none |
 | agency-market-researcher | blocked-page-recovery, rss-feeds | none | none |
@@ -75,6 +75,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-platform-engineer | docker-management, excalidraw, systematic-debugging, test-driven-development | rfc-ref | aws-knowledge, context7, microsoft-learn |
 | agency-privacy-engineer | blocked-page-recovery, grounded-citations | osv-ref, snyk | none |
 | agency-procurement-specialist | blocked-page-recovery, grounded-citations, microsoft-office | none | none |
+| agency-pixel-artist | pixel-art, creative-ideation | none | pixelorama, aseprite |
 | agency-product-designer | excalidraw | none | none |
 | agency-product-manager | document-to-action-items | none | none |
 | agency-product-marketing-manager | retain only | none | none |
@@ -106,7 +107,7 @@ Every public profile is included. Supplemental skills are shipped on demand; all
 | agency-solutions-engineer | excalidraw, rest-graphql-debug | rfc-ref | none |
 | agency-support-specialist | document-to-action-items | none | none |
 | agency-systems-architect | excalidraw | rfc-ref | none |
-| agency-technical-artist | creative-ideation | none | none |
+| agency-technical-artist | creative-ideation, reference-to-game | none | none |
 | agency-technical-lead | one-three-one-rule | none | none |
 | agency-technical-support-engineer | rest-graphql-debug, systematic-debugging | none | context7, grafana, sentry |
 | agency-technical-writer | blocked-page-recovery, grounded-citations, simple-english | none | context7, deepwiki |

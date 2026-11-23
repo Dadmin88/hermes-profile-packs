@@ -16,13 +16,11 @@ Use before deeper adversarial testing or after architecture changes to identify 
 7. Include lifecycle/operational surfaces: install/update, migration, backup/restore, debug modes, diagnostics, recovery channels, feature flags, onboarding/invitations, and decommissioning.
 8. Rank surfaces by reachability, privilege, data sensitivity, exploit preconditions, blast radius, historical weakness, and defense depth rather than endpoint count.
 9. For the highest-risk surfaces, define focused defensive tests and owning specialist: authorization, injection/input handling, secret exposure, dependency risk, prompt injection, abuse cases, or infrastructure review.
-10. Update the map after major interface, trust, node/Fleet capability, dependency, or administrative-workflow changes.
 
 ## Decision rules
 - Attack surface includes trusted/internal interfaces when compromise or confused-deputy behavior can cross a meaningful boundary.
 - The goal is prioritization and defensive coverage, not generating exploit instructions for systems outside authorized scope.
 - A large surface is not automatically insecure; prioritize paths combining reachability, authority, and weak controls.
-- Fleet/Keryx/Nodescale introduce distributed identity/transport/placement boundaries that belong in the map when reviewing that architecture, while Agency profiles themselves remain portable capability packages.
 
 ## Quality gate
 The review is complete when meaningful entry points, identities/trust transitions, input types, outbound authority, dependencies, and lifecycle surfaces are mapped; high-risk combinations are prioritized with rationale; each priority has a defensive validation owner; and the map is specific enough to guide testing without drifting beyond the authorized system scope.

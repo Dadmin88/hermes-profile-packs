@@ -22,7 +22,6 @@ Use when creating or materially changing a CLI consumed by developers, operators
 - Human-readable output may evolve; documented machine-readable output is a contract.
 - Do not require interactivity for commands intended for automation.
 - A CLI wrapper is useful when it creates a safer or clearer task interface, not when it merely renames another command and hides diagnostics.
-- Fleet/node targets should be explicit runtime context when a tool acts remotely, never an invisible machine assumption baked into the Agency profile.
 
 ## Quality gate
 The CLI is ready when common tasks are obvious, risky actions require clear intent, automation can rely on stable input/output/exit semantics, errors lead to recovery, configuration/target context is inspectable, compatibility is addressed, and representative interactive plus scripted tests pass.

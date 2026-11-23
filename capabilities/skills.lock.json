@@ -783,6 +783,95 @@
       },
       "review": "Complete selected tree imported from public Git objects; paths, executables, external endpoints, notices and scope reviewed. Runtime tests reported separately.",
       "install_path": "skills/capabilities/accessibility"
+    },
+    "pixel-art": {
+      "name": "pixel-art",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "787ee808ae898e5aca55e519379ff6842d6a0911",
+      "path": "optional-skills/creative/pixel-art",
+      "version": "2.0.0",
+      "license": "MIT",
+      "author": "dodo-reach and Hermes Agent contributors",
+      "upstream_files": {
+        "ATTRIBUTION.md": "16e33382764250a5da332c3727e2383ae27ea5ddd05c0ef52071cb94d3562c22",
+        "SKILL.md": "eae06833ec560c7061e5c168a83fb564832c58f14c13c836c585fa013fd07aed",
+        "references/palettes.md": "ee2f510b1b3a6913f6ec19fb716573c173d8d251413fde4a8622009d6b5934fa",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/palettes.py": "102f8fa198ab00eb14ef37dcfc4db274a81e0522cd311e24f08ba24eb7e0962a",
+        "scripts/pixel_art.py": "16835553dc7350f32c03c600c5ff8811b4ea08fc324713b2ebd5f23f72bc5a22",
+        "scripts/pixel_art_video.py": "e483415bbccddb5447c66bc1aaecf9c29aad80e86c246be95ff5c777c81c1aac"
+      },
+      "files": {
+        "ATTRIBUTION.md": "16e33382764250a5da332c3727e2383ae27ea5ddd05c0ef52071cb94d3562c22",
+        "LICENSE": "819a3ebe3136787fed5229b0cfe55b26a07fbfde2191ae0ee65b12b7e44eaf85",
+        "REVIEW.md": "691dc2a49d62b964f674dd6a07533a2e34c98a17a70f4982dea786bb5623047e",
+        "SKILL.md": "69946e6c7dd570ba786f0335780817fee00c7ef2fa0527d379867139f64413c3",
+        "references/palettes.md": "ee2f510b1b3a6913f6ec19fb716573c173d8d251413fde4a8622009d6b5934fa",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/palettes.py": "102f8fa198ab00eb14ef37dcfc4db274a81e0522cd311e24f08ba24eb7e0962a",
+        "scripts/pixel_art.py": "16835553dc7350f32c03c600c5ff8811b4ea08fc324713b2ebd5f23f72bc5a22",
+        "scripts/pixel_art_video.py": "7a920e43e3f2a5c6f356b83852f2f327001bb6f7053327f31f3bd6800e663c7a"
+      },
+      "adaptations": {
+        "SKILL.md": "Use profile-relative discovery, explicit local inputs and outputs, and document RGB/overlay limitations. See REVIEW.md.",
+        "scripts/pixel_art_video.py": "Clamp scene particle margins for small canvases and pad odd dimensions for H.264."
+      },
+      "review": "Complete official Hub tree reviewed, including local Pillow and ffmpeg execution and upstream notices.",
+      "install_path": "skills/capabilities/pixel-art"
+    },
+    "reference-to-game": {
+      "name": "reference-to-game",
+      "repository": "https://github.com/gokayfem/reference-to-game",
+      "commit": "6a00e491f578bbfcbdba45f0c7bddf4693016e61",
+      "path": "skills/reference-to-game",
+      "version": "snapshot-2026-11-22",
+      "license": "MIT",
+      "author": "gokayfem",
+      "upstream_files": {
+        "SKILL.md": "486476e29678ffd4c8dcbf892b2a0a8bdbd44c751cb0132a086afbe62829f1d4",
+        "assets/runtime/core.mjs": "43e11c0b6c693b20d7cdba2c01e7b64a7dbbf442068697e5c21ab88b50923505",
+        "references/asset-production.md": "0c8f21030b4297296ddc84c9262459996342829b4409d9cefd8c3f1364910a8f",
+        "references/case-lessons.md": "94ffd94aaf9499c1e7106703d72dcbf12ea9514e6d33dfe79ebc82eecd56bb94",
+        "references/cli.md": "a320f373fe4dc222174cd827b89ad0cf3d1109e27b625f27efacbed75a2d3229",
+        "references/fal.md": "1c575d6c47224a5c2ac337426f27c976250b3e0c78d6ae2f81e57204d2e9593c",
+        "references/gameplay-design.md": "90ac6d2d2ab45a0e843780853fe99bef90555e41ef2ef581e03e10a3e77468c3",
+        "references/input-routing.md": "92b5d4641239b7298294b2301622c589ef697a9a18e8d693143177c97ab57018",
+        "references/style-direction.md": "8b279b269f44c2fff8382c8a2e85f8542d4b95707cc06a5c514bbe9db6251125",
+        "references/threejs.md": "8c6b5a8926b99665fc8db47241ba7dc59542dfbbc8b72a4782bd9fdd95971f64",
+        "references/validation.md": "df3480af8d43abd3cfb3df7de7aa2fc5b9b1cda759c5d786ba7182af3f2bf081",
+        "scripts/r2g/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/r2g/core.py": "2cc51873c0bdc7cac3808d3d8f7984f33d704d17d5f068bfe8d931600b8d0a51",
+        "scripts/r2g/fal.py": "10f7debd72522cfc71fe32c20c7de4bebfaaff4041ba1eae88fba82fe65a2f8c",
+        "scripts/r2g/media.py": "7dad7d72517e1926a8efa9e4289a8149902c1e8bc0a8b9fe7be75724a480b5a7",
+        "scripts/r2g/viewer.py": "d56df55277ceaff2493574435983634919fc9dce15d4935bc3edb50324c65c51",
+        "scripts/r2g.py": "a2e4a08ef4a2bd5c73090cc27655da8d1a03be24c9559300a43d108545b662bf",
+        "scripts/requirements.txt": "1c803ca04270f3acd340ace239b1e86931871344e0070b4f6db9a59ae56336cb"
+      },
+      "files": {
+        "LICENSE": "ac8a01b40cdfade035cdcdee1925594014e450796c2641aaf4a215a1dca3555a",
+        "REVIEW.md": "2022c4e8b9e1439086b2d500567646080b8413952ab4d73bd81cd00da4b2c3b2",
+        "SKILL.md": "486476e29678ffd4c8dcbf892b2a0a8bdbd44c751cb0132a086afbe62829f1d4",
+        "assets/runtime/core.mjs": "43e11c0b6c693b20d7cdba2c01e7b64a7dbbf442068697e5c21ab88b50923505",
+        "references/asset-production.md": "0c8f21030b4297296ddc84c9262459996342829b4409d9cefd8c3f1364910a8f",
+        "references/case-lessons.md": "94ffd94aaf9499c1e7106703d72dcbf12ea9514e6d33dfe79ebc82eecd56bb94",
+        "references/cli.md": "a320f373fe4dc222174cd827b89ad0cf3d1109e27b625f27efacbed75a2d3229",
+        "references/fal.md": "1c575d6c47224a5c2ac337426f27c976250b3e0c78d6ae2f81e57204d2e9593c",
+        "references/gameplay-design.md": "90ac6d2d2ab45a0e843780853fe99bef90555e41ef2ef581e03e10a3e77468c3",
+        "references/input-routing.md": "92b5d4641239b7298294b2301622c589ef697a9a18e8d693143177c97ab57018",
+        "references/style-direction.md": "8b279b269f44c2fff8382c8a2e85f8542d4b95707cc06a5c514bbe9db6251125",
+        "references/threejs.md": "8c6b5a8926b99665fc8db47241ba7dc59542dfbbc8b72a4782bd9fdd95971f64",
+        "references/validation.md": "df3480af8d43abd3cfb3df7de7aa2fc5b9b1cda759c5d786ba7182af3f2bf081",
+        "scripts/r2g/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/r2g/core.py": "2cc51873c0bdc7cac3808d3d8f7984f33d704d17d5f068bfe8d931600b8d0a51",
+        "scripts/r2g/fal.py": "10f7debd72522cfc71fe32c20c7de4bebfaaff4041ba1eae88fba82fe65a2f8c",
+        "scripts/r2g/media.py": "7dad7d72517e1926a8efa9e4289a8149902c1e8bc0a8b9fe7be75724a480b5a7",
+        "scripts/r2g/viewer.py": "d56df55277ceaff2493574435983634919fc9dce15d4935bc3edb50324c65c51",
+        "scripts/r2g.py": "a2e4a08ef4a2bd5c73090cc27655da8d1a03be24c9559300a43d108545b662bf",
+        "scripts/requirements.txt": "1c803ca04270f3acd340ace239b1e86931871344e0070b4f6db9a59ae56336cb"
+      },
+      "adaptations": {},
+      "review": "Original pinned self-contained skill, with MIT license and REVIEW.md. No automatic network or paid services.",
+      "install_path": "skills/capabilities/reference-to-game"
     }
   }
 }

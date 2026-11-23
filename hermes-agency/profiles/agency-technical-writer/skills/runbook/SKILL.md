@@ -20,7 +20,6 @@ Use when operators need a reliable procedure for maintaining, diagnosing, restor
 - A runbook should help an operator decide, not merely paste commands.
 - Mutating steps need clear prerequisites and verification.
 - Never embed real credentials or machine-specific secrets.
-- Fleet placement can change; refer to stable services, profile identities, or runtime discovery rather than hard-coded nodes unless the runbook is intentionally host-specific.
 
 ## Quality gate
 The runbook is ready when a qualified operator can establish state, execute the correct branch safely, verify the real outcome, recover or escalate with evidence, and complete the procedure without undocumented access, environment, or machine assumptions.

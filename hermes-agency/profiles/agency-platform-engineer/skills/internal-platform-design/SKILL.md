@@ -21,7 +21,6 @@ Use when multiple teams or workloads repeatedly solve the same infrastructure/ru
 - Do not build a platform for a hypothetical future customer base.
 - A shared abstraction is valuable only when consumers can rely on its contract without learning all hidden implementation details.
 - Platform policy should be enforceable and inspectable, not tribal knowledge.
-- Fleet placement/routing is a Fleet capability; a platform may expose compatible interfaces or runtime services without duplicating Fleet's control plane.
 
 ## Quality gate
 The platform design is ready when real consumers and recurring needs justify it, responsibility and contracts are explicit, routine operations are self-service, tenancy/reliability/lifecycle are defined, evolution is possible without constant breakage, and a representative workflow demonstrates reduced consumer complexity.

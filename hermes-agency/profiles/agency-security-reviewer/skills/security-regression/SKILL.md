@@ -22,7 +22,6 @@ Use when a change touches code or configuration near a prior security finding, t
 - Security regression tests should encode the protected property, not a brittle exploit payload alone.
 - Refactoring can move enforcement safely, but every reachable path still needs the same authoritative property.
 - “The old bug does not reproduce” is weaker evidence than demonstrating why the forbidden action is still impossible.
-- When Fleet adds new placement/transport paths, re-evaluate security properties at those boundaries without moving application authorization into Fleet by accident.
 
 ## Quality gate
 The review is complete when the original security property is explicit, the changed and alternate paths are traced to current enforcement, regression/negative evidence covers the property, configuration/mixed-version/degraded paths do not weaken it, monitoring still observes relevant failures, and any gap is reported as a concrete boundary risk.

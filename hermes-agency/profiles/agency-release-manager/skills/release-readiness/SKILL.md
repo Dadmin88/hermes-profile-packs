@@ -4,6 +4,8 @@ description: Assess whether a release is ready to ship using evidence from scope
 ---
 # Release Readiness
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use before a production release or other consequential delivery checkpoint.
 
 ## Procedure

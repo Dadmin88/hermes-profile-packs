@@ -20,7 +20,6 @@ Use when teams cannot quickly answer what version is running, whether a rollout 
 ## Decision rules
 - Release observability should answer “what changed?” before an incident responder searches commit history manually.
 - Artifact/revision identity is more useful than mutable labels such as “latest.”
-- When Fleet distributes workloads, record the rollout/revision on the selected nodes but keep Fleet's live placement registry authoritative for current location.
 - Delivery metrics are diagnostic signals, not performance targets to game by removing safety gates.
 
 ## Quality gate

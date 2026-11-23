@@ -19,7 +19,6 @@ Use when work repeatedly accumulates, misses expectations, or stalls at one stag
 ## Decision rules
 - The busiest role is not always the bottleneck.
 - Adding more work to a constrained system increases WIP, not throughput.
-- Machine/resource bottlenecks belong to Fleet/Infrastructure when evidence shows runtime capacity is the constraint.
 - Fix flow causes before institutionalizing manual expediting.
 
 ## Quality gate

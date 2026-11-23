@@ -20,7 +20,6 @@ Use when a team or specialist cannot progress because of an organizational, depe
 - A hard technical problem owned by an engineer is not automatically a Scrum Master impediment.
 - Escalation should target the owner who can change the blocked condition.
 - Avoid creating permanent process exceptions to solve one temporary problem unless deliberately accepted.
-- Re-routing compute or selecting a different node is Fleet's responsibility when the impediment is runtime placement.
 
 ## Quality gate
 The impediment is resolved when the blocked condition is removed or deliberately bypassed, the owning specialist can continue, any changed commitment is visible, and no hidden ownership or policy debt was created in the process.

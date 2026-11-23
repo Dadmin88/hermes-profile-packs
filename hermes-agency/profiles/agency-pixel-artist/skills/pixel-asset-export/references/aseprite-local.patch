@@ -1,0 +1,53 @@
+diff --git a/src/handlers/export-handlers.ts b/src/handlers/export-handlers.ts
+index 9778144..3700d35 100644
+--- a/src/handlers/export-handlers.ts
++++ b/src/handlers/export-handlers.ts
+@@ -80,6 +80,7 @@ export async function handleExportSpritesheet(
+     const cliArgs = ["-b", args.inputPath, "--sheet", args.outputPath];
+ 
+     if (args.dataPath) {
++      if (!validatePath(args.dataPath)) return createErrorResponse("Invalid metadata output path");
+       cliArgs.push("--data", args.dataPath);
+     }
+ 
+diff --git a/src/scripts/operations.lua b/src/scripts/operations.lua
+index 477b501..48d3e9d 100644
+--- a/src/scripts/operations.lua
++++ b/src/scripts/operations.lua
+@@ -53,19 +53,10 @@ end
+ -- JSON helper: simple decoder for params input
+ local function json_decode(str)
+   if not str or str == "" then return {} end
+-  -- Use Aseprite's built-in json module if available
+-  if json then
+-    return json.decode(str)
+-  end
+-  -- Fallback: use load (safe subset)
+-  str = str:gsub("null", "nil")
+-  str = str:gsub("true", "true")
+-  str = str:gsub("false", "false")
+-  local fn = load("return " .. str)
+-  if fn then
+-    return fn()
+-  end
+-  return {}
++  if not json or type(json.decode) ~= "function" then
++    error("Aseprite with native json.decode is required")
++  end
++  return json.decode(str)
+ end
+ 
+ local function send_result(result)
+diff --git a/src/utils.ts b/src/utils.ts
+index 5879807..cc07fc7 100644
+--- a/src/utils.ts
++++ b/src/utils.ts
+@@ -118,7 +118,7 @@ export function createErrorResponse(
+ }
+ 
+ export function validatePath(path: string): boolean {
+-  if (!path || path.includes("..")) {
++  if (typeof path !== "string" || !path || path.startsWith("-") || path.includes("..")) {
+     return false;
+   }
+   return true;

@@ -1,6 +1,6 @@
 # Hermes Agency
 
-Hermes Agency is a curated collection of **113 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
+Hermes Agency is a curated collection of **114 professional profiles for [Hermes Agent](https://github.com/NousResearch/hermes-agent)**.
 
 The profiles form a multidisciplinary agency covering engineering, product, design, quality assurance, research, marketing, content, leadership, and operations. Each profile combines a focused professional role with bundled task skills, routing metadata, working standards, collaboration expectations, and clear handoff behavior.
 
@@ -8,13 +8,19 @@ Profiles can be used independently or coordinated through Hermes Kanban for mult
 
 ## Features
 
-- **113 specialized profiles** spanning technical, creative, product, business, and operational work.
+- **114 specialized profiles** spanning technical, creative, product, business, and operational work.
 - **Bundled professional skills** that are installed with each profile and loaded by Hermes when relevant.
 - **Hermes-native profile distributions** that install with standard Hermes profile tooling.
 - **Routing-ready descriptions** so profiles can be selected by capability and responsibility.
 - **Professional role definitions** with explicit responsibilities, operating standards, and definitions of done.
 - **Shared collaboration rules** for cross-profile handoffs, independent review, evidence, and escalation.
 - **Selective installation** so a machine can install the complete Agency or only the roles it needs.
+
+## Reference-guided game building
+
+The `reference-to-game` on-demand skill is bundled with the **Game Designer, Godot Engineer, Fullstack Engineer, Level Designer, Technical Artist, and Art Director** profiles. It helps them inspect visual/gameplay references, preserve art direction, plan and build playable loops, and verify visual fidelity separately from functionality. It includes the upstream Python intake CLI, guidance, and optional JS runtime helpers.
+
+Source: [gokayfem/reference-to-game](https://github.com/gokayfem/reference-to-game), pinned to `6a00e491f578` (MIT, provenance and license included with each generated skill). The default example implementation is Three.js; Godot and other engines can use its engine-neutral method but have no verified upstream project generator. Paid `fal` asset calls are optional and require separate explicit authorization. The skill is not preloaded into unrelated artistic or writing roles.
 
 ## Requirements
 
@@ -93,6 +99,8 @@ The distinction is intentional:
 
 For example, the Security Engineer includes a threat-modeling skill, the QA Tester includes an exploratory-testing skill, the Product Manager includes a product-requirements skill, the AI Music Producer includes an AI-music-production skill, and the Social Media Manager includes a social-content-plan skill.
 
+Agency Pixel Artist ships workflows for pixel sprites, frame animation, terrain tiles, and atlas QA. Install it with `python install.py --profiles agency-pixel-artist --yes` from the repository root. Load `pixel-asset-export` for local Pixelorama and Aseprite setup. Both bridges start disabled.
+
 Skill bundles are expected to grow as useful procedures are developed or curated. Third-party skills are reviewed and vendored into the profile rather than fetched from a public marketplace during profile installation.
 
 ## Profile roster
@@ -104,12 +112,12 @@ Hermes Agency currently includes:
 | Leadership & Coordination | 10 |
 | Engineering | 29 |
 | Quality & Review | 9 |
-| Design & Creative | 19 |
+| Design & Creative | 20 |
 | Product & Research | 14 |
 | Marketing & Growth | 12 |
 | Content & Editorial | 10 |
 | Operations & Support | 10 |
-| **Total** | **113** |
+| **Total** | **114** |
 
 ### Leadership & Coordination
 
@@ -189,6 +197,7 @@ Hermes Agency currently includes:
 | `agency-graphic-designer` | Graphic Designer |
 | `agency-level-designer` | Level Designer |
 | `agency-motion-designer` | Motion Designer |
+| `agency-pixel-artist` | Agency Pixel Artist |
 | `agency-music-producer` | AI Music Producer |
 | `agency-narrative-designer` | Narrative Designer |
 | `agency-product-designer` | Product Designer |
@@ -293,7 +302,6 @@ A profile may include additional Hermes configuration when the specialty benefit
 ```text
 .
 ├── README.md
-├── AGENCY.md
 ├── AGENTS.md
 ├── agency.json
 ├── install.py
@@ -301,45 +309,10 @@ A profile may include additional Hermes configuration when the specialty benefit
 ```
 
 - `README.md` provides installation and usage documentation.
-- `AGENCY.md` defines the shared operating model used across the profile pack.
 - `AGENTS.md` contains repository contribution instructions for coding agents and maintainers.
 - `agency.json` is the roster used by the installer.
 - `install.py` installs all, selected, or category-scoped profiles.
 - `profiles/` contains the Hermes profile distributions and their bundled skills.
-
-## Operating model
-
-Profiles are routed by responsibility and ownership. Complex tasks can move through several specialists, with each profile responsible for a bounded part of the work.
-
-A typical software delivery flow might involve:
-
-```text
-Product Manager
-      ↓
-Technical Lead / Architect
-      ↓
-Implementation Specialists
-      ↓
-Code Review / QA / Security
-      ↓
-Git Steward / Release Manager
-```
-
-A typical public launch might involve:
-
-```text
-Product Manager
-      ↓
-Launch Manager
-      ↓
-Marketing Strategist
-      ↓
-Copy / Content / Social / Brand
-      ↓
-Analytics / Customer Success
-```
-
-See [`AGENCY.md`](./AGENCY.md) for the full collaboration contract.
 
 ## Contributing
 

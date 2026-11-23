@@ -4,6 +4,8 @@ description: Prioritize testing by identifying plausible failures, affected user
 ---
 # Risk-Based Testing
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use when the test surface is larger than the available time or when a change needs deeper validation in some areas than others.
 
 ## Procedure

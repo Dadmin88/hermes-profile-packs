@@ -22,7 +22,6 @@ Use when architecture must meet explicit availability, durability, latency, or c
 - Reliability is an end-to-end outcome, not the number of replicas.
 - Redundancy inside one shared failure domain may not improve the failure scenario that matters.
 - Graceful degradation should preserve the most important outcome rather than keep every feature partially alive.
-- In Fleet systems, routing around an unhealthy node improves service availability only if node health, profile readiness, task semantics, and retry/idempotency are correctly integrated.
 
 ## Quality gate
 The reliability design is ready when critical outcomes have explicit objectives, dependency and failure-domain contributions are understood, overload/retry/degradation policies cooperate, durability and recovery are defined, observability exposes objective violations, and failure tests demonstrate the intended behavior.

@@ -1,6 +1,6 @@
 ---
 name: capacity-planning
-description: Plan operational team or process capacity from demand, service expectations, work mix, variability, constraints, and recovery margin without confusing organizational capacity with Fleet node scheduling.
+description: Plan operational team or process capacity from demand, service expectations, work mix, variability, constraints, and recovery margin.
 ---
 # Operational Capacity Planning
 
@@ -19,7 +19,6 @@ Use when recurring operational demand must be matched to people, process, vendor
 ## Decision rules
 - Utilization near 100% leaves no recovery room for variable work.
 - Headcount is not interchangeable when specialist capability is the bottleneck.
-- This skill plans operational/team capacity; Fleet owns live compute/node capacity and placement.
 - Do not hide backlog growth by redefining completion.
 
 ## Quality gate

@@ -1,13 +1,13 @@
 # Role-specific capabilities
 
-This release covers all **166 public distributions**: 113 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 24 reviewed skill trees across 241 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
+This release covers all **167 public distributions**: 114 Agency, 30 Academy, 22 Council, and standalone Wear. It adds 25 reviewed skill trees across 243 role-specific assignments, plus an on-demand capability guide in every distribution. The complete [matrix](CAPABILITY_MATRIX.md) records every profile, including deliberate retain-only decisions.
 
 ## What installs by default
 
 - Existing SOULs, original skills, preloads, teaching/coaching contracts and tool restrictions are preserved. Release metadata versions advance; no identity is renamed.
 - Selected skills, their reference documents, scripts, templates and license notices ship with the profile. They are available **on demand**, not blanket-preloaded. Inclusion does not install dependencies or authorize tool execution.
 - Six plugins are offered where relevant: RFC, OSV, GitHub, PEP and Wikipedia context references, and optional Snyk. They are pinned declarations, **not downloaded or enabled by profile installation**.
-- Thirteen remote MCP integrations have role-specific **disabled** native config templates: Context7, DeepWiki, AWS Knowledge, Microsoft Learn, Sentry, Grafana Cloud, Linear, Wolfram, Kiwi, trivago, AllTrails, Strava and Todoist. There are 71 per-profile opt-in selections. Newly introduced config seeds contain no model/provider choices, credentials or enabled remote connection.
+- Thirteen remote MCP integrations have role-specific **disabled** native config templates: Context7, DeepWiki, AWS Knowledge, Microsoft Learn, Sentry, Grafana Cloud, Linear, Wolfram, Kiwi, trivago, AllTrails, Strava and Todoist. Agency Pixel Artist also ships two disabled local stdio templates for Pixelorama and Aseprite. There are 73 per-profile MCP selections. Newly introduced config seeds contain no model/provider choices, credentials or enabled remote connection.
 - Wear and coordination-only profiles receive a discovery guide, not a general execution bundle or external integration.
 
 A normal profile distribution remains the supported installation/update mechanism; this repository adds no runtime installer, scheduler, memory service, orchestration system or automatic account connection.[1]
@@ -28,7 +28,7 @@ Original source hashes are captured in `capabilities/baseline.json` as this rele
 
 Each installed `profile-capabilities` skill carries `references/catalog.json`: exact choices, reasons, immutable plugin pins, prerequisites, provider disclosures and individual disabled-install command arrays. A list entry does not mean a service is configured, authenticated or operational.
 
-**No implicit activation:** normal pack installation does not call plugin installation, MCP catalog installation, OAuth, package managers or remote tools. Fresh profile seeds set `enabled: false`; MCP sampling and elicitation are disabled, resources/prompts are disabled, and exact tool allowlists prevent future vendor tools from automatically becoming available. Account-backed integrations start with `tools.include: []` until authenticated schemas and user scopes are reviewed. That empty list means deny all, not allow all.[3]
+**No implicit activation:** normal pack installation does not call plugin installation, MCP catalog installation, OAuth, package managers or remote tools. The editor templates require explicit, pinned source builds with the shipped patches. The Pixel Asset Export skill documents workstation setup and smoke checks. Fresh profile seeds set `enabled: false`; MCP sampling and elicitation are disabled, resources/prompts are disabled, and exact tool allowlists prevent future vendor tools from automatically becoming available. Account-backed integrations start with `tools.include: []` until authenticated schemas and user scopes are reviewed. That empty list means deny all, not allow all.[3]
 
 **Critical native behavior:** `hermes plugins pack install` is an explicit activation operation and enables successful installs. The packaged `references/hermes-pack.yaml` files are pinned opt-in activation recipes, not disabled staging. To stage one chosen plugin, use its catalog command ending in `--no-enable --no-deps`, inspect the real declared capabilities/dependencies, then separately approve activation. Plugin catalog review and a commit pin do not certify downloaded dependency trees or hosted service behavior.[4]
 

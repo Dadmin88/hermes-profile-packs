@@ -238,8 +238,6 @@ def build_catalog() -> dict:
         },
         "routing": {
             "selection_order": routing["selection_order"],
-            "live_presence_owner": routing["live_presence_owner"],
-            "missing_presence_behavior": routing["missing_presence_behavior"],
         },
         "profiles": entries,
     }
@@ -263,7 +261,7 @@ def _filter_catalog(catalog: dict, profile_name: str | None, category: str | Non
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Emit the Fleet-facing Hermes Agency runtime catalog.")
+    parser = argparse.ArgumentParser(description="Emit the Hermes Agency profile catalog.")
     parser.add_argument("--profile", help="emit one profile by stable profile name")
     parser.add_argument("--category", help="emit profiles in one category")
     parser.add_argument("--compact", action="store_true", help="emit compact JSON")

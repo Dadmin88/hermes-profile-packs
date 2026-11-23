@@ -20,7 +20,6 @@ Use when a knowledge base contains enough material that stale or orphaned conten
 - A review date alone is not evidence content is still correct.
 - Lifecycle priority should combine decay risk and reader impact.
 - Preserve historical material only when its status is unmistakable.
-- Ownership must survive contributor or Fleet-node changes.
 
 ## Quality gate
 The lifecycle is healthy when every important article has an owner and source context, freshness reflects real validation, changes trigger review, superseded content routes readers correctly, and stale high-impact knowledge cannot silently remain authoritative.

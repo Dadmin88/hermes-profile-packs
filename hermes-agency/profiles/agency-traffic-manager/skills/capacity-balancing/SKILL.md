@@ -1,6 +1,6 @@
 ---
 name: capacity-balancing
-description: Balance incoming professional work across Agency owners and queues using current commitments, specialist scarcity, urgency, WIP, and service expectations without performing Fleet compute scheduling.
+description: Balance incoming professional work across Agency owners and queues using current commitments, specialist scarcity, urgency, WIP, and service expectations.
 ---
 # Capacity Balancing
 
@@ -14,7 +14,6 @@ Use when work demand exceeds or unevenly loads the available professional team a
 5. Protect high-value focused work from constant interruption and maintain room for urgent incidents or unplanned demand.
 6. Surface persistent specialist bottlenecks that require cross-training, process change, automation, staffing, or altered service expectations.
 7. Preserve task ownership and handoff context when work moves between profiles or teams.
-8. Let Fleet independently choose eligible nodes and runtime capacity after the professional profile has been selected.
 
 ## Decision rules
 - Professional capacity and compute capacity are separate layers.
@@ -23,4 +22,3 @@ Use when work demand exceeds or unevenly loads the available professional team a
 - Capacity decisions should protect outcome quality as well as response time.
 
 ## Quality gate
-Capacity is balanced when urgent and high-value work has appropriate professional ownership, overloaded queues and scarcity are visible, reassignment preserves context and authority, WIP remains manageable, and node-level compute scheduling is left to Fleet.

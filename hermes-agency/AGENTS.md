@@ -39,7 +39,6 @@ External systems may consume Agency identities and packages through the static, 
 - `profiles/<name>/distribution.yaml` defines distribution metadata for a profile.
 - `profiles/<name>/SOUL.md` defines the professional behavior of a profile.
 - `profiles/<name>/skills/` is the canonical capability set bundled with that profile.
-- `AGENCY.md` defines the shared collaboration model.
 - `catalog.py` emits the deterministic runtime-facing profile catalog from the real profile tree.
 - `runtime-contract.json` describes the small static source contract used by external consumers.
 - `evals/routing.json` contains routing evaluation cases.
@@ -60,7 +59,7 @@ profiles/<profile-name>/
         └── SKILL.md
 ```
 
-Every profile must ship with at least one useful role-specific skill. Additional Hermes configuration, references, or skill helper scripts may be added when they materially improve the specialty.
+Every profile must have a corresponding curated native personality source at the repository root in `personalities/<profile-name>.json`, materialized into its native `config.yaml` without changing SOUL responsibilities or runtime permissions. See `docs/PROFILE_PERSONALITIES.md`. Every profile must ship with at least one useful role-specific skill. Additional Hermes configuration, references, or skill helper scripts may be added when they materially improve the specialty.
 
 Profile names use the `agency-` prefix and lowercase kebab case.
 

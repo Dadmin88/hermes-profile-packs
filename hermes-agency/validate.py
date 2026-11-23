@@ -352,9 +352,7 @@ def validate(root: Path) -> tuple[list[str], dict[str, int]]:
     routing_meta = agency.get("routing", {})
     expected_routing = {
         "profile_metadata_template": "profiles/{name}/distribution.yaml",
-        "selection_order": ["professional-profile", "eligible-node"],
-        "live_presence_owner": "hermes-fleet",
-        "missing_presence_behavior": "fleet-locate-or-place",
+        "selection_order": ["professional-profile"],
     }
     if routing_meta != expected_routing:
         errors.append(f"agency.json routing contract mismatch: {routing_meta!r}")

@@ -4,6 +4,8 @@ description: Design rollback and forward-recovery for releases by identifying re
 ---
 # Rollback Strategy
 
+Use this procedure when requested or when the change warrants it. For routine changes, use the authorized delivery path and a focused check.
+
 Use before releases where a bad change could materially affect users, data, availability, security, or dependent systems.
 
 ## Procedure

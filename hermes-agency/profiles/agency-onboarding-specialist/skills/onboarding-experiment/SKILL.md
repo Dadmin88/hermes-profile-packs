@@ -20,7 +20,6 @@ Use when a proposed onboarding change can be evaluated with controlled behaviora
 - Optimize for activation and durable value, not tutorial completion alone.
 - Do not test several unrelated onboarding redesigns in one treatment if the goal is to learn what caused the effect.
 - Guard against making the first session easier while harming later comprehension or retention.
-- Preserve treatment identity across devices or Fleet-routed backend work where account-level consistency matters.
 
 ## Quality gate
 The experiment is complete when the hypothesis and treatment are reproducible, exposure and funnel data are trustworthy, activation and guardrail effects are interpreted by segment, downstream consequences are considered, and the resulting product decision is documented.

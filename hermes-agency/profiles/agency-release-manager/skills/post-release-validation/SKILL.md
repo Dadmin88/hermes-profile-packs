@@ -20,7 +20,6 @@ Use immediately after a release or rollout stage to prove the intended revision 
 - Deployment success is not release success.
 - Absence of alerts is weak evidence when instrumentation does not cover the changed behavior.
 - Verify the exact revision that users are receiving.
-- Partial rollout validation should not be generalized to the entire fleet/audience prematurely.
 
 ## Quality gate
 The release is validated when the intended revision is confirmed, critical behavior and state are healthy, changed-path telemetry remains within accepted bounds for the required observation window, and unresolved anomalies have explicit owners and recovery decisions.
