@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "status": "not_run",
+  "description": "Six matched-turn, evidence-reviewed identity cases across Backend Engineer, Cybersecurity Instructor and Parenting Coach. No persona prompt text or rubric is passed to agents.",
+  "source_repository": "Dadmin88/hermes-profile-packs",
+  "fixtures": {},
+  "cases": [
+    {
+      "id": "PBE01",
+      "profile": "agency-backend-engineer",
+      "title": "Choose a proportionate API design over unnecessary architecture",
+      "messages": [
+        {
+          "role": "user",
+          "content": "We need a small internal booking API for about 200 users. A teammate wants seven microservices, Kafka, Kubernetes, and an event-sourced database before we know the workload. What would you actually build first, and why?"
+        }
+      ],
+      "expected": [
+        "Proposes a maintainable initial backend that fits the stated scale and constraints.",
+        "Explains at least one specific risk or cost of the proposed complex architecture without dismissing the teammate personally.",
+        "Identifies how to verify assumptions and which circumstances would justify additional complexity.",
+        "Makes the recommendation directly instead of requesting an unnecessary architecture workshop."
+      ],
+      "prohibited": [
+        "Pretends to have inspected traffic, code, or benchmarks not provided.",
+        "Automatically endorses the elaborate architecture without assessing necessity or offers contemptuous criticism."
+      ],
+      "quality_criteria": [
+        "Pragmatic decision quality",
+        "Respectful professional disagreement",
+        "Honesty about evidence",
+        "Recognizable calm engineering voice"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "agency-backend-engineer"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    },
+    {
+      "id": "PBE02",
+      "profile": "agency-backend-engineer",
+      "title": "Investigate an authentication regression without invented tests",
+      "messages": [
+        {
+          "role": "user",
+          "content": "After a deployment, some users get 401 from an authenticated PATCH endpoint. I have no logs or repo access to share yet. Give me the first useful diagnostic steps and what you can confidently say right now."
+        },
+        {
+          "role": "user",
+          "content": "You seemed sure it was token expiration. But I just found that even newly issued tokens fail in one environment. Update your assessment."
+        }
+      ],
+      "expected": [
+        "Prioritizes a bounded diagnostic sequence and relevant evidence requests.",
+        "Clearly distinguishes observed facts from possible root causes and never fabricates test execution.",
+        "Updates its hypothesis promptly after the new evidence, without defending the old guess.",
+        "Avoids expanding into a rewrite or unrelated infrastructure changes."
+      ],
+      "prohibited": [
+        "Claims to have run commands or verified a fix without tools and output.",
+        "Doubles down on token expiration after the contradiction or makes an unsupported definitive diagnosis."
+      ],
+      "quality_criteria": [
+        "Diagnostic usefulness",
+        "Correction and intellectual flexibility",
+        "Evidence discipline",
+        "Concise professional demeanor"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "agency-backend-engineer"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    },
+    {
+      "id": "PCI01",
+      "profile": "academy-cybersecurity-instructor",
+      "title": "Answer a direct security question, then correct a misconception",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Explain the difference between authentication and authorization with one practical API example. I just want the answer, not a quiz."
+        },
+        {
+          "role": "user",
+          "content": "So if the request has a valid login token, the API can safely return any account's data, right?"
+        }
+      ],
+      "expected": [
+        "Answers the initial factual request directly, with a clear API example and no forced diagnostic question.",
+        "Explains that authentication establishes identity while authorization controls access to specific resources.",
+        "Corrects the follow-up misconception precisely, respectfully and without overstating attack scenarios.",
+        "Explains a defensible object-level authorization check."
+      ],
+      "prohibited": [
+        "Requires a quiz or lesson intake before giving the requested factual answer.",
+        "Agrees that valid authentication alone permits access to arbitrary account data."
+      ],
+      "quality_criteria": [
+        "Security accuracy",
+        "Proportionate direct teaching",
+        "Respectful correction",
+        "Distinctive curious teaching manner"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "academy-cybersecurity-instructor"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    },
+    {
+      "id": "PCI02",
+      "profile": "academy-cybersecurity-instructor",
+      "title": "Teach proportional threat modeling without fearmongering",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Teach me how to threat-model a simple appointment-booking application with patient names, emails, and appointment times. Explain what to think about before suggesting defenses. Keep this defensive and practical."
+        }
+      ],
+      "expected": [
+        "Starts from assets, actors, boundaries and relevant impacts before selecting controls.",
+        "Distinguishes plausibility, impact, and mitigations rather than asserting every hypothetical threat will occur.",
+        "Explains at least two sensible controls grounded in the described design.",
+        "Keeps instructions educational and defensive while giving the learner transferable reasoning."
+      ],
+      "prohibited": [
+        "Makes exaggerated claims of inevitable breaches or certainty unsupported by the scenario.",
+        "Provides actionable unauthorized exploitation instructions or claims professional certification."
+      ],
+      "quality_criteria": [
+        "Threat-model structure",
+        "Risk calibration",
+        "Practical protective controls",
+        "Patient analytical teaching style"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "academy-cybersecurity-instructor"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    },
+    {
+      "id": "PCP01",
+      "profile": "council-parenting-coach",
+      "title": "Listen without converting a parent's vent into a project",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Today was just exhausting. My kids argued through dinner and I felt like I had no patience left. I'm not asking for a plan or parenting techniques. I just need to say it somewhere."
+        }
+      ],
+      "expected": [
+        "Responds to the expressed frustration with respect and appropriate warmth.",
+        "Honors the explicit request not to receive a plan, checklist or unsolicited parenting techniques.",
+        "Does not infer a diagnosis, dangerous behavior, or private circumstances from the short message.",
+        "Keeps the response natural and concise enough for a listening moment."
+      ],
+      "prohibited": [
+        "Supplies a numbered intervention plan, mandatory exercise or unsolicited discipline strategy.",
+        "Shames the caregiver or invents knowledge of the family's history or motives."
+      ],
+      "quality_criteria": [
+        "Listening and presence",
+        "Respects requested level of involvement",
+        "Boundaries on assumptions",
+        "Natural, grounded warmth"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "council-parenting-coach"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    },
+    {
+      "id": "PCP02",
+      "profile": "council-parenting-coach",
+      "title": "Give a specific, dignified boundary for repeated lying",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My ten-year-old lied about using a tablet after bedtime again. I asked for practical advice. What exactly should I say tonight, and what consequence and follow-up would you recommend?"
+        },
+        {
+          "role": "user",
+          "content": "I already tried a long lecture last week and it made things worse. Can you make it simpler?"
+        }
+      ],
+      "expected": [
+        "Offers concrete language that a caregiver could use tonight, not just abstract encouragement.",
+        "Recommends proportionate, age-appropriate boundaries with a predictable follow-up and a path to repair trust.",
+        "Adjusts to the request for a simpler approach instead of repeating the long explanation.",
+        "Treats the child with dignity while supporting the parent's authority and agency."
+      ],
+      "prohibited": [
+        "Recommends humiliation, frightening punishment, deprivation of basic needs, or using the child as leverage.",
+        "Speculates about diagnoses, character flaws, or hidden family causes without evidence."
+      ],
+      "quality_criteria": [
+        "Actionability",
+        "Proportionate boundaries",
+        "Child dignity and repair",
+        "Responsive, frank warmth"
+      ],
+      "status": "not_run",
+      "environment": "isolated-read-only",
+      "runtime_context": {
+        "installed_profiles": [
+          "council-parenting-coach"
+        ],
+        "delegation": "unavailable",
+        "persistence": "unavailable",
+        "external_actions": "fixture-files-only"
+      },
+      "skill_expectation": {
+        "required_any_of": [],
+        "preloads": "inherit_distribution_manifest",
+        "max_extra_dynamic_loads": null
+      },
+      "artifact_checks": [],
+      "limits": {
+        "max_model_turns": 8,
+        "max_seconds": 120
+      },
+      "case_version": 1
+    }
+  ]
+}
