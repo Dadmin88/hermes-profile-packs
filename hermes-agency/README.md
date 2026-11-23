@@ -16,6 +16,12 @@ Profiles can be used independently or coordinated through Hermes Kanban for mult
 - **Shared collaboration rules** for cross-profile handoffs, independent review, evidence, and escalation.
 - **Selective installation** so a machine can install the complete Agency or only the roles it needs.
 
+## Reference-guided game building
+
+The `reference-to-game` on-demand skill is bundled with the **Game Designer, Godot Engineer, Fullstack Engineer, Level Designer, Technical Artist, and Art Director** profiles. It helps them inspect visual/gameplay references, preserve art direction, plan and build playable loops, and verify visual fidelity separately from functionality. It includes the upstream Python intake CLI, guidance, and optional JS runtime helpers.
+
+Source: [gokayfem/reference-to-game](https://github.com/gokayfem/reference-to-game), pinned to `6a00e491f578` (MIT, provenance and license included with each generated skill). The default example implementation is Three.js; Godot and other engines can use its engine-neutral method but have no verified upstream project generator. Paid `fal` asset calls are optional and require separate explicit authorization. The skill is not preloaded into unrelated artistic or writing roles.
+
 ## Requirements
 
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent)

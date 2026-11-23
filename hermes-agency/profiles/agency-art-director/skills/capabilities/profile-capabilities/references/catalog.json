@@ -6,6 +6,10 @@
     {
       "name": "creative-ideation",
       "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    },
+    {
+      "name": "reference-to-game",
+      "reason": "Define style contracts and review visual identity through actual gameplay."
     }
   ],
   "plugins": [],

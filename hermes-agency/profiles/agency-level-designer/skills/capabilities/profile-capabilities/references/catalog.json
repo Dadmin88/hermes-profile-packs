@@ -6,6 +6,10 @@
     {
       "name": "creative-ideation",
       "reason": "Structured ideation methods complement craft-specific procedures without introducing external services."
+    },
+    {
+      "name": "reference-to-game",
+      "reason": "Translate visual and motion references into playable spatial flow, documenting inferred layout."
     }
   ],
   "plugins": [],

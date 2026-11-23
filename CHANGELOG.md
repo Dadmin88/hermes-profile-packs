@@ -4,6 +4,10 @@ All notable changes to Hermes Profile Packs will be documented here.
 
 ## Unreleased
 
+### Reference-guided game development
+
+- Bundled the complete MIT-licensed `reference-to-game` toolkit and attribution in six specialist Agency profiles (Game Designer, Godot Engineer, Fullstack Engineer, Level Designer, Technical Artist, Art Director). Kept it on demand with no new automatic provider, paid-generation, or profile permission grants; retained the existing distribution identities and used the reviewed on-demand capability materializer.
+
 ### Reviewed installed-profile content updates
 
 - Added an optional, read-only-first source sync for individually approved SOUL and skill packages, with exact-file-hash approval, private atomic backups and guarded rollback. The command preserves user-added skills and leaves installed configuration, manifests, runtime state and profile versions untouched. Unlike native `hermes profile update`, it never bulk-overwrites locally different content.
