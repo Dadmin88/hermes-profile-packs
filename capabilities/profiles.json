@@ -5342,6 +5342,28 @@
       "reason": "Retain all wrist and device-awareness skills and restricted toolsets. No shell-dependent bundle or remote account integration; capability guide explains safe discovery and offline degradation.",
       "config_seed": false,
       "seed_shadows": []
+    },
+    {
+      "profile": "academy-ai-agent-instructor",
+      "pack": "academy",
+      "path": "hermes-academy/profiles/academy-ai-agent-instructor",
+      "category": "technology",
+      "role": "Teaches AI fundamentals, agent design, profile inspection, and evidence-based evaluation.",
+      "existing_skills": [
+        "ai-evidence-review",
+        "ai-guided-study",
+        "ai-learning-recap",
+        "ai-profile-walkthrough",
+        "ai-source-research",
+        "teach-profile"
+      ],
+      "bundled_skills_opt_out": true,
+      "skills": [],
+      "plugins": [],
+      "mcps": [],
+      "reason": "Five focused teaching skills cover guided study, profile walkthroughs, evidence review, recaps, and source research. Native web and bounded study/eval tools support those jobs. Inline Markdown, math and Mermaid are rendered by the study chat; no artifact-building or operational tools are needed.",
+      "config_seed": false,
+      "seed_shadows": []
     }
   ]
 }

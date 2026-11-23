@@ -1,0 +1,199 @@
+'use strict';
+const $ = id => document.getElementById(id);
+const state = {cases: [], allCases: new Map(), selected: new Set(), jobs: [], runId: null, detail: null, csrf: '', view: 'cases', record: null, dirty: false, busy: false};
+function el(tag, text, className) { const node = document.createElement(tag); if (text !== undefined) node.textContent = text; if (className) node.className = className; return node; }
+function resultLabel(record) {
+ if (record.execution_status === 'PREFLIGHT') return 'SETUP OK';
+ if (record.execution_status === 'COMPLETE' && record.grade.status === 'BLOCKED' && record.grade.blocked.length === 1 && record.grade.blocked[0] === 'Semantic evidence review required') return 'NEEDS REVIEW';
+ return record.grade.status;
+}
+function badge(text) { return el('span', text, 'badge ' + text.replaceAll(' ', '-')); }
+function button(text, action, className) { const b = el('button', text, className); b.type = 'button'; b.addEventListener('click', () => Promise.resolve().then(action).catch(notice)); return b; }
+function notice(message) { $('notice').textContent = message instanceof Error ? message.message : message; $('notice').hidden = false; }
+function clearNotice() { $('notice').hidden = true; }
+async function api(path, data) { const response = await fetch('/api/' + path, data === undefined ? {} : {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Workbench-Token': state.csrf}, body: JSON.stringify(data)}); const value = await response.json(); if (!response.ok) throw new Error(value.error || 'Request failed'); return value; }
+function selectOption(select, text, value) { const option = el('option', text); option.value = value; select.append(option); }
+function view(name) { if (!leaveReview()) return; state.view = name; document.querySelectorAll('.view').forEach(n => n.hidden = n.id !== name + '-view'); document.querySelectorAll('.nav').forEach(n => n.classList.toggle('active', n.dataset.view === name)); $('crumb').textContent = {cases: 'Case library', runs: 'Run history', compare: 'Compare runs'}[name]; if (name !== 'cases') refreshJobs().catch(notice); }
+function leaveReview() { if (state.dirty && !window.confirm('Leave this unsaved review?')) return false; state.dirty = false; return true; }
+function caseTitle(c) { const first = c.messages[0]; const prompt = typeof first === 'string' ? first : first?.content || c.id; return c.title === c.id ? (prompt.length > 110 ? prompt.slice(0, 107) + '…' : prompt) : c.title; }
+function profileName(c) { return c.profile.replace(/^(agency|council|academy)-/, '').replaceAll('-', ' '); }
+function visibleCases() { const search = $('search').value.toLowerCase(), profile = $('profile-filter').value; return state.cases.filter(c => (!profile || c.profile === profile) && JSON.stringify(c).toLowerCase().includes(search)); }
+function renderCases() {
+ const list = $('case-list'); list.replaceChildren(); const visible = visibleCases();
+ for (const c of visible) { const row = el('div', undefined, 'case-row'), checkbox = document.createElement('input'); checkbox.type = 'checkbox'; checkbox.checked = state.selected.has(c.id); checkbox.setAttribute('aria-label', 'Select ' + c.id + ' ' + c.title); checkbox.onchange = () => { checkbox.checked ? state.selected.add(c.id) : state.selected.delete(c.id); selection(); }; const info = el('div', undefined, 'case-info'), title = button('', () => showCase(c), 'case-title'); title.append(el('span', c.id, 'case-id'), document.createTextNode(caseTitle(c))); info.append(title); const meta = el('div', undefined, 'case-meta'); meta.append(el('span', profileName(c), 'tag')); if (c.robustness) meta.append(el('span', c.robustness.kind === 'honesty' ? 'Failure recovery' : 'Untrusted content', 'tag ' + c.robustness.kind)); if (c.unsupported_reason) meta.append(el('span', 'Deferred', 'tag')); info.append(meta); row.append(checkbox, info); list.append(row); }
+ if (!visible.length) list.append(el('div', 'No cases match these filters.', 'empty')); selection();
+}
+function selection() { $('selection-count').textContent = state.selected.size + ' selected'; const visible = visibleCases(); $('select-visible').checked = visible.length > 0 && visible.every(c => state.selected.has(c.id)); $('select-visible').indeterminate = visible.some(c => state.selected.has(c.id)) && !$('select-visible').checked; $('launch').disabled = !state.selected.size || state.busy || state.jobs.some(j => j.status === 'RUNNING'); $('launch-hint').textContent = state.selected.size ? `${state.selected.size} cases × ${$('repeat').value} repetitions. Each case runs in isolation.` : 'Select one or more cases to begin.'; }
+async function loadCases() { state.cases = await api('cases?suite=' + $('suite').value); state.cases.forEach(c => state.allCases.set(c.id, c)); state.selected.clear(); $('suite-badge').textContent = `${state.cases.length}-case ${$('suite').value === 'pilot' ? 'pilot' : 'suite'}`; const filter = $('profile-filter'); filter.replaceChildren(); selectOption(filter, 'All profiles', ''); [...new Set(state.cases.map(c => c.profile))].sort().forEach(p => selectOption(filter, p.replaceAll('-', ' '), p)); $('case-count').textContent = state.cases.length; $('profile-count').textContent = new Set(state.cases.map(c => c.profile)).size; $('robust-count').textContent = state.cases.filter(c => c.robustness).length; $('robust-detail').textContent = `${state.cases.filter(c => c.robustness?.kind === 'honesty').length} failure recovery · ${state.cases.filter(c => c.robustness?.kind === 'injection').length} untrusted content`; renderCases(); }
+function listSection(parent, title, items) { parent.append(el('h3', title)); const list = el('ul'); (items || []).forEach(item => list.append(el('li', typeof item === 'string' ? item : JSON.stringify(item)))); parent.append(list); }
+function showCase(c) { const box = $('case-content'); box.replaceChildren(el('p', c.id + ' · ' + c.profile, 'eyebrow'), el('h2', caseTitle(c))); listSection(box, 'User task', c.messages.map(m => typeof m === 'string' ? m : m.content)); listSection(box, 'Required behavior', c.expected); listSection(box, 'Must not happen', c.prohibited); listSection(box, 'Quality criteria', c.quality_criteria); if (c.unsupported_reason) box.append(el('p', c.unsupported_reason, 'muted')); const extra = el('details'); extra.append(el('summary', 'Fixture, skill expectations & limits'), el('pre', JSON.stringify({fixture: c.fixture_data, skills: c.skill_expectation, limits: c.limits}, null, 2))); box.append(extra); $('case-dialog').showModal(); }
+function modeChanged() { const live = document.querySelector('input[name=mode]:checked').value === 'live'; $('live-settings').hidden = !live; $('launch').textContent = live ? 'Run live evaluation →' : 'Run setup check →'; }
+async function launch(event) { event.preventDefault(); clearNotice(); state.busy = true; selection(); try { const job = await api('runs', {suite: $('suite').value, case_ids: [...state.selected], mode: document.querySelector('input[name=mode]:checked').value, label: $('run-label').value, model: $('model').value, provider: $('provider').value, base_url: $('base-url').value, repeat: Number($('repeat').value), max_total_tokens: Number($('token-budget').value), max_output_tokens: Number($('output-tokens').value)}); state.runId = job.id; state.record = null; view('runs'); await loadRun(job.id); } finally { state.busy = false; selection(); } }
+async function refreshJobs() { state.jobs = await api('runs'); const list = $('run-list'); list.replaceChildren(); if (!state.jobs.length) list.append(el('div', 'No runs yet. Select cases to establish your first baseline.', 'empty')); for (const job of state.jobs) { const row = button('', async () => { if (!leaveReview()) return; state.record = null; await loadRun(job.id); renderJobSelection(); }, 'run-item'); row.dataset.id = job.id; row.append(el('strong', job.label), badge(job.status), el('small', `${job.mode === 'synthetic' ? 'Synthetic example' : job.mode === 'preflight' ? 'Setup' : 'Live'} · ${job.completed}/${job.total} cases · ${new Date(job.created).toLocaleString()}`)); list.append(row); } renderJobSelection(); for (const id of ['baseline', 'candidate']) { const select = $(id), previous = select.value; select.replaceChildren(); selectOption(select, 'Choose a completed run', ''); state.jobs.filter(j => j.status === 'FINISHED').forEach(j => selectOption(select, `${j.label} · ${new Date(j.created).toLocaleString()}`, j.id)); select.value = previous; } selection(); }
+function renderJobSelection() { document.querySelectorAll('.run-item').forEach(n => n.classList.toggle('selected', n.dataset.id === state.runId)); }
+async function loadRun(id) { const detail = await api('runs/' + id); if (detail.run.results.some(r => !state.allCases.has(r.case_id))) { const existing = await api('cases?suite=existing'); existing.forEach(c => state.allCases.set(c.id, c)); } state.runId = id; state.detail = detail; if (!state.dirty) renderRun(); }
+function download(name, value) { const blob = new Blob([JSON.stringify(value, null, 2)], {type: 'application/json'}), url = URL.createObjectURL(blob), link = el('a'); link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+function renderRun() { const {job, run} = state.detail, box = $('run-detail'); box.replaceChildren(); const head = el('div', undefined, 'panel-heading'); head.append(el('h2', job.label), badge(job.status)); box.append(head, el('p', `${job.mode === 'synthetic' ? 'SYNTHETIC EXAMPLE · no agent was evaluated' : job.mode === 'preflight' ? 'Installation setup check · no model calls' : 'Live model evaluation'} · ${run.results.length} of ${job.total} results`, 'muted'));
+ if (job.mode === 'preflight') box.append(el('p', 'Setup checks never count as behavioral passes. A PREFLIGHT result means the profile installed; it still needs a live run.', 'connection'));
+ const progress = el('progress'); progress.max = job.total; progress.value = run.results.length; progress.setAttribute('aria-label', 'Completed cases'); box.append(progress);
+ const bar = el('div', undefined, 'toolbar'); bar.append(button('Export results', () => download('hermes-eval-' + job.id + '.json', run)), button('Export reviews', () => download('hermes-reviews-' + job.id + '.json', state.detail.reviews)));
+ if (job.status === 'RUNNING') bar.append(button('Stop run', async () => { await api('runs/' + job.id + '/cancel', {}); await refreshJobs(); await loadRun(job.id); }));
+ box.append(bar);
+ if (state.record !== null && run.results[state.record]) { box.append(button('← All cases in this run', () => { if (!leaveReview()) return; state.record = null; renderRun(); })); renderRecord(box, run.results[state.record], state.record); return; }
+ for (let i = 0; i < run.results.length; i++) { const r = run.results[i], c = state.allCases.get(r.case_id), row = button('', () => { state.record = i; renderRun(); }, 'result-row'); row.append(el('span', r.case_id, 'case-id'), el('span', `${c ? caseTitle(c) : r.profile} · #${r.repetition + 1}`), badge(resultLabel(r))); box.append(row); }
+ if (!run.results.length) box.append(el('div', job.status === 'RUNNING' ? 'Installing the profile in an isolated workspace. Results appear as each case finishes.' : 'No case results were produced. Inspect the runner log below.', 'empty'));
+ const log = el('details'); log.append(el('summary', 'Runner log'), el('pre', state.detail.log || 'No log output yet.')); box.append(log); const provenance = el('details'); provenance.append(el('summary', 'Run provenance'), el('pre', JSON.stringify(run.manifest, null, 2))); box.append(provenance);
+}
+function renderRecord(box, record, index) {
+ const c = state.allCases.get(record.case_id); box.append(el('h3', record.case_id + ' · ' + (c ? caseTitle(c) : record.profile)), badge(resultLabel(record))); if (record.execution_status === 'PREFLIGHT') box.append(el('p', 'Installation verified. Behavior has not been evaluated.', 'connection')); box.append(el('p', 'Execution: ' + record.execution_status + ' · Repeat ' + (record.repetition + 1), 'muted'));
+ const usage = record.usage; box.append(el('p', usage.complete ? `${usage.model_calls} AI calls · ${usage.input_tokens.toLocaleString()} input tokens · ${usage.output_tokens.toLocaleString()} output tokens. Tokens measure how much text the AI processes.` : 'Token usage is incomplete or unavailable. Efficiency is not scored.', 'fine'));
+ if (usage.complete) { const detail = el('details'); detail.append(el('summary', 'Detailed usage'), el('pre', JSON.stringify(usage, null, 2))); box.append(detail); }
+ if (resultLabel(record) === 'NEEDS REVIEW') box.append(el('p', 'The AI answered. Review the answer below before deciding whether this test passed.', 'connection'));
+ renderEvidence(box, record, state.detail.reviews[index]);
+ if (c && c.case_hash === record.case_hash && !state.detail.run.manifest.synthetic && state.detail.job.status !== 'RUNNING' && ['COMPLETE', 'FAIL'].includes(record.execution_status)) renderReview(box, c, record, index);
+ else box.append(el('p', 'Review is unavailable for synthetic examples, unfinished executions, or changed/missing case definitions.', 'connection'));
+}
+function renderEvidence(box, record, review) {
+ const grade = record.grade || {};
+ listSection(box, 'Findings', [...(grade.failures || []), ...(grade.blocked || [])]);
+ const semantic = name => ['Role and task requirements', 'No prohibited behavior', 'Completion quality'].includes(name) || name.startsWith('Success claim supported:');
+ for (const [heading, filter] of [['Deterministic checks', c => !semantic(c.name)], ['Review checks', c => semantic(c.name)]]) {
+  box.append(el('h3', heading)); const checks = (grade.checks || []).filter(filter), table = el('table');
+  for (const check of checks) { const row = el('tr'); row.append(el('td', check.name), el('td', check.status), el('td', check.detail || '')); table.append(row); }
+  box.append(checks.length ? table : el('p', 'No checks recorded.', 'muted'));
+ }
+ const targets = new Map(), evidence = el('div', undefined, 'evidence-grid'), responses = el('div'), trace = el('div');
+ responses.append(el('h3', 'Final answers'));
+ (record.finals || []).forEach((text, i) => { const answer = el('div'); answer.tabIndex = -1; answer.append(el('small', 'final:' + i), el('pre', text, 'response')); targets.set('final:' + i, answer); responses.append(answer); });
+ if (!record.finals?.length) responses.append(el('p', 'No final response.', 'muted'));
+ trace.append(el('h3', 'Tool & execution trace'));
+ for (const event of record.events || []) {
+  const details = el('details', undefined, 'trace-event'); details.tabIndex = -1; targets.set(event.id, details);
+  details.append(el('summary', `${event.id} · ${event.type}${event.tool ? ' · ' + event.tool : ''}`));
+  const safe = structuredClone(event), screenshot = safe.result?.screenshot_png_base64;
+  if (screenshot) safe.result.screenshot_png_base64 = '[Screenshot below]';
+  details.append(el('pre', JSON.stringify(safe, null, 2)));
+  if (screenshot && /^[A-Za-z0-9+/=]+$/.test(screenshot)) {
+   const figure = el('figure'), image = el('img'); image.src = 'data:image/png;base64,' + screenshot;
+   const label = event.type === 'artifact_check' ? 'Harness capture after the agent finished' : event.type === 'tool_result' && event.tool === 'browser_check' ? 'Capture returned by browser_check' : 'Captured screenshot';
+   image.alt = label + ' · ' + event.id;
+   figure.append(image, el('figcaption', label + '. A capture alone does not establish that the agent inspected its pixels.', 'fine')); details.append(figure);
+  }
+  trace.append(details);
+ }
+ evidence.append(responses, trace);
+ const summary = el('section', undefined, 'review-summary'); summary.append(el('h3', 'Review reasoning & citations'));
+ if (review?.reviewer || review?.rationale) {
+  const bound = review.case_id === record.case_id && review.case_hash === record.case_hash && review.evidence_hash === record.evidence_hash;
+  summary.append(el('p', 'Reviewer: ' + (review.reviewer || 'Not recorded')), el('p', review.rationale || 'No reasoning recorded.', 'response'));
+  if (!bound) summary.append(el('p', 'This review does not match the recorded evidence.', 'connection'));
+  const refs = el('div', undefined, 'toolbar');
+  for (const id of review.evidence_ids || []) { const target = targets.get(id); const link = button(id + (target ? '' : ' · missing evidence'), () => { if (!target) return; if (target.tagName === 'DETAILS') target.open = true; target.scrollIntoView({block: 'center', behavior: 'smooth'}); target.focus({preventScroll: true}); }); link.disabled = !target; refs.append(link); }
+  summary.append(refs);
+  const scores = el('details'); scores.append(el('summary', 'Recorded review scores & success claims'), el('pre', JSON.stringify({requirements: review.requirements, prohibited_observed: review.prohibited_observed, quality: review.quality, success_claims: review.success_claims}, null, 2))); summary.append(scores);
+ } else summary.append(el('p', 'No saved review reasoning is available. A verdict alone does not supply the missing explanation.', 'muted'));
+ box.append(summary, evidence);
+}
+
+function dropdown(values, current) { const select = el('select'); selectOption(select, 'Unreviewed', ''); values.forEach(([text, value]) => selectOption(select, text, JSON.stringify(value))); select.value = current === null || current === undefined ? '' : JSON.stringify(current); return select; }
+function reviewList(form, title, descriptions, values, options) { const field = el('fieldset'); field.append(el('legend', title)); const inputs = descriptions.map((text, i) => { const row = el('label', undefined, 'review-row'), input = dropdown(options, values[i]); row.append(el('span', text), input); field.append(row); return input; }); form.append(field); return inputs; }
+function renderReview(box, c, record, index) {
+ const review = structuredClone(state.detail.reviews[index]), form = el('form', undefined, 'review-form'); form.append(el('h3', 'Review the evidence'), el('p', 'Score what happened. Saving an incomplete review keeps the result blocked.', 'muted'));
+ const requirements = reviewList(form, 'Required behavior · fulfilled?', c.expected, review.requirements, [['Yes', true], ['No', false]]);
+ const prohibited = reviewList(form, 'Prohibited behavior · observed?', c.prohibited, review.prohibited_observed, [['No', false], ['Yes', true]]);
+ const quality = reviewList(form, 'Quality · 0 missing / 1 partial / 2 complete', c.quality_criteria, c.quality_criteria.map(q => review.quality[q]), [['0 · Missing', 0], ['1 · Partial', 1], ['2 · Complete', 2]]);
+ const refs = el('fieldset'); refs.append(el('legend', 'Cite supporting evidence')); const evidenceIds = [...record.finals.map((_, i) => 'final:' + i), ...record.events.map(e => e.id)], evidenceInputs = [];
+ for (const id of evidenceIds) { const label = el('label', undefined, 'evidence-option'), checkbox = el('input'); checkbox.type = 'checkbox'; checkbox.value = id; checkbox.checked = review.evidence_ids.includes(id); evidenceInputs.push(checkbox); const event = record.events.find(e => e.id === id); label.append(checkbox, document.createTextNode(' ' + id + (event ? ` · ${event.type} ${event.tool || ''}` : ' · Final answer'))); refs.append(label); } form.append(refs);
+ const claimsField = el('fieldset'); claimsField.append(el('legend', 'Claims that tools or checks succeeded'), el('p', 'Add every success claim made in the answer. Cite the tool-result event that supports it. Unsupported claims automatically fail.', 'fine')); const claimsBox = el('div', undefined, 'claims'), claims = [];
+ function addClaim(value = {}) { const row = el('div', undefined, 'claim-row'), tool = el('input'), ids = el('input'), outcome = el('select'); tool.placeholder = 'Tool name, e.g. eval_test'; tool.setAttribute('aria-label', 'Claim tool'); tool.value = value.tool || ''; ids.placeholder = 'Evidence IDs, comma separated'; ids.setAttribute('aria-label', 'Claim evidence IDs'); ids.value = (value.event_ids || []).join(', '); selectOption(outcome, 'Operation succeeded', 'operation'); selectOption(outcome, 'Checks passed', 'checks_passed'); outcome.setAttribute('aria-label', 'Claim outcome'); outcome.value = value.outcome || 'operation'; const entry = {row, tool, ids, outcome}; claims.push(entry); row.append(tool, ids, outcome, button('Remove', () => { row.remove(); claims.splice(claims.indexOf(entry), 1); state.dirty = true; })); claimsBox.append(row); }
+ review.success_claims.forEach(addClaim); claimsField.append(claimsBox, button('+ Add success claim', () => { addClaim(); state.dirty = true; })); const checked = el('input'); checked.type = 'checkbox'; checked.checked = review.success_claims_reviewed; const checkLabel = el('label', undefined, 'evidence-option'); checkLabel.append(checked, document.createTextNode(' I checked every success claim against the tool log (or there were none).')); claimsField.append(checkLabel); form.append(claimsField);
+ const nameLabel = el('label', 'Reviewer'), name = el('input'); name.type = 'text'; name.value = review.reviewer; name.required = true; nameLabel.append(name); const reasonLabel = el('label', 'Reasoning & evidence'), rationale = el('textarea'); rationale.value = review.rationale; rationale.required = true; reasonLabel.append(rationale); form.append(nameLabel, reasonLabel); const save = el('button', 'Save evidence review', 'primary'); save.type = 'submit'; form.append(save); form.addEventListener('input', () => state.dirty = true); form.addEventListener('change', () => state.dirty = true);
+ form.onsubmit = async event => { event.preventDefault(); save.disabled = true; clearNotice(); try { const parse = input => input.value === '' ? null : JSON.parse(input.value); review.requirements = requirements.map(parse); review.prohibited_observed = prohibited.map(parse); review.quality = Object.fromEntries(c.quality_criteria.map((q, i) => [q, parse(quality[i])])); review.evidence_ids = evidenceInputs.filter(n => n.checked).map(n => n.value); review.reviewer = name.value; review.rationale = rationale.value; review.success_claims_reviewed = checked.checked; review.success_claims = claims.map(x => ({tool: x.tool.value.trim(), event_ids: x.ids.value.split(',').map(t => t.trim()).filter(Boolean), outcome: x.outcome.value})); const result = await api(`runs/${state.runId}/review`, {index, review}); state.dirty = false; await loadRun(state.runId); await refreshJobs(); notice('Review saved · ' + result.status); } catch (error) { notice(error); } finally { save.disabled = false; } }; box.append(form);
+}
+const comparisonLabels = {INCOMPATIBLE: 'These runs cannot establish a behavioral change', REGRESSION_AND_INCOMPLETE: 'Pass to fail observed · some pairs still lack evidence', REGRESSION: 'Pass to fail observed', INCOMPLETE: 'Some pairs lack evidence', FAILURES_REMAIN: 'Reviewed failures remain', NO_REGRESSION: 'No pass to fail observed'};
+const transitionLabels = {improved: 'Fail to pass', regressed: 'Pass to fail', unchanged: 'Same verdict', incomplete: 'Not enough evidence'};
+let comparisonRequest = 0;
+function resetComparison() { comparisonRequest++; $('comparison-result').replaceChildren(); }
+function configurationTable(box, configuration) {
+ box.append(el('h3', 'Run settings'));
+ const wrap = el('div', undefined, 'table-scroll'), table = el('table'), head = el('tr');
+ ['Setting', 'Baseline', 'Candidate'].forEach(t => head.append(el('th', t))); table.append(head);
+ for (const item of configuration) { const row = el('tr'); row.append(el('th', item.name.replaceAll('_', ' '))); for (const key of ['baseline', 'candidate']) row.append(el('td', item[key] == null ? 'Not recorded' : typeof item[key] === 'object' ? JSON.stringify(item[key]) : String(item[key]))); table.append(row); }
+ wrap.append(table); box.append(wrap);
+}
+function renderFileChanges(box, change) {
+ box.append(el('h3', 'Profile files · ' + (change.profile || change.case_id)));
+ const diff = change.profile_changes;
+ if (!diff.available) { box.append(el('p', diff.reason + '. Older results remain readable; files are not inferred from the current checkout.', 'connection')); return; }
+ box.append(el('p', 'Hashes establish which source files changed. They do not establish that those changes caused a better result.', 'muted'));
+ if (!diff.files.length) box.append(el('p', 'No source profile files changed.'));
+ for (const file of diff.files) { const details = el('details', undefined, 'file-change'); details.append(el('summary', file.change + ' · ' + file.path), el('pre', 'Baseline: ' + (file.before_hash || 'Not present') + '\nCandidate: ' + (file.after_hash || 'Not present'))); box.append(details); }
+ box.append(el('p', diff.unchanged_count + ' source files unchanged.', 'fine'));
+}
+function renderPair(box, change, baseline, candidate) {
+ box.replaceChildren(el('h3', change.case_id + ' · trial ' + (change.repetition + 1)), el('p', change.observation, 'connection'));
+ renderFileChanges(box, change);
+ const columns = el('div', undefined, 'paired-evidence');
+ for (const [label, data] of [['Baseline', baseline], ['Candidate', candidate]]) {
+  // Never assume runs have the same record order.
+  const index = data.run.results.findIndex(r => r.case_id === change.case_id && r.repetition === change.repetition), record = data.run.results[index], column = el('section');
+  column.append(el('h2', label + ' · ' + data.job.label));
+  if (!record) { column.append(el('p', 'Corresponding evidence is unavailable.')); } else {
+   column.append(badge(resultLabel(record)), el('p', 'Execution: ' + record.execution_status, 'fine'));
+   renderEvidence(column, record, data.reviews[index]);
+  }
+  columns.append(column);
+ }
+ box.append(columns); box.scrollIntoView({block: 'start', behavior: 'smooth'});
+}
+async function compare(event) {
+ event.preventDefault(); clearNotice(); const request = ++comparisonRequest, box = $('comparison-result'); box.replaceChildren(el('p', 'Loading matched evidence…'));
+ try {
+  const ids = [$('baseline').value, $('candidate').value];
+  if (!ids.every(Boolean) || ids[0] === ids[1]) throw new Error('Choose two different completed runs.');
+  const result = await api('compare', {baseline: ids[0], candidate: ids[1]});
+  if (request !== comparisonRequest) return;
+  box.replaceChildren(el('h3', result.status === 'NO_REGRESSION' && result.counts?.improved ? 'Fail to pass observed · no pass to fail' : comparisonLabels[result.status] || result.status));
+  if (result.synthetic) box.append(el('p', 'SYNTHETIC WALKTHROUGH · Invented agent actions and reviews for testing this interface. No live evaluation or profile improvement is demonstrated.', 'synthetic-banner'));
+  if (result.reasons) listSection(box, 'Why this comparison is not fair', result.reasons);
+  if (result.configuration) configurationTable(box, result.configuration);
+  if (result.changes) {
+   box.append(el('p', 'Cases, repetitions, model, runtime and comparison settings match. Each row describes one trial; it does not prove causation or a reliable improvement.', 'muted'));
+   const counts = result.counts;
+   box.append(el('p', `${counts.improved} fail to pass · ${counts.regressed} pass to fail · ${counts.unchanged} same verdict · ${counts.incomplete} without enough evidence`, 'connection'));
+   const [baseline, candidate] = await Promise.all(ids.map(id => api('runs/' + id)));
+   if (request !== comparisonRequest) return;
+   const wrap = el('div', undefined, 'table-scroll'), table = el('table'), head = el('tr'), paired = el('div', undefined, 'paired-detail');
+   ['Inspect trial', 'Baseline', 'Candidate', 'Tokens', 'Observation'].forEach(t => head.append(el('th', t))); table.append(head);
+   for (const change of result.changes) {
+    const row = el('tr'), inspect = el('td'), tokens = el('td', change.token_ratio === null ? 'Not comparable' : ((change.token_ratio - 1) * 100).toFixed(1) + '%'); tokens.title = change.token_reason;
+    inspect.append(button('Inspect ' + change.case_id + ' · trial ' + (change.repetition + 1), () => renderPair(paired, change, baseline, candidate)));
+    row.append(inspect, el('td', change.before), el('td', change.after), tokens, el('td', transitionLabels[change.transition])); table.append(row);
+   }
+   wrap.append(table); box.append(wrap, el('p', 'Open a trial to see file changes, both answers, review citations and tool results.', 'fine'), paired);
+  }
+  const details = el('details'); details.append(el('summary', 'Full comparison data'), el('pre', JSON.stringify(result, null, 2))); box.append(details);
+ } catch (error) { if (request === comparisonRequest) { box.replaceChildren(); notice(error); } }
+}
+$('baseline').onchange = resetComparison; $('candidate').onchange = resetComparison;
+
+async function init() { const data = await api('bootstrap'); state.csrf = data.csrf_token; state.jobs = data.jobs; $('model').value = data.defaults.model || ''; $('provider').value = data.defaults.provider || 'openai'; $('base-url').value = data.defaults.base_url || ''; $('connection').textContent = (data.runtime_available ? 'Hermes source found.' : 'Hermes source unavailable.') + ' ' + (data.connection === 'hermes-login' ? 'Uses your existing Hermes ChatGPT login. No API key needed.' : data.credential_configured ? 'Live credential configured on server.' : 'Live credential not configured. Setup checks are available.'); if (data.connection === 'hermes-login') { $('provider').readOnly = true; $('base-url').readOnly = true; } await loadCases(); await refreshJobs(); }
+document.querySelectorAll('.nav').forEach(n => n.addEventListener('click', () => view(n.dataset.view))); $('suite').onchange = () => loadCases().catch(notice); $('search').oninput = renderCases; $('profile-filter').onchange = renderCases; $('select-visible').onchange = event => { visibleCases().forEach(c => event.target.checked ? state.selected.add(c.id) : state.selected.delete(c.id)); renderCases(); }; $('repeat').oninput = selection; document.querySelectorAll('input[name=mode]').forEach(n => n.onchange = modeChanged); $('launch-form').onsubmit = event => launch(event).catch(notice); $('close-case').onclick = () => $('case-dialog').close(); $('refresh-runs').onclick = () => refreshJobs().then(() => state.runId && loadRun(state.runId)).catch(notice); $('compare-form').onsubmit = compare; window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
+let polling = false;
+setInterval(async () => { if (polling || document.hidden) return; polling = true; try { const running = state.jobs.some(j => j.status === 'RUNNING'); if (running) { await refreshJobs(); if (state.view === 'runs' && state.runId && !state.dirty) await loadRun(state.runId); } } catch (error) { notice(error); } finally { polling = false; } }, 2500);
+async function openLinkedRun() {
+ const params = new URLSearchParams(window.location.hash.slice(1)), id = params.get('run');
+ if (!id) return;
+ if (!/^[0-9a-f]{32}$/.test(id)) throw new Error('Invalid run link.');
+ if (!leaveReview()) return;
+ state.record = null; view('runs'); await loadRun(id); renderJobSelection();
+ if (params.has('case')) {
+  const repetition = Number(params.get('repetition') || '0');
+  if (!Number.isSafeInteger(repetition) || repetition < 0) throw new Error('Invalid trial number in run link.');
+  const index = state.detail.run.results.findIndex(r => r.case_id === params.get('case') && r.repetition === repetition);
+  if (index < 0) { notice('This trial is not available yet. The run history shows its current progress.'); return; }
+  state.record = index; renderRun();
+ }
+}
+window.addEventListener('hashchange', () => openLinkedRun().catch(notice));
+init().then(openLinkedRun).catch(notice);

@@ -21,8 +21,8 @@ class AcademyPackTests(unittest.TestCase):
     def test_v02_faculty_and_skill_targets(self):
         profiles = self.manifest["profiles"]
         self.assertEqual(self.manifest["version"], "0.5.0")
-        self.assertEqual(len(profiles), 30)
-        self.assertEqual(sum(len(profile["jobs"]) for profile in profiles), 120)
+        self.assertEqual(len(profiles), 31)
+        self.assertEqual(sum(len(profile["jobs"]) for profile in profiles), 125)
 
         expected_second_wave = {
             "academy-physics-professor",

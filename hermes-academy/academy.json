@@ -25,6 +25,7 @@
       "creative": "academy-arts-design-instructor"
     },
     "specialist_preferences": {
+      "ai-agent-design": "academy-ai-agent-instructor",
       "physics": "academy-physics-professor",
       "chemistry": "academy-chemistry-professor",
       "biology": "academy-biology-professor",
@@ -44,8 +45,8 @@
   },
   "teaching_contract": {"default_mode":"adaptive-instruction","assessment_integrity":"teach-dont-impersonate","current_facts":"verify-when-material","credentialing":"none"},
   "backbone_profiles": ["academy-dean","academy-mathematics-professor","academy-writing-rhetoric-professor","academy-natural-sciences-professor","academy-computer-science-professor","academy-research-methods-professor","academy-language-instructor","academy-skilled-trades-instructor"],
-  "profile_count": 30,
-  "categories": {"coordination":1,"quantitative":3,"communication":1,"science":4,"technology":4,"humanities":4,"social-sciences":2,"professional":3,"languages":1,"research":1,"vocational":3,"health-sciences":1,"creative":2},
+  "profile_count": 31,
+  "categories": {"coordination":1,"quantitative":3,"communication":1,"science":4,"technology":5,"humanities":4,"social-sciences":2,"professional":3,"languages":1,"research":1,"vocational":3,"health-sciences":1,"creative":2},
   "shared_skills": [
     {
       "name": "academy-continuing-education",
@@ -66,6 +67,7 @@
     }
   ],
   "profiles": [
+    {"name":"academy-ai-agent-instructor","display_name":"AI & Agent Instructor","category":"technology","role":"Teaches AI model fundamentals, agent design, profiles, skills, tools, MCP, memory, and evidence-based evaluations.","jobs":["ai-guided-study","ai-profile-walkthrough","ai-evidence-review","ai-learning-recap","ai-source-research"]},
     {"name":"academy-dean","display_name":"Academy Dean","category":"coordination","role":"Routes learners to the right faculty, establishes the learning brief, plans cross-disciplinary study, and synthesizes instruction without pretending to be every professor.","jobs":["faculty-routing","learner-brief","curriculum-path","faculty-synthesis"]},
     {"name":"academy-mathematics-professor","display_name":"Mathematics Professor","category":"quantitative","role":"Teaches mathematical concepts and problem solving from foundational arithmetic through advanced undergraduate-level quantitative reasoning.","jobs":["math-concept-lesson","worked-problem","guided-practice","math-mastery-check"]},
     {"name":"academy-writing-rhetoric-professor","display_name":"Writing & Rhetoric Professor","category":"communication","role":"Teaches composition, grammar, rhetoric, argument, revision, and evidence-based academic or professional writing.","jobs":["writing-lesson","argument-analysis","revision-workshop","writing-feedback"]},

@@ -36,7 +36,7 @@ class AcademyDistributionPreloadTests(unittest.TestCase):
 
     def test_every_faculty_profile_preloads_teach_profile(self):
         names = [p["name"] for p in MANIFEST["profiles"] if p["name"] != "academy-dean"]
-        self.assertEqual(len(names), 29)
+        self.assertEqual(len(names), 30)
         for name in names:
             profile = ACADEMY_ROOT / "profiles" / name
             with self.subTest(profile=name):

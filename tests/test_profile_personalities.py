@@ -24,7 +24,7 @@ class ProfilePersonalityTests(unittest.TestCase):
         expected = capabilities.source_profiles(ROOT)
         sources = capabilities.load_personalities(ROOT, expected)
         self.assertEqual(set(sources), set(expected))
-        self.assertEqual(len(sources), 167)
+        self.assertEqual(len(sources), 168)
         self.assertEqual(len({source["description"] for source in sources.values()}), len(sources))
         for name, relative_path in expected.items():
             pack = relative_path.split("/")[0]

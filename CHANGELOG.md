@@ -107,3 +107,8 @@ All notable changes to Hermes Profile Packs will be documented here.
 - Added `council-steward` as the Council coordinator and minimum-context routing owner.
 - Preserved the authored `council-life-coach` and `council-fitness-coach` SOUL definitions while converting them into portable profile distributions.
 - Added repository-wide installation, validation, portability checks, CI, contribution guidance, security policy, and pack specification.
+## AI & Agent Instructor
+
+- Added `academy-ai-agent-instructor`, five focused teaching skills, and an optional bounded read-only study-source MCP.
+- Added Academy specialist routing and updated capability/count catalogues for the new profile.
+- Kept private learner state and Study Room transport outside the portable distribution.
